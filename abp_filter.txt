@@ -227,3 +227,4 @@
 @@||slack.com^$elemhide, image
 @@||imdb.com^$elemhide
 @@||ask.fm^$elemhide
+@@||badoo.com^$elemhide
