@@ -140,7 +140,7 @@
 @@||tinder.com^$elemhide
 @@||scribd.com^$elemhide
 @@||mega.nz^$elemhide
-@@||4shared.com^$elemhide
+@@||4shared.com^$elemhide, image
 @@||wps.com^$image
 @@||winamp.com^$elemhide
 @@||airdroid.com^$elemhide, image
