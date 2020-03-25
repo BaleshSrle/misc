@@ -175,6 +175,7 @@
 @@||bitlab.rs^$elemhide, stylesheet, script
 @@||wayseven.com^$elemhide
 @@||dwelt.net^$elemhide
+@@||jsguru.io^$elemhide
 @@||spc.rs^$elemhide
 @@||hilandar.org^$elemhide
 @@||manastir-lepavina.org^$elemhide
