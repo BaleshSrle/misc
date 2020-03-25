@@ -172,6 +172,7 @@
 @@||dvcsolutions.com^$elemhide, image
 @@||bitlab.rs^$elemhide, stylesheet, script
 @@||wayseven.com^$elemhide
+@@||dwelt.net^$elemhide
 @@||spc.rs^$elemhide
 @@||hilandar.org^$elemhide
 @@||manastir-lepavina.org^$elemhide
