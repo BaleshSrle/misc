@@ -1,0 +1,226 @@
+[Adblock Plus 2.0]
+! Version: 202003181840
+! Title: B@LESHEVCIH Company Adblock Plus Filter
+! Last modified: 18 Mar 2020 18:40 UTC+1
+! Expires: 1 days (update frequency)
+! Homepage: https://baleshevich.dobojcaffe.com/
+! License: http://creativecommons.org/licenses/by/3.0/
+!
+! Please report any unblocked content or problems by email
+! Email: baleshevichcompany@dobojcaffe.com
+!
+!--------------------------General blocking rules-----------------------------!
+@@|https://www.heidisql.com/download.php|$document
+@@||soapui.org^$elemhide, image
+@@||smartbear.*^$elemhide, image
+@@||selenium.dev^$elemhide, image
+@@||katalon.com^$elemhide, stylesheet, script
+@@||cdnjs.*^$stylesheet, script, elemhide
+@@||users.teol.net/~srdjan.b^$elemhide
+@@||predsjednikrs.net^$elemhide
+@@||vladars.net^$elemhide, image
+@@||narodnaskupstinars.net^$elemhide, image
+@@||ustavnisud.org^$elemhide
+@@||komorars.ba^$elemhide, image
+@@||poreskaupravars.org^$elemhide
+@@||autoputevirs.com^$elemhide
+@@||ruczrs.org^$elemhide, stylesheet, script
+@@||rcirz.org^$elemhide
+@@||borackars.org^$elemhide, image
+@@||rpz-rs.org^$elemhide
+@@||mpr-centar.org^$elemhide
+@@||koronavirususrpskoj.com^$elemhide, stylesheet, script
+@@||rhmzrs.com^$elemhide
+@@||np.rs.ba^$elemhide
+@@||certrs.org^$elemhide
+@@||cineplexxpalas.ba^$elemhide, image
+@@||doboj.gov.ba^$elemhide
+@@||domzdravljadoboj.ba^$elemhide
+@@||toplanadoboj.ba^$elemhide
+@@||bibliotekadoboj.com^$elemhide, image
+@@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
+@@||mojdoboj.info^$elemhide
+@@||banjaluka.rs.ba^$elemhide, stylesheet, script
+@@||lutrijars.com^$image
+@@||manja.ba^$elemhide, image
+@@||zitopeka.net^$elemhide
+@@||patroltaxi.com^$elemhide
+@@||ues.rs.ba^$elemhide, stylesheet, script, image
+@@||unibl.org^$elemhide, image, script
+@@||spu.ba^$elemhide
+@@||blc.edu.ba^$elemhide
+@@||nub.rs^$elemhide, image
+@@||nestropetrol.com^$elemhide
+@@||total-trade.ba^$elemhide
+@@||automilovanovic.com^$elemhide
+@@||autodemi.ba^$elemhide, font
+@@||bg.ac.rs^$elemhide, image, stylesheet, script
+@@||uns.ac.rs^$elemhide, image
+@@||fsfvns.rs^$elemhide, image
+@@||uni-lj.si^$elemhide, script, image
+@@||um.si^$elemhide, stylesheet, xmlhttprequest, image, script
+@@||wordpress.com^$elemhide
+@@||wp.com^$image, script, subdocument, stylesheet
+@@||internetdefenseleague.org^$script, image
+@@||mts.rs^$elemhide, image
+@@||mtel.*^$elemhide, image
+@@||bhtelecom.ba^$elemhide
+@@||mojatv.ba^$elemhide
+@@||mojradio.ba^$image
+@@||hteronet.ba^$elemhide
+@@||elta-kabel.com^$elemhide
+@@||blic.net^$elemhide, image
+@@||rtrs.tv^$elemhide, image
+@@||federalna.ba^$elemhide, image
+@@||bhrt.ba^$elemhide
+@@||rtvbn.com^$elemhide
+@@||atvbl.com^$elemhide
+@@||bigportal.ba^$elemhide
+@@||radiobn.net^$elemhide 
+@@||radiobobar.com^$elemhide
+@@||rtvdoboj.org^$elemhide
+@@||radioderventa.com^$elemhide
+@@||studiomteslic.net^$elemhide
+@@||prnjavorlive.info^$elemhide
+@@||mojkontakt.com^$elemhide, stylesheet, font, script
+@@||rsg.ba^$elemhide
+@@||antena-radio.ba^$image
+@@||rtvslon.ba^$elemhide, stylesheet, script
+@@||valentinobh.com^$elemhide, image
+@@||radiogracanica.ba^$elemhide
+@@||kalmanradio.ba^$elemhide	
+@@||radio.antena.ba^$elemhide
+@@||radios.rs^$image
+@@||playradio.rs^$elemhide, image
+@@||tdiradio.com^$image
+@@||glassrpske.com^$elemhide
+@@||nezavisne.com^$elemhide
+@@||mondo.*^$elemhide
+@@||glasregije.net^$elemhide, script, image
+@@||cafe.ba^$elemhide
+@@||klix.ba^$elemhide, image
+@@||oslobodjenje.ba^$elemhide
+@@||rts.rs^$elemhide, image
+@@||b92.*^$elemhide
+@@||b92s.net^$image
+@@||pink.rs^$elemhide, image
+@@||vesti.rs^$elemhide, image
+@@||blic.rs^$elemhide
+@@||pulsonline.rs^$elemhide
+@@||alo.rs^$elemhide, image
+@@||tvarenasport.*^$elemhide, script
+@@||sportklub.rs^$elemhide
+@@||hrt.hr^$elemhide, script, stylesheet
+@@||rtl.hr^$elemhide, script, stylesheet
+@@||mojtv.hr^$elemhide, script
+@@||tvprofil.com^$elemhide
+@@||livescore.com^$elemhide, image
+@@||rezultati.com^$elemhide
+@@||mozilla.org^$image
+@@||vivaldi.*^$elemhide, image
+@@||palemoon.org^$elemhide, image
+@@||seamonkey-project.org^$elemhide
+@@||yandex.ru^$script, ping, xmlhttprequest, image
+@@||joomla.org^$elemhide, image
+@@||accuweather.com^$elemhide, script
+@@||meteoalarm.eu^$elemhide, image
+@@||addthis.com^$script, xmlhttprequest, subdocument, elemhide, image
+@@||sharethis.*^$script, xmlhttprequest, subdocument, image
+@@||addtoany.com^$script
+@@||google.*^$elemhide, image, ping, script
+@@||videolan.org^$elemhide, image
+@@||ip2location.com^$elemhide, image, script
+@@||filmclub.tv^$elemhide
+@@||netfilm.tv^$stylesheet
+@@||delfi.rs^$elemhide
+@@||agencijaspektar.com^$elemhide‚ script
+@@||poslovi.ba^$elemhide
+@@||zfbh.ba^$elemhide
+@@||tagged.com^$image
+@@||tinder.com^$elemhide
+@@||scribd.com^$elemhide
+@@||mega.nz^$elemhide
+@@||wps.com^$image
+@@||winamp.com^$elemhide
+@@||airdroid.com^$elemhide, image
+@@||tropic.ba^$elemhide
+@@||mojmarket.ba^$elemhide
+@@||bingotuzla.ba^$elemhide
+@@||olx.ba^$elemhide
+@@||eset.com^$elemhide
+@@||esetstatic.com^$script
+@@||norton.com^$elemhide
+@@||bitdefender.com^$script
+@@||avast.com^$elemhide, image
+@@||avg.com^$elemhide, image
+@@||malwarebytes.com^$elemhide
+@@||kaspersky.*^$elemhide, script
+@@||ccleaner.com^$elemhide
+@@||ccleanercloud.com^$elemhide, image
+@@||wikipedia.org^$elemhide, ping
+@@||wikimedia.org^$image
+@@||youtube.com^$image, elemhide
+@@||duckduckgo.com^$elemhide, image
+@@||who.int^$elemhide
+@@||cdc.gov^$elemhide
+@@||ted.com^$elemhide
+@@||tedcdn.com^$script
+@@||nist.gov^$elemhide, image
+@@||prointer.ba^$elemhide
+@@||spc.rs^$elemhide
+@@||hilandar.org^$elemhide
+@@||manastir-lepavina.org^$elemhide
+@@||eparhijazt.com^$elemhide
+@@||crkvenikalendar.com^$elemhide
+@@||mozzartbet.*^$script
+@@||wwin-ba.com^$elemhide, image
+@@||meridianbet.ba^$elemhide
+@@||vitinka.com^$elemhide
+@@||ea.com^$elemhide
+@@||akamaihd.net^$image
+@@||akamaized.net^$image
+@@||github.*^$image
+@@||siteground.com^$elemhide
+@@||about.me^$elemhide
+@@||bitly.com^$elemhide
+@@||cashbackworld.com^$elemhide
+@@||codeproject.com^$elemhide, image
+@@||corel.com^$elemhide
+@@||eurosport.com^$elemhide
+@@||fifa.com^$elemhide, image
+@@||uefa.*^$elemhide, image
+@@||fiba.basketball^$elemhide
+@@||fia.com^$elemhide
+@@||formula1.com^$elemhide
+@@||fiaformulae.com^$elemhide
+@@||formulae.cloud^$image
+@@||wrc.com^$elemhide
+@@||fiawtcr.com^$elemhide, script, image
+@@||tcr-series.com^$elemhide, image
+@@||fcbayern.net^$elemhide
+@@||crvenazvezdafk.com^$elemhide, image
+@@||kkcrvenazvezda.rs^$elemhide, script
+@@||sd-crvenazvezda.net^$elemhide
+@@||partizan.rs^$elemhide
+@@||kkpartizan.rs^$elemhide, image
+@@||igokea.rs^$elemhide, stylesheet, script
+@@||aba-liga.com^$elemhide
+@@||euroleague.net^$elemhide
+@@||platform.twitter.com^$script, subdocument
+@@||syndication.twitter.com^$subdocument, image
+@@||facebook.com^$subdocument, image
+@@||api.instagram.com^$script
+@@||pornhub.com^$elemhide
+@@||phncdn.com^$image
+@@||lushstories.com^$elemhide, image
+@@||sexcentrala.com^$elemhide, stylesheet, script
+@@||mona.rs^$elemhide, image
+@@||lisca.*^$elemhide, script, image
+@@||dunav.ba^$elemhide, image
+@@||tesla.info^$elemhide, stylesheet, script, image
+@@||airserbia.com^$elemhide, stylesheet
+@@||wwe.com^$elemhide, image
+@@||worldcommunitygrid.org^$elemhide, image
+@@||marvel.*^$elemhide, image, xmlhttprequest
+@@||mathworks.com^$elemhide, image
+@@||slack.com^$elemhide, image
