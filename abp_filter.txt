@@ -224,3 +224,4 @@
 @@||marvel.*^$elemhide, image, xmlhttprequest
 @@||mathworks.com^$elemhide, image
 @@||slack.com^$elemhide, image
+@@||imdb.com^$elemhide
