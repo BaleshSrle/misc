@@ -226,3 +226,4 @@
 @@||mathworks.com^$elemhide, image
 @@||slack.com^$elemhide, image
 @@||imdb.com^$elemhide
+@@||ask.fm^$elemhide
