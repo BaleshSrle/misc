@@ -171,6 +171,7 @@
 @@||lanaco.com^$elemhide, script
 @@||dvcsolutions.com^$elemhide, image
 @@||bitlab.rs^$elemhide, stylesheet, script
+@@||wayseven.com^$elemhide
 @@||spc.rs^$elemhide
 @@||hilandar.org^$elemhide
 @@||manastir-lepavina.org^$elemhide
