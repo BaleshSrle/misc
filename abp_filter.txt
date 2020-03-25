@@ -126,7 +126,7 @@
 @@||meteoalarm.eu^$elemhide, image
 @@||addthis.com^$script, xmlhttprequest, subdocument, elemhide, image
 @@||sharethis.*^$script, xmlhttprequest, subdocument, image
-@@||addtoany.com^$script
+@@||addtoany.com^$script, subdocument
 @@||google.*^$elemhide, image, ping, script
 @@||videolan.org^$elemhide, image
 @@||ip2location.com^$elemhide, image, script
@@ -170,6 +170,7 @@
 @@||prointer.ba^$elemhide
 @@||lanaco.com^$elemhide, script
 @@||dvcsolutions.com^$elemhide, image
+@@||bitlab.rs^$elemhide, stylesheet, script
 @@||spc.rs^$elemhide
 @@||hilandar.org^$elemhide
 @@||manastir-lepavina.org^$elemhide
