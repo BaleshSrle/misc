@@ -167,6 +167,7 @@
 @@||ted.com^$elemhide
 @@||tedcdn.com^$script
 @@||nist.gov^$elemhide, image
+@@||icbl.ba^$elemhide, stylesheet, script
 @@||prointer.ba^$elemhide
 @@||lanaco.com^$elemhide, script
 @@||dvcsolutions.com^$elemhide, image
