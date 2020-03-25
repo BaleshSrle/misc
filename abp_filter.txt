@@ -168,6 +168,7 @@
 @@||tedcdn.com^$script
 @@||nist.gov^$elemhide, image
 @@||prointer.ba^$elemhide
+@@||lanaco.com^$elemhide, script
 @@||spc.rs^$elemhide
 @@||hilandar.org^$elemhide
 @@||manastir-lepavina.org^$elemhide
