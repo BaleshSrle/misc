@@ -240,3 +240,4 @@
 @@||badoo.com^$elemhide
 @@||byet.host^$elemhide, script
 @@||disqus.com^$elemhide, script
+@@||eff.org^$elemhide
