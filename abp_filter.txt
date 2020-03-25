@@ -210,6 +210,7 @@
 @@||syndication.twitter.com^$subdocument, image
 @@||facebook.com^$subdocument, image
 @@||api.instagram.com^$script
+@@||platform.linkedin.com^$script
 @@||pornhub.com^$elemhide
 @@||phncdn.com^$image
 @@||lushstories.com^$elemhide, image
