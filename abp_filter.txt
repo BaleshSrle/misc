@@ -133,7 +133,7 @@
 @@||filmclub.tv^$elemhide
 @@||netfilm.tv^$stylesheet
 @@||delfi.rs^$elemhide
-@@||www.agencijaspektar.com^$elemhide‚ script
+@@||agencijaspektar.com^$document
 @@||poslovi.ba^$elemhide
 @@||zfbh.ba^$elemhide
 @@||tagged.com^$image
