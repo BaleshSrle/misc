@@ -229,3 +229,4 @@
 @@||imdb.com^$elemhide
 @@||ask.fm^$elemhide
 @@||badoo.com^$elemhide
+@@||byet.host^$elemhide, script
