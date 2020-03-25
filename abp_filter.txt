@@ -176,6 +176,7 @@
 @@||wayseven.com^$elemhide
 @@||dwelt.net^$elemhide
 @@||jsguru.io^$elemhide
+@@||atlantbh.com^$stylesheet, script
 @@||spc.rs^$elemhide
 @@||hilandar.org^$elemhide
 @@||manastir-lepavina.org^$elemhide
@@ -238,3 +239,4 @@
 @@||ask.fm^$elemhide
 @@||badoo.com^$elemhide
 @@||byet.host^$elemhide, script
+@@||disqus.com^$elemhide, script
