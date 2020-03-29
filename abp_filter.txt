@@ -263,6 +263,7 @@
 @@||nk-sirokibrijeg.com^$elemhide, image
 @@||fkvelez.ba^$elemhide
 @@||hskzrinjski.ba^$elemhide
+@@||fksloboda.ba^$elemhide, stylesheet, script
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
