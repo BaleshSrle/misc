@@ -210,6 +210,7 @@
 @@||fcbayern.net^$elemhide
 @@||vfl-wolfsburg.de^$elemhide, image
 @@||herthabsc.de^$elemhide, script
+@@||hsv.de^$elemhide
 @@||manutd.com^$elemhide
 @@||mancity.com^$elemhide, image
 @@||fulhamfc.com^$elemhide, image
