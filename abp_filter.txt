@@ -214,6 +214,8 @@
 @@||fcaugsburg.de^$elemhide, script
 @@||bayer04.de^$elemhide
 @@||bvb.de^$elemhide
+@@||borussia.de^$elemhide, image
+@@||eintracht.de^$elemhide
 @@||manutd.com^$elemhide
 @@||mancity.com^$elemhide, image
 @@||fulhamfc.com^$elemhide, image
