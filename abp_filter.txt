@@ -229,6 +229,7 @@
 @@||sufc.co.uk^$elemhide
 @@||whufc.com^$elemhide, image
 @@||safc.com^$elemhide
+@@||dcfc.co.uk^$elemhide
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
