@@ -251,6 +251,7 @@
 @@||qpr.co.uk^$elemhide
 @@||mfc.co.uk^$elemhide, stylesheet
 @@||stokecityfc.com^$elemhide
+@@||fkborac.net^$elemhide
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
