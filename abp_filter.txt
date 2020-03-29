@@ -261,6 +261,7 @@
 @@||tosk.ba^$elemhide
 @@||nkcelik.ba^$elemhide
 @@||nk-sirokibrijeg.com^$elemhide, image
+@@||fkvelez.ba^$elemhide
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
