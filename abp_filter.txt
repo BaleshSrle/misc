@@ -209,6 +209,7 @@
 @@||tcr-series.com^$elemhide, image
 @@||fcbayern.net^$elemhide
 @@||vfl-wolfsburg.de^$elemhide, image
+@@||herthabsc.de^$elemhide, script
 @@||manutd.com^$elemhide
 @@||mancity.com^$elemhide, image
 @@||fulhamfc.com^$elemhide, image
