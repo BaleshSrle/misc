@@ -222,6 +222,7 @@
 @@||fc.de^$elemhide
 @@||dierotenbullen.com^$elemhide
 @@||schalke04.de^$elemhide, image, script
+@@||werder.de^$elemhide
 @@||manutd.com^$elemhide
 @@||mancity.com^$elemhide, image
 @@||fulhamfc.com^$elemhide, image
