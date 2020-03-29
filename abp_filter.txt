@@ -255,6 +255,7 @@
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
 @@||fkzeljeznicar.org^$elemhide, image
 @@||fkkrupa.net^$elemhide
+@@||rudar-prijedor.com^$elemhide, stylesheet, script
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
