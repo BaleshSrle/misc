@@ -209,7 +209,7 @@
 @@||tcr-series.com^$elemhide, image
 @@||fcbayern.net^$elemhide
 @@||manutd.com^$elemhide
-@@||mancity.com^$elemhide
+@@||mancity.com^$elemhide, image
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
