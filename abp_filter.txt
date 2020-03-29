@@ -216,6 +216,12 @@
 @@||bvb.de^$elemhide
 @@||borussia.de^$elemhide, image
 @@||eintracht.de^$elemhide
+@@||mainz05.de^$elemhide
+@@||scfreiburg.com^$elemhide, image
+@@||achtzehn99.de^$elemhide, image
+@@||fc.de^$elemhide
+@@||dierotenbullen.com^$elemhide
+@@||schalke04.de^$elemhide, image, script
 @@||manutd.com^$elemhide
 @@||mancity.com^$elemhide, image
 @@||fulhamfc.com^$elemhide, image
