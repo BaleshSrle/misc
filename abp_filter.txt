@@ -231,6 +231,8 @@
 @@||safc.com^$elemhide
 @@||dcfc.co.uk^$elemhide
 @@||southamptonfc.com^$elemhide
+@@||bcfc.com^$elemhide, image
+@@||cpfc.co.uk^$elemhide, image
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
