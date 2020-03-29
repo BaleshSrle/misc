@@ -246,3 +246,4 @@
 @@||byet.host^$elemhide, script
 @@||disqus.com^$elemhide, script
 @@||eff.org^$elemhide, image
+@@||cloudfront.net^$image
