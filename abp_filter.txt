@@ -253,6 +253,7 @@
 @@||stokecityfc.com^$elemhide
 @@||fkborac.net^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
+@@||fkzeljeznicar.org^$elemhide, image
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
