@@ -212,6 +212,7 @@
 @@||mancity.com^$elemhide, image
 @@||fulhamfc.com^$elemhide, image
 @@||chelseafc.com^$elemhide
+@@||leedsunited.com^$elemhide
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
