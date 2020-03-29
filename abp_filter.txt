@@ -234,6 +234,8 @@
 @@||bcfc.com^$elemhide, image
 @@||cpfc.co.uk^$elemhide, image
 @@||qpr.co.uk^$elemhide
+@@||mfc.co.uk^$elemhide, stylesheet
+@@||stokecityfc.com^$elemhide
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
