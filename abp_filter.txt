@@ -10,7 +10,6 @@
 ! Email: baleshevichcompany@dobojcaffe.com
 !
 !--------------------------General blocking rules-----------------------------!
-#@#.footer__social-links^$elemhide
 @@|https://www.heidisql.com/download.php|$document
 @@||soapui.org^$elemhide, image
 @@||smartbear.*^$elemhide, image
@@ -209,6 +208,7 @@
 @@||fiawtcr.com^$elemhide, script, image
 @@||tcr-series.com^$elemhide, image
 @@||fcbayern.net^$elemhide
+@@||manutd.com^$elemhide
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
