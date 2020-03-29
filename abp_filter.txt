@@ -160,7 +160,7 @@
 @@||ccleanercloud.com^$elemhide, image
 @@||wikipedia.org^$elemhide, ping
 @@||wikimedia.org^$image
-@@||youtube.com^$image, elemhide
+@@||youtube.com^$image, elemhide, subdocument
 @@||duckduckgo.com^$elemhide, image
 @@||who.int^$elemhide
 @@||cdc.gov^$elemhide
@@ -260,6 +260,7 @@
 @@||fkzeljeznicar.ba^$elemhide
 @@||tosk.ba^$elemhide
 @@||nkcelik.ba^$elemhide
+@@||nk-sirokibrijeg.com^$elemhide, image
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
