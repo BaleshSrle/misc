@@ -216,6 +216,7 @@
 @@||rovers.co.uk^$elemhide
 @@||blackpoolfc.co.uk^$elemhide, image
 @@||arsenal.com^$elemhide
+@@||celticfc.net^$elemhide, stylesheet, image, script
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
