@@ -224,6 +224,7 @@
 @@||avfc.co.uk^$elemhide
 @@||nufc.co.uk^$elemhide
 @@||evertonfc.com^$elemhide
+@@||wba.co.uk^$elemhide
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
