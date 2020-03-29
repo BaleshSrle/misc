@@ -220,6 +220,7 @@
 @@||rangers.co.uk^$elemhide
 @@||tottenhamhotspur.com^$elemhide
 @@||portsmouthfc.co.uk^$elemhide, image
+@@||liverpoolfc.com^$elemhide
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
