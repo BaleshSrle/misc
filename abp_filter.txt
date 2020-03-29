@@ -233,6 +233,7 @@
 @@||southamptonfc.com^$elemhide
 @@||bcfc.com^$elemhide, image
 @@||cpfc.co.uk^$elemhide, image
+@@||qpr.co.uk^$elemhide
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
