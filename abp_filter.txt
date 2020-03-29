@@ -230,6 +230,7 @@
 @@||whufc.com^$elemhide, image
 @@||safc.com^$elemhide
 @@||dcfc.co.uk^$elemhide
+@@||southamptonfc.com^$elemhide
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
