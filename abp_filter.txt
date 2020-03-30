@@ -115,7 +115,7 @@
 @@||mojtv.hr^$elemhide, script
 @@||tvprofil.com^$elemhide
 @@||livescore.com^$elemhide, image
-@@||rezultati.com^$elemhide
+@@||rezultati.com^$elemhide, image
 @@||mozilla.org^$image
 @@||vivaldi.*^$elemhide, image
 @@||palemoon.org^$elemhide, image
