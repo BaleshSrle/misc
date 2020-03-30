@@ -276,6 +276,7 @@
 @@||platform.twitter.com^$script, subdocument
 @@||syndication.twitter.com^$subdocument, image, script
 @@||facebook.com^$subdocument, image
+@@||facebook.net^$script
 @@||api.instagram.com^$script
 @@||platform.linkedin.com^$script
 @@||pornhub.com^$elemhide
