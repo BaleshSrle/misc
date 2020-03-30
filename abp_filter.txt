@@ -162,7 +162,9 @@
 @@||4kdownload.com^$elemhide
 @@||wikipedia.org^$elemhide, ping
 @@||wikimedia.org^$image
-@@||youtube.com^$image, elemhide, subdocument
+@@||youtube.com^$image, elemhide, subdocument, xmlhttprequest
+@@||googlevideo.com^$image
+@@||ytimg.com^$image
 @@||duckduckgo.com^$elemhide, image
 @@||who.int^$elemhide
 @@||cdc.gov^$elemhide
