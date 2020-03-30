@@ -301,3 +301,4 @@
 @@||cloudfront.net^$image
 @@||azureedge.net^$image
 @@||browser-update.org^$script
+@@||miniclip.com^$image
