@@ -300,3 +300,4 @@
 @@||eff.org^$elemhide, image
 @@||cloudfront.net^$image
 @@||azureedge.net^$image
+@@||browser-update.org^$script
