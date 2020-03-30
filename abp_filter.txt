@@ -277,7 +277,7 @@
 @@||igokea.rs^$elemhide, stylesheet, script
 @@||aba-liga.com^$elemhide
 @@||euroleague.net^$elemhide
-@@||platform.twitter.com^$script, subdocument
+@@||platform.twitter.com^$script, subdocument, other
 @@||syndication.twitter.com^$subdocument, image, script
 @@||facebook.com^$subdocument, image, other
 @@||facebook.net^$script
