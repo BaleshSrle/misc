@@ -179,6 +179,7 @@
 @@||jsguru.io^$elemhide
 @@||atlantbh.com^$stylesheet, script
 @@||blberza.com^$image
+@@||sase.ba^$elemhide, image
 @@||spc.rs^$elemhide
 @@||hilandar.org^$elemhide
 @@||manastir-lepavina.org^$elemhide
