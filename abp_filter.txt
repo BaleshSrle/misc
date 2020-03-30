@@ -307,3 +307,4 @@
 @@||browser-update.org^$script
 @@||miniclip.com^$image
 @@||live.com^$image
+@@||bing.com^$image
