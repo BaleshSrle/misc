@@ -306,3 +306,4 @@
 @@||azureedge.net^$image
 @@||browser-update.org^$script
 @@||miniclip.com^$image
+@@||live.com^$image
