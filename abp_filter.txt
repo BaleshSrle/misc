@@ -40,6 +40,7 @@
 @@||bibliotekadoboj.com^$elemhide, image
 @@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
 @@||mojdoboj.info^$elemhide
+@@||dobojski.info^$elemhide
 @@||banjaluka.rs.ba^$elemhide, stylesheet, script
 @@||lutrijars.com^$image
 @@||manja.ba^$elemhide, image
