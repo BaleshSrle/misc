@@ -311,3 +311,5 @@
 @@||miniclip.com^$image
 @@||live.com^$image, elemhide
 @@||bing.com^$image, elemhide
+@@.social-icons^$elemhide
+@@.twitter-timeline^$elemhide
