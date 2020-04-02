@@ -282,8 +282,7 @@
 @@||euroleague.net^$elemhide
 @@||platform.twitter.com^$script, subdocument, other
 @@||syndication.twitter.com^$subdocument, image, script
-@@||facebook.com^$subdocument, image, other
-@@||facebook.net^$script
+@@||facebook.*^$subdocument, image, other, script
 @@||api.instagram.com^$script
 @@||platform.linkedin.com^$script
 @@||pornhub.com^$elemhide
