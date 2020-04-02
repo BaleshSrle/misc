@@ -32,6 +32,7 @@
 @@||koronavirususrpskoj.com^$elemhide, stylesheet, script
 @@||rhmzrs.com^$elemhide
 @@||np.rs.ba^$elemhide
+@@||zunsrs.com^$elemhide, font
 @@||certrs.org^$elemhide
 @@||cineplexxpalas.ba^$elemhide, image
 @@||doboj.gov.ba^$elemhide
@@ -311,5 +312,3 @@
 @@||miniclip.com^$image
 @@||live.com^$image, elemhide
 @@||bing.com^$image, elemhide
-@@||.social-icons^$elemhide
-@@||.twitter-timeline^$elemhide
