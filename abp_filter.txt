@@ -348,3 +348,6 @@
 @@||volkswagen.*^$elemhide, image
 @@||audi.*^$elemhide
 @@||fcagroup.com^$stylesheet,script
+@@||maserati.com^$elemhide
+@@||bugatti.com^$elemhide, script
+@@||lamborghini.com^$elemhide
