@@ -316,3 +316,4 @@
 @@||aorus.com^$elemhide
 @@||acer.com^$elemhide, image
 @@||fujitsu.com^$elemhide, image
+@@||hp.com^$elemhide, script
