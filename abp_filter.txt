@@ -309,4 +309,6 @@
 @@||azureedge.net^$image
 @@||browser-update.org^$script
 @@||miniclip.com^$image
-@@||live.com, bing.com^$image, elemhide
+@@||live.com^$image, elemhide
+@@||bing.com^$image, elemhide
+@@||asus.com^$elemhide
