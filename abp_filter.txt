@@ -359,4 +359,4 @@
 @@||citroen.*^$elemhide, image, script
 @@||seat.*^$elemhide, image
 @@||cupraofficial.*^$elemhide, image
-@@||skoda-auto.com^$elemhide, script
+@@||skoda-auto.com^$elemhide, script, stylesheet, subdocument
