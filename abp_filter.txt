@@ -321,3 +321,5 @@
 @@||dynabook.com^$elemhide, image
 @@||intel.com^$elemhide
 @@||amd.com^$elemhide
+@@||huawei.com^$elemhide
+@@||tp-link.com^$elemhide
