@@ -311,7 +311,7 @@
 @@||browser-update.org^$script
 @@||miniclip.com^$image
 @@||live.com^$image, elemhide
-@@||bing.com^$image, elemhide
+@@||bing.com^$image, elemhide, script
 @@||asus.com^$elemhide, image
 @@||gigabyte.com^$elemhide, image
 @@||aorus.com^$elemhide
