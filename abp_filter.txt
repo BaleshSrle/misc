@@ -315,3 +315,4 @@
 @@||gigabyte.com^$elemhide, image
 @@||aorus.com^$elemhide
 @@||acer.com^$elemhide, image
+@@||fujitsu.com^$elemhide, image
