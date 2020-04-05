@@ -336,4 +336,4 @@
 @@||man.eu^elemhide, xmlhttprequest
 @@||neoplan.com^$elemhide, xmlhttprequest
 @@||setra.de^$elemhide
-@@||scania.com^$elemhide
+@@||scania.com^$elemhide, image, script
