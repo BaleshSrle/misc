@@ -319,3 +319,5 @@
 @@||hp.com^$elemhide, script
 @@||lenovo.com^$elemhide, script, stylesheet, image
 @@||dynabook.com^$elemhide, image
+@@||intel.com^$elemhide
+@@||amd.com^$elemhide
