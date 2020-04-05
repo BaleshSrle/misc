@@ -357,3 +357,5 @@
 @@||renault.*^$elemhide
 @@||dacia.*^$elemhide
 @@||citroen.*^$elemhide, image, script
+@@||seat.*^$elemhide, image
+@@||cupraofficial.*^$elemhide, image
