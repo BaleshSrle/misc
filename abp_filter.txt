@@ -333,5 +333,8 @@
 @@||mercedes-amg.com^$elemhide
 @@||smart.com^$elemhide, image, script
 @@||mantruckandbus.com^$elemhide, image
-@@||*.man.*^elemhide, xmlhttprequest
+@@||truck.man.*^elemhide, xmlhttprequest
+@@||bus.man.*^elemhide, xmlhttprequest
 @@||neoplan.com^$elemhide, xmlhttprequest
+@@||setra.de^$elemhide
+@@||scania.com^$elemhide
