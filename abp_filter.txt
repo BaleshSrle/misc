@@ -313,4 +313,4 @@
 @@||bing.com^$image, elemhide
 @@||asus.com^$elemhide, image
 @@||gigabyte.com^$elemhide, image
-@@||aorus.com^elemhide
+@@||aorus.com^$elemhide
