@@ -342,4 +342,4 @@
 @@||porsche.*^$elemhide
 @@||bmw.*^$elemhide, script
 @@||opel.*^$elemhide
-@@||volkswagen.*^$elemhide
+@@||volkswagen.*^$elemhide, image
