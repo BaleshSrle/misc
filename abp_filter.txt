@@ -311,4 +311,4 @@
 @@||miniclip.com^$image
 @@||live.com^$image, elemhide
 @@||bing.com^$image, elemhide
-@@||asus.com^$elemhide
+@@||asus.com^$elemhide, image
