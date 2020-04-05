@@ -332,3 +332,6 @@
 @@||mercedes-benz.com^$elemhide, script, xmlhttprequest, stylesheet
 @@||mercedes-amg.com^$elemhide
 @@||smart.com^$elemhide, image, script
+@@||mantruckandbus.com^$elemhide, image
+@@||man.*^elemhide, xmlhttprequest
+@@||neoplan.com^$elemhide, xmlhttprequest
