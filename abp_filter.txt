@@ -323,3 +323,4 @@
 @@||amd.com^$elemhide
 @@||huawei.com^$elemhide
 @@||tp-link.com^$elemhide
+@@||daf.*^$elemhide
