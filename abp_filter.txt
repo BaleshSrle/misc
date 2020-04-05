@@ -317,4 +317,4 @@
 @@||acer.com^$elemhide, image
 @@||fujitsu.com^$elemhide, image
 @@||hp.com^$elemhide, script
-@@||lenovo.com^$elemhide, script
+@@||lenovo.com^$elemhide, script, stylesheet, image
