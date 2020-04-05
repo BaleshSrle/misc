@@ -333,5 +333,5 @@
 @@||mercedes-amg.com^$elemhide
 @@||smart.com^$elemhide, image, script
 @@||mantruckandbus.com^$elemhide, image
-@@||man.*^elemhide, xmlhttprequest
+@@||*.man.*^elemhide, xmlhttprequest
 @@||neoplan.com^$elemhide, xmlhttprequest
