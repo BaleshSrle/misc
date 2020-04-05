@@ -337,3 +337,9 @@
 @@||neoplan.com^$elemhide, xmlhttprequest
 @@||setra.de^$elemhide
 @@||scania.com^$elemhide, image, script
+@@||ford.com^$elemhide, image
+@@||chevrolet.com^$elemhide, image
+@@||porsche.com^$elemhide
+@@||bmw.com^$elemhide, script
+@@||opel.*^$elemhide
+@@||volkswagen.*^$elemhide
