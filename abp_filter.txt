@@ -339,6 +339,9 @@
 @@||scania.com^$elemhide, image, script
 @@||ford.com^$elemhide, image
 @@||chevrolet.com^$elemhide, image
+@@||lincoln.com^$elemhide
+@@||cadillac.com^$image
+@@||buick.com^$elemhide, image
 @@||porsche.*^$elemhide
 @@||bmw.*^$elemhide, script
 @@||opel.*^$elemhide
