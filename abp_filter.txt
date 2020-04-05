@@ -329,3 +329,6 @@
 @@||volvotrucks.*^$elemhide, stylesheet, script
 @@||volvobuses.*^$elemhide
 @@||volvoce.com^$elemhide
+@@||mercedes-benz.com^$elemhide, script
+@@||mercedes-amg.com^$elemhide
+@@||smart.com^$elemhide, image, script
