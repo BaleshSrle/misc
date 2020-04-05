@@ -324,3 +324,4 @@
 @@||huawei.com^$elemhide
 @@||tp-link.com^$elemhide
 @@||daf.*^$elemhide
+@@||flickr.com^$elemhide
