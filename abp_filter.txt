@@ -343,3 +343,4 @@
 @@||bmw.*^$elemhide, script
 @@||opel.*^$elemhide
 @@||volkswagen.*^$elemhide, image
+@@||audi.*^$elemhide
