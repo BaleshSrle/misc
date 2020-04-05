@@ -314,4 +314,4 @@
 @@||asus.com^$elemhide, image
 @@||gigabyte.com^$elemhide, image
 @@||aorus.com^$elemhide
-@@||acer.com^$elemhide
+@@||acer.com^$elemhide, image
