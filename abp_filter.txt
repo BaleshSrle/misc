@@ -312,3 +312,5 @@
 @@||live.com^$image, elemhide
 @@||bing.com^$image, elemhide
 @@||asus.com^$elemhide, image
+@@||gigabyte.com^$elemhide, image
+@@||aorus.com^elemhide
