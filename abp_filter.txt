@@ -347,3 +347,4 @@
 @@||opel.*^$elemhide
 @@||volkswagen.*^$elemhide, image
 @@||audi.*^$elemhide
+@@||fcagroup.com^$stylesheet,script
