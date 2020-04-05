@@ -282,6 +282,7 @@
 @@||euroleague.net^$elemhide
 @@||platform.twitter.com^$script, subdocument, other
 @@||syndication.twitter.com^$subdocument, image, script
+@@||flickr.com^$elemhide
 @@||facebook.*^$subdocument, image, other, script
 @@||api.instagram.com^$script
 @@||platform.linkedin.com^$script
@@ -324,4 +325,7 @@
 @@||huawei.com^$elemhide
 @@||tp-link.com^$elemhide
 @@||daf.*^$elemhide
-@@||flickr.com^$elemhide
+@@||volvocars.com^$elemhide
+@@||volvotrucks.*^$elemhide, stylesheet, script
+@@||volvobuses.*^$elemhide
+@@||volvoce.com^$elemhide
