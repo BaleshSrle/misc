@@ -360,4 +360,4 @@
 @@||seat.*^$elemhide, image
 @@||cupraofficial.*^$elemhide, image
 @@||skoda-auto.com^$elemhide, script, stylesheet, subdocument
-@@||skoda.*^$elemhide
+@@||skoda.*^$elemhide, image
