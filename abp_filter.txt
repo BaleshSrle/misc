@@ -343,6 +343,7 @@
 @@||lincoln.com^$elemhide
 @@||cadillac.com^$image
 @@||buick.com^$elemhide, image
+@@||jeep.*^$elemhide
 @@||porsche.*^$elemhide
 @@||bmw.*^$elemhide, script
 @@||opel.*^$elemhide
