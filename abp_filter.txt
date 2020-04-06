@@ -379,4 +379,5 @@
 @@||landrover.*^$elemhide
 @@||astonmartin.com^$elemhide
 @@||koenigsegg.com^$elemhide, stylesheet, script
+@@||toyota^$elemhide
 @@||rimac-automobili.com^$elemhide
