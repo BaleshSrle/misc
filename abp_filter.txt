@@ -380,5 +380,5 @@
 @@||astonmartin.com^$elemhide
 @@||koenigsegg.com^$elemhide, stylesheet, script
 @@||toyota.*^$elemhide
-@@||global.toyota^$elemhide
+@@||global.toyota^$elemhide, image
 @@||rimac-automobili.com^$elemhide
