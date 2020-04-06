@@ -381,4 +381,5 @@
 @@||koenigsegg.com^$elemhide, stylesheet, script
 @@||toyota.*^$elemhide
 @@||global.toyota^$elemhide, image
+@@||hyundai.*^$elemhide, image
 @@||rimac-automobili.com^$elemhide
