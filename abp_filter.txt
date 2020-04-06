@@ -382,5 +382,5 @@
 @@||toyota.*^$elemhide
 @@||global.toyota^$elemhide, image
 @@||hyundai.*^$elemhide, image
-@@||mitsubishi-motors.com*^$elemhide, stylesheet, script, image
+@@||mitsubishi-motors.*^$elemhide, stylesheet, script, image
 @@||rimac-automobili.com^$elemhide
