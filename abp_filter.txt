@@ -378,7 +378,7 @@
 @@||jaguar.*^$elemhide
 @@||landrover.*^$elemhide
 @@||astonmartin.com^$elemhide
-@@||subaru-global.com^$script
+@@||subaru-global.com^$elemhide, script
 @@||subaru.*^$elemhide, image
 @@||koenigsegg.com^$elemhide, stylesheet, script
 @@||toyota.*^$elemhide
