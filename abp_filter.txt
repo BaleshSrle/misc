@@ -349,7 +349,7 @@
 @@||opel.*^$elemhide
 @@||volkswagen.*^$elemhide, image
 @@||audi.*^$elemhide
-@@||fcagroup.com^$stylesheet,script
+@@||fcagroup.com^$stylesheet,script, image
 @@||maserati.com^$elemhide
 @@||bugatti.com^$elemhide, script
 @@||lamborghini.com^$elemhide
