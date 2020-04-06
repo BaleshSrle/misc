@@ -376,4 +376,5 @@
 @@||jaguar.*^$elemhide
 @@||landrover.*^$elemhide
 @@||astonmartin.com^$elemhide
+@@||koenigsegg.com^$elemhide, stylesheet, script
 @@||rimac-automobili.com^$elemhide
