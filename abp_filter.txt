@@ -127,7 +127,7 @@
 @@||accuweather.com^$elemhide, script
 @@||meteoalarm.eu^$elemhide, image
 @@||addthis.com^$script, xmlhttprequest, subdocument, elemhide, image
-@@||sharethis.*^$script, xmlhttprequest, subdocument, image
+@@||sharethis.*^$script, xmlhttprequest, subdocument, image, stylesheet
 @@||addtoany.com^$script, subdocument
 @@||google.*^$elemhide, image, ping, script
 @@||videolan.org^$elemhide, image
@@ -361,3 +361,14 @@
 @@||cupraofficial.*^$elemhide, image
 @@||skoda-auto.com^$elemhide, script, stylesheet, subdocument
 @@||skoda.*^$elemhide, image
+@@||mini.com^$elemhide
+@@||bentleymotors.com^$elemhide
+@@||rolls-roycemotorcars.com^$elemhide
+@@||noblecars.com^$elemhide, image
+@@||morgan-motor.com^$elemhide, stylesheet, script, image
+@@||davidbrownautomotive.com^$elemhide, image
+@@||tvr.co.uk^$elemhide, image
+@@||caterhamcars.com^$elemhide, image
+@@||lotuscars.com^$elemhide, stylesheet, script
+@@||mg.co.uk^$elemhide
+@@||mclaren.com^$elemhide
