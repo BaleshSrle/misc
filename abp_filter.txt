@@ -52,6 +52,7 @@
 @@||spu.ba^$elemhide
 @@||blc.edu.ba^$elemhide
 @@||nub.rs^$elemhide, image
+@@||nsk.hr^$elemhide, stylesheet, script, image
 @@||nestropetrol.com^$elemhide
 @@||total-trade.ba^$elemhide
 @@||automilovanovic.com^$elemhide
@@ -372,3 +373,5 @@
 @@||lotuscars.com^$elemhide, stylesheet, script
 @@||mg.co.uk^$elemhide
 @@||mclaren.com^$elemhide
+@@||jaguar.*^$elemhide
+@@||landrover.*^$elemhide
