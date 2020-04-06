@@ -375,3 +375,4 @@
 @@||mclaren.com^$elemhide
 @@||jaguar.*^$elemhide
 @@||landrover.*^$elemhide
+@@||astonmartin.com^$elemhide
