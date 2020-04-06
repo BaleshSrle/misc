@@ -352,6 +352,7 @@
 @@||maserati.com^$elemhide
 @@||bugatti.com^$elemhide, script
 @@||lamborghini.com^$elemhide
+@@||ferrari.com^$elemhide
 @@||groupe-psa.com^$elemhide
 @@||peugeot.*^$elemhide, image
 @@||peugeot-sport.com^$elemhide, image
