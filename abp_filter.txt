@@ -390,7 +390,7 @@
 @@||nissan.*^$elemhide
 @@||infiniti.*^$elemhide
 @@||acura.*^$elemhide
-@@||kia.*^$elemhide
+@@||kia.*^$elemhide, image
 @@||globalsuzuki.com^$elemhide, image
 @@||suzuki.*^$elemhide, stylesheet, script, image
 @@||rimac-automobili.com^$elemhide
