@@ -290,6 +290,12 @@
 @@||sslazio.it^$elemhide, image, stylesheet
 @@||acmilan.com^$elemhide
 @@||violachannel.tv^$elemhide
+@@||sscnapoli.it^$elemhide
+@@||udinese.it^$elemhide
+@@||sampdoria.it^$elemhide, script, subdocument, image
+@@||asroma.com^$elemhide
+@@||parmacalcio1913.com^$elemhide, image
+@@||boysparma1977.it^$image
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
 @@||nfsbih.ba^$elemhide, image
