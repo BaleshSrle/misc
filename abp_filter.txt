@@ -297,6 +297,12 @@
 @@||parmacalcio1913.com^$elemhide, image
 @@||boysparma1977.it^$image
 @@||calciocatania.it^$elemhide, image
+@@||modenacalcio.com^$elemhide
+@@||livornocalcio.it^$elemhide
+@@||acperugiacalcio.com^$elemhide, stylesheet
+@@||bresciacalcio.it^$elemhide, image
+@@||asbari.it^$elemhide
+@@||calciocatania.it^$elemhide, image
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
 @@||nfsbih.ba^$elemhide, image
