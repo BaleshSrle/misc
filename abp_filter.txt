@@ -276,6 +276,9 @@
 @@||getafecf.*^$elemhide, xmlhttprequest
 @@||sevillafc.es^$elemhide
 @@||osasuna.es^$elemhide
+@@||rcdespanyol.com^$elemhide
+@@||villarrealcf.es^$elemhide, stylesheet, script
+@@||ciberche.net^$elemhide
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
 @@||nfsbih.ba^$elemhide, image
