@@ -277,7 +277,7 @@
 @@||sevillafc.es^$elemhide
 @@||osasuna.es^$elemhide
 @@||rcdespanyol.com^$elemhide, image
-@@||villarrealcf.es^$elemhide, stylesheet, script
+@@||villarrealcf.es^$elemhide, stylesheet, script, image
 @@||ciberche.net^$elemhide
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
