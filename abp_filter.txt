@@ -279,6 +279,11 @@
 @@||rcdespanyol.com^$elemhide, image
 @@||villarrealcf.es^$elemhide, stylesheet, script, image
 @@||ciberche.net^$elemhide
+@@||atalanta.it^$elemhide
+@@||empolifc.com^$image
+@@||cagliaricalcio.com^$elemhide, image
+@@||bolognafc.it^$elemhide, script, stylesheet
+@@||inter.it^$elemhide, image, script
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
 @@||nfsbih.ba^$elemhide, image
