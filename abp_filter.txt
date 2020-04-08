@@ -273,6 +273,7 @@
 @@||realracingclub.es^$elemhide
 @@||realracingclub.es^$elemhide
 @@||besoccerapps.com^$elemhide, image
+@@||proyectoclubes.com^$image
 @@||nfsbih.ba^$elemhide, image
 @@||fkborac.net^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
