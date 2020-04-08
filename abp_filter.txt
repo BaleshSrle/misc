@@ -305,6 +305,7 @@
 @@||calciocatania.it^$elemhide, image
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
+@@||paokfc.gr^$elemhide, stylesheet, script, image
 @@||nfsbih.ba^$elemhide, image
 @@||fkborac.net^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
