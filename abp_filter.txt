@@ -119,11 +119,12 @@
 @@||tvprofil.com^$elemhide
 @@||livescore.com^$elemhide, image
 @@||rezultati.com^$elemhide, image
-@@||mozilla.org^$image
+@@||mozilla.org^$image, elemhide
 @@||vivaldi.*^$elemhide, image
 @@||palemoon.org^$elemhide, image
 @@||seamonkey-project.org^$elemhide
 @@||adblockplus.org^$elemhide, image, script
+@@||getadblock.com^$elemhide, image
 @@||yandex.ru^$script, ping, xmlhttprequest, image
 @@||joomla.org^$elemhide, image
 @@||accuweather.com^$elemhide, script
@@ -463,3 +464,5 @@
 @@||suzuki.*^$elemhide, stylesheet, script, image
 @@||rimac-automobili.com^$elemhide
 @@||cookiebanner.eu^$script
+@@||axe.rs^$elemhide, image
+@@||btech.rs^$elemhide
