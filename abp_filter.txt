@@ -271,7 +271,7 @@
 @@||rcdmallorca.es^$elemhide
 @@||realzaragoza.com^$elemhide, script, image
 @@||realracingclub.es^$elemhide
-@@||realracingclub.es^$elemhide
+@@||rayovallecano.es^$elemhide
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
 @@||nfsbih.ba^$elemhide, image
