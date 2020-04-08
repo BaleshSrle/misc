@@ -314,6 +314,7 @@
 @@||pao.gr^$elemhide
 @@||paobc.gr^$elemhide
 @@||galatasaray.org^$elemhide, image
+@@||fenerbahce.org^$elemhide
 @@||bjk.com.tr^$elemhide
 @@||anadoluefessk.org^$elemhide
 @@||nfsbih.ba^$elemhide, image
