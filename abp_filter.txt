@@ -284,6 +284,11 @@
 @@||cagliaricalcio.com^$elemhide, image
 @@||bolognafc.it^$elemhide, script, stylesheet
 @@||inter.it^$elemhide, image, script
+@@||juventus.com^$elemhide
+@@||genoacfc.it^$elemhide, stylesheet, script
+@@||torinofc.it^$elemhide, stylesheet, script
+@@||sslazio.it^$elemhide, image, stylesheet
+@@||acmilan.com^$elemhide
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
 @@||nfsbih.ba^$elemhide, image
@@ -421,3 +426,4 @@
 @@||globalsuzuki.com^$elemhide, image
 @@||suzuki.*^$elemhide, stylesheet, script, image
 @@||rimac-automobili.com^$elemhide
+@@||cookiebanner.eu^$script
