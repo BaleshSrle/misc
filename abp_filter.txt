@@ -262,6 +262,7 @@
 @@||realmadrid.com^$elemhide
 @@||atleticodemadrid.com^$elemhide, image, script
 @@||fcbarcelona.com^$elemhide
+@@||realsociedad.eus^$elemhide, image
 @@||nfsbih.ba^$elemhide, image
 @@||fkborac.net^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
