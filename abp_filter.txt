@@ -313,6 +313,9 @@
 @@||olympiacosbc.gr^$elemhide, image
 @@||pao.gr^$elemhide
 @@||paobc.gr^$elemhide
+@@||galatasaray.org^$elemhide, image
+@@||bjk.com.tr^$elemhide
+@@||anadoluefessk.org^$elemhide
 @@||nfsbih.ba^$elemhide, image
 @@||fkborac.net^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
