@@ -289,6 +289,7 @@
 @@||torinofc.it^$elemhide, stylesheet, script
 @@||sslazio.it^$elemhide, image, stylesheet
 @@||acmilan.com^$elemhide
+@@||violachannel.tv^$elemhide
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
 @@||nfsbih.ba^$elemhide, image
