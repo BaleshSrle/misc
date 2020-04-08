@@ -123,6 +123,7 @@
 @@||vivaldi.*^$elemhide, image
 @@||palemoon.org^$elemhide, image
 @@||seamonkey-project.org^$elemhide
+@@||adblockplus.org^$elemhide, image, script
 @@||yandex.ru^$script, ping, xmlhttprequest, image
 @@||joomla.org^$elemhide, image
 @@||accuweather.com^$elemhide, script
@@ -378,6 +379,7 @@
 @@||miniclip.com^$image
 @@||live.com^$image, elemhide
 @@||bing.com^$image, elemhide, script
+@@||microsoft.com^$elemhide
 @@||cloudflare.com^$elemhide, image, xmlhttprequest
 @@||asus.com^$elemhide, image
 @@||gigabyte.com^$elemhide, image
