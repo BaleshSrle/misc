@@ -265,10 +265,14 @@
 @@||realsociedad.eus^$elemhide, image
 @@||athletic-club.eus^$elemhide
 @@||realbetisbalompie.es^$elemhide
-@@||besoccerapps.com^$elemhide, image
 @@||udlaspalmas.es^$elemhide
 @@||malagacf.com^$elemhide
 @@||rcdeportivo.es^$elemhide
+@@||rcdmallorca.es^$elemhide
+@@||realzaragoza.com^$elemhide, script, image
+@@||realracingclub.es^$elemhide
+@@||realracingclub.es^$elemhide
+@@||besoccerapps.com^$elemhide, image
 @@||nfsbih.ba^$elemhide, image
 @@||fkborac.net^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
