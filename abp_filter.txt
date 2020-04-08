@@ -297,7 +297,7 @@
 @@||parmacalcio1913.com^$elemhide, image
 @@||boysparma1977.it^$image
 @@||calciocatania.it^$elemhide, image
-@@||modenacalcio.com^$elemhide
+@@||modenacalcio.com^$elemhide, image
 @@||livornocalcio.it^$elemhide
 @@||acperugiacalcio.com^$elemhide, stylesheet
 @@||bresciacalcio.it^$elemhide, image
