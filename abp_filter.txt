@@ -272,9 +272,9 @@
 @@||realzaragoza.com^$elemhide, script, image
 @@||realracingclub.es^$elemhide
 @@||rayovallecano.es^$elemhide
-@@||levanteud.com^$elemhide, stylesheet, script
+@@||levanteud.com^$elemhide, stylesheet, script, image
 @@||getafecf.*^$elemhide, xmlhttprequest
-@@||sevillafc.es^$elemhide, xmlhttprequest
+@@||sevillafc.es^$elemhide
 @@||osasuna.es^$elemhide
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
