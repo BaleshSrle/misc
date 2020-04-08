@@ -296,6 +296,7 @@
 @@||asroma.com^$elemhide
 @@||parmacalcio1913.com^$elemhide, image
 @@||boysparma1977.it^$image
+@@||calciocatania.it^$elemhide, image
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
 @@||nfsbih.ba^$elemhide, image
@@ -317,6 +318,9 @@
 @@||sd-crvenazvezda.net^$elemhide
 @@||partizan.rs^$elemhide
 @@||kkpartizan.rs^$elemhide, image
+@@||fkvojvodina.rs^$elemhide, stylesheet, script
+@@||ofkbeograd.co.rs^$elemhide, image
+@@||fkmetalac.rs^$elemhide, stylesheet, script
 @@||igokea.rs^$elemhide, stylesheet, script
 @@||aba-liga.com^$elemhide
 @@||euroleague.net^$elemhide
@@ -326,6 +330,7 @@
 @@||facebook.*^$subdocument, image, other, script
 @@||api.instagram.com^$script
 @@||platform.linkedin.com^$script
+@@||pinterest.com^$script
 @@||pornhub.com^$elemhide
 @@||phncdn.com^$image
 @@||lushstories.com^$elemhide, image
