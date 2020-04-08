@@ -330,7 +330,7 @@
 @@||facebook.*^$subdocument, image, other, script
 @@||api.instagram.com^$script
 @@||platform.linkedin.com^$script
-@@||pinterest.com^$script
+@@||pinterest.com^$elemhide, script
 @@||pornhub.com^$elemhide
 @@||phncdn.com^$image
 @@||lushstories.com^$elemhide, image
