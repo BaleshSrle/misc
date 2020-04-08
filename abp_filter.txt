@@ -274,7 +274,7 @@
 @@||rayovallecano.es^$elemhide
 @@||levanteud.com^$elemhide, stylesheet, script
 @@||getafecf.*^$elemhide, xmlhttprequest
-@@||sevillafc.es^$elemhide
+@@||sevillafc.es^$elemhide, xmlhttprequest
 @@||osasuna.es^$elemhide
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
