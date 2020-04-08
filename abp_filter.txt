@@ -306,6 +306,13 @@
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
 @@||paokfc.gr^$elemhide, stylesheet, script, image, font
+@@||paokbc.gr^$elemhide, image, stylesheet
+@@||aekfc.gr^$elemhide, script
+@@||aekbc.gr^$elemhide
+@@||olympiacos.org^$elemhide
+@@||olympiacosbc.gr^$elemhide, image
+@@||pao.gr^$elemhide
+@@||paobc.gr^$elemhide
 @@||nfsbih.ba^$elemhide, image
 @@||fkborac.net^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
