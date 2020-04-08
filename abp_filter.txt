@@ -328,8 +328,11 @@
 @@||ofkbeograd.co.rs^$elemhide, image
 @@||fkmetalac.rs^$elemhide, stylesheet, script
 @@||igokea.rs^$elemhide, stylesheet, script
+@@||fk-buducnost.me^$elemhide, image
+@@||kkbuducnost.me^$elemhide, image
 @@||aba-liga.com^$elemhide
 @@||euroleague.net^$elemhide
+@@||fkvardar.mk^$elemhide
 @@||platform.twitter.com^$script, subdocument, other
 @@||syndication.twitter.com^$subdocument, image, script
 @@||flickr.com^$elemhide
