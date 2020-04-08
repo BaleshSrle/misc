@@ -366,7 +366,7 @@
 @@||miniclip.com^$image
 @@||live.com^$image, elemhide
 @@||bing.com^$image, elemhide, script
-@@||cloudflare.com^$elemhide
+@@||cloudflare.com^$elemhide, image, xmlhttprequest
 @@||asus.com^$elemhide, image
 @@||gigabyte.com^$elemhide, image
 @@||aorus.com^$elemhide
