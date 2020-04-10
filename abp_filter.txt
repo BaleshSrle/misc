@@ -361,7 +361,7 @@
 @@||mona.rs^$elemhide, image
 @@||lisca.*^$elemhide, script, image
 @@||alma-ras.com^$elemhide
-@@||koteks^$elemhide
+@@||koteks.ba^$elemhide
 @@||dunav.ba^$elemhide, image
 @@||tesla.info^$elemhide, stylesheet, script, image
 @@||airserbia.com^$elemhide, stylesheet
