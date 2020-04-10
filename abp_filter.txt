@@ -360,6 +360,8 @@
 @@||sexcentrala.com^$elemhide, stylesheet, script
 @@||mona.rs^$elemhide, image
 @@||lisca.*^$elemhide, script, image
+@@||alma-ras.com^$elemhide
+@@||koteks^$elemhide
 @@||dunav.ba^$elemhide, image
 @@||tesla.info^$elemhide, stylesheet, script, image
 @@||airserbia.com^$elemhide, stylesheet
@@ -466,3 +468,10 @@
 @@||cookiebanner.eu^$script
 @@||axe.rs^$elemhide, image
 @@||btech.rs^$elemhide
+@@||bosnalijek.ba^$elemhide
+@@||hemofarm.com^$elemhide, image
+@@||mojaapoteka.net^$stylesheet, script
+@@||mojaapoteka-webshop.net^$elemhide
+@@||pharmamed.ba^$elemhide, stylesheet, image
+@@||naturapharm.net^$elemhide
+@@||dita.ba^$elemhide
