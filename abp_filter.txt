@@ -164,6 +164,8 @@
 @@||ccleaner.com^$elemhide
 @@||ccleanercloud.com^$elemhide, image
 @@||4kdownload.com^$elemhide
+@@||cleanmasterofficial.com^$elemhide
+@@||eusing.com^$elemhide
 @@||wikipedia.org^$elemhide, ping
 @@||wikimedia.org^$image
 @@||youtube.com^$image, elemhide, subdocument, xmlhttprequest
