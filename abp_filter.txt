@@ -98,7 +98,7 @@
 @@||tdiradio.com^$image
 @@||glassrpske.com^$elemhide
 @@||nezavisne.com^$elemhide
-@@||mondo.*^$elemhide
+@@||mondo.*^$elemhide, image
 @@||glasregije.net^$elemhide, script, image
 @@||cafe.ba^$elemhide
 @@||klix.ba^$elemhide, image
