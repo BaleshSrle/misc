@@ -484,7 +484,7 @@
 @@||fedoraproject.org^$elemhide, image
 @@||fedoraplanet.org^$elemhide
 @@||elementary.io^$elemhide
-@@||linuxliteos.com^$elemhide
+@@||linuxliteos.com^$elemhide, image
 @@||mxlinux.org^$elemhide, script
 @@||peppermintos.com^$elemhide
 @@||centos.org^$image
