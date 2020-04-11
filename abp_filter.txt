@@ -475,3 +475,13 @@
 @@||pharmamed.ba^$elemhide, stylesheet, image
 @@||naturapharm.net^$elemhide
 @@||dita.ba^$elemhide
+@@||ubuntu.com^$elemhide
+@@||lubuntu.*^$elemhide, stylesheet, image, script
+@@||lxle.net^$elemhide
+@@||linuxmint.com^$elemhide, image, script
+@@||debian-srbija.iz.rs^$elemhide, image
+@@||getfedora.org^$elemhide, image
+@@||fedoraproject.org^$elemhide, image
+@@||fedoraplanet.org^$elemhide
+@@||feedburner.com^$image
+@@||sourceforge.net^$elemhide
