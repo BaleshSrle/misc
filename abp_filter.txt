@@ -10,7 +10,7 @@
 ! Email: baleshevichcompany@dobojcaffe.com
 !
 !--------------------------General blocking rules-----------------------------!
-@@|https://www.heidisql.com/download.php|$document
+@@||heidisql.com^$document
 @@||soapui.org^$elemhide, image
 @@||smartbear.*^$elemhide, image
 @@||selenium.dev^$elemhide, image
