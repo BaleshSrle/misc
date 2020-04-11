@@ -490,3 +490,4 @@
 @@||centos.org^$image
 @@||feedburner.com^$image
 @@||sourceforge.net^$elemhide
+@@||glyphicons.com^$elemhide, image
