@@ -364,6 +364,8 @@
 @@||koteks.ba^$elemhide
 @@||dunav.ba^$elemhide, image
 @@||tesla.info^$elemhide, stylesheet, script, image
+@@||nokia.com^$elemhide, stylesheet
+@@||ctfassets.net^$image
 @@||airserbia.com^$elemhide, stylesheet
 @@||wwe.com^$elemhide, image
 @@||worldcommunitygrid.org^$elemhide, image
