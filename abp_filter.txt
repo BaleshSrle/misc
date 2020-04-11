@@ -491,3 +491,4 @@
 @@||feedburner.com^$image
 @@||sourceforge.net^$elemhide
 @@||glyphicons.com^$elemhide, image
+@@||forkaweso.me^$elemhide, stylesheet, script
