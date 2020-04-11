@@ -483,5 +483,10 @@
 @@||getfedora.org^$elemhide, image
 @@||fedoraproject.org^$elemhide, image
 @@||fedoraplanet.org^$elemhide
+@@||elementary.io^$elemhide
+@@||linuxliteos.com^$elemhide
+@@||mxlinux.org^$elemhide, script
+@@||peppermintos.com^$elemhide
+@@||centos.org^$image
 @@||feedburner.com^$image
 @@||sourceforge.net^$elemhide
