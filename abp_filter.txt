@@ -111,6 +111,7 @@
 @@||blic.rs^$elemhide
 @@||pulsonline.rs^$elemhide
 @@||alo.rs^$elemhide, image
+@@||aljazeera.net^$elemhide, script
 @@||tvarenasport.*^$elemhide, script
 @@||sportklub.rs^$elemhide
 @@||hrt.hr^$elemhide, script, stylesheet
