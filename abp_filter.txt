@@ -121,7 +121,7 @@
 @@||rtl.hr^$elemhide, script, stylesheet
 @@||mojtv.hr^$elemhide, script
 @@||tvprofil.com^$elemhide
-@@||livescore.com^$elemhide, image
+@@||livescore.*^$elemhide, image
 @@||rezultati.com^$elemhide, image
 @@||mozilla.org^$image, elemhide
 @@||vivaldi.*^$elemhide, image
