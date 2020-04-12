@@ -82,7 +82,7 @@
 @@||radiobn.net^$elemhide 
 @@||radiobobar.com^$elemhide
 @@||rtvdoboj.org^$elemhide
-@@||radioderventa.com^$elemhide
+@@||radioderventa.com^$elemhide, image
 @@||studiomteslic.net^$elemhide
 @@||prnjavorlive.info^$elemhide
 @@||mojkontakt.com^$elemhide, stylesheet, font, script
