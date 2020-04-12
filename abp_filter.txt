@@ -112,6 +112,8 @@
 @@||pulsonline.rs^$elemhide
 @@||alo.rs^$elemhide, image
 @@||aljazeera.*^$elemhide, script, image
+@@||rt.com^$elemhide, script, image
+@@||ruptly.tv^$elemhide
 @@||tvarenasport.*^$elemhide, script
 @@||sportklub.rs^$elemhide
 @@||hrt.hr^$elemhide, script, stylesheet
