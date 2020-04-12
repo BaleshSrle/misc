@@ -114,6 +114,7 @@
 @@||aljazeera.*^$elemhide, script, image
 @@||rt.com^$elemhide, script, image
 @@||ruptly.tv^$elemhide
+@@||euronews.net^$elemhide, image
 @@||tvarenasport.*^$elemhide, script
 @@||sportklub.rs^$elemhide
 @@||hrt.hr^$elemhide, script, stylesheet
