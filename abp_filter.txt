@@ -122,6 +122,13 @@
 @@||bbc.*^$elemhide, script
 @@||bbci.co.uk^$script
 @@||cnn.com^$elemhide, script
+@@||abc.com^$elemhide
+@@||abcnews*^$elemhide, script
+@@||watchdisneyfe.com^$image
+@@||nbc.com^$elemhide
+@@||nbcnews.com^$elemhide
+@@||cbs.com^$elemhide
+@@||cbsnews.com^$elemhide, script
 @@||tvarenasport.*^$elemhide, script
 @@||sportklub.rs^$elemhide
 @@||hrt.hr^$elemhide, script, stylesheet
