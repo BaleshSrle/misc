@@ -119,6 +119,7 @@
 @@||dw.com^$elemhide
 @@||voanews.com^$elemhide
 @@||glasamerike.net^$elemhide
+@@||bbc.co.uk^$elemhide, script
 @@||tvarenasport.*^$elemhide, script
 @@||sportklub.rs^$elemhide
 @@||hrt.hr^$elemhide, script, stylesheet
