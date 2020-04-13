@@ -207,6 +207,7 @@
 @@||ageofempires.com^$elemhide
 @@||counter-strike.net^$elemhide, image
 @@||trackmania.com^$elemhide, script
+@@||trackmaniaforever.com^$elemhide
 @@||akamaihd.net^$image
 @@||akamaized.net^$image
 @@||github.*^$image
