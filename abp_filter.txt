@@ -206,6 +206,7 @@
 @@||steampowered.com^$image
 @@||ageofempires.com^$elemhide
 @@||counter-strike.net^$elemhide, image
+@@||americasarmy.com^$elemhide, image
 @@||trackmania.com^$elemhide, script
 @@||trackmaniaforever.com^$elemhide
 @@||akamaihd.net^$image
