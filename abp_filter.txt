@@ -203,6 +203,8 @@
 @@||meridianbet.ba^$elemhide
 @@||vitinka.com^$elemhide
 @@||ea.com^$elemhide
+@@||steampowered.com^$image
+@@||counter-strike.net^$elemhide, image
 @@||akamaihd.net^$image
 @@||akamaized.net^$image
 @@||github.*^$image
