@@ -204,6 +204,7 @@
 @@||vitinka.com^$elemhide
 @@||ea.com^$elemhide
 @@||steampowered.com^$image
+@@||ageofempires.com^$elemhide
 @@||counter-strike.net^$elemhide, image
 @@||trackmania.com^$elemhide, script
 @@||akamaihd.net^$image
