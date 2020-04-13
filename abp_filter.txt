@@ -122,7 +122,7 @@
 @@||bbc.*^$elemhide, script
 @@||bbci.co.uk^$script
 @@||cnn.com^$elemhide, script
-@@||abc.com^$elemhide
+@@||abc.com^$elemhide, image
 @@||abcnews*^$elemhide, script
 @@||watchdisneyfe.com^$image
 @@||nbc.com^$elemhide
