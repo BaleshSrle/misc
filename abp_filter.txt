@@ -121,6 +121,7 @@
 @@||glasamerike.net^$elemhide
 @@||bbc.*^$elemhide, script
 @@||bbci.co.uk^$script
+@@||cnn.com^$elemhide, script
 @@||tvarenasport.*^$elemhide, script
 @@||sportklub.rs^$elemhide
 @@||hrt.hr^$elemhide, script, stylesheet
