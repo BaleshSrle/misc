@@ -117,6 +117,8 @@
 @@||ruptly.tv^$elemhide
 @@||euronews.*^$elemhide, image
 @@||dw.com^$elemhide
+@@||voanews.com^$elemhide
+@@||glasamerike.net^$elemhide
 @@||tvarenasport.*^$elemhide, script
 @@||sportklub.rs^$elemhide
 @@||hrt.hr^$elemhide, script, stylesheet
