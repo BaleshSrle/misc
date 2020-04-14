@@ -132,6 +132,7 @@
 @@||cbsnews.com^$elemhide, script
 @@||discovery.com^$elemhide
 @@||history.com^$elemhide
+@@||aetv.com^$elemhide
 @@||natgeotv.com^$elemhide
 @@||tvarenasport.*^$elemhide, script
 @@||sportklub.rs^$elemhide
