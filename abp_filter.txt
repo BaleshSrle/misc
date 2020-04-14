@@ -104,6 +104,7 @@
 @@||cafe.ba^$elemhide
 @@||klix.ba^$elemhide, image
 @@||oslobodjenje.ba^$elemhide
+@@||nationalgeographic.*^$elemhide
 @@||rts.rs^$elemhide, image
 @@||b92.*^$elemhide
 @@||b92s.net^$image
@@ -129,6 +130,9 @@
 @@||nbcnews.com^$elemhide
 @@||cbs.com^$elemhide
 @@||cbsnews.com^$elemhide, script
+@@||discovery.com^$elemhide
+@@||history.com^$elemhide
+@@||natgeotv.com^$elemhide
 @@||tvarenasport.*^$elemhide, script
 @@||sportklub.rs^$elemhide
 @@||hrt.hr^$elemhide, script, stylesheet
