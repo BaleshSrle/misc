@@ -73,7 +73,7 @@
 @@||mojradio.ba^$image
 @@||hteronet.ba^$elemhide
 @@||elta-kabel.com^$elemhide
-@@||blic.net^$elemhide, image
+@@||blic.*^$elemhide, image
 @@||rtrs.tv^$elemhide, image
 @@||federalna.ba^$elemhide, image
 @@||bhrt.ba^$elemhide
@@ -101,6 +101,7 @@
 @@||nezavisne.com^$elemhide
 @@||mondo.*^$elemhide, image
 @@||glasregije.net^$elemhide, script, image
+@@||srpskainfo.com^$elemhide
 @@||cafe.ba^$elemhide
 @@||klix.ba^$elemhide, image
 @@||oslobodjenje.ba^$elemhide
@@ -110,7 +111,6 @@
 @@||b92s.net^$image
 @@||pink.rs^$elemhide, image
 @@||vesti.rs^$elemhide, image
-@@||blic.rs^$elemhide
 @@||pulsonline.rs^$elemhide
 @@||alo.rs^$elemhide, image
 @@||novosti.rs^$elemhide, image
