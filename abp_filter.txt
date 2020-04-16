@@ -114,6 +114,7 @@
 @@||pulsonline.rs^$elemhide
 @@||alo.rs^$elemhide, image
 @@||novosti.rs^$elemhide, image
+@@||kurir.*^$elemhide
 @@||vecernjenovosti.ba^$elemhide, image
 @@||aljazeera.*^$elemhide, script, image
 @@||rt.com^$elemhide, script, image
