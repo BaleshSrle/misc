@@ -130,7 +130,7 @@
 @@||pulsonline.rs^$elemhide
 @@||alo.rs^$elemhide, image
 @@||novosti.rs^$elemhide, image
-@@||politika.rs^$elemhide, script, xmlhttprequest
+@@||politika.rs^$elemhide, script, xmlhttprequest, image
 @@||kurir.*^$elemhide
 @@||vecernjenovosti.ba^$elemhide, image
 @@||aljazeera.*^$elemhide, script, image
