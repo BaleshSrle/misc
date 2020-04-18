@@ -35,6 +35,10 @@
 @@||np.rs.ba^$elemhide
 @@||zunsrs.com^$elemhide, font
 @@||certrs.org^$elemhide
+@@||zdravstvo-srpske.org^$elemhide
+@@||banja-vrucica.com^$elemhide, stylesheet, script
+@@||zotovicbl.com^$elemhide
+@@||banja-dvorovi.com^$elemhide
 @@||cineplexxpalas.ba^$elemhide, image
 @@||doboj.gov.ba^$elemhide
 @@||domzdravljadoboj.ba^$elemhide
@@ -44,7 +48,7 @@
 @@||mojdoboj.info^$elemhide
 @@||dobojski.info^$elemhide, image
 @@||granicedoboja.info^$elemhide, stylesheet, script
-@@||banjaluka.rs.ba^$elemhide, stylesheet, script
+@@||banjaluka.*^$elemhide, stylesheet, script
 @@||lutrijars.com^$image
 @@||manja.ba^$elemhide, image
 @@||zitopeka.net^$elemhide
@@ -103,7 +107,6 @@
 @@||mondo.*^$elemhide, image
 @@||glasregije.net^$elemhide, script, image
 @@||srpskainfo.com^$elemhide
-@@||banjalika.*^#elemhide, script
 @@||ekskluziva.ba^$elemhide, image
 @@||cafe.ba^$elemhide
 @@||klix.ba^$elemhide, image
