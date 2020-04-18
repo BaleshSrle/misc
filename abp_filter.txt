@@ -453,7 +453,7 @@
 @@||castrol.com^$elemhide, image
 @@||shell.com^$elemhide
 @@||mobil.com^$elemhide, script
-@@||bosch.*^$elemhide, stylesheet, script
+@@||bosch.*^$elemhide, stylesheet, script, xmlhttprequest
 @@||daf.*^$elemhide, script
 @@||volvocars.com^$elemhide
 @@||volvotrucks.*^$elemhide, stylesheet, script
