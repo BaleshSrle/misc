@@ -446,6 +446,7 @@
 @@||hp.com^$elemhide, script
 @@||lenovo.com^$elemhide, script, stylesheet, image
 @@||dynabook.com^$elemhide, image
+@@||ibm.*^$elemhide
 @@||intel.com^$elemhide
 @@||amd.com^$elemhide
 @@||huawei.com^$elemhide
