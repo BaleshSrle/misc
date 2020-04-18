@@ -111,6 +111,7 @@
 @@||cafe.ba^$elemhide
 @@||klix.ba^$elemhide, image
 @@||oslobodjenje.ba^$elemhide
+@@||capital.ba^$elemhide, image
 @@||nationalgeographic.*^$elemhide
 @@||rts.rs^$elemhide, image
 @@||b92.*^$elemhide
