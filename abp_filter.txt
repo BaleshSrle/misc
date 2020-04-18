@@ -49,6 +49,7 @@
 @@||dobojski.info^$elemhide, image
 @@||granicedoboja.info^$elemhide, stylesheet, script
 @@||banjaluka.*^$elemhide, stylesheet, script
+@@||banjalucanke.com^$elemhide, script
 @@||lutrijars.com^$image
 @@||manja.ba^$elemhide, image
 @@||zitopeka.net^$elemhide
@@ -59,6 +60,10 @@
 @@||blc.edu.ba^$elemhide
 @@||nub.rs^$elemhide, image
 @@||nsk.hr^$elemhide, stylesheet, script, image
+@@||nestro.ba^$elemhide
+@@||optimagrupa.net^$elemhide
+@@||rafinerija.com^$elemhide
+@@||modricaoil.com^$elemhide
 @@||nestropetrol.com^$elemhide
 @@||total-trade.ba^$elemhide
 @@||automilovanovic.com^$elemhide
@@ -105,13 +110,17 @@
 @@||glassrpske.com^$elemhide
 @@||nezavisne.com^$elemhide
 @@||mondo.*^$elemhide, image
+@@||6yka.com^$elemhide
 @@||glasregije.net^$elemhide, script, image
 @@||srpskainfo.com^$elemhide
+@@||srpskalive.com^$elemhide, image
+@@||republikasrpska.net^$elemhide, stylesheet, script, image
 @@||ekskluziva.ba^$elemhide, image
 @@||cafe.ba^$elemhide
 @@||klix.ba^$elemhide, image
 @@||oslobodjenje.ba^$elemhide
 @@||capital.ba^$elemhide, image
+@@||noviglas.info^$elemhide
 @@||nationalgeographic.*^$elemhide
 @@||rts.rs^$elemhide, image
 @@||b92.*^$elemhide
@@ -121,6 +130,7 @@
 @@||pulsonline.rs^$elemhide
 @@||alo.rs^$elemhide, image
 @@||novosti.rs^$elemhide, image
+@@||politika.rs^$elemhide, script
 @@||kurir.*^$elemhide
 @@||vecernjenovosti.ba^$elemhide, image
 @@||aljazeera.*^$elemhide, script, image
