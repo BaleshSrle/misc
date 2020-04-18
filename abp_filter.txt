@@ -450,6 +450,9 @@
 @@||amd.com^$elemhide
 @@||huawei.com^$elemhide
 @@||tp-link.com^$elemhide
+@@||castrol.com^$elemhide, image
+@@||shell.com^$elemhide
+@@||mobil.com^$elemhide, script
 @@||daf.*^$elemhide, script
 @@||volvocars.com^$elemhide
 @@||volvotrucks.*^$elemhide, stylesheet, script
