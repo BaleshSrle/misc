@@ -103,6 +103,7 @@
 @@||mondo.*^$elemhide, image
 @@||glasregije.net^$elemhide, script, image
 @@||srpskainfo.com^$elemhide
+@@||ekskluziva.ba^$elemhide, image
 @@||cafe.ba^$elemhide
 @@||klix.ba^$elemhide, image
 @@||oslobodjenje.ba^$elemhide
