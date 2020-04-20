@@ -197,6 +197,11 @@
 @@||mojmarket.ba^$elemhide
 @@||bingotuzla.ba^$elemhide
 @@||olx.*^$elemhide, script
+@@||topshop.*^$elemhide
+@@||dormeo.*^$elemhide
+@@||delimano.*^$elemhide
+@@||walkmaxx.*^$elemhide
+@@||rovus.*^$elemhide
 @@||eset.com^$elemhide
 @@||esetstatic.com^$script
 @@||norton.com^$elemhide
