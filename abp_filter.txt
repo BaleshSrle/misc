@@ -197,7 +197,7 @@
 @@||mojmarket.ba^$elemhide
 @@||bingotuzla.ba^$elemhide
 @@||olx.*^$elemhide, script
-@@||topshop.*^$elemhide
+@@||topshop.*^$elemhide, image, script
 @@||dormeo.*^$elemhide
 @@||delimano.*^$elemhide
 @@||walkmaxx.*^$elemhide
