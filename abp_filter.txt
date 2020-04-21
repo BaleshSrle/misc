@@ -257,6 +257,7 @@
 @@||trackmaniaforever.com^$elemhide
 @@||akamaihd.net^$image
 @@||akamaized.net^$image
+@@||cloudimg.io^$image
 @@||github.*^$elemhide, image
 @@||siteground.com^$elemhide
 @@||about.me^$elemhide
