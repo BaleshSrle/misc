@@ -461,6 +461,7 @@
 @@||shell.com^$elemhide
 @@||mobil.com^$elemhide, script
 @@||bosch.*^$elemhide, stylesheet, script, xmlhttprequest
+@@||sava-tires.com^$elemhide
 @@||daf.*^$elemhide, script
 @@||volvocars.com^$elemhide
 @@||volvotrucks.*^$elemhide, stylesheet, script
