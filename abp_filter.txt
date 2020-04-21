@@ -463,6 +463,7 @@
 @@||mobil.com^$elemhide, script
 @@||bosch.*^$elemhide, stylesheet, script, xmlhttprequest
 @@||sava-tires.com^$elemhide
+@@||goodyear.*^$script
 @@||michelin.*^$elemhide
 @@||daf.*^$elemhide, script
 @@||volvocars.com^$elemhide
