@@ -378,6 +378,9 @@
 @@||fenerbahce.org^$elemhide
 @@||bjk.com.tr^$elemhide
 @@||anadoluefessk.org^$elemhide
+@@||fcporto.pt^$elemhide
+@@||sfbenfica.pt^$elemhide, script
+@@||sporting.pt^$elemhide, script
 @@||nfsbih.ba^$elemhide, image
 @@||fkborac.net^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
