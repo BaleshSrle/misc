@@ -188,6 +188,7 @@
 @@||tagged.com^$image
 @@||tinder.com^$elemhide
 @@||scribd.com^$elemhide
+@@||issuu.com^$xmlhttprequest
 @@||mega.nz^$elemhide
 @@||4shared.com^$elemhide, image
 @@||wps.com^$image
