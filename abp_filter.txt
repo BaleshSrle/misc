@@ -380,7 +380,7 @@
 @@||anadoluefessk.org^$elemhide
 @@||fcporto.pt^$elemhide
 @@||slbenfica.pt^$elemhide, script
-@@||sporting.pt^$elemhide, image, script, xmlhttprequest
+@@||sporting.pt^$elemhide, script, xmlhttprequest
 @@||nfsbih.ba^$elemhide, image
 @@||fkborac.net^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
