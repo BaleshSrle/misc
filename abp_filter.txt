@@ -379,8 +379,8 @@
 @@||bjk.com.tr^$elemhide
 @@||anadoluefessk.org^$elemhide
 @@||fcporto.pt^$elemhide
-@@||sfbenfica.pt^$elemhide, script
-@@||sporting.pt^$elemhide, script
+@@||slbenfica.pt^$elemhide, script
+@@||sporting.pt^$elemhide, image, script, xmlhttprequest
 @@||nfsbih.ba^$elemhide, image
 @@||fkborac.net^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
