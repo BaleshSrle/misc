@@ -396,6 +396,9 @@
 @@||fkvelez.ba^$elemhide
 @@||hskzrinjski.ba^$elemhide
 @@||fksloboda.ba^$elemhide, stylesheet, script
+@@||gnkdinamo.hr^$elemhide, image
+@@||hajduk.hr^$elemhide
+@@||nk-rijeka.hr^$elemhide
 @@||crvenazvezdafk.com^$elemhide, image
 @@||kkcrvenazvezda.rs^$elemhide, script
 @@||sd-crvenazvezda.net^$elemhide
@@ -414,7 +417,7 @@
 @@||syndication.twitter.com^$subdocument, image, script
 @@||flickr.com^$elemhide
 @@||facebook.*^$subdocument, image, other, script, ping
-@@||api.instagram.com^$script
+@@||instagram.com^$image, script
 @@||platform.linkedin.com^$script
 @@||pinterest.com^$elemhide, script
 @@||pornhub.com^$elemhide
