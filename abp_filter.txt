@@ -196,6 +196,7 @@
 @@||winamp.com^$elemhide
 @@||airdroid.com^$elemhide, image
 @@||viber.com^$elemhide, image
+@@||telegram.org^$elemhide
 @@||tropic.ba^$elemhide
 @@||mojmarket.ba^$elemhide
 @@||bingotuzla.ba^$elemhide
@@ -416,8 +417,7 @@
 @@||aba-liga.com^$elemhide
 @@||euroleague.net^$elemhide
 @@||fkvardar.mk^$elemhide
-@@||platform.twitter.com^$script, subdocument, other
-@@||syndication.twitter.com^$subdocument, image, script
+@@||twitter.com^$image, script, subdocument, other
 @@||flickr.com^$elemhide
 @@||facebook.*^$subdocument, image, other, script, ping
 @@||instagram.com^$image, script
