@@ -195,7 +195,7 @@
 @@||wps.com^$image
 @@||winamp.com^$elemhide
 @@||airdroid.com^$elemhide, image
-@@||viber.com^$elemhide
+@@||viber.com^$elemhide, image
 @@||tropic.ba^$elemhide
 @@||mojmarket.ba^$elemhide
 @@||bingotuzla.ba^$elemhide
