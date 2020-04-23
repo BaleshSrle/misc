@@ -196,7 +196,7 @@
 @@||winamp.com^$elemhide
 @@||airdroid.com^$elemhide, image
 @@||viber.com^$elemhide, image
-@@||telegram.org^$elemhide
+@@||telegram.org^$elemhide, image
 @@||tropic.ba^$elemhide
 @@||mojmarket.ba^$elemhide
 @@||bingotuzla.ba^$elemhide
