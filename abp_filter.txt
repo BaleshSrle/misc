@@ -206,7 +206,7 @@
 @@||delimano.*^$elemhide
 @@||walkmaxx.*^$elemhide
 @@||rovus.*^$elemhide
-@@||jysk.*^$elemhide
+@@||jysk.*^$elemhide, stylesheet, script
 @@||ikea.*^$elemhide, script
 @@||eset.com^$elemhide
 @@||esetstatic.com^$script
