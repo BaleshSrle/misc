@@ -206,6 +206,8 @@
 @@||delimano.*^$elemhide
 @@||walkmaxx.*^$elemhide
 @@||rovus.*^$elemhide
+@@||jysk.*^$elemhide
+@@||ikea.*^$elemhide, script
 @@||eset.com^$elemhide
 @@||esetstatic.com^$script
 @@||norton.com^$elemhide
