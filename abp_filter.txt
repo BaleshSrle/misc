@@ -89,7 +89,7 @@
 @@||bhrt.ba^$elemhide
 @@||rtvbn.com^$elemhide
 @@||atvbl.com^$elemhide
-@@||bigportal.ba^$elemhide
+@@||bigportal.ba^$elemhide, image
 @@||radiobn.net^$elemhide 
 @@||radiobobar.com^$elemhide
 @@||rtvdoboj.org^$elemhide
@@ -184,6 +184,7 @@
 @@||netfilm.tv^$stylesheet
 @@||delfi.rs^$elemhide
 @@||agencijaspektar.com^$document
+@@||mojposao.ba^$elemhide
 @@||poslovi.ba^$elemhide
 @@||zfbh.ba^$elemhide
 @@||tagged.com^$image
@@ -197,6 +198,7 @@
 @@||airdroid.com^$elemhide, image
 @@||viber.com^$elemhide, image
 @@||telegram.org^$elemhide, image
+@@||burnaware.com^$elemhide
 @@||tropic.ba^$elemhide
 @@||mojmarket.ba^$elemhide
 @@||bingotuzla.ba^$elemhide
