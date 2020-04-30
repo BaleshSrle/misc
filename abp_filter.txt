@@ -465,6 +465,7 @@
 @@||bing.com^$image, elemhide, script
 @@||microsoft.com^$elemhide, image
 @@||cloudflare.com^$elemhide, image, xmlhttprequest
+@@||1.1.1.1^$elemhide
 @@||asus.com^$elemhide, image
 @@||gigabyte.com^$elemhide, image
 @@||aorus.com^$elemhide
