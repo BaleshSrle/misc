@@ -44,7 +44,7 @@
 @@||cineplexxpalas.ba^$elemhide, image
 @@||cinestartvchannels.*^$elemhide, image
 @@||cinestarcinemas.*^$elemhide, image
-@@||blitz-cinestar-bh.ba^$elemhide
+@@||blitz-cinestar-bh.ba^$elemhide, image
 @@||blitz-cinestar.hr^$elemhide, image
 @@||doboj.gov.ba^$elemhide
 @@||domzdravljadoboj.ba^$elemhide
