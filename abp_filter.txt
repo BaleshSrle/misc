@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 202004221100
+! Version: 202004101230
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 22 Apr 2020 11:00 UTC+1
+! Last modified: 30 Apr 2020 12:30 UTC+1
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -33,6 +33,8 @@
 @@||koronavirususrpskoj.com^$elemhide, stylesheet, script
 @@||rhmzrs.com^$elemhide
 @@||np.rs.ba^$elemhide
+@@||djecijepozoristers.ba^$elemhide, script
+@@||gpj.ba^$elemhide
 @@||zunsrs.com^$elemhide, font
 @@||certrs.org^$elemhide
 @@||zdravstvo-srpske.org^$elemhide
