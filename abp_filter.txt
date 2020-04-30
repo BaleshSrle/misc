@@ -42,6 +42,8 @@
 @@||zotovicbl.com^$elemhide
 @@||banja-dvorovi.com^$elemhide
 @@||cineplexxpalas.ba^$elemhide, image
+@@||cinestartvchannels.*^$elemhide, image
+@@||cinestarcinemas.*^$elemhide, image
 @@||doboj.gov.ba^$elemhide
 @@||domzdravljadoboj.ba^$elemhide
 @@||toplanadoboj.ba^$elemhide
