@@ -286,6 +286,7 @@
 @@||swisslion-takovo.com^$elemhide
 @@||swisslion.*^$elemhide, script
 @@||jaffa.rs^$elemhide, image
+@@||bambi.rs^$elemhide, stylesheet, script
 @@||ea.com^$elemhide
 @@||steampowered.com^$image
 @@||ageofempires.com^$elemhide
