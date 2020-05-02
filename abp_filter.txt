@@ -604,3 +604,4 @@
 @@||panpivo.hr^$elemhide
 @@||swisslion-takovo.com^$elemhide
 @@||swisslion.*^$elemhide, script
+@@||vinarijacoka.rs^$elemhide, image
