@@ -47,13 +47,10 @@
 @@||banja-dvorovi.com^$elemhide
 @@||spamljecanica.com^$elemhide
 @@||cineplexxpalas.ba^$elemhide, image
-@@||cinestartvchannels.*^$elemhide, image
-@@||cinestarcinemas.*^$elemhide, image
-@@||blitz-cinestar-bh.ba^$elemhide, image
-@@||blitz-cinestar.hr^$elemhide, image
+@@||cinestar*.*^$elemhide, image
+@@||blitz-cinestar*.*^$elemhide, image
 @@||doboj.gov.ba^$elemhide
-@@||domzdravljadoboj.ba^$elemhide
-@@||toplanadoboj.ba^$elemhide
+@@||*doboj.ba^$elemhide
 @@||bibliotekadoboj.com^$elemhide, image
 @@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
 @@||mojdoboj.info^$elemhide
@@ -99,10 +96,9 @@
 @@||rtrs.tv^$elemhide, image
 @@||federalna.ba^$elemhide, image
 @@||bhrt.ba^$elemhide
-@@||rtvbn.com^$elemhide
+@@||*bn.*^$elemhide
 @@||atvbl.com^$elemhide
 @@||bigportal.ba^$elemhide, image
-@@||radiobn.net^$elemhide 
 @@||radiobobar.com^$elemhide
 @@||rtvdoboj.org^$elemhide
 @@||radioderventa.com^$elemhide, image
@@ -115,15 +111,14 @@
 @@||valentinobh.com^$elemhide, image
 @@||radiogracanica.ba^$elemhide
 @@||kalmanradio.ba^$elemhide, image
-@@||radio.antena.ba^$elemhide
+@@||antena.ba^$elemhide
 @@||radios.rs^$image
 @@||playradio.rs^$elemhide, image
 @@||tdiradio.com^$image
-@@||glassrpske.com^$elemhide
 @@||nezavisne.com^$elemhide
 @@||mondo.*^$elemhide, image
 @@||6yka.com^$elemhide
-@@||glasregije.net^$elemhide, script, image
+@@||glas*.*^$elemhide, script, image
 @@||srpskainfo.com^$elemhide
 @@||srpskalive.com^$elemhide, image
 @@||republikasrpska.net^$elemhide, stylesheet, script, image
@@ -136,16 +131,14 @@
 @@||nationalgeographic.*^$elemhide
 @@||rts.rs^$elemhide, image
 @@||satplus.rs^$elemhide, image
-@@||b92.*^$elemhide
-@@||b92s.net^$image
+@@||b92*.*^$elemhide, image
 @@||pink.rs^$elemhide, image
 @@||vesti.rs^$elemhide, image
 @@||pulsonline.rs^$elemhide
 @@||alo.rs^$elemhide, image
-@@||novosti.rs^$elemhide, image
+@@||*novosti.*^$elemhide, image
 @@||politika.rs^$elemhide, script, xmlhttprequest, image
 @@||kurir.*^$elemhide
-@@||vecernjenovosti.ba^$elemhide, image
 @@||aljazeera.*^$elemhide, script, image
 @@||rt.com^$elemhide, script, image
 @@||ruptly.tv^$elemhide
@@ -154,16 +147,12 @@
 @@||dw.com^$elemhide
 @@||voanews.com^$elemhide
 @@||glasamerike.net^$elemhide
-@@||bbc.*^$elemhide, script
-@@||bbci.co.uk^$script
+@@||bbc*.*^$elemhide, script
 @@||cnn.com^$elemhide, script
-@@||abc.com^$elemhide, image
-@@||abcnews*^$elemhide, script
+@@||abc*^$elemhide, image, script
 @@||watchdisneyfe.com^$image
-@@||nbc.com^$elemhide
-@@||nbcnews.com^$elemhide
-@@||cbs.com^$elemhide
-@@||cbsnews.com^$elemhide, script
+@@||nbc*.com^$elemhide
+@@||cbs*.com^$elemhide, script
 @@||discovery.com^$elemhide
 @@||history.com^$elemhide
 @@||aetv.com^$elemhide
@@ -222,29 +211,25 @@
 @@||rovus.*^$elemhide
 @@||jysk.*^$elemhide, stylesheet, script
 @@||ikea.*^$elemhide, script
-@@||eset.com^$elemhide
-@@||esetstatic.com^$script
+@@||eset*.com^$elemhide, script
 @@||norton.com^$elemhide
 @@||bitdefender.com^$script
 @@||avast.com^$elemhide, image
 @@||avg.com^$elemhide, image
 @@||malwarebytes.com^$elemhide
 @@||kaspersky.*^$elemhide, script
-@@||ccleaner.com^$elemhide
-@@||ccleanercloud.com^$elemhide, image
+@@||ccleaner*.com^$elemhide, image
 @@||4kdownload.com^$elemhide
 @@||cleanmasterofficial.com^$elemhide
 @@||eusing.com^$elemhide
-@@||wikipedia.org^$elemhide, ping
-@@||wikimedia.org^$image
+@@||wiki*.org^$elemhide, image, ping
 @@||youtube.com^$image, elemhide, subdocument, xmlhttprequest
 @@||googlevideo.com^$image
 @@||ytimg.com^$image
 @@||duckduckgo.com^$elemhide, image
 @@||who.int^$elemhide
 @@||cdc.gov^$elemhide
-@@||ted.com^$elemhide
-@@||tedcdn.com^$script
+@@||ted*.com^$elemhide, script
 @@||nist.gov^$elemhide, image
 @@||icbl.ba^$elemhide, stylesheet, script
 @@||lonac.ba^$elemhide, image, script, stylesheet, font
@@ -273,8 +258,7 @@
 @@||nektarpivo.com^$elemhide, script
 @@||gorstak.beer^$elemhide, stylesheet
 @@||sarajevska-pivara.com^$elemhide
-@@||jelenpivo.com^$elemhide
-@@||jelenmusicshow.com^$elemhide, stylesheet, script
+@@||jelen*.com^$elemhide, stylesheet, script
 @@||lavpivo.rs^$elemhide
 @@||zajecarskopivo.com^$image
 @@||karlovacko.hr^$elemhide
@@ -284,8 +268,7 @@
 @@||nectar.rs^$elemhide
 @@||vinozupa.com^$elemhide
 @@||fructal.si^$elemhide
-@@||swisslion-takovo.com^$elemhide
-@@||swisslion.*^$elemhide, script
+@@||swisslion*.*^$elemhide, script
 @@||jaffa.rs^$elemhide, image
 @@||bambi.rs^$elemhide, stylesheet, script
 @@||banini.rs^$image
@@ -298,10 +281,8 @@
 @@||ageofempires.com^$elemhide
 @@||counter-strike.net^$elemhide, image
 @@||americasarmy.com^$elemhide, image
-@@||trackmania.com^$elemhide, script
-@@||trackmaniaforever.com^$elemhide
-@@||akamaihd.net^$image
-@@||akamaized.net^$image
+@@||trackmania*.com^$elemhide, script
+@@||akamai*.net^$image
 @@||cloudimg.io^$image
 @@||github.*^$elemhide, image
 @@||siteground.com^$elemhide
@@ -316,8 +297,7 @@
 @@||fiba.basketball^$elemhide
 @@||fia.com^$elemhide
 @@||formula1.com^$elemhide
-@@||fiaformulae.com^$elemhide
-@@||formulae.cloud^$image
+@@||*formulae.*^$elemhide, image
 @@||wrc.com^$elemhide
 @@||fiawtcr.com^$elemhide, script, image
 @@||tcr-series.com^$elemhide, image
@@ -337,8 +317,6 @@
 @@||dierotenbullen.com^$elemhide
 @@||schalke04.de^$elemhide, image, script
 @@||werder.de^$elemhide
-@@||manutd.com^$elemhide
-@@||mancity.com^$elemhide, image
 @@||fulhamfc.com^$elemhide, image
 @@||chelseafc.com^$elemhide
 @@||leedsunited.com^$elemhide
@@ -411,14 +389,11 @@
 @@||calciocatania.it^$elemhide, image
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
-@@||paokfc.gr^$elemhide, stylesheet, script, image, font
-@@||paokbc.gr^$elemhide, image, stylesheet
-@@||aekfc.gr^$elemhide, script
+@@||paok*.gr^$elemhide, stylesheet, script, image, font
+@@||aek*.gr^$elemhide, script
 @@||aekbc.gr^$elemhide
-@@||olympiacos.org^$elemhide
-@@||olympiacosbc.gr^$elemhide, image
-@@||pao.gr^$elemhide
-@@||paobc.gr^$elemhide
+@@||olympiacos*.*^$elemhide, image
+@@||pao*.gr^$elemhide
 @@||galatasaray.org^$elemhide, image
 @@||fenerbahce.org^$elemhide
 @@||bjk.com.tr^$elemhide
@@ -433,11 +408,10 @@
 @@||nfsbih.ba^$elemhide, image
 @@||fkborac.net^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
-@@||fkzeljeznicar.org^$elemhide, image
+@@||fkzeljeznicar.*^$elemhide, image
 @@||fkkrupa.net^$elemhide
 @@||rudar-prijedor.com^$elemhide, stylesheet, script
 @@||fksarajevo.ba^$elemhide
-@@||fkzeljeznicar.ba^$elemhide
 @@||tosk.ba^$elemhide
 @@||nkcelik.ba^$elemhide
 @@||nk-sirokibrijeg.com^$elemhide, image
@@ -447,17 +421,13 @@
 @@||gnkdinamo.hr^$elemhide, image
 @@||hajduk.hr^$elemhide
 @@||nk-rijeka.hr^$elemhide
-@@||crvenazvezdafk.com^$elemhide, image
-@@||kkcrvenazvezda.rs^$elemhide, script
-@@||sd-crvenazvezda.net^$elemhide
-@@||partizan.rs^$elemhide
-@@||kkpartizan.rs^$elemhide, image
+@@||*crvenazvezda*.*^$elemhide, image, script
+@@||*partizan.rs^$elemhide, image
 @@||fkvojvodina.rs^$elemhide, stylesheet, script
 @@||ofkbeograd.co.rs^$elemhide, image
 @@||fkmetalac.rs^$elemhide, stylesheet, script
 @@||igokea.rs^$elemhide, stylesheet, script
-@@||fk-buducnost.me^$elemhide, image
-@@||kkbuducnost.me^$elemhide, image
+@@||*buducnost.me^$elemhide, image
 @@||aba-liga.com^$elemhide
 @@||euroleague.net^$elemhide
 @@||fkvardar.mk^$elemhide
@@ -523,15 +493,10 @@
 @@||goodyear.*^$script
 @@||michelin.*^$elemhide
 @@||daf.*^$elemhide, script
-@@||volvocars.com^$elemhide
-@@||volvotrucks.*^$elemhide, stylesheet, script
-@@||volvobuses.*^$elemhide
-@@||volvoce.com^$elemhide
-@@||mercedes-benz.com^$elemhide, script, xmlhttprequest, stylesheet
-@@||mercedes-amg.com^$elemhide
+@@||volvo*.*^$elemhide, stylesheet, script
+@@||mercedes*.com^$elemhide, script, xmlhttprequest, stylesheet
 @@||smart.com^$elemhide, image, script
-@@||mantruckandbus.com^$elemhide, image
-@@||man.eu^elemhide, xmlhttprequest
+@@||man*.*^$elemhide, image, xmlhttprequest
 @@||neoplan.com^$elemhide, xmlhttprequest
 @@||setra.de^$elemhide
 @@||scania.com^$elemhide, image, script
@@ -554,15 +519,13 @@
 @@||lamborghini.com^$elemhide
 @@||ferrari.com^$elemhide
 @@||groupe-psa.com^$elemhide
-@@||peugeot.*^$elemhide, image
-@@||peugeot-sport.com^$elemhide, image
+@@||peugeot*.*^$elemhide, image
 @@||renault.*^$elemhide
 @@||dacia.*^$elemhide
 @@||citroen.*^$elemhide, image, script
 @@||seat.*^$elemhide, image
 @@||cupraofficial.*^$elemhide, image
-@@||skoda-auto.com^$elemhide, script, stylesheet, subdocument
-@@||skoda.*^$elemhide, image
+@@||skoda*.com^$elemhide, image, script, stylesheet, subdocument
 @@||mini.com^$elemhide
 @@||bentleymotors.com^$elemhide
 @@||rolls-roycemotorcars.com^$elemhide
@@ -577,16 +540,14 @@
 @@||jaguar.*^$elemhide
 @@||landrover.*^$elemhide
 @@||astonmartin.com^$elemhide
-@@||subaru-global.com^$elemhide, script
-@@||subaru.*^$elemhide, image
+@@||subaru*.*^$elemhide, script, image
 @@||koenigsegg.com^$elemhide, stylesheet, script
 @@||toyota.*^$elemhide
 @@||global.*^$elemhide, image
 @@||hyundai.*^$elemhide, image
 @@||mitsubishi-motors.*^$elemhide, stylesheet, script, image
 @@||mazda.*^$elemhide
-@@||nissan-global.com^$elemhide, image
-@@||nissan.*^$elemhide
+@@||nissan*.*^$elemhide, image
 @@||infiniti.*^$elemhide
 @@||acura.*^$elemhide
 @@||kia.*^$elemhide, image
@@ -619,8 +580,7 @@
 @@||linuxmint.com^$elemhide, image, script
 @@||debian-srbija.iz.rs^$elemhide, image
 @@||getfedora.org^$elemhide, image
-@@||fedoraproject.org^$elemhide, image
-@@||fedoraplanet.org^$elemhide
+@@||fedora*.org^$elemhide, image
 @@||elementary.io^$elemhide
 @@||linuxliteos.com^$elemhide, image
 @@||mxlinux.org^$elemhide, script
