@@ -605,13 +605,14 @@
 @@||dita.ba^$elemhide
 @@||saponia.hr^$elemhide, image, script
 @@||henkel.*^$elemhide, stylesheet
+@@||henkel-adhesives.com^$elemhide
 @@||persil.*^$elemhide
 @@||tide.*^$elemhide
 @@||fa.*^$elemhide
 @@||loctite.*^$elemhide
 @@||bicworld.com^$elemhide, image
 @@||nivea.*^$elemhide
-@@||gillette.com^$elemhide
+@@||gillette.com^$elemhide, image
 @@||wilkinsonsword.com^$elemhide
 @@||ubuntu.com^$elemhide
 @@||lubuntu.*^$elemhide, stylesheet, image, script
