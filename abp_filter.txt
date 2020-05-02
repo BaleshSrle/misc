@@ -592,3 +592,4 @@
 @@||glyphicons.com^$elemhide, image
 @@||forkaweso.me^$elemhide, stylesheet, script
 @@||banjaluckapivara.com^$elemhide, xmlhttprequest
+@@||nektarpivo.com^$elemhide, script
