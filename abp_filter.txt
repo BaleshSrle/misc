@@ -45,6 +45,7 @@
 @@||banja-vrucica.com^$elemhide, stylesheet, script
 @@||zotovicbl.com^$elemhide
 @@||banja-dvorovi.com^$elemhide
+@@||spamljecanica.com^$elemhide
 @@||cineplexxpalas.ba^$elemhide, image
 @@||cinestartvchannels.*^$elemhide, image
 @@||cinestarcinemas.*^$elemhide, image
@@ -288,6 +289,10 @@
 @@||jaffa.rs^$elemhide, image
 @@||bambi.rs^$elemhide, stylesheet, script
 @@||banini.rs^$image
+@@||zvecevo.hr^$stylesheet
+@@||kras.hr^$‚elemhide
+@@||mira.ba^$elemhide
+@@||medela.rs^$elemhide, image
 @@||ea.com^$elemhide
 @@||steampowered.com^$image
 @@||ageofempires.com^$elemhide
@@ -595,6 +600,8 @@
 @@||pharmamed.ba^$elemhide, stylesheet, image
 @@||naturapharm.net^$elemhide
 @@||dita.ba^$elemhide
+@@||saponia.hr^$image, script
+@@||henkel.*^$elemhide, stylesheet
 @@||ubuntu.com^$elemhide
 @@||lubuntu.*^$elemhide, stylesheet, image, script
 @@||lxle.net^$elemhide
