@@ -58,7 +58,7 @@
 @@||mojdoboj.info^$elemhide
 @@||dobojski.info^$elemhide, image
 @@||granicedoboja.info^$elemhide, stylesheet, script
-@@||banjaluka.*^$elemhide, stylesheet, script
+@@||banjaluka.*^$elemhide, stylesheet, script, image
 @@||banjalucanke.com^$elemhide, script
 @@||lutrijars.com^$image
 @@||manja.ba^$elemhide, image
@@ -267,6 +267,25 @@
 @@||wwin-ba.com^$elemhide, image
 @@||meridianbet.ba^$elemhide
 @@||vitinka.com^$elemhide
+@@||knjaz.rs^$elemhide, script, image
+@@||banjaluckapivara.com^$elemhide, xmlhttprequest
+@@||nektarpivo.com^$elemhide, script
+@@||gorstak.beer^$elemhide, stylesheet
+@@||sarajevska-pivara.com^$elemhide
+@@||jelenpivo.com^$elemhide
+@@||jelenmusicshow.com^$elemhide, stylesheet, script
+@@||lavpivo.rs^$elemhide
+@@||zajecarskopivo.com^$image
+@@||karlovacko.hr^$elemhide
+@@||ozujsko.com^$elemhide
+@@||panpivo.hr^$elemhide
+@@||vinarijacoka.rs^$elemhide, image
+@@||nectar.rs^$elemhide
+@@||vinozupa.com^$elemhide
+@@||fructal.si^$elemhide
+@@||swisslion-takovo.com^$elemhide
+@@||swisslion.*^$elemhide, script
+@@||jaffa.rs^$elemhide
 @@||ea.com^$elemhide
 @@||steampowered.com^$image
 @@||ageofempires.com^$elemhide
@@ -591,20 +610,3 @@
 @@||sourceforge.net^$elemhide
 @@||glyphicons.com^$elemhide, image
 @@||forkaweso.me^$elemhide, stylesheet, script
-@@||banjaluckapivara.com^$elemhide, xmlhttprequest
-@@||nektarpivo.com^$elemhide, script
-@@||gorstak.beer^$elemhide, stylesheet
-@@||sarajevska-pivara.com^$elemhide
-@@||jelenpivo.com^$elemhide
-@@||jelenmusicshow.com^$elemhide, stylesheet, script
-@@||lavpivo.rs^$elemhide
-@@||zajecarskopivo.com^$image
-@@||karlovacko.hr^$elemhide
-@@||ozujsko.com^$elemhide
-@@||panpivo.hr^$elemhide
-@@||swisslion-takovo.com^$elemhide
-@@||swisslion.*^$elemhide, script
-@@||vinarijacoka.rs^$elemhide, image
-@@||nectar.rs^$elemhide
-@@||vinozupa.com^$elemhide
-@@||fructal.si^$elemhide
