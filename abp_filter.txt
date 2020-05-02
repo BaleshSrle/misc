@@ -608,6 +608,11 @@
 @@||persil.*^$elemhide
 @@||tide.*^$elemhide
 @@||fa.*^$elemhide
+@@||loctite.*^$elemhide
+@@||bicworld.com^$elemhide, image
+@@||nivea.*^$elemhide
+@@||gillette.com^$elemhide
+@@||wilkinsonsword.com^$elemhide
 @@||ubuntu.com^$elemhide
 @@||lubuntu.*^$elemhide, stylesheet, image, script
 @@||lxle.net^$elemhide
