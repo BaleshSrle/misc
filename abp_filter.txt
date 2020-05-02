@@ -465,6 +465,7 @@
 @@||cloudfront.net^$image
 @@||azureedge.net^$image
 @@||browser-update.org^$script
+@@||squarespace.com^$elemhide, script
 @@||miniclip.com^$image
 @@||live.com^$image, elemhide
 @@||bing.com^$image, elemhide, script
@@ -590,3 +591,4 @@
 @@||sourceforge.net^$elemhide
 @@||glyphicons.com^$elemhide, image
 @@||forkaweso.me^$elemhide, stylesheet, script
+@@||banjaluckapivara.com^$elemhide, xmlhttprequest
