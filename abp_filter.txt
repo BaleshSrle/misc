@@ -599,3 +599,6 @@
 @@||jelenmusicshow.com^$elemhide, stylesheet, script
 @@||lavpivo.rs^$elemhide
 @@||zajecarskopivo.com^$image
+@@||karlovacko.hr^$elemhide
+@@||ozujsko.com^$elemhide
+@@||panpivo.hr^$elemhide
