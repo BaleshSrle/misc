@@ -289,7 +289,7 @@
 @@||jaffa.rs^$elemhide, image
 @@||bambi.rs^$elemhide, stylesheet, script
 @@||banini.rs^$image
-@@||zvecevo.hr^$elemhide, stylesheet
+@@||zvecevo.hr^$elemhide, stylesheet, image
 @@||kras.hr^$elemhide, image
 @@||mira.ba^$elemhide
 @@||medela.rs^$elemhide, image
