@@ -428,7 +428,7 @@
 @@||sporting.pt^$elemhide, image, script, xmlhttprequest
 @@||scpconteudos.pt^$elemhide, image
 @@||ajax.nl^$elemhide
-@@||psv.nl^$elemhide
+@@||psv.nl^$elemhide, image, script, stylesheet
 @@||az.nl^$elemhide
 @@||nfsbih.ba^$elemhide, image
 @@||fkborac.net^$elemhide
@@ -605,7 +605,9 @@
 @@||dita.ba^$elemhide
 @@||saponia.hr^$elemhide, image, script
 @@||henkel.*^$elemhide, stylesheet
+@@||persil.*^$elemhide
 @@||tide.*^$elemhide
+@@||fa.*^$elemhide
 @@||ubuntu.com^$elemhide
 @@||lubuntu.*^$elemhide, stylesheet, image, script
 @@||lxle.net^$elemhide
