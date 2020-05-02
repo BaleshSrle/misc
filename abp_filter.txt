@@ -36,6 +36,10 @@
 @@||djecijepozoristers.ba^$elemhide, script
 @@||gpj.ba^$elemhide
 @@||zunsrs.com^$elemhide, font
+@@||muzejrs.com^$elemhide
+@@||msurs.net^$elemhide
+@@||arhivrs.org^$elemhide
+@@||banskidvor.org^$elemhide, stylesheet, script
 @@||certrs.org^$elemhide
 @@||zdravstvo-srpske.org^$elemhide
 @@||banja-vrucica.com^$elemhide, stylesheet, script
@@ -74,6 +78,7 @@
 @@||total-trade.ba^$elemhide
 @@||automilovanovic.com^$elemhide
 @@||autodemi.ba^$elemhide, font
+@@||sanu.ac.rs^$elemhide, image
 @@||bg.ac.rs^$elemhide, image, stylesheet, script
 @@||uns.ac.rs^$elemhide, image
 @@||fsfvns.rs^$elemhide, image
@@ -108,7 +113,7 @@
 @@||rtvslon.ba^$elemhide, stylesheet, script
 @@||valentinobh.com^$elemhide, image
 @@||radiogracanica.ba^$elemhide
-@@||kalmanradio.ba^$elemhide	
+@@||kalmanradio.ba^$elemhide, image
 @@||radio.antena.ba^$elemhide
 @@||radios.rs^$image
 @@||playradio.rs^$elemhide, image
@@ -182,7 +187,7 @@
 @@||meteoalarm.eu^$elemhide, image
 @@||addthis.com^$script, xmlhttprequest, subdocument, elemhide, image
 @@||sharethis.*^$script, xmlhttprequest, subdocument, image, stylesheet
-@@||addtoany.com^$script, subdocument
+@@||addtoany.com^$script, subdocument, image
 @@||google.*^$elemhide, image, ping, script, subdocument
 @@||videolan.org^$elemhide, image
 @@||ip2location.com^$elemhide, image, script
