@@ -431,7 +431,7 @@
 @@||*buducnost.me^$elemhide, image
 @@||aba-liga.com^$elemhide
 @@||euroleague.net^$elemhide
-@@||fkvardar.mk^$elemhide
+@@||*vardar.mk^$elemhide
 @@||twitter.com^$image, script, subdocument, other, xmlhttprequest
 @@||flickr.com^$elemhide
 @@||facebook.*^$subdocument, image, other, script, ping
