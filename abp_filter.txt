@@ -285,7 +285,7 @@
 @@||fructal.si^$elemhide
 @@||swisslion-takovo.com^$elemhide
 @@||swisslion.*^$elemhide, script
-@@||jaffa.rs^$elemhide
+@@||jaffa.rs^$elemhide, image
 @@||ea.com^$elemhide
 @@||steampowered.com^$image
 @@||ageofempires.com^$elemhide
