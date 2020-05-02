@@ -289,8 +289,8 @@
 @@||jaffa.rs^$elemhide, image
 @@||bambi.rs^$elemhide, stylesheet, script
 @@||banini.rs^$image
-@@||zvecevo.hr^$stylesheet
-@@||kras.hr^$‚elemhide
+@@||zvecevo.hr^$elemhide, stylesheet
+@@||kras.hr^$elemhide, image
 @@||mira.ba^$elemhide
 @@||medela.rs^$elemhide, image
 @@||ea.com^$elemhide
@@ -600,7 +600,7 @@
 @@||pharmamed.ba^$elemhide, stylesheet, image
 @@||naturapharm.net^$elemhide
 @@||dita.ba^$elemhide
-@@||saponia.hr^$image, script
+@@||saponia.hr^$elemhide, image, script
 @@||henkel.*^$elemhide, stylesheet
 @@||ubuntu.com^$elemhide
 @@||lubuntu.*^$elemhide, stylesheet, image, script
