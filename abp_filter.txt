@@ -551,8 +551,7 @@
 @@||infiniti.*^$elemhide
 @@||acura.*^$elemhide
 @@||kia.*^$elemhide, image
-@@||globalsuzuki.com^$elemhide, image
-@@||suzuki.*^$elemhide, stylesheet, script, image
+@@||*suzuki.*^$elemhide, stylesheet, script, image
 @@||rimac-automobili.com^$elemhide
 @@||cookiebanner.eu^$script
 @@||axe.rs^$elemhide, image
