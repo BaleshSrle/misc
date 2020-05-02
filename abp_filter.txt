@@ -272,6 +272,7 @@
 @@||jaffa.rs^$elemhide, image
 @@||bambi.rs^$elemhide, stylesheet, script
 @@||banini.rs^$image
+@@||stark.rs^$image
 @@||zvecevo.hr^$elemhide, stylesheet, image
 @@||kras.hr^$elemhide, image
 @@||mira.ba^$elemhide
