@@ -407,7 +407,7 @@
 @@||psv.nl^$elemhide, image, script, stylesheet
 @@||az.nl^$elemhide
 @@||nfsbih.ba^$elemhide, image
-@@||fkborac.net^$elemhide
+@@||*borac.*^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
 @@||fkzeljeznicar.*^$elemhide, image
 @@||fkkrupa.net^$elemhide
