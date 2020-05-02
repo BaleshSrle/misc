@@ -598,8 +598,7 @@
 @@||btech.rs^$elemhide
 @@||bosnalijek.ba^$elemhide
 @@||hemofarm.com^$elemhide, image
-@@||mojaapoteka.net^$elemhide, stylesheet, script
-@@||mojaapoteka-webshop.net^$elemhide
+@@||mojaapoteka*.net^$elemhide, stylesheet, script
 @@||pharmamed.ba^$elemhide, stylesheet, image
 @@||naturapharm.net^$elemhide
 @@||dita.ba^$elemhide
