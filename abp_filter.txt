@@ -563,8 +563,7 @@
 @@||naturapharm.net^$elemhide
 @@||dita.ba^$elemhide
 @@||saponia.hr^$elemhide, image, script
-@@||henkel.*^$elemhide, stylesheet
-@@||henkel-adhesives.com^$elemhide
+@@||henkel*.*^$elemhide, stylesheet
 @@||persil.*^$elemhide
 @@||tide.*^$elemhide
 @@||fa.*^$elemhide
