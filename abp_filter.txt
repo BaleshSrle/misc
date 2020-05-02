@@ -432,7 +432,7 @@
 @@||aba-liga.com^$elemhide
 @@||euroleague.net^$elemhide
 @@||fkvardar.mk^$elemhide
-@@||twitter.com^$image, script, subdocument, other
+@@||twitter.com^$image, script, subdocument, other, xmlhttprequest
 @@||flickr.com^$elemhide
 @@||facebook.*^$subdocument, image, other, script, ping
 @@||instagram.com^$image, script
@@ -593,3 +593,5 @@
 @@||forkaweso.me^$elemhide, stylesheet, script
 @@||banjaluckapivara.com^$elemhide, xmlhttprequest
 @@||nektarpivo.com^$elemhide, script
+@@||gorstak.beer^$elemhide, stylesheet
+@@||sarajevska-pivara.com^$elemhide
