@@ -55,17 +55,23 @@
 @@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
 @@||mojdoboj.info^$elemhide
 @@||dobojski.info^$elemhide, image
+@@||hotelparkdoboj.com^$elemhide, image
 @@||granicedoboja.info^$elemhide, stylesheet, script
 @@||banjaluka.*^$elemhide, stylesheet, script, image
+@@||vodovod-bl.com^$script
+@@||neobas.org^$elemhide
+@@||hotelpalasbl.com^$elemhide
 @@||banjalucanke.com^$elemhide, script
 @@||lutrijars.com^$image
 @@||manja.ba^$elemhide, image
+@@||krajinaklas.com^$image
 @@||zitopeka.net^$elemhide
 @@||patroltaxi.com^$elemhide
 @@||ues.rs.ba^$elemhide, stylesheet, script, image
 @@||unibl.org^$elemhide, image, script
 @@||spu.ba^$elemhide
 @@||blc.edu.ba^$elemhide
+@@||prometejbl.edu.ba^$elemhide
 @@||nub.rs^$elemhide, image
 @@||nsk.hr^$elemhide, stylesheet, script, image
 @@||nestro.ba^$elemhide
@@ -73,6 +79,7 @@
 @@||rafinerija.com^$elemhide
 @@||modricaoil.com^$elemhide
 @@||nestropetrol.com^$elemhide
+@@||krajinapetrol.com^$elemhide
 @@||total-trade.ba^$elemhide
 @@||automilovanovic.com^$elemhide
 @@||autodemi.ba^$elemhide, font
@@ -98,6 +105,7 @@
 @@||bhrt.ba^$elemhide
 @@||*bn.*^$elemhide
 @@||atvbl.com^$elemhide
+@@||eltatv.net^$elemhide, image
 @@||bigportal.ba^$elemhide, image
 @@||radiobobar.com^$elemhide
 @@||rtvdoboj.org^$elemhide
@@ -242,6 +250,9 @@
 @@||dwelt.net^$elemhide
 @@||jsguru.io^$elemhide
 @@||atlantbh.com^$stylesheet, script
+@@||eastcode.net^$elemhide
+@@||telegroup*.*^$elemhide
+@@||teleklik.ba^$elemhide, stylesheet, script
 @@||blberza.com^$image
 @@||sase.ba^$elemhide, image
 @@||spc.rs^$elemhide
@@ -595,3 +606,6 @@
 @@||fontawesome.com^$elemhide
 @@||greentech-light.eu^$elemhide, script
 @@||mass-light.com^$elemhide
+@@||gb3.ba^$elemhide, script
+@@||nlb-rs.ba^$elemhide
+@@||x-express.ba^$elemhide	
