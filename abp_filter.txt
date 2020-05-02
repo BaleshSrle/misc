@@ -597,3 +597,5 @@
 @@||sarajevska-pivara.com^$elemhide
 @@||jelenpivo.com^$elemhide
 @@||jelenmusicshow.com^$elemhide, stylesheet, script
+@@||lavpivo.rs^$elemhide
+@@||zajecarskopivo.com^$image
