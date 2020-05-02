@@ -448,7 +448,9 @@
 @@||lisca.*^$elemhide, script, image
 @@||alma-ras.com^$elemhide
 @@||koteks.ba^$elemhide
-@@||dunav.ba^$elemhide, image
+@@||dunav.*^$elemhide, image
+@@||drina-osiguranje.com^$elemhide
+@@||wiener*.*^$elemhide, image
 @@||tesla.info^$elemhide, stylesheet, script, image
 @@||nokia.com^$elemhide, stylesheet
 @@||ctfassets.net^$image
