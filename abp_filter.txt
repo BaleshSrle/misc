@@ -427,6 +427,9 @@
 @@||slbenfica.pt^$elemhide, script
 @@||sporting.pt^$elemhide, image, script, xmlhttprequest
 @@||scpconteudos.pt^$elemhide, image
+@@||ajax.nl^$elemhide
+@@||psv.nl^$elemhide
+@@||az.nl^$elemhide
 @@||nfsbih.ba^$elemhide, image
 @@||fkborac.net^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
@@ -602,6 +605,7 @@
 @@||dita.ba^$elemhide
 @@||saponia.hr^$elemhide, image, script
 @@||henkel.*^$elemhide, stylesheet
+@@||tide.*^$elemhide
 @@||ubuntu.com^$elemhide
 @@||lubuntu.*^$elemhide, stylesheet, image, script
 @@||lxle.net^$elemhide
@@ -619,3 +623,4 @@
 @@||sourceforge.net^$elemhide
 @@||glyphicons.com^$elemhide, image
 @@||forkaweso.me^$elemhide, stylesheet, script
+@@||fontawesome.com^$elemhide
