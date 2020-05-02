@@ -605,3 +605,6 @@
 @@||swisslion-takovo.com^$elemhide
 @@||swisslion.*^$elemhide, script
 @@||vinarijacoka.rs^$elemhide, image
+@@||nectar.rs^$elemhide
+@@||vinozupa.com^$elemhide
+@@||fructal.si^$elemhide
