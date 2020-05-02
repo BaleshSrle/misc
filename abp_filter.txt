@@ -64,7 +64,6 @@
 @@||banjalucanke.com^$elemhide, script
 @@||lutrijars.com^$image
 @@||manja.ba^$elemhide, image
-@@||krajinaklas.com^$image
 @@||zitopeka.net^$elemhide
 @@||patroltaxi.com^$elemhide
 @@||ues.rs.ba^$elemhide, stylesheet, script, image
@@ -79,7 +78,7 @@
 @@||rafinerija.com^$elemhide
 @@||modricaoil.com^$elemhide
 @@||nestropetrol.com^$elemhide
-@@||krajinapetrol.com^$elemhide
+@@||krajina*.*^$elemhide, image
 @@||total-trade.ba^$elemhide
 @@||automilovanovic.com^$elemhide
 @@||autodemi.ba^$elemhide, font
