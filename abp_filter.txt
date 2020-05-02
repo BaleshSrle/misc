@@ -602,3 +602,5 @@
 @@||karlovacko.hr^$elemhide
 @@||ozujsko.com^$elemhide
 @@||panpivo.hr^$elemhide
+@@||swisslion-takovo.com^$elemhide
+@@||swisslion.*^$elemhide, script
