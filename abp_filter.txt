@@ -568,19 +568,18 @@
 @@||tide.*^$elemhide
 @@||fa.*^$elemhide
 @@||loctite.*^$elemhide
-@@||bicworld.com^$elemhide, image
+@@||bic*.*^$elemhide, image, stylesheet, script
 @@||nivea.*^$elemhide
 @@||gillette.com^$elemhide, image
 @@||wilkinsonsword.com^$elemhide
 @@||ubuntu.com^$elemhide
 @@||lubuntu.*^$elemhide, stylesheet, image, script
 @@||lxle.net^$elemhide
-@@||linuxmint.com^$elemhide, image, script
+@@||linux*.com^$elemhide, image, script
 @@||debian-srbija.iz.rs^$elemhide, image
 @@||getfedora.org^$elemhide, image
 @@||fedora*.org^$elemhide, image
 @@||elementary.io^$elemhide
-@@||linuxliteos.com^$elemhide, image
 @@||mxlinux.org^$elemhide, script
 @@||peppermintos.com^$elemhide
 @@||centos.org^$image
