@@ -632,3 +632,5 @@
 @@||glyphicons.com^$elemhide, image
 @@||forkaweso.me^$elemhide, stylesheet, script
 @@||fontawesome.com^$elemhide
+@@||greentech-light.eu^$elemhide, script
+@@||mass-light.com^$elemhide
