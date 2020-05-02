@@ -595,3 +595,5 @@
 @@||nektarpivo.com^$elemhide, script
 @@||gorstak.beer^$elemhide, stylesheet
 @@||sarajevska-pivara.com^$elemhide
+@@||jelenpivo.com^$elemhide
+@@||jelenmusicshow.com^$elemhide, stylesheet, script
