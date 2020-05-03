@@ -38,10 +38,10 @@
 @@||muzejrs.com^$elemhide
 @@||banskidvor.org^$elemhide, stylesheet, script
 @@||zdravstvo-srpske.org^$elemhide
-@@||banja-vrucica.com^$elemhide, stylesheet, script
+@@||banja-vrucica.com^$stylesheet, script
 @@||zotovicbl.com^$elemhide
-@@||banja-dvorovi.com^$elemhide
 @@||spamljecanica.com^$elemhide
+@@||termelaktasi.com^$elemhide
 @@||cineplexxpalas.ba^$elemhide, image
 @@||cinestar*.*^$elemhide, image
 @@||blitz-cinestar*.*^$elemhide, image
@@ -53,11 +53,12 @@
 @@||*doboj.com^$elemhide, image
 @@||granicedoboja.info^$elemhide, stylesheet, script
 @@||glas*.net^$elemhide
-@@||banjaluka.*^$elemhide, stylesheet, script, image
+@@||banja*.*^$elemhide
+@@||banjaluka.*^$stylesheet, script, image
 @@||vodovod-bl.com^$script
 @@||neobas.org^$elemhide
 @@||hotelpalasbl.com^$elemhide
-@@||banjalucanke.com^$elemhide, script
+@@||banjalucanke.com^$script
 @@||lutrijars.com^$image
 @@||manja.ba^$elemhide, image
 @@||zitopeka.net^$elemhide
@@ -228,7 +229,7 @@
 @@||cleanmasterofficial.com^$elemhide
 @@||eusing.com^$elemhide
 @@||wiki*.org^$elemhide, image, ping
-@@||youtube.com^$image, elemhide, subdocument, xmlhttprequest
+@@||youtube.com^$image, elemhide, subdocument, xmlhttprequest, ping
 @@||googlevideo.com^$image
 @@||ytimg.com^$image
 @@||duckduckgo.com^$elemhide, image
@@ -262,7 +263,7 @@
 @@||meridianbet.ba^$elemhide
 @@||vitinka.com^$elemhide
 @@||knjaz.rs^$elemhide, script, image
-@@||banjaluckapivara.com^$elemhide, xmlhttprequest
+@@||banjaluckapivara.com^$xmlhttprequest
 @@||nektarpivo.com^$elemhide, script
 @@||gorstak.beer^$elemhide, stylesheet
 @@||sarajevska-pivara.com^$elemhide
