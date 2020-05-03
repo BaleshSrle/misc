@@ -155,7 +155,7 @@
 @@||sputniknews.*^$elemhide, script
 @@||euronews.*^$elemhide, image
 @@||dw.com^$elemhide
-@@||voanews.com^$elemhide
+@@||voa*.com^$elemhide
 @@||bbc*.*^$elemhide, script
 @@||cnn.com^$elemhide, script
 @@||abc*^$elemhide, image, script
