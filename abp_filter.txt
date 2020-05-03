@@ -56,6 +56,7 @@
 @@||dobojski.info^$elemhide, image
 @@||*doboj.com^$elemhide, image
 @@||granicedoboja.info^$elemhide, stylesheet, script
+@@||glasregije.net^$elemhide
 @@||banjaluka.*^$elemhide, stylesheet, script, image
 @@||vodovod-bl.com^$script
 @@||neobas.org^$elemhide
@@ -126,7 +127,7 @@
 @@||nezavisne.com^$elemhide
 @@||mondo.*^$elemhide, image
 @@||6yka.com^$elemhide
-@@||glas*.*^$elemhide, script, image
+@@||glassrpske.com^$elemhide
 @@||srpskainfo.com^$elemhide
 @@||srpskalive.com^$elemhide, image
 @@||republikasrpska.net^$elemhide, stylesheet, script, image
