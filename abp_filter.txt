@@ -312,7 +312,7 @@
 @@||fiba.basketball^$elemhide
 @@||fia.com^$elemhide
 @@||formula1.com^$elemhide
-@@||*formulae.*^$elemhide, image
+@@||*formulae.*^$elemhide, image, script
 @@||wrc.com^$elemhide
 @@||fiawtcr.com^$elemhide, script, image
 @@||tcr-series.com^$elemhide, image
