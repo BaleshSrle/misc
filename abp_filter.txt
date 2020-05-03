@@ -468,7 +468,7 @@
 @@||dunav.*^$elemhide, image
 @@||drina-osiguranje.com^$elemhide
 @@||krajinaosiguranje.ba^$elemhide, stylesheet
-@@||wiener*.*^$elemhide, image
+@@||wiener*.*^$elemhide, image, font
 @@||tesla.info^$elemhide, stylesheet, script, image
 @@||nokia.com^$elemhide, stylesheet
 @@||ctfassets.net^$image
