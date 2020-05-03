@@ -25,7 +25,7 @@
 @@||komorars.ba^$elemhide, image
 @@||*rs.org^$elemhide
 @@||autoputevirs.com^$elemhide
-@@||ruczrs.org^$stylesheet, script
+@@||ruczrs.org^$stylesheet, script, image
 @@||rcirz.org^$elemhide
 @@||borackars.org^$image
 @@||mpr-centar.org^$elemhide
