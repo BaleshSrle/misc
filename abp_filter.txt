@@ -52,11 +52,10 @@
 @@||doboj.gov.ba^$elemhide
 @@||toplanadoboj.ba^$elemhide
 @@||domzdravljadoboj.ba^$elemhide
-@@||bibliotekadoboj.com^$elemhide, image
 @@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
 @@||mojdoboj.info^$elemhide
 @@||dobojski.info^$elemhide, image
-@@||hotelparkdoboj.com^$elemhide, image
+@@||*doboj.com^$elemhide, image
 @@||granicedoboja.info^$elemhide, stylesheet, script
 @@||banjaluka.*^$elemhide, stylesheet, script, image
 @@||vodovod-bl.com^$script
