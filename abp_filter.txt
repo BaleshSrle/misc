@@ -104,6 +104,7 @@
 @@||federalna.ba^$elemhide, image
 @@||bhrt.ba^$elemhide
 @@||rtv*.*^$elemhide
+@@||rtvdoboj.org^$image
 @@||radiobn.net^$elemhide
 @@||atvbl.com^$elemhide
 @@||eltatv.net^$elemhide, image
