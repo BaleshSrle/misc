@@ -50,8 +50,7 @@
 @@||cinestar*.*^$elemhide, image
 @@||blitz-cinestar*.*^$elemhide, image
 @@||doboj.gov.ba^$elemhide
-@@||toplanadoboj.ba^$elemhide
-@@||domzdravljadoboj.ba^$elemhide
+@@||*doboj.ba^$elemhide
 @@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
 @@||mojdoboj.info^$elemhide
 @@||dobojski.info^$elemhide, image
