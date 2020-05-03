@@ -23,12 +23,11 @@
 @@||narodnaskupstinars.net^$image
 @@||ustavnisud.org^$elemhide
 @@||komorars.ba^$elemhide, image
-@@||poreskaupravars.org^$elemhide
+@@||*rs.org^$elemhide
 @@||autoputevirs.com^$elemhide
-@@||ruczrs.org^$elemhide, stylesheet, script
+@@||ruczrs.org^$stylesheet, script
 @@||rcirz.org^$elemhide
-@@||borackars.org^$elemhide, image
-@@||rpz-rs.org^$elemhide
+@@||borackars.org^$image
 @@||mpr-centar.org^$elemhide
 @@||koronavirususrpskoj.com^$elemhide, stylesheet, script
 @@||rhmzrs.com^$elemhide
@@ -37,9 +36,7 @@
 @@||gpj.ba^$elemhide
 @@||zunsrs.com^$elemhide, font
 @@||muzejrs.com^$elemhide
-@@||arhivrs.org^$elemhide
 @@||banskidvor.org^$elemhide, stylesheet, script
-@@||certrs.org^$elemhide
 @@||zdravstvo-srpske.org^$elemhide
 @@||banja-vrucica.com^$elemhide, stylesheet, script
 @@||zotovicbl.com^$elemhide
