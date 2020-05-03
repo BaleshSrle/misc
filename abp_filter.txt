@@ -409,6 +409,7 @@
 @@||olympiacos*.*^$elemhide, image
 @@||pao*.gr^$elemhide
 @@||pao.gr^$image
+@@||paokfc.gr^$script, stylesheet, image
 @@||paokbc.gr^$image, stylesheet
 @@||galatasaray.org^$elemhide, image
 @@||fenerbahce.org^$elemhide
