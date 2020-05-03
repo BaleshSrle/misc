@@ -19,11 +19,12 @@
 @@||jsdelivr.*^$elemhide, xmlhttprequest
 @@||users.teol.net/~srdjan.b^$elemhide
 @@||*rs.net^$elemhide
+@@||*rs.org^$elemhide
+@@||*rs.ba^$elemhide
 @@||vladars.net^$image
 @@||narodnaskupstinars.net^$image
 @@||ustavnisud.org^$elemhide
-@@||komorars.ba^$elemhide, image
-@@||*rs.org^$elemhide
+@@||komorars.ba^$image
 @@||autoputevirs.com^$elemhide
 @@||ruczrs.org^$stylesheet, script, image
 @@||rcirz.org^$elemhide
@@ -32,7 +33,7 @@
 @@||koronavirususrpskoj.com^$elemhide, stylesheet, script
 @@||rhmzrs.com^$elemhide
 @@||np.rs.ba^$elemhide
-@@||djecijepozoristers.ba^$elemhide, script
+@@||djecijepozoristers.ba^$script
 @@||gpj.ba^$elemhide
 @@||zunsrs.com^$elemhide, font
 @@||muzejrs.com^$elemhide
@@ -291,6 +292,8 @@
 @@||kras.hr^$elemhide, image
 @@||mira.ba^$elemhide
 @@||medela.rs^$elemhide, image
+@@||*pionir.*^$elemhide, image
+@@||medenosrce.rs^$elemhide, image
 @@||ea.com^$elemhide
 @@||steampowered.com^$image
 @@||ageofempires.com^$elemhide
@@ -612,6 +615,5 @@
 @@||greentech-light.eu^$elemhide, script
 @@||mass-light.com^$elemhide
 @@||gb3.ba^$elemhide, script
-@@||nlb-rs.ba^$elemhide
 @@||x-express.ba^$elemhide
 @@||aparthotelvucko.com^$elemhide
