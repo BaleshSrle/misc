@@ -58,6 +58,9 @@
 @@||vodovod-bl.com^$script
 @@||neobas.org^$elemhide
 @@||hotelpalasbl.com^$elemhide
+@@||slavija*.com^$elemhide
+@@||slavijahotel*.com^$script
+@@||slavijahotelbeograd.com^$stylesheet
 @@||banjalucanke.com^$script
 @@||lutrijars.com^$image
 @@||manja.ba^$elemhide, image
@@ -610,4 +613,5 @@
 @@||mass-light.com^$elemhide
 @@||gb3.ba^$elemhide, script
 @@||nlb-rs.ba^$elemhide
-@@||x-express.ba^$elemhide	
+@@||x-express.ba^$elemhide
+@@||aparthotelvucko.com^$elemhide
