@@ -21,6 +21,7 @@
 @@||*rs.net^$elemhide
 @@||*rs.org^$elemhide
 @@||*rs.ba^$elemhide
+@@||*.rs.ba^$elemhide
 @@||vladars.net^$image
 @@||narodnaskupstinars.net^$image
 @@||ustavnisud.org^$elemhide
@@ -32,7 +33,6 @@
 @@||mpr-centar.org^$elemhide
 @@||koronavirususrpskoj.com^$elemhide, stylesheet, script
 @@||rhmzrs.com^$elemhide
-@@||np.rs.ba^$elemhide
 @@||djecijepozoristers.ba^$script
 @@||gpj.ba^$elemhide
 @@||zunsrs.com^$elemhide, font
@@ -68,7 +68,7 @@
 @@||zitopeka.net^$elemhide
 @@||krajinaklas.com^$image
 @@||patroltaxi.com^$elemhide
-@@||ues.rs.ba^$elemhide, stylesheet, script, image
+@@||ues.rs.ba^$stylesheet, script, image
 @@||unibl.org^$elemhide, image, script
 @@||spu.ba^$elemhide
 @@||*.edu.ba^$elemhide
