@@ -404,11 +404,12 @@
 @@||calciocatania.it^$elemhide, image
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
-@@||paok*.gr^$elemhide, stylesheet, script, image, font
 @@||aek*.gr^$elemhide, script
 @@||aekbc.gr^$elemhide
 @@||olympiacos*.*^$elemhide, image
 @@||pao*.gr^$elemhide
+@@||pao.gr^$image
+@@||paokbc.gr^$image, stylesheet
 @@||galatasaray.org^$elemhide, image
 @@||fenerbahce.org^$elemhide
 @@||bjk.com.tr^$elemhide
