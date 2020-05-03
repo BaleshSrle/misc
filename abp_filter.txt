@@ -71,8 +71,7 @@
 @@||ues.rs.ba^$elemhide, stylesheet, script, image
 @@||unibl.org^$elemhide, image, script
 @@||spu.ba^$elemhide
-@@||blc.edu.ba^$elemhide
-@@||prometejbl.edu.ba^$elemhide
+@@||*.edu.ba^$elemhide
 @@||nub.rs^$elemhide, image
 @@||nsk.hr^$elemhide, stylesheet, script, image
 @@||nestro.ba^$elemhide
