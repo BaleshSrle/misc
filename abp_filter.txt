@@ -56,7 +56,7 @@
 @@||dobojski.info^$elemhide, image
 @@||*doboj.com^$elemhide, image
 @@||granicedoboja.info^$elemhide, stylesheet, script
-@@||glasregije.net^$elemhide
+@@||glas*.net^$elemhide
 @@||banjaluka.*^$elemhide, stylesheet, script, image
 @@||vodovod-bl.com^$script
 @@||neobas.org^$elemhide
@@ -156,7 +156,6 @@
 @@||euronews.*^$elemhide, image
 @@||dw.com^$elemhide
 @@||voanews.com^$elemhide
-@@||glasamerike.net^$elemhide
 @@||bbc*.*^$elemhide, script
 @@||cnn.com^$elemhide, script
 @@||abc*^$elemhide, image, script
