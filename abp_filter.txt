@@ -103,20 +103,19 @@
 @@||rtrs.tv^$elemhide, image
 @@||federalna.ba^$elemhide, image
 @@||bhrt.ba^$elemhide
-@@||rtvbn.com^$elemhide
+@@||rtv*.*^$elemhide
 @@||radiobn.net^$elemhide
 @@||atvbl.com^$elemhide
 @@||eltatv.net^$elemhide, image
 @@||bigportal.ba^$elemhide, image
-@@||radiobobar.com^$elemhide
-@@||rtvdoboj.org^$elemhide
-@@||radioderventa.com^$elemhide, image
+@@||radio*.com^$elemhide
+@@||radioderventa.com^$image
 @@||studiomteslic.net^$elemhide
 @@||prnjavorlive.info^$elemhide
 @@||mojkontakt.com^$elemhide, stylesheet, font, script
 @@||rsg.ba^$elemhide
 @@||antena-radio.ba^$image
-@@||rtvslon.ba^$elemhide, stylesheet, script
+@@||rtvslon.ba^$stylesheet, script
 @@||valentinobh.com^$elemhide, image
 @@||radiogracanica.ba^$elemhide
 @@||kalmanradio.ba^$elemhide, image
