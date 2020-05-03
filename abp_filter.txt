@@ -50,7 +50,8 @@
 @@||cinestar*.*^$elemhide, image
 @@||blitz-cinestar*.*^$elemhide, image
 @@||doboj.gov.ba^$elemhide
-@@||*doboj.ba^$elemhide
+@@||toplanadoboj.ba^$elemhide
+@@||domzdravljadoboj.ba^$elemhide
 @@||bibliotekadoboj.com^$elemhide, image
 @@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
 @@||mojdoboj.info^$elemhide
@@ -65,6 +66,7 @@
 @@||lutrijars.com^$image
 @@||manja.ba^$elemhide, image
 @@||zitopeka.net^$elemhide
+@@||krajinaklas.com^$image
 @@||patroltaxi.com^$elemhide
 @@||ues.rs.ba^$elemhide, stylesheet, script, image
 @@||unibl.org^$elemhide, image, script
@@ -78,7 +80,7 @@
 @@||rafinerija.com^$elemhide
 @@||modricaoil.com^$elemhide
 @@||nestropetrol.com^$elemhide
-@@||krajina*.*^$elemhide, image
+@@||krajinapetrol.com^$elemhide
 @@||total-trade.ba^$elemhide
 @@||automilovanovic.com^$elemhide
 @@||autodemi.ba^$elemhide, font
@@ -102,7 +104,8 @@
 @@||rtrs.tv^$elemhide, image
 @@||federalna.ba^$elemhide, image
 @@||bhrt.ba^$elemhide
-@@||*bn.*^$elemhide
+@@||rtvbn.com^$elemhide
+@@||radiobn.net^$elemhide
 @@||atvbl.com^$elemhide
 @@||eltatv.net^$elemhide, image
 @@||bigportal.ba^$elemhide, image
@@ -143,7 +146,8 @@
 @@||vesti.rs^$elemhide, image
 @@||pulsonline.rs^$elemhide
 @@||alo.rs^$elemhide, image
-@@||*novosti.*^$elemhide, image
+@@||novosti.rs^$elemhide, image
+@@||vecernjenovosti.ba^$elemhide, image
 @@||politika.rs^$elemhide, script, xmlhttprequest, image
 @@||kurir.*^$elemhide
 @@||aljazeera.*^$elemhide, script, image
@@ -440,7 +444,8 @@
 @@||ofkbeograd.co.rs^$elemhide, image
 @@||fkmetalac.rs^$elemhide, stylesheet, script
 @@||igokea.rs^$elemhide, stylesheet, script
-@@||*buducnost.me^$elemhide, image
+@@||kkbuducnost.me^$elemhide, image
+@@||fkbuducnost.me^$elemhide, image
 @@||aba-liga.com^$elemhide
 @@||euroleague.net^$elemhide
 @@||*vardar.mk^$elemhide
@@ -460,6 +465,7 @@
 @@||koteks.ba^$elemhide
 @@||dunav.*^$elemhide, image
 @@||drina-osiguranje.com^$elemhide
+@@||krajinaosiguranje.ba^$elemhide, stylesheet
 @@||wiener*.*^$elemhide, image
 @@||tesla.info^$elemhide, stylesheet, script, image
 @@||nokia.com^$elemhide, stylesheet
