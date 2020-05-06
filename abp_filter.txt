@@ -586,6 +586,7 @@
 @@||mojaapoteka*.net^$elemhide, stylesheet, script
 @@||pharmamed.ba^$elemhide, stylesheet, image
 @@||naturapharm.net^$elemhide
+@@||internationalhealth.eu^$elemhide
 @@||dita.ba^$elemhide
 @@||saponia.hr^$elemhide, image, script
 @@||henkel*.*^$elemhide, stylesheet
