@@ -260,6 +260,7 @@
 @@||hilandar.org^$elemhide
 @@||manastir*.*^$elemhide
 @@||manastirostrog.com^$image
+@@||tvrdos.com^$elemhide, stylesheet, script
 @@||eparhijazt.com^$elemhide
 @@||crkvenikalendar.com^$elemhide
 @@||mozzartbet.*^$script
