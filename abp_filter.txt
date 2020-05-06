@@ -587,6 +587,7 @@
 @@||pharmamed.ba^$elemhide, stylesheet, image
 @@||naturapharm.net^$elemhide
 @@||internationalhealth.eu^$elemhide
+@@||lipodiet.eu^$elemhide
 @@||dita.ba^$elemhide
 @@||saponia.hr^$elemhide, image, script
 @@||henkel*.*^$elemhide, stylesheet
