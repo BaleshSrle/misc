@@ -258,7 +258,8 @@
 @@||sase.ba^$elemhide, image
 @@||spc.rs^$elemhide
 @@||hilandar.org^$elemhide
-@@||manastir-lepavina.org^$elemhide
+@@||manastir*.*^$elemhide
+@@||manastirostrog.com^$image
 @@||eparhijazt.com^$elemhide
 @@||crkvenikalendar.com^$elemhide
 @@||mozzartbet.*^$script
