@@ -89,7 +89,7 @@
 @@||fsfvns.rs^$elemhide, image
 @@||uni-lj.si^$elemhide, script, image
 @@||um.si^$elemhide, stylesheet, xmlhttprequest, image, script
-@@||wordpress.*^$elemhide
+@@||wordpress.*^$elemhide, stylesheet, script, image
 @@||wp.com^$image, script, subdocument, stylesheet
 @@||internetdefenseleague.org^$script, image
 @@||mts.rs^$elemhide, image
