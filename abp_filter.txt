@@ -137,7 +137,7 @@
 @@||oslobodjenje.ba^$elemhide
 @@||capital.ba^$elemhide, image
 @@||noviglas.info^$elemhide
-@@||nationalgeographic.*^$elemhide
+@@||nationalgeographic.*^$elemhide, image
 @@||rts.rs^$elemhide, image
 @@||satplus.rs^$elemhide, image
 @@||b92*.*^$elemhide, image
