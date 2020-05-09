@@ -511,7 +511,7 @@
 @@||tp-link.com^$elemhide
 @@||navak.rs^$elemhide
 @@||castrol.com^$elemhide, image
-@@||shell.com^$elemhide
+@@||shell.*^$elemhide
 @@||mobil.com^$elemhide, script
 @@||bosch.*^$elemhide, stylesheet, script, xmlhttprequest
 @@||sava-tires.com^$elemhide
