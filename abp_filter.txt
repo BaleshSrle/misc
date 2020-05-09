@@ -620,3 +620,4 @@
 @@||gb3.ba^$elemhide, script
 @@||x-express.ba^$elemhide
 @@||aparthotelvucko.com^$elemhide
+@@||streamplay.*^$elemhide
