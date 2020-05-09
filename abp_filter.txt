@@ -165,7 +165,7 @@
 @@||discovery.com^$elemhide
 @@||history.com^$elemhide
 @@||aetv.com^$elemhide
-@@||natgeotv.com^$elemhide
+@@||natgeo*.*^$elemhide
 @@||tvarenasport.*^$elemhide, script
 @@||sportklub.rs^$elemhide
 @@||hrt.hr^$elemhide, script, stylesheet
