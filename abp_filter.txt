@@ -513,7 +513,7 @@
 @@||castrol.com^$elemhide, image
 @@||shell.*^$elemhide
 @@||mobil.*^$elemhide, script
-@@||m1oil.*^$elemhide, image
+@@||m1oil*.*^$elemhide, image
 @@||*bosch*.*^$elemhide, stylesheet, script, xmlhttprequest
 @@||sava-tires.com^$elemhide
 @@||goodyear.*^$script
