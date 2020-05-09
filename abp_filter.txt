@@ -512,8 +512,9 @@
 @@||navak.rs^$elemhide
 @@||castrol.com^$elemhide, image
 @@||shell.*^$elemhide
-@@||mobil.com^$elemhide, script
-@@||bosch.*^$elemhide, stylesheet, script, xmlhttprequest
+@@||mobil.*^$elemhide, script
+@@||m1oil.*^$elemhide, image
+@@||*bosch*.*^$elemhide, stylesheet, script, xmlhttprequest
 @@||sava-tires.com^$elemhide
 @@||goodyear.*^$script
 @@||michelin.*^$elemhide
