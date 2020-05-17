@@ -629,3 +629,4 @@
 @@||x-express.ba^$elemhide
 @@||aparthotelvucko.com^$elemhide
 @@||streamplay.*^$elemhide
+@@||gigaaa.com^$elemhide, script
