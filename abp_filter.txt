@@ -128,8 +128,9 @@
 @@||mondo.*^$elemhide, image
 @@||6yka.com^$elemhide
 @@||glassrpske.com^$elemhide
-@@||srpskainfo.com^$elemhide
-@@||srpskalive.com^$elemhide, image
+@@||srpska*.com^$elemhide
+@@||srpskacafe.com^$stylesheet, script 
+@@||srpskalive.com^$image
 @@||republikasrpska.net^$elemhide, stylesheet, script, image
 @@||ekskluziva.ba^$elemhide, image
 @@||cafe.ba^$elemhide
