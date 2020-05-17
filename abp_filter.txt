@@ -68,6 +68,9 @@
 @@||zitopeka.net^$elemhide
 @@||krajinaklas.com^$image
 @@||patroltaxi.com^$elemhide
+@@||derventa.ba^$elemhide
+@@||derventskilist.net^$elemhide
+@@||derventacafe.com^$elemhide
 @@||ues.rs.ba^$stylesheet, script, image
 @@||unibl.org^$elemhide, image, script
 @@||spu.ba^$elemhide
