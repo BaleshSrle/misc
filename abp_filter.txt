@@ -299,6 +299,7 @@
 @@||medela.rs^$elemhide, image
 @@||*pionir.*^$elemhide, image
 @@||medenosrce.rs^$elemhide, image
+@@||pepsico.*^$elemhide, xmlhttprequest
 @@||ea.com^$elemhide
 @@||steampowered.com^$image
 @@||ageofempires.com^$elemhide
