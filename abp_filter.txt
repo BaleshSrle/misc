@@ -300,6 +300,8 @@
 @@||*pionir.*^$elemhide, image
 @@||medenosrce.rs^$elemhide, image
 @@||pepsico.*^$elemhide, xmlhttprequest
+@@||coca-cola.*^$elemhide, image, script
+@@||cocacola.*^$elemhide, image
 @@||ea.com^$elemhide
 @@||steampowered.com^$image
 @@||ageofempires.com^$elemhide
