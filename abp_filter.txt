@@ -302,7 +302,7 @@
 @@||pepsico.*^$elemhide, xmlhttprequest
 @@||coca-cola*.*^$elemhide, image, script
 @@||cocacola.*^$elemhide, image
-@@||coke.*^$elemhide
+@@||*coke.*^$elemhide, image
 @@||ea.com^$elemhide
 @@||steampowered.com^$image
 @@||ageofempires.com^$elemhide
