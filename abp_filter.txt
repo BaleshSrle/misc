@@ -301,7 +301,7 @@
 @@||medenosrce.rs^$elemhide, image
 @@||pepsico.*^$elemhide, xmlhttprequest
 @@||coca-cola*.*^$elemhide, image, script
-@@||cocacola.*^$elemhide, image
+@@||cocacola*.*^$elemhide, image
 @@||*coke.*^$elemhide, image
 @@||ea.com^$elemhide
 @@||steampowered.com^$image
