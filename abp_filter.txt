@@ -300,7 +300,7 @@
 @@||*pionir.*^$elemhide, image
 @@||medenosrce.rs^$elemhide, image
 @@||pepsico.*^$elemhide, xmlhttprequest
-@@||coca-cola.*^$elemhide, image, script
+@@||coca-cola*.*^$elemhide, image, script
 @@||cocacola.*^$elemhide, image
 @@||coke.*^$elemhide
 @@||ea.com^$elemhide
