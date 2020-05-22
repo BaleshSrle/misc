@@ -21,7 +21,7 @@
 @@||*rs.net^$elemhide
 @@||*rs.org^$elemhide
 @@||*rs.ba^$elemhide
-@@||*.rs.ba^$elemhide
+@@||*.rs.ba^$elemhide, image
 @@||vladars.net^$image
 @@||narodnaskupstinars.net^$image
 @@||ustavnisud.org^$elemhide
@@ -68,11 +68,10 @@
 @@||zitopeka.net^$elemhide
 @@||krajinaklas.com^$image
 @@||patroltaxi.com^$elemhide
-@@||mediamarket.rs.ba^$image
 @@||derventa.ba^$elemhide
 @@||derventskilist.net^$elemhide
 @@||derventacafe.com^$elemhide
-@@||ues.rs.ba^$stylesheet, script, image
+@@||ues.rs.ba^$stylesheet, script
 @@||unibl.org^$elemhide, image, script
 @@||spu.ba^$elemhide
 @@||*.edu.ba^$elemhide
