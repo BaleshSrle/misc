@@ -68,6 +68,7 @@
 @@||zitopeka.net^$elemhide
 @@||krajinaklas.com^$image
 @@||patroltaxi.com^$elemhide
+@@||mediamarket.rs.ba^$image
 @@||derventa.ba^$elemhide
 @@||derventskilist.net^$elemhide
 @@||derventacafe.com^$elemhide
