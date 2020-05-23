@@ -464,7 +464,7 @@
 @@||twitter.com^$image, script, subdocument, other, xmlhttprequest
 @@||flickr.com^$elemhide
 @@||facebook.*^$subdocument, image, other, script, ping
-@@||instagram.com^$image, script
+@@||instagram.com^$image, script, xmlhttprequest
 @@||platform.linkedin.com^$script
 @@||pinterest.com^$elemhide, script
 @@||pornhub.com^$elemhide
