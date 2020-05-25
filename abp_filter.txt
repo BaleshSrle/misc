@@ -636,3 +636,4 @@
 @@||streamplay.*^$elemhide
 @@||gigaaa.com^$elemhide, script
 @@||sberbank*.ba^$elemhide, image
+@@||unicredit*.*^$elemhide, stylesheet, script
