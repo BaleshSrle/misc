@@ -245,7 +245,7 @@
 @@||ted*.com^$elemhide, script
 @@||nist.gov^$elemhide, image
 @@||icbl.ba^$elemhide, stylesheet, script
-@@||it-akademija.*^$elemhide
+@@||it-akademija.*^$elemhide, image
 @@||lonac.ba^$elemhide, image, script, stylesheet, font
 @@||mojadigitalnaakademija.com^$elemhide, script
 @@||prointer.ba^$elemhide
