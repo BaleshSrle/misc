@@ -635,3 +635,4 @@
 @@||aparthotelvucko.com^$elemhide
 @@||streamplay.*^$elemhide
 @@||gigaaa.com^$elemhide, script
+@@||sberbank*.ba^$elemhide, image
