@@ -639,3 +639,4 @@
 @@||unicredit*.*^$elemhide, stylesheet, script
 @@||*sparkasse*.*^$elemhide, image, xmlhttprequest
 @@||erste*.*^$elemhide, script, image, xmlhttprequest
+@@||investis*.*^$elemhide, script
