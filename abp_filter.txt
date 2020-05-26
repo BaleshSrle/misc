@@ -638,3 +638,4 @@
 @@||sberbank*.ba^$elemhide, image
 @@||unicredit*.*^$elemhide, stylesheet, script
 @@||*sparkasse*.*^$elemhide, image, xmlhttprequest
+@@||erste*.*^$elemhide, script, image, xmlhttprequest
