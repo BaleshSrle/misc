@@ -176,6 +176,7 @@
 @@||rtl.hr^$elemhide, script, stylesheet
 @@||nova*.tv^$elemhide, stylesheet, script, image
 @@||dnevnik.hr^$elemhide
+@@||n1info.com^$elemhide
 @@||mojtv.hr^$elemhide, script
 @@||tvprofil.com^$elemhide
 @@||livescore.*^$elemhide, image
