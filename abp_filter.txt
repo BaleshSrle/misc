@@ -640,3 +640,5 @@
 @@||*sparkasse*.*^$elemhide, image, xmlhttprequest
 @@||erste*.*^$elemhide, script, image, xmlhttprequest
 @@||investis*.*^$elemhide, script
+@@||raiffeisen*.*^$elemhide, script, image
+@@||rb*.*^$elemhide, script
