@@ -642,3 +642,4 @@
 @@||investis*.*^$elemhide, script
 @@||raiffeisen*.*^$elemhide, script, image
 @@||rb*.*^$elemhide, script
+@@||dalas*.*^$elemhide
