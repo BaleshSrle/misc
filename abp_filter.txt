@@ -174,7 +174,7 @@
 @@||sportklub.rs^$elemhide
 @@||hrt.hr^$elemhide, script, stylesheet
 @@||rtl.hr^$elemhide, script, stylesheet
-@@||nova*.tv^$elemhide, script, image
+@@||nova*.tv^$elemhide, stylesheet, script, image
 @@||dnevnik.hr^$elemhide
 @@||mojtv.hr^$elemhide, script
 @@||tvprofil.com^$elemhide
