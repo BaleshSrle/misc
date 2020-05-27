@@ -215,7 +215,9 @@
 @@||burnaware.com^$elemhide
 @@||tropic.ba^$elemhide
 @@||mojmarket.ba^$elemhide
+@@||marketas.ba^$elemhide, stylesheet, script
 @@||bingotuzla.ba^$elemhide
+@@||konzum.*^$elemhide
 @@||olx.*^$elemhide, script
 @@||topshop.*^$elemhide, image, script, xmlhttprequest
 @@||dormeo.*^$elemhide
@@ -224,6 +226,9 @@
 @@||rovus.*^$elemhide
 @@||jysk.*^$elemhide, stylesheet, script
 @@||ikea.*^$elemhide, script
+@@||dalas*.*^$elemhide
+@@||gmp*.*^$elemhide
+@@||ardornamjestaj.com^$elemhide, image
 @@||eset*.com^$elemhide, script
 @@||norton.com^$elemhide
 @@||bitdefender.com^$script
@@ -642,4 +647,3 @@
 @@||investis*.*^$elemhide, script
 @@||raiffeisen*.*^$elemhide, script, image
 @@||rb*.*^$elemhide, script
-@@||dalas*.*^$elemhide
