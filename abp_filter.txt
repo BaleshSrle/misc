@@ -218,6 +218,7 @@
 @@||marketas.ba^$elemhide, stylesheet, script
 @@||bingotuzla.ba^$elemhide
 @@||konzum.*^$elemhide
+@@||mercator*.*^$elemhide, image
 @@||olx.*^$elemhide, script
 @@||topshop.*^$elemhide, image, script, xmlhttprequest
 @@||dormeo.*^$elemhide
