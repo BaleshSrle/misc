@@ -43,6 +43,7 @@
 @@||zotovicbl.com^$elemhide
 @@||spamljecanica.com^$elemhide
 @@||termelaktasi.com^$elemhide
+@@||np*.*^$elemhide
 @@||cineplexxpalas.ba^$elemhide, image
 @@||cinestar*.*^$elemhide, image
 @@||blitz-cinestar*.*^$elemhide, image
@@ -321,6 +322,7 @@
 @@||americasarmy.com^$elemhide, image
 @@||trackmania*.com^$elemhide, script
 @@||akamai*.net^$image
+@@||tacdn.com^$stylesheet
 @@||cloudimg.io^$image
 @@||github.*^$elemhide, image
 @@||siteground.com^$elemhide
