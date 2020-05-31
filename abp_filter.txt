@@ -43,7 +43,7 @@
 @@||zotovicbl.com^$elemhide
 @@||spamljecanica.com^$elemhide
 @@||termelaktasi.com^$elemhide
-@@||np*.*^$elemhide
+@@||np*.*^$elemhide, script
 @@||cineplexxpalas.ba^$elemhide, image
 @@||cinestar*.*^$elemhide, image
 @@||blitz-cinestar*.*^$elemhide, image
