@@ -236,7 +236,7 @@
 @@||gmp*.*^$elemhide
 @@||ardornamjestaj.com^$elemhide, image
 @@||eset*.com^$elemhide, script
-@@||norton.com^$elemhide
+@@||norton.com^$elemhide, script
 @@||bitdefender.com^$script
 @@||avast.com^$elemhide, image
 @@||avg.com^$elemhide, image
@@ -654,3 +654,5 @@
 @@||investis*.*^$elemhide, script
 @@||raiffeisen*.*^$elemhide, script, image
 @@||rb*.*^$elemhide, script
+@@||transfernovca.*^$elemhide, image
+@@||westernunion.com^$elemhide, image
