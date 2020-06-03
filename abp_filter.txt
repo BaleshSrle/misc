@@ -647,7 +647,7 @@
 @@||aparthotelvucko.com^$elemhide
 @@||streamplay.*^$elemhide
 @@||gigaaa.com^$elemhide, script
-@@||sberbank*.ba^$elemhide, image
+@@||sberbank*.*^$elemhide, image
 @@||unicredit*.*^$elemhide, stylesheet, script
 @@||*sparkasse*.*^$elemhide, image, xmlhttprequest
 @@||erste*.*^$elemhide, script, image, xmlhttprequest
