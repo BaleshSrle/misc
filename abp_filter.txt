@@ -513,7 +513,7 @@
 @@||squarespace.com^$elemhide, script
 @@||miniclip.com^$image
 @@||live.com^$image, elemhide
-@@||bing.com^$image, elemhide, script
+@@||bing.com^$image, elemhide, script, ping
 @@||microsoft.com^$elemhide, image
 @@||cloudflare.com^$elemhide, image, xmlhttprequest
 @@||1.1.1.1^$elemhide
@@ -606,6 +606,7 @@
 @@||cookiebanner.eu^$script
 @@||axe.rs^$elemhide, image
 @@||btech.rs^$elemhide
+@@||*cdkey.com^$elemhide, image
 @@||bosnalijek.ba^$elemhide
 @@||hemofarm.com^$elemhide, image
 @@||mojaapoteka*.net^$elemhide, stylesheet, script
