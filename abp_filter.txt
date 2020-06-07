@@ -606,7 +606,7 @@
 @@||cookiebanner.eu^$script
 @@||axe.rs^$elemhide, image
 @@||btech.rs^$elemhide
-@@||*cdkey.com^$elemhide, image
+@@||*cdkey*.com^$elemhide, image, script, stylesheet
 @@||bosnalijek.ba^$elemhide
 @@||hemofarm.com^$elemhide, image
 @@||mojaapoteka*.net^$elemhide, stylesheet, script
