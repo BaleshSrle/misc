@@ -243,7 +243,7 @@
 @@||malwarebytes.com^$elemhide
 @@||kaspersky.*^$elemhide, script
 @@||ccleaner*.com^$elemhide, image
-@@||4kdownload.com^$elemhide
+@@||*download.*^$elemhide
 @@||cleanmasterofficial.com^$elemhide
 @@||eusing.com^$elemhide
 @@||wiki*.org^$elemhide, image, ping
@@ -607,7 +607,6 @@
 @@||axe.rs^$elemhide, image
 @@||btech.rs^$elemhide
 @@||*cdkey*.com^$elemhide, image, script, stylesheet
-@@||download.*^$elemhide
 @@||bosnalijek.ba^$elemhide
 @@||hemofarm.com^$elemhide, image
 @@||mojaapoteka*.net^$elemhide, stylesheet, script
