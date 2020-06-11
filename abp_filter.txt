@@ -266,7 +266,7 @@
 @@||wayseven.com^$elemhide
 @@||dwelt.net^$elemhide
 @@||jsguru.io^$elemhide
-@@||atlantbh.com^$stylesheet, script
+@@||atlantbh.com^$elemhide, stylesheet, script
 @@||eastcode.net^$elemhide
 @@||telegroup*.*^$elemhide
 @@||teleklik.ba^$elemhide, stylesheet, script
