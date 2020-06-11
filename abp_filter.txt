@@ -607,6 +607,7 @@
 @@||axe.rs^$elemhide, image
 @@||btech.rs^$elemhide
 @@||*cdkey*.com^$elemhide, image, script, stylesheet
+@@||download.*^$elemhide
 @@||bosnalijek.ba^$elemhide
 @@||hemofarm.com^$elemhide, image
 @@||mojaapoteka*.net^$elemhide, stylesheet, script
