@@ -225,6 +225,7 @@
 @@||konzum.*^$elemhide
 @@||mercator*.*^$elemhide, image
 @@||lidl*.*^$elemhide, image
+@@||spar*.*^$elemhide, script, stylesheet
 @@||olx.*^$elemhide, script
 @@||topshop.*^$elemhide, image, script, xmlhttprequest
 @@||dormeo.*^$elemhide
