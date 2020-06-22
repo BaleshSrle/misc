@@ -39,6 +39,7 @@
 @@||muzejrs.com^$elemhide
 @@||banskidvor.org^$elemhide, stylesheet, script
 @@||zdravstvo-srpske.org^$elemhide
+@@||banjeskpske.com^$image
 @@||banja-vrucica.com^$stylesheet, script
 @@||zotovicbl.com^$elemhide
 @@||spamljecanica.com^$elemhide
