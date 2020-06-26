@@ -41,7 +41,7 @@
 @@||zdravstvo-srpske.org^$elemhide
 @@||banjesrpske.com^$image
 @@||banja-vrucica.com^$stylesheet, script
-@@||zotovicbl.com^$elemhide
+@@||*icbl.*^$elemhide
 @@||spamljecanica.com^$elemhide
 @@||termelaktasi.com^$elemhide
 @@||np*.*^$elemhide, script
@@ -55,6 +55,7 @@
 @@||dobojski.info^$elemhide, image
 @@||*doboj.com^$elemhide, image
 @@||granicedoboja.info^$elemhide, stylesheet, script
+@@||leskovacki.com^$elemhide, script
 @@||glas*.net^$elemhide
 @@||banja*.*^$elemhide
 @@||banjaluka.*^$stylesheet, script, image
@@ -258,7 +259,8 @@
 @@||cdc.gov^$elemhide
 @@||ted*.com^$elemhide, script
 @@||nist.gov^$elemhide, image
-@@||icbl.ba^$elemhide, stylesheet, script
+@@||icbl.ba^$stylesheet, script
+@@||calculus.ba^$elemhide
 @@||it-akademija.*^$elemhide, image
 @@||lonac.ba^$elemhide, image, script, stylesheet, font
 @@||mojadigitalnaakademija.com^$elemhide, script
