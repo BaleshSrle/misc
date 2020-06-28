@@ -136,7 +136,7 @@
 @@||6yka.com^$elemhide
 @@||24sata.*^$elemhide
 @@||24online.info^$elemhide, image, script
-@@||24ur.com^$elemhide, 
+@@||24ur.com^$elemhide
 @@||glassrpske.com^$elemhide
 @@||srpska*.com^$elemhide
 @@||srpskacafe.com^$stylesheet, script 
