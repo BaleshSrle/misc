@@ -270,6 +270,7 @@
 @@||guru99.com^$elemhide, script
 @@||toolsqa.com^$elemhide, stylesheet, script
 @@||javascriptkit.com^$elemhide, script
+@@||javatpoint.com^$elemhide, image
 @@||prointer.ba^$elemhide
 @@||lanaco.com^$elemhide, script
 @@||dvcsolutions.com^$elemhide, image
