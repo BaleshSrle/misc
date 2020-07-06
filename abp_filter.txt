@@ -526,7 +526,7 @@
 @@||miniclip.com^$image
 @@||live.com^$image, elemhide
 @@||bing.com^$image, elemhide, script, ping
-@@||microsoft.com^$image
+@@||microsoft.com^$elemhide, image, script, ping,xmlhttprequest
 @@||cloudflare.com^$elemhide, image, xmlhttprequest
 @@||1.1.1.1^$elemhide
 @@||asus.com^$elemhide, image
@@ -550,7 +550,6 @@
 @@||*bosch*.*^$elemhide, stylesheet, script, xmlhttprequest
 @@||sava-tires.com^$elemhide
 @@||goodyear.*^$script
-@@||michelin.*^$elemhide
 @@||daf.*^$elemhide, script
 @@||volvo*.*^$elemhide, stylesheet, script
 @@||mercedes*.com^$elemhide, script, xmlhttprequest, stylesheet
