@@ -487,6 +487,7 @@
 @@||instagram.com^$image, script, xmlhttprequest
 @@||platform.linkedin.com^$script
 @@||pinterest.com^$elemhide, script
+@@||tumblr.com^$subdocument
 @@||pornhub.com^$elemhide
 @@||phncdn.com^$image
 @@||lushstories.com^$elemhide, image
@@ -506,6 +507,7 @@
 @@||realme.com^$elemhide
 @@||*honor.*^$elemhide
 @@||meizu*.com^$elemhide, image
+@@||sony.com^$elemhide, script
 @@||iqmobile.ba^$elemhide, script
 @@||gsmarena.com^$elemhide
 @@||ctfassets.net^$image
