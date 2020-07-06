@@ -504,6 +504,7 @@
 @@||*mi*.*^$elemhide, script
 @@||lg.com^$elemhide
 @@||realme.com^$elemhide
+@@||*honor.*^$elemhide
 @@||iqmobile.ba^$elemhide, script
 @@||gsmarena.com^$elemhide
 @@||ctfassets.net^$image
