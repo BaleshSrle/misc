@@ -526,7 +526,7 @@
 @@||miniclip.com^$image
 @@||live.com^$image, elemhide
 @@||bing.com^$image, elemhide, script, ping
-@@||microsoft.com^$elemhide, image, script, ping,xmlhttprequest
+@@||microsoft.com^$elemhide, image, script, ping, xmlhttprequest
 @@||cloudflare.com^$elemhide, image, xmlhttprequest
 @@||1.1.1.1^$elemhide
 @@||asus.com^$elemhide, image
