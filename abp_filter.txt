@@ -371,25 +371,22 @@
 @@||chelseafc.com^$elemhide
 @@||leedsunited.com^$elemhide
 @@||rovers.co.uk^$elemhide
-@@||blackpoolfc.co.uk^$elemhide, image
+@@||*fc.co.uk^$elemhide
+@@||blackpoolfc.co.uk^$image
 @@||arsenal.com^$elemhide
 @@||celticfc.net^$elemhide, stylesheet, image, script
 @@||rangers.co.uk^$elemhide
 @@||tottenhamhotspur.com^$elemhide
-@@||portsmouthfc.co.uk^$elemhide, image
+@@||portsmouthfc.co.uk^$image
 @@||liverpoolfc.com^$elemhide
-@@||avfc.co.uk^$elemhide
-@@||nufc.co.uk^$elemhide
 @@||evertonfc.com^$elemhide
 @@||wba.co.uk^$elemhide, image
 @@||wolves.co.uk^$elemhide
-@@||sufc.co.uk^$elemhide
 @@||whufc.com^$elemhide, image
 @@||safc.com^$elemhide
-@@||dcfc.co.uk^$elemhide
 @@||southamptonfc.com^$elemhide
 @@||bcfc.com^$elemhide, image
-@@||cpfc.co.uk^$elemhide, image
+@@||cpfc.co.uk^$image
 @@||qpr.co.uk^$elemhide
 @@||mfc.co.uk^$elemhide, stylesheet
 @@||stokecityfc.com^$elemhide
