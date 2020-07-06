@@ -550,6 +550,7 @@
 @@||*bosch*.*^$elemhide, stylesheet, script, xmlhttprequest
 @@||sava-tires.com^$elemhide
 @@||goodyear.*^$script
+@@||*michelin.*^$image, subdocument
 @@||daf.*^$elemhide, script
 @@||volvo*.*^$elemhide, stylesheet, script
 @@||mercedes*.com^$elemhide, script, xmlhttprequest, stylesheet
