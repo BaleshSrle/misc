@@ -507,7 +507,7 @@
 @@||realme.com^$elemhide
 @@||*honor.*^$elemhide
 @@||meizu*.com^$elemhide, image
-@@||sony.com^$elemhide, script
+@@||sony.com^$elemhide, script, xmlhttprequest
 @@||iqmobile.ba^$elemhide, script
 @@||gsmarena.com^$elemhide
 @@||ctfassets.net^$image
