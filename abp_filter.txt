@@ -508,6 +508,7 @@
 @@||*honor.*^$elemhide
 @@||meizu*.com^$elemhide, image
 @@||sony.com^$elemhide, script, xmlhttprequest
+@@||zte.com.cn^$elemhide, image
 @@||iqmobile.ba^$elemhide, script
 @@||gsmarena.com^$elemhide
 @@||ctfassets.net^$image
