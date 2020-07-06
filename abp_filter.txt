@@ -317,6 +317,7 @@
 @@||stark.rs^$image
 @@||zvecevo.hr^$elemhide, stylesheet, image
 @@||kras.hr^$elemhide, image
+@@||mira.ba^$image
 @@||medela.rs^$elemhide, image
 @@||*pionir.*^$elemhide, image
 @@||medenosrce.rs^$elemhide, image
