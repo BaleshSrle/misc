@@ -506,6 +506,7 @@
 @@||wiener*.*^$elemhide, image, font
 @@||tesla.info^$elemhide, stylesheet, script, image
 @@||nokia.com^$elemhide, stylesheet
+@@||*mi*.*elemhide, script
 @@||iqmobile.ba^$elemhide, script
 @@||gsmarena.com^$elemhide
 @@||ctfassets.net^$image
