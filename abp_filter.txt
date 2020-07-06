@@ -510,6 +510,7 @@
 @@||sony.com^$elemhide, script, xmlhttprequest
 @@||zte.com.cn^$elemhide, image
 @@||samsung.com^$elemhide, xmlhttprequest
+@@||htc.com^$elemhide
 @@||iqmobile.ba^$elemhide, script
 @@||gsmarena.com^$elemhide
 @@||ctfassets.net^$image
