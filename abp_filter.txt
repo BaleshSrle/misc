@@ -505,6 +505,7 @@
 @@||nokia.com^$elemhide, stylesheet
 @@||*mi*.*^$elemhide, script
 @@||lg.com^$elemhide
+@@||realme.com^$elemhide
 @@||iqmobile.ba^$elemhide, script
 @@||gsmarena.com^$elemhide
 @@||ctfassets.net^$image
