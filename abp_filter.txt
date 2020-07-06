@@ -511,6 +511,7 @@
 @@||zte.com.cn^$elemhide, image
 @@||samsung.com^$elemhide, xmlhttprequest
 @@||htc.com^$elemhide
+@@||oneplus.com^$elemhide, ping
 @@||iqmobile.ba^$elemhide, script
 @@||gsmarena.com^$elemhide
 @@||ctfassets.net^$image
