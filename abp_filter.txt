@@ -231,6 +231,7 @@
 @@||lidl*.*^$elemhide, image
 @@||spar*.*^$elemhide, script, stylesheet
 @@||olx.*^$elemhide, script
+@@||ekupi.*^$elemhide, script
 @@||paypal.com^$image, script, xmlhttprequest
 @@||topshop.*^$elemhide, image, script, xmlhttprequest
 @@||dormeo.*^$elemhide
