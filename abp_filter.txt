@@ -50,7 +50,7 @@
 @@||doboj.gov.ba^$elemhide
 @@||*doboj.ba^$elemhide
 @@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
-@@||mojdoboj.info^$elemhide
+@@||moj*.info^$elemhide
 @@||dobojski.info^$elemhide, image
 @@||*doboj.com^$elemhide, image
 @@||granicedoboja.info^$elemhide, stylesheet, script
@@ -676,3 +676,4 @@
 @@||rb*.*^$elemhide, script
 @@||transfernovca.*^$elemhide, image
 @@||westernunion.com^$elemhide, image
+@@||watchseries.*^elemhide
