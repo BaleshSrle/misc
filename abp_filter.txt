@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 26 Jul 2020 21:01 UTC+2
+! Last modified: 30 Jul 2020 18:29 UTC+2
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -50,7 +50,7 @@
 @@||doboj.gov.ba^$elemhide
 @@||*doboj.ba^$elemhide
 @@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
-@@||mojdoboj.info^$elemhide
+@@||moj*.info^$elemhide
 @@||dobojski.info^$elemhide, image
 @@||*doboj.com^$elemhide, image
 @@||granicedoboja.info^$elemhide, stylesheet, script
@@ -676,3 +676,4 @@
 @@||rb*.*^$elemhide, script
 @@||transfernovca.*^$elemhide, image
 @@||westernunion.com^$elemhide, image
+@@||watchseries.*^$elemhide
