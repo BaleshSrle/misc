@@ -223,7 +223,7 @@
 @@||telegram.org^$elemhide, image
 @@||burnaware.com^$elemhide
 @@||boska.ba^$image
-@@||tropic.ba^$elemhide
+@@||tropic.ba^$elemhide, font, image, script, stylesheet
 @@||mojmarket.ba^$elemhide
 @@||marketas.ba^$elemhide, stylesheet, script
 @@||bingotuzla.ba^$elemhide
