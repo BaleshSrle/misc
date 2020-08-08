@@ -147,7 +147,9 @@
 @@||capital.ba^$elemhide, image
 @@||noviglas.info^$elemhide
 @@||nationalgeographic.*^$elemhide, image
-@@||rts.rs^$elemhide, image
+@@||rt*.rs^$image
+@@||rts.rs^$elemhide
+@@||rtv.rs^$script
 @@||satplus.rs^$elemhide, image
 @@||b92*.*^$elemhide, image
 @@||pink.rs^$elemhide, image
