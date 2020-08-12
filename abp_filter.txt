@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 09 Aug 2020 20:10 UTC+2
+! Last modified: 12 Aug 2020 21:33 UTC+2
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -21,6 +21,7 @@
 @@||*rs.org^$elemhide
 @@||*rs.ba^$elemhide
 @@||*.rs.ba^$elemhide, image
+@@||*.rs^$elemhide
 @@||vladars.net^$image
 @@||narodnaskupstinars.net^$image
 @@||ustavnisud.org^$elemhide
@@ -78,7 +79,7 @@
 @@||unibl.org^$elemhide, image, script
 @@||spu.ba^$elemhide
 @@||*.edu.ba^$elemhide
-@@||nub.rs^$elemhide, image
+@@||nub.rs^$image
 @@||nsk.hr^$elemhide, stylesheet, script, image
 @@||nestro.ba^$elemhide
 @@||optimagrupa.net^$elemhide
@@ -88,16 +89,15 @@
 @@||krajinapetrol.com^$elemhide
 @@||total-trade.ba^$elemhide
 @@||autodemi.ba^$font
-@@||sanu.ac.rs^$elemhide, image
-@@||bg.ac.rs^$elemhide, image, stylesheet, script
-@@||uns.ac.rs^$elemhide, image
-@@||fsfvns.rs^$elemhide, image
+@@||*.ac.rs^$image
+@@||bg.ac.rs^$stylesheet, script
+@@||fsfvns.rs^$image
 @@||uni-lj.si^$elemhide, script, image
 @@||um.si^$elemhide, stylesheet, xmlhttprequest, image, script
 @@||wordpress.*^$elemhide, stylesheet, script, image
 @@||wp.com^$image, script, subdocument, stylesheet
 @@||internetdefenseleague.org^$script, image
-@@||mts.rs^$elemhide, image
+@@||mts.rs^$image
 @@||mtel.*^$elemhide, image
 @@||bhtelecom.ba^$elemhide
 @@||mojatv.ba^$elemhide
@@ -148,17 +148,15 @@
 @@||noviglas.info^$elemhide
 @@||nationalgeographic.*^$elemhide, image
 @@||rt*.rs^$image
-@@||rts.rs^$elemhide
 @@||rtv.rs^$script
-@@||satplus.rs^$elemhide, image
+@@||satplus.rs^$image
 @@||b92*.*^$elemhide, image
-@@||pink.rs^$elemhide, image
-@@||vesti.rs^$elemhide, image
-@@||pulsonline.rs^$elemhide
-@@||alo.rs^$elemhide, image
-@@||novosti.rs^$elemhide, image
+@@||pink.rs^$image
+@@||vesti.rs^$image
+@@||alo.rs^$image
+@@||novosti.rs^$image
 @@||vecernjenovosti.ba^$elemhide, image
-@@||politika.rs^$elemhide, script, xmlhttprequest, image
+@@||politika.rs^$script, xmlhttprequest, image
 @@||kurir.*^$elemhide
 @@||aljazeera.*^$elemhide, script, image
 @@||rt.com^$elemhide, script, image
@@ -178,7 +176,6 @@
 @@||aetv.com^$elemhide
 @@||natgeo*.*^$elemhide
 @@||tvarenasport.*^$elemhide, script
-@@||sportklub.rs^$elemhide
 @@||hrt.hr^$elemhide, script, stylesheet
 @@||rtl.hr^$elemhide, script, stylesheet
 @@||nova*.tv^$elemhide, stylesheet, script, image
@@ -206,7 +203,6 @@
 @@||ip2location.com^$elemhide, image, script
 @@||filmclub.tv^$elemhide
 @@||netfilm.tv^$stylesheet
-@@||delfi.rs^$elemhide
 @@||agencijaspektar.com^$document
 @@||mojposao.ba^$elemhide
 @@||poslovi.ba^$elemhide
@@ -281,7 +277,7 @@
 @@||prointer.ba^$elemhide
 @@||lanaco.com^$elemhide, script
 @@||dvcsolutions.com^$elemhide, image
-@@||bitlab.rs^$elemhide, stylesheet, script
+@@||bitlab.rs^$stylesheet, script
 @@||wayseven.com^$elemhide
 @@||dwelt.net^$elemhide
 @@||jsguru.io^$elemhide
@@ -291,7 +287,6 @@
 @@||teleklik.ba^$elemhide, stylesheet, script
 @@||blberza.com^$image
 @@||sase.ba^$elemhide, image
-@@||spc.rs^$elemhide
 @@||hilandar.org^$elemhide
 @@||manastir*.*^$elemhide
 @@||manastirostrog.com^$image
@@ -302,34 +297,32 @@
 @@||wwin-ba.com^$elemhide, image
 @@||meridianbet.ba^$elemhide
 @@||vitinka.com^$elemhide
-@@||knjaz.rs^$elemhide, script, image
+@@||knjaz.rs^$script, image
 @@||banjaluckapivara.com^$xmlhttprequest
 @@||nektarpivo.com^$elemhide, script
 @@||gorstak.beer^$elemhide, stylesheet
 @@||sarajevska-pivara.com^$elemhide
 @@||jelen*.com^$elemhide, stylesheet, script
-@@||lavpivo.rs^$elemhide
 @@||zajecarskopivo.com^$image
 @@||karlovacko.hr^$elemhide
 @@||ozujsko.com^$elemhide
 @@||panpivo.hr^$elemhide
-@@||vinarijacoka.rs^$elemhide, image
-@@||nectar.rs^$elemhide
+@@||vinarijacoka.rs^$image
 @@||vinozupa.com^$elemhide
 @@||fructal.si^$elemhide
 @@||sinalco.com^$elemhide
 @@||cockta.eu^$elemhide
 @@||swisslion*.*^$elemhide, script
-@@||jaffa.rs^$elemhide, image
-@@||bambi.rs^$elemhide, stylesheet, script
+@@||jaffa.rs^$image
+@@||bambi.rs^$stylesheet, script
 @@||banini.rs^$image
 @@||stark.rs^$image
 @@||zvecevo.hr^$elemhide, stylesheet, image
 @@||kras.hr^$elemhide, image
 @@||mira.ba^$image
-@@||medela.rs^$elemhide, image
+@@||medela.rs^$image
 @@||*pionir.*^$elemhide, image
-@@||medenosrce.rs^$elemhide, image
+@@||medenosrce.rs^$image
 @@||pepsico.*^$elemhide, xmlhttprequest
 @@||coca-cola*.*^$elemhide, image, script
 @@||cocacola*.*^$elemhide, image
@@ -479,11 +472,11 @@
 @@||hajduk.hr^$elemhide
 @@||nk-rijeka.hr^$elemhide
 @@||*crvenazvezda*.*^$elemhide, image, script
-@@||*partizan.rs^$elemhide, image
-@@||fkvojvodina.rs^$elemhide, stylesheet, script
-@@||ofkbeograd.co.rs^$elemhide, image
-@@||fkmetalac.rs^$elemhide, stylesheet, script
-@@||igokea.rs^$elemhide, stylesheet, script
+@@||*partizan.rs^$image
+@@||fkvojvodina.rs^$stylesheet, script
+@@||ofkbeograd.co.rs^$image
+@@||fkmetalac.rs^$stylesheet, script
+@@||igokea.rs^$stylesheet, script
 @@||kkbuducnost.me^$elemhide, image
 @@||fkbuducnost.me^$elemhide, image
 @@||aba-liga.com^$elemhide
@@ -500,7 +493,7 @@
 @@||phncdn.com^$image
 @@||lushstories.com^$elemhide, image
 @@||sexcentrala.com^$elemhide, stylesheet, script
-@@||mona.rs^$elemhide, image
+@@||mona.rs^$image
 @@||lisca.*^$elemhide, script, image
 @@||alma-ras.com^$elemhide
 @@||koteks.ba^$elemhide
@@ -558,7 +551,6 @@
 @@||amd.com^$elemhide
 @@||huawei.com^$elemhide
 @@||tp-link.com^$elemhide
-@@||navak.rs^$elemhide
 @@||castrol.com^$elemhide, image
 @@||shell.*^$elemhide
 @@||mobil.*^$elemhide, script
@@ -631,8 +623,7 @@
 @@||zastava-arms.rs^$image, script
 @@||trb.ba^$elemhide
 @@||cookiebanner.eu^$script
-@@||axe.rs^$elemhide, image
-@@||btech.rs^$elemhide
+@@||axe.rs^$image
 @@||*cdkey*.com^$elemhide, image, script, stylesheet
 @@||bosnalijek.ba^$elemhide
 @@||hemofarm.com^$elemhide, image
@@ -656,7 +647,7 @@
 @@||lubuntu.*^$elemhide, stylesheet, image, script
 @@||lxle.net^$elemhide
 @@||linux*.com^$elemhide, image, script
-@@||debian-srbija.iz.rs^$elemhide, image
+@@||debian-srbija.iz.rs^$image
 @@||getfedora.org^$elemhide, image
 @@||fedora*.org^$elemhide, image
 @@||elementary.io^$elemhide
