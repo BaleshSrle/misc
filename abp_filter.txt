@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 12 Aug 2020 21:33 UTC+2
+! Last modified: 12 Aug 2020 21:45 UTC+2
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -22,6 +22,8 @@
 @@||*rs.ba^$elemhide
 @@||*.rs.ba^$elemhide, image
 @@||*.rs^$elemhide
+@@||*.si^$elemhide
+@@||*.hr^$elemhide
 @@||vladars.net^$image
 @@||narodnaskupstinars.net^$image
 @@||ustavnisud.org^$elemhide
@@ -80,7 +82,7 @@
 @@||spu.ba^$elemhide
 @@||*.edu.ba^$elemhide
 @@||nub.rs^$image
-@@||nsk.hr^$elemhide, stylesheet, script, image
+@@||nsk.hr^$stylesheet, script, image
 @@||nestro.ba^$elemhide
 @@||optimagrupa.net^$elemhide
 @@||rafinerija.com^$elemhide
@@ -92,8 +94,8 @@
 @@||*.ac.rs^$image
 @@||bg.ac.rs^$stylesheet, script
 @@||fsfvns.rs^$image
-@@||uni-lj.si^$elemhide, script, image
-@@||um.si^$elemhide, stylesheet, xmlhttprequest, image, script
+@@||uni-lj.si^$script, image
+@@||um.si^$stylesheet, xmlhttprequest, image, script
 @@||wordpress.*^$elemhide, stylesheet, script, image
 @@||wp.com^$image, script, subdocument, stylesheet
 @@||internetdefenseleague.org^$script, image
@@ -176,12 +178,11 @@
 @@||aetv.com^$elemhide
 @@||natgeo*.*^$elemhide
 @@||tvarenasport.*^$elemhide, script
-@@||hrt.hr^$elemhide, script, stylesheet
-@@||rtl.hr^$elemhide, script, stylesheet
+@@||hrt.hr^$script, stylesheet
+@@||rtl.hr^$script, stylesheet
 @@||nova*.tv^$elemhide, stylesheet, script, image
-@@||dnevnik.hr^$elemhide
 @@||n1info.com^$elemhide, image
-@@||mojtv.hr^$elemhide, script
+@@||mojtv.hr^$script
 @@||tvprofil.com^$elemhide
 @@||livescore.*^$elemhide, image
 @@||rezultati.com^$elemhide, image
@@ -304,12 +305,9 @@
 @@||sarajevska-pivara.com^$elemhide
 @@||jelen*.com^$elemhide, stylesheet, script
 @@||zajecarskopivo.com^$image
-@@||karlovacko.hr^$elemhide
 @@||ozujsko.com^$elemhide
-@@||panpivo.hr^$elemhide
 @@||vinarijacoka.rs^$image
 @@||vinozupa.com^$elemhide
-@@||fructal.si^$elemhide
 @@||sinalco.com^$elemhide
 @@||cockta.eu^$elemhide
 @@||swisslion*.*^$elemhide, script
@@ -317,8 +315,8 @@
 @@||bambi.rs^$stylesheet, script
 @@||banini.rs^$image
 @@||stark.rs^$image
-@@||zvecevo.hr^$elemhide, stylesheet, image
-@@||kras.hr^$elemhide, image
+@@||zvecevo.hr^$stylesheet, image
+@@||kras.hr^$image
 @@||mira.ba^$image
 @@||medela.rs^$image
 @@||*pionir.*^$elemhide, image
@@ -468,9 +466,7 @@
 @@||fkvelez.ba^$elemhide
 @@||hskzrinjski.ba^$elemhide
 @@||fksloboda.ba^$elemhide, stylesheet, script
-@@||gnkdinamo.hr^$elemhide, image
-@@||hajduk.hr^$elemhide
-@@||nk-rijeka.hr^$elemhide
+@@||gnkdinamo.hr^$image
 @@||*crvenazvezda*.*^$elemhide, image, script
 @@||*partizan.rs^$image
 @@||fkvojvodina.rs^$stylesheet, script
@@ -633,7 +629,7 @@
 @@||internationalhealth.eu^$elemhide
 @@||lipodiet.eu^$elemhide
 @@||dita.ba^$elemhide
-@@||saponia.hr^$elemhide, image, script
+@@||saponia.hr^$image, script
 @@||henkel*.*^$elemhide, stylesheet
 @@||persil.*^$elemhide
 @@||tide.*^$elemhide
