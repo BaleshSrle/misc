@@ -194,7 +194,7 @@
 @@||getadblock.com^$elemhide, image
 @@||lastpass.*^$script
 @@||teamviewer.com^$elemhide
-@@||anydesk.com^$elemhideimage
+@@||anydesk.com^$elemhide, image
 @@||yandex.*^$script, ping, xmlhttprequest, image
 @@||joomla.org^$elemhide, image
 @@||accuweather.com^$elemhide, script
