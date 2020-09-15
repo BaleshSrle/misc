@@ -267,7 +267,7 @@
 @@||ytimg.com^$image
 @@||duckduckgo.com^$elemhide, image
 @@||who.int^$elemhide
-@@||cdc.gov^$elemhide
+@@||*cdc.*^$elemhide, script
 @@||ted*.com^$elemhide, script
 @@||nist.gov^$elemhide, image
 @@||icbl.ba^$stylesheet, script
