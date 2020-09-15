@@ -550,7 +550,7 @@
 @@||amd.com^$elemhide
 @@||huawei.com^$elemhide
 @@||tp-link.com^$elemhide
-@@||autoscout24.^$elemhide, xmlhttprequest
+@@||autoscout24.*^$elemhide, xmlhttprequest
 @@||autonews.com^$elemhide
 @@||acea.be^$elemhide
 @@||automarket.*^$elemhide, script, image
