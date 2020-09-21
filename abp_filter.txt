@@ -267,7 +267,7 @@
 @@||ytimg.com^$image
 @@||duckduckgo.com^$elemhide, image
 @@||who.int^$elemhide
-@@||*cdc.*^$elemhide, script
+@@||*cdc.*^$elemhide, script, image
 @@||ted*.com^$elemhide, script
 @@||nist.gov^$elemhide, image
 @@||icbl.ba^$stylesheet, script
@@ -680,3 +680,4 @@
 @@||watchseries.*^$elemhide
 @@||logistics*.com^$elemhide
 @@||logisticsbusiness.com^$stylesheet, script
+##saimse.com^$document
