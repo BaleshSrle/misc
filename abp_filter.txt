@@ -19,15 +19,13 @@
 @@||users.teol.net/~srdjan.b^$elemhide
 @@||*rs.net^$elemhide
 @@||*rs.org^$elemhide
-@@||*rs.ba^$elemhide
-@@||*.rs.ba^$elemhide, image
+@@||*.ba^$elemhide, stylesheet, script, font, image
 @@||*.rs^$elemhide
 @@||*.si^$elemhide
 @@||*.hr^$elemhide
-@@||vladars.net^$image
+@@||vladars.net^$image               
 @@||narodnaskupstinars.net^$image
 @@||ustavnisud.org^$elemhide
-@@||komorars.ba^$image
 @@||autoputevirs.com^$elemhide
 @@||ruczrs.org^$stylesheet, script, image
 @@||rcirz.org^$elemhide
@@ -35,8 +33,6 @@
 @@||mpr-centar.org^$elemhide
 @@||koronavirususrpskoj.com^$elemhide, stylesheet, script
 @@||rhmzrs.com^$elemhide
-@@||djecijepozoristers.ba^$script
-@@||gpj.ba^$elemhide
 @@||zunsrs.com^$elemhide, font
 @@||muzejrs.com^$elemhide
 @@||banskidvor.org^$elemhide, stylesheet, script
@@ -47,11 +43,8 @@
 @@||spamljecanica.com^$elemhide
 @@||termelaktasi.com^$elemhide
 @@||np*.*^$elemhide, script
-@@||cineplexxpalas.ba^$elemhide, image
 @@||cinestar*.*^$elemhide, image
 @@||blitz-cinestar*.*^$elemhide, image
-@@||doboj.gov.ba^$elemhide
-@@||*doboj.ba^$elemhide
 @@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
 @@||moj*.info^$elemhide
 @@||dobojski.info^$elemhide, image
@@ -70,27 +63,18 @@
 @@||slavijahotelbeograd.com^$stylesheet
 @@||banjalucanke.com^$script
 @@||lutrijars.com^$image
-@@||manja.ba^$elemhide, image
 @@||zitopeka.net^$elemhide
 @@||krajinaklas.com^$image
 @@||patroltaxi.com^$elemhide
-@@||derventa.ba^$elemhide
 @@||derventskilist.net^$elemhide
 @@||derventacafe.com^$elemhide
-@@||ues.rs.ba^$stylesheet, script
 @@||unibl.org^$elemhide, image, script
-@@||spu.ba^$elemhide
-@@||*.edu.ba^$elemhide
 @@||nub.rs^$image
 @@||nsk.hr^$stylesheet, script, image
-@@||nestro.ba^$elemhide
 @@||optimagrupa.net^$elemhide
 @@||rafinerija.com^$elemhide
 @@||modricaoil.com^$elemhide
-@@||nestropetrol.com^$elemhide
-@@||krajinapetrol.com^$elemhide
-@@||total-trade.ba^$elemhide
-@@||autodemi.ba^$font
+@@||*petrol.com^$elemhide
 @@||*.ac.rs^$image
 @@||bg.ac.rs^$stylesheet, script
 @@||fsfvns.rs^$image
@@ -680,4 +664,4 @@
 @@||watchseries.*^$elemhide
 @@||logistics*.com^$elemhide
 @@||logisticsbusiness.com^$stylesheet, script
-##saimse.com^$document
+@@||vicevi.net^$elemhide
