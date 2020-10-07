@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 07 Oct 2020 21:15 UTC+2
+! Last modified: 07 Oct 2020 21:40 UTC+2
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -20,7 +20,7 @@
 @@||*rs.net^$elemhide
 @@||*rs.org^$elemhide
 @@||*.ba^$elemhide, stylesheet, script, font, image
-@@||*.rs^$elemhide
+@@||*.rs^$elemhide, stylesheet, xmlhttprequest, script, image
 @@||*.si^$elemhide
 @@||*.hr^$elemhide, stylesheet, script, image
 @@||vladars.net^$image               
@@ -69,20 +69,15 @@
 @@||derventskilist.net^$elemhide
 @@||derventacafe.com^$elemhide
 @@||unibl.org^$elemhide, image, script
-@@||nub.rs^$image
 @@||optimagrupa.net^$elemhide
 @@||rafinerija.com^$elemhide
 @@||modricaoil.com^$elemhide
 @@||*petrol.com^$elemhide
-@@||*.ac.rs^$image
-@@||bg.ac.rs^$stylesheet, script
-@@||fsfvns.rs^$image
 @@||uni-lj.si^$script, image
 @@||um.si^$stylesheet, xmlhttprequest, image, script
 @@||wordpress.*^$elemhide, stylesheet, script, image
 @@||wp.com^$image, script, subdocument, stylesheet
 @@||internetdefenseleague.org^$script, image
-@@||mts.rs^$image
 @@||mtel.*^$elemhide, image
 @@||elta-kabel.com^$elemhide
 @@||blic.*^$elemhide, image
@@ -98,8 +93,6 @@
 @@||prnjavorlive.info^$elemhide
 @@||mojkontakt.com^$elemhide, stylesheet, font, script
 @@||valentinobh.com^$elemhide, image
-@@||radios.rs^$image
-@@||playradio.rs^$elemhide, image
 @@||tdiradio.com^$image
 @@||nezavisne.com^$elemhide
 @@||mondo.*^$elemhide, image
@@ -114,15 +107,7 @@
 @@||republikasrpska.net^$elemhide, stylesheet, script, image
 @@||noviglas.info^$elemhide
 @@||nationalgeographic.*^$elemhide, image
-@@||rt*.rs^$image
-@@||rtv.rs^$script
-@@||satplus.rs^$image
 @@||b92*.*^$elemhide, image
-@@||pink.rs^$image
-@@||vesti.rs^$image
-@@||alo.rs^$image
-@@||novosti.rs^$image
-@@||politika.rs^$script, xmlhttprequest, image
 @@||kurir.*^$elemhide
 @@||aljazeera.*^$elemhide, script, image
 @@||rt.com^$elemhide, script, image
@@ -230,7 +215,6 @@
 @@||javatpoint.com^$elemhide, image
 @@||lanaco.com^$elemhide, script
 @@||dvcsolutions.com^$elemhide, image
-@@||bitlab.rs^$stylesheet, script
 @@||wayseven.com^$elemhide
 @@||dwelt.net^$elemhide
 @@||jsguru.io^$elemhide
@@ -247,7 +231,6 @@
 @@||mozzartbet.*^$script
 @@||wwin-ba.com^$elemhide, image
 @@||vitinka.com^$elemhide
-@@||knjaz.rs^$script, image
 @@||banjaluckapivara.com^$xmlhttprequest
 @@||nektarpivo.com^$elemhide, script
 @@||gorstak.beer^$elemhide, stylesheet
@@ -255,18 +238,11 @@
 @@||jelen*.com^$elemhide, stylesheet, script
 @@||zajecarskopivo.com^$image
 @@||ozujsko.com^$elemhide
-@@||vinarijacoka.rs^$image
 @@||vinozupa.com^$elemhide
 @@||sinalco.com^$elemhide
 @@||cockta.eu^$elemhide
 @@||swisslion*.*^$elemhide, script
-@@||jaffa.rs^$image
-@@||bambi.rs^$stylesheet, script
-@@||banini.rs^$image
-@@||stark.rs^$image
-@@||medela.rs^$image
 @@||*pionir.*^$elemhide, image
-@@||medenosrce.rs^$image
 @@||pepsico.*^$elemhide, xmlhttprequest
 @@||coca-cola*.*^$elemhide, image, script
 @@||cocacola*.*^$elemhide, image
@@ -406,11 +382,6 @@
 @@||rudar-prijedor.com^$elemhide, stylesheet, script
 @@||nk-sirokibrijeg.com^$elemhide, image
 @@||*crvenazvezda*.*^$elemhide, image, script
-@@||*partizan.rs^$image
-@@||fkvojvodina.rs^$stylesheet, script
-@@||ofkbeograd.co.rs^$image
-@@||fkmetalac.rs^$stylesheet, script
-@@||igokea.rs^$stylesheet, script
 @@||kkbuducnost.me^$elemhide, image
 @@||fkbuducnost.me^$elemhide, image
 @@||aba-liga.com^$elemhide
@@ -427,7 +398,6 @@
 @@||phncdn.com^$image
 @@||lushstories.com^$elemhide, image
 @@||sexcentrala.com^$elemhide, stylesheet, script
-@@||mona.rs^$image
 @@||lisca.*^$elemhide, script, image
 @@||alma-ras.com^$elemhide
 @@||dunav.*^$elemhide, image
@@ -554,10 +524,7 @@
 @@||kia.*^$elemhide, image
 @@||*suzuki.*^$elemhide, stylesheet, script, image
 @@||rimac-automobili.com^$elemhide
-@@||zastava*.*^$elemhide
-@@||zastava-arms.rs^$image, script
 @@||cookiebanner.eu^$script
-@@||axe.rs^$image
 @@||*cdkey*.com^$elemhide, image, script, stylesheet
 @@||hemofarm.com^$elemhide, image
 @@||mojaapoteka*.net^$elemhide, stylesheet, script
@@ -577,7 +544,6 @@
 @@||lubuntu.*^$elemhide, stylesheet, image, script
 @@||lxle.net^$elemhide
 @@||linux*.com^$elemhide, image, script
-@@||debian-srbija.iz.rs^$image
 @@||getfedora.org^$elemhide, image
 @@||fedora*.org^$elemhide, image
 @@||elementary.io^$elemhide
