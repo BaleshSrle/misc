@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 07 Oct 2020 21:05 UTC+2
+! Last modified: 07 Oct 2020 21:15 UTC+2
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -85,33 +85,20 @@
 @@||internetdefenseleague.org^$script, image
 @@||mts.rs^$image
 @@||mtel.*^$elemhide, image
-@@||bhtelecom.ba^$elemhide
-@@||mojatv.ba^$elemhide
-@@||mojradio.ba^$image
-@@||hteronet.ba^$elemhide
 @@||elta-kabel.com^$elemhide
 @@||blic.*^$elemhide, image
 @@||rtrs.tv^$elemhide, image
-@@||federalna.ba^$elemhide, image
-@@||bhrt.ba^$elemhide
 @@||rtv*.*^$elemhide
 @@||rtvdoboj.org^$image
 @@||radiobn.net^$elemhide
 @@||atvbl.com^$elemhide
 @@||eltatv.net^$elemhide, image
-@@||bigportal.ba^$elemhide, image
 @@||radio*.com^$elemhide
 @@||radioderventa.com^$image
 @@||studiomteslic.net^$elemhide
 @@||prnjavorlive.info^$elemhide
 @@||mojkontakt.com^$elemhide, stylesheet, font, script
-@@||rsg.ba^$elemhide
-@@||antena-radio.ba^$image
-@@||rtvslon.ba^$stylesheet, script
 @@||valentinobh.com^$elemhide, image
-@@||radiogracanica.ba^$elemhide
-@@||kalmanradio.ba^$elemhide, image
-@@||antena.ba^$elemhide
 @@||radios.rs^$image
 @@||playradio.rs^$elemhide, image
 @@||tdiradio.com^$image
@@ -126,11 +113,6 @@
 @@||srpskacafe.com^$stylesheet, script 
 @@||srpskalive.com^$image
 @@||republikasrpska.net^$elemhide, stylesheet, script, image
-@@||ekskluziva.ba^$elemhide, image
-@@||cafe.ba^$elemhide
-@@||klix.ba^$elemhide, image
-@@||oslobodjenje.ba^$elemhide
-@@||capital.ba^$elemhide, image
 @@||noviglas.info^$elemhide
 @@||nationalgeographic.*^$elemhide, image
 @@||rt*.rs^$image
@@ -141,7 +123,6 @@
 @@||vesti.rs^$image
 @@||alo.rs^$image
 @@||novosti.rs^$image
-@@||vecernjenovosti.ba^$elemhide, image
 @@||politika.rs^$script, xmlhttprequest, image
 @@||kurir.*^$elemhide
 @@||aljazeera.*^$elemhide, script, image
@@ -192,10 +173,7 @@
 @@||filmclub.tv^$elemhide
 @@||netfilm.tv^$stylesheet
 @@||agencijaspektar.com^$document
-@@||mojposao.ba^$elemhide
-@@||poslovi.ba^$elemhide
 @@||jooble.org^$elemhide
-@@||zfbh.ba^$elemhide
 @@||tagged.com^$image
 @@||tinder.com^$elemhide
 @@||scribd.com^$elemhide
@@ -208,11 +186,6 @@
 @@||viber.com^$elemhide, image
 @@||telegram.org^$elemhide, image
 @@||burnaware.com^$elemhide
-@@||boska.ba^$image
-@@||tropic.ba^$elemhide, font, image, script, stylesheet
-@@||mojmarket.ba^$elemhide
-@@||marketas.ba^$elemhide, stylesheet, script
-@@||bingotuzla.ba^$elemhide
 @@||konzum.*^$elemhide
 @@||mercator*.*^$elemhide, image
 @@||lidl*.*^$elemhide, image
@@ -254,15 +227,11 @@
 @@||*cdc.*^$elemhide, script, image
 @@||ted*.com^$elemhide, script
 @@||nist.gov^$elemhide, image
-@@||icbl.ba^$stylesheet, script
-@@||calculus.ba^$elemhide
 @@||it-akademija.*^$image
-@@||lonac.ba^$elemhide, image, script, stylesheet, font
 @@||guru99.com^$elemhide, script
 @@||toolsqa.com^$elemhide, stylesheet, script
 @@||javascriptkit.com^$elemhide, script
 @@||javatpoint.com^$elemhide, image
-@@||prointer.ba^$elemhide
 @@||lanaco.com^$elemhide, script
 @@||dvcsolutions.com^$elemhide, image
 @@||bitlab.rs^$stylesheet, script
@@ -272,9 +241,7 @@
 @@||atlantbh.com^$elemhide, stylesheet, script
 @@||eastcode.net^$elemhide
 @@||telegroup*.*^$elemhide
-@@||teleklik.ba^$elemhide, stylesheet, script
 @@||blberza.com^$image
-@@||sase.ba^$elemhide, image
 @@||hilandar.org^$elemhide
 @@||manastir*.*^$elemhide
 @@||manastirostrog.com^$image
@@ -283,7 +250,6 @@
 @@||crkvenikalendar.com^$elemhide
 @@||mozzartbet.*^$script
 @@||wwin-ba.com^$elemhide, image
-@@||meridianbet.ba^$elemhide
 @@||vitinka.com^$elemhide
 @@||knjaz.rs^$script, image
 @@||banjaluckapivara.com^$xmlhttprequest
@@ -304,7 +270,6 @@
 @@||stark.rs^$image
 @@||zvecevo.hr^$stylesheet, image
 @@||kras.hr^$image
-@@||mira.ba^$image
 @@||medela.rs^$image
 @@||*pionir.*^$elemhide, image
 @@||medenosrce.rs^$image
@@ -440,19 +405,12 @@
 @@||ajax.nl^$elemhide
 @@||psv.nl^$elemhide, image, script, stylesheet
 @@||az.nl^$elemhide
-@@||nfsbih.ba^$elemhide, image
 @@||*borac.*^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
 @@||fkzeljeznicar.*^$elemhide, image
 @@||fkkrupa.net^$elemhide
 @@||rudar-prijedor.com^$elemhide, stylesheet, script
-@@||fksarajevo.ba^$elemhide
-@@||tosk.ba^$elemhide
-@@||nkcelik.ba^$elemhide
 @@||nk-sirokibrijeg.com^$elemhide, image
-@@||fkvelez.ba^$elemhide
-@@||hskzrinjski.ba^$elemhide
-@@||fksloboda.ba^$elemhide, stylesheet, script
 @@||gnkdinamo.hr^$image
 @@||*crvenazvezda*.*^$elemhide, image, script
 @@||*partizan.rs^$image
@@ -479,10 +437,8 @@
 @@||mona.rs^$image
 @@||lisca.*^$elemhide, script, image
 @@||alma-ras.com^$elemhide
-@@||koteks.ba^$elemhide
 @@||dunav.*^$elemhide, image
 @@||drina-osiguranje.com^$elemhide
-@@||krajinaosiguranje.ba^$elemhide, stylesheet
 @@||wiener*.*^$elemhide, image, font
 @@||tesla.info^$elemhide, stylesheet, script, image
 @@||nokia.com^$elemhide, stylesheet
@@ -496,7 +452,6 @@
 @@||samsung.com^$elemhide, xmlhttprequest
 @@||htc.com^$elemhide
 @@||oneplus.com^$elemhide, ping
-@@||iqmobile.ba^$elemhide, script
 @@||gsmarena.com^$elemhide
 @@||ctfassets.net^$image
 @@||airserbia.com^$elemhide, stylesheet
@@ -608,18 +563,14 @@
 @@||rimac-automobili.com^$elemhide
 @@||zastava*.*^$elemhide
 @@||zastava-arms.rs^$image, script
-@@||trb.ba^$elemhide
 @@||cookiebanner.eu^$script
 @@||axe.rs^$image
 @@||*cdkey*.com^$elemhide, image, script, stylesheet
-@@||bosnalijek.ba^$elemhide
 @@||hemofarm.com^$elemhide, image
 @@||mojaapoteka*.net^$elemhide, stylesheet, script
-@@||pharmamed.ba^$elemhide, stylesheet, image
 @@||naturapharm.net^$elemhide
 @@||internationalhealth.eu^$elemhide
 @@||lipodiet.eu^$elemhide
-@@||dita.ba^$elemhide
 @@||saponia.hr^$image, script
 @@||henkel*.*^$elemhide, stylesheet
 @@||persil.*^$elemhide
@@ -647,8 +598,6 @@
 @@||fontawesome.com^$elemhide
 @@||greentech-light.eu^$elemhide, script
 @@||mass-light.com^$elemhide
-@@||gb3.ba^$elemhide, script
-@@||x-express.ba^$elemhide
 @@||aparthotelvucko.com^$elemhide
 @@||streamplay.*^$elemhide
 @@||gigaaa.com^$elemhide, script
