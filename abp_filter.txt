@@ -22,7 +22,7 @@
 @@||*.ba^$elemhide, stylesheet, script, font, image
 @@||*.rs^$elemhide
 @@||*.si^$elemhide
-@@||*.hr^$elemhide
+@@||*.hr^$elemhide, stylesheet, script, image
 @@||vladars.net^$image               
 @@||narodnaskupstinars.net^$image
 @@||ustavnisud.org^$elemhide
@@ -70,7 +70,6 @@
 @@||derventacafe.com^$elemhide
 @@||unibl.org^$elemhide, image, script
 @@||nub.rs^$image
-@@||nsk.hr^$stylesheet, script, image
 @@||optimagrupa.net^$elemhide
 @@||rafinerija.com^$elemhide
 @@||modricaoil.com^$elemhide
@@ -143,11 +142,8 @@
 @@||aetv.com^$elemhide
 @@||natgeo*.*^$elemhide
 @@||tvarenasport.*^$elemhide, script
-@@||hrt.hr^$script, stylesheet
-@@||rtl.hr^$script, stylesheet
 @@||nova*.tv^$elemhide, stylesheet, script, image
 @@||n1info.com^$elemhide, image
-@@||mojtv.hr^$script
 @@||tvprofil.com^$elemhide
 @@||livescore.*^$elemhide, image
 @@||rezultati.com^$elemhide, image
@@ -268,8 +264,6 @@
 @@||bambi.rs^$stylesheet, script
 @@||banini.rs^$image
 @@||stark.rs^$image
-@@||zvecevo.hr^$stylesheet, image
-@@||kras.hr^$image
 @@||medela.rs^$image
 @@||*pionir.*^$elemhide, image
 @@||medenosrce.rs^$image
@@ -411,7 +405,6 @@
 @@||fkkrupa.net^$elemhide
 @@||rudar-prijedor.com^$elemhide, stylesheet, script
 @@||nk-sirokibrijeg.com^$elemhide, image
-@@||gnkdinamo.hr^$image
 @@||*crvenazvezda*.*^$elemhide, image, script
 @@||*partizan.rs^$image
 @@||fkvojvodina.rs^$stylesheet, script
@@ -571,7 +564,6 @@
 @@||naturapharm.net^$elemhide
 @@||internationalhealth.eu^$elemhide
 @@||lipodiet.eu^$elemhide
-@@||saponia.hr^$image, script
 @@||henkel*.*^$elemhide, stylesheet
 @@||persil.*^$elemhide
 @@||tide.*^$elemhide
