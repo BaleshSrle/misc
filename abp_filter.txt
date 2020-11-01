@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 30 Oct 2020 10:10 UTC+1
+! Last modified: 30 Nov 2020 11:36 UTC+1
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -17,19 +17,20 @@
 @@||cdnjs.*^$stylesheet, script, elemhide
 @@||jsdelivr.*^$elemhide, xmlhttprequest
 @@||users.teol.net/~srdjan.b^$elemhide
-@@||*rs.net^$elemhide
-@@||*rs.org^$elemhide
+@@||*rs.net^$elemhide, image
+@@||*rs.org^$elemhide, stylesheet, script, image
 @@||*.ba^$elemhide, stylesheet, script, font, image
 @@||*.rs^$elemhide, stylesheet, xmlhttprequest, script, image
 @@||*.si^$elemhide
 @@||*.hr^$elemhide, stylesheet, script, image
-@@||vladars.net^$image               
-@@||narodnaskupstinars.net^$image
+@@||*.de^$elemhide, script, image
+@@||*.it^$elemhide, stylesheet, script, subdocument, image
+@@||*.pt^$elemhide, xmlhttprequest, script, image
+@@||*.co.uk^$elemhide, stylesheet, image
+@@||*.es^$elemhide, stylesheet, script, image
 @@||ustavnisud.org^$elemhide
 @@||autoputevirs.com^$elemhide
-@@||ruczrs.org^$stylesheet, script, image
 @@||rcirz.org^$elemhide
-@@||borackars.org^$image
 @@||mpr-centar.org^$elemhide
 @@||koronavirususrpskoj.com^$elemhide, stylesheet, script
 @@||rhmzrs.com^$elemhide
@@ -274,87 +275,40 @@
 @@||fiawtcr.com^$elemhide, script, image
 @@||tcr-series.com^$elemhide, image
 @@||fcbayern.net^$elemhide
-@@||vfl-wolfsburg.de^$elemhide, image
-@@||herthabsc.de^$elemhide, script
-@@||hsv.de^$elemhide
-@@||fcaugsburg.de^$elemhide, script
-@@||bayer04.de^$elemhide
-@@||bvb.de^$elemhide
-@@||borussia.de^$elemhide, image
-@@||eintracht.de^$elemhide
-@@||mainz05.de^$elemhide
 @@||scfreiburg.com^$elemhide, image
-@@||achtzehn99.de^$elemhide, image
-@@||fc.de^$elemhide
 @@||dierotenbullen.com^$elemhide
-@@||schalke04.de^$elemhide, image, script
-@@||werder.de^$elemhide
 @@||fulhamfc.com^$elemhide, image
 @@||chelseafc.com^$elemhide
 @@||leedsunited.com^$elemhide
-@@||rovers.co.uk^$elemhide
-@@||*fc.co.uk^$elemhide
-@@||blackpoolfc.co.uk^$image
 @@||arsenal.com^$elemhide
 @@||celticfc.net^$elemhide, stylesheet, image, script
-@@||rangers.co.uk^$elemhide
 @@||tottenhamhotspur.com^$elemhide
-@@||portsmouthfc.co.uk^$image
 @@||liverpoolfc.com^$elemhide
 @@||evertonfc.com^$elemhide
-@@||wba.co.uk^$elemhide, image
-@@||wolves.co.uk^$elemhide
 @@||whufc.com^$elemhide, image
 @@||safc.com^$elemhide
 @@||southamptonfc.com^$elemhide
 @@||bcfc.com^$elemhide, image
-@@||cpfc.co.uk^$image
-@@||qpr.co.uk^$elemhide
-@@||mfc.co.uk^$elemhide, stylesheet
 @@||stokecityfc.com^$elemhide
 @@||realmadrid.com^$elemhide
 @@||atleticodemadrid.com^$elemhide, image, script
 @@||fcbarcelona.com^$elemhide
 @@||realsociedad.eus^$elemhide, image
 @@||athletic-club.eus^$elemhide
-@@||realbetisbalompie.es^$elemhide
-@@||udlaspalmas.es^$elemhide
 @@||malagacf.com^$elemhide
-@@||rcdeportivo.es^$elemhide
-@@||rcdmallorca.es^$elemhide
 @@||realzaragoza.com^$elemhide, script, image
-@@||realracingclub.es^$elemhide
-@@||rayovallecano.es^$elemhide
 @@||levanteud.com^$elemhide, stylesheet, script, image
 @@||getafecf.*^$elemhide, xmlhttprequest
-@@||sevillafc.es^$elemhide
-@@||osasuna.es^$elemhide
 @@||rcdespanyol.com^$elemhide, image
-@@||villarrealcf.es^$elemhide, stylesheet, script, image
 @@||ciberche.net^$elemhide
-@@||atalanta.it^$elemhide
 @@||empolifc.com^$image
 @@||cagliaricalcio.com^$elemhide, image
-@@||bolognafc.it^$elemhide, script, stylesheet
-@@||inter.it^$elemhide, image, script
 @@||juventus.com^$elemhide
-@@||genoacfc.it^$elemhide, stylesheet, script
-@@||torinofc.it^$elemhide, stylesheet, script
-@@||sslazio.it^$elemhide, image, stylesheet
 @@||violachannel.tv^$elemhide
-@@||sscnapoli.it^$elemhide
-@@||udinese.it^$elemhide
-@@||sampdoria.it^$elemhide, script, subdocument, image
 @@||asroma.com^$elemhide
 @@||parmacalcio1913.com^$elemhide, image
-@@||boysparma1977.it^$image
-@@||calciocatania.it^$elemhide, image
 @@||modenacalcio.com^$elemhide, image
-@@||livornocalcio.it^$elemhide
 @@||acperugiacalcio.com^$elemhide, stylesheet
-@@||bresciacalcio.it^$elemhide, image
-@@||asbari.it^$elemhide
-@@||calciocatania.it^$elemhide, image
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
 @@||aek*.gr^$elemhide, script
@@ -471,7 +425,6 @@
 @@||smart.com^$elemhide, image, script
 @@||man*.*^$elemhide, image, xmlhttprequest
 @@||neoplan.com^$elemhide, xmlhttprequest
-@@||setra.de^$elemhide
 @@||scania.com^$elemhide, image, script
 @@||kamaz.*^$elemhide
 @@||iveco.*^$elemhide, image
@@ -505,10 +458,8 @@
 @@||noblecars.com^$elemhide, image
 @@||morgan-motor.com^$elemhide, stylesheet, script, image
 @@||davidbrownautomotive.com^$elemhide, image
-@@||tvr.co.uk^$elemhide, image
 @@||caterhamcars.com^$elemhide, image
 @@||lotuscars.com^$elemhide, stylesheet, script
-@@||mg.co.uk^$elemhide
 @@||mclaren.com^$elemhide
 @@||jaguar.*^$elemhide
 @@||landrover.*^$elemhide
