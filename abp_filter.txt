@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 30 Nov 2020 12:10 UTC+1
+! Last modified: 30 Nov 2020 12:25 UTC+1
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -31,6 +31,7 @@
 @@||*.es^$elemhide, stylesheet, script, image
 @@||*.nl^$elemhide, stylesheet, script, image
 @@||*.gr^$elemhide, stylesheet, font, script, image
+@@||*.eu^$elemhide, script, image
 @@||ustavnisud.org^$elemhide
 @@||autoputevirs.com^$elemhide
 @@||rcirz.org^$elemhide
@@ -145,7 +146,6 @@
 @@||yandex.*^$script, ping, xmlhttprequest, image
 @@||joomla.org^$elemhide, image
 @@||accuweather.com^$elemhide, script
-@@||meteoalarm.eu^$elemhide, image
 @@||addthis.com^$script, xmlhttprequest, subdocument, elemhide, image
 @@||sharethis.*^$script, xmlhttprequest, subdocument, image, stylesheet
 @@||addtoany.com^$script, subdocument, image
@@ -241,7 +241,6 @@
 @@||ozujsko.com^$elemhide
 @@||vinozupa.com^$elemhide
 @@||sinalco.com^$elemhide
-@@||cockta.eu^$elemhide
 @@||swisslion*.*^$elemhide, script
 @@||*pionir.*^$elemhide, image
 @@||pepsico.*^$elemhide, xmlhttprequest
@@ -462,13 +461,10 @@
 @@||kia.*^$elemhide, image
 @@||*suzuki.*^$elemhide, stylesheet, script, image
 @@||rimac-automobili.com^$elemhide
-@@||cookiebanner.eu^$script
 @@||*cdkey*.com^$elemhide, image, script, stylesheet
 @@||hemofarm.com^$elemhide, image
 @@||mojaapoteka*.net^$elemhide, stylesheet, script
 @@||naturapharm.net^$elemhide
-@@||internationalhealth.eu^$elemhide
-@@||lipodiet.eu^$elemhide
 @@||henkel*.*^$elemhide, stylesheet
 @@||persil.*^$elemhide
 @@||tide.*^$elemhide
@@ -492,7 +488,6 @@
 @@||glyphicons.com^$elemhide, image
 @@||forkaweso.me^$stylesheet, script
 @@||fontawesome.com^$elemhide
-@@||greentech-light.eu^$elemhide, script
 @@||mass-light.com^$elemhide
 @@||aparthotelvucko.com^$elemhide
 @@||streamplay.*^$elemhide
