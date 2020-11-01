@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 30 Nov 2020 11:36 UTC+1
+! Last modified: 30 Nov 2020 11:55 UTC+1
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -23,11 +23,14 @@
 @@||*.rs^$elemhide, stylesheet, xmlhttprequest, script, image
 @@||*.si^$elemhide
 @@||*.hr^$elemhide, stylesheet, script, image
+@@||*.me^$elemhide
 @@||*.de^$elemhide, script, image
 @@||*.it^$elemhide, stylesheet, script, subdocument, image
 @@||*.pt^$elemhide, xmlhttprequest, script, image
 @@||*.co.uk^$elemhide, stylesheet, image
 @@||*.es^$elemhide, stylesheet, script, image
+@@||*.nl^$elemhide, stylesheet, script, image
+@@||*.gr^$elemhide, stylesheet, font, script, image
 @@||ustavnisud.org^$elemhide
 @@||autoputevirs.com^$elemhide
 @@||rcirz.org^$elemhide
@@ -88,8 +91,7 @@
 @@||radiobn.net^$elemhide
 @@||atvbl.com^$elemhide
 @@||eltatv.net^$elemhide, image
-@@||radio*.com^$elemhide
-@@||radioderventa.com^$image
+@@||radio*.com^$elemhide, image
 @@||studiomteslic.net^$elemhide
 @@||prnjavorlive.info^$elemhide
 @@||mojkontakt.com^$elemhide, stylesheet, font, script
@@ -259,7 +261,6 @@
 @@||cloudimg.io^$image
 @@||github.*^$elemhide, image
 @@||siteground.com^$elemhide
-@@||about.me^$elemhide
 @@||bitly.com^$elemhide
 @@||cashbackworld.com^$elemhide
 @@||codeproject.com^$elemhide, image
@@ -311,24 +312,10 @@
 @@||acperugiacalcio.com^$elemhide, stylesheet
 @@||besoccerapps.com^$elemhide, image
 @@||proyectoclubes.com^$image
-@@||aek*.gr^$elemhide, script
-@@||aekbc.gr^$elemhide
-@@||olympiacos*.*^$elemhide, image
-@@||pao*.gr^$elemhide
-@@||pao.gr^$image
-@@||paokfc.gr^$script, font
-@@||paok*c.gr^$image, stylesheet
 @@||galatasaray.org^$elemhide, image
 @@||fenerbahce.org^$elemhide
 @@||bjk.com.tr^$elemhide
 @@||anadoluefessk.org^$elemhide
-@@||fcporto.pt^$elemhide
-@@||slbenfica.pt^$elemhide, script
-@@||sporting.pt^$elemhide, image, script, xmlhttprequest
-@@||scpconteudos.pt^$elemhide, image
-@@||ajax.nl^$elemhide
-@@||psv.nl^$elemhide, image, script, stylesheet
-@@||az.nl^$elemhide
 @@||*borac.*^$elemhide
 @@||fkzvijezda09.com^$elemhide, stylesheet, script
 @@||fkzeljeznicar.*^$elemhide, image
@@ -336,8 +323,8 @@
 @@||rudar-prijedor.com^$elemhide, stylesheet, script
 @@||nk-sirokibrijeg.com^$elemhide, image
 @@||*crvenazvezda*.*^$elemhide, image, script
-@@||kkbuducnost.me^$elemhide, image
-@@||fkbuducnost.me^$elemhide, image
+@@||kkbuducnost.me^$image
+@@||fkbuducnost.me^$image
 @@||aba-liga.com^$elemhide
 @@||euroleague.net^$elemhide
 @@||*vardar.mk^$elemhide
@@ -505,7 +492,7 @@
 @@||feedburner.com^$image
 @@||sourceforge.net^$elemhide
 @@||glyphicons.com^$elemhide, image
-@@||forkaweso.me^$elemhide, stylesheet, script
+@@||forkaweso.me^$stylesheet, script
 @@||fontawesome.com^$elemhide
 @@||greentech-light.eu^$elemhide, script
 @@||mass-light.com^$elemhide
