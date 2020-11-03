@@ -56,7 +56,7 @@
 @@||*doboj.com^$elemhide, image
 @@||granicedoboja.info^$elemhide, stylesheet, script
 @@||leskovacki.com^$elemhide, script
-@@||glas*.net^$elemhide
+@@||glas*.*^$elemhide
 @@||banja*.*^$elemhide
 @@||banjaluka.*^$stylesheet, script, image
 @@||bl-portal.com^$elemhide, script
@@ -102,7 +102,6 @@
 @@||24sata.*^$elemhide
 @@||24online.info^$elemhide, image, script
 @@||24ur.com^$elemhide
-@@||glassrpske.com^$elemhide
 @@||srpska*.com^$elemhide
 @@||srpskacafe.com^$stylesheet, script 
 @@||srpskalive.com^$image
