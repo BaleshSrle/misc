@@ -88,7 +88,7 @@
 @@||rtv*.*^$elemhide
 @@||rtvdoboj.org^$image
 @@||radiobn.net^$elemhide
-@@||atvbl.com^$elemhide
+@@||atvbl.com^$elemhide, script
 @@||eltatv.net^$elemhide, image
 @@||radio*.com^$elemhide, image
 @@||studiomteslic.net^$elemhide
@@ -246,6 +246,7 @@
 @@||coca-cola*.*^$elemhide, image, script
 @@||cocacola*.*^$elemhide, image
 @@||*coke.*^$elemhide, image, script
+@@||donesi.com^$elemhide
 @@||ea.com^$elemhide
 @@||steampowered.com^$image
 @@||ageofempires.com^$elemhide
