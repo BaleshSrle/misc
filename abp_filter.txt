@@ -21,6 +21,7 @@
 @@||*rs.org^$elemhide, stylesheet, script, image
 @@||*.ba^$elemhide, stylesheet, script, font, image
 @@||*.rs^$elemhide, stylesheet, xmlhttprequest, script, image
+@@||*.срб^$elemhide, image
 @@||*.si^$elemhide, stylesheet, xmlhttprequest, script, image
 @@||*.hr^$elemhide, stylesheet, script, image
 @@||*.me^$elemhide
