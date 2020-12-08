@@ -377,7 +377,7 @@
 @@||live.com^$image, elemhide
 @@||bing.com^$image, elemhide, script, ping
 @@||microsoft.com^$elemhide, image, script, ping, xmlhttprequest
-@@||cloudflare.*^$elemhide, image, xmlhttprequest
+@@||cloudflare.*^$elemhide, image, xmlhttprequest, ping
 @@||1.1.1.1^$elemhide
 @@||asus.com^$elemhide, image
 @@||gigabyte.com^$elemhide, image
