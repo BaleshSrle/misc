@@ -201,7 +201,7 @@
 @@||cleanmasterofficial.com^$elemhide
 @@||eusing.com^$elemhide
 @@||wiki*.org^$elemhide, image, ping
-@@||youtube.com^$image, elemhide, subdocument, xmlhttprequest, ping
+@@||youtube*.com^$image, elemhide, subdocument, xmlhttprequest, ping
 @@||googlevideo.com^$image
 @@||ytimg.com^$image
 @@||duckduckgo.com^$elemhide, image
