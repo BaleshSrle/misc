@@ -508,4 +508,4 @@
 @@||vicevi.net^$elemhide
 @@||*isic.*^$elemhide, image
 @@||freelancer.*^$elemhide
-@@||f-cdn.com^$image, xmlhttprequest
+@@||f-cdn.com^$image, xmlhttprequest, script
