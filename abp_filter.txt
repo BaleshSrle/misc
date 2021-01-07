@@ -1,6 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
+<<<<<<< Updated upstream
 ! Last modified: 04 Jan 2021 21:45 UTC+1
+=======
+! Last modified: 07 Jan 2021 08:05 UTC+1
+>>>>>>> Stashed changes
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -14,6 +18,8 @@
 @@||smartbear.*^$elemhide, image
 @@||selenium.dev^$elemhide, image
 @@||katalon.com^$elemhide, stylesheet, script
+@@||postman.com^$image
+@@||atlasian.com^$elemhide
 @@||cdnjs.*^$stylesheet, script, elemhide
 @@||jsdelivr.*^$elemhide, xmlhttprequest
 @@||users.teol.net/~srdjan.b^$elemhide
@@ -144,8 +150,10 @@
 @@||teamviewer.com^$elemhide
 @@||anydesk.com^$elemhide, image
 @@||yandex.*^$script, ping, xmlhttprequest, image
-@@||joomla.org^$elemhide, image
+@@||hide.me^$image
+@@||joomla.org^$elemhide, image, script
 @@||accuweather.com^$elemhide, script
+@@||iqair.com^$script
 @@||addthis.com^$script, xmlhttprequest, subdocument, elemhide, image
 @@||sharethis.*^$script, xmlhttprequest, subdocument, image, stylesheet
 @@||addtoany.com^$script, subdocument, image
@@ -156,13 +164,11 @@
 @@||netfilm.tv^$stylesheet
 @@||agencijaspektar.com^$document
 @@||jooble.org^$elemhide
-@@||tagged.com^$image
-@@||tinder.com^$elemhide
 @@||scribd.com^$elemhide
 @@||issuu.com^$xmlhttprequest
 @@||mega.nz^$elemhide
 @@||4shared.com^$elemhide, image
-@@||wps.com^$image
+@@||wps.com^$elemhide, image
 @@||winamp.com^$elemhide
 @@||airdroid.com^$elemhide, image
 @@||viber.com^$elemhide, image
@@ -268,7 +274,7 @@
 @@||uefa.*^$elemhide, image
 @@||fiba.basketball^$elemhide
 @@||fia.com^$elemhide
-@@||formula1.com^$elemhide
+@@||formula1.com^$elemhide, image
 @@||*formulae.*^$elemhide, image, script
 @@||wrc.com^$elemhide
 @@||fiawtcr.com^$elemhide, script, image
@@ -329,8 +335,9 @@
 @@||twitter.com^$image, script, subdocument, other, xmlhttprequest
 @@||flickr.com^$elemhide
 @@||facebook.*^$subdocument, image, other, script, ping
-@@||instagram.com^$image, script, xmlhttprequest
+@@||instagram.com^$elemhide, image, script, xmlhttprequest, ping
 @@||platform.linkedin.com^$script
+@@||vk.com^$elemhide, script
 @@||pinterest.com^$elemhide, script
 @@||tumblr.com^$subdocument
 @@||pornhub.com^$elemhide
@@ -366,6 +373,9 @@
 @@||imdb.com^$elemhide
 @@||ask.fm^$elemhide
 @@||badoo.com^$elemhide
+@@||twoo.com^$elemhide
+@@||tagged.com^$image
+@@||tinder.com^$elemhide
 @@||byet.host^$elemhide, script
 @@||disqus.com^$elemhide, script
 @@||eff.org^$elemhide, image
@@ -509,3 +519,7 @@
 @@||*isic.*^$elemhide, image
 @@||freelancer.*^$elemhide
 @@||f-cdn.com^$image, xmlhttprequest, script
+<<<<<<< Updated upstream
+=======
+@@||utest.com^$elemhide
+>>>>>>> Stashed changes
