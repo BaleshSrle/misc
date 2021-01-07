@@ -15,7 +15,7 @@
 @@||selenium.dev^$elemhide, image
 @@||katalon.com^$elemhide, stylesheet, script
 @@||postman.com^$image
-@@||atlasian.com^$elemhide
+@@||atlassian.com^$elemhide
 @@||cdnjs.*^$stylesheet, script, elemhide
 @@||jsdelivr.*^$elemhide, xmlhttprequest
 @@||users.teol.net/~srdjan.b^$elemhide
