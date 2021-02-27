@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 02 Feb 2021 09:10 UTC+1
+! Last modified: 27 Feb 2021 09:25 UTC+1
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -104,6 +104,7 @@
 @@||nezavisne.com^$elemhide
 @@||mondo.*^$elemhide, image
 @@||6yka.com^$elemhide
+@@||vice.com^$elemhide, script
 @@||24sata.*^$elemhide
 @@||24online.info^$elemhide, image, script
 @@||24ur.com^$elemhide
@@ -132,6 +133,7 @@
 @@||history.com^$elemhide
 @@||aetv.com^$elemhide
 @@||natgeo*.*^$elemhide
+@@||mtv*.com^$elemhide, script, xmlhttprequest
 @@||tvarenasport.*^$elemhide, script
 @@||nova*.tv^$elemhide, stylesheet, script, image
 @@||n1info.com^$elemhide, image
