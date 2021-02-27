@@ -104,7 +104,7 @@
 @@||nezavisne.com^$elemhide
 @@||mondo.*^$elemhide, image
 @@||6yka.com^$elemhide
-@@||vice.com^$elemhide, script
+@@||vice.com^$elemhide, xmlhttprequest, script
 @@||24sata.*^$elemhide
 @@||24online.info^$elemhide, image, script
 @@||24ur.com^$elemhide
