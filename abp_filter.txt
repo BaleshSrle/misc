@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 10 Mar 2021 19:45 UTC+1
+! Last modified: 18 Mar 2021 09:35 UTC+1
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -56,10 +56,10 @@
 @@||cinestar*.*^$elemhide, image
 @@||blitz-cinestar*.*^$elemhide, image
 @@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
-@@||moj*.info^$elemhide
-@@||dobojski.info^$elemhide, image
+@@||*.info^$elemhide
+@@||dobojski.info^$image
 @@||*doboj.com^$elemhide, image
-@@||granicedoboja.info^$elemhide, stylesheet, script
+@@||granicedoboja.info^$stylesheet, script
 @@||leskovacki.com^$elemhide, script
 @@||glas*.*^$elemhide
 @@||banja*.*^$elemhide
@@ -97,7 +97,7 @@
 @@||eltatv.net^$elemhide, image
 @@||radio*.com^$elemhide, image
 @@||studiomteslic.net^$elemhide
-@@||prnjavorlive.info^$elemhide
+@@||prnjavorlive.info^$script
 @@||mojkontakt.com^$elemhide, stylesheet, font, script
 @@||valentinobh.com^$elemhide, image
 @@||tdiradio.com^$image
@@ -106,13 +106,12 @@
 @@||6yka.com^$elemhide
 @@||vice.com^$elemhide, xmlhttprequest, script
 @@||24sata.*^$elemhide
-@@||24online.info^$elemhide, image, script
+@@||24online.info^$image, script
 @@||24ur.com^$elemhide
 @@||srpska*.com^$elemhide
 @@||srpskacafe.com^$stylesheet, script 
 @@||srpskalive.com^$image
 @@||republikasrpska.net^$elemhide, stylesheet, script, image
-@@||noviglas.info^$elemhide
 @@||nationalgeographic.*^$elemhide, image
 @@||b92*.*^$elemhide, image
 @@||kurir.*^$elemhide
@@ -355,7 +354,7 @@
 @@||drina-osiguranje.com^$elemhide
 @@||wiener*.*^$elemhide, image, font
 @@||grawe.*^$elemhide
-@@||tesla.info^$elemhide, stylesheet, script, image
+@@||tesla.info^$stylesheet, script, image
 @@||nokia.com^$elemhide, stylesheet
 @@||*mi*.*^$elemhide, script
 @@||lg.com^$elemhide
