@@ -254,6 +254,7 @@
 @@||cocacola*.*^$elemhide, image
 @@||*coke.*^$elemhide, image, script
 @@||donesi.com^$elemhide
+@@||cegerdostava.com^$elemhide
 @@||lactalis*.*^$elemhide
 @@||zott-dairy.com^$elemhide, stylesheet
 @@||meggle.*^$elemhide, script, image
