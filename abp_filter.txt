@@ -525,3 +525,4 @@
 @@||freelancer.*^$elemhide
 @@||f-cdn.com^$image, xmlhttprequest, script
 @@||utest.com^$elemhide, image
+##saimse.com
