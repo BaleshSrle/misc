@@ -136,6 +136,7 @@
 @@||tvarenasport.*^$elemhide, script
 @@||nova*.tv^$elemhide, stylesheet, script, image
 @@||n1info.com^$elemhide, image
+@@||insajder.net^$elemhide, image
 @@||tvprofil.com^$elemhide
 @@||livescore.*^$elemhide, image
 @@||rezultati.com^$elemhide, image
