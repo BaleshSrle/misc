@@ -27,7 +27,7 @@
 @@||*.срб^$elemhide, image
 @@||*.si^$elemhide, stylesheet, xmlhttprequest, script, image
 @@||*.hr^$elemhide, stylesheet, xmlhttprequest, script, image
-@@||*.me^$elemhide
+@@||*.me^$elemhide, image
 @@||*.mk^$elemhide
 @@||*.de^$elemhide, script, image
 @@||*.it^$elemhide, stylesheet, script, subdocument, image
@@ -150,7 +150,6 @@
 @@||teamviewer.com^$elemhide
 @@||anydesk.com^$elemhide, image
 @@||yandex.*^$script, ping, xmlhttprequest, image
-@@||hide.me^$image
 @@||joomla.org^$elemhide, image, script
 @@||accuweather.com^$elemhide, script
 @@||iqair.com^$script
@@ -334,8 +333,6 @@
 @@||rudar-prijedor.com^$elemhide, stylesheet, script
 @@||nk-sirokibrijeg.com^$elemhide, image
 @@||*crvenazvezda*.*^$elemhide, image, script
-@@||kkbuducnost.me^$image
-@@||fkbuducnost.me^$image
 @@||aba-liga.com^$elemhide
 @@||euroleague.net^$elemhide
 @@||twitter.com^$image, script, subdocument, other, xmlhttprequest
