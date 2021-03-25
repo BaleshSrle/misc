@@ -405,8 +405,9 @@
 @@||amd.com^$elemhide
 @@||fractal-design.com^$elemhide, script
 @@||ms*.com^$elemhide
-@@||noctua.at^$elemhide,script
+@@||noctua.at^$elemhide,script, ping, image
 @@||ekwb.com^$elemhide, stylesheet, script
+@@||ekfluid*.com^$elemhide, image
 @@||huawei.com^$elemhide
 @@||tp-link.com^$elemhide
 @@||autoscout24.*^$elemhide, xmlhttprequest
