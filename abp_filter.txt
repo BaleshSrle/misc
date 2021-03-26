@@ -268,7 +268,7 @@
 @@||tacdn.com^$stylesheet, image
 @@||airbnb.*^$elemhide
 @@||booking.com^$elemhide
-@@||*.travel^$elemhide, stylesheet
+@@||*.travel^$elemhide, stylesheet, image
 @@||cloudimg.io^$image
 @@||github.*^$elemhide, image
 @@||siteground.com^$elemhide
