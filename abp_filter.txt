@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 28 Mar 2021 08:45 UTC+2
+! Last modified: 28 Mar 2021 09:35 UTC+2
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -90,9 +90,7 @@
 @@||mtel.*^$elemhide, image
 @@||elta-kabel.com^$elemhide
 @@||blic.*^$elemhide, image
-@@||rtrs.tv^$elemhide, image
-@@||rtv*.*^$elemhide
-@@||rtvdoboj.org^$image
+@@||rt*.*^$elemhide,image
 @@||radiobn.net^$elemhide
 @@||atvbl.com^$elemhide, script
 @@||eltatv.net^$elemhide, image
@@ -117,8 +115,8 @@
 @@||b92*.*^$elemhide, image
 @@||kurir.*^$elemhide
 @@||aljazeera.*^$elemhide, script, image
-@@||rt.com^$elemhide, script, image
-@@||ruptly.tv^$elemhide
+@@||rt.com^$script
+@@||*.tv^$elemhide,stylesheet
 @@||sputniknews.*^$elemhide, script
 @@||euronews.*^$elemhide, image
 @@||dw.com^$elemhide
@@ -135,7 +133,7 @@
 @@||natgeo*.*^$elemhide
 @@||mtv*.com^$elemhide, script, xmlhttprequest
 @@||tvarenasport.*^$elemhide, script
-@@||nova*.tv^$elemhide, stylesheet, script, image
+@@||nova*.tv^$script, image
 @@||n1info.com^$elemhide, image
 @@||insajder.net^$elemhide, image
 @@||tvprofil.com^$elemhide
@@ -160,8 +158,6 @@
 @@||google.*^$elemhide, image, ping, script, subdocument
 @@||videolan.org^$elemhide, image
 @@||ip2location.com^$elemhide, image, script
-@@||filmclub.tv^$elemhide
-@@||netfilm.tv^$stylesheet
 @@||agencijaspektar.com^$document
 @@||jooble.org^$elemhide
 @@||scribd.com^$elemhide
@@ -318,7 +314,6 @@
 @@||empolifc.com^$image
 @@||cagliaricalcio.com^$elemhide, image
 @@||juventus.com^$elemhide
-@@||violachannel.tv^$elemhide
 @@||asroma.com^$elemhide
 @@||parmacalcio1913.com^$elemhide, image
 @@||modenacalcio.com^$elemhide, image
