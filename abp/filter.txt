@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: B@LESHEVCIH Company Adblock Plus Filter
-! Last modified: 28 Mar 2021 09:35 UTC+2
+! Last modified: 04 Apr 2021 10:40 UTC+2
 ! Expires: 1 days (update frequency)
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -44,7 +44,10 @@
 @@||koronavirususrpskoj.com^$elemhide, stylesheet, script
 @@||rhmzrs.com^$elemhide
 @@||zunsrs.com^$elemhide, font
-@@||muzejrs.com^$elemhide
+@@||muzej*.*^$elemhide
+@@||muzejkozare.com^$stylesheet
+@@||muzejfoca.com^$script
+@@||municipium*.*^$elemhide
 @@||banskidvor.org^$elemhide, stylesheet, script
 @@||zdravstvo-srpske.org^$elemhide
 @@||banjesrpske.com^$image
@@ -119,7 +122,7 @@
 @@||*.tv^$elemhide,stylesheet
 @@||sputniknews.*^$elemhide, script
 @@||euronews.*^$elemhide, image
-@@||dw.com^$elemhide
+@@||dw.com^$elemhide, image
 @@||voa*.com^$elemhide
 @@||bbc*.*^$elemhide, script
 @@||cnn.com^$elemhide, script
