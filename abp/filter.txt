@@ -45,7 +45,7 @@
 @@||rhmzrs.com^$elemhide
 @@||zunsrs.com^$elemhide, font
 @@||muzej*.*^$elemhide
-@@||muzejkozare.com^$stylesheet
+@@||muzejkozare.org^$stylesheet
 @@||muzejfoca.com^$script
 @@||municipium*.*^$elemhide
 @@||banskidvor.org^$elemhide, stylesheet, script
