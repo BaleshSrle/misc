@@ -91,6 +91,7 @@
 @@||wp.com^$image, script, subdocument, stylesheet
 @@||internetdefenseleague.org^$script, image
 @@||mtel.*^$elemhide, image
+@@||a1.*^$elemhide, image
 @@||elta-kabel.com^$elemhide
 @@||blic.*^$elemhide, image
 @@||rt*.*^$elemhide,image
