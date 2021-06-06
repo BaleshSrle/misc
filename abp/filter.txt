@@ -534,4 +534,5 @@
 @@||freelancer.*^$elemhide
 @@||f-cdn.com^$image, xmlhttprequest, script
 @@||utest.com^$elemhide, image
+@@||*virgin*.*^$elemhide, image
 saimse.com##.password_page
