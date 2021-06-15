@@ -498,8 +498,8 @@
 @@||nivea.*^$elemhide
 @@||gillette.com^$elemhide, image
 @@||wilkinsonsword.com^$elemhide
-@@||*ubuntu.*^$elemhide
-@@||lubuntu.*^$stylesheet, image, script
+@@||*ubuntu*.*^$elemhide, image
+@@||lubuntu.*^$stylesheet, script
 @@||lxle.net^$elemhide
 @@||linux*.com^$elemhide, image, script
 @@||*fedora*.org^$elemhide, image
