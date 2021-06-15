@@ -57,8 +57,7 @@
 @@||termelaktasi.com^$elemhide
 @@||centarzamajkuidijete.com^$elemhide, stylesheet, image
 @@||np*.*^$elemhide, script
-@@||cinestar*.*^$elemhide, image
-@@||blitz-cinestar*.*^$elemhide, image
+@@||*cinestar*.*^$elemhide, image
 @@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
 @@||*.info^$elemhide
 @@||dobojski.info^$image
@@ -211,7 +210,7 @@
 @@||googlevideo.com^$image
 @@||ytimg.com^$image
 @@||duckduckgo.com^$elemhide, image
-@@||who.int^$elemhide
+@@||*.int^$elemhide
 @@||*cdc.*^$elemhide, script, image
 @@||ted*.com^$elemhide, script
 @@||nist.gov^$elemhide, image
