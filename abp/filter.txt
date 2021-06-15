@@ -379,8 +379,7 @@
 @@||slack.com^$elemhide, image
 @@||imdb.com^$elemhide
 @@||ask.fm^$elemhide
-@@||badoo.com^$elemhide
-@@||twoo.com^$elemhide
+@@||*oo.com^$elemhide
 @@||tagged.com^$image
 @@||tinder.com^$elemhide
 @@||byet.host^$elemhide, script
@@ -400,7 +399,7 @@
 @@||gigabyte.com^$elemhide, image
 @@||aorus.com^$elemhide
 @@||acer.com^$elemhide, image
-@@||fujitsu.com^$elemhide, image
+@@||fujitsu*.com^$elemhide, script, image
 @@||hp.com^$elemhide, script
 @@||lenovo.com^$elemhide, script, stylesheet, image
 @@||dynabook.com^$elemhide, image
