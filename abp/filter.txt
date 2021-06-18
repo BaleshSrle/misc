@@ -534,7 +534,7 @@
 @@||utest.com^$elemhide, image
 @@||*virgin*.*^$elemhide, image, font
 @@||sukhoi.org^$image
-@@||airbus*.*^$elemhide, stylesheet
+@@||airbus*.*^$elemhide, stylesheet, image
 @@||lockheedmartin.com^$elemhide
 @@||boeing.com^$elemhide
 saimse.com##.password_page
