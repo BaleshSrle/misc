@@ -372,6 +372,12 @@
 @@||ctfassets.net^$image
 @@||airserbia.com^$elemhide, stylesheet
 @@||*air.com^$elemhide
+@@||aa.com^$elemhide
+@@||southwest.com^$image
+@@||delta.com^$elemhide, image
+@@||qatarairways.com^$elemhide
+@@||qantas.com^$elemhide
+@@||etihad.com^$elemhide
 @@||wwe.com^$elemhide, image
 @@||worldcommunitygrid.org^$elemhide, image
 @@||marvel.*^$elemhide, image, xmlhttprequest
@@ -533,9 +539,6 @@
 @@||f-cdn.com^$image, xmlhttprequest, script
 @@||utest.com^$elemhide, image
 @@||*virgin*.*^$elemhide, image, font
-@@||aa.com^$elemhide
-@@||southwest.com^$image
-@@||delta.com^$elemhide, image
 @@||sukhoi.org^$image
 @@||airbus*.*^$elemhide, stylesheet, image
 @@||lockheedmartin.com^$elemhide
