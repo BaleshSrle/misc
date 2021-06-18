@@ -533,6 +533,9 @@
 @@||f-cdn.com^$image, xmlhttprequest, script
 @@||utest.com^$elemhide, image
 @@||*virgin*.*^$elemhide, image, font
+@@||aa.com^$elemhide
+@@||southwest.com^$image
+@@||delta.com^$elemhide, image
 @@||sukhoi.org^$image
 @@||airbus*.*^$elemhide, stylesheet, image
 @@||lockheedmartin.com^$elemhide
