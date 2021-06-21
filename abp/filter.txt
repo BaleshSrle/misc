@@ -201,7 +201,8 @@
 @@||avast.com^$elemhide, image
 @@||avg.com^$elemhide, image
 @@||malwarebytes.com^$elemhide
-@@||drweb.*,kaspersky.*^$elemhide, script
+@@||kaspersky.*^$elemhide, script
+@@||drweb.*^$elemhide, script
 @@||ccleaner*.com^$elemhide, image
 @@||*download.*^$elemhide
 @@||cleanmasterofficial.com^$elemhide
