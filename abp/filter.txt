@@ -82,7 +82,6 @@
 @@||patroltaxi.com^$elemhide
 @@||derventskilist.net^$elemhide
 @@||derventacafe.com^$elemhide
-@@||unibl.org^$elemhide, image, script
 @@||optimagrupa.net^$elemhide
 @@||rafinerija.com^$elemhide
 @@||modricaoil.com^$elemhide
