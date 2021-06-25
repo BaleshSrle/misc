@@ -214,7 +214,7 @@
 @@||duckduckgo.com^$elemhide, image
 @@||*.int^$elemhide
 @@||*cdc.*^$elemhide, script, image
-@@||un*org^$elemhide, script
+@@||un*.org^$elemhide, script, image
 @@||ted*.com^$elemhide, script
 @@||nist.gov^$elemhide, image
 @@||it-akademija.*^$image
