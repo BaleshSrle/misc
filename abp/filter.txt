@@ -140,7 +140,7 @@
 @@||n1info.com^$elemhide, image
 @@||insajder.net^$elemhide, image
 @@||tvprofil.com^$elemhide
-@@||livescore.*^$elemhide, image
+@@||livescore*.*^$elemhide, image
 @@||rezultati.com^$elemhide, image
 @@||mozilla.org^$image, elemhide
 @@||vivaldi.*^$elemhide, image
