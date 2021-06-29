@@ -8,7 +8,7 @@
 ! Please report any unblocked content or problems by email
 ! Email: baleshevichcompany@dobojcaffe.com
 !
-!---------------------General blocking rules------------------------!
+!-----------------------General blocking rules------------------------!
 @@||heidisql.com^$document
 @@||soapui.org^$elemhide, image
 @@||smartbear.*^$elemhide, image
