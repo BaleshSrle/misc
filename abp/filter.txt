@@ -393,7 +393,7 @@
 @@||byet.host^$elemhide, script
 @@||disqus.com^$elemhide, script
 @@||eff.org^$elemhide, image
-@@||cloudfront.net^$image
+@@||cloudfront.net^$image, xmlhttprequest
 @@||azureedge.net^$image
 @@||browser-update.org^$script
 @@||squarespace.com^$elemhide, script
@@ -492,6 +492,7 @@
 @@||kia.*^$elemhide, image
 @@||*suzuki.*^$elemhide, stylesheet, script, image
 @@||ktm*.*^$elemhide, image
+@@||schwinn*.com^$elemhide
 @@||husqvarna*.com^$elemhide, image
 @@||stihl*.*^$elemhide, image
 @@||ducati.com^$elemhide
