@@ -494,7 +494,7 @@
 @@||*suzuki.*^$elemhide, stylesheet, script, image
 @@||ktm*.*^$elemhide, image
 @@||schwinn*.com^$elemhide
-@@||*capriolo.com^$elemhide, image
+@@||*capriolo*.com^$elemhide, image
 @@||husqvarna*.com^$elemhide, image
 @@||stihl*.*^$elemhide, image
 @@||ducati.com^$elemhide
