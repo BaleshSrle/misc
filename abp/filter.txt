@@ -19,6 +19,7 @@
 @@||obsproject.com^$elemhide
 @@||cdnjs.*^$stylesheet, script, elemhide
 @@||jsdelivr.*^$elemhide, xmlhttprequest
+@@||use.typekit.net^$stylesheet
 @@||users.teol.net/~srdjan.b^$elemhide
 @@||*rs.net^$elemhide, image
 @@||*rs.org^$elemhide, stylesheet, script, image
