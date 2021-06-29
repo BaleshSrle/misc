@@ -493,7 +493,7 @@
 @@||*suzuki.*^$elemhide, stylesheet, script, image
 @@||ktm*.*^$elemhide, image
 @@||husqvarna*.com^$elemhide, image
-@@||stihl*.*^$elemhide
+@@||stihl*.*^$elemhide, image
 @@||ducati.com^$elemhide
 @@||rimac-automobili.com^$elemhide
 @@||*cdkey*.com^$elemhide, image, script, stylesheet
