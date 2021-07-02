@@ -40,7 +40,7 @@
 @@||*.eu^$elemhide, script, image
 @@||*.ru^$elemhide, image
 @@||ustavnisud.org^$elemhide
-@@||slglasnik.*^$elemhide, script
+@@||slglasnik.*^$elemhide, script, image
 @@||autoputevirs.com^$elemhide
 @@||rcirz.org^$elemhide
 @@||mpr-centar.org^$elemhide
