@@ -470,12 +470,12 @@
 @@||cupraofficial.*^$elemhide, image
 @@||skoda*.com^$elemhide, image, script, stylesheet, subdocument
 @@||bentleymotors.com^$elemhide
-@@||rolls-roycemotorcars.com^$elemhide
-@@||noblecars.com^$elemhide, image
+@@||*cars.com^$elemhide
+@@||noblecars.com^$image
 @@||morgan-motor.com^$elemhide, stylesheet, script, image
 @@||davidbrownautomotive.com^$elemhide, image
-@@||caterhamcars.com^$elemhide, image
-@@||lotuscars.com^$elemhide, stylesheet, script
+@@||caterhamcars.com^$image
+@@||lotuscars.com^$stylesheet, script
 @@||mclaren.com^$elemhide
 @@||jaguar.*^$elemhide
 @@||landrover.*^$elemhide
