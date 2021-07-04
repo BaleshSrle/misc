@@ -286,29 +286,21 @@
 @@||fifa.com^$elemhide, image
 @@||uefa.*^$elemhide, image
 @@||fiba.basketball^$elemhide
-@@||fia.com^$elemhide
+@@||fia*.com^$elemhide
 @@||formula1.com^$elemhide, image
 @@||*formulae.*^$elemhide, image, script
 @@||extreme-e.com^$elemhide
 @@||wrc.com^$elemhide
-@@||fiawtcr.com^$elemhide, script, image
+@@||fiawtcr.com^$script, image
 @@||tcr-series.com^$elemhide, image
 @@||fcbayern.net^$elemhide
 @@||scfreiburg.com^$elemhide, image
 @@||dierotenbullen.com^$elemhide
-@@||fulhamfc.com^$elemhide, image
-@@||chelseafc.com^$elemhide
+@@||*fc.*^$elemhide, image
 @@||leedsunited.com^$elemhide
 @@||arsenal.com^$elemhide
-@@||celticfc.net^$elemhide, stylesheet, image, script
+@@||celticfc.net^$stylesheet, script
 @@||tottenhamhotspur.com^$elemhide
-@@||liverpoolfc.com^$elemhide
-@@||evertonfc.com^$elemhide
-@@||whufc.com^$elemhide, image
-@@||safc.com^$elemhide
-@@||southamptonfc.com^$elemhide
-@@||bcfc.com^$elemhide, image
-@@||stokecityfc.com^$elemhide
 @@||realmadrid.com^$elemhide
 @@||atleticodemadrid.com^$elemhide, image, script
 @@||fcbarcelona.com^$elemhide
