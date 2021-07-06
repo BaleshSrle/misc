@@ -287,6 +287,7 @@
 @@||uefa.*^$elemhide, image
 @@||fiba.basketball^$elemhide
 @@||fia*.com^$elemhide
+@@||*rap.org^$elemhide, stylesheet, script
 @@||formula1.com^$elemhide, image
 @@||*formulae.*^$elemhide, image, script
 @@||extreme-e.com^$elemhide
