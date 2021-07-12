@@ -62,8 +62,7 @@
 @@||np*.*^$elemhide, script
 @@||*cinestar*.*^$elemhide, image
 @@||dobojcaffe.com^$elemhide, script, image, xmlhttprequest
-@@||*.info^$elemhide
-@@||dobojski.info^$image
+@@||*.info^$elemhide, image
 @@||*doboj.com^$elemhide, image
 @@||granicedoboja.info^$stylesheet, script
 @@||leskovacki.com^$elemhide, script
@@ -110,7 +109,7 @@
 @@||6yka.com^$elemhide
 @@||vice.com^$elemhide, xmlhttprequest, script
 @@||24sata.*^$elemhide
-@@||24online.info^$image, script
+@@||24online.info^$script
 @@||24ur.com^$elemhide
 @@||srpska*.com^$elemhide
 @@||srpskacafe.com^$stylesheet, script 
@@ -352,7 +351,7 @@
 @@||drina-osiguranje.com^$elemhide
 @@||wiener*.*^$elemhide, image, font
 @@||grawe.*^$elemhide
-@@||tesla.info^$stylesheet, script, image
+@@||tesla.info^$stylesheet, script
 @@||nokia.com^$elemhide, stylesheet
 @@||*mi*.*^$elemhide, script
 @@||lg.com^$elemhide
