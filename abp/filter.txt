@@ -212,7 +212,7 @@
 @@||googlevideo.com^$image
 @@||ytimg.com^$image
 @@||duckduckgo.com^$elemhide, image
-@@||*.int^$elemhide
+@@||*.int^$elemhide, image
 @@||*cdc.*^$elemhide, script, image
 @@||un*.org^$elemhide, stylesheet, script, image
 @@||*rc.org^$elemhide
