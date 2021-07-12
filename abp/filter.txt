@@ -199,8 +199,7 @@
 @@||eset*.com^$elemhide, script
 @@||norton.com^$elemhide, script, image
 @@||bitdefender.com^$script
-@@||avast.com^$elemhide, image
-@@||avg.com^$elemhide, image
+@@||av*.com^$elemhide, image
 @@||malwarebytes.com^$elemhide
 @@||kaspersky.*^$elemhide, script
 @@||drweb.*^$elemhide, script, image
@@ -215,7 +214,7 @@
 @@||duckduckgo.com^$elemhide, image
 @@||*.int^$elemhide
 @@||*cdc.*^$elemhide, script, image
-@@||un*.org^$elemhide, script, image
+@@||un*.org^$elemhide, stylesheet, script, image
 @@||*rc.org^$elemhide
 @@||ted*.com^$elemhide, script
 @@||nist.gov^$elemhide, image
