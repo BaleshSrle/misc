@@ -419,6 +419,7 @@
 @@||huawei.com^$elemhide
 @@||tp-link.com^$elemhide
 @@||*amazon.*^$elemhide, image, script, xmlhttprequest, ping
+@@||awsstatic.com^$image
 @@||autoscout24.*^$xmlhttprequest
 @@||acea.be^$elemhide
 @@||automarket.*^$script, image
