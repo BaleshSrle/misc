@@ -16,7 +16,7 @@
 @@||katalon.com^$elemhide, stylesheet, script
 @@||postman.com^$image
 @@||atlassian.com^$elemhide, image
-@@||obsproject.com^$elemhide
+@@||*project.*^$elemhide, image
 @@||cdnjs.*^$stylesheet, script, elemhide
 @@||jsdelivr.*^$elemhide, xmlhttprequest
 @@||*.typekit.net^$stylesheet
@@ -146,7 +146,6 @@
 @@||mozilla.org^$image, elemhide
 @@||vivaldi.*^$elemhide, image
 @@||palemoon.org^$elemhide, image
-@@||seamonkey-project.org^$elemhide
 @@||adblockplus.org^$elemhide, image, script
 @@||getadblock.com^$elemhide, image
 @@||lastpass.*^$script
@@ -278,7 +277,6 @@
 @@||siteground.com^$elemhide
 @@||bitly.com^$elemhide
 @@||cashbackworld.com^$elemhide
-@@||codeproject.com^$elemhide, image
 @@||corel.com^$elemhide
 @@||eurosport.com^$elemhide
 @@||fifa.com^$elemhide, image
