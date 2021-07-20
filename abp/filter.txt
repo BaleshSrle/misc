@@ -155,6 +155,8 @@
 @@||joomla.org^$elemhide, image, script
 @@||simplemachines.org^$elemhide
 @@||phpbb.com^$elemhide, image
+@@||angular*.*^$elemhide, image
+@@||jquery*.com^$elemhide
 @@||accuweather.com^$elemhide, script
 @@||iqair.com^$script
 @@||addthis.com^$script, xmlhttprequest, subdocument, elemhide, image
