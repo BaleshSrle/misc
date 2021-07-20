@@ -87,8 +87,6 @@
 @@||rafinerija.com^$elemhide
 @@||modricaoil.com^$elemhide
 @@||*petrol.com^$elemhide
-@@||wordpress.*^$elemhide, stylesheet, script, image
-@@||wp.com^$image, script, subdocument, stylesheet
 @@||internetdefenseleague.org^$script, image
 @@||mtel.*^$elemhide, image
 @@||a1.*^$elemhide, image
@@ -152,7 +150,10 @@
 @@||teamviewer.com^$elemhide
 @@||anydesk.com^$elemhide, image
 @@||yandex.*^$script, ping, xmlhttprequest, image
+@@||wordpress.*^$elemhide, stylesheet, script, image
+@@||wp.com^$image, script, subdocument, stylesheet
 @@||joomla.org^$elemhide, image, script
+@@||simplemachines.org^$elemhide
 @@||accuweather.com^$elemhide, script
 @@||iqair.com^$script
 @@||addthis.com^$script, xmlhttprequest, subdocument, elemhide, image
