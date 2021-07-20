@@ -157,6 +157,8 @@
 @@||phpbb.com^$elemhide, image
 @@||angular*.*^$elemhide, image
 @@||jquery*.com^$elemhide
+@@||python.org^$elemhide
+@@||nodejs.org^$elemhide
 @@||accuweather.com^$elemhide, script
 @@||iqair.com^$script
 @@||addthis.com^$script, xmlhttprequest, subdocument, elemhide, image
