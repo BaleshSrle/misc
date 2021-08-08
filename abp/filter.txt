@@ -437,6 +437,7 @@
 @@||sava-tires.com^$elemhide
 @@||goodyear.*^$script
 @@||*michelin.*^$image, subdocument
+@@||continental*.*^$elemhide, image
 @@||daf.*^$elemhide, script
 @@||volvo*.*^$elemhide, stylesheet, script
 @@||mercedes*.com^$elemhide, script, xmlhttprequest, stylesheet
