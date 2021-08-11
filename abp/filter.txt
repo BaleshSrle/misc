@@ -138,7 +138,7 @@
 @@||n1info.com^$elemhide, image
 @@||insajder.net^$elemhide, image
 @@||tvprofil.com^$elemhide
-@@||livescore*.*^$elemhide, image
+@@||live*.*^$elemhide, image
 @@||rezultati.com^$elemhide, image
 @@||mozilla.org^$image, elemhide
 @@||vivaldi.*^$elemhide, image
@@ -399,7 +399,6 @@
 @@||browser-update.org^$script
 @@||squarespace.com^$elemhide, script
 @@||miniclip.com^$image
-@@||live.com^$image, elemhide
 @@||bing.com^$image, elemhide, script, ping, xmlhttprequest
 @@||microsoft.com^$elemhide, image, script, ping, xmlhttprequest
 @@||cloudflare.*^$elemhide, image, xmlhttprequest, ping
