@@ -81,8 +81,7 @@
 @@||zitopeka.net^$elemhide
 @@||krajinaklas.com^$image
 @@||patroltaxi.com^$elemhide
-@@||derventskilist.net^$elemhide
-@@||derventacafe.com^$elemhide
+@@||dervent*.*^$elemhide
 @@||optimagrupa.net^$elemhide
 @@||rafinerija.com^$elemhide
 @@||modricaoil.com^$elemhide
