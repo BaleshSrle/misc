@@ -358,7 +358,7 @@
 @@||grawe.*^$elemhide
 @@||tesla.info^$stylesheet, script
 @@||nokia.com^$elemhide, stylesheet
-@@||*mi*.*^$elemhide, script, match-chase
+@@||*mi*.*^$elemhide, script
 @@||lg.com^$elemhide
 @@||realme.com^$elemhide
 @@||*honor.*^$elemhide
@@ -557,3 +557,4 @@
 @@||boeing.com^$elemhide
 saimse.com##.password_page
 w3schools.com#@#.sharethis
+oracle.com#@#.scl-icons
