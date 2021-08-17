@@ -559,14 +559,3 @@
 saimse.com##.password_page
 w3schools.com#@#.sharethis
 oracle.com#@#.scl-icons
-dobojcaffe.com,glasregije.net,btech.rs,bigportal.ba,republikasrpska.net,mojkontakt.com,prnjavorlive.info,blic.rs,joomla.org##.adsbygoogle
-cnn.com##.googleAd
-dobojcaffe.com,radiobn.net##.AdBox
-mondo.ba,mondo.rs##.ad-banner
-mondo.ba,mondo.rs,6yka.com##.banner_300x250
-6yka.com##.banner_300x600
-kurir.mk##.ad-300x250
-nezavisne.com###reklama
-euronews.com,dw.com##.advertising
-dw.com##.bannerAd
-srpskainfo.com##.sponsor
