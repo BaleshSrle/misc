@@ -69,7 +69,7 @@
 @@||glas*.*^$elemhide
 @@||banja*.*^$elemhide
 @@||banjaluka.*^$stylesheet, script, image
-@@||bl-portal.com^$elemhide, script
+@@||bl-portal.com^$elemhide, script, font
 @@||vodovod-bl.com^$script
 @@||neobas.org^$elemhide
 @@||hotelpalasbl.com^$elemhide
