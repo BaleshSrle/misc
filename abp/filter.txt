@@ -543,7 +543,6 @@
 @@||*banka.com^$elemhide
 @@||transfernovca.*^$elemhide, image
 @@||westernunion.com^$elemhide, image
-@@||watchseries.*^$elemhide
 @@||logistics*.com^$elemhide
 @@||logisticsbusiness.com^$stylesheet, script
 @@||vicevi.net^$elemhide
