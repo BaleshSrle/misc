@@ -47,7 +47,7 @@
 @@||koronavirususrpskoj.com^$elemhide, stylesheet, script
 @@||rhmzrs.com^$elemhide
 @@||zunsrs.com^$elemhide, font
-@@||ams-rs.com^$elemhide, stylesheet, script
+@@||ams-rs.com^$elemhide, stylesheet, script, font
 @@||muzej*.*^$elemhide
 @@||muzejkozare.org^$stylesheet
 @@||muzejfoca.com^$script
