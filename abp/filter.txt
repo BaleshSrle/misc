@@ -58,7 +58,7 @@
 @@||banja-vrucica.com^$stylesheet, script
 @@||*icbl.*^$elemhide
 @@||spamljecanica.com^$elemhide
-@@||termelaktasi.com^$elemhide
+@@||terme*.com^$elemhide
 @@||centarzamajkuidijete.com^$elemhide, stylesheet, image
 @@||np*.*^$elemhide, script
 @@||*cinestar*.*^$elemhide, image
