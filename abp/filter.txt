@@ -39,6 +39,8 @@
 @@||*.gr^$elemhide, stylesheet, font, script, image
 @@||*.eu^$elemhide, script, image
 @@||*.ru^$elemhide, image
+@@||*.io^$elemhide
+@@||*.is^$elemhide, image
 @@||ustavnisud.org^$elemhide
 @@||slglasnik.*^$elemhide, script, image
 @@||auto*.*^$elemhide
@@ -521,7 +523,6 @@
 @@||lxle.net^$elemhide
 @@||linux*.com^$elemhide, image, script
 @@||*fedora*.org^$elemhide, image
-@@||*.io^$elemhide
 @@||mxlinux.org^$elemhide, script
 @@||centos.org^$image
 @@||feedburner.com^$elemhide, image
