@@ -236,7 +236,6 @@
 @@||dvcsolutions.com^$elemhide, image
 @@||wayseven.com^$elemhide
 @@||dwelt.net^$elemhide
-@@||jsguru.io^$elemhide
 @@||atlantbh.com^$elemhide, stylesheet, script
 @@||eastcode.net^$elemhide
 @@||telegroup*.*^$elemhide
