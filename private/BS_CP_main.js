@@ -1,6 +1,47 @@
 $("html").attr("lang", "sr-Latn-BA");
-function login() { var d = $("#username").val(), f = $("#password").val(); "djidjimilovich" != d || "baleshevich88" != f ? ($("#greska").text("Pogrešno korisničko ime ili lozinka."), $("#greska").addClass("alert alert-danger text-center mt-2")) : $("#loginModal").modal("hide") }
-function go_to_station() { return document.stationform.stationselect.options[1].selected ? window.open("https://rtrs.tv/program/uzivo.php?c=1") : document.stationform.stationselect.options[2].selected ? window.open("https://www.rtvbn.com/tv") : document.stationform.stationselect.options[3].selected ? window.open("https://bhrt.ba/uzivo/tv") : document.stationform.stationselect.options[4].selected ? window.open("https://www.redportal.rs/") : document.stationform.stationselect.options[5].selected ? window.open("https://www.euronews.rs/tv-uzivo") : document.stationform.stationselect.options[6].selected ? window.open("https://www.youtube.com/channel/UCSrZ3UV4jOidv8ppoVuvW9Q") : document.stationform.stationselect.options[7].selected ? window.open("https://www.youtube.com/user/skynews") : document.stationform.stationselect.options[8].selected ? window.open("https://www.youtube.com/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg") : document.stationform.stationselect.options[9].selected ? window.open("https://www.youtube.com/user/deutschewelleenglish") : document.stationform.stationselect.options[10].selected ? window.open("https://www.youtube.com/user/RussiaToday") : document.stationform.stationselect.options[11].selected && window.open("https://www.youtube.com/user/AJBalkans"), !0 }
-function loadURL() { document.getElementById("urlOutput").src = document.getElementById("url").value; }
-//function loginReset(){document.getElementById("loginForm").reset()}
-function reloadPage() { window.location.reload() }
+
+function login() {
+    var d = $("#username").val();
+    var f = $("#password").val();
+
+    if ("djidjimilovich" != d) {
+        $("#greska").text("Pogrešno korisničko ime.");
+        $("#greska").addClass("alert alert-danger text-center mt-2");
+    } else if ("baleshevich88" != f) {
+        $("#greska").text("Pogrešna lozinka.");
+        $("#greska").addClass("alert alert-danger text-center mt-2");
+    } else {
+        $("#loginModal").modal("hide");
+    }
+}
+
+function go_to_station() {
+    if (document.stationform.stationselect.options[1].selected) {
+        window.open("https://rtrs.tv/program/uzivo.php?c=1");
+    } else if (document.stationform.stationselect.options[2].selected) {
+        window.open("https://www.rtvbn.com/tv");
+    } else if (document.stationform.stationselect.options[3].selected) {
+        window.open("https://bhrt.ba/uzivo/tv");
+    } else if (document.stationform.stationselect.options[4].selected) {
+        window.open("https://www.redportal.rs/");
+    } else if (document.stationform.stationselect.options[5].selected) {
+        window.open("https://www.euronews.rs/tv-uzivo");
+    } else if (document.stationform.stationselect.options[6].selected) {
+        window.open("https://www.youtube.com/channel/UCSrZ3UV4jOidv8ppoVuvW9Q");
+    } else if (document.stationform.stationselect.options[7].selected) {
+        window.open("https://www.youtube.com/user/skynews");
+    } else if (document.stationform.stationselect.options[8].selected) {
+        window.open("https://www.youtube.com/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg");
+    } else if (document.stationform.stationselect.options[9].selected) {
+        window.open("https://www.youtube.com/user/deutschewelleenglish");
+    } else if (document.stationform.stationselect.options[10].selected) {
+        window.open("https://www.youtube.com/user/RussiaToday");
+    } else if (document.stationform.stationselect.options[11].selected) {
+        window.open("https://www.youtube.com/user/AJBalkans");
+    }
+    return true;
+}
+
+function reloadPage() {
+    window.location.reload();
+}
