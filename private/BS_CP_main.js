@@ -1,13 +1,13 @@
 $("html").attr("lang", "sr-Latn-BA");
 
 function login() {
-    var d = $("#username").val();
-    var f = $("#password").val();
+    var a = $("#username").val();
+    var b = $("#password").val();
 
-    if ("djidjimilovich" != d) {
+    if ("djidjimilovich" != a) {
         $("#greska").text("Pogrešno korisničko ime.");
         $("#greska").addClass("alert alert-danger text-center mt-2");
-    } else if ("baleshevich88" != f) {
+    } else if ("baleshevich88" != b) {
         $("#greska").text("Pogrešna lozinka.");
         $("#greska").addClass("alert alert-danger text-center mt-2");
     } else {
@@ -40,6 +40,14 @@ function go_to_station() {
         window.open("https://www.youtube.com/user/AJBalkans");
     }
     return true;
+}
+
+function IzracunajDividendu() {
+    var d = $("#cijenaJedneAkcije").val();
+    var f = $("#brojAkcija").val();
+    var g = d * f;
+
+    $("#iznosDividende").text("Očekivani vrijednost dividende iznosi " +g.toFixed(2)+ " KM.")
 }
 
 function reloadPage() {
