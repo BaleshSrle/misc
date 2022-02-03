@@ -47,7 +47,7 @@ function IzracunajDividendu() {
     var f = $("#brojAkcija").val();
     var g = d * f;
 
-    $("#iznosDividende").text("Očekivani vrijednost dividende iznosi " +g.toFixed(2)+ " KM.")
+    $("#iznosDividende").text("Očekivani vrijednost dividende iznosi " +g.toFixed(2)+ " KM.");
 }
 
 function reloadPage() {
