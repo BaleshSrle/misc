@@ -8,8 +8,8 @@ function login() {
         $("#greska").text("Pogrešno korisničko ime.");
         $("#greska").addClass("alert alert-danger text-center mt-2");
     } else if ("baleshevich88" != b) {
-        $("#greska").text("Pogrešna lozinka.");
-        $("#greska").addClass("alert alert-danger text-center mt-2");
+        $("#greska2").text("Pogrešna lozinka.");
+        $("#greska2").addClass("alert alert-danger text-center mt-2");
     } else {
         $("#loginModal").modal("hide");
     }
@@ -48,6 +48,10 @@ function IzracunajDividendu() {
     var g = d * f;
 
     $("#iznosDividende").text("Očekivani vrijednost dividende iznosi " +g.toFixed(2)+ " KM.");
+}
+
+function loadURL() {
+    return $("#urlOutput").attr("src", $("#url").val());
 }
 
 function reloadPage() {
