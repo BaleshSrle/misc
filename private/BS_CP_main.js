@@ -5,15 +5,14 @@ function login() {
     var b = $("#password").val();
 
     if ("djidjimilovich" != a) {
-        $("#greska").text("Pogrešno korisničko ime.");
-        $("#greska").addClass("alert alert-danger text-center mt-2");
+        alert("Unijeli ste pogrešno korisničko ime.");
     } else if ("baleshevich88" != b) {
-        $("#greska2").text("Pogrešna lozinka.");
-        $("#greska2").addClass("alert alert-danger text-center mt-2");
+        alert("Unijeli ste pogrešnu lozinku.");
+    } else if (a == null || b == null) {
+        alert("Unos nije dozvoljen.\nMorate unijeti korisničko ime i lozinku da nastavite dalje.");
     } else {
         $("#loginModal").modal("hide");
     }
-    $("#greska,#greska2").fadeOut(3000);
 }
 
 function go_to_station() {
