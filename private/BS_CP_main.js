@@ -13,6 +13,7 @@ function login() {
     } else {
         $("#loginModal").modal("hide");
     }
+    $("#greska,#greska2").fadeOut(3000);
 }
 
 function go_to_station() {
