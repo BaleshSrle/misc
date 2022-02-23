@@ -5,7 +5,7 @@ function login() {
     var b = $("#password").val();
 
     if (a == null) {
-        if (b == null){
+        if (b == null) {
             alert("Unos nije dozvoljen.\nMorate popuniti polje da biste nastavili dalje.");
         }
     } else if ("djidjimilovich" != a) {
