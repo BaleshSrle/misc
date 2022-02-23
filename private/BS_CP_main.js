@@ -4,12 +4,14 @@ function login() {
     var a = $("#username").val();
     var b = $("#password").val();
 
-    if ("djidjimilovich" != a) {
+    if (a == null) {
+        if (b == null){
+            alert("Unos nije dozvoljen.\nMorate popuniti polje da biste nastavili dalje.");
+        }
+    } else if ("djidjimilovich" != a) {
         alert("Unijeli ste pogrešno korisničko ime.");
     } else if ("baleshevich88" != b) {
         alert("Unijeli ste pogrešnu lozinku.");
-    } else if (a == null && b == null) {
-        alert("Unos nije dozvoljen.\nMorate unijeti korisničko ime i lozinku da nastavite dalje.");
     } else {
         $("#loginModal").modal("hide");
     }
