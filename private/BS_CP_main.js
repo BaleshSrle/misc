@@ -4,8 +4,8 @@ function login() {
     var a = $("#username").val();
     var b = $("#password").val();
 
-    if (a == null) {
-        if (b == null) {
+    if (null == a) {
+        if (null == b) {
             alert("Unos nije dozvoljen.\nMorate popuniti polje da biste nastavili dalje.");
         }
     } else if ("djidjimilovich" != a) {
