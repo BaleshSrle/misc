@@ -1,4 +1,5 @@
 $("html").attr("lang", "sr-Latn-BA");
+$("head").append("<meta http-equiv='refresh' content='1800'>");
 
 function login() {
     var a = $("#username").val();
