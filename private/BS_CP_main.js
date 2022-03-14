@@ -38,7 +38,7 @@ function go_to_station() {
     } else if (document.stationform.stationselect.options[9].selected) {
         window.open("https://www.youtube.com/user/deutschewelleenglish");
     } else if (document.stationform.stationselect.options[10].selected) {
-        window.open("https://www.youtube.com/user/RussiaToday");
+        window.open("https://www.rt.com/on-air/");
     } else if (document.stationform.stationselect.options[11].selected) {
         window.open("https://www.youtube.com/user/AJBalkans");
     }
