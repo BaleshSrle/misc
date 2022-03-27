@@ -45,6 +45,25 @@ function go_to_station() {
     return true;
 }
 
+function IzracunajNoviNovcaniIznos() {
+    var h = $("#novcaniIznos").val();
+    var k = $("#procenatIznos").val();
+
+    if ($("#uvecanjeIznos")){
+        procenat = k/100;
+        procenat2 = h*procenat;
+        rezUvecanje = h + procenat2;
+
+        $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje.toFixed(2) + " KM.");
+    } else {
+        procenat = k/100;
+        procenat2 = h*procenat;
+        rezUmanjenje = h - procenat2;
+
+        $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje.toFixed(2) + " KM.");
+    }
+}
+
 function IzracunajDividendu() {
     var d = $("#cijenaJedneAkcije").val();
     var f = $("#brojAkcija").val();
