@@ -48,19 +48,19 @@ function go_to_station() {
 function IzracunajNoviNovcaniIznos() {
     var h = $("#novcaniIznos").val();
     var k = $("#procenatIznos").val();
+    var procenat = k / 100;
+    var procenat2 = h * procenat;
 
-    if ($("#uvecanjeIznos")){
-        procenat = k/100;
-        procenat2 = h*procenat;
-        rezUvecanje = h + procenat2;
+    if ($("#uvecanjeIznos").val()) {
+            var rezUvecanje = h + procenat2;
 
-        $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje.toFixed(2) + " KM.");
-    } else {
-        procenat = k/100;
-        procenat2 = h*procenat;
-        rezUmanjenje = h - procenat2;
+            $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje.toFixed(2) + " KM.");
+    }
 
-        $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje.toFixed(2) + " KM.");
+    if ($("#umanjenjeIznos").val()) {
+            var rezUmanjenje = h - procenat2;
+
+            $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje.toFixed(2) + " KM.");
     }
 }
 
