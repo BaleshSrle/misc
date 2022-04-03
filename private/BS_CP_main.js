@@ -54,13 +54,13 @@ function IzracunajNoviNovcaniIznos() {
     if ($("#uvecanjeIznos:checked")) {
             var rezUvecanje = h + procenat2;
 
-            $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje.toFixed(2) + " KM.");
+            $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje + " KM.");
     }
 
     if ($("#umanjenjeIznos:checked")) {
             var rezUmanjenje = h - procenat2;
 
-            $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje.toFixed(2) + " KM.");
+            $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje + " KM.");
     }
 }
 
