@@ -57,7 +57,7 @@ function IzracunajNoviNovcaniIznos() {
             $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje.toFixed(2) + " KM.");
     }
 
-    if ($("[value='umanjenjeNovac']:checked)")) {
+    if ($("[value='umanjenjeNovac']:checked")) {
             var rezUmanjenje = h - procenat2;
 
             $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje.toFixed(2) + " KM.");
