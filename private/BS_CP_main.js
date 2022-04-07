@@ -1,4 +1,4 @@
-$("html").attr("lang", "sr-Latn-BA");
+$("html").attr("lang", navigator.language);
 $("head").append("<meta http-equiv='refresh' content='1800'>");
 
 function login() {
