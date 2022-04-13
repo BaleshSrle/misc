@@ -48,7 +48,7 @@ function go_to_station() {
 function IzracunajNoviNovcaniIznos() {
     var h = $("#novcaniIznos").val();
     var k = $("#procenatIznos").val();
-	var l = $("#vrstaObracunaNovca").val();
+    var l = $("#vrstaObracunaNovca").val();
 
     if ( l == "umanjenjeIznos") {
         var procenat = k / 100;
