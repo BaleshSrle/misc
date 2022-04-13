@@ -48,20 +48,22 @@ function go_to_station() {
 function IzracunajNoviNovcaniIznos() {
     var h = $("#novcaniIznos").val();
     var k = $("#procenatIznos").val();
-    var procenat = k / 100;
-    var procenat2 = h * procenat;
+	var l = $("#vrstaObracunaNovca").val();
 
-    if ($("#uvecanjeIznos:checked")) {
-            var rezUvecanje = h + procenat2;
+    if ( l == "umanjenjeIznos") {
+        var procenat = k / 100;
+        var procenat2 = h * procenat;
+        var rezUmanjenje = h - procenat2;
 
-            $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje + " KM.");
+        $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje + " KM.");
+    } else if (l == "uvecanjeIznos") {
+        var procenat = k / 100;
+        var procenat2 = h * procenat;
+        var rezUvecanje = +h + +procenat2;
+
+        $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje + " KM.");
     }
-
-    if ($("#umanjenjeIznos:checked")) {
-            var rezUmanjenje = h - procenat2;
-
-            $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje + " KM.");
-    }
+	return true;
 }
 
 function IzracunajDividendu() {
