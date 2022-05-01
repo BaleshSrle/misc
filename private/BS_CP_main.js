@@ -10,8 +10,10 @@ function login() {
             alert("Unos nije dozvoljen.\nMorate popuniti polje da biste nastavili dalje.");
         }
     } else if ("djidjimilovich" != a) {
+		$("#username").val("");
         alert("Unijeli ste pogrešno korisničko ime.");
     } else if ("baleshevich88" != b) {
+		$("#password").val("");
         alert("Unijeli ste pogrešnu lozinku.");
     } else {
         $("#loginModal").modal("hide");
