@@ -7,8 +7,6 @@ function login() {
 
     if (a == "" &&  b == "") {
         alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
-    } else if (a == "" || b == ""){
-        alert("Unos nije dozvoljen.\nMorate popuniti polje da biste nastavili dalje.");
     } else if ("djidjimilovich" != a) {
 		$("#username").val("");
         alert("Unijeli ste pogrešno korisničko ime.");
