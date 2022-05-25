@@ -5,16 +5,18 @@ function login() {
     var a = $("#username").val();
     var b = $("#password").val();
 
-    if (null == a) {
-        if (null == b) {
-            alert("Unos nije dozvoljen.\nMorate popuniti polje da biste nastavili dalje.");
-        }
+    if (a == "" &&  b == "") {
+        alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
+    } else if (a == "" || b == ""){
+        alert("Unos nije dozvoljen.\nMorate popuniti polje da biste nastavili dalje.");
     } else if ("djidjimilovich" != a) {
 		$("#username").val("");
         alert("Unijeli ste pogrešno korisničko ime.");
+        $("#username").focus();
     } else if ("baleshevich88" != b) {
 		$("#password").val("");
         alert("Unijeli ste pogrešnu lozinku.");
+        $("#password").focus();
     } else {
         $("#loginModal").modal("hide");
     }
@@ -51,18 +53,14 @@ function IzracunajNoviNovcaniIznos() {
     var h = $("#novcaniIznos").val();
     var k = $("#procenatIznos").val();
     var l = $("#vrstaObracunaNovca").val();
+    var procenat = k / 100;
+    var procenat2 = h * procenat;
 
     if ( l == "umanjenjeIznos") {
-        var procenat = k / 100;
-        var procenat2 = h * procenat;
         var rezUmanjenje = h - procenat2;
-
         $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje + " KM.");
     } else if (l == "uvecanjeIznos") {
-        var procenat = k / 100;
-        var procenat2 = h * procenat;
         var rezUvecanje = +h + +procenat2;
-
         $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje + " KM.");
     }
 	return true;
