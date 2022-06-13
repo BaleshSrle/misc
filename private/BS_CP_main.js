@@ -8,11 +8,11 @@ function login() {
     if (a == "" &&  b == "") {
         alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
     } else if ("djidjimilovich" != a) {
-		$("#username").val("");
+	$("#username").val("");
         alert("Unijeli ste pogrešno korisničko ime.");
         $("#username").focus();
     } else if ("baleshevich88" != b) {
-		$("#password").val("");
+	$("#password").val("");
         alert("Unijeli ste pogrešnu lozinku.");
         $("#password").focus();
     } else {
