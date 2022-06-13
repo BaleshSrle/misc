@@ -20,6 +20,7 @@
 @@||cdnjs.*^$stylesheet, script, elemhide
 @@||jsdelivr.*^$elemhide, xmlhttprequest
 @@||*.typekit.net^$stylesheet
+@@||clarity.ms^$script, image
 @@||users.teol.net/~srdjan.b^$elemhide
 @@||*rs.net^$elemhide, image
 @@||*rs.org^$elemhide, stylesheet, script, image
