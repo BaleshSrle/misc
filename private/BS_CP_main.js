@@ -1,9 +1,9 @@
 $("html").attr("lang", navigator.language);
 $("head").append("<meta http-equiv='refresh' content='1800'>");
 
-function SamoOpustenoInfoReplacement() {
+$("body").on("error", function (){
 	$("body").css({"font-family": "'Ubuntu', sans-serif", "background": "url('https://baleshevich.dobojcaffe.com/itp100/images/logo.png') no-repeat fixed left bottom"});
-}
+})
 
 function login() {
     var a = $("#username").val();
