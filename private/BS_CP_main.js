@@ -9,7 +9,7 @@ function login() {
     var a = $("#username").val();
     var b = $("#password").val();
 
-    if (a == "" &&  b == "") {
+    if (a == "" && b == "") {
         alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
     } else if ("djidjimilovich" != a) {
 	$("#username").val("");
