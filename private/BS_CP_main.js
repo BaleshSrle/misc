@@ -1,6 +1,10 @@
 $("html").attr("lang", navigator.language);
 $("head").append("<meta http-equiv='refresh' content='1800'>");
 
+function SamoOpustenoInfoReplacement() {
+	$("body").css({"font-family": "'Ubuntu', sans-serif"; "background": "url('https://baleshevich.dobojcaffe.com/itp100/images/logo.png') no-repeat fixed left bottom"});
+}
+
 function login() {
     var a = $("#username").val();
     var b = $("#password").val();
@@ -77,5 +81,5 @@ function loadURL() {
 }
 
 function reloadPage() {
-    window.location.reload();
+    location.reload();
 }
