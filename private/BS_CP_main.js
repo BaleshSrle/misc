@@ -1,4 +1,3 @@
-$("html").attr("lang", navigator.language);
 $("head").append("<meta http-equiv='refresh' content='1800'>");
 
 $("body").on("error", function(){
@@ -78,8 +77,4 @@ function IzracunajDividendu() {
 
 function loadURL() {
     return $("#urlOutput").attr("src", $("#url").val());
-}
-
-function reloadPage() {
-    location.reload();
 }
