@@ -7,9 +7,9 @@ var a = document.getElementById("hosting");
 var m = new Date().getMonth() + 1;
 
 if (m == 12 || m == 1) {
-    a.src = "img/dobojcaffe.png";
+    a.src = "images/dobojcaffe.png";
 } else {
-    a.src = "img/docaffe.jpg";
+    a.src = "images/docaffe.jpg";
 }
 
 var cubeshowvar1;
