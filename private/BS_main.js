@@ -14,9 +14,7 @@ $("head").append("<meta http-equiv='x-dns-prefetch-control' content='on'>");
 $("head").append("<meta http-equiv='Cache-control' content='no-cache'>");
 $("head").append("<meta http-equiv='Pragma' content='no-cache'>");
 $("head").append("<meta http-equiv='Expires' content='-1'>");
-$("head").prepend("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css' crossorigin='anonymous' media='all' onerror='reloadPage()'>");
 $("head").prepend("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css' crossorigin='anonymous' media='all'>");
-$("head").prepend("<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js' crossorigin='anonymous' onerror='reloadPage()'></script>");
 
 function reloadPage() {
     location.reload();
