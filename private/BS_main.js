@@ -16,14 +16,6 @@ $("head").append("<meta http-equiv='Pragma' content='no-cache'>");
 $("head").append("<meta http-equiv='Expires' content='-1'>");
 $("head").prepend("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css' crossorigin='anonymous' media='all'>");
 
-var pathname = location.pathname;
-
-if (pathname != "/private/kontrolna_tabla.html") {
-    $("head").append("<script src='https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/private/BS_site.min.js' async></script>");    
-} else {
-    $("head").append("<script src='https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/private/BS_CP_main.min.js' async onerror='javascript:location.reload()'></script>");
-}
-
 function reloadPage() {
     location.reload();
 }
