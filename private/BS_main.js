@@ -19,9 +19,9 @@ $("head").prepend("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/aja
 var pathname = location.pathname;
 
 if (pathname == "private/kontrolna_tabla.html") {
-    $("head").prepend("<script src='https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/private/BS_CP_main.min.js' async onerror='javascript:location.reload()'></script>");
+    $("head").append("<script src='https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/private/BS_CP_main.min.js' async onerror='javascript:location.reload()'></script>");
 } else {
-    $("head").prepend("<script src='https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/private/BS_site.min.js' async></script>");
+    $("head").append("<script src='https://cdn.jsdelivr.net/gh/BaleshSrle/misc@master/private/BS_site.min.js' async></script>");
 }
 
 function reloadPage() {
