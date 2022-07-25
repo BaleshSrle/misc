@@ -21,7 +21,7 @@ var pathname = location.pathname;
 if (pathname == "private/kontrolna_tabla.html") {
     $("head").append("<script src='https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/private/BS_CP_main.min.js' async onerror='javascript:location.reload()'></script>");
 } else {
-    $("head").append("<script src='https://cdn.jsdelivr.net/gh/BaleshSrle/misc@master/private/BS_site.min.js' async></script>");
+    $("head").append("<script src='https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/private/BS_main.min.js' async></script>");
 }
 
 function reloadPage() {
