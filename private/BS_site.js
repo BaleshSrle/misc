@@ -1,15 +1,17 @@
+var month = new Date().getMonth()+1;
+var year = new Date().getFullYear();
+
 $("head").prepend("<base href=" + location.origin + ">");
-$("head").append("<meta name='copyright' content='DobojCaffe.com & Servis raДЌunara &quot;BALEЕ EVIД†&quot; &copy;" + new Date().getFullYear() + "'>");
+$("head").append("<meta name='copyright' content='DobojCaffe.com & Servis raДЌunara &quot;BALEЕ EVIД†&quot; &copy;" + year + "'>");
 $("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.69.2'>");
-$("#godina").text(new Date().getFullYear());
+$("#godina").text(year);
 
-var a = document.getElementById("hosting");
-var m = new Date().getMonth() + 1;
+var a = $("#hosting");
 
-if (m == 12 || m == 1) {
-    a.src = "images/dobojcaffe.png";
+if (month == 12 || month == 1) {
+    img.attr("src", "images/dobojcaffe.png");
 } else {
-    a.src = "images/docaffe.jpg";
+    img.attr("src", "images/docaffe.jpg");
 }
 
 var cubeshowvar1;
