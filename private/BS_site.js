@@ -6,7 +6,7 @@ $("head").append("<meta name='copyright' content='DobojCaffe.com & Servis raДЌ
 $("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.69.2'>");
 $("#godina").text(year);
 
-var a = $("#hosting");
+var img = $("#hosting");
 
 if (month == 12 || month == 1) {
     img.attr("src", "images/dobojcaffe.png");
