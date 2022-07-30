@@ -53,7 +53,7 @@ jQuery(function($){
         ]
     });
 
-    $("#rss-feeds").rss(
+/*     $("#rss-feeds").rss(
         "https://certrs.org/feed/",
         {
             limit: 5,
@@ -62,6 +62,5 @@ jQuery(function($){
             layoutTemplate: '<ul class="list-group list-group-flush">{entries}</ul>',
             entryTemplate: '<li class="list-group-item small"><a href="{url}" target="_blank">{title}</a></li>'
         }
-    );
-
+    );*/
 })
