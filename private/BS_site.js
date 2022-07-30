@@ -1,17 +1,18 @@
+var siteURL = location.origin;
 var month = new Date().getMonth()+1;
 var year = new Date().getFullYear();
 
-$("head").prepend("<base href=" + location.origin + ">");
-$("head").append("<meta name='copyright' content='DobojCaffe.com & Servis raДЌunara &quot;BALEЕ EVIД†&quot; &copy;" + year + "'>");
+$("head").prepend("<base href="+siteURL+">");
+$("head").append("<meta name='copyright' content='DobojCaffe.com & Servis raДЌunara &quot;BALEЕ EVIД†&quot; &copy;"+year+"'>");
 $("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.69.2'>");
 $("#godina").text(year);
 
 var img = $("#hosting");
 
 if (month == 12 || month == 1) {
-    img.attr("src", "images/dobojcaffe.png");
+    img.attr("src", ""+siteURL+"/images/dobojcaffe.png");
 } else {
-    img.attr("src", "images/docaffe.jpg");
+    img.attr("src", ""+siteURL+"/images/docaffe.jpg");
 }
 
 var cubeshowvar1;
