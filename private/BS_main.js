@@ -19,3 +19,7 @@ $("head").prepend("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/aja
 function reloadPage() {
     location.reload();
 }
+
+function backPage() {
+    history.back();
+}

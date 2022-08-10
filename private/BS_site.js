@@ -7,12 +7,12 @@ $("head").append("<meta name='copyright' content='DobojCaffe.com & Servis raДЌ
 $("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.69.2'>");
 $("#godina").text(year);
 
-var img = $("#hosting");
+var imgHost = $("img#hosting");
 
 if (month == 12 || month == 1) {
-    img.attr("src", ""+siteURL+"/images/dobojcaffe.png");
+    imgHost.attr("src", ""+siteURL+"/images/dobojcaffe.png");
 } else {
-    img.attr("src", ""+siteURL+"/images/docaffe.jpg");
+    imgHost.attr("src", ""+siteURL+"/images/docaffe.jpg");
 }
 
 var cubeshowvar1;
