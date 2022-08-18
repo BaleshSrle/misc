@@ -4,7 +4,7 @@ var year = new Date().getFullYear();
 
 $("head").prepend("<base href="+siteURL+">");
 $("head").append("<meta name='copyright' content='DobojCaffe.com & Servis raДЌunara &quot;BALEЕ EVIД†&quot; &copy;"+year+"'>");
-$("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.69.2'>");
+$("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.70.2'>");
 $("#godina").text(year);
 
 var imgHost = $("img#hosting");
