@@ -1,3 +1,4 @@
+console.info("Skripta za web sajt je pokrenuta.");
 var siteURL = location.origin;
 var month = new Date().getMonth()+1;
 var year = new Date().getFullYear();
@@ -25,9 +26,9 @@ jQuery(function($){
         dimensions: [180, 84],
         pause: 3000,
         images: [
-            ['images/MSE.png', 'https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download'],
-            ['images/win_wallpaper.png', 'https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc'],
-            ['images/vscode.png', 'https://code.visualstudio.com']
+            [''+siteURL+'/images/MSE.png', 'https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download'],
+            [''+siteURL+'/images/win_wallpaper.png', 'https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc'],
+            [''+siteURL+'/images/vscode.png', 'https://code.visualstudio.com']
         ]
     });
 
@@ -36,8 +37,8 @@ jQuery(function($){
         dimensions: [180, 180],
         pause: 2800,
         images: [
-            ['images/IDL_Shield_badge.png', 'https://internetdefenseleague.org'],
-            ['images/World_IPv6_launch.png', 'https://www.worldipv6launch.org/'],
+            [''+siteURL+'/images/IDL_Shield_badge.png', 'https://internetdefenseleague.org'],
+            [''+siteURL+'/images/World_IPv6_launch.png', 'https://www.worldipv6launch.org/'],
             ['https://tools.ip2location.com/200x200.png', 'https://www.ip2location.com/free/widgets']
         ]
     });
@@ -48,8 +49,8 @@ jQuery(function($){
         pause: 2900,
         images: [
             ['https://assets.ubuntu.com/v1/61f4fb91-release-widgetv5.jpg', 'http://ubunt.eu/zesty'],
-            ['images/smalllxledark.png', 'https://lxle.net/'],
-            ['images/serbian_debian.png', 'https://www.debian-srbija.iz.rs/']
+            [''+siteURL+'/images/smalllxledark.png', 'https://lxle.net/'],
+            [''+siteURL+'/images/serbian_debian.png', 'https://www.debian-srbija.iz.rs/']
         ]
     });
 

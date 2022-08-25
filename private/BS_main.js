@@ -1,3 +1,4 @@
+console.info("Glavna skripta je pokrenuta.");
 $("html").attr("lang", navigator.language);
 $("head").append("<meta name='author' content='Baleševi&#263; Sr&#273;an, srdjan.b%40teol.net'>");
 $("head").append("<meta name='designer' content='Servis računara &quot;BALEŠEVIĆ&quot;'>");
