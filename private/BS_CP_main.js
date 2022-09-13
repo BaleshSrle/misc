@@ -14,12 +14,12 @@ function login() {
         alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
     } else if ("djidjimilovich" != a) {
         $("#username").val("");
-        console.error("Unijeli ste pogrešno korisničko ime. Pokušajte ponovo.");
+        console.error(new Date().toLocaleString("sr-RS"),": Unijeli ste pogrešno korisničko ime. Pokušajte ponovo.");
         alert("Unijeli ste pogrešno korisničko ime.");
         $("#username").focus();
     } else if ("baleshevich88" != b) {
         $("#password").val("");
-        console.error("Unijeli ste pogrešnu lozinku. Pokušajte ponovo.");
+        console.error(new Date().toLocaleString("sr-RS"),": Unijeli ste pogrešnu lozinku. Pokušajte ponovo.");
         alert("Unijeli ste pogrešnu lozinku.");
         $("#password").focus();
     } else {
@@ -28,27 +28,29 @@ function login() {
 }
 
 function go_to_station() {
-    if (document.stationform.stationselect.options[1].selected) {
+    const stationSelect = document.stationform.stationselect;
+
+    if (stationSelect.options[1].selected) {
         window.open("https://rtrs.tv/program/uzivo.php?c=1");
-    } else if (document.stationform.stationselect.options[2].selected) {
+    } else if (stationSelect.options[2].selected) {
         window.open("https://www.rtvbn.com/tv");
-    } else if (document.stationform.stationselect.options[3].selected) {
+    } else if (stationSelect.options[3].selected) {
         window.open("https://bhrt.ba/uzivo/tv");
-    } else if (document.stationform.stationselect.options[4].selected) {
+    } else if (stationSelect.options[4].selected) {
         window.open("https://www.redportal.rs/");
-    } else if (document.stationform.stationselect.options[5].selected) {
+    } else if (stationSelect.options[5].selected) {
         window.open("https://www.euronews.rs/tv-uzivo");
-    } else if (document.stationform.stationselect.options[6].selected) {
+    } else if (stationSelect.options[6].selected) {
         window.open("https://www.youtube.com/channel/UCSrZ3UV4jOidv8ppoVuvW9Q");
-    } else if (document.stationform.stationselect.options[7].selected) {
+    } else if (stationSelect.options[7].selected) {
         window.open("https://www.youtube.com/user/skynews");
-    } else if (document.stationform.stationselect.options[8].selected) {
+    } else if (stationSelect.options[8].selected) {
         window.open("https://www.youtube.com/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg");
-    } else if (document.stationform.stationselect.options[9].selected) {
+    } else if (stationSelect.options[9].selected) {
         window.open("https://www.youtube.com/user/deutschewelleenglish");
-    } else if (document.stationform.stationselect.options[10].selected) {
+    } else if (stationSelect.options[10].selected) {
         window.open("https://www.rt.com/on-air/");
-    } else if (document.stationform.stationselect.options[11].selected) {
+    } else if (stationSelect.options[11].selected) {
         window.open("https://www.youtube.com/user/AJBalkans");
     }
     return true;
