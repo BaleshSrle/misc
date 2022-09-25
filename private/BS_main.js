@@ -15,6 +15,9 @@ $("head").append("<meta http-equiv='x-dns-prefetch-control' content='on'>");
 $("head").append("<meta http-equiv='Cache-control' content='no-cache'>");
 $("head").append("<meta http-equiv='Pragma' content='no-cache'>");
 $("head").append("<meta http-equiv='Expires' content='-1'>");
+$("head").prepend("<link rel='preconnect' href='https://fonts.googleapis.com'>");
+$("head").prepend("<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>");
+$("head").prepend("<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Ubuntu&display=swap' media='all'>");
 $("head").prepend("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css' crossorigin='anonymous' media='all'>");
 
 function reloadPage() {
