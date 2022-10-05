@@ -1,6 +1,6 @@
 console.info("Skripta za kontolnu tablu je pokrenuta.");
 
-const DateTimeLocal =  new Date().toLocaleString("sr-RS");
+const DateTimeLocal = new Date().toLocaleString("sr-RS");
 
 $("head").append("<meta http-equiv='refresh' content='1800'>");
 
