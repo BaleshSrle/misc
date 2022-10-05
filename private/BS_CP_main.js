@@ -21,6 +21,7 @@ function login() {
         $("#username").focus();
     } else if ("baleshevich88" != b) {
         $("#password").val("");
+        console.error(DateTimeLocal, ": Unijeli ste pogrešnu lozinku. Pokušajte ponovo.");
         alert("Unijeli ste pogrešnu lozinku.");
         $("#password").focus();
     } else {
