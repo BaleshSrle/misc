@@ -1,5 +1,7 @@
 console.info("Skripta za kontolnu tablu je pokrenuta.");
 
+const DateTimeLocal =  new Date().toLocaleString("sr-RS");
+
 $("head").append("<meta http-equiv='refresh' content='1800'>");
 
 $("body").on("error", function () {
@@ -14,12 +16,11 @@ function login() {
         alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
     } else if ("djidjimilovich" != a) {
         $("#username").val("");
-        console.error(new Date().toLocaleString("sr-RS"),": Unijeli ste pogrešno korisničko ime. Pokušajte ponovo.");
+        console.error(DateTimeLocal, ": Unijeli ste pogrešno korisničko ime. Pokušajte ponovo.");
         alert("Unijeli ste pogrešno korisničko ime.");
         $("#username").focus();
     } else if ("baleshevich88" != b) {
         $("#password").val("");
-        console.error(new Date().toLocaleString("sr-RS"),": Unijeli ste pogrešnu lozinku. Pokušajte ponovo.");
         alert("Unijeli ste pogrešnu lozinku.");
         $("#password").focus();
     } else {
@@ -27,7 +28,7 @@ function login() {
     }
 }
 
-function go_to_station() {
+/*function go_to_station() {
     const stationSelect = document.stationform.stationselect;
 
     if (stationSelect.options[1].selected) {
@@ -54,6 +55,10 @@ function go_to_station() {
         window.open("https://www.youtube.com/user/AJBalkans");
     }
     return true;
+}*/
+
+function loadTvStation() {
+    return window.open($("#stationselect").val());
 }
 
 function IzracunajNoviNovcaniIznos() {
