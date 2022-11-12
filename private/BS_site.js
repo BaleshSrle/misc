@@ -4,7 +4,7 @@ var month = new Date().getMonth()+1;
 var year = new Date().getFullYear();
 
 $("head").prepend("<base href="+siteURL+">");
-$("head").append("<meta name='copyright' content='DobojCaffe.com & Servis raДЌunara &quot;BALEЕ EVIД†&quot; &copy;"+year+"'>");
+$("head").append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;"+year+"'>");
 $("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.73.1'>");
 $("#godina").text(year);
 
