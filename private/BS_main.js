@@ -19,6 +19,7 @@ $("head").prepend("<link rel='preconnect' href='https://fonts.googleapis.com'>")
 $("head").prepend("<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>");
 $("head").prepend("<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Ubuntu&display=swap' media='all'>");
 $("head").prepend("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.min.css' crossorigin='anonymous' media='all'>");
+$("head").append("<link rel='icon' href='https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/images/logo.png'>");
 
 function reloadPage() {
     location.reload();
