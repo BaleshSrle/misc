@@ -10,7 +10,7 @@ $("body").on("error", function () {
 
 function login() {
     var a = $("#username").val();
-    var b = $("#password").val();
+    var b = $(":password").val();
 
     if (a == "" && b == "") {
         alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
@@ -20,10 +20,10 @@ function login() {
         alert("Unijeli ste pogrešno korisničko ime.");
         $("#username").focus();
     } else if ("baleshevich88" != b) {
-        $("#password").val("");
+        $(":password").val("");
         console.error(DateTimeLocal, ": Unijeli ste pogrešnu lozinku. Pokušajte ponovo.");
         alert("Unijeli ste pogrešnu lozinku.");
-        $("#password").focus();
+        $(":password").focus();
     } else {
         $("#loginModal").modal("hide");
     }
