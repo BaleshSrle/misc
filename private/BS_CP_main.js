@@ -1,6 +1,6 @@
 console.info("Skripta za kontolnu tablu je pokrenuta.");
 
-const DateTimeLocal = new Date().toLocaleString("sr-RS");
+const DateTimeLocal = new Date().toLocaleString("sr-BA");
 
 $("head").append("<meta http-equiv='refresh' content='1800'>");
 
@@ -29,37 +29,13 @@ function login() {
     }
 }
 
-/*function go_to_station() {
-    const stationSelect = document.stationform.stationselect;
-
-    if (stationSelect.options[1].selected) {
-        window.open("https://rtrs.tv/program/uzivo.php?c=1");
-    } else if (stationSelect.options[2].selected) {
-        window.open("https://www.rtvbn.com/tv");
-    } else if (stationSelect.options[3].selected) {
-        window.open("https://bhrt.ba/uzivo/tv");
-    } else if (stationSelect.options[4].selected) {
-        window.open("https://www.redportal.rs/");
-    } else if (stationSelect.options[5].selected) {
-        window.open("https://www.euronews.rs/tv-uzivo");
-    } else if (stationSelect.options[6].selected) {
-        window.open("https://www.youtube.com/channel/UCSrZ3UV4jOidv8ppoVuvW9Q");
-    } else if (stationSelect.options[7].selected) {
-        window.open("https://www.youtube.com/user/skynews");
-    } else if (stationSelect.options[8].selected) {
-        window.open("https://www.youtube.com/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg");
-    } else if (stationSelect.options[9].selected) {
-        window.open("https://www.youtube.com/user/deutschewelleenglish");
-    } else if (stationSelect.options[10].selected) {
-        window.open("https://www.rt.com/on-air/");
-    } else if (stationSelect.options[11].selected) {
-        window.open("https://www.youtube.com/user/AJBalkans");
-    }
-    return true;
-}*/
-
 function loadTvStation() {
-    return window.open($("#stationselect").val());
+    
+    if ($("#stationselect option:disabled")){
+        alert ("Navedena televizijska stanica ne postoji.");
+    } else {
+        return window.open($("#stationselect option").val());
+    }
 }
 
 function IzracunajNoviNovcaniIznos() {
