@@ -30,12 +30,7 @@ function login() {
 }
 
 function loadTvStation() {
-    
-    if ($("#stationselect option:disabled")){
-        alert ("Navedena televizijska stanica ne postoji.");
-    } else {
-        return window.open($("#stationselect option").val());
-    }
+    return window.open($("#stationselect").val());
 }
 
 function IzracunajNoviNovcaniIznos() {
