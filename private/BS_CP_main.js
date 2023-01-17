@@ -9,21 +9,21 @@ $("body").on("error", function () {
 });
 
 function login() {
-    var a = $("#username").val();
-    var b = $(":password").val();
+    var a = $("#username").trim();
+    var b = $(":password").trim();
 
-    if (a == "" && b == "") {
+    if (a.val() == "" && b.val() == "") {
         alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
-    } else if ("djidjimilovich" != a) {
-        $("#username").val("");
+    } else if ("djidjimilovich" != a.val()) {
+        a.val("");
         console.error(DateTimeLocal, ": Unijeli ste pogrešno korisničko ime. Pokušajte ponovo.");
         alert("Unijeli ste pogrešno korisničko ime.");
-        $("#username").focus();
-    } else if ("baleshevich88" != b) {
-        $(":password").val("");
+        a.focus();
+    } else if ("baleshevich88" != b.val()) {
+        b.val("");
         console.error(DateTimeLocal, ": Unijeli ste pogrešnu lozinku. Pokušajte ponovo.");
         alert("Unijeli ste pogrešnu lozinku.");
-        $(":password").focus();
+        b.focus();
     } else {
         $("#loginModal").modal("hide");
     }
