@@ -9,7 +9,7 @@ $("body").on("error", function () {
 });
 
 function login() {
-    var a = $("#username").trim();
+    var a = $("#username").trim().toLowerCase();
     var b = $(":password").trim();
 
     if (a.val() == "" && b.val() == "") {
