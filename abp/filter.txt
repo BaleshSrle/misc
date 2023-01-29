@@ -199,6 +199,7 @@
 @@||delimano.*^$elemhide
 @@||walkmaxx.*^$elemhide
 @@||rovus.*^$elemhide
+@@||zepter*.*^$elemhide, stylesheet, image
 @@||jysk.*^$elemhide, stylesheet, script
 @@||ikea.*^$elemhide, script
 @@||dalas*.*^$elemhide
