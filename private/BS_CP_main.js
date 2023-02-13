@@ -9,8 +9,8 @@ $("body").on("error", function () {
 });
 
 function login() {
-    var a = $("#username");
-    var b = $(":password");
+    var a = $("#username").css("text-transform","lowercase");
+    var b = $(":password").css("text-transform","lowercase");
 
     if (a.val() == "" && b.val() == "") {
         alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
