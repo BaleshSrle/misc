@@ -4,22 +4,23 @@ const DateTimeLocal = new Date().toLocaleString("sr-BA");
 
 $("head").append("<meta http-equiv='refresh' content='1800'>");
 
-$("body").on("error", function () {
+/* $("body").on("error", function () {
     $(this).css({ "font-family": "'Ubuntu', sans-serif", "background": "url('https://baleshevich.dobojcaffe.com/itp100/images/logo.png') no-repeat fixed left bottom" });
-});
+}); */
 
 function login() {
-    var a = $("#username").css("text-transform","lowercase");
-    var b = $(":password").css("text-transform","lowercase");
+    var a = $("#username").css("text-transform", "lowercase");
+    var b = $(":password").css("text-transform", "lowercase");
+    const user = {username: "djidjimilovich", password: "baleshevich88"};
 
     if (a.val() == "" && b.val() == "") {
         alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
-    } else if ("djidjimilovich" != a.val()) {
+    } else if (user.username != a.val()) {
         a.val("");
         console.error(DateTimeLocal, ": Unijeli ste pogrešno korisničko ime. Pokušajte ponovo.");
         alert("Unijeli ste pogrešno korisničko ime.");
         a.focus();
-    } else if ("baleshevich88" != b.val()) {
+    } else if (user.password != b.val()) {
         b.val("");
         console.error(DateTimeLocal, ": Unijeli ste pogrešnu lozinku. Pokušajte ponovo.");
         alert("Unijeli ste pogrešnu lozinku.");
