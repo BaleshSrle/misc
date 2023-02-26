@@ -11,7 +11,7 @@ $("head").append("<meta http-equiv='refresh' content='1800'>");
 function login() {
     var a = $("#username").css("text-transform", "lowercase");
     var b = $(":password").css("text-transform", "lowercase");
-    const user = {username: "djidjimilovich", password: "baleshevich88"};
+    const user = { username: "djidjimilovich", password: "baleshevich88" };
 
     if (a.val() == "" && b.val() == "") {
         alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
@@ -31,7 +31,11 @@ function login() {
 }
 
 function loadTvStation() {
-    return window.open($("#stationselect").val());
+    return window.open($("#tvStationSelect").val());
+}
+
+function loadRadioStation() {
+    return $("audio").attr("src", $("#radioStationSelect").val());
 }
 
 function IzracunajNoviNovcaniIznos() {
