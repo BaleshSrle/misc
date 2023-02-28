@@ -35,7 +35,7 @@ function loadTvStation() {
 }
 
 function loadRadioStation() {
-    return $("audio").attr("src", $("#radioStationSelect").val());
+    return $("audio").attr({ src: $("#radioStationSelect").val(), preload: "auto" });
 }
 
 function IzracunajNoviNovcaniIznos() {
