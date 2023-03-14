@@ -1,3 +1,5 @@
+"use strict";
+
 console.info("Skripta za web sajt je pokrenuta.");
 var siteURL = location.origin;
 var month = new Date().getMonth()+1;
