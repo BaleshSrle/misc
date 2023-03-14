@@ -1,3 +1,5 @@
+"use strict";
+
 console.info("Skripta za kontolnu tablu je pokrenuta.");
 
 const DateTimeLocal = new Date().toLocaleString("sr-BA");
