@@ -2,20 +2,21 @@
 
 console.info("Skripta za web sajt je pokrenuta.");
 var siteURL = location.origin;
-var month = new Date().getMonth()+1;
 var year = new Date().getFullYear();
 
 $("head").prepend("<base href="+siteURL+">");
 $("head").append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;"+year+"'>");
-$("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.76.1'>");
+$("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.77.2'>");
 $("#godina").text(year);
 
 var imgHost = $("img#hosting");
 
-if (month == 12 || month == 1) {
-    imgHost.attr("src", ""+siteURL+"/images/dobojcaffe.png");
-} else {
-    imgHost.attr("src", ""+siteURL+"/images/docaffe.jpg");
+switch (new Date().getMonth()+1) {
+    case (1 || 12):
+        imgHost.attr("src", ""+siteURL+"/images/dobojcaffe.png");
+        break;
+    default:
+        imgHost.attr("src", ""+siteURL+"/images/docaffe.jpg");
 }
 
 var cubeshowvar1;
