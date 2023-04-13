@@ -12,7 +12,8 @@ $("#godina").text(year);
 var imgHost = $("img#hosting");
 
 switch (new Date().getMonth()+1) {
-    case (1 || 12):
+    case 1:
+    case 12:
         imgHost.attr("src", ""+siteURL+"/images/dobojcaffe.png");
         break;
     default:
