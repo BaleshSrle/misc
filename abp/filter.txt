@@ -177,7 +177,7 @@
 @@||ip2location.com^$elemhide, image, script
 @@||agencijaspektar.com^$document
 @@||jooble.org^$elemhide
-@@||goodreads.com^$elemhide, xmlhttprequest
+@@||goodreads.com^$elemhide, xmlhttprequest, script
 @@||scribd.com^$elemhide
 @@||issuu.com^$xmlhttprequest
 @@||mega.nz^$elemhide
