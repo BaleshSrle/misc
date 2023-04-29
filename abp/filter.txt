@@ -167,6 +167,7 @@
 @@||stackoverflow.com^$elemhide
 @@||accuweather.com^$elemhide, script
 @@||iqair.com^$script
+@@||emsc-csem.org^$elemhide
 @@||addthis.com^$script, xmlhttprequest, subdocument, elemhide, image
 @@||sharethis.*^$script, xmlhttprequest, subdocument, image, stylesheet
 @@||addtoany.com^$script, subdocument, image
@@ -193,6 +194,7 @@
 @@||spar*.*^$elemhide, script, stylesheet
 @@||olx.*^$elemhide, script
 @@||ekupi.*^$elemhide, script
+@@||limundo.com^$elemhide
 @@||paypal.com^$image, script, xmlhttprequest
 @@||topshop.*^$elemhide, image, script, xmlhttprequest
 @@||dormeo.*^$elemhide
