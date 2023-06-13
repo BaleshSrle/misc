@@ -11,11 +11,12 @@ $("head").append("<meta http-equiv='refresh' content='1800'>");
 }); */
 
 function login() {
-    var a = $("#username");
-    var b = $(":password");
-    const user = { username: "djidjimilovich", password: "baleshevich88" };
+    //var a = $("#username");
+    //var b = $(":password");
+    //const user = { username: "djidjimilovich", password: "baleshevich88" };
+    const passwords = ["baleshevich88", "demo"];
 
-    if (a.val() === "" && b.val() === "") {
+    /* if (a.val() === "" && b.val() === "") {
         alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
     } else if (user.username !== a.val()) {
         a.val("");
@@ -29,16 +30,38 @@ function login() {
         b.focus();
     } else {
         $("#loginModal").modal("hide");
+    } */
+    switch ($(":password").val()) {
+        case passwords[0]:
+            $("#loginModal").modal("hide");
+            break;
+        case passwords[1]:
+            $("#loginModal").modal("hide");
+            $("button#djevojkaDanaBtn").attr("disabled", "");
+            break;
+        case !(passwords[0]):
+        case !(passwords[1]):
+            console.error(DateTimeLocal, ": Unijeli ste pogrešnu lozinku. Pokušajte ponovo.");
+            alert("Unijeli ste pogrešnu lozinku.");
+            break;
+        case (""):
+            $(":password").val("");
+            console.error(DateTimeLocal, ": Unos nije dozvoljen. Polje mora biti popunjeno.");
+            alert("Unos nije dozvoljen.\nPolje mora biti popunjeno.");
+            break;
+        default:
+            $(":password").val("")
+            $(":password").focus();
     }
 }
 
-function loadTvStation() {
-    return window.open($("#tvStationSelect").val());
+function loadTvRadioStation() {
+    return window.open($(".StationSelect").val());
 }
 
-function loadRadioStation() {
+/*function loadRadioStation() {
     return $("audio").attr({ src: $("#radioStationSelect").val(), preload: "auto" });
-}
+}*/
 
 function IzracunajNoviNovcaniIznos() {
     var h = $("#novcaniIznos").val();
