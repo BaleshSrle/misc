@@ -55,8 +55,12 @@ function login() {
     }
 }
 
-function loadTvRadioStation() {
-    return window.open($(".StationSelect").val());
+function loadTvStation() {
+    return window.open($("#TvStation").val());
+}
+
+function loadRadioStation() {
+    return window.open($("#RadioStation").val());
 }
 
 /*function loadRadioStation() {
