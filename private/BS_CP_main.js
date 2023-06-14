@@ -38,6 +38,7 @@ function login() {
         case passwords[1]:
             $("#loginModal").modal("hide");
             $("button#djevojkaDanaBtn").attr("disabled", "");
+            $("[data-target='#sluzbeni']").addClass("disabled");
             break;
         case !(passwords[0]):
         case !(passwords[1]):
