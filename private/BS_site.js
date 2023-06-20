@@ -2,12 +2,10 @@
 
 console.info("Skripta za web sajt je pokrenuta.");
 var siteURL = location.origin;
-var year = new Date().getFullYear();
 
 $("head").prepend("<base href="+siteURL+">");
-$("head").append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;"+year+"'>");
-$("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.77.2'>");
-$("#godina").text(year);
+$("head").append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;"+new Date().getFullYear()+"'>");
+$("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.79.2'>");
 
 var imgHost = $("img#hosting");
 

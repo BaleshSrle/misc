@@ -23,6 +23,7 @@ $("head").prepend("<link rel='stylesheet' href='https://fonts.googleapis.com/css
 $("head").prepend("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.min.css' crossorigin='anonymous' media='all'>");
 $("head").append("<link rel='icon' href='https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/images/logo.png'>");
 $("body").css("font-family", "Ubuntu");
+$("#godina").text(new Date().getFullYear());
 
 function reloadPage() {
     location.reload();
