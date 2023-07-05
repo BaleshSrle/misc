@@ -39,6 +39,7 @@ function login() {
             $("#loginModal").modal("hide");
             $("button#djevojkaDanaBtn").attr("disabled", "");
             $("[data-target='#sluzbeni']").addClass("disabled");
+            $("[title^='Boobpedia']").addClass("d-none");
             break;
         case !(passwords[0]):
         case !(passwords[1]):
