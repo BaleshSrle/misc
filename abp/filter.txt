@@ -165,6 +165,7 @@
 @@||nodejs.org^$elemhide
 @@||*script*.*^$elemhide
 @@||stackoverflow.com^$elemhide
+@@||makeuseof.com^$elemhide
 @@||accuweather.com^$elemhide, script
 @@||iqair.com^$script
 @@||emsc-csem.org^$elemhide
@@ -359,6 +360,7 @@
 @@||phncdn.com^$image
 @@||lushstories.com^$elemhide, image
 @@||sexcentrala.com^$elemhide, stylesheet, script
+@@||*.xxx^$elemhide
 @@||lisca.*^$elemhide, script, image
 @@||alma-ras.com^$elemhide
 @@||dunav.*^$elemhide, image
