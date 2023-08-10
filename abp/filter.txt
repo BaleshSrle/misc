@@ -565,6 +565,8 @@
 @@||airbus*.*^$elemhide, stylesheet, image
 @@||lockheedmartin.com^$elemhide
 @@||boeing.com^$elemhide
-saimse.com##.password_page
+saimse.com
+kodbakeff.com
+vodovodaddoboj.info !crna lista sa debelim razlogom
 w3schools.com#@#.sharethis
 oracle.com#@#.scl-icons
