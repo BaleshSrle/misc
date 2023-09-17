@@ -555,6 +555,7 @@
 @@||westernunion.com^$elemhide, image
 @@||logistics*.com^$elemhide
 @@||logisticsbusiness.com^$stylesheet, script
+@@||dhl.*^$elemhide
 @@||vicevi.net^$elemhide
 @@||*isic.*^$elemhide, image
 @@||freelancer.*^$elemhide

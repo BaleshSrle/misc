@@ -39,7 +39,7 @@ function login() {
             $("#loginModal").modal("hide");
             //$("button#djevojkaDanaBtn").attr("disabled", "");
             $("a#djevojkaDanaBtn").addClass("disabled");
-			$("[data-target='#sluzbeni']").addClass("disabled");
+            $("[data-target='#sluzbeni']").addClass("disabled");
             $("[title^='Boobpedia']").addClass("d-none");
             break;
         case !(passwords[0]):
@@ -48,13 +48,12 @@ function login() {
             alert("Unijeli ste pogrešnu lozinku.");
             break;
         case (""):
-            $(":password").val("");
+            $(":password").val("").focus();
             console.error(DateTimeLocal, ": Unos nije dozvoljen. Polje mora biti popunjeno.");
             alert("Unos nije dozvoljen.\nPolje mora biti popunjeno.");
             break;
         default:
-            $(":password").val("")
-            $(":password").focus();
+            $(":password").val("").focus();
     }
 }
 
