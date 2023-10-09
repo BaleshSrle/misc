@@ -56,6 +56,8 @@ jQuery(function($){
         ]
     });
 
+    $(".jkcubeslideshow").addClass("img-fluid");
+
 /*     $("#rss-feeds").rss(
         "https://certrs.org/feed/",
         {
