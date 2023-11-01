@@ -1,8 +1,10 @@
-"use strict";
+//"use strict";
 
 console.info("Skripta za kontolnu tablu je pokrenuta.");
 
 const DateTimeLocal = new Date().toLocaleString("sr-BA");
+
+var screenHeight = screen.availHeight;
 
 $("head").append("<meta http-equiv='refresh' content='1800'>");
 
@@ -11,9 +13,9 @@ $("head").append("<meta http-equiv='refresh' content='1800'>");
 }); */
 
 function login() {
-    //var a = $("#username");
-    //var b = $(":password");
-    //const user = { username: "djidjimilovich", password: "baleshevich88" };
+    /*var a = $("#username");
+    var b = $(":password");
+    const user = { username: "djidjimilovich", password: "baleshevich88" };*/
     const passwords = ["baleshevich88", "demo"];
 
     /* if (a.val() === "" && b.val() === "") {
@@ -65,14 +67,9 @@ function loadRadioStation() {
     return window.open($("#RadioStation").val());
 }
 
-/*function loadRadioStation() {
-    return $("audio").attr({ src: $("#radioStationSelect").val(), preload: "auto" });
-}*/
-
 function IzracunajNoviNovcaniIznos() {
     var h = $("#novcaniIznos").val();
     var k = $("#procenatIznos").val();
-    //var l = $("#vrstaObracunaNovca").val();
     var procenat = k / 100;
     var procenat2 = h * procenat;
 
@@ -85,16 +82,6 @@ function IzracunajNoviNovcaniIznos() {
             var rezUvecanje = +h + +procenat2;
             $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje + " KM.");
     }
-
-    /* if (l == "umanjenjeIznos") {
-        var rezUmanjenje = h - procenat2;
-        $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje + " KM.");
-    } else if (l == "uvecanjeIznos") {
-        var rezUvecanje = +h + +procenat2;
-        $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje + " KM.");
-    }
-    return true; */
-
 }
 
 function IzracunajDividendu() {
@@ -107,4 +94,8 @@ function IzracunajDividendu() {
 
 function loadURL() {
     return $("#urlOutput").attr("src", $("#url").val());
+}
+
+function imgApply() {
+    $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).css("rotate", $("#imgAngle").val() + 'deg').addClass("mx-auto d-block w-25 rounded-lg");
 }
