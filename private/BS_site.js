@@ -5,7 +5,7 @@ var siteURL = location.origin;
 
 $("head").prepend("<base href="+siteURL+">");
 $("head").append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;"+new Date().getFullYear()+"'>");
-$("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.82.2'>");
+$("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.84.0'>");
 
 var imgHost = $("img#hosting");
 
@@ -30,7 +30,7 @@ jQuery(function($){
         images: [
             [''+siteURL+'/images/MSE.png', 'https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download'],
             [''+siteURL+'/images/win_wallpaper.png', 'https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc'],
-            ['https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white&labelColor=555555', 'https://code.visualstudio.com']
+            ['https://img.shields.io/badge/Visual_Studio_Code-007acc?style=for-the-badge&logo=visualstudiocode&logoColor=white&labelColor=555555', 'https://code.visualstudio.com']
         ]
     });
 
