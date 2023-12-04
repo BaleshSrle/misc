@@ -12,10 +12,10 @@ var imgHost = $("img#hosting");
 switch (new Date().getMonth() + 1) {
     case 1:
     case 12:
-        imgHost.attr("src", "" + siteURL + "/images/dobojcaffe.png");
+        imgHost.attr("src", "https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/banner/img/dobojcaffe.png");
         break;
     default:
-        imgHost.attr("src", "" + siteURL + "/images/docaffe.jpg");
+        imgHost.attr("src", "https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/banner/img/docaffe.jpg");
 }
 
 var cubeshowvar1;
