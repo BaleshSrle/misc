@@ -358,8 +358,12 @@
 @@||tumblr.com^$subdocument
 @@||pornhub.com^$elemhide
 @@||phncdn.com^$image
+@@||fhm.com^$elemhide
+@@||penthouse.com^$elemhide
 @@||lushstories.com^$elemhide, image
 @@||sexcentrala.com^$elemhide, stylesheet, script
+@@||faponic.com^$elemhide
+@@||fitnakedgirls.com^$elemhide
 @@||*.xxx^$elemhide
 @@||lisca.*^$elemhide, script, image
 @@||alma-ras.com^$elemhide
