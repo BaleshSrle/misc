@@ -19,15 +19,16 @@ $("head").append("<meta http-equiv='Pragma' content='no-cache'>");
 $("head").append("<meta http-equiv='Expires' content='-1'>");
 $("head").prepend("<link rel='dns-prefetch' href='https://cdn.jsdelivr.net/'>");
 $("head").prepend("<link rel='dns-prefetch' href='https://fonts.gstatic.com'>");
-$("head").prepend("<link rel='preconnect' href='https://cdn.jsdelivr.net/' crossorigin='anonymous'>");
-$("head").prepend("<link rel='preconnect' href='https://fonts.googleapis.com' crossorigin='anonymous'>");
-$("head").prepend("<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin='anonymous'>");
+$("head").prepend("<link rel='preconnect' href='https://cdn.jsdelivr.net/'>");
+$("head").prepend("<link rel='preconnect' href='https://fonts.googleapis.com'>");
+$("head").prepend("<link rel='preconnect' href='https://fonts.gstatic.com'>");
 $("head").prepend("<link rel='prefetch' href='https://img.shields.io/'>");
 $("head").prepend("<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Ubuntu&display=swap' media='all'>");
-$("head").prepend("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.min.css' crossorigin='anonymous' media='all'>");
+$("head").prepend("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.min.css' media='all'>");
 $("head").append("<link rel='icon' href='https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/images/logo.png'>");
 $("body").css("font-family", "Ubuntu");
 $("#godina").text(new Date().getFullYear());
+$("[reL~='preconnect'],[href$='.min.css'],[src$='.min.js']").attr("crossorigin", "anonymous");
 
 function reloadPage() {
     location.reload();
