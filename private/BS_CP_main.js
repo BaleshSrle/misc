@@ -97,5 +97,5 @@ function loadURL() {
 }
 
 function imgApply() {
-    $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("rotate", $("#imgAngle").val() + 'deg').addClass("mx-auto d-block w-auto rounded-lg");
+    $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css({"rotate": $("#imgAngle").val() + 'deg', "transform": "rotate("+$("#imgAngle").val()+"deg)"}).addClass("mx-auto d-block w-auto rounded-lg");
 }
