@@ -1,71 +1,46 @@
 "use strict";
 
 console.info("Skripta za web sajt je pokrenuta.");
-var siteURL = location.origin;
-
-$("head").prepend("<base href=" + siteURL + ">");
-$("head").append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>");
-$("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.84.0'>");
-
-var imgHost = $("img#hosting");
-
-switch (new Date().getMonth() + 1) {
-    case 1:
-    case 12:
-        imgHost.attr("src", "https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/banner/img/dobojcaffe.png");
-        break;
-    default:
-        imgHost.attr("src", "https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/banner/img/docaffe.jpg");
-}
-
-var cubeshowvar1;
-var cubeshowvar2;
-var cubeshowvar3;
 
 jQuery(function ($) {
-    cubeshowvar1 = new jkcubeslideshow({
-        id: 'microsoft',
-        dimensions: [180, 84],
-        pause: 3000,
-        images: [
-            ['' + siteURL + '/images/MSE.png', 'https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download'],
-            ['' + siteURL + '/images/win_wallpaper.png', 'https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc'],
-            ['https://img.shields.io/badge/Visual_Studio_Code-007acc?style=for-the-badge&logo=visualstudiocode&logoColor=white&labelColor=555555', 'https://code.visualstudio.com']
-        ]
+    $("head").prepend("<base href=" + location.origin + ">");
+    $("head").append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>");
+    $("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.84.0'>");
+    switch (new Date().getMonth() + 1) {
+        case 1:
+        case 12:
+            $("img#hosting").attr("src", "https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/banner/img/dobojcaffe.png");
+            break;
+        default:
+            $("img#hosting").attr("src", "https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/banner/img/docaffe.jpg");
+    }
+    $("header").addClass("mb-sm-0 py-sm-2 overflow-hidden");
+    $(".breadcrumb").addClass("mb-1 py-1");
+    $(".navbar").addClass("py-sm-1");
+    $("li.nav-item a i.bi").addClass("pr-sm-1");
+    $("img").addClass("border-0").css("margin", "3px 0px");
+    $(".container-fluid").addClass("overflow-hidden mx-auto");
+    $("div.col-sm-3.col-xl-2:first").addClass("my-1 pr-md-2");
+    $("div.col-sm-3.col-xl-2:last").addClass("my-1 pl-md-2");
+    $("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");
+    $("#microsoft.carousel").addClass("carousel-fade").carousel({
+        interval: 3000,
+        keyboard: false,
+        touch: false
     });
-
-    cubeshowvar2 = new jkcubeslideshow({
-        id: 'internet',
-        dimensions: [180, 180],
-        pause: 2800,
-        images: [
-            ['' + siteURL + '/images/IDL_Shield_badge.png', 'https://internetdefenseleague.org'],
-            ['' + siteURL + '/images/World_IPv6_launch.png', 'https://www.worldipv6launch.org/'],
-            ['https://tools.ip2location.com/200x200.png', 'https://www.ip2location.com/free/widgets']
-        ]
+    $(".bi-skype,.bi-telegram,.bi-envelope,.bi-cone-striped").addClass("h2 align-middle");
+    $(".btn-vlc").css({ "background-color": "darkorange", "color": "white" });
+    $(".btn-vlc").hover(function () { $(this).css({ "background-color": "#d87600", "color": "white" }); }, function () { $(this).css({ "background-color": "darkorange", "color": "white" }); });
+    $("#internet.carousel").addClass("carousel-fade").carousel({
+        interval: 2800,
+        keyboard: false,
+        touch: false
     });
-
-    cubeshowvar3 = new jkcubeslideshow({
-        id: 'linux',
-        dimensions: [180, 180],
-        pause: 2900,
-        images: [
-            ['https://assets.ubuntu.com/v1/61f4fb91-release-widgetv5.jpg', 'http://ubunt.eu/zesty'],
-            ['' + siteURL + '/images/smalllxledark.png', 'https://lxle.net/'],
-            ['' + siteURL + '/images/serbian_debian.png', 'https://www.debian-srbija.iz.rs/']
-        ]
+    $("#linux.carousel").addClass("carousel-fade").carousel({
+        interval: 2900,
+        keyboard: false,
+        touch: false
     });
-
-    $(".jkcubeslideshow").addClass("img-fluid");
-
-    /*     $("#rss-feeds").rss(
-            "https://certrs.org/feed/",
-            {
-                limit: 5,
-                ssl: true,
-                support: false,
-                layoutTemplate: '<ul class="list-group list-group-flush">{entries}</ul>',
-                entryTemplate: '<li class="list-group-item small"><a href="{url}" target="_blank">{title}</a></li>'
-            }
-        );*/
-})
+    $("div#microsoft img,div#internet img,div#linux img").css("max-width", "180px").addClass("d-block mx-auto h-auto");
+    $("footer").addClass("mb-0 py-1 text-center small");
+});
