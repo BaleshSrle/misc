@@ -21,7 +21,9 @@ jQuery(function ($) {
     $("img").addClass("border-0").css("margin", "3px 0px");
     $(".container-fluid").addClass("overflow-hidden mx-auto");
     $("div.col-sm-3.col-xl-2:first").addClass("my-1 pr-md-2");
+    $("div.card.my-1.d-none.d-md-block:eq(0)").height(131.94);
     $("div.col-sm-3.col-xl-2:last").addClass("my-1 pl-md-2");
+    $("div.card.my-1.d-none.d-md-block:eq(1),div.card.my-1:last").height(228);
     $("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");
     $("img[src*='shields']:gt(1)").addClass("img-fluid my-0 mx-1 align-text-top");
     $("img[alt*='Joomla']:eq(0),img[alt*='Bootstrap']:eq(0),img[alt*='WordPress'],img[alt*='jQuery']").removeClass("mx-1").addClass("ml-1 mr-0");
