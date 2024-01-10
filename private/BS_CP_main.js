@@ -1,13 +1,5 @@
 //"use strict";
 
-console.info("Skripta za kontolnu tablu je pokrenuta.");
-
-const DateTimeLocal = new Date().toLocaleString("sr-BA");
-
-var screenHeight = screen.availHeight;
-
-$("head").append("<meta http-equiv='refresh' content='1800'>");
-
 /* $("body").on("error", function () {
     $(this).css({ "font-family": "'Ubuntu', sans-serif", "background": "url('https://baleshevich.dobojcaffe.com/itp100/images/logo.png') no-repeat fixed left bottom" });
 }); */
@@ -100,3 +92,67 @@ function imgApply() {
     $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg");
     //$("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css({"rotate": $("#imgAngle").val() + 'deg', "transform": "rotate("+$("#imgAngle").val()+"deg)"}).addClass("mx-auto d-block w-auto rounded-lg");
 }
+
+$(document).ready(function () {
+    console.info("Skripta za kontolnu tablu je pokrenuta.");
+    const DateTimeLocal = new Date().toLocaleString("sr-BA");
+    $("head").append("<meta http-equiv='refresh' content='1800'>");
+    $("#loginModal").modal({
+        backdrop: 'static',
+        keyboard: false,
+        focus: true,
+        show: true
+    });
+    $("#loginModal").on("hidden.bs.modal", function (event) {
+        console.clear();
+        "use strict";
+    });
+    $("#time,#vicdana,#weather,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
+        backdrop: 'static',
+        keyboard: false,
+        focus: false,
+        show: false
+    });
+    $(".collapse").collapse({
+        parent: "#accordionControlPanel",
+        toggle: false
+    });
+    $("[src*='simpleicons'],[alt='BaleshSrle Logo']").height(32).width(32);
+    //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
+    $("[src*='twitch']").attr("src", function (index, src) { return src + '?style=plastic&logo=twitch&logoColor=white&label=Twitch&labelColor=9146ff' });
+    $("[src*='steampowered']").addClass("mx-auto d-block border-0").attr({ "height": "190", "width": "646", "loading": "lazy" });
+    $("[src*='IssuerChart']").addClass("mx-auto d-block border-0 mw-100 overflow-hidden");
+    $(".carousel").carousel({
+        interval: 3000,
+        keyboard: false,
+        touch: false
+    });
+    $("nav.navbar").css({ "background-color": "#adb5bd", "padding": "2px 16px" });
+    $("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2");
+    $("div.modal-header:eq(8),div.modal-header:lt(14):gt(9)").addClass("p-0 d-lg-none");
+    $("div.modal-header:lt(8):gt(0),div.modal-header:eq(9)").addClass("py-0 pr-0");
+    $("div.modal-header:eq(14)").addClass("py-0 pr-0 d-lg-none");
+    $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-body:eq(9),div.modal-footer,div.card-body:eq(10),div.card-body:eq(18)").addClass("py-1");
+    $("h5.modal-title:gt(0)").addClass("mt-1");
+    $("div.modal-body:eq(8),div.card-body:eq(6),div.card-body:eq(17)").addClass("p-0");
+    $("div.modal-body:eq(12),div.modal-body:eq(13),div.card-body:eq(8),div.card-body:eq(9),div.card-body:eq(19),div.card-body:eq(20)").addClass("p-1");
+    $("div.modal-body:eq(14),div.modal-body:eq(15),div.card:eq(2),div.card-body:eq(5),div.card-body:eq(11),div.card-body:eq(12),div.card-body:eq(14),div.list-group:eq(5)").addClass("p-2");
+    $("div.card-header:eq(0),div.card-header:eq(7),div.card-header:eq(18),div.card-header:eq(23),div.modal-body:eq(1),div.modal-body:eq(3),div.modal-body:eq(10)").addClass("py-2");
+    $("div.card.card-body").addClass("px-2 py-3 rounded-0 border-top-0 border-bottom-0");
+    $("div.card:eq(5)").addClass("border-0 w-auto");
+    $("div.card:eq(12)").addClass("border-0 d-none d-md-block");
+    $("h6.card-subtitle").addClass("mb-1 text-muted font-weight-bold font-italic");
+    $("h6:gt(1)").addClass("mb-0");
+    $("h6:gt(19)").addClass("text-wrap");
+    $("div.card-header:lt(4):gt(0)").addClass("text-white border-bottom");
+    $("div.card-body:eq(1),div.card-body:eq(7),div.card-body:eq(16)").addClass("p-3");
+    $("div.card-body:lt(5):gt(1),div.card-body:eq(13),div.card-body:eq(15)").addClass("px-1 py-2");
+    $("div.card-body:eq(9),div.card-body:eq(10),div.card-body:eq(16)").addClass("text-center");
+    $("div.card-body:eq(18)").addClass("mx-auto");
+    $("div.card-body:eq(21)").addClass("px-0 pt-1 pb-0");
+    $("div.card-footer").addClass("text-muted text-right");
+    $("div.list-group.list-group-flush:eq(1),div.list-group.list-group-flush:eq(2)").addClass("overflow-auto");
+    $("div.col:even").addClass("pr-xl-1");
+    $("div.col:odd").addClass("pl-xl-1");
+    $("div.col:eq(2)").addClass("d-none d-md-block");
+});
