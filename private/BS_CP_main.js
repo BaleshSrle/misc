@@ -141,15 +141,20 @@ $(document).ready(function () {
     $("div.card.card-body").addClass("px-2 py-3 rounded-0 border-top-0 border-bottom-0");
     $("div.card:eq(5)").addClass("border-0 w-auto");
     $("div.card:eq(12)").addClass("border-0 d-none d-md-block");
-    $("h6.card-subtitle").addClass("mb-1 text-muted font-weight-bold font-italic");
-    $("h6:gt(1)").addClass("mb-0");
+    $("h6.card-subtitle").addClass("text-muted font-weight-bold font-italic");
+    $("h6:gt(1),p.card-text:eq(2),p.card-text:eq(5),div.input-group:eq(4),div.input-group:eq(5)").addClass("mb-0");
     $("h6:gt(19)").addClass("text-wrap");
+    $("div.input-group:eq(0),div.input-group:eq(1)").addClass("mb-2 mr-sm-2");
+    $("div.input-group:eq(2),div.input-group:eq(2)").addClass("mb-3");
     $("div.card-header:lt(4):gt(0)").addClass("text-white border-bottom");
     $("div.card-body:eq(1),div.card-body:eq(7),div.card-body:eq(16)").addClass("p-3");
     $("div.card-body:lt(5):gt(1),div.card-body:eq(13),div.card-body:eq(15)").addClass("px-1 py-2");
     $("div.card-body:eq(9),div.card-body:eq(10),div.card-body:eq(16)").addClass("text-center");
-    $("div.card-body:eq(18)").addClass("mx-auto");
+    $("div.card-body:eq(18),div.btn-group-vertical").addClass("mx-auto");
+    $("div.btn-group-vertical").addClass("my-1");
+    $("div.btn-group-vertical:eq(3)").addClass("mw-100");
     $("div.card-body:eq(21)").addClass("px-0 pt-1 pb-0");
+    $("h6.card-subtitle,p.card-text:eq(0),p.card-text:eq(1),p.card-text:eq(3),p.card-text:eq(4)").addClass("mb-1")
     $("div.card-footer").addClass("text-muted text-right");
     $("div.list-group.list-group-flush:eq(1),div.list-group.list-group-flush:eq(2)").addClass("overflow-auto");
     $("div.col:even").addClass("pr-xl-1");
