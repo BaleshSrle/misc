@@ -119,7 +119,7 @@ $(document).ready(function () {
     });
     $("[src*='simpleicons'],[alt='BaleshSrle Logo']").height(32).width(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
-    $("[src*='twitch']").attr("src", function (index, src) { return src + '?style=plastic&logo=twitch&logoColor=white&label=Twitch&labelColor=9146ff' });
+    $("img[src*='twitch']").attr({ "src": function (index, src) { return src + '?style=plastic&logo=twitch&logoColor=white&label=Twitch&labelColor=9146ff' }, "alt": "Twitch Status" });
     $("[src*='steampowered']").addClass("mx-auto d-block border-0").attr({ "height": "190", "width": "646", "loading": "lazy" });
     $("[src*='IssuerChart']").addClass("mx-auto d-block border-0 mw-100 overflow-hidden");
     $(".carousel").carousel({
@@ -128,6 +128,11 @@ $(document).ready(function () {
         touch: false
     });
     $("nav.navbar").css({ "background-color": "#adb5bd", "padding": "2px 16px" });
+    $("a.nav-link i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
+    $("a.nav-link span").addClass("pl-1 d-md-none");
+    $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
+    $("i.bi-laptop,i.bi-laptop,i.bi-phone,i.bi-tablet,i.bi-image,i.bi-snapchat,i.bi-telegram,i.bi-facebook,i.bi-messenger,i.bi-instagram,i.bi-threads,i.bi-whatsapp").css("font-size", "xx-large");
+    $("i.bi-mailbox,i.bi-headset,i.bi-hourglass-split,i.bi-globe,i.bi-bug,i.bi-kanban,i.bi-stopwatch,i.bi-briefcase,i.bi-easel,i.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
     $("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2");
     $("div.modal-header:eq(8),div.modal-header:lt(14):gt(9)").addClass("p-0 d-lg-none");
     $("div.modal-header:lt(8):gt(0),div.modal-header:eq(9)").addClass("py-0 pr-0");
