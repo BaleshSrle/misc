@@ -25,7 +25,7 @@ $("head").prepend("<link rel='preconnect' href='https://fonts.gstatic.com'>");
 $("head").prepend("<link rel='prefetch' href='https://img.shields.io/'>");
 $("head").prepend("<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Ubuntu&display=swap' media='all'>");
 $("head").prepend("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.min.css' media='all'>");
-$("head").append("<link rel='icon' href='https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/images/logo.png'>");
+$("head").append("<link rel='icon' href='https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io@main/images/logo.png'>");
 $("body").css("font-family", "Ubuntu");
 $("#godina").text(new Date().getFullYear());
 $("[reL~='preconnect'],[href$='.min.css'],[src$='.min.js']").attr("crossorigin", "anonymous");
