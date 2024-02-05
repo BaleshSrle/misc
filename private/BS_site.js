@@ -51,5 +51,5 @@ jQuery(function ($) {
     });
     $("div#microsoft img,div#internet img,div#linux img").css("max-width", "180px").addClass("d-block mx-auto h-auto");
     $("footer").addClass("mb-0 py-1 text-center small");
-    $("img[alt='Microsoft Visual Studio Code'],img[alt='Microsoft Visual Studio Code'],img[alt='HTML5'],img[alt='CSS'], img[alt='Font Awesome'],footer img").addClass("my-0 mx-1 align-text-top").removeAttr("style");
+    $("img[alt='Microsoft Visual Studio Code'],img[alt='HTML5'],img[alt='CSS'],img[alt='Font Awesome'],footer img").addClass("my-0 mx-1 align-text-top").removeAttr("style");
 });
