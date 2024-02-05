@@ -26,8 +26,7 @@ jQuery(function ($) {
     $("div.col-sm-3.col-xl-2:last").addClass("my-1 pl-md-2");
     $("div.card.my-1.d-none.d-md-block:eq(1),div.card.my-1:last").height(228);
     $("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");
-    $("img[src*='shields']:gt(1)").addClass("img-fluid my-0 mx-1 align-text-top");
-    $("img[alt*='Joomla']:eq(0),img[alt*='Bootstrap']:eq(0),img[alt*='WordPress'],img[alt*='jQuery'],img[alt*='CCleaner']").removeClass("mx-1").addClass("ml-1 mr-0");
+    $("img[alt*='Joomla']:eq(0),img[alt*='Bootstrap']:eq(0),img[alt*='WordPress'],img[alt*='jQuery'],img[alt*='CCleaner']").addClass("my-0 ml-1 mr-0 align-text-top").removeAttr("style");
     $("#microsoft.carousel").addClass("carousel-fade").carousel({
         interval: 3000,
         keyboard: false,
@@ -36,7 +35,7 @@ jQuery(function ($) {
     $("div.btn-toolbar").addClass("d-flex justify-content-center flex-row flex-fill");
     $("div.btn-group.btn-group-lg:first").addClass("pr-xl-1 py-1");
     $("div.btn-group.btn-group-lg:last").addClass("pl-xl-1 py-1 d-none d-md-block");
-    
+
     $(".bi-skype,.bi-telegram,.bi-envelope,.bi-cone-striped").addClass("h2 align-middle");
     $(".btn-vlc").css({ "background-color": "darkorange", "color": "white" });
     $(".btn-vlc").hover(function () { $(this).css({ "background-color": "#d87600", "color": "white" }); }, function () { $(this).css({ "background-color": "darkorange", "color": "white" }); });
@@ -52,4 +51,5 @@ jQuery(function ($) {
     });
     $("div#microsoft img,div#internet img,div#linux img").css("max-width", "180px").addClass("d-block mx-auto h-auto");
     $("footer").addClass("mb-0 py-1 text-center small");
+    $("img[alt='Microsoft Visual Studio Code'],img[alt='Microsoft Visual Studio Code'],img[alt='HTML5'],img[alt='CSS'], img[alt='Font Awesome'],footer img").addClass("my-0 mx-1 align-text-top").removeAttr("style");
 });
