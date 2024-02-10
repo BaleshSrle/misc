@@ -97,7 +97,7 @@ $(document).ready(function () {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
     const DateTimeLocal = new Date().toLocaleString("sr-BA");
     $("head").append("<meta http-equiv='refresh' content='1800'>");
-    $("#loginModal").modal({
+    $("#loginModal").attr({ "tabindex": "-1", "role": "dialog" }).modal({
         backdrop: 'static',
         keyboard: false,
         focus: true,
@@ -107,7 +107,7 @@ $(document).ready(function () {
         console.clear();
         "use strict";
     });
-    $("#time,#vicdana,#weather,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
+    $("#time,#vicdana,#weather,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").attr({ "tabindex": "-1", "role": "dialog" }).modal({
         backdrop: 'static',
         keyboard: false,
         focus: false,
