@@ -167,5 +167,7 @@ $(document).ready(function () {
     $("div.col:odd").addClass("pl-xl-1");
     $("div.col:eq(2)").addClass("d-none d-md-block");
     $("div#tvguide2 div.card-body div.mojtvprogram").addClass("mx-2 my-3 px-1");
-    $("input[type='number']").attr("inputmode", "numeric");
+    $("input[type='number']:even").attr("inputmode", "decimal");
+    $("input[type='number']:odd").attr("inputmode", "numeric");
+    $("input[type='url']").attr("inputmode", "url");
 });
