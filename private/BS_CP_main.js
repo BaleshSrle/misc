@@ -97,7 +97,8 @@ $(document).ready(function () {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
     const DateTimeLocal = new Date().toLocaleString("sr-BA");
     $("head").append("<meta http-equiv='refresh' content='1800'>");
-    $("#loginModal").attr({ "tabindex": "-1", "role": "dialog" }).modal({
+    $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
+    $("#loginModal").modal({
         backdrop: 'static',
         keyboard: false,
         focus: true,
@@ -107,13 +108,13 @@ $(document).ready(function () {
         console.clear();
         "use strict";
     });
-    $("#time,#vicdana,#weather,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").attr({ "tabindex": "-1", "role": "dialog" }).modal({
+    $("#time,#vicdana,#weather,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
         backdrop: 'static',
         keyboard: false,
         focus: false,
         show: false
     });
-    $(".collapse").collapse({
+    $("div.collapse").collapse({
         parent: "#accordionControlPanel",
         toggle: false
     });
@@ -122,9 +123,10 @@ $(document).ready(function () {
     $("img[src*='twitch']").attr({ "src": function (index, src) { return src + '?style=plastic&logo=twitch&logoColor=white&label=Twitch&labelColor=9146ff' }, "alt": "Twitch Status" });
     $("[src*='steampowered']").addClass("mx-auto d-block border-0").attr({ "height": "190", "width": "646", "loading": "lazy" });
     $("[src*='IssuerChart']").addClass("mx-auto d-block border-0 mw-100 overflow-hidden");
-    $(".carousel").carousel({
+    $("div.carousel").addClass("carousel-fade").carousel({
         interval: 3000,
         keyboard: false,
+        ride: 'carousel',
         touch: false
     });
     $("nav.navbar").css({ "background-color": "#adb5bd", "padding": "2px 16px" });
@@ -135,6 +137,7 @@ $(document).ready(function () {
     $("i.bi-laptop,i.bi-laptop,i.bi-phone,i.bi-tablet,i.bi-image,i.bi-snapchat,i.bi-telegram,i.bi-facebook,i.bi-messenger,i.bi-instagram,i.bi-threads,i.bi-whatsapp").css("font-size", "xx-large");
     $("i.bi-mailbox,i.bi-headset,i.bi-hourglass-split,i.bi-globe,i.bi-bug,i.bi-kanban,i.bi-stopwatch,i.bi-briefcase,i.bi-easel,i.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
     $("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2");
+    $("button.btn.btn-info,button.btn.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     $("div.modal-header:eq(8),div.modal-header:lt(14):gt(9),div.modal-header:eq(15)").addClass("p-0 d-lg-none");
     $("div.modal-header:lt(8):gt(0),div.modal-header:eq(9)").addClass("py-0 pr-0");
     $("div.modal-header:eq(14)").addClass("py-0 pr-0 d-lg-none");
@@ -147,11 +150,6 @@ $(document).ready(function () {
     $("div.card.card-body").addClass("px-2 py-3 rounded-0 border-top-0 border-bottom-0");
     $("div.card:eq(5)").addClass("border-0 w-auto");
     $("div.card:eq(12)").addClass("border-0 d-none d-md-block");
-    $("h6.card-subtitle").addClass("text-muted font-weight-bold font-italic");
-    $("h6:gt(1),p.card-text:eq(2),p.card-text:eq(5),div.input-group:eq(4),div.input-group:eq(5)").addClass("mb-0");
-    $("h6:gt(19)").addClass("text-wrap");
-    $("div.input-group:eq(0),div.input-group:eq(1)").addClass("mb-2 mr-sm-2");
-    $("div.input-group:eq(2),div.input-group:eq(2)").addClass("mb-3");
     $("div.card-header:lt(4):gt(0)").addClass("text-white border-bottom");
     $("div.card-body:eq(1),div.card-body:eq(7),div.card-body:eq(16)").addClass("p-3");
     $("div.card-body:lt(5):gt(1),div.card-body:eq(13),div.card-body:eq(15)").addClass("px-1 py-2");
@@ -167,6 +165,12 @@ $(document).ready(function () {
     $("div.col:odd").addClass("pl-xl-1");
     $("div.col:eq(2)").addClass("d-none d-md-block");
     $("div#tvguide2 div.card-body div.mojtvprogram").addClass("mx-2 my-3 px-1");
+    $("h6.card-subtitle").addClass("text-muted font-weight-bold font-italic");
+    $("h6:gt(1),p.card-text:eq(2),p.card-text:eq(5),div.input-group:eq(4),div.input-group:eq(5)").addClass("mb-0");
+    $("h6:gt(19)").addClass("text-wrap");
+    $("div.input-group:eq(0),div.input-group:eq(1)").addClass("mb-2 mr-sm-2");
+    $("div.input-group:eq(2),div.input-group:eq(3)").addClass("mb-3");
+    $("input[type='text'],input[type='password'],input[type='number'],input[type='url'],select[id*='Station'],select#imgAngle,select#vrstaObracunaNovca").addClass("form-control");
     $("input[type='number']:even").attr("inputmode", "decimal");
     $("input[type='number']:odd").attr("inputmode", "numeric");
     $("input[type='url']").attr("inputmode", "url");
