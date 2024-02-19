@@ -28,7 +28,7 @@ $("head").prepend("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boo
 $("head").append("<link rel='icon' href='https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io@main/images/logo.png'>");
 $("body").css("font-family", "Ubuntu");
 $("#godina").text(new Date().getFullYear());
-$("[rel~='preconnect'],[href$='.min.css'],[src$='.min.js']").attr("crossorigin", "anonymous");
+$("[rel='preconnect'],[href$='.min.css'],[src$='.min.js']").attr("crossorigin", "anonymous");
 
 function reloadPage() {
     location.reload();
