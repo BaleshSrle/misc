@@ -93,6 +93,10 @@ function imgApply() {
     //$("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css({"rotate": $("#imgAngle").val() + 'deg', "transform": "rotate("+$("#imgAngle").val()+"deg)"}).addClass("mx-auto d-block w-auto rounded-lg");
 }
 
+function playKickStreamer() {
+    $("iframe#KickPlayer").attr({ "src": function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
+}
+
 $(document).ready(function () {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
     const DateTimeLocal = new Date().toLocaleString("sr-BA");
@@ -138,7 +142,7 @@ $(document).ready(function () {
     $("i.bi-mailbox,i.bi-headset,i.bi-hourglass-split,i.bi-globe,i.bi-bug,i.bi-kanban,i.bi-stopwatch,i.bi-briefcase,i.bi-easel,i.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
     $("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2");
     $("button.btn.btn-info,button.btn.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
-    $("div.modal-header:eq(8),div.modal-header:lt(14):gt(9),div.modal-header:eq(15)").addClass("p-0 d-lg-none");
+    $("div.modal-header:eq(8),div.modal-header:lt(14):gt(9),div.modal-header:gt(14)").addClass("p-0 d-lg-none");
     $("div.modal-header:lt(8):gt(0),div.modal-header:eq(9)").addClass("py-0 pr-0");
     $("div.modal-header:eq(14)").addClass("py-0 pr-0 d-lg-none");
     $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-body:eq(9),div.modal-footer,div.card-body:eq(10),div.card-body:eq(18)").addClass("py-1");
