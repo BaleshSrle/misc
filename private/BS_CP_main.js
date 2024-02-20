@@ -93,6 +93,11 @@ function imgApply() {
     //$("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css({"rotate": $("#imgAngle").val() + 'deg', "transform": "rotate("+$("#imgAngle").val()+"deg)"}).addClass("mx-auto d-block w-auto rounded-lg");
 }
 
+function playTwitchStreamer() {
+    $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + $("select#TwitchUsername").val() + '&parent=' + location.host }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
+    $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + $("select#TwitchUsername").val() + '/chat?parent=' + location.host }, "allowfullscreen": "true" }).height(500).width(350).addClass("border-0 overflow-hidden rounded-lg");
+}
+
 function playKickStreamer() {
     $("iframe#KickPlayer").attr({ "src": function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
 }
@@ -158,7 +163,8 @@ $(document).ready(function () {
     $("div.card-body:eq(1),div.card-body:eq(7),div.card-body:eq(16)").addClass("p-3");
     $("div.card-body:lt(5):gt(1),div.card-body:eq(13),div.card-body:eq(15)").addClass("px-1 py-2");
     $("div.card-body:eq(9),div.card-body:eq(10),div.card-body:eq(16)").addClass("text-center");
-    $("div.card-body:eq(18),div.btn-group-vertical").addClass("mx-auto");
+    $("div.row:eq(1),div.card-body:eq(18),div.btn-group-vertical").addClass("mx-auto");
+    $("div.col-sm-8,div.col-sm-4").addClass("px-2");
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical:eq(3)").addClass("mw-100");
     $("div.card-body:eq(21)").addClass("px-0 pt-1 pb-0");
