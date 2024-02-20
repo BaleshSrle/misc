@@ -153,7 +153,7 @@ $(document).ready(function () {
     $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-body:eq(9),div.modal-footer,div.card-body:eq(10),div.card-body:eq(18)").addClass("py-1");
     $("h5.modal-title:gt(0)").addClass("mt-1");
     $("div.modal-body:eq(8),div.card-body:eq(6),div.card-body:eq(17)").addClass("p-0");
-    $("div.modal-body:eq(12),div.modal-body:eq(13),div.card-body:eq(8),div.card-body:eq(9),div.card-body:eq(19),div.card-body:eq(20)").addClass("p-1");
+    $("img[src*='twitch'],div.modal-body:eq(12),div.modal-body:eq(13),div.card-body:eq(8),div.card-body:eq(9),div.card-body:eq(19),div.card-body:eq(20)").addClass("p-1");
     $("div.modal-body:eq(14),div.modal-body:eq(15),div.card:eq(2),div.card-body:eq(5),div.card-body:eq(11),div.card-body:eq(12),div.card-body:eq(14),div.list-group:eq(5),div.list-group:eq(6)").addClass("p-2");
     $("div.card-header:eq(0),div.card-header:eq(7),div.card-header:eq(18),div.card-header:eq(23),div.modal-body:eq(1),div.modal-body:eq(3),div.modal-body:eq(10)").addClass("py-2");
     $("div.card.card-body").addClass("px-2 py-3 rounded-0 border-top-0 border-bottom-0");
