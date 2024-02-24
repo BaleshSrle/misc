@@ -129,7 +129,7 @@ $(document).ready(function () {
     });
     $("[src*='simpleicons'],[alt='BaleshSrle Logo']").height(32).width(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
-    $("img[src*='twitch']").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff' }, "alt": "Twitch Status" });
+    $("img[src*='twitch']").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=600' }, "alt": "Twitch Status" });
     $("[src*='steampowered']").addClass("mx-auto d-block border-0").attr({ "height": "190", "width": "646", "loading": "lazy" });
     $("[src*='IssuerChart']").addClass("mx-auto d-block border-0 mw-100 overflow-hidden");
     $("div.carousel").addClass("carousel-fade").carousel({
