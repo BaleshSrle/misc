@@ -106,6 +106,7 @@ $(document).ready(function () {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
     const DateTimeLocal = new Date().toLocaleString("sr-BA");
     $("head").append("<meta http-equiv='refresh' content='1800'>");
+    $("div.accordion").addClass("mt-3")
     $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
     $("#loginModal").modal({
         backdrop: 'static',
@@ -117,7 +118,7 @@ $(document).ready(function () {
         console.clear();
         "use strict";
     });
-    $("#time,#vicdana,#weather,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
+    $("#time,#vicdana,#weather,#livescore,#FIBAlivescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
         backdrop: 'static',
         keyboard: false,
         focus: false,
@@ -131,8 +132,10 @@ $(document).ready(function () {
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img[src*='twitch']").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=600' }, "alt": "Twitch Status" });
     $("img[src*='website'],img[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
-    $("[src*='steampowered']").addClass("mx-auto d-block border-0").attr({ "height": "190", "width": "646", "loading": "lazy" });
-    $("[src*='IssuerChart']").addClass("mx-auto d-block border-0 mw-100 overflow-hidden");
+    $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
+    $("[src*='fibacarousel']").attr("height", "263").addClass("w-100 overflow-hidden");
+    $("[src*='steampowered']").attr({ "height": "190", "width": "646" });
+    $("[src*='IssuerChart']").addClass("mw-100 overflow-hidden");
     $("div.carousel").addClass("carousel-fade").carousel({
         interval: 3000,
         keyboard: false,
@@ -148,36 +151,28 @@ $(document).ready(function () {
     $("i.bi-mailbox,i.bi-headset,i.bi-hourglass-split,i.bi-globe,i.bi-bug,i.bi-kanban,i.bi-stopwatch,i.bi-briefcase,i.bi-easel,i.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
     $("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2");
     $("button.btn.btn-info,button.btn.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
-    $("div.modal-header:eq(8),div.modal-header:lt(14):gt(9),div.modal-header:gt(14)").addClass("p-0 d-lg-none");
+    $("div.modal-header:gt(7)").addClass("d-lg-none");
+    $("div.modal-header:eq(8),div.modal-header:lt(14):gt(9),div.modal-header:gt(14)").addClass("p-0");
     $("div.modal-header:lt(8):gt(0),div.modal-header:eq(9)").addClass("py-0 pr-0");
-    $("div.modal-header:eq(14)").addClass("py-0 pr-0 d-lg-none");
-    $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-body:eq(9),div.modal-footer,div.card-body:eq(10),div.card-body:eq(18)").addClass("py-1");
+    $("div.modal-header:eq(14)").addClass("py-0 pr-0");
+    $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-footer").addClass("py-1");
     $("h5.modal-title:gt(0)").addClass("mt-1");
-    $("div.modal-body:eq(8),div.card-body:eq(6),div.card-body:eq(17)").addClass("p-0");
-    $("img[src*='twitch'],div.modal-body:eq(13),div.card-body:eq(8),div.card-body:eq(9),div.card-body:eq(19),div.card-body:eq(20)").addClass("p-1");
-    $("div.modal-body:eq(12),div.modal-body:eq(14),div.modal-body:eq(15),div.card:eq(2),div.card-body:eq(5),div.card-body:eq(11),div.card-body:eq(12),div.card-body:eq(14),div.list-group:eq(5),div.list-group:eq(6)").addClass("p-2");
-    $("div.card-header:eq(0),div.card-header:eq(7),div.card-header:eq(18),div.card-header:eq(23),div.modal-body:eq(1),div.modal-body:eq(3),div.modal-body:eq(10)").addClass("py-2");
-    $("div.card.card-body").addClass("px-2 py-3 rounded-0 border-top-0 border-bottom-0");
-    $("div.card:eq(5)").addClass("border-0 w-auto");
-    $("div.card:eq(12)").addClass("border-0 d-none d-md-block");
-    $("div.card-header:lt(4):gt(0)").addClass("text-white border-bottom");
-    $("div.card-body:eq(1),div.card-body:eq(7),div.card-body:eq(16)").addClass("p-3");
-    $("div.card-body:lt(5):gt(1),div.card-body:eq(13),div.card-body:eq(15)").addClass("px-1 py-2");
-    $("div.card-body:eq(9),div.card-body:eq(10),div.card-body:eq(16)").addClass("text-center");
-    $("div.row:eq(1),div.card-body:eq(18),div.btn-group-vertical").addClass("mx-auto");
+    $("div.modal-body:eq(8),div.modal-body:eq(9),div.modal-body:eq(14)").addClass("p-0");
+    $("img[src*='twitch'],div.modal-body:eq(13)").addClass("p-1");
+    $("div.modal-body:eq(12),div.modal-body:eq(15)").addClass("p-2");
+    $("div.modal-body:eq(1),div.modal-body:eq(3),div.modal-body:eq(10)").addClass("py-2");
+    $("div.row:eq(1),div.btn-group-vertical").addClass("mx-auto");
     $("div.col-sm-8,div.col-sm-4").addClass("px-2");
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical:eq(3)").addClass("mw-100");
-    $("div.card-body:eq(21)").addClass("px-0 pt-1 pb-0");
-    $("h6.card-subtitle,p.card-text:eq(0),p.card-text:eq(1),p.card-text:eq(3),p.card-text:eq(4)").addClass("mb-1")
     $("div.card-footer").addClass("text-muted text-right");
-    $("div.list-group.list-group-flush:eq(1),div.list-group.list-group-flush:eq(2)").addClass("overflow-auto");
+    $("div.list-group.list-group-flush:gt(0)").addClass("overflow-auto");
     $("div.col:even").addClass("pr-xl-1");
     $("div.col:odd").addClass("pl-xl-1");
     $("div.col:eq(2)").addClass("d-none d-md-block");
     $("div#tvguide2 div.card-body div.mojtvprogram").addClass("mx-2 my-3 px-1");
-    $("h6.card-subtitle").addClass("text-muted font-weight-bold font-italic");
-    $("h6:gt(1),p.card-text:eq(2),p.card-text:eq(5),div.input-group:eq(4),div.input-group:eq(5)").addClass("mb-0");
+    $("h6.card-subtitle").addClass("mb-1 text-muted font-weight-bold font-italic");
+    $("h2,h6:gt(1),p.card-text:eq(2),p.card-text:eq(5),div.input-group:eq(4),div.input-group:eq(5)").addClass("mb-0");
     $("h6:gt(19)").addClass("text-wrap");
     $("div.input-group:eq(0),div.input-group:eq(1)").addClass("mb-2 mr-sm-2");
     $("div.input-group:eq(2),div.input-group:eq(3)").addClass("mb-3");
