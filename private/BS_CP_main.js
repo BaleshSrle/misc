@@ -68,11 +68,11 @@ function IzracunajNoviNovcaniIznos() {
     switch ($("#vrstaObracunaNovca").val()) {
         case "umanjenjeIznos":
             var rezUmanjenje = h - procenat2;
-            $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje + " KM.");
+            $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje.toFixed(2) + " KM.");
             break;
         case "uvecanjeIznos":
             var rezUvecanje = +h + +procenat2;
-            $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje + " KM.");
+            $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje.toFixed(2) + " KM.");
     }
 }
 
