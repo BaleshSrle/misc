@@ -158,8 +158,8 @@ $(document).ready(function () {
     $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-footer").addClass("py-1");
     $("h5.modal-title:gt(0)").addClass("mt-1");
     $("div.modal-body:eq(8),div.modal-body:eq(9),div.modal-body:eq(14)").addClass("p-0");
-    $("img[src*='twitch'],div.modal-body:eq(13)").addClass("p-1");
-    $("div.modal-body:eq(12),div.modal-body:eq(15)").addClass("p-2");
+    $("img[src*='twitch']").addClass("p-1");
+    $("div.modal-body:eq(12),div.modal-body:eq(13),div.modal-body:eq(15)").addClass("p-2");
     $("div.modal-body:eq(1),div.modal-body:eq(3),div.modal-body:eq(10)").addClass("py-2");
     $("div.row:eq(1),div.btn-group-vertical").addClass("mx-auto");
     $("div.col-sm-8,div.col-sm-4").addClass("px-2");
