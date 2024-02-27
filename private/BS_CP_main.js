@@ -108,7 +108,7 @@ $(document).ready(function () {
     $("head").append("<meta http-equiv='refresh' content='1800'>");
     $("div.accordion").addClass("mt-3")
     $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
-    $("#loginModal").addClass("bg-dark").modal({
+    $("#loginModal").addClass("bg-secondary").modal({
         backdrop: 'static',
         keyboard: false,
         focus: true,
