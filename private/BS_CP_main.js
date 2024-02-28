@@ -108,7 +108,7 @@ $(document).ready(function () {
     $("head").append("<meta http-equiv='refresh' content='1800'>");
     $("div.accordion").addClass("mt-3")
     $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
-    $("#loginModal").addClass("bg-secondary").modal({
+    $("#loginModal").show("fast").addClass("bg-secondary").modal({
         backdrop: 'static',
         keyboard: false,
         focus: true,
@@ -170,7 +170,7 @@ $(document).ready(function () {
     $("div.btn-group-vertical:eq(3)").addClass("mw-100");
     $("div.card-footer").addClass("text-muted text-right");
     $("div.list-group.list-group-flush:gt(0)").addClass("overflow-auto");
-    $("div.aw-more-content#aw-ad-container").addClass("d-none");
+    $("div.aw-more-content#aw-ad-container").hide();
     $("div#tvguide2 div.card-body div.mojtvprogram").addClass("mx-2 my-3 px-1");
     $("h6.card-subtitle").addClass("mb-1 text-muted font-weight-bold font-italic");
     $("h2,h6:gt(1),p.card-text:eq(2),p.card-text:eq(5),div.input-group:eq(4),div.input-group:eq(5)").addClass("mb-0");
