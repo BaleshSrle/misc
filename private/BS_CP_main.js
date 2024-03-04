@@ -160,7 +160,7 @@ $(document).ready(function () {
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     $("div.modal-body:lt(14):gt(11),div.modal-body:eq(15),div.modal-body:eq(17)").addClass("p-2");
     $("div.modal-body:eq(1),div.modal-body:eq(10)").addClass("py-2");
-    $("div.d-flex.flex-wrap").addClass("pt-2");
+    //$("div.d-flex.flex-wrap").addClass("pt-2");
     $("div.row:eq(1),div.btn-group-vertical").addClass("mx-auto");
     $("div.col-sm-8,div.col-sm-4").addClass("px-2");
     $("div.col:even").addClass("pr-xl-1");
