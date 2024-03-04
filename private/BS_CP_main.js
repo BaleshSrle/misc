@@ -155,7 +155,7 @@ $(document).ready(function () {
     $("div.modal-header:lt(14):gt(9),div.modal-header:gt(15)").addClass("p-0");
     $("div.modal-header:lt(10):gt(0),div.modal-header:eq(14),div.modal-header:eq(15)").addClass("py-0 pr-0");
     $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-footer").addClass("py-1");
-    $("h5.modal-title:gt(0)").addClass("my-1");
+    $("h5.modal-title:gt(0)").addClass("mt-1");
     $("div.modal-body:eq(9),div.modal-body:eq(14)").addClass("p-0");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     $("div.modal-body:lt(14):gt(11),div.modal-body:eq(15),div.modal-body:eq(17)").addClass("p-2");
