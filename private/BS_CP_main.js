@@ -106,9 +106,9 @@ $(document).ready(function () {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
     const DateTimeLocal = new Date().toLocaleString("sr-BA");
     $("head").append("<meta http-equiv='refresh' content='1800'>");
-    $("div.accordion").addClass("mt-3")
+    $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
     $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
-    $("#loginModal").show(1).addClass("bg-secondary").modal({
+    $("#loginModal").show("fast").addClass("bg-secondary").modal({
         backdrop: 'static',
         keyboard: false,
         focus: true,
@@ -142,7 +142,7 @@ $(document).ready(function () {
         ride: 'carousel',
         touch: false
     });
-    $("nav.navbar").css({ "background-color": "#adb5bd", "padding": "2px 16px" });
+    $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
     $("a.nav-link i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
     $("a.nav-link span").addClass("pl-1 d-md-none");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
