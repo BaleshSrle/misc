@@ -150,6 +150,7 @@ $(document).ready(function () {
     $("i.bi-laptop,i.bi-laptop,i.bi-phone,i.bi-tablet,i.bi-image,i.bi-snapchat,i.bi-telegram,i.bi-facebook,i.bi-messenger,i.bi-instagram,i.bi-threads,i.bi-whatsapp").css("font-size", "xx-large");
     $("i.bi-mailbox,i.bi-headset,i.bi-hourglass-split,i.bi-globe,i.bi-bug,i.bi-kanban,i.bi-stopwatch,i.bi-briefcase,i.bi-easel,i.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
     $("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2");
+    $("button.close:eq(10),button.close:eq(15)").addClass("text-light");
     $("button.btn.btn-info,button.btn.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     $("div.modal-header:eq(9),div.modal-header:lt(15):gt(10),div.modal-header:gt(15)").addClass("d-lg-none");
     $("div.modal-header:lt(14):gt(9),div.modal-header:gt(15)").addClass("p-0");
@@ -161,7 +162,7 @@ $(document).ready(function () {
     $("div.modal-body:lt(14):gt(11),div.modal-body:eq(15),div.modal-body:eq(17)").addClass("p-2");
     $("div.modal-body:eq(1),div.modal-body:eq(10)").addClass("py-2");
     $("div.d-flex.flex-wrap").addClass("pt-2");
-    $("div.row:eq(1),div.btn-group-vertical").addClass("mx-auto");
+    $("div.row:eq(1),div.btn-group-vertical,div.modal-dialog:eq(1)").addClass("mx-auto");
     $("div.col-sm-8,div.col-sm-4").addClass("px-2");
     $("div.col:even").addClass("pr-xl-1");
     $("div.col:odd").addClass("pl-xl-1");
