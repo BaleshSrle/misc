@@ -95,7 +95,7 @@ function imgApply() {
 
 function playTwitchStreamer() {
     $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + $("select#TwitchUsername").val() + '&parent=' + location.host }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
-    $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + $("select#TwitchUsername").val() + '/chat?parent=' + location.host }, "allowfullscreen": "true" }).height(500).width(350).addClass("border-0 overflow-hidden rounded-lg");
+    $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + $("select#TwitchUsername").val() + '/chat?parent=' + location.host }, "allowfullscreen": "true" }).height(500).addClass("w-100 border-0 overflow-hidden rounded-lg");
 }
 
 function playKickStreamer() {
@@ -135,7 +135,7 @@ $(document).ready(function () {
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("[src*='fibacarousel']").attr("height", "263").addClass("w-100 overflow-hidden");
     $("[src*='steampowered']").attr({ "height": "190", "width": "646" });
-    $("[src*='IssuerChart']").addClass("mw-100 overflow-hidden");
+    $("[src*='IssuerChart']").addClass("mw-100 overflow-hidden rounded-lg");
     $("div.carousel").addClass("carousel-fade").carousel({
         interval: 3000,
         keyboard: false,
@@ -143,15 +143,18 @@ $(document).ready(function () {
         touch: false
     });
     $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
+    //$("nav.navbar").delay("slow").fadeIn().addClass("bg-secondary").css("padding", "2px 16px" );
     $("a.nav-link i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
     $("a.nav-link span").addClass("pl-1 d-md-none");
+    $("a#time_is_link").addClass("text-white");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
     $("span.fi-au,span.fi-ba,span.fi-gb,span.fi-ca,span.fi-us").addClass("mr-1");
     $("i.bi-laptop,i.bi-laptop,i.bi-phone,i.bi-tablet,i.bi-image,i.bi-snapchat,i.bi-telegram,i.bi-facebook,i.bi-messenger,i.bi-instagram,i.bi-threads,i.bi-whatsapp").css("font-size", "xx-large");
     $("i.bi-mailbox,i.bi-headset,i.bi-hourglass-split,i.bi-globe,i.bi-bug,i.bi-kanban,i.bi-stopwatch,i.bi-briefcase,i.bi-easel,i.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
-    $("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2");
-    $("button.close:eq(10),button.close:eq(15)").addClass("text-light");
+    $("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white");
+    //$("button.close:eq(10),button.close:eq(15)").addClass("text-light");
     $("button.btn.btn-info,button.btn.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
+    //$("div.modal-content:lt(10),div.modal-content:gt(10)").addClass("bg-dark");
     $("div.modal-header:eq(9),div.modal-header:lt(15):gt(10),div.modal-header:gt(15)").addClass("d-lg-none");
     $("div.modal-header:lt(14):gt(9),div.modal-header:gt(15)").addClass("p-0");
     $("div.modal-header:lt(10):gt(0),div.modal-header:eq(14),div.modal-header:eq(15)").addClass("py-0 pr-0");
@@ -161,7 +164,7 @@ $(document).ready(function () {
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     $("div.modal-body:lt(14):gt(11),div.modal-body:eq(15),div.modal-body:eq(17)").addClass("p-2");
     $("div.modal-body:eq(1),div.modal-body:eq(10)").addClass("py-2");
-    $("div.d-flex.flex-wrap").addClass("pt-2");
+    $("div.d-flex.flex-wrap:eq(0)").addClass("pt-2");
     $("div.row:eq(1),div.btn-group-vertical,div.modal-dialog:eq(1)").addClass("mx-auto");
     $("div.col-sm-8,div.col-sm-4").addClass("px-2");
     $("div.col:even").addClass("pr-xl-1");
@@ -169,7 +172,10 @@ $(document).ready(function () {
     $("div.col:eq(2)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical:eq(3)").addClass("mw-100");
-    $("div.card-footer").addClass("text-muted text-right");
+    $("div.card:lt(12),div.card:gt(14)").addClass("bg-transparent border-white");
+    $("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").css("border-bottom", "1px dotted #6c757d");
+    $("div.card-body:eq(22),div.card-body:eq(23)").addClass("bg-white");
+    $("div.card-footer").addClass("text-muted text-right").css("border-top", "1px dotted #6c757d");
     $("div.list-group.list-group-flush:gt(0)").addClass("overflow-auto");
     $("div.aw-more-content#aw-ad-container").hide();
     $("div#tvguide2 div.card-body div.mojtvprogram").addClass("mx-2 my-3 px-1");
@@ -178,9 +184,11 @@ $(document).ready(function () {
     $("h6:gt(19)").addClass("text-wrap");
     $("div.input-group:eq(0),div.input-group:eq(1)").addClass("mb-2 mr-sm-2");
     $("div.input-group:eq(2),div.input-group:eq(3)").addClass("mb-3");
+    $(".list-group-item").addClass("list-group-item-dark");
     $("input[type='text'],input[type='password'],input[type='number'],input[type='url'],select[id$='Station'],select#imgAngle,select[id$='Username'],select#vrstaObracunaNovca").addClass("form-control");
-    $("select[id$='Username'].form-control").addClass("bg-dark text-white");
+    $("body,select[id$='Username'].form-control,div.modal-content").addClass("bg-dark text-white");
     $("input[type='number']:even").attr("inputmode", "decimal");
     $("input[type='number']:odd").attr("inputmode", "numeric");
     $("input[type='url']").attr("inputmode", "url");
+    $("label:gt(2)").addClass("text-white");
 });
