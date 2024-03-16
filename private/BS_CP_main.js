@@ -173,9 +173,11 @@ $(document).ready(function () {
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical:eq(3)").addClass("mw-100");
     $("div.card:lt(12),div.card:gt(14)").addClass("bg-transparent border-white");
-    $("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").css("border-bottom", "1px dotted #6c757d");
+    //$("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").css("border-bottom", "1px dotted #6c757d");
+    $("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").addClass("border-bottom border-secondary");
     $("div.card-body:eq(22),div.card-body:eq(23)").addClass("bg-white");
-    $("div.card-footer").addClass("text-muted text-right").css("border-top", "1px dotted #6c757d");
+    //$("div.card-footer").addClass("text-muted text-right").css("border-top", "1px dotted #6c757d");
+    $("div.card-footer").addClass("border-top border-secondary text-muted text-right");
     $("div.list-group.list-group-flush:gt(0)").addClass("overflow-auto");
     $("div.aw-more-content#aw-ad-container").hide();
     $("div#tvguide2 div.card-body div.mojtvprogram").addClass("mx-2 my-3 px-1");
