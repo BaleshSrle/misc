@@ -21,7 +21,7 @@ jQuery(function ($) {
     $("img").addClass("border-0").css("margin", "3px 0px");
     $(".container-fluid").addClass("overflow-hidden mx-auto");
     $("div.col-sm-3.col-xl-2:first").addClass("my-1 pr-md-2");
-    $("div.card,div.github-box").addClass("shadow-sm");
+    $("div.card,div.github-box.repo").addClass("shadow-sm");
     $("div.card.my-1.d-none.d-md-block:eq(0)").height(131.94);
     $("div.col-sm-3.col-xl-2:last").addClass("my-1 pl-md-2");
     $("div.card.my-1.d-none.d-md-block:eq(1),div.card.my-1:last").height(228);
