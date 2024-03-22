@@ -19,6 +19,7 @@ jQuery(function ($) {
     $(".navbar").addClass("py-sm-1");
     $("li.nav-item a i.bi,li.nav-item button i.bi").addClass("pr-sm-1");
     $("img").addClass("border-0").css("margin", "3px 0px");
+    $("img[src*='style=for-the-badge'],img[alt$='Ubuntu'],img[alt='IP2Location'],img[alt^='Joomla']:gt(0)").addClass("rounded-lg");
     $(".container-fluid").addClass("overflow-hidden mx-auto");
     $("div.col-sm-3.col-xl-2:first").addClass("my-1 pr-md-2");
     $("div.card,div.github-box.repo").addClass("shadow-sm");
