@@ -146,7 +146,7 @@ $(document).ready(function () {
     //$("nav.navbar").delay("slow").fadeIn().addClass("bg-secondary").css("padding", "2px 16px" );
     $("a.nav-link i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
     $("a.nav-link span").addClass("pl-1 d-md-none");
-    $("a#time_is_link").addClass("text-white");
+    $("a#time_is_link,label:gt(2)").addClass("text-white");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
     $("span.fi-au,span.fi-ba,span.fi-gb,span.fi-ca,span.fi-us").addClass("mr-1");
     $("i.bi-laptop,i.bi-laptop,i.bi-phone,i.bi-tablet,i.bi-image,i.bi-snapchat,i.bi-telegram,i.bi-facebook,i.bi-messenger,i.bi-instagram,i.bi-threads,i.bi-whatsapp").css("font-size", "xx-large");
@@ -164,6 +164,7 @@ $(document).ready(function () {
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     $("div.modal-body:lt(14):gt(11),div.modal-body:eq(15),div.modal-body:eq(17)").addClass("p-2");
     $("div.modal-body:eq(1),div.modal-body:eq(10)").addClass("py-2");
+    $("div.modal-footer a").addClass("text-light");
     $("div.d-flex.flex-wrap:eq(0)").addClass("pt-2");
     $("div.row:eq(1),div.btn-group-vertical,div.modal-dialog:eq(1)").addClass("mx-auto");
     $("div.col-sm-8,div.col-sm-4").addClass("px-2");
@@ -192,5 +193,4 @@ $(document).ready(function () {
     $("input[type='number']:even").attr("inputmode", "decimal");
     $("input[type='number']:odd").attr("inputmode", "numeric");
     $("input[type='url']").attr("inputmode", "url");
-    $("label:gt(2)").addClass("text-white");
 });
