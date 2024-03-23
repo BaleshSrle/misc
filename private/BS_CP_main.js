@@ -146,7 +146,7 @@ $(document).ready(function () {
     //$("nav.navbar").delay("slow").fadeIn().addClass("bg-secondary").css("padding", "2px 16px" );
     $("a.nav-link i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
     $("a.nav-link span").addClass("pl-1 d-md-none");
-    $("a#time_is_link,label:gt(2)").addClass("text-white");
+    $("mark.bg-secondary,a#time_is_link,label:gt(2),div.modal-body a:eq(8),div.modal-body a:lt(80):gt(75)").addClass("text-white");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
     $("span.fi-au,span.fi-ba,span.fi-gb,span.fi-ca,span.fi-us").addClass("mr-1");
     $("i.bi-laptop,i.bi-laptop,i.bi-phone,i.bi-tablet,i.bi-image,i.bi-snapchat,i.bi-telegram,i.bi-facebook,i.bi-messenger,i.bi-instagram,i.bi-threads,i.bi-whatsapp").css("font-size", "xx-large");
