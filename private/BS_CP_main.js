@@ -156,11 +156,10 @@ $(document).ready(function () {
     $("button.btn.btn-info,button.btn.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     //$("div.modal-content:lt(10),div.modal-content:gt(10)").addClass("bg-dark");
     $("div.modal-header:eq(9),div.modal-header:lt(15):gt(10),div.modal-header:gt(15)").addClass("d-lg-none");
-    $("div.modal-header:lt(14):gt(9),div.modal-header:gt(15)").addClass("p-0");
+    $("div.modal-header:lt(14):gt(9),div.modal-header:gt(15),div.modal-body:eq(9),div.modal-body:eq(14)").addClass("p-0");
     $("div.modal-header:lt(10):gt(0),div.modal-header:eq(14),div.modal-header:eq(15)").addClass("py-0 pr-0");
     $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-footer").addClass("py-1");
     $("h5.modal-title:gt(0)").addClass("mt-1");
-    $("div.modal-body:eq(9),div.modal-body:eq(14)").addClass("p-0");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     $("div.modal-body:lt(14):gt(11),div.modal-body:eq(15),div.modal-body:eq(17)").addClass("p-2");
     $("div.modal-body:eq(1),div.modal-body:eq(10)").addClass("py-2");
@@ -187,7 +186,7 @@ $(document).ready(function () {
     $("h6:gt(19)").addClass("text-wrap");
     $("div.input-group:eq(0),div.input-group:eq(1)").addClass("mb-2 mr-sm-2");
     $("div.input-group:eq(2),div.input-group:eq(3)").addClass("mb-3");
-    $("a.list-group-item:lt(7),a.list-group-item:gt(15)").addClass("list-group-item-dark");
+    $(".list-group-item:not(:lt(15):gt(7))").addClass("list-group-item-dark");
     $("input[type='text'],input[type='password'],input[type='number'],input[type='url'],select[id$='Station'],select#imgAngle,select[id$='Username'],select#vrstaObracunaNovca").addClass("form-control");
     $("body,select[id$='Username'].form-control,div.modal-content").addClass("bg-dark text-white");
     $("input[type='number']:even").attr("inputmode", "decimal");
