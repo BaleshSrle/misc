@@ -1,5 +1,5 @@
 [Adblock Plus 2.0]
-! Title: B@LESHEVCIH Company Adblock Plus Filter
+! Title: B@LESHEVICH Company Adblock Plus Filter
 ! Homepage: https://baleshevich.dobojcaffe.com/
 ! License: http://creativecommons.org/licenses/by/3.0/
 !
@@ -290,7 +290,7 @@
 @@||booking.com^$elemhide
 @@||*.travel^$elemhide, stylesheet, image
 @@||cloudimg.io^$image
-@@||github.*^$elemhide, image
+@@||github.*^$elemhide, image, ping
 @@||siteground.com^$elemhide
 @@||bitly.com^$elemhide
 @@||cashbackworld.com^$elemhide
@@ -575,3 +575,4 @@ kodbakeff.com
 vodovodaddoboj.info
 w3schools.com#@#.sharethis
 oracle.com#@#.scl-icons
+#@##socialicons
