@@ -146,7 +146,7 @@ $(document).ready(function () {
     //$("nav.navbar").delay("slow").fadeIn().addClass("bg-secondary").css("padding", "2px 16px" );
     $("a.nav-link i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
     $("a.nav-link span").addClass("pl-1 d-md-none");
-    $("mark.bg-secondary,a#time_is_link,label:gt(2),div.modal-body a:eq(8),div.modal-body a:lt(80):gt(75)").addClass("text-white");
+    $("mark.bg-secondary,a#time_is_link,label:gt(2),div.modal-body a:eq(8)").addClass("text-white");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
     $("span.fi-au,span.fi-ba,span.fi-gb,span.fi-ca,span.fi-us").addClass("mr-1");
     $("i.bi-laptop,i.bi-laptop,i.bi-phone,i.bi-tablet,i.bi-image,i.bi-snapchat,i.bi-telegram,i.bi-facebook,i.bi-messenger,i.bi-instagram,i.bi-threads,i.bi-whatsapp").css("font-size", "xx-large");
@@ -155,6 +155,7 @@ $(document).ready(function () {
     //$("button.close:eq(10),button.close:eq(15)").addClass("text-light");
     $("button.btn.btn-info,button.btn.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     //$("div.modal-content:lt(10),div.modal-content:gt(10)").addClass("bg-dark");
+    $("div.modal-header, div.modal-footer").addClass("border-secondary");
     $("div.modal-header:eq(9),div.modal-header:lt(15):gt(10),div.modal-header:gt(15)").addClass("d-lg-none");
     $("div.modal-header:lt(14):gt(9),div.modal-header:gt(15),div.modal-body:eq(9),div.modal-body:eq(14)").addClass("p-0");
     $("div.modal-header:lt(10):gt(0),div.modal-header:eq(14),div.modal-header:eq(15)").addClass("py-0 pr-0");
@@ -172,7 +173,7 @@ $(document).ready(function () {
     $("div.col:eq(2)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical:eq(3)").addClass("mw-100");
-    $("div.card:lt(12),div.card:gt(14)").addClass("bg-transparent border-white");
+    $("div.card:lt(12),div.card:gt(14)").addClass("bg-transparent border-secondary");
     //$("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").css("border-bottom", "1px dotted #6c757d");
     $("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").addClass("border-bottom border-secondary");
     $("div.card-body:eq(22),div.card-body:eq(23)").addClass("bg-white");
@@ -186,10 +187,11 @@ $(document).ready(function () {
     $("h6:gt(19)").addClass("text-wrap");
     $("div.input-group:eq(0),div.input-group:eq(1)").addClass("mb-2 mr-sm-2");
     $("div.input-group:eq(2),div.input-group:eq(3)").addClass("mb-3");
-    $(".list-group-item:not(:lt(15):gt(7))").addClass("list-group-item-dark");
+    $(".list-group-item:not(:lt(16):gt(6))").addClass("list-group-item-dark");
     $("input[type='text'],input[type='password'],input[type='number'],input[type='url'],select[id$='Station'],select#imgAngle,select[id$='Username'],select#vrstaObracunaNovca").addClass("form-control");
     $("body,select[id$='Username'].form-control,div.modal-content").addClass("bg-dark text-white");
     $("input[type='number']:even").attr("inputmode", "decimal");
     $("input[type='number']:odd").attr("inputmode", "numeric");
     $("input[type='url']").attr("inputmode", "url");
+    $("table.table").addClass("table-sm table-hover table-dark text-center");
 });
