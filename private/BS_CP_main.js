@@ -32,9 +32,9 @@ function login() {
         case passwords[1]:
             $("#loginModal").modal("hide");
             //$("button#djevojkaDanaBtn").attr("disabled", "");
-            $("a#djevojkaDanaBtn").addClass("disabled");
-            $("[data-target='#sluzbeni']").addClass("disabled");
+            $("a#djevojkaDanaBtn,[data-target='#sluzbeni']").addClass("disabled");
             $("[title^='Boobpedia']").addClass("d-none");
+            $("optgroup[label='Steamy Streamers'],option[value='biancadata']").attr("disabled", "disabled");
             break;
         case !(passwords[0]):
         case !(passwords[1]):
