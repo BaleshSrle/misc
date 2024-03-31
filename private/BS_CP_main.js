@@ -173,10 +173,11 @@ $(document).ready(function () {
     $("div.col:eq(2)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical:eq(3)").addClass("mw-100");
-    $("div.card:lt(12),div.card:gt(14)").addClass("bg-transparent border-secondary");
+    $("div.card:not(:lt(16):gt(12))").addClass("bg-transparent border-secondary");
     //$("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").css("border-bottom", "1px dotted #6c757d");
     $("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").addClass("border-bottom border-secondary");
-    $("div.card-body:eq(22),div.card-body:eq(23)").addClass("bg-white");
+    $("div.card-body:eq(22)").addClass("bg-transparent");
+    $("div.card-body:eq(23),div.card-body:eq(24)").addClass("bg-white");
     //$("div.card-footer").addClass("text-muted text-right").css("border-top", "1px dotted #6c757d");
     $("div.card-footer").addClass("border-top border-secondary text-muted text-right");
     $("div.list-group.list-group-flush:gt(0)").addClass("overflow-auto");
@@ -187,7 +188,7 @@ $(document).ready(function () {
     $("h6:gt(19)").addClass("text-wrap");
     $("div.input-group:eq(0),div.input-group:eq(1)").addClass("mb-2 mr-sm-2");
     $("div.input-group:eq(2),div.input-group:eq(3)").addClass("mb-3");
-    $(".list-group-item:not(:lt(16):gt(6))").addClass("list-group-item-dark");
+    $(".list-group-item:not(:lt(15):gt(6))").addClass("list-group-item-dark");
     $("input[type='text'],input[type='password'],input[type='number'],input[type='url'],select[id$='Station'],select#imgAngle,select[id$='Username'],select#vrstaObracunaNovca").addClass("form-control");
     $("body,select[id$='Username'].form-control,div.modal-content").addClass("bg-dark text-white");
     $("input[type='number']:even").attr("inputmode", "decimal");
