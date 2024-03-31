@@ -173,7 +173,7 @@ $(document).ready(function () {
     $("div.col:eq(2)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical:eq(3)").addClass("mw-100");
-    $("div.card:not(:lt(16):gt(12))").addClass("bg-transparent border-secondary");
+    $("div.card:not(:lt(15):gt(11))").addClass("bg-transparent border-secondary");
     //$("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").css("border-bottom", "1px dotted #6c757d");
     $("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").addClass("border-bottom border-secondary");
     $("div.card-body:eq(22)").addClass("bg-transparent");
