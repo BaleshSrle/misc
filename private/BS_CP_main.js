@@ -162,7 +162,7 @@ $(document).ready(function () {
     $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-footer").addClass("py-1");
     $("h5.modal-title:gt(0)").addClass("mt-1");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
-    $("div.modal-body:lt(14):gt(11),div.modal-body:eq(15),div.modal-body:eq(17)").addClass("p-2");
+    $("div.modal-body:lt(16):gt(11):not(:eq(2)),div.modal-body:eq(17),div.modal-body:eq(19)").addClass("p-2");
     $("div.modal-body:eq(1),div.modal-body:eq(10)").addClass("py-2");
     $("div.modal-footer a").addClass("text-light");
     $("div.d-flex.flex-wrap:eq(0)").addClass("pt-2");
