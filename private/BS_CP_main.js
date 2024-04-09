@@ -166,12 +166,13 @@ $(document).ready(function () {
     $("h5.modal-title:gt(0)").addClass("mt-1");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     //$("div.modal-body:lt(16):gt(11):not(:eq(2)),div.modal-body:eq(17),div.modal-body:eq(19)").addClass("p-2");
-    $("div.modal-body:gt(11):not(:eq(2)):not(:eq(3)):not(:eq(4))").addClass("p-2");
+    $("div.modal-body:gt(11):not(:eq(1)):not(:eq(1)):not(:eq(2)):not(:eq(3))").addClass("p-2");
     $("div.modal-body:eq(1),div.modal-body:eq(10)").addClass("py-2");
     $("div.modal-footer a").addClass("text-light");
-    $("div.d-flex.flex-wrap:eq(0)").addClass("pt-2");
+    $("div.col-sm-8,div.col-sm-4,div.d-flex.flex-wrap:eq(0),output").addClass("pt-2");
+    $("div.modal-body:eq(13)").addClass("pt-0 pb-2");
+    $("div.modal-body:eq(13)").addClass("px-2");
     $("div.row:eq(1),div.btn-group-vertical,div.modal-dialog:eq(1)").addClass("mx-auto");
-    $("div.col-sm-8,div.col-sm-4").addClass("px-2");
     $("div.col:even").addClass("pr-xl-1");
     $("div.col:odd").addClass("pl-xl-1");
     $("div.col:eq(2),li.navbar-item:eq(3),li.navbar-item:eq(9)").addClass("d-none d-md-block");
