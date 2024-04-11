@@ -166,7 +166,7 @@
 @@||*script*.*^$elemhide
 @@||stackoverflow.com^$elemhide
 @@||makeuseof.com^$elemhide
-@@||accuweather.com^$elemhide, script
+@@||accuweather.com^$elemhide, script, xmlhttprequest
 @@||iqair.com^$script
 @@||emsc-csem.org^$elemhide
 @@||addthis.com^$script, xmlhttprequest, subdocument, elemhide, image
@@ -577,3 +577,4 @@ vodovodaddoboj.info
 w3schools.com#@#.sharethis
 oracle.com#@#.scl-icons
 #@##socialicons
+###aw-ad-container
