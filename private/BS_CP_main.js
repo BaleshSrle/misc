@@ -163,7 +163,7 @@ $(document).ready(function () {
     $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-footer").addClass("py-1");
     $("h5.modal-title").slice(1).addClass("mt-1");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
-    $("div.modal-body").slice(12).not($("div.modal-body").slice(13, 15)).not($("div.modal-body").eq(16)).not($("div.modal-body").eq(18)).addClass("p-2");
+    $("div.modal-body").slice(4).not($("div.modal-body").slice(5, 12)).not($("div.modal-body").slice(13, 15)).not($("div.modal-body").eq(16)).not($("div.modal-body").eq(18)).addClass("p-2");
     $("div.modal-body:eq(1),div.modal-body:eq(10)").addClass("py-2");
     $("div.modal-footer").find("a").addClass("text-light");
     $("div.col-sm-8,div.col-sm-4,div.d-flex.flex-wrap:eq(0),output").addClass("pt-2");
@@ -175,6 +175,7 @@ $(document).ready(function () {
     $("div.col:eq(2),li.navbar-item:eq(3),li.navbar-item:eq(9)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical").eq(3).addClass("mw-100");
+    $("div.card").slice(0, 6).addClass("mx-1 my-2");
     $("div.card").not($("div.card").slice(13, 16)).addClass("bg-transparent border-secondary");
     //$("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").css("border-bottom", "1px dotted #6c757d");
     $("div.card-header").not($("div.card-header").slice(7, 13)).not($("div.card-header").slice(25, 27)).addClass("border-bottom border-secondary");
@@ -182,7 +183,7 @@ $(document).ready(function () {
     //$("div.card-footer").addClass("text-muted text-right").css("border-top", "1px dotted #6c757d");
     $("div.card-footer").addClass("border-top border-secondary text-muted text-right");
     $("div.list-group.list-group-flush").slice(1).addClass("overflow-auto");
-    $("div.aw-more-content#aw-ad-container").hide();
+    $("div#aw-ad-container").hide();
     $("div#tvguide2 div.card-body div.mojtvprogram").addClass("mx-2 my-3 px-1");
     $("h6.card-subtitle").addClass("mb-1 text-muted font-weight-bold font-italic");
     $("h2,h6:gt(1),p.card-text:eq(2),p.card-text:eq(5),p.card-text:eq(8),p.card-text:eq(11),div.input-group:gt(3)").addClass("mb-0");
@@ -190,6 +191,7 @@ $(document).ready(function () {
     $("div.input-group").slice(0, 2).addClass("mb-2 mr-sm-2");
     $("div.input-group").slice(2, 4).addClass("mb-3");
     $(".list-group-item").not(".list-group-item-primary,.list-group-item-secondary").not($(".list-group-item").slice(13, 15)).addClass("list-group-item-dark");
+    $("a.list-group-item:eq(1),a.list-group-item:eq(4)").addClass("border-top-0");
     $("input[type='text'],input[type='password'],input[type='number'],input[type='url'],select[id$='Station'],select#imgAngle,select[id$='Username'],select#vrstaObracunaNovca").addClass("form-control");
     $("body,select[id$='Username'].form-control,div.modal-content").addClass("bg-dark text-white");
     $("input[type='number']:even").attr("inputmode", "decimal");
