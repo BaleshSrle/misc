@@ -197,5 +197,5 @@ $(document).ready(function () {
     $("input[type='number']:even").attr("inputmode", "decimal");
     $("input[type='number']:odd").attr("inputmode", "numeric");
     $("input[type='url']").attr("inputmode", "url");
-    $("table.table").addClass("table-sm table-hover table-dark text-center");
+    $("table.table").addClass("table-sm table-hover table-dark text-center mb-1");
 });
