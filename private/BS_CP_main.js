@@ -155,11 +155,12 @@ $(document).ready(function () {
     //$("button.close:eq(10),button.close:eq(15)").addClass("text-light");
     $("button.btn.btn-info,button.btn.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     //$("div.modal-content:lt(10),div.modal-content:gt(10)").addClass("bg-dark");
+    $("div.modal-content").eq(10).addClass("border-dark");
     $("div.modal-header, div.modal-footer").addClass("border-secondary");
     //$("div.modal-header:eq(9),div.modal-header:lt(15):gt(10),div.modal-header:gt(15)").addClass("d-lg-none");
     $("div.modal-header").slice(9, 15).not($("div.modal-header").eq(10)).addClass("d-lg-none");
-    $("div.modal-header:lt(14):gt(9),div.modal-body:eq(9),div.modal-body:eq(14)").addClass("p-0");
-    $("div.modal-header").slice(1).not($("div.modal-header").slice(10, 14)).addClass("py-0 pr-0")
+    $("div.modal-header:lt(14):gt(10),div.modal-body:eq(9),div.modal-body:eq(14)").addClass("p-0");
+    $("div.modal-header").slice(1).not($("div.modal-header").slice(11, 14)).addClass("py-0 pr-0")
     $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-footer").addClass("py-1");
     $("h5.modal-title").slice(1).addClass("mt-1");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
@@ -190,10 +191,17 @@ $(document).ready(function () {
     $("h6").slice(20).addClass("text-wrap");
     $("div.input-group").slice(0, 2).addClass("mb-2 mr-sm-2");
     $("div.input-group").slice(2, 4).addClass("mb-3");
-    $(".list-group-item").not(".list-group-item-primary,.list-group-item-secondary").not($(".list-group-item").slice(13, 15)).addClass("list-group-item-dark");
+    $("ul").eq(0).children().addClass("list-group-item-dark px-2 py-1");
+    $("div.list-group").children("a").slice(6).addClass("list-group-item-action");
+    $("div.list-group").children("a").slice(6, 11).addClass("list-group-item-primary");
+    $("div.list-group").children("a").slice(11, 13).addClass("list-group-item-secondary");
+    $("div.list-group").children("a").not($("a.list-group-item").slice(6, 15)).addClass("list-group-item-dark");
+    $("div.list-group").children("div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
+    $("div.list-group").children("div").children("a").addClass("list-group-item-dark");
+    //$(".list-group-item").not(".list-group-item-primary,.list-group-item-secondary").not($(".list-group-item").slice(13, 15)).addClass("list-group-item-dark");
     $("a.list-group-item:eq(1),a.list-group-item:eq(4)").addClass("border-top-0");
     $("input[type='text'],input[type='password'],input[type='number'],input[type='url'],select[id$='Station'],select#imgAngle,select[id$='Username'],select#vrstaObracunaNovca").addClass("form-control");
-    $("body,select[id$='Username'].form-control,div.modal-content").addClass("bg-dark text-white");
+    $("body,select[id$='Username'].form-control,div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
     $("input[type='number']:even").attr("inputmode", "decimal");
     $("input[type='number']:odd").attr("inputmode", "numeric");
     $("input[type='url']").attr("inputmode", "url");
