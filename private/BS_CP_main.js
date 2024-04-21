@@ -135,7 +135,8 @@ $(document).ready(function () {
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("[src*='fibacarousel']").attr("height", "263").addClass("w-100 overflow-hidden");
     $("[src*='steampowered']").attr({ "height": "190", "width": "646" });
-    $("[src*='IssuerChart']").addClass("mw-100 overflow-hidden rounded-lg");
+    $("iframe[src*='blberza']").slice(0, 2).addClass("rounded-bottom");
+    $("iframe[src*='blberza']").slice(2).height(110).width(200).addClass("mw-100 overflow-hidden rounded-lg");
     $("div.carousel").addClass("carousel-fade").carousel({
         interval: 3000,
         keyboard: false,
