@@ -4,8 +4,7 @@ console.info("Skripta za web sajt je pokrenuta.");
 
 jQuery(function ($) {
     $("head").prepend("<base href=" + location.origin + ">");
-    $("head").append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>");
-    $("head").append("<meta name='GENERATOR' content='Visual Studio Code 1.88.1'>");
+    $("head").append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>", "<meta name='GENERATOR' content='Visual Studio Code 1.89.0'>");
     switch (new Date().getMonth() + 1) {
         case 1:
         case 12:
