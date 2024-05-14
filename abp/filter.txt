@@ -363,6 +363,7 @@
 @@||lushstories.com^$elemhide, image
 @@||sexcentrala.com^$elemhide, stylesheet, script
 @@||faponic.com^$elemhide
+||faponic.com/img/assets/*.gif
 @@||babepedia.org^$image
 @@||fitnakedgirls.com^$elemhide
 @@||*.xxx^$elemhide
