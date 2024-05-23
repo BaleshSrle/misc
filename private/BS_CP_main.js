@@ -168,12 +168,11 @@ $(document).ready(function () {
     $("h5.modal-title").slice(1).addClass("mt-1");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     //$("div.modal-body").slice(4).not($("div.modal-body").slice(5, 12)).not($("div.modal-body").slice(13, 15)).not($("div.modal-body").eq(16)).not($("div.modal-body").eq(18)).addClass("p-2");
-    $("div.modal-body:eq(4),div.modal-body:eq(12),div.modal-body:eq(15),div.modal-body:eq(17),div.modal-body:eq(19),div.position-fixed,div.toast-body").addClass("p-2");
+    $("div.modal-body:eq(4),div.modal-body:eq(12),div.modal-body:eq(13),div.modal-body:eq(15),div.modal-body:eq(17),div.modal-body:eq(19),div.position-fixed,div.toast-body").addClass("p-2");
     $("div.modal-body:eq(1),div.modal-body:eq(10)").addClass("py-2");
     $("div.modal-footer").find("a").addClass("text-light");
     $("div.col-sm-8,div.col-sm-4,div.d-flex.flex-wrap:eq(0),output").addClass("pt-2");
-    $("div.modal-body").eq(13).addClass("pt-0 pb-2");
-    $("div.modal-body:eq(13),div.col-sm-8,div.col-sm-4").addClass("px-2");
+    $("div.col-sm-8,div.col-sm-4").addClass("px-2");
     $("div.row:eq(1),div.btn-group-vertical,div.modal-dialog:eq(1)").addClass("mx-auto");
     $("div.col:even").addClass("pr-xl-1");
     $("div.col:odd").addClass("pl-xl-1");
@@ -191,10 +190,10 @@ $(document).ready(function () {
     $("div#aw-ad-container").hide();
     $("div#tvguide2 div.card-body div.mojtvprogram").addClass("mx-2 my-3 px-1");
     $("h6.card-subtitle").addClass("mb-1 text-muted font-weight-bold font-italic");
-    $("h2,h6:gt(1),p.card-text:eq(2),p.card-text:eq(5),p.card-text:eq(8),p.card-text:eq(11),div.input-group:gt(3)").addClass("mb-0");
+    $("h2,h6:gt(1),p.card-text:eq(2),p.card-text:eq(5),p.card-text:eq(8),p.card-text:eq(11),div.input-group:eq(2),div.input-group:gt(3)").addClass("mb-0");
     $("h6").slice(20).addClass("text-wrap");
     $("div.input-group").slice(0, 2).addClass("mb-2 mr-sm-2");
-    $("div.input-group").slice(2, 4).addClass("mb-3");
+    $("div.input-group").eq(3).addClass("mb-3");
     $("ul").eq(0).children().addClass("list-group-item-dark px-2 py-1");
     $("div.list-group").children("a").slice(6).addClass("list-group-item-action");
     $("div.list-group").children("a").slice(6, 11).addClass("list-group-item-primary");
