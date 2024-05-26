@@ -28,9 +28,11 @@ function login() {
     switch ($(":password").val()) {
         case passwords[0]:
             $("#loginModal").modal("hide");
+            $("div.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
             break;
         case passwords[1]:
             $("#loginModal").modal("hide");
+            $("div.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
             //$("button#djevojkaDanaBtn").attr("disabled", "");
             $("a#djevojkaDanaBtn,[data-target='#sluzbeni']").addClass("disabled");
             $("[title^='Boobpedia']").addClass("d-none");
@@ -108,7 +110,7 @@ $(document).ready(function () {
     $("head").append("<meta http-equiv='refresh' content='1800'>");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
     $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
-    $("div.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
+    
     $("#loginModal").show(1).addClass("bg-secondary").modal({
         backdrop: 'static',
         keyboard: false,
