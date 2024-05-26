@@ -108,7 +108,7 @@ $(document).ready(function () {
     $("head").append("<meta http-equiv='refresh' content='1800'>");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
     $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
-    $("div#churchcalendarToast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
+    $("div.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
     $("#loginModal").show(1).addClass("bg-secondary").modal({
         backdrop: 'static',
         keyboard: false,
@@ -155,6 +155,8 @@ $(document).ready(function () {
     $("i.bi-laptop,i.bi-laptop,i.bi-phone,i.bi-tablet,i.bi-image,i.bi-snapchat,i.bi-telegram,i.bi-facebook,i.bi-messenger,i.bi-instagram,i.bi-threads,i.bi-whatsapp").css("font-size", "xx-large");
     $("i.bi-mailbox,i.bi-headset,i.bi-hourglass-split,i.bi-globe,i.bi-bug,i.bi-kanban,i.bi-stopwatch,i.bi-briefcase,i.bi-easel,i.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
     $("button.close").slice(0, 15).addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white");
+    $("button.close").slice(15).addClass("ml-2 mb-1").attr({"type":"button", "data-dismiss": "toast", "aria-label":"Close"});
+    $("div.toast-header").children("img").addClass("mr-1");
     //$("button.close:eq(10),button.close:eq(15)").addClass("text-light");
     $("button.btn.btn-info,button.btn.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     //$("div.modal-content:lt(10),div.modal-content:gt(10)").addClass("bg-dark");
@@ -194,7 +196,8 @@ $(document).ready(function () {
     $("h6").slice(20).addClass("text-wrap");
     $("div.input-group").slice(0, 2).addClass("mb-2 mr-sm-2");
     $("div.input-group").eq(3).addClass("mb-3");
-    $("ul").eq(0).children().addClass("list-group-item-dark px-2 py-1");
+    $("ul").eq(0).children("li").addClass("list-group-item-dark");
+    $("ul").slice(0,3).children("li").addClass("px-2 py-1");
     $("div.list-group").children("a").slice(6).addClass("list-group-item-action");
     $("div.list-group").children("a").slice(6, 11).addClass("list-group-item-primary");
     $("div.list-group").children("a").slice(11, 13).addClass("list-group-item-secondary");
