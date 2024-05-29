@@ -110,7 +110,7 @@ $(document).ready(function () {
     $("head").append("<meta http-equiv='refresh' content='1800'>");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
     $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
-    
+
     $("#loginModal").show(1).addClass("bg-secondary").modal({
         backdrop: 'static',
         keyboard: false,
@@ -129,6 +129,10 @@ $(document).ready(function () {
     });
     $("div.collapse").collapse({
         parent: "#accordionControlPanel",
+        toggle: false
+    });
+    $("div#collapseTwitchStatus.collapse").collapse({
+        parent: "#AccordionTwitchStatus",
         toggle: false
     });
     $("[src*='simpleicons'],[alt='BaleshSrle Logo']").height(32).width(32);
@@ -156,8 +160,9 @@ $(document).ready(function () {
     $("span.fi-au,span.fi-ba,span.fi-gb,span.fi-ca,span.fi-us").addClass("mr-1");
     $("i.bi-laptop,i.bi-laptop,i.bi-phone,i.bi-tablet,i.bi-image,i.bi-snapchat,i.bi-telegram,i.bi-facebook,i.bi-messenger,i.bi-instagram,i.bi-threads,i.bi-whatsapp").css("font-size", "xx-large");
     $("i.bi-mailbox,i.bi-headset,i.bi-hourglass-split,i.bi-globe,i.bi-bug,i.bi-kanban,i.bi-stopwatch,i.bi-briefcase,i.bi-easel,i.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
+    $("button.btn-link").addClass("text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false" });
     $("button.close").slice(0, 15).addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white");
-    $("button.close").slice(15).addClass("ml-2 mb-1").attr({"type":"button", "data-dismiss": "toast", "aria-label":"Close"});
+    $("button.close").slice(15).addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Close" });
     $("div.toast-header").children("img").addClass("mr-1");
     //$("button.close:eq(10),button.close:eq(15)").addClass("text-light");
     $("button.btn.btn-info,button.btn.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
@@ -172,10 +177,12 @@ $(document).ready(function () {
     $("h5.modal-title").slice(1).addClass("mt-1");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     //$("div.modal-body").slice(4).not($("div.modal-body").slice(5, 12)).not($("div.modal-body").slice(13, 15)).not($("div.modal-body").eq(16)).not($("div.modal-body").eq(18)).addClass("p-2");
-    $("div.modal-body:eq(4),div.modal-body:eq(12),div.modal-body:eq(13),div.modal-body:eq(15),div.modal-body:eq(17),div.modal-body:eq(19),div.position-fixed,div.toast-body").addClass("p-2");
-    $("div.modal-body:eq(1),div.modal-body:eq(10)").addClass("py-2");
+    $("div.modal-body").filter(":eq(4),:eq(12),:eq(13),:eq(15),:eq(17),:eq(19)").addClass("p-2");
+    $("div.position-fixed,div.toast-body").addClass("p-2");
+    $("div.modal-body").filter(":eq(1),:eq(10)").addClass("py-2");
     $("div.modal-footer").find("a").addClass("text-light");
-    $("div.col-sm-8,div.col-sm-4,div.d-flex.flex-wrap:eq(0),output").addClass("pt-2");
+    //$("div.col-sm-8,div.col-sm-4,div.d-flex.flex-wrap:eq(0),output").addClass("pt-2");
+    $("div.col-sm-8,div.col-sm-4,output").addClass("pt-2");
     $("div.col-sm-8,div.col-sm-4").addClass("px-2");
     $("div.row:eq(1),div.btn-group-vertical,div.modal-dialog:eq(1)").addClass("mx-auto");
     $("div.col:even").addClass("pr-xl-1");
@@ -184,22 +191,27 @@ $(document).ready(function () {
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical").eq(3).addClass("mw-100");
     $("div.card").slice(0, 6).addClass("mx-1 my-2");
-    $("div.card").not($("div.card").slice(13, 16)).addClass("bg-transparent border-secondary");
+    $("div.card").not($("div.card").slice(27, 30)).addClass("bg-transparent border-secondary");
     //$("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").css("border-bottom", "1px dotted #6c757d");
-    $("div.card-header").not($("div.card-header").slice(7, 13)).not($("div.card-header").slice(25, 27)).addClass("border-bottom border-secondary");
-    $("div.card-body").slice(24, 26).addClass("bg-white");
+    $("div.card-header").not($("div.card-header").slice(7, 19)).not($("div.card-header").slice(21, 24)).not($("div.card-header").slice(24, 27)).not($("div.card-header").eq(37)).not($("div.card-header").slice(39, 41)).addClass("border-bottom border-secondary");
+    $("div.card-header").filter(":lt(20):gt(5),:lt(27):gt(20),:lt(38):gt(27),:lt(43):gt(38)").addClass("py-2");
+    $("div.card-header").filter(":lt(24):gt(20)").addClass("border-bottom border-white");
+    $("div.card-body").slice(25, 27).addClass("bg-white");
     //$("div.card-footer").addClass("text-muted text-right").css("border-top", "1px dotted #6c757d");
     $("div.card-footer").addClass("border-top border-secondary text-muted text-right");
     $("div.list-group.list-group-flush").slice(1).addClass("overflow-auto");
     $("div#aw-ad-container").hide();
     $("div#tvguide2 div.card-body div.mojtvprogram").addClass("mx-2 my-3 px-1");
     $("h6.card-subtitle").addClass("mb-1 text-muted font-weight-bold font-italic");
-    $("h2,h6:gt(1),p.card-text:eq(2),p.card-text:eq(5),p.card-text:eq(8),p.card-text:eq(11),div.input-group:eq(2),div.input-group:gt(3)").addClass("mb-0");
+    $("h2,h6:gt(1)").addClass("mb-0");
+    $("div.input-group").filter(":eq(2),:gt(3)").addClass("mb-0")
+    $("p.card-text").filter(":eq(2),:eq(5),:eq(8),:eq(11)").addClass("mb-0")
     $("h6").slice(20).addClass("text-wrap");
     $("div.input-group").slice(0, 2).addClass("mb-2 mr-sm-2");
     $("div.input-group").eq(3).addClass("mb-3");
-    $("ul").eq(0).children("li").addClass("list-group-item-dark");
-    $("ul").slice(0,3).children("li").addClass("px-2 py-1");
+    $("ul").slice(0, 14).children("li").addClass("list-group-item-dark");
+    $("ul").slice(0, 13).children("li").addClass("px-2 py-0");
+    $("ul").slice(13, 16).children("li").addClass("px-2 py-1");
     $("div.list-group").children("a").slice(6).addClass("list-group-item-action");
     $("div.list-group").children("a").slice(6, 11).addClass("list-group-item-primary");
     $("div.list-group").children("a").slice(11, 13).addClass("list-group-item-secondary");
@@ -214,4 +226,4 @@ $(document).ready(function () {
     $("input[type='number']:odd").attr("inputmode", "numeric");
     $("input[type='url']").attr("inputmode", "url");
     $("table.table").addClass("table-sm table-hover table-dark text-center mb-1");
-});
+}); 
