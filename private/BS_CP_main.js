@@ -28,11 +28,13 @@ function login() {
     switch ($(":password").val()) {
         case passwords[0]:
             $("#loginModal").modal("hide");
-            $("div.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
+            $("div.toast").slice(0, 3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
+            $("div.toast").eq(3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-delay": "1000" }).toast("show");
             break;
         case passwords[1]:
             $("#loginModal").modal("hide");
-            $("div.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
+            $("div.toast").slice(0, 3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
+            $("div.toast").eq(3).remove();
             //$("button#djevojkaDanaBtn").attr("disabled", "");
             $("a#djevojkaDanaBtn,[data-target='#sluzbeni']").addClass("disabled");
             $("[title^='Boobpedia']").addClass("d-none");
@@ -141,7 +143,7 @@ $(document).ready(function () {
     $("img[src*='website'],img[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
     $("img[alt^='GitHub']").attr("src", function (index, src) { return src + '?logo=github&labelColor=181717' });
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
-    $("[src*='fibacarousel']").attr("height", "263").addClass("w-100 overflow-hidden");
+    $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' },"height": "263"}).addClass("w-100 overflow-hidden");
     $("[src*='steampowered']").attr({ "height": "190", "width": "646" });
     $("iframe[src*='blberza']").slice(0, 2).addClass("rounded-bottom");
     $("iframe[src*='blberza']").slice(2).height(110).width(200).addClass("mw-100 overflow-hidden rounded-lg");
@@ -161,23 +163,24 @@ $(document).ready(function () {
     $("i.bi-laptop,i.bi-laptop,i.bi-phone,i.bi-tablet,i.bi-image,i.bi-snapchat,i.bi-telegram,i.bi-facebook,i.bi-messenger,i.bi-instagram,i.bi-threads,i.bi-whatsapp").css("font-size", "xx-large");
     $("i.bi-mailbox,i.bi-headset,i.bi-hourglass-split,i.bi-globe,i.bi-bug,i.bi-kanban,i.bi-stopwatch,i.bi-briefcase,i.bi-easel,i.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
     $("button.btn-link").addClass("text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false" });
-    $("button.close").slice(0, 15).addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white");
-    $("button.close").slice(15).addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Close" });
+    $("button.close").not($("button.close").slice(-3)).addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white");
+    $("button.close").slice(-3).addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Close" });
+    $("div.toast-header").addClass("py-0");
     $("div.toast-header").children("img").addClass("mr-1");
     //$("button.close:eq(10),button.close:eq(15)").addClass("text-light");
     $("button.btn.btn-info,button.btn.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     //$("div.modal-content:lt(10),div.modal-content:gt(10)").addClass("bg-dark");
-    $("div.modal-content").eq(10).addClass("border-dark");
+    $("div.modal-content").eq(10).addClass("bg-dark border-dark");
     $("div.modal-header, div.modal-footer").addClass("border-secondary");
     //$("div.modal-header:eq(9),div.modal-header:lt(15):gt(10),div.modal-header:gt(15)").addClass("d-lg-none");
-    $("div.modal-header").slice(9, 15).not($("div.modal-header").eq(10)).addClass("d-lg-none");
-    $("div.modal-header:lt(14):gt(10),div.modal-body:eq(9),div.modal-body:eq(14)").addClass("p-0");
+    $("div.modal-header").slice(8, 14).not($("div.modal-header").eq(9)).addClass("d-lg-none");
+    $("div.modal-header:lt(14):gt(10),div.modal-body:eq(9)").addClass("p-0");
     $("div.modal-header").slice(1).not($("div.modal-header").slice(11, 14)).addClass("py-0 pr-0")
     $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-footer").addClass("py-1");
     $("h5.modal-title").slice(1).addClass("mt-1");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     //$("div.modal-body").slice(4).not($("div.modal-body").slice(5, 12)).not($("div.modal-body").slice(13, 15)).not($("div.modal-body").eq(16)).not($("div.modal-body").eq(18)).addClass("p-2");
-    $("div.modal-body").filter(":eq(4),:eq(12),:eq(13),:eq(15),:eq(17),:eq(19)").addClass("p-2");
+    $("div.modal-body").filter(":eq(4),:eq(12),:eq(13),:eq(14),:eq(15),:eq(17)").addClass("p-2");
     $("div.position-fixed,div.toast-body").addClass("p-2");
     $("div.modal-body").filter(":eq(1),:eq(10)").addClass("py-2");
     $("div.modal-footer").find("a").addClass("text-light");
@@ -200,7 +203,7 @@ $(document).ready(function () {
     //$("div.card-footer").addClass("text-muted text-right").css("border-top", "1px dotted #6c757d");
     $("div.card-footer").addClass("border-top border-secondary text-muted text-right");
     $("div.list-group.list-group-flush").slice(1).addClass("overflow-auto");
-    $("div#aw-ad-container").hide();
+    $("div#aw-ad-container").remove();
     $("div#tvguide2 div.card-body div.mojtvprogram").addClass("mx-2 my-3 px-1");
     $("h6.card-subtitle").addClass("mb-1 text-muted font-weight-bold font-italic");
     $("h2,h6:gt(1)").addClass("mb-0");
@@ -208,7 +211,7 @@ $(document).ready(function () {
     $("p.card-text").filter(":eq(2),:eq(5),:eq(8),:eq(11)").addClass("mb-0")
     $("h6").slice(20).addClass("text-wrap");
     $("div.input-group").slice(0, 2).addClass("mb-2 mr-sm-2");
-    $("div.input-group").eq(3).addClass("mb-3");
+    $("div.input-group").slice(3, 5).addClass("mb-2");
     $("ul").slice(0, 14).children("li").addClass("list-group-item-dark");
     $("ul").slice(0, 13).children("li").addClass("px-2 py-0");
     $("ul").slice(13, 16).children("li").addClass("px-2 py-1");
@@ -220,8 +223,9 @@ $(document).ready(function () {
     $("div.list-group").children("div").children("a").addClass("list-group-item-dark");
     //$(".list-group-item").not(".list-group-item-primary,.list-group-item-secondary").not($(".list-group-item").slice(13, 15)).addClass("list-group-item-dark");
     $("a.list-group-item:eq(1),a.list-group-item:eq(4)").addClass("border-top-0");
-    $("input[type='text'],input[type='password'],input[type='number'],input[type='url'],select[id$='Station'],select#imgAngle,select[id$='Username'],select#vrstaObracunaNovca").addClass("form-control");
-    $("body,select[id$='Username'].form-control,div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
+    $("input:lt(6),select:not(:eq(4))").addClass("form-control");
+    $(".form-control").slice(4, 7).addClass("form-control-sm");
+    $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
     $("input[type='number']:even").attr("inputmode", "decimal");
     $("input[type='number']:odd").attr("inputmode", "numeric");
     $("input[type='url']").attr("inputmode", "url");
