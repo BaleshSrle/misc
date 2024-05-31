@@ -5,51 +5,30 @@
 }); */
 
 function login() {
-    /*var a = $("#username");
-    var b = $(":password");
-    const user = { username: "djidjimilovich", password: "baleshevich88" };*/
-    const passwords = ["baleshevich88", "demo"];
-
-    /* if (a.val() === "" && b.val() === "") {
-        alert("Unos nije dozvoljen.\nMorate popuniti sva polja da biste nastavili dalje.");
-    } else if (user.username !== a.val()) {
-        a.val("");
-        console.error(DateTimeLocal, ": Unijeli ste pogrešno korisničko ime. Pokušajte ponovo.");
-        alert("Unijeli ste pogrešno korisničko ime.");
-        a.focus();
-    } else if (user.password !== b.val()) {
-        b.val("");
-        console.error(DateTimeLocal, ": Unijeli ste pogrešnu lozinku. Pokušajte ponovo.");
-        alert("Unijeli ste pogrešnu lozinku.");
-        b.focus();
-    } else {
-        $("#loginModal").modal("hide");
-    } */
     switch ($(":password").val()) {
-        case passwords[0]:
+        case "baleshevich88":
             $("#loginModal").modal("hide");
             $("div.toast").slice(0, 3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
             $("div.toast").eq(3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-delay": "1000" }).toast("show");
             break;
-        case passwords[1]:
+        case "demo":
             $("#loginModal").modal("hide");
             $("div.toast").slice(0, 3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
             $("div.toast").eq(3).remove();
-            //$("button#djevojkaDanaBtn").attr("disabled", "");
             $("a#djevojkaDanaBtn,[data-target='#sluzbeni']").addClass("disabled");
             $("[title^='Boobpedia']").addClass("d-none");
             $("optgroup[label='Steamy Streamers'],option[value='biancadata']").attr("disabled", "disabled");
             break;
-        case !(passwords[0]):
+        /* case !(passwords[0]):
         case !(passwords[1]):
             console.error(DateTimeLocal, ": Unijeli ste pogrešnu lozinku. Pokušajte ponovo.");
             alert("Unijeli ste pogrešnu lozinku.");
             break;
-        case (""):
+        case "":
             $(":password").val("").focus();
             console.error(DateTimeLocal, ": Unos nije dozvoljen. Polje mora biti popunjeno.");
             alert("Unos nije dozvoljen.\nPolje mora biti popunjeno.");
-            break;
+            break; */
         default:
             $(":password").val("").focus();
     }
@@ -108,7 +87,7 @@ function playKickStreamer() {
 
 $(document).ready(function () {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
-    const DateTimeLocal = new Date().toLocaleString("sr-BA");
+
     $("head").append("<meta http-equiv='refresh' content='1800'>");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
     $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
@@ -143,7 +122,7 @@ $(document).ready(function () {
     $("img[src*='website'],img[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
     $("img[alt^='GitHub']").attr("src", function (index, src) { return src + '?logo=github&labelColor=181717' });
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
-    $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' },"height": "263"}).addClass("w-100 overflow-hidden");
+    $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
     $("[src*='steampowered']").attr({ "height": "190", "width": "646" });
     $("iframe[src*='blberza']").slice(0, 2).addClass("rounded-bottom");
     $("iframe[src*='blberza']").slice(2).height(110).width(200).addClass("mw-100 overflow-hidden rounded-lg");
