@@ -5,14 +5,15 @@
 }); */
 
 function login() {
+    //const passwords = ["baleshevich88", "demo"];
     switch ($(":password").val()) {
         case "baleshevich88":
-            $("#loginModal").modal("hide");
+            $("div#loginModal").modal('hide');
             $("div.toast").slice(0, 3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
             $("div.toast").eq(3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-delay": "1000" }).toast("show");
             break;
         case "demo":
-            $("#loginModal").modal("hide");
+            $("div#loginModal").modal("hide");
             $("div.toast").slice(0, 3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
             $("div.toast").eq(3).remove();
             $("a#djevojkaDanaBtn,[data-target='#sluzbeni']").addClass("disabled");
