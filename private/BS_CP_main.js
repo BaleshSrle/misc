@@ -92,12 +92,12 @@ $(document).ready(function () {
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
     $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
 
-    $("#loginModal").show(1).addClass("bg-secondary").modal({
+    /*$("#loginModal").show(1).addClass("bg-secondary").modal({
         backdrop: 'static',
         keyboard: false,
         focus: true,
         show: true
-    });
+    });*/
     $("#loginModal").on("hidden.bs.modal", function (event) {
         console.clear();
         "use strict";
