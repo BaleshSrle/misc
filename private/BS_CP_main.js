@@ -98,11 +98,11 @@ $(document).ready(function () {
         focus: true,
         show: true
     });*/
-    $("#loginModal").on("hidden.bs.modal", function (event) {
+    /*$("#loginModal").on("hidden.bs.modal", function (event) {
         console.clear();
         "use strict";
-    });
-    $("#time,#vicdana,#weather,#livescore,#FIBAlivescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
+    });*/
+    $("#time,#weather,#livescore,#FIBAlivescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
         backdrop: 'static',
         keyboard: false,
         focus: false,
