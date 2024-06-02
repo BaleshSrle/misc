@@ -4,13 +4,12 @@
     $(this).css({ "font-family": "'Ubuntu', sans-serif", "background": "url('https://baleshevich.dobojcaffe.com/itp100/images/logo.png') no-repeat fixed left bottom" });
 }); */
 
-function login() {
+//function login() {
     //const passwords = ["baleshevich88", "demo"];
-    switch ($(":password").val()) {
-        case "baleshevich88":
+    //switch ($(":password").val()) {
+        /*case "baleshevich88":
             $("div#loginModal").modal('hide');
-            $("div.toast").slice(0, 3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
-            $("div.toast").eq(3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-delay": "1000" }).toast("show");
+
             break;
         case "demo":
             $("div#loginModal").modal("hide");
@@ -19,7 +18,7 @@ function login() {
             $("a#djevojkaDanaBtn,[data-target='#sluzbeni']").addClass("disabled");
             $("[title^='Boobpedia']").addClass("d-none");
             $("optgroup[label='Steamy Streamers'],option[value='biancadata']").attr("disabled", "disabled");
-            break;
+            break;*/
         /* case !(passwords[0]):
         case !(passwords[1]):
             console.error(DateTimeLocal, ": Unijeli ste pogrešnu lozinku. Pokušajte ponovo.");
@@ -30,10 +29,10 @@ function login() {
             console.error(DateTimeLocal, ": Unos nije dozvoljen. Polje mora biti popunjeno.");
             alert("Unos nije dozvoljen.\nPolje mora biti popunjeno.");
             break; */
-        default:
-            $(":password").val("").focus();
-    }
-}
+//        default:
+//           $(":password").val("").focus();
+//   }
+//}
 
 function loadTvStation() {
     return window.open($("#TvStation").val());
@@ -145,6 +144,8 @@ $(document).ready(function () {
     $("button.btn-link").addClass("text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false" });
     $("button.close").not($("button.close").slice(-3)).addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white");
     $("button.close").slice(-3).addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Close" });
+    $("div.toast").slice(0, 3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
+    $("div.toast").eq(3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-delay": "3500" }).toast("show");
     $("div.toast-header").addClass("py-0");
     $("div.toast-header").children("img").addClass("mr-1");
     //$("button.close:eq(10),button.close:eq(15)").addClass("text-light");
