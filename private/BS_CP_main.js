@@ -4,35 +4,9 @@
     $(this).css({ "font-family": "'Ubuntu', sans-serif", "background": "url('https://baleshevich.dobojcaffe.com/itp100/images/logo.png') no-repeat fixed left bottom" });
 }); */
 
-//function login() {
-    //const passwords = ["baleshevich88", "demo"];
-    //switch ($(":password").val()) {
-        /*case "baleshevich88":
-            $("div#loginModal").modal('hide');
+/*function login() {
 
-            break;
-        case "demo":
-            $("div#loginModal").modal("hide");
-            $("div.toast").slice(0, 3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
-            $("div.toast").eq(3).remove();
-            $("a#djevojkaDanaBtn,[data-target='#sluzbeni']").addClass("disabled");
-            $("[title^='Boobpedia']").addClass("d-none");
-            $("optgroup[label='Steamy Streamers'],option[value='biancadata']").attr("disabled", "disabled");
-            break;*/
-        /* case !(passwords[0]):
-        case !(passwords[1]):
-            console.error(DateTimeLocal, ": Unijeli ste pogrešnu lozinku. Pokušajte ponovo.");
-            alert("Unijeli ste pogrešnu lozinku.");
-            break;
-        case "":
-            $(":password").val("").focus();
-            console.error(DateTimeLocal, ": Unos nije dozvoljen. Polje mora biti popunjeno.");
-            alert("Unos nije dozvoljen.\nPolje mora biti popunjeno.");
-            break; */
-//        default:
-//           $(":password").val("").focus();
-//   }
-//}
+}*/
 
 function loadTvStation() {
     return window.open($("#TvStation").val());
@@ -154,14 +128,15 @@ $(document).ready(function () {
     $("div.modal-content").eq(10).addClass("bg-dark border-dark");
     $("div.modal-header, div.modal-footer").addClass("border-secondary");
     //$("div.modal-header:eq(9),div.modal-header:lt(15):gt(10),div.modal-header:gt(15)").addClass("d-lg-none");
-    $("div.modal-header").slice(8, 14).not($("div.modal-header").eq(9)).addClass("d-lg-none");
-    $("div.modal-header:lt(14):gt(10),div.modal-body:eq(9)").addClass("p-0");
-    $("div.modal-header").slice(1).not($("div.modal-header").slice(11, 14)).addClass("py-0 pr-0")
-    $("div.modal-header:eq(0),div.modal-body:eq(2),div.modal-footer").addClass("py-1");
-    $("h5.modal-title").slice(1).addClass("mt-1");
+    $("div.modal").filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
+    $("div.modal-header:lt(13):gt(10),div.modal-body:eq(7),div.modal-body:eq(9)").addClass("p-0");
+    //$("div.modal-header").slice(1).not($("div.modal-header").slice(11, 14)).addClass("py-0 pr-0")
+    $("div.modal").filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
+    $("div.modal-body:eq(2),div.modal-footer").addClass("py-1");
+    $("div.modal").not("#loginModal").find("h5.modal-title").addClass("mt-1");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     //$("div.modal-body").slice(4).not($("div.modal-body").slice(5, 12)).not($("div.modal-body").slice(13, 15)).not($("div.modal-body").eq(16)).not($("div.modal-body").eq(18)).addClass("p-2");
-    $("div.modal-body").filter(":eq(4),:eq(12),:eq(13),:eq(14),:eq(15),:eq(17)").addClass("p-2");
+    $("div.modal-body").filter(":eq(0),:eq(4),:eq(12),:eq(13),:eq(14),:eq(15),:eq(16)").addClass("p-2");
     $("div.position-fixed,div.toast-body").addClass("p-2");
     $("div.modal-body").filter(":eq(1),:eq(10)").addClass("py-2");
     $("div.modal-footer").find("a").addClass("text-light");
@@ -205,7 +180,7 @@ $(document).ready(function () {
     //$(".list-group-item").not(".list-group-item-primary,.list-group-item-secondary").not($(".list-group-item").slice(13, 15)).addClass("list-group-item-dark");
     $("a.list-group-item:eq(1),a.list-group-item:eq(4)").addClass("border-top-0");
     $("input:lt(6),select:not(:eq(4))").addClass("form-control");
-    $(".form-control").slice(4, 7).addClass("form-control-sm");
+    $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
     $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
     $("input[type='number']:even").attr("inputmode", "decimal");
     $("input[type='number']:odd").attr("inputmode", "numeric");
