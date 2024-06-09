@@ -8,7 +8,7 @@
 
 }*/
 
-function loadTvStation() {
+/* function loadTvStation() {
     return window.open($("#TvStation").val());
 }
 
@@ -39,13 +39,13 @@ function IzracunajDividendu() {
     var g = d * f;
 
     $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
-}
+}*/
 
 function loadURL() {
     return $("#urlOutput").attr("src", $("#url").val());
 }
 
-function imgApply() {
+/*function imgApply() {
     $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg");
     //$("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css({"rotate": $("#imgAngle").val() + 'deg', "transform": "rotate("+$("#imgAngle").val()+"deg)"}).addClass("mx-auto d-block w-auto rounded-lg");
 }
@@ -57,7 +57,7 @@ function playTwitchStreamer() {
 
 function playKickStreamer() {
     $("iframe#KickPlayer").attr({ "src": function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
-}
+} */
 
 $(document).ready(function () {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
@@ -90,6 +90,46 @@ $(document).ready(function () {
         parent: "#AccordionTwitchStatus",
         toggle: false
     });
+    $("button.btn-primary").eq(0).on("click", function () {
+        $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg");
+    });
+    $("button.btn-primary").eq(1).on("click", function () {
+        var h = $("#novcaniIznos").val();
+        var k = $("#procenatIznos").val();
+        var procenat = k / 100;
+        var procenat2 = h * procenat;
+
+        switch ($("#vrstaObracunaNovca").val()) {
+            case "umanjenjeIznos":
+                var rezUmanjenje = h - procenat2;
+                $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje.toFixed(2) + " KM.");
+                break;
+            case "uvecanjeIznos":
+                var rezUvecanje = +h + +procenat2;
+                $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje.toFixed(2) + " KM.");
+        }
+    });
+    $("button.btn-primary").eq(2).on("click", function () {
+        var d = $("#cijenaJedneAkcije").val();
+        var f = $("#brojAkcija").val();
+        var g = d * f;
+
+        $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
+    });
+    $("button.btn-info").eq(1).on("click", function () {
+        return window.open($("#RadioStation").val());
+    });
+    $("button.btn-info").eq(2).on("click", function () {
+        return window.open($("#TvStation").val());
+    });
+    $("select#TwitchUsername").on("click", function () {
+        $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + $("select#TwitchUsername").val() + '&parent=' + location.host }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
+        $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + $("select#TwitchUsername").val() + '/chat?parent=' + location.host }, "allowfullscreen": "true" }).height(500).addClass("w-100 border-0 overflow-hidden rounded-lg");
+    });
+    $("select#KickUsername").on("click", function () {
+        $("iframe#KickPlayer").attr({ "src": function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
+    });
+
     $("[src*='simpleicons'],[alt='BaleshSrle Logo']").height(32).width(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img[src*='twitch']").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=600' }, "alt": "Twitch Status" });
