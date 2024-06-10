@@ -90,10 +90,20 @@ $(document).ready(function () {
         parent: "#AccordionTwitchStatus",
         toggle: false
     });
-    $("button.btn-primary").eq(0).on("click", function () {
+    $("button#imgRotateApply").on("click", function () {
         $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg");
-    });
-    $("button.btn-primary").eq(1).on("click", function () {
+    }).addClass("btn btn-primary mb-2 mr-sm-2").attr("type", "button");
+    $("button#loadRadioStation").on("click", function () {
+        return window.open($("#RadioStation").val());
+    }).addClass("btn btn-info").attr("type", "button");
+    $("button#loadTvStation").on("click", function () {
+        return window.open($("#TvStation").val());
+    }).addClass("btn btn-info").attr("type", "button");
+    $("select#TwitchUsername").on("click", function () {
+        $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + $("select#TwitchUsername").val() + '&parent=' + location.host }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
+        $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + $("select#TwitchUsername").val() + '/chat?parent=' + location.host }, "allowfullscreen": "true" }).height(500).addClass("w-100 border-0 overflow-hidden rounded-lg");
+    }).addClass("form-control bg-dark text-white");
+    $("button#calculateNewValue").on("click", function () {
         var h = $("#novcaniIznos").val();
         var k = $("#procenatIznos").val();
         var procenat = k / 100;
@@ -108,28 +118,17 @@ $(document).ready(function () {
                 var rezUvecanje = +h + +procenat2;
                 $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje.toFixed(2) + " KM.");
         }
-    });
-    $("button.btn-primary").eq(2).on("click", function () {
+    }).addClass("btn btn-primary btn-sm").attr("type", "button");
+    $("button#calculateDividend").on("click", function () {
         var d = $("#cijenaJedneAkcije").val();
         var f = $("#brojAkcija").val();
         var g = d * f;
 
         $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
-    });
-    $("button.btn-info").eq(1).on("click", function () {
-        return window.open($("#RadioStation").val());
-    });
-    $("button.btn-info").eq(2).on("click", function () {
-        return window.open($("#TvStation").val());
-    });
-    $("select#TwitchUsername").on("click", function () {
-        $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + $("select#TwitchUsername").val() + '&parent=' + location.host }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
-        $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + $("select#TwitchUsername").val() + '/chat?parent=' + location.host }, "allowfullscreen": "true" }).height(500).addClass("w-100 border-0 overflow-hidden rounded-lg");
-    });
+    }).addClass("btn btn-primary").attr("type", "button");
     $("select#KickUsername").on("click", function () {
         $("iframe#KickPlayer").attr({ "src": function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
-    });
-
+    }).addClass("form-control bg-dark text-white");
     $("[src*='simpleicons'],[alt='BaleshSrle Logo']").height(32).width(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img[src*='twitch']").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=600' }, "alt": "Twitch Status" });
@@ -220,7 +219,7 @@ $(document).ready(function () {
     $("div.list-group").children("div").children("a").addClass("list-group-item-dark");
     //$(".list-group-item").not(".list-group-item-primary,.list-group-item-secondary").not($(".list-group-item").slice(13, 15)).addClass("list-group-item-dark");
     $("a.list-group-item:eq(1),a.list-group-item:eq(4)").addClass("border-top-0");
-    $("input:lt(6),select:not(:eq(4))").addClass("form-control");
+    $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
     $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
     $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
     $("input[type='number']:even").attr("inputmode", "decimal");
