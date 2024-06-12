@@ -64,7 +64,10 @@ $(document).ready(function () {
 
     $("head").append("<meta http-equiv='refresh' content='1800'>");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
-    $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
+    $("div.modal").modal({
+        backdrop: 'static',
+        keyboard: false
+    }).attr({ "tabindex": "-1", "role": "dialog" });
 
     /*$("#loginModal").show(1).addClass("bg-secondary").modal({
         backdrop: 'static',
@@ -77,8 +80,6 @@ $(document).ready(function () {
         "use strict";
     });*/
     $("#time,#weather,#livescore,#FIBAlivescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
-        backdrop: 'static',
-        keyboard: false,
         focus: false,
         show: false
     });
