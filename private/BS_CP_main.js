@@ -76,6 +76,33 @@ $(document).ready(function () {
         console.clear();
         "use strict";
     });*/
+    $("div#loginModal").addClass("bg-secondary").modal({
+        backdrop: 'static',
+        keyboard: false,
+        focus: true,
+        show: true
+    });
+    $("button#loginBtn").on("click", function () {
+        switch ($("input#password").val()) {
+            case "baleshevich88":
+                console.clear();
+                $("div#loginModal").modal("hide");
+                $("div.toast").filter("#WebsiteStatusToast,#churchCalendarToast,#vicDanaToast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
+                $("div#DjevojkadanaAutiHRToast.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-delay": "3500" }).toast("show");
+                break;
+            case "demo":
+                console.clear();
+                $("div#loginModal").modal("hide");
+                $("div.toast").filter("#WebsiteStatusToast,#churchCalendarToast,#vicDanaToast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
+                $("div#DjevojkadanaAutiHRToast.toast").toast("hide").hide();
+                $("div.carousel-item").last().hide();
+                $("a[data-target='#sluzbeni'],a#djevojkaDanaBtn.nav-link").addClass("disabled");
+                $("optgroup[label='Steamy Streamers']").attr("disabled", "disabled");
+                break;
+            default:
+                $("input#password").focus();
+        }
+    }).addClass("btn btn-primary mt-1").attr("type", "button");
     $("#time,#weather,#livescore,#FIBAlivescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
         backdrop: 'static',
         keyboard: false,
@@ -158,8 +185,6 @@ $(document).ready(function () {
     $("button.btn-link").addClass("text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false" });
     $("button.close").not($("button.close").slice(-3)).addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white");
     $("button.close").slice(-3).addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Close" });
-    $("div.toast").slice(0, 3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
-    $("div.toast").eq(3).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-delay": "3500" }).toast("show");
     $("div.toast-header").addClass("py-0");
     $("div.toast-header").children("img").addClass("mr-1");
     //$("button.close:eq(10),button.close:eq(15)").addClass("text-light");
@@ -169,7 +194,7 @@ $(document).ready(function () {
     $("div.modal-header, div.modal-footer").addClass("border-secondary");
     //$("div.modal-header:eq(9),div.modal-header:lt(15):gt(10),div.modal-header:gt(15)").addClass("d-lg-none");
     $("div.modal").filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
-    $("div.modal-header:lt(13):gt(10),div.modal-body:eq(7),div.modal-body:eq(9)").addClass("p-0");
+    $("div.modal-header:eq(8),div.modal-header:lt(14):gt(10),div.modal-body:eq(7),div.modal-body:eq(9)").addClass("p-0");
     //$("div.modal-header").slice(1).not($("div.modal-header").slice(11, 14)).addClass("py-0 pr-0")
     $("div.modal").filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
     $("div.modal-body:eq(2),div.modal-footer").addClass("py-1");
@@ -186,7 +211,7 @@ $(document).ready(function () {
     $("div.row:eq(1),div.btn-group-vertical,div.modal-dialog:eq(1)").addClass("mx-auto");
     $("div.col:even").addClass("pr-xl-1");
     $("div.col:odd").addClass("pl-xl-1");
-    $("div.col:eq(2),li.navbar-item:eq(3),li.navbar-item:eq(9)").addClass("d-none d-md-block");
+    $("div.col:eq(2),li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical").eq(3).addClass("mw-100");
     $("div.card").slice(0, 6).addClass("mx-1 my-2");
