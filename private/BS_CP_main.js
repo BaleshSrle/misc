@@ -127,7 +127,7 @@ $(document).ready(function () {
         return window.open($("#TvStation").val());
     }).addClass("btn btn-info").attr("type", "button");
     $("select#TwitchUsername").on("click", function () {
-        $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + $("select#TwitchUsername").val() + '&parent=' + location.host }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
+        $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + $("select#TwitchUsername").val() + '&parent=' + location.host }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg").css("min-width", "400px");
         $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + $("select#TwitchUsername").val() + '/chat?parent=' + location.host }, "allowfullscreen": "true" }).height(500).addClass("w-100 border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark text-white");
     $("button#calculateNewValue").on("click", function () {
@@ -211,7 +211,7 @@ $(document).ready(function () {
     $("div.row:eq(1),div.btn-group-vertical,div.modal-dialog:eq(1)").addClass("mx-auto");
     $("div.col:even").addClass("pr-xl-1");
     $("div.col:odd").addClass("pl-xl-1");
-    $("div.col:eq(2),li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
+    $("p.text-white-50.small:last,div.col:eq(2),li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical").eq(3).addClass("mw-100");
     $("div.card").slice(0, 6).addClass("mx-1 my-2");
