@@ -45,6 +45,10 @@ function loadURL() {
     return $("#urlOutput").attr("src", $("#url").val());
 }
 
+function onSubmit(token) {
+    document.getElementById("loginForm").submit();
+}
+
 /*function imgApply() {
     $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg");
     //$("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css({"rotate": $("#imgAngle").val() + 'deg', "transform": "rotate("+$("#imgAngle").val()+"deg)"}).addClass("mx-auto d-block w-auto rounded-lg");
@@ -102,7 +106,7 @@ $(document).ready(function () {
             default:
                 $("input#password").focus();
         }
-    }).addClass("btn btn-primary mt-1").attr("type", "button");
+    }).addClass("btn btn-primary mt-1 g-recaptcha").attr({ "type": "button", "data-sitekey": "6LfGtPspAAAAANIjkM8CHWkePJivd8DREQyCgQRS", "data-callback": "onSubmit", "data-action": "submit" });
     $("#time,#weather,#livescore,#FIBAlivescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
         backdrop: 'static',
         keyboard: false,
