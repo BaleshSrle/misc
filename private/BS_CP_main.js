@@ -46,7 +46,8 @@ function loadURL() {
 }
 
 function onSubmit(token) {
-    document.getElementById("loginForm").submit();
+    //document.getElementById("loginForm").submit();
+    $("form#loginForm").submit();
 }
 
 /*function imgApply() {
