@@ -161,7 +161,7 @@ $(document).ready(function () {
     $("select#KickUsername").on("click", function () {
         $("iframe#KickPlayer").attr({ "src": function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark text-white");
-    $("[src*='simpleicons'],[alt='BaleshSrle Logo']").height(32).width(32);
+    $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[alt='BaleshSrle Logo']").height(32).width(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img[src*='twitch']").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=600' }, "alt": "Twitch Status" });
     $("img[src*='website'],img[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
