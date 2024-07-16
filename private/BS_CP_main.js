@@ -105,7 +105,7 @@ $(document).ready(function () {
                 $("optgroup[label='Steamy Streamers']").attr("disabled", "disabled");
         }
     }).addClass("btn btn-primary mt-1 g-recaptcha").attr({ "type": "button", "data-sitekey": "6LfGtPspAAAAANIjkM8CHWkePJivd8DREQyCgQRS", "data-callback": "onSubmit", "data-action": "submit" });
-    $("button#loginResetBtn").on("click", function(){
+    $("button#loginResetBtn").on("click", function () {
         $("input#password").trigger("focus");
     }).addClass("btn btn-danger mt-1").attr("type", "reset");
     $("#time,#weather,#livescore,#FIBAlivescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
