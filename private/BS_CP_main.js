@@ -103,11 +103,11 @@ $(document).ready(function () {
                 $("div.carousel-item").last().hide();
                 $("a[data-target='#sluzbeni'],a#djevojkaDanaBtn.nav-link").addClass("disabled");
                 $("optgroup[label='Steamy Streamers']").attr("disabled", "disabled");
-                break;
-            default:
-                $("input#password").focus();
         }
     }).addClass("btn btn-primary mt-1 g-recaptcha").attr({ "type": "button", "data-sitekey": "6LfGtPspAAAAANIjkM8CHWkePJivd8DREQyCgQRS", "data-callback": "onSubmit", "data-action": "submit" });
+    $("button#loginResetBtn").on("click", function(){
+        $("input#password").trigger("focus");
+    }).addClass("btn btn-danger mt-1").attr("type", "reset");
     $("#time,#weather,#livescore,#FIBAlivescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
         backdrop: 'static',
         keyboard: false,
