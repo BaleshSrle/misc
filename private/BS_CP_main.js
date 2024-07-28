@@ -228,7 +228,7 @@ $(document).ready(function () {
     //$("div.card-header").filter(":lt(20):gt(5),:lt(27):gt(20),:lt(38):gt(27),:lt(43):gt(38)").addClass("py-2");
     //$("div.card-header").filter(":lt(24):gt(20)").addClass("border-bottom border-white");
     $("div.modal,div.card-columns").find("div.card-header").addClass("py-2 text-white");
-    $("div.modal,div.card-columns").find("div.card-header").filter(":lt(19):gt(5),:lt(25):gt(20),:lt(37):gt(33)").addClass("border-dark");
+    $("div.modal,div.card-columns").find("div.card-header").filter(":lt(19):gt(5),:lt(25):gt(21),:lt(37):gt(33)").addClass("border-dark");
     $("div.modal,div.card-columns").find("div.card-header").filter(":lt(6),:lt(34):gt(24),:gt(36)").addClass("border-secondary");
     $("div.card-columns").find("div.card-header").slice(16).addClass("text-center");
     $("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
