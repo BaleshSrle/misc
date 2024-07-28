@@ -224,12 +224,13 @@ $(document).ready(function () {
     $("div#TwitchStatus").children("div.card").not(":last").addClass("mb-2");
     //$("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").css("border-bottom", "1px dotted #6c757d");
     //$("div.card-header").not($("div.card-header").slice(7, 19)).not($("div.card-header").slice(21, 24)).not($("div.card-header").slice(24, 27)).not($("div.card-header").eq(37)).not($("div.card-header").slice(39, 41)).addClass("border-bottom border-secondary");
-    $("button.btn-link").parents("div.card-header").addClass("border-bottom border-secondary");
+    $("button.btn-link").parents("div.card-header").addClass("py-2 border-bottom border-secondary");
     //$("div.card-header").filter(":lt(20):gt(5),:lt(27):gt(20),:lt(38):gt(27),:lt(43):gt(38)").addClass("py-2");
     //$("div.card-header").filter(":lt(24):gt(20)").addClass("border-bottom border-white");
     $("div.modal,div.card-columns").find("div.card-header").addClass("py-2 text-white");
     $("div.modal,div.card-columns").find("div.card-header").filter(":lt(19):gt(5),:lt(25):gt(21),:lt(37):gt(33)").addClass("border-dark");
     $("div.modal,div.card-columns").find("div.card-header").filter(":lt(6),:lt(34):gt(24),:gt(36)").addClass("border-secondary");
+    $("div.card-columns").parent("div.card-body").addClass("p-3");
     $("div.card-columns").find("div.card-header").slice(16).addClass("text-center");
     $("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
     //$("div.card-footer").addClass("text-muted text-right").css("border-top", "1px dotted #6c757d");
