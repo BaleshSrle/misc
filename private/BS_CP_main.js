@@ -169,7 +169,7 @@ $(document).ready(function () {
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
-    $("[src*='steampowered']").attr({ "height": "190", "width": "646" });
+    $("[src*='steampowered']").attr({ "height": "190", "width": "646" }).addClass("my-1");
     $("iframe[src*='blberza']").slice(0, 2).addClass("rounded-bottom");
     $("iframe[src*='blberza']").slice(2).height(110).width(200).addClass("mw-100 overflow-hidden rounded-lg");
     $("div.carousel").addClass("carousel-fade").carousel({
@@ -206,9 +206,9 @@ $(document).ready(function () {
     $("div.modal").not("#loginModal").find("h5.modal-title").addClass("mt-1");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     //$("div.modal-body").slice(4).not($("div.modal-body").slice(5, 12)).not($("div.modal-body").slice(13, 15)).not($("div.modal-body").eq(16)).not($("div.modal-body").eq(18)).addClass("p-2");
-    $("div.modal-body").filter(":eq(0),:eq(4),:eq(12),:eq(13),:eq(14),:eq(15),:eq(16)").addClass("p-2");
+    $("div.modal-body").filter(":eq(0),:lt(5):gt(2),:eq(10),:gt(11)").addClass("p-2");
     $("div.position-fixed,div.toast-body").addClass("p-2");
-    $("div.modal-body").filter(":eq(1),:eq(10)").addClass("py-2");
+    $("div.modal-body").filter(":eq(1)").addClass("py-2");
     $("div.modal-footer").find("a").addClass("text-light");
     //$("div.col-sm-8,div.col-sm-4,div.d-flex.flex-wrap:eq(0),output").addClass("pt-2");
     $("div.col-sm-8,div.col-sm-4,output").addClass("pt-2");
@@ -220,13 +220,18 @@ $(document).ready(function () {
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical").eq(3).addClass("mw-100");
     $("div.card").slice(0, 6).addClass("mx-1 my-2");
-    $("div.card").not($("div.card").slice(27, 30)).addClass("bg-transparent border-secondary");
+    $("div.card").not($("div.card[style^='background']")).addClass("bg-transparent border-secondary");
     $("div#TwitchStatus").children("div.card").not(":last").addClass("mb-2");
     //$("div.card-header:lt(7),div.card-header:lt(25):gt(12),div.card-header:gt(26)").css("border-bottom", "1px dotted #6c757d");
-    $("div.card-header").not($("div.card-header").slice(7, 19)).not($("div.card-header").slice(21, 24)).not($("div.card-header").slice(24, 27)).not($("div.card-header").eq(37)).not($("div.card-header").slice(39, 41)).addClass("border-bottom border-secondary");
-    $("div.card-header").filter(":lt(20):gt(5),:lt(27):gt(20),:lt(38):gt(27),:lt(43):gt(38)").addClass("py-2");
-    $("div.card-header").filter(":lt(24):gt(20)").addClass("border-bottom border-white");
-    $("div.card-body").slice(25, 27).addClass("bg-white");
+    //$("div.card-header").not($("div.card-header").slice(7, 19)).not($("div.card-header").slice(21, 24)).not($("div.card-header").slice(24, 27)).not($("div.card-header").eq(37)).not($("div.card-header").slice(39, 41)).addClass("border-bottom border-secondary");
+    $("button.btn-link").parents("div.card-header").addClass("border-bottom border-secondary");
+    //$("div.card-header").filter(":lt(20):gt(5),:lt(27):gt(20),:lt(38):gt(27),:lt(43):gt(38)").addClass("py-2");
+    //$("div.card-header").filter(":lt(24):gt(20)").addClass("border-bottom border-white");
+    $("div.modal,div.card-columns").find("div.card-header").addClass("py-2 text-white");
+    $("div.modal,div.card-columns").find("div.card-header").filter(":lt(19):gt(5),:lt(25):gt(20),:lt(37):gt(33)").addClass("border-dark");
+    $("div.modal,div.card-columns").find("div.card-header").filter(":lt(6),:lt(34):gt(24),:gt(36)").addClass("border-secondary");
+    $("div.card-columns").find("div.card-header").slice(16).addClass("text-center");
+    $("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
     //$("div.card-footer").addClass("text-muted text-right").css("border-top", "1px dotted #6c757d");
     $("div.card-footer").addClass("border-top border-secondary text-muted text-right");
     $("div.list-group.list-group-flush").slice(1).addClass("overflow-auto");
