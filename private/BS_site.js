@@ -18,13 +18,14 @@ jQuery(function ($) {
     $("nav.navbar").addClass("py-sm-1");
     $("li.nav-item").find("i.bi").addClass("pr-sm-1");
     $("img").addClass("border-0").css("margin", "3px 0px");
-    $("img[src*='style=for-the-badge'],img[alt$='Ubuntu'],img[alt='IP2Location'],img[alt^='Joomla']:gt(0)").addClass("rounded-lg");
+    $("img").filter("[src*='style=for-the-badge'],[alt$='Ubuntu'],[alt='IP2Location'],[alt^='Joomla']:gt(0)").addClass("rounded-lg");
+    $("img[src*='style=for-the-badge']:gt(0)").attr("src", function (index, src) { return src + '&logoSize=auto' });
     $("div.container-fluid").addClass("overflow-hidden mx-auto");
     $("div.col-sm-3.col-xl-2").first().addClass("my-1 pr-md-2");
-    $("div.card,div.github-box.repo").addClass("shadow-sm");
+    $("div").filter(".card,.github-box.repo").addClass("shadow-sm");
     $("div.card.my-1.d-none.d-md-block").eq(0).height(131.94);
     $("div.col-sm-3.col-xl-2").last().addClass("my-1 pl-md-2");
-    $("div.card.my-1.d-none.d-md-block:eq(1),div.card.my-1:last").height(228);
+    $("div").filter(".card.my-1.d-none.d-md-block:eq(1),.card.my-1:last").height(228);
     $("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");
     $("p.small").find("img").filter("[alt='Visual Studio Code'],[alt='HTML5'],[alt='CSS'],[alt='Font Awesome']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
     $("p.small").find("img").filter("[alt='Joomla'],[alt='Bootstrap'],[alt='WordPress'],[alt='jQuery']").addClass("my-0 ml-1 mr-0 align-text-top").removeAttr("style");
