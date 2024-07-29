@@ -50,7 +50,7 @@ jQuery(function ($) {
         keyboard: false,
         touch: false
     });
-    $("div#microsoft,div#internet,div#linux").find("img").css("max-width", "180px").addClass("d-block mx-auto h-auto");
+    $("div").filter("#microsoft,#internet,#linux").find("img").css("max-width", "180px").addClass("d-block mx-auto h-auto");
     $("footer").addClass("mb-0 py-1 text-center small");
     $("footer").find("img").filter("[alt='Bootstrap'],[alt='jsDelivr'],[alt='HTML5'],img[alt='CSS']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
 });
