@@ -198,11 +198,11 @@ $(document).ready(function () {
     $("i").filter(".bi-mailbox,.bi-headset,.bi-hourglass-split,.bi-globe,.bi-bug,.bi-kanban,.bi-stopwatch,.bi-briefcase,.bi-easel,.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
     $("button.btn-link").addClass("text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false" });
     $("button.btn-link").parents("div.card-header").addClass("py-2 border-bottom border-secondary");
+    $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     $("button.close").not($("button.close").slice(-3)).addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white");
     $("button.close").slice(-3).addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Close" });
     $("div.toast-header").addClass("py-0");
     $("div.toast-header").children("img").addClass("mr-1");
-    $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     $("div.modal-content").eq(10).addClass("bg-dark border-dark");
     $("div").filter(".modal-header,.modal-footer,card-footer").addClass("border-secondary");
     $("div.modal").filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
@@ -226,9 +226,9 @@ $(document).ready(function () {
     $("div.card").slice(0, 6).addClass("mx-1 my-2");
     $("div.card").not($("div.card[style^='background']")).addClass("bg-transparent border-secondary");
     $("div#TwitchStatus").children("div.card").not(":last").addClass("mb-2");
-    $("div").filter(".modal,.card-columns").find("div.card-header").addClass("py-2 text-white");
-    $("div").filter(".modal,.card-columns").find("div.card-header").filter(":lt(19):gt(5),:lt(25):gt(21),:lt(37):gt(33)").addClass("border-dark");
-    $("div").filter(".modal,.card-columns").find("div.card-header").filter(":lt(6),:lt(34):gt(24),:gt(36)").addClass("border-secondary");
+    $("div").filter(".modal-body,.card-columns").find("div.card-header").addClass("py-2 text-white");
+    $("div").filter(".modal-body,.card-columns").find("div.card-header").filter(":lt(19):gt(5),:lt(25):gt(21),:lt(37):gt(33)").addClass("border-dark");
+    $("div").filter(".modal-body,.card-columns").find("div.card-header").filter(":lt(6),:lt(34):gt(24),:gt(36)").addClass("border-secondary");
     $("div.card-columns").find("div.card-header").slice(16).addClass("text-center");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
     $("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
