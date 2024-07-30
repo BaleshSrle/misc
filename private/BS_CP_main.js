@@ -45,10 +45,10 @@ function loadURL() {
     return $("#urlOutput").attr("src", $("#url").val());
 }
 
-function onSubmit(token) {
+/* function onSubmit(token) {
     document.getElementById("loginForm").submit();
     //$("form#loginForm").submit();
-}
+}*/
 
 /*function imgApply() {
     $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg");
@@ -112,6 +112,8 @@ $(document).ready(function () {
                 $("a[data-target='#sluzbeni'],a#djevojkaDanaBtn.nav-link").addClass("disabled");
                 $("optgroup[label='Steamy Streamers']").attr("disabled", "disabled");
         }
+    }).on("submit", function (token) {
+        document.getElementById("loginForm").submit();
     }).addClass("btn btn-primary mt-1 g-recaptcha").attr({ "type": "button", "data-sitekey": "6LfGtPspAAAAANIjkM8CHWkePJivd8DREQyCgQRS", "data-callback": "onSubmit", "data-action": "submit" });
     $("button#loginResetBtn").on("click", function () {
         $("input#password").trigger("focus");
