@@ -41,9 +41,9 @@ function IzracunajDividendu() {
     $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
 }*/
 
-function loadURL() {
+/*function loadURL() {
     return $("#urlOutput").attr("src", $("#url").val());
-}
+}*/
 
 /* function onSubmit(token) {
     document.getElementById("loginForm").submit();
@@ -172,9 +172,13 @@ $(document).ready(function () {
         $("iframe#KickPlayer").attr({ "src": function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark text-white");
     $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[alt='BaleshSrle Logo']").height(32).width(32);
+    $("select#url").on("click", function () {
+        $("iframe#urlOutput").attr("src", $("#url").val());
+    }).addClass("form-control bg-dark text-white");
+    $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[alt='BaleshSrle Logo']").height(32).width(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img[src*='twitch']").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=600' }, "alt": "Twitch Status" });
-    $("img[src*='website'],img[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
+    $("img").filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
     $("img[alt^='GitHub']").attr("src", function (index, src) { return src + '?logo=github&labelColor=181717' });
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
