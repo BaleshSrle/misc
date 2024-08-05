@@ -13,4 +13,5 @@ $(document).ready(function () {
     $("div").filter(".laptop,.smartphone,.tablet").css("border", "black solid");
     $("div").filter(".laptop,.smartphone,.tablet").children().css("background", "white");
     $("div").filter(".smartphone,.tablet").css({ "position": "relative", "margin": "auto", "border-width": "60px 16px", "border-radius": "36px" });
+    $("iframe").css({ "width": "100%", "height": "100%", "border": "0 none" });
 });
