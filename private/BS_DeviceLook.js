@@ -10,7 +10,7 @@ $(document).ready(function () {
     $("div.smartphone").children().css({ "width": "360px", "height": "640px" });
     $("div.tablet").css({ "width": "768px", "height": "1024px" });
     $("div.tablet").children().css({ "width": "768px", "height": "1024px", "margin": "-1px" });
-    $("div").filter(".laptop,.smartphone,.tablet").css("border", "black-solid");
+    $("div").filter(".laptop,.smartphone,.tablet").css("border", "black solid");
     $("div").filter(".laptop,.smartphone,.tablet").children().css("background", "white");
     $("div").filter(".smartphone,.tablet").css({ "position": "relative", "margin": "auto", "border-width": "60px 16px", "border-radius": "36px" });
 });
