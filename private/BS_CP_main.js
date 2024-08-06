@@ -205,8 +205,11 @@ $(document).ready(function () {
     $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     $("button.close").not($("button.close").slice(-3)).addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white");
     $("button.close").slice(-3).addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Close" });
+    $("div.toast").parent("div").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px", "width": "350px" });
     $("div.toast-header").addClass("py-0");
     $("div.toast-header").children("img").addClass("mr-1");
+    $("div.toast-body").addClass("p-2");
+    $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "86px", "max-height": "102px" });
     $("div.modal-content").eq(10).addClass("bg-dark border-dark");
     $("div").filter(".modal-header,.modal-footer,card-footer").addClass("border-secondary");
     $("div.modal").filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
@@ -216,7 +219,6 @@ $(document).ready(function () {
     $("div.modal").not("#loginModal").find("h5.modal-title").addClass("mt-1");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     $("div.modal-body").filter(":eq(0),:lt(5):gt(2),:eq(10),:gt(11)").addClass("p-2");
-    $("div").filter(".position-fixed,.toast-body").addClass("p-2");
     $("div").filter(".modal-body:eq(1)").addClass("py-2");
     $("div.modal-footer").find("a").addClass("text-light");
     $("div.col-sm-8,div.col-sm-4,output").addClass("pt-2");
