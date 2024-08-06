@@ -171,11 +171,10 @@ $(document).ready(function () {
     $("select#KickUsername").on("click", function () {
         $("iframe#KickPlayer").attr({ "src": function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark text-white");
-    $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[alt='BaleshSrle Logo']").height(32).width(32);
     $("select#url").on("click", function () {
         $("iframe#urlOutput").attr("src", $("#url").val());
     }).addClass("form-control bg-dark text-white");
-    $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[alt='BaleshSrle Logo']").height(32).width(32);
+    $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[alt='BaleshSrle Logo'],[alt='SPC_logo']").height(32).width(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img[src*='twitch']").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=600' }, "alt": "Twitch Status" });
     $("img").filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
@@ -184,8 +183,9 @@ $(document).ready(function () {
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
     $("[src*='steampowered']").attr({ "height": "190", "width": "646" }).addClass("my-1");
-    $("iframe[src*='blberza']").slice(0, 2).addClass("rounded-bottom");
-    $("iframe[src*='blberza']").slice(2).height(110).width(200).addClass("mw-100 overflow-hidden rounded-lg");
+    //$("iframe[src*='blberza']").slice(0, 2).addClass("rounded-bottom");
+    $("iframe[src*='blberza']").parent("div.card-body").slice(0, 2).addClass("bg-white rounded-bottom");
+    $("iframe[src*='blberza']").slice(2).height(110).width(200).addClass("overflow-hidden rounded-lg");
     $("div.carousel").addClass("carousel-fade").carousel({
         interval: 3000,
         keyboard: false,
@@ -211,7 +211,7 @@ $(document).ready(function () {
     $("div.toast-body").addClass("p-2");
     $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "86px", "max-height": "102px" });
     $("div.modal-content").eq(10).addClass("bg-dark border-dark");
-    $("div").filter(".modal-header,.modal-footer,card-footer").addClass("border-secondary");
+    $("div").filter(".modal-header,.modal-footer,.card-footer").addClass("border-secondary");
     $("div.modal").filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
     $("div").filter(".modal-header:eq(8),.modal-header:lt(14):gt(10),.modal-body:eq(7),.modal-body:eq(9)").addClass("p-0");
     $("div.modal").filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
@@ -237,12 +237,12 @@ $(document).ready(function () {
     $("div").filter(".modal-body,.card-columns").find("div.card-header").filter(":lt(6),:lt(34):gt(24),:gt(36)").addClass("border-secondary");
     $("div.card-columns").find("div.card-header").slice(16).addClass("text-center");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
-    $("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
+    //$("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
+    $("div.card-body").children("div.mojtvprogram").addClass("mx-2 my-3 px-1");
+    $("h6.card-subtitle").addClass("mb-1 text-muted ubuntu-bold-italic");
     $("div.card-footer").addClass("border-top text-muted text-right");
     $("div.list-group.list-group-flush").slice(1).addClass("overflow-auto");
     $("div#aw-ad-container").remove();
-    $("div.mojtvprogram").addClass("mx-2 my-3 px-1");
-    $("h6.card-subtitle").addClass("mb-1 text-muted font-weight-bold font-italic");
     $("h2,h6:gt(1)").addClass("mb-0");
     $("div.input-group").filter(":eq(2),:gt(3)").addClass("mb-0")
     $("p.card-text").filter(":eq(2),:eq(5),:eq(8),:eq(11)").addClass("mb-0")
