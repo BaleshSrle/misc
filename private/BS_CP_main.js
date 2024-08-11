@@ -45,10 +45,10 @@ function IzracunajDividendu() {
     return $("#urlOutput").attr("src", $("#url").val());
 }*/
 
-/* function onSubmit(token) {
-    document.getElementById("loginForm").submit();
+function onSubmit(token) {
+    document.querySelector("form#loginForm").submit();
     //$("form#loginForm").submit();
-}*/
+}
 
 /*function imgApply() {
     $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg");
@@ -67,9 +67,9 @@ function playKickStreamer() {
 $(document).ready(function () {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
 
-    document.querySelector("button#loginBtn").onclick = function onSubmit(token) {
+    /* document.querySelector("button#loginBtn").onclick = function onSubmit(token) {
         document.getElementById("loginForm").submit();
-    }
+    }*/
 
     $("head").prepend("<meta http-equiv='refresh' content='1800'>");
     $("head").prepend("<link rel='dns-prefetch' href='https://api.twitch.tv/'>", "<link rel='dns-prefetch' href='https://passport.twitch.tv/'>", "<link rel='dns-prefetch' href='https://meta.wikimedia.org/'>", "<link rel='preconnect' href='https://www.auti.hr/djevojkadana/'>", "<link rel='preconnect' href='https://mojtv.hr/tv-navigator/'>", "<link rel='preconnect' href='https://api.twitch.tv/'>", "<link rel='preconnect' href='https://upload.wikimedia.org/'>", "<link rel='canonical' href='https://simpleicons.org/'>", "<link rel='canonical' href='https://cybermap.kaspersky.com/en/widget'>", "<link rel='canonical' href='https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305'>", "<link rel='canonical' href='https://www.livescore.bz/sr-rs/'>", "<link rel='canonical' href='https://naslovi.net/tehnologija/'>", "<link rel='canonical' href='https://store.steampowered.com/'>", "<link rel='canonical' href='https://www.twitch.tv/'>");
