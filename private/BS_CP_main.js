@@ -45,10 +45,10 @@ function IzracunajDividendu() {
     return $("#urlOutput").attr("src", $("#url").val());
 }*/
 
-function onSubmit(token) {
+/* function onSubmit(token) {
     document.querySelector("form#loginForm").submit();
     //$("form#loginForm").submit();
-}
+} */
 
 /*function imgApply() {
     $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg");
@@ -67,9 +67,10 @@ function playKickStreamer() {
 $(document).ready(function () {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
 
-    /* document.querySelector("button#loginBtn").onclick = function onSubmit(token) {
-        document.getElementById("loginForm").submit();
-    }*/
+    function onSubmit(token) {
+        document.querySelector("form#loginForm").submit();
+        //$("form#loginForm").submit();
+    }
 
     $("head").prepend("<meta http-equiv='refresh' content='1800'>");
     $("head").prepend("<link rel='dns-prefetch' href='https://api.twitch.tv/'>", "<link rel='dns-prefetch' href='https://passport.twitch.tv/'>", "<link rel='dns-prefetch' href='https://meta.wikimedia.org/'>", "<link rel='preconnect' href='https://www.auti.hr/djevojkadana/'>", "<link rel='preconnect' href='https://mojtv.hr/tv-navigator/'>", "<link rel='preconnect' href='https://api.twitch.tv/'>", "<link rel='preconnect' href='https://upload.wikimedia.org/'>", "<link rel='canonical' href='https://simpleicons.org/'>", "<link rel='canonical' href='https://cybermap.kaspersky.com/en/widget'>", "<link rel='canonical' href='https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305'>", "<link rel='canonical' href='https://www.livescore.bz/sr-rs/'>", "<link rel='canonical' href='https://naslovi.net/tehnologija/'>", "<link rel='canonical' href='https://store.steampowered.com/'>", "<link rel='canonical' href='https://www.twitch.tv/'>");
@@ -104,13 +105,13 @@ $(document).ready(function () {
             case "baleshevich88":
                 console.clear();
                 $("div#loginModal").modal("hide");
-                $("div.toast").filter("#WebsiteStatusToast,#churchCalendarToast,#vicDanaToast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
-                $("div#DjevojkadanaAutiHRToast.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-delay": "3500" }).toast("show");
+                $("div.toast").filter("#WebsiteStatusToast,#churchCalendarToast,#vicDanaToast").attr("data-autohide", "false").toast("show");
+                $("div#DjevojkadanaAutiHRToast.toast").attr("data-delay", "3500").toast("show");
                 break;
             case "demo":
                 console.clear();
                 $("div#loginModal").modal("hide");
-                $("div.toast").filter("#WebsiteStatusToast,#churchCalendarToast,#vicDanaToast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true", "data-autohide": "false" }).toast("show");
+                $("div.toast").filter("#WebsiteStatusToast,#churchCalendarToast,#vicDanaToast").attr("data-autohide", "false").toast("show");
                 $("div#DjevojkadanaAutiHRToast.toast").toast("hide").hide();
                 $("div.carousel-item").last().hide();
                 $("a[data-target='#sluzbeni'],a#djevojkaDanaBtn.nav-link").addClass("disabled");
@@ -208,10 +209,11 @@ $(document).ready(function () {
     $("button.close").not($("button.close").slice(-3)).addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white");
     $("button.close").slice(-3).addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Close" });
     $("div.toast").parent("div").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px", "width": "350px" });
+    $("div.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
     $("div.toast-header").addClass("py-0");
     $("div.toast-header").children("img").addClass("mr-1");
     $("div.toast-body").addClass("p-2");
-    $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "86px", "max-height": "102px" });
+    $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
     $("div.modal-content").eq(10).addClass("bg-dark border-dark");
     $("div").filter(".modal-header,.modal-footer,.card-footer").addClass("border-secondary");
     $("div.modal").filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
