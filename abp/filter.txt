@@ -176,7 +176,7 @@
 @@||maps.googleapis.com^$xmlhttprequest
 @@||videolan.org^$elemhide, image
 @@||ip2location.com^$elemhide, image, script
-@@||tools.ip2location.com$image
+@@||*.ip2location.com$image
 @@||agencijaspektar.com^$document
 @@||jooble.org^$elemhide
 @@||goodreads.com^$elemhide, xmlhttprequest, script
