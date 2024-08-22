@@ -214,11 +214,17 @@ $(document).ready(function () {
     $("div.toast-header").children("img").addClass("mr-1");
     $("div.toast-body").addClass("p-2");
     $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
+    $("div.modal").children("div").attr("role", "document");
     $("div.modal-content").eq(10).addClass("bg-dark border-dark");
     $("div").filter(".modal-header,.modal-footer,.card-footer").addClass("border-secondary");
     $("div.modal").filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
     $("div").filter(".modal-header:eq(8),.modal-header:lt(14):gt(10),.modal-body:eq(7),.modal-body:eq(9)").addClass("p-0");
     $("div.modal").filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
+    $("div.modal").filter("#mailSettings,#sluzbeni").children("div").addClass("modal-dialog modal-sm modal-dialog-centered");
+    $("div.modal").filter("#kick,#FamilyNotes").children("div").addClass("modal-dialog modal-lg modal-dialog-centered");
+    $("div.modal").filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog modal-dialog-centered modal-dialog-scrollable");
+    $("div.modal").filter("#weather,#livescore,#TechNewsNasloviNET,#steam_games,#programs").children("div").addClass("modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable");
+    $("div.modal").filter("#FIBAlivescore,#imgRotate,#twitch").children("div").addClass("modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable");
     $("div").filter(".modal-body:eq(2),.modal-footer").addClass("py-1");
     $("div.modal").not("#loginModal").find("h5.modal-title").addClass("mt-1");
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
