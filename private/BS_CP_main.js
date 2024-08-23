@@ -121,12 +121,12 @@ $(document).ready(function () {
     $("button#loginResetBtn").on("click", function () {
         $("input#password").trigger("focus");
     }).addClass("btn btn-danger mt-1").attr("type", "reset");
-    $("#time,#weather,#livescore,#FIBAlivescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
+    /*$("#time,#weather,#livescore,#FIBAlivescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
         backdrop: 'static',
         keyboard: false,
         focus: false,
         show: false
-    });
+    });*/
     $("div.collapse").collapse({
         parent: "#accordionControlPanel",
         toggle: false
@@ -206,12 +206,11 @@ $(document).ready(function () {
     $("button.btn-link").addClass("text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false" });
     $("button.btn-link").parents("div.card-header").addClass("py-2 border-bottom border-secondary");
     $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
-    $("button.close").not($("button.close").slice(-3)).addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white");
-    $("button.close").slice(-3).addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Close" });
     $("div.toast").parent("div").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px", "width": "350px" });
     $("div.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
     $("div.toast-header").addClass("py-0");
     $("div.toast-header").children("img").addClass("mr-1");
+    $("div.toast-header").children("button.close").addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Zatvori" });
     $("div.toast-body").addClass("p-2");
     $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
     $("div.modal").children("div").attr("role", "document");
@@ -227,6 +226,7 @@ $(document).ready(function () {
     $("div.modal").filter("#FIBAlivescore,#imgRotate,#twitch").children("div").addClass("modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable");
     $("div").filter(".modal-body:eq(2),.modal-footer").addClass("py-1");
     $("div.modal").not("#loginModal").find("h5.modal-title").addClass("mt-1");
+    $("div.modal-header").children("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" });
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     $("div.modal-body").filter(":eq(0),:lt(5):gt(2),:eq(10),:gt(11)").addClass("p-2");
     $("div").filter(".modal-body:eq(1)").addClass("py-2");
