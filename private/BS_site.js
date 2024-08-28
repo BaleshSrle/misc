@@ -3,8 +3,21 @@
 console.info("Skripta za web sajt je pokrenuta.");
 
 jQuery(function ($) {
+    switch (location.pathname) {
+        case "/it_news.html":
+        case "/drivers.html":
+        case "/mini_service.html":
+        case "/support.html":
+        case "/web_design.html":
+        case "/github_projects.html":
+        case "/blog.html":
+        case "/contact.html":
+        case "/404.html":
+            $("head").prepend("<meta name='mobile-web-app-capable' content='yes'>", "<meta name='apple-mobile-web-app-capable' content='yes'>", "<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>", "<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>", "<meta name='google-site-verification' content='cFg281al1tonGR827hLOMjiF1v-OjzuWS7nYOHCgxgA'>", "<meta name='wot-verification' content='13f1e38cf44480f6feee'>", "<meta name='norton-safeweb-site-verification' content='pofkh9sr3qjpu47evek-cna-t1f48yawpkz7mj20baj2eu2y22swvcipivgni0sv9eosd7402ko30s2bq7ip7mr8pg7co-2locptqg-e3kniin48fy1ium1kjxn76tr-'>", "<meta name='avgthreatlabs-verification' content='32fe796e7c8dd69cd046f4e24ef2f6a1a579b717'>");
+            $("head").append("<link href='humans.txt' rel='author'>");
+    }
     $("head").prepend("<base href=" + location.origin + ">");
-    $("head").append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>", "<meta name='GENERATOR' content='Visual Studio Code 1.92.0'>");
+    $("head").append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>", "<meta name='GENERATOR' content='Visual Studio Code 1.92.2'>");
     switch (new Date().getMonth() + 1) {
         case 1:
         case 12:
