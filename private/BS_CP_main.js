@@ -234,11 +234,12 @@ $(document).ready(function () {
     $("div.col-sm-8,div.col-sm-4,output").addClass("pt-2");
     $("div").filter(".col-sm-8,.col-sm-4").addClass("px-2");
     $("div").filter(".row:eq(1),.btn-group-vertical,.modal-dialog:eq(1)").addClass("mx-auto");
-    $("div.col:even").addClass("pr-xl-1");
-    $("div.col:odd").addClass("pl-xl-1");
-    $("p.text-white-50.small:last,div.col:eq(2),li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
+    $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").addClass("my-1");
     $("div.btn-group-vertical").eq(3).addClass("mw-100");
+    $("div.card-deck").children("div.card:even").addClass("mr-xl-1")
+    $("div.card-deck").children("div.card:even").eq(2).addClass("d-none d-md-block")
+    $("div.card-deck").children("div.card:odd").addClass("ml-xl-1")
     $("div.card").slice(0, 6).addClass("mx-1 my-2");
     $("div.card").not($("div.card[style^='background']")).addClass("bg-transparent border-secondary");
     $("div#TwitchStatus").children("div.card").not(":last").addClass("mb-2");
@@ -259,13 +260,20 @@ $(document).ready(function () {
     $("h6").slice(20).addClass("text-wrap");
     $("div.input-group").slice(0, 2).addClass("mb-2 mr-sm-2");
     $("div.input-group").slice(3, 5).addClass("mb-2");
-    $("ul").slice(0, 14).children("li").addClass("list-group-item-dark");
-    $("ul").slice(0, 13).children("li").addClass("px-2 py-0");
-    $("ul").slice(13, 16).children("li").addClass("px-2 py-1");
+    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, 71).addClass("list-group-item-dark");
+    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, 70).addClass("px-2 py-0");
+    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(71).addClass("px-2 py-1");
+    $("ul.nav").parent().removeClass("py-2");
+    $("ul.nav").children().removeClass("px-2 py-1");
+    $("ul[id$='List']").find("a").on("click", function (e) {
+        e.preventDefault()
+        $(this).tab("show");
+    }).attr("role", "tab");
+    $("div.list-group.list-group-horizontal").not(":eq(2)").addClass("p-1");
     $("div.list-group").children("a").slice(6).addClass("list-group-item-action");
-    $("div.list-group").children("a").slice(6, 11).addClass("list-group-item-primary");
-    $("div.list-group").children("a").slice(11, 13).addClass("list-group-item-secondary");
-    $("div.list-group").children("a").not($("a.list-group-item").slice(6, 15)).addClass("list-group-item-dark");
+    $("div.list-group").children("a").filter(":lt(11):gt(5),:eq(59)").addClass("list-group-item-primary");
+    $("div.list-group").children("a").filter(":lt(13):gt(10), :lt(62):gt(59)").addClass("list-group-item-secondary");
+    $("div.list-group").children("a").not(":lt(15):gt(5), :lt(63):gt(58)").addClass("list-group-item-dark");
     $("div.list-group").children("div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
     $("div.list-group").children("div").children("a").addClass("list-group-item-dark");
     $("a").filter(".list-group-item:eq(1),.list-group-item:eq(4)").addClass("border-top-0");
