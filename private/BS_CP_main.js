@@ -220,7 +220,7 @@ $(document).ready(function () {
     $("div").filter(".modal-header:eq(8),.modal-header:lt(14):gt(10),.modal-body:eq(7),.modal-body:eq(9)").addClass("p-0");
     $("div.modal").filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
     $("div.modal").filter("#mailSettings,#sluzbeni").children("div").addClass("modal-dialog modal-sm modal-dialog-centered");
-    $("div.modal").filter("#kick,#FamilyNotes").children("div").addClass("modal-dialog modal-lg modal-dialog-centered");
+    $("div.modal").filter("#tvguide,#kick,#FamilyNotes").children("div").addClass("modal-dialog modal-lg modal-dialog-centered");
     $("div.modal").filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog modal-dialog-centered modal-dialog-scrollable");
     $("div.modal").filter("#weather,#livescore,#TechNewsNasloviNET,#steam_games,#programs").children("div").addClass("modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable");
     $("div.modal").filter("#FIBAlivescore,#imgRotate,#twitch").children("div").addClass("modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable");
