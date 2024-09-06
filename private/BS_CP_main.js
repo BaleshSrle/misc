@@ -260,9 +260,9 @@ $(document).ready(function () {
     $("h6").slice(20).addClass("text-wrap");
     $("div.input-group").slice(0, 2).addClass("mb-2 mr-sm-2");
     $("div.input-group").slice(3, 5).addClass("mb-2");
-    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, 71).addClass("list-group-item-dark");
-    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, 70).addClass("px-2 py-0");
-    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(71).addClass("px-2 py-1");
+    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -6).addClass("list-group-item-dark");
+    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -7).addClass("px-2 py-0");
+    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(-7).addClass("px-2 py-1");
     $("ul.nav").parent().removeClass("py-2");
     $("ul.nav").children().removeClass("px-2 py-1");
     $("ul[id$='List']").find("a").on("click", function (e) {
