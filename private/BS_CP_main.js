@@ -74,7 +74,7 @@ $(document).ready(function () {
 
     $("head").prepend("<meta http-equiv='refresh' content='1800'>");
     $("head").prepend("<link rel='dns-prefetch' href='https://api.twitch.tv/'>", "<link rel='dns-prefetch' href='https://passport.twitch.tv/'>", "<link rel='dns-prefetch' href='https://meta.wikimedia.org/'>", "<link rel='preconnect' href='https://www.auti.hr/djevojkadana/'>", "<link rel='preconnect' href='https://mojtv.hr/tv-navigator/'>", "<link rel='preconnect' href='https://api.twitch.tv/'>", "<link rel='preconnect' href='https://upload.wikimedia.org/'>", "<link rel='canonical' href='https://simpleicons.org/'>", "<link rel='canonical' href='https://cybermap.kaspersky.com/en/widget'>", "<link rel='canonical' href='https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305'>", "<link rel='canonical' href='https://www.livescore.bz/sr-rs/'>", "<link rel='canonical' href='https://naslovi.net/tehnologija/'>", "<link rel='canonical' href='https://store.steampowered.com/'>", "<link rel='canonical' href='https://www.twitch.tv/'>");
-    $("head").append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons@6/css/flag-icons.min.css'>", "<script src='https://www.google.com/recaptcha/api.js'></script>", "<script src='https://oap.accuweather.com/launch.js' defer></script>", "<script src='https://www.livescore.bz/api.livescore.0.1.js' api='livescore' async></script>");
+    $("head").append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>", "<script src='https://www.google.com/recaptcha/api.js'></script>", "<script src='https://oap.accuweather.com/launch.js' defer></script>", "<script src='https://www.livescore.bz/api.livescore.0.1.js' api='livescore' async></script>");
     $("script#skin").text("var fm_inf_1 = 'Arial';");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
     $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
@@ -200,7 +200,7 @@ $(document).ready(function () {
     $("a.nav-link").find("span").addClass("pl-1 d-md-none");
     $("mark.bg-secondary,a#time_is_link,label:gt(2),div.modal-body a:eq(8)").addClass("text-white");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
-    $("span").filter(".fi-au,.fi-ba,.fi-gb,.fi-ca,.fi-us").addClass("mr-1");
+    $("span").filter(".fi-au,.fi-ba,.fi-ca,.fi-eu,.fi-gb,.fi-nz,.fi-us").addClass("mr-1");
     $("i").filter(".bi-laptop,.bi-laptop,.bi-phone,.bi-tablet,.bi-image,.bi-snapchat,.bi-telegram,.bi-facebook,.bi-messenger,.bi-instagram,.bi-threads,.bi-whatsapp").css("font-size", "xx-large");
     $("i").filter(".bi-mailbox,.bi-headset,.bi-hourglass-split,.bi-globe,.bi-bug,.bi-kanban,.bi-stopwatch,.bi-briefcase,.bi-easel,.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
     $("button.btn-link").addClass("text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false" });
