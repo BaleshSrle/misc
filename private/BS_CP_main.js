@@ -72,9 +72,11 @@ $(document).ready(function () {
         //$("form#loginForm").submit();
     }
 
-    $("head").prepend("<meta http-equiv='refresh' content='1800'>");
-    $("head").prepend("<link rel='dns-prefetch' href='https://api.twitch.tv/'>", "<link rel='dns-prefetch' href='https://passport.twitch.tv/'>", "<link rel='dns-prefetch' href='https://meta.wikimedia.org/'>", "<link rel='preconnect' href='https://www.auti.hr/djevojkadana/'>", "<link rel='preconnect' href='https://mojtv.hr/tv-navigator/'>", "<link rel='preconnect' href='https://api.twitch.tv/'>", "<link rel='preconnect' href='https://upload.wikimedia.org/'>", "<link rel='canonical' href='https://simpleicons.org/'>", "<link rel='canonical' href='https://cybermap.kaspersky.com/en/widget'>", "<link rel='canonical' href='https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305'>", "<link rel='canonical' href='https://www.livescore.bz/sr-rs/'>", "<link rel='canonical' href='https://naslovi.net/tehnologija/'>", "<link rel='canonical' href='https://store.steampowered.com/'>", "<link rel='canonical' href='https://www.twitch.tv/'>");
-    $("head").append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>", "<script src='https://www.google.com/recaptcha/api.js'></script>", "<script src='https://oap.accuweather.com/launch.js' defer></script>", "<script src='https://www.livescore.bz/api.livescore.0.1.js' api='livescore' async></script>");
+    $("head").each(function () {
+        $(this).prepend("<meta http-equiv='refresh' content='1800'>");
+        $(this).append("<link rel='dns-prefetch' href='https://api.twitch.tv/'>", "<link rel='dns-prefetch' href='https://passport.twitch.tv/'>", "<link rel='dns-prefetch' href='https://meta.wikimedia.org/'>", "<link rel='preconnect' href='https://www.auti.hr/djevojkadana/'>", "<link rel='preconnect' href='https://mojtv.hr/tv-navigator/'>", "<link rel='preconnect' href='https://api.twitch.tv/'>", "<link rel='preconnect' href='https://upload.wikimedia.org/'>", "<link rel='canonical' href='https://simpleicons.org/'>", "<link rel='canonical' href='https://cybermap.kaspersky.com/en/widget'>", "<link rel='canonical' href='https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305'>", "<link rel='canonical' href='https://www.livescore.bz/sr-rs/'>", "<link rel='canonical' href='https://naslovi.net/tehnologija/'>", "<link rel='canonical' href='https://store.steampowered.com/'>", "<link rel='canonical' href='https://www.twitch.tv/'>");
+        $(this).append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>", "<script src='https://www.google.com/recaptcha/api.js'></script>", "<script src='https://oap.accuweather.com/launch.js' defer></script>", "<script src='https://www.livescore.bz/api.livescore.0.1.js' api='livescore' async></script>");
+    });
     $("script#skin").text("var fm_inf_1 = 'Arial';");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
     $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
@@ -196,36 +198,54 @@ $(document).ready(function () {
         touch: false
     });
     $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
-    $("a.nav-link").find("i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
-    $("a.nav-link").find("span").addClass("pl-1 d-md-none");
+    $("a.nav-link").each(function () {
+        $(this).find("i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
+        $(this).find("span").addClass("pl-1 d-md-none");
+    });
     $("mark.bg-secondary,a#time_is_link,label:gt(2),div.modal-body a:eq(8)").addClass("text-white");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
-    $("span").filter(".fi-au,.fi-ba,.fi-ca,.fi-eu,.fi-gb,.fi-nz,.fi-us").addClass("mr-1");
-    $("i").filter(".bi-laptop,.bi-laptop,.bi-phone,.bi-tablet,.bi-image,.bi-snapchat,.bi-telegram,.bi-facebook,.bi-messenger,.bi-instagram,.bi-threads,.bi-whatsapp").css("font-size", "xx-large");
-    $("i").filter(".bi-mailbox,.bi-headset,.bi-hourglass-split,.bi-globe,.bi-bug,.bi-kanban,.bi-stopwatch,.bi-briefcase,.bi-easel,.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
-    $("button.btn-link").addClass("text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false" });
-    $("button.btn-link").parents("div.card-header").addClass("py-2 border-bottom border-secondary");
+    $("span").each(function () {
+        $(this).filter(".fi-au,.fi-ba,.fi-ca,.fi-eu,.fi-gb,.fi-nz,.fi-us").addClass("mr-1");
+        $(this).filter(".badge").addClass("badge-dark");
+        $(this).filter(".badge").children("i").addClass("bi bi-fire text-warning");
+    });
+    $("i").each(function () {
+        $(this).filter(".bi-laptop,.bi-laptop,.bi-phone,.bi-tablet,.bi-image,.bi-snapchat,.bi-telegram,.bi-facebook,.bi-messenger,.bi-instagram,.bi-threads,.bi-whatsapp").css("font-size", "xx-large");
+        $(this).filter(".bi-mailbox,.bi-headset,.bi-hourglass-split,.bi-globe,.bi-bug,.bi-kanban,.bi-stopwatch,.bi-briefcase,.bi-easel,.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
+    });
+    $("button.btn-link").each(function () {
+        $(this).addClass("text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false" });
+        $(this).parents("div.card-header").addClass("py-2 border-bottom border-secondary");
+    });
     $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
-    $("div.toast").parent("div").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px", "width": "350px" });
-    $("div.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
-    $("div.toast-header").addClass("py-0");
-    $("div.toast-header").children("img").addClass("mr-1");
-    $("div.toast-header").children("button.close").addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Zatvori" });
-    $("div.toast-body").addClass("p-2");
-    $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
-    $("div.modal").children("div").attr("role", "document");
+    $("div.toast").each(function () {
+        $(this).parent("div").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px", "width": "350px" });
+        $(this).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
+    });
+    $("div.toast-header").each(function () {
+        $(this).addClass("py-0");
+        $(this).children("img").addClass("mr-1");
+        $(this).children("button.close").addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Zatvori" });
+    });
+    $("div.toast-body").each(function () {
+        $(this).addClass("p-2");
+        $(this).children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
+    });
+    $("div.modal").each(function () {
+        $(this).filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
+        $(this).filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
+        $(this).filter("#mailSettings,#sluzbeni").children("div").addClass("modal-dialog modal-sm modal-dialog-centered");
+        $(this).filter("#tvguide,#kick,#FamilyNotes").children("div").addClass("modal-dialog modal-lg modal-dialog-centered");
+        $(this).filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog modal-dialog-centered modal-dialog-scrollable");
+        $(this).filter("#weather,#livescore,#TechNewsNasloviNET,#steam_games,#programs").children("div").addClass("modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable");
+        $(this).filter("#FIBAlivescore,#imgRotate,#twitch").children("div").addClass("modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable");
+        $(this).children("div").attr("role", "document");
+        $(this).not("#loginModal").find("h5.modal-title").addClass("mt-1");
+    });
     $("div.modal-content").eq(10).addClass("bg-dark border-dark");
     $("div").filter(".modal-header,.modal-footer,.card-footer").addClass("border-secondary");
-    $("div.modal").filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
     $("div").filter(".modal-header:eq(8),.modal-header:lt(14):gt(10),.modal-body:eq(7),.modal-body:eq(9)").addClass("p-0");
-    $("div.modal").filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
-    $("div.modal").filter("#mailSettings,#sluzbeni").children("div").addClass("modal-dialog modal-sm modal-dialog-centered");
-    $("div.modal").filter("#tvguide,#kick,#FamilyNotes").children("div").addClass("modal-dialog modal-lg modal-dialog-centered");
-    $("div.modal").filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog modal-dialog-centered modal-dialog-scrollable");
-    $("div.modal").filter("#weather,#livescore,#TechNewsNasloviNET,#steam_games,#programs").children("div").addClass("modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable");
-    $("div.modal").filter("#FIBAlivescore,#imgRotate,#twitch").children("div").addClass("modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable");
     $("div").filter(".modal-body:eq(2),.modal-footer").addClass("py-1");
-    $("div.modal").not("#loginModal").find("h5.modal-title").addClass("mt-1");
     $("div.modal-header").children("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" });
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
     $("div.modal-body").filter(":eq(0),:lt(5):gt(2),:eq(10),:gt(11)").addClass("p-2");
@@ -235,11 +255,13 @@ $(document).ready(function () {
     $("div").filter(".col-sm-8,.col-sm-4").addClass("px-2");
     $("div").filter(".row:eq(1),.btn-group-vertical,.modal-dialog:eq(1)").addClass("mx-auto");
     $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
-    $("div.btn-group-vertical").addClass("my-1");
-    $("div.btn-group-vertical").eq(3).addClass("mw-100");
-    $("div.card-deck").children("div.card:even").addClass("mr-xl-1")
-    $("div.card-deck").children("div.card:even").eq(2).addClass("d-none d-md-block")
-    $("div.card-deck").children("div.card:odd").addClass("ml-xl-1")
+    $("div.btn-group-vertical").each(function () {
+        $(this).addClass("my-1");
+        $(this).eq(3).addClass("mw-100");
+    });
+    $("div.card-deck").children("div.card:even").addClass("mr-xl-1");
+    $("div.card-deck").children("div.card:even").eq(2).addClass("d-none d-md-block");
+    $("div.card-deck").children("div.card:odd").addClass("ml-xl-1");
     $("div.card").slice(0, 6).addClass("mx-1 my-2");
     $("div.card").not($("div.card[style^='background']")).addClass("bg-transparent border-secondary");
     $("div#TwitchStatus").children("div.card").not(":last").addClass("mb-2");
@@ -255,16 +277,21 @@ $(document).ready(function () {
     $("div.list-group.list-group-flush").slice(1).addClass("overflow-auto");
     $("div#aw-ad-container").remove();
     $("h2,h6:gt(1)").addClass("mb-0");
-    $("div.input-group").filter(":eq(2),:gt(3)").addClass("mb-0")
     $("p.card-text").filter(":eq(2),:eq(5),:eq(8),:eq(11)").addClass("mb-0")
     $("h6").slice(20).addClass("text-wrap");
-    $("div.input-group").slice(0, 2).addClass("mb-2 mr-sm-2");
-    $("div.input-group").slice(3, 5).addClass("mb-2");
+    $("div.input-group").each(function () {
+        $(this).filter(":eq(2),:gt(3)").addClass("mb-0")
+        $(this).slice(0, 2).addClass("mb-2 mr-sm-2");
+        $(this).slice(3, 5).addClass("mb-2");
+    });
     $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -6).addClass("list-group-item-dark");
     $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -7).addClass("px-2 py-0");
     $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(-7).addClass("px-2 py-1");
-    $("ul.nav").parent().removeClass("py-2");
-    $("ul.nav").children().removeClass("px-2 py-1");
+    $("ul.list-group").filter(".list-group-flush").children("li").slice(0, -1).addClass("d-flex justify-content-between align-items-center");
+    $("ul.nav").each(function () {
+        $(this).parent().removeClass("py-2");
+        $(this).children().removeClass("px-2 py-1");
+    });
     $("ul[id$='List']").find("a").on("click", function (e) {
         e.preventDefault()
         $(this).tab("show");
@@ -280,8 +307,10 @@ $(document).ready(function () {
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
     $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
     $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
-    $("input[type='number']:even").attr("inputmode", "decimal");
-    $("input[type='number']:odd").attr("inputmode", "numeric");
+    $("input[type='number']").each(function () {
+        $(this).filter("#novcaniIznos,#cijenaJedneAkcije").attr("inputmode", "decimal");
+        $(this).filter("#procenatIznos,#brojAkcija").attr("inputmode", "numeric");
+    });
     $("input[type='url']").attr("inputmode", "url");
     $("table.table").addClass("table-sm table-hover table-dark text-center mb-1");
 }); 
