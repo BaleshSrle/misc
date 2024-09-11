@@ -296,7 +296,7 @@ $(document).ready(function () {
         e.preventDefault()
         $(this).tab("show");
     }).attr("role", "tab");
-    $("div.list-group.list-group-horizontal").not(":eq(2)").addClass("p-1");
+    $("div.list-group.list-group-horizontal").filter(":gt(2)").addClass("p-1");
     $("div.list-group").children("a").slice(6).addClass("list-group-item-action");
     $("div.list-group").children("a").filter(":lt(11):gt(5),:eq(59)").addClass("list-group-item-primary");
     $("div.list-group").children("a").filter(":lt(13):gt(10), :lt(62):gt(59)").addClass("list-group-item-secondary");
@@ -304,6 +304,8 @@ $(document).ready(function () {
     $("div.list-group").children("div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
     $("div.list-group").children("div").children("a").addClass("list-group-item-dark");
     $("a").filter(".list-group-item:eq(1),.list-group-item:eq(4)").addClass("border-top-0");
+    $("a[href='#google'],div#google").css("background-color", "#4285f4");
+    $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
     $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
     $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
