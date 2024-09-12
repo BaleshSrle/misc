@@ -259,16 +259,34 @@ $(document).ready(function () {
         $(this).addClass("my-1");
         $(this).eq(3).addClass("mw-100");
     });
-    $("div.card-deck").children("div.card:even").addClass("mr-xl-1");
-    $("div.card-deck").children("div.card:even").eq(2).addClass("d-none d-md-block");
-    $("div.card-deck").children("div.card:odd").addClass("ml-xl-1");
+    $("div.card-deck").each(function () {
+        $(this).children("div.card:even").addClass("mr-xl-1");
+        $(this).children("div.card:even").eq(2).addClass("d-none d-md-block");
+        $(this).children("div.card:odd").addClass("ml-xl-1");
+    });
+    //$("div.card-deck").children("div.card:even").addClass("mr-xl-1");
+    //$("div.card-deck").children("div.card:even").eq(2).addClass("d-none d-md-block");
+    //$("div.card-deck").children("div.card:odd").addClass("ml-xl-1");
+    /*$("div.card").each(function(){
+        $(this).not($("[style^='background')")).addClass("bg-transparent border secondary");
+    });*/
     $("div.card").slice(0, 6).addClass("mx-1 my-2");
     $("div.card").not($("div.card[style^='background']")).addClass("bg-transparent border-secondary");
+    /*$("div.card-header").ready(function () {
+        $(this).not(":eq(19),:eq(21),:eq(25),:eq(28),:eq(35),:eq(40)").addClass("py-2 text-white");
+        $(this).filter(":eq(21),:eq(28)").addClass("pt-1 text-white");
+        $(this).filter(":lt(6),:lt(35):gt(25),:lt(40):gt(37)").addClass("border-bottom border-secondary");
+        $(this).filter(":lt(19):gt(5),:lt(25):gt(21),:eq(34),:lt(38):gt(35)").addClass("border-bottom border-dark");
+        $(this).filter(":eq(20)").addClass("border-bottom border-white");
+        $(this).filter(":lt(40):gt(35)").addClass("text-center");
+    });*/
+    $("div.card-header").not(":eq(19),:eq(21),:eq(25),:eq(28),:eq(35),:eq(40)").addClass("py-2 text-white");
+    $("div.card-header").filter(":eq(21),:eq(28)").addClass("pt-1 text-white");
+    $("div.card-header").filter(":lt(6),:lt(35):gt(25),:lt(40):gt(37)").addClass("border-bottom border-secondary");
+    $("div.card-header").filter(":lt(19):gt(5),:lt(25):gt(21),:eq(34),:lt(38):gt(35)").addClass("border-bottom border-dark");
+    $("div.card-header").filter(":eq(20)").addClass("border-bottom border-white");
+    $("div.card-header").filter(":lt(40):gt(35)").addClass("text-center");
     $("div#TwitchStatus").children("div.card").not(":last").addClass("mb-2");
-    $("div").filter(".modal-body,.card-columns").find("div.card-header").addClass("py-2 text-white");
-    $("div").filter(".modal-body,.card-columns").find("div.card-header").filter(":lt(19):gt(5),:lt(25):gt(21),:lt(37):gt(33)").addClass("border-dark");
-    $("div").filter(".modal-body,.card-columns").find("div.card-header").filter(":lt(6),:lt(34):gt(24),:gt(36)").addClass("border-secondary");
-    $("div.card-columns").find("div.card-header").slice(16).addClass("text-center");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
     //$("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
     $("div.card-body").children("div.mojtvprogram").addClass("mx-2 my-3 px-1");
