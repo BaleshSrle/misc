@@ -75,7 +75,7 @@ $(document).ready(function () {
     $("head").each(function () {
         $(this).prepend("<meta http-equiv='refresh' content='1800'>");
         $(this).append("<link rel='dns-prefetch' href='https://api.twitch.tv/'>", "<link rel='dns-prefetch' href='https://passport.twitch.tv/'>", "<link rel='dns-prefetch' href='https://meta.wikimedia.org/'>", "<link rel='preconnect' href='https://www.auti.hr/djevojkadana/'>", "<link rel='preconnect' href='https://mojtv.hr/tv-navigator/'>", "<link rel='preconnect' href='https://api.twitch.tv/'>", "<link rel='preconnect' href='https://upload.wikimedia.org/'>", "<link rel='canonical' href='https://simpleicons.org/'>", "<link rel='canonical' href='https://cybermap.kaspersky.com/en/widget'>", "<link rel='canonical' href='https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305'>", "<link rel='canonical' href='https://www.livescore.bz/sr-rs/'>", "<link rel='canonical' href='https://naslovi.net/tehnologija/'>", "<link rel='canonical' href='https://store.steampowered.com/'>", "<link rel='canonical' href='https://www.twitch.tv/'>");
-        $(this).append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>", "<script src='https://www.google.com/recaptcha/api.js'></script>", "<script src='https://oap.accuweather.com/launch.js' defer></script>", "<script src='https://www.livescore.bz/api.livescore.0.1.js' api='livescore' async></script>");
+        $(this).append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>", "<script src='https://www.google.com/recaptcha/api.js'></script>"/*, "<script src='https://oap.accuweather.com/launch.js' defer></script>"*/, "<script src='https://www.livescore.bz/api.livescore.0.1.js' api='livescore' async></script>");
     });
     $("script#skin").text("var fm_inf_1 = 'Arial';");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
@@ -233,7 +233,7 @@ $(document).ready(function () {
     });
     $("div.modal").each(function () {
         $(this).filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
-        $(this).filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
+        $(this).filter("#twitch,#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
         $(this).filter("#mailSettings,#sluzbeni").children("div").addClass("modal-dialog modal-sm modal-dialog-centered");
         $(this).filter("#tvguide,#kick,#FamilyNotes").children("div").addClass("modal-dialog modal-lg modal-dialog-centered");
         $(this).filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog modal-dialog-centered modal-dialog-scrollable");
@@ -244,15 +244,15 @@ $(document).ready(function () {
     });
     $("div.modal-content").eq(10).addClass("bg-dark border-dark");
     $("div").filter(".modal-header,.modal-footer,.card-footer").addClass("border-secondary");
-    $("div").filter(".modal-header:eq(8),.modal-header:lt(14):gt(10),.modal-body:eq(7),.modal-body:eq(9)").addClass("p-0");
+    $("div").filter(".modal-header:eq(4),.modal-header:eq(6),.modal-header:eq(8),.modal-header:eq(11),.modal-body:lt(8):gt(4),.modal-body:eq(10)").addClass("p-0");
     $("div").filter(".modal-body:eq(2),.modal-footer").addClass("py-1");
     $("div.modal-header").children("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" });
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
-    $("div.modal-body").filter(":eq(0),:lt(5):gt(2),:eq(10),:gt(11)").addClass("p-2");
+    $("div.modal-body").filter(":eq(0),:lt(5):gt(2),:eq(9),:gt(10)").addClass("p-2");
     $("div").filter(".modal-body:eq(1)").addClass("py-2");
     $("div.modal-footer").find("a").addClass("text-light");
-    $("div.col-sm-8,div.col-sm-4,output").addClass("pt-2");
-    $("div").filter(".col-sm-8,.col-sm-4").addClass("px-2");
+    $("div.col-sm,div.col-sm-3,div.col-sm-4,div.col-sm-8,output").addClass("pt-2");
+    $("div").filter(".col-sm,.col-sm-3,.col-sm-4,.col-sm-8,.modal-body:eq(2),.modal-body:eq(4)").addClass("px-2");
     $("div").filter(".row:eq(1),.btn-group-vertical,.modal-dialog:eq(1)").addClass("mx-auto");
     $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").each(function () {
@@ -270,7 +270,7 @@ $(document).ready(function () {
     /*$("div.card").each(function(){
         $(this).not($("[style^='background')")).addClass("bg-transparent border secondary");
     });*/
-    $("div.card").slice(0, 6).addClass("mx-1 my-2");
+    //$("div.card").slice(0, 6).addClass("mx-1 my-2");
     $("div.card").not($("div.card[style^='background']")).addClass("bg-transparent border-secondary");
     /*$("div.card-header").ready(function () {
         $(this).not(":eq(19),:eq(21),:eq(25),:eq(28),:eq(35),:eq(40)").addClass("py-2 text-white");
@@ -280,12 +280,12 @@ $(document).ready(function () {
         $(this).filter(":eq(20)").addClass("border-bottom border-white");
         $(this).filter(":lt(40):gt(35)").addClass("text-center");
     });*/
-    $("div.card-header").not(":eq(19),:eq(21),:eq(25),:eq(28),:eq(35),:eq(40)").addClass("py-2 text-white");
+    $("div.card-header").not(":eq(22),:eq(28)").addClass("py-2 text-white");
     $("div.card-header").filter(":eq(21),:eq(28)").addClass("pt-1 text-white");
-    $("div.card-header").filter(":lt(6),:lt(35):gt(25),:lt(40):gt(37)").addClass("border-bottom border-secondary");
-    $("div.card-header").filter(":lt(19):gt(5),:lt(25):gt(21),:eq(34),:lt(38):gt(35)").addClass("border-bottom border-dark");
-    $("div.card-header").filter(":eq(20)").addClass("border-bottom border-white");
-    $("div.card-header").filter(":lt(40):gt(35)").addClass("text-center");
+    $("div.card-header").filter(":lt(6),:lt(23):gt(19),:lt(28):gt(23),:lt(34):gt(31)").addClass("border-bottom border-secondary");
+    $("div.card-header").filter(":lt(19):gt(14),:eq(23),:eq(28),:lt(32):gt(29)").addClass("border-bottom border-dark");
+    $("div.card-header").filter(":eq(14)").addClass("border-bottom border-white");
+    $("div.card-header").filter(":lt(34):gt(29)").addClass("text-center");
     $("div#TwitchStatus").children("div.card").not(":last").addClass("mb-2");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
     //$("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
@@ -303,9 +303,10 @@ $(document).ready(function () {
         $(this).slice(3, 5).addClass("mb-2");
     });
     $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -6).addClass("list-group-item-dark");
-    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -7).addClass("px-2 py-0");
-    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(-7).addClass("px-2 py-1");
-    $("ul.list-group").filter(".list-group-flush").children("li").slice(0, -1).addClass("d-flex justify-content-between align-items-center");
+    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -6).addClass("px-2 py-0");
+    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(-6).addClass("px-2 py-1");
+    $("ul.list-group").filter(".list-group-flush").children("li").slice(0, -10).addClass("d-flex justify-content-between align-items-center");
+    $("ul.list-group").filter(".list-group-flush").children("li").slice(-10).addClass("d-flex flex-fill align-items-center justify-content-around");
     $("ul.nav").each(function () {
         $(this).parent().removeClass("py-2");
         $(this).children().removeClass("px-2 py-1");
@@ -314,14 +315,16 @@ $(document).ready(function () {
         e.preventDefault()
         $(this).tab("show");
     }).attr("role", "tab");
+    $("li.list-group-item,a.list-group-item").filter(":eq(124), :eq(133), :eq(177), :eq(180)").addClass("rounded-0");
     $("div.list-group.list-group-horizontal").filter(":gt(2)").addClass("p-1");
     $("div.list-group").children("a").slice(6).addClass("list-group-item-action");
-    $("div.list-group").children("a").filter(":lt(11):gt(5),:eq(59)").addClass("list-group-item-primary");
-    $("div.list-group").children("a").filter(":lt(13):gt(10), :lt(62):gt(59)").addClass("list-group-item-secondary");
-    $("div.list-group").children("a").not(":lt(15):gt(5), :lt(63):gt(58)").addClass("list-group-item-dark");
+    $("div.list-group").children("a").filter(":lt(11):gt(5),:eq(27)").addClass("list-group-item-primary");
+    $("div.list-group").children("a").filter(":lt(13):gt(10),:lt(30):gt(27)").addClass("list-group-item-secondary");
+    $("div.list-group").children("a").not(":lt(15):gt(5),:lt(31):gt(26)").addClass("list-group-item-dark");
     $("div.list-group").children("div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
     $("div.list-group").children("div").children("a").addClass("list-group-item-dark");
     $("a").filter(".list-group-item:eq(1),.list-group-item:eq(4)").addClass("border-top-0");
+    $("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.dropdown-item:lt(17),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
     $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
