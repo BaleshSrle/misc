@@ -248,11 +248,11 @@ $(document).ready(function () {
     $("div").filter(".modal-body:eq(2),.modal-footer").addClass("py-1");
     $("div.modal-header").children("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" });
     $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
-    $("div.modal-body").filter(":eq(0),:lt(5):gt(2),:eq(9),:gt(10)").addClass("p-2");
-    $("div").filter(".modal-body:eq(1)").addClass("py-2");
+    $("div.modal-body").filter(":eq(0),:eq(3),:eq(9),:gt(10)").addClass("p-2");
+    $("div").filter(".modal-body:eq(1),.modal-body:eq(4)").addClass("py-2");
     $("div.modal-footer").find("a").addClass("text-light");
     $("div.col-sm,div.col-sm-3,div.col-sm-4,div.col-sm-8,output").addClass("pt-2");
-    $("div").filter(".col-sm,.col-sm-3,.col-sm-4,.col-sm-8,.modal-body:eq(2),.modal-body:eq(4)").addClass("px-2");
+    $("div").filter(".col-sm,.col-sm-3,.col-sm-4,.col-sm-8,.modal-body:eq(2)").addClass("px-2");
     $("div").filter(".row:eq(1),.btn-group-vertical,.modal-dialog:eq(1)").addClass("mx-auto");
     $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").each(function () {
@@ -298,9 +298,9 @@ $(document).ready(function () {
     $("p.card-text").filter(":eq(2),:eq(5),:eq(8),:eq(11)").addClass("mb-0")
     $("h6").slice(20).addClass("text-wrap");
     $("div.input-group").each(function () {
-        $(this).filter(":eq(2),:gt(3)").addClass("mb-0")
-        $(this).slice(0, 2).addClass("mb-2 mr-sm-2");
-        $(this).slice(3, 5).addClass("mb-2");
+        $("div.input-group").slice(1, 3).addClass("mb-2 mr-sm-2");
+        $("div.input-group").filter(":eq(0),:lt(6):gt(2)").addClass("mb-2");
+        $("div.input-group").filter(":gt(5)").addClass("mb-0");
     });
     $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -6).addClass("list-group-item-dark");
     $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -6).addClass("px-2 py-0");
