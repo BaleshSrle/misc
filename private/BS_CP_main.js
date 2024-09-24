@@ -75,7 +75,7 @@ $(document).ready(function () {
     $("head").each(function () {
         $(this).prepend("<meta http-equiv='refresh' content='1800'>");
         $(this).append("<link rel='dns-prefetch' href='https://api.twitch.tv/'>", "<link rel='dns-prefetch' href='https://passport.twitch.tv/'>", "<link rel='dns-prefetch' href='https://meta.wikimedia.org/'>", "<link rel='preconnect' href='https://www.auti.hr/djevojkadana/'>", "<link rel='preconnect' href='https://mojtv.hr/tv-navigator/'>", "<link rel='preconnect' href='https://api.twitch.tv/'>", "<link rel='preconnect' href='https://upload.wikimedia.org/'>", "<link rel='canonical' href='https://simpleicons.org/'>", "<link rel='canonical' href='https://cybermap.kaspersky.com/en/widget'>", "<link rel='canonical' href='https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305'>", "<link rel='canonical' href='https://www.livescore.bz/sr-rs/'>", "<link rel='canonical' href='https://naslovi.net/tehnologija/'>", "<link rel='canonical' href='https://store.steampowered.com/'>", "<link rel='canonical' href='https://www.twitch.tv/'>");
-        $(this).append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>", "<script src='https://www.google.com/recaptcha/api.js'></script>"/*, "<script src='https://oap.accuweather.com/launch.js' defer></script>"*/, "<script src='https://www.livescore.bz/api.livescore.0.1.js' api='livescore' async></script>");
+        $(this).append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>", "<script src='https://www.google.com/recaptcha/api.js'></script>"/*, "<script src='https://oap.accuweather.com/launch.js' defer></script>", "<script src='https://www.livescore.bz/api.livescore.0.1.js' api='livescore' async></script>"*/);
     });
     $("script#skin").text("var fm_inf_1 = 'Arial';");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
@@ -308,13 +308,14 @@ $(document).ready(function () {
     $("ul.list-group").filter(".list-group-flush").children("li").slice(0, -10).addClass("d-flex justify-content-between align-items-center");
     $("ul.list-group").filter(".list-group-flush").children("li").slice(-10).addClass("d-flex flex-fill align-items-center justify-content-around");
     $("ul.nav").each(function () {
-        $(this).parent().removeClass("py-2");
+        $(this).parent().removeClass("py-2").addClass("pt-1");
         $(this).children().removeClass("px-2 py-1");
+        $(this).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-y": "hidden", "overflow-x": "auto" }).attr("role", "tablist");
     });
     $("ul[id$='List']").find("a").on("click", function (e) {
         e.preventDefault()
         $(this).tab("show");
-    }).attr("role", "tab");
+    }).addClass("py-1").attr({ "data-toggle": "tab", "role": "tab" });
     $("li.list-group-item,a.list-group-item").filter(":eq(124), :eq(133), :eq(177), :eq(180)").addClass("rounded-0");
     $("div.list-group.list-group-horizontal").filter(":gt(2)").addClass("p-1");
     $("div.list-group").children("a").slice(6).addClass("list-group-item-action");
@@ -327,6 +328,7 @@ $(document).ready(function () {
     $("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.dropdown-item:lt(17),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
     $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
+    $("a[href*='livescore']").attr({ "target": "_blank", "sport": "football", "data-1": "today", "lang": "rs" });
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
     $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
     $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
