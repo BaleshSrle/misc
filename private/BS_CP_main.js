@@ -328,7 +328,6 @@ $(document).ready(function () {
     $("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.dropdown-item:lt(17),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
     $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
-    $("a[href*='livescore']").attr({ "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" });
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
     $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
     $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
