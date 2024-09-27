@@ -172,7 +172,7 @@ $(document).ready(function () {
         var g = d * f;
 
         $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
-    }).addClass("btn btn-primary").attr("type", "button");
+    }).addClass("btn btn-primary btn-sm").attr("type", "button");
     $("select#KickUsername").on("click", function () {
         $("iframe#KickPlayer").attr({ "src": function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark text-white");
@@ -202,7 +202,7 @@ $(document).ready(function () {
         $(this).find("i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
         $(this).find("span").addClass("pl-1 d-md-none");
     });
-    $("mark.bg-secondary,a#time_is_link,label:gt(2),div.modal-body a:eq(8)").addClass("text-white");
+    $("mark.bg-secondary,a#time_is_link,label:gt(2)").addClass("text-white");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
     $("span").each(function () {
         $(this).filter(".fi-au,.fi-ba,.fi-ca,.fi-eu,.fi-gb,.fi-nz,.fi-us").addClass("mr-1");
@@ -233,8 +233,13 @@ $(document).ready(function () {
     });
     $("div.modal").each(function () {
         $(this).filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
-        $(this).filter("#twitch,#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
+        $(this).filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
+        $(this).filter("#TechNewsNasloviNET,#twitch").find(".modal-header").addClass("p-0");
+        $(this).filter("#calculator").find("div.modal-header").addClass("px-1 pb-0");
+        $(this).filter("#tvguide,#TechNewsNasloviNET,#programs").find("div.modal-body").addClass("p-0");
+        $(this).filter("#loginModal,#imgRotate,#twitch,#calculator,#FujitsuLifeBookS751,#kick,#FamilyNotes").find("div.modal-body").addClass("p-2");
         $(this).filter("#mailSettings,#sluzbeni").children("div").addClass("modal-dialog modal-sm modal-dialog-centered");
+        $(this).filter("#calculator").children("div").addClass("modal-dialog modal-dialog-centered");
         $(this).filter("#tvguide,#kick,#FamilyNotes").children("div").addClass("modal-dialog modal-lg modal-dialog-centered");
         $(this).filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog modal-dialog-centered modal-dialog-scrollable");
         $(this).filter("#weather,#livescore,#TechNewsNasloviNET,#steam_games,#programs").children("div").addClass("modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable");
@@ -244,12 +249,10 @@ $(document).ready(function () {
     });
     $("div.modal-content").eq(10).addClass("bg-dark border-dark");
     $("div").filter(".modal-header,.modal-footer,.card-footer").addClass("border-secondary");
-    $("div").filter(".modal-header:eq(4),.modal-header:eq(6),.modal-header:eq(8),.modal-header:eq(11),.modal-body:lt(8):gt(4),.modal-body:eq(10)").addClass("p-0");
     $("div").filter(".modal-body:eq(2),.modal-footer").addClass("py-1");
     $("div.modal-header").children("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" });
-    $("div.modal-body:eq(8),img[src*='twitch']").addClass("p-1");
-    $("div.modal-body").filter(":eq(0),:eq(3),:eq(9),:gt(10)").addClass("p-2");
-    $("div").filter(".modal-body:eq(1),.modal-body:eq(4)").addClass("py-2");
+    $("div.modal-body:lt(8):gt(5),img[src*='twitch']").addClass("p-1");
+    $("div").filter(".modal-body:eq(1)").addClass("py-2");
     $("div.modal-footer").find("a").addClass("text-light");
     $("div.col-sm,div.col-sm-3,div.col-sm-4,div.col-sm-8,output").addClass("pt-2");
     $("div").filter(".col-sm,.col-sm-3,.col-sm-4,.col-sm-8,.modal-body:eq(2)").addClass("px-2");
@@ -301,6 +304,7 @@ $(document).ready(function () {
         $("div.input-group").slice(1, 3).addClass("mb-2 mr-sm-2");
         $("div.input-group").filter(":eq(0),:lt(6):gt(2)").addClass("mb-2");
         $("div.input-group").filter(":gt(5)").addClass("mb-0");
+        $("div.input-group").filter(":lt(6):gt(3)").addClass("input-group-sm");
     });
     $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -6).addClass("list-group-item-dark");
     $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -6).addClass("px-2 py-0");
