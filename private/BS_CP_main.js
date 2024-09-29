@@ -181,7 +181,6 @@ $(document).ready(function () {
     }).addClass("form-control bg-dark text-white");
     $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[alt='BaleshSrle Logo'],[alt='SPC_logo']").height(32).width(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
-    $("img[src*='twitch']").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=600' }, "alt": "Twitch Status" });
     $("img").filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
     $("img[alt^='GitHub']").attr("src", function (index, src) { return src + '?logo=github&labelColor=181717' });
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
@@ -232,31 +231,33 @@ $(document).ready(function () {
         $(this).children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
     });
     $("div.modal").each(function () {
-        $(this).filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
-        $(this).filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
-        $(this).filter("#TechNewsNasloviNET,#twitch").find(".modal-header").addClass("p-0");
-        $(this).filter("#calculator").find("div.modal-header").addClass("px-1 pb-0");
-        $(this).filter("#tvguide,#TechNewsNasloviNET,#programs").find("div.modal-body").addClass("p-0");
-        $(this).filter("#loginModal,#imgRotate,#twitch,#calculator,#FujitsuLifeBookS751,#kick,#FamilyNotes").find("div.modal-body").addClass("p-2");
+        $(this).children("div").attr("role", "document");
         $(this).filter("#mailSettings,#sluzbeni").children("div").addClass("modal-dialog modal-sm modal-dialog-centered");
         $(this).filter("#calculator").children("div").addClass("modal-dialog modal-dialog-centered");
         $(this).filter("#tvguide,#kick,#FamilyNotes").children("div").addClass("modal-dialog modal-lg modal-dialog-centered");
         $(this).filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog modal-dialog-centered modal-dialog-scrollable");
         $(this).filter("#weather,#livescore,#TechNewsNasloviNET,#steam_games,#programs").children("div").addClass("modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable");
         $(this).filter("#FIBAlivescore,#imgRotate,#twitch").children("div").addClass("modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable");
-        $(this).children("div").attr("role", "document");
+        $(this).filter("#time").children("div").addClass("mx-auto");
+        $(this).filter("#calculator").find("div.modal-content").addClass("bg-dark border-dark");
+        $(this).find("div.modal-header").children("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" });
+        $(this).filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
+        $(this).filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
+        $(this).filter("#TechNewsNasloviNET,#twitch").find(".modal-header").addClass("p-0");
+        $(this).filter("#calculator").find("div.modal-header").addClass("px-1 pb-0");
+        $(this).find("div").filter(".modal-header,.modal-footer").addClass("border-secondary");
         $(this).not("#loginModal").find("h5.modal-title").addClass("mt-1");
+        $(this).filter("#tvguide,#TechNewsNasloviNET,#programs").find("div.modal-body").addClass("p-0");
+        $(this).filter("#sluzbeni,#steam_games").find("div.modal-body").addClass("p-1");
+        $(this).filter("#loginModal,#imgRotate,#twitch,#calculator,#FujitsuLifeBookS751,#kick,#FamilyNotes").find("div.modal-body").addClass("p-2");
+        $(this).filter("#time").find("div.modal-body").addClass("py-2");
+        $(this).filter("#mailSettings").find("div.modal-body").addClass("px-2 py-1");
+        $(this).find("div.modal-footer").addClass("py-1");
+        $(this).find("div.modal-footer").find("a").addClass("text-light");
     });
-    $("div.modal-content").eq(10).addClass("bg-dark border-dark");
-    $("div").filter(".modal-header,.modal-footer,.card-footer").addClass("border-secondary");
-    $("div").filter(".modal-body:eq(2),.modal-footer").addClass("py-1");
-    $("div.modal-header").children("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" });
-    $("div.modal-body:lt(8):gt(5),img[src*='twitch']").addClass("p-1");
-    $("div").filter(".modal-body:eq(1)").addClass("py-2");
-    $("div.modal-footer").find("a").addClass("text-light");
     $("div.col-sm,div.col-sm-3,div.col-sm-4,div.col-sm-8,output").addClass("pt-2");
-    $("div").filter(".col-sm,.col-sm-3,.col-sm-4,.col-sm-8,.modal-body:eq(2)").addClass("px-2");
-    $("div").filter(".row:eq(1),.btn-group-vertical,.modal-dialog:eq(1)").addClass("mx-auto");
+    $("div").filter(".col-sm,.col-sm-3,.col-sm-4,.col-sm-8").addClass("px-2");
+    $("div").filter(".row:eq(1),.btn-group-vertical").addClass("mx-auto");
     $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").each(function () {
         $(this).addClass("my-1");
@@ -267,34 +268,26 @@ $(document).ready(function () {
         $(this).children("div.card:even").eq(2).addClass("d-none d-md-block");
         $(this).children("div.card:odd").addClass("ml-xl-1");
     });
-    //$("div.card-deck").children("div.card:even").addClass("mr-xl-1");
-    //$("div.card-deck").children("div.card:even").eq(2).addClass("d-none d-md-block");
-    //$("div.card-deck").children("div.card:odd").addClass("ml-xl-1");
     /*$("div.card").each(function(){
         $(this).not($("[style^='background')")).addClass("bg-transparent border secondary");
     });*/
     //$("div.card").slice(0, 6).addClass("mx-1 my-2");
     $("div.card").not($("div.card[style^='background']")).addClass("bg-transparent border-secondary");
-    /*$("div.card-header").ready(function () {
-        $(this).not(":eq(19),:eq(21),:eq(25),:eq(28),:eq(35),:eq(40)").addClass("py-2 text-white");
-        $(this).filter(":eq(21),:eq(28)").addClass("pt-1 text-white");
-        $(this).filter(":lt(6),:lt(35):gt(25),:lt(40):gt(37)").addClass("border-bottom border-secondary");
-        $(this).filter(":lt(19):gt(5),:lt(25):gt(21),:eq(34),:lt(38):gt(35)").addClass("border-bottom border-dark");
-        $(this).filter(":eq(20)").addClass("border-bottom border-white");
-        $(this).filter(":lt(40):gt(35)").addClass("text-center");
-    });*/
     $("div.card-header").not(":eq(22),:eq(28)").addClass("py-2 text-white");
     $("div.card-header").filter(":eq(21),:eq(28)").addClass("pt-1 text-white");
     $("div.card-header").filter(":lt(6),:lt(23):gt(19),:lt(28):gt(23),:lt(34):gt(31)").addClass("border-bottom border-secondary");
     $("div.card-header").filter(":lt(19):gt(14),:eq(23),:eq(28),:lt(32):gt(29)").addClass("border-bottom border-dark");
     $("div.card-header").filter(":eq(14)").addClass("border-bottom border-white");
     $("div.card-header").filter(":lt(34):gt(29)").addClass("text-center");
-    $("div#TwitchStatus").children("div.card").not(":last").addClass("mb-2");
+    $("div#TwitchStatus").each(function () {
+        $(this).children("div.card").not(":last").addClass("mb-2");
+        $(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=600' }, "alt": "Twitch Status" }).addClass("p-1");
+    });
     $("div.card-columns").parent("div.card-body").addClass("p-3");
     //$("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
     $("div.card-body").children("div.mojtvprogram").addClass("mx-2 my-3 px-1");
     $("h6.card-subtitle").addClass("mb-1 text-muted ubuntu-bold-italic");
-    $("div.card-footer").addClass("border-top text-muted text-right");
+    $("div.card-footer").addClass("border-top border-secondary text-muted text-right");
     $("div.list-group.list-group-flush").slice(1).addClass("overflow-auto");
     $("div#aw-ad-container").remove();
     $("h2,h6:gt(1)").addClass("mb-0");
