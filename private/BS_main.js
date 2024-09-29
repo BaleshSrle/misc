@@ -31,4 +31,5 @@ $(document).ready(function () {
         history.back();
     }).attr("type", "button");
     $("#godina").text(new Date().getFullYear() + '.');
+    $("#lastmod").html("Ovaj dokument je poslednji put izmjenjen " + new Date(document.lastModified).toLocaleDateString("sr-BA"));
 });
