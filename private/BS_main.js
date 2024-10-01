@@ -3,6 +3,7 @@
 console.info("Glavna skripta je pokrenuta.");
 
 $(document).ready(function () {
+    document.normalize();
     if (location.pathname != "/index.html") {
         $("html").attr("lang", "sr-BA");
         $("head").prepend("<meta name='robots' content='index, nofollow'>", "<meta http-equiv='X-UA-Compatible' content='IE=edge'>");
