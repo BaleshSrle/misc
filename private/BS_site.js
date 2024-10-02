@@ -17,6 +17,18 @@ jQuery(function ($) {
                 $(this).prepend("<meta name='mobile-web-app-capable' content='yes'>", "<meta name='apple-mobile-web-app-capable' content='yes'>", "<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>", "<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>", "<meta name='google-site-verification' content='cFg281al1tonGR827hLOMjiF1v-OjzuWS7nYOHCgxgA'>", "<meta name='wot-verification' content='13f1e38cf44480f6feee'>", "<meta name='norton-safeweb-site-verification' content='pofkh9sr3qjpu47evek-cna-t1f48yawpkz7mj20baj2eu2y22swvcipivgni0sv9eosd7402ko30s2bq7ip7mr8pg7co-2locptqg-e3kniin48fy1ium1kjxn76tr-'>", "<meta name='avgthreatlabs-verification' content='32fe796e7c8dd69cd046f4e24ef2f6a1a579b717'>");
                 $(this).append("<link href='humans.txt' rel='author'>");
             });
+            break;
+        case "/mini_service.html":
+        case "/support.html":
+        case "/web_design.html":
+        case "/github_projects.html":
+            $("a.dropdown-item[href='" + location.pathname.slice(1) + "']").addClass("active");
+            break;
+        case "/it_news.html":
+        case "/drivers.html":
+        case "/blog.html":
+        case "/contact.html":
+            $("a.nav-link[href='" + location.pathname.slice(1) + "']").parent("li.nav-item").addClass("active");
     }
     $("head").each(function () {
         $(this).prepend("<base href=" + location.origin + ">");
@@ -36,7 +48,7 @@ jQuery(function ($) {
     $("nav.navbar").addClass("py-sm-1");
     $("li.nav-item").find("i.bi").addClass("pr-sm-1");
     $("i").filter(".bi-disc-fill, .bi-cloud-download").parents("li.nav-item").addClass("d-none d-md-block");
-    $("img").each(function(){
+    $("img").each(function () {
         $(this).addClass("border-0").css("margin", "3px 0px");
         $(this).parents("div.card-body").addClass("px-2");
     });
