@@ -255,8 +255,8 @@ $(document).ready(function () {
         $(this).find("div.modal-footer").addClass("py-1");
         $(this).find("div.modal-footer").find("a").addClass("text-light");
     });
-    $("div.col-sm,div.col-sm-3,div.col-sm-4,div.col-sm-8,output").addClass("pt-2");
-    $("div").filter(".col-sm,.col-sm-3,.col-sm-4,.col-sm-8").addClass("px-2");
+    $("div.col-sm,div.col-sm-4,div.col-sm-8,output").addClass("pt-2");
+    $("div").filter(".col-sm,.col-sm-4,.col-sm-8").addClass("px-2");
     $("div").filter(".row:eq(1),.btn-group-vertical").addClass("mx-auto");
     $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").each(function () {
@@ -283,6 +283,7 @@ $(document).ready(function () {
         $(this).children("div.card").not(":last").addClass("mb-2");
         $(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=300' }, "alt": "Twitch Status" }).addClass("p-1");
     });
+    $("div[id^='Twitch']").addClass("col-sm-3 pt-2 px-2 collapse width");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
     //$("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
     $("div.card-body").children("div.mojtvprogram").addClass("mx-2 my-3 px-1");
