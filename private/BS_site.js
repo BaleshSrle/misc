@@ -20,8 +20,8 @@ jQuery(function ($) {
     }
     $("head").each(function () {
         $(this).prepend("<base href=" + location.origin + ">");
-        $(this).append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>", "<meta name='GENERATOR' content='Visual Studio Code 1.94.0'>");
-        $(this).append("<script src='https://cdn.jsdelivr.net/npm/spamguard.js/dist/spamguard.min.js'></script>");
+        $(this).append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>", "<meta name='GENERATOR' content='Visual Studio Code 1.95.0'>");
+        //$(this).append("<script src='https://cdn.jsdelivr.net/npm/spamguard.js/dist/spamguard.min.js'></script>");
     });
 
     switch (new Date().getMonth() + 1) {
@@ -70,16 +70,6 @@ jQuery(function ($) {
         keyboard: false,
         touch: false
     });
-    $("div.btn-toolbar").addClass("d-flex justify-content-center flex-row flex-fill");
-    $("div.btn-group.btn-group-lg").each(function () {
-        $(this).filter(":first").addClass("pr-xl-1 py-1");
-        $(this).filter(":last").addClass("pl-xl-1 py-1 d-none d-md-block");
-    });
-    $(".bi-skype,.bi-telegram,.bi-envelope,.bi-cone-striped").addClass("h2 align-middle");
-    $(".btn-vlc").each(function () {
-        $(this).css({ "background-color": "darkorange", "color": "white" });
-        $(this).hover(function () { $(this).css({ "background-color": "#d87600", "color": "white" }); }, function () { $(this).css({ "background-color": "darkorange", "color": "white" }); });
-    });
     $("div#internet.carousel").addClass("carousel-fade").carousel({
         interval: 2800,
         keyboard: false,
@@ -90,8 +80,20 @@ jQuery(function ($) {
         keyboard: false,
         touch: false
     });
+    $("div.github-widget").parent("div").addClass("col p-1");
+    $("div.btn-toolbar").addClass("d-flex justify-content-center flex-row flex-fill");
+    $("div.btn-group.btn-group-lg").each(function () {
+        $(this).filter(":first").addClass("pr-xl-1 py-1");
+        $(this).filter(":last").addClass("pl-xl-1 py-1 d-none d-md-block");
+    });
+    $(".bi-skype,.bi-telegram,.bi-envelope,.bi-cone-striped").addClass("h2 align-middle");
+    $(".btn-vlc").each(function () {
+        $(this).css({ "background-color": "darkorange", "color": "white" });
+        $(this).hover(function () { $(this).css({ "background-color": "#d87600", "color": "white" }); }, function () { $(this).css({ "background-color": "darkorange", "color": "white" }); });
+    });
     $("footer").each(function () {
         $("footer").addClass("mb-0 py-1 text-center small");
+        $("footer").children("p").not(":last").addClass("mb-1");
         $("footer").find("img").filter("[alt='Bootstrap'],[alt='jsDelivr'],[alt='HTML5'],img[alt='CSS']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
     });
 });
