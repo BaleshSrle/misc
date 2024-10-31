@@ -8,8 +8,8 @@
 !
 !-----------------------General blocking rules------------------------!
 @@||heidisql.com^$document
-@@||soapui.org^$elemhide, image
-@@||smartbear.*^$elemhide, image
+@@||soapui.org^$elemhide, xmlhttprequest, image
+@@||smartbear.*^$elemhide, xmlhttprequest, image
 @@||selenium.dev^$elemhide, image
 @@||katalon.com^$elemhide, stylesheet, script
 @@||postman.com^$image
@@ -292,7 +292,7 @@
 @@||booking.com^$elemhide
 @@||*.travel^$elemhide, stylesheet, image
 @@||cloudimg.io^$image
-@@||github.*^$elemhide, image, ping
+@@||github.*^$elemhide, image, script, ping
 @@||siteground.com^$elemhide
 @@||bitly.com^$elemhide
 @@||cashbackworld.com^$elemhide
@@ -582,4 +582,4 @@ w3schools.com#@#.sharethis
 oracle.com#@#.scl-icons
 babepedia.com#@##socialicons
 babepedia.com###basePopping
-###aw-ad-container
+! ###aw-ad-container
