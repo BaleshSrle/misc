@@ -366,7 +366,7 @@
 @@||sexcentrala.com^$elemhide, stylesheet, script
 @@||faponic.com^$elemhide
 ! ||faponic.com/img/assets/*.gif
-@@||babepedia.org^$image
+@@||babepedia.com^$image
 @@||fitnakedgirls.com^$elemhide
 @@||*.xxx^$elemhide
 @@||lisca.*^$elemhide, script, image
@@ -578,8 +578,8 @@ saimse.com
 kodbakeff.com
 vodovodaddoboj.info
 jw.org
-#@#.sharethis
-#@#.scl-icons
-#@##socialicons
+w3schools.com#@#.sharethis
+oracle.com#@#.scl-icons
+babepedia.com#@##socialicons
+babepedia.com###basePopping
 ###aw-ad-container
-###basePopping
