@@ -578,8 +578,9 @@ saimse.com
 kodbakeff.com
 vodovodaddoboj.info
 jw.org
-w3schools.com#@#.sharethis
-oracle.com#@#.scl-icons
-babepedia.com#@##socialicons
-babepedia.com###basePopping
+#@#.sharethis
+#@#.scl-icons
+#@##socialicons
+###basePopping
+##div[id|="custom_html"]
 ! ###aw-ad-container
