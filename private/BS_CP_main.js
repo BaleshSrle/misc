@@ -147,7 +147,7 @@ $(document).ready(function () {
         return window.open($("#TvStation").val());
     }).addClass("btn btn-info").attr("type", "button");
     $("select#TwitchUsername").on("click", function () {
-        //$("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + $("select#TwitchUsername").val() + '&parent=' + location.host }, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
+        $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + $("select#TwitchUsername").val() + '&parent=' + location.host + 'muted=false'}, "allowfullscreen": "true" }).addClass("border-0 overflow-hidden rounded-lg");
         $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + $("select#TwitchUsername").val() + '/chat?parent=' + location.host }, "allowfullscreen": "true" }).addClass("w-100 h-100 border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark text-white");
     $("button#calculateNewValue").on("click", function () {
