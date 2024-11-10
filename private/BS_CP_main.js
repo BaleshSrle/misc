@@ -246,6 +246,7 @@ $(document).ready(function () {
         $(this).filter("#TechNewsNasloviNET,#twitch").find(".modal-header").addClass("p-0");
         $(this).filter("#calculator").find("div.modal-header").addClass("px-1 pb-0");
         $(this).find("div").filter(".modal-header,.modal-footer").addClass("border-secondary");
+        $(this).find("hr").addClass("border-secondary");
         $(this).not("#loginModal").find("h5.modal-title").addClass("mt-1");
         $(this).filter("#tvguide,#TechNewsNasloviNET,#programs").find("div.modal-body").addClass("p-0");
         $(this).filter("#sluzbeni,#steam_games").find("div.modal-body").addClass("p-1");
@@ -295,6 +296,7 @@ $(document).ready(function () {
     $("h2,h6:gt(1)").addClass("mb-0");
     $("p.card-text").filter(":eq(2),:eq(5),:eq(8),:eq(11)").addClass("mb-0")
     $("h6").slice(20).addClass("text-wrap");
+    $("hr").slice(0, -2).addClass("my-2");
     $("div.input-group").each(function () {
         $("div.input-group").slice(1, 3).addClass("mb-2 mr-sm-2");
         $("div.input-group").filter(":eq(0),:lt(6):gt(2)").addClass("mb-2");
