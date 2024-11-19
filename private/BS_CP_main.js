@@ -148,7 +148,7 @@ $(document).ready(function () {
     }).addClass("btn btn-info").attr("type", "button");
     $("select#TwitchUsername").on("click", function () {
         const TwitchUsername = $("select#TwitchUsername").val();
-        $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + TwitchUsername + '&parent=' + location.host + '&muted=true'}, "allowfullscreen": "false" }).addClass("border-0 overflow-hidden rounded-lg");
+        $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + TwitchUsername + '&parent=' + location.host + '&muted=true' }, "allowfullscreen": "false" }).addClass("border-0 overflow-hidden rounded-lg");
         $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + TwitchUsername + '/chat?parent=' + location.host }, "allowfullscreen": "false" }).addClass("w-100 h-100 border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark text-white");
     $("button#calculateNewValue").on("click", function () {
@@ -175,7 +175,7 @@ $(document).ready(function () {
         $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
     }).addClass("btn btn-primary btn-sm").attr("type", "button");
     $("select#KickUsername").on("click", function () {
-        $("iframe#KickPlayer").attr("src", function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() + '?muted=true&allowfullscreen=false'}).addClass("border-0 overflow-hidden rounded-lg");
+        $("iframe#KickPlayer").attr("src", function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() + '?muted=true&allowfullscreen=false' }).addClass("border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark text-white");
     $("select#url").on("click", function () {
         $("iframe#urlOutput").attr("src", $("#url").val());
@@ -183,7 +183,7 @@ $(document).ready(function () {
     $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[alt='BaleshSrle Logo'],[alt='SPC_logo']").height(32).width(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img").filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
-    $("img[alt^='GitHub']").attr("src", function (index, src) { return src + '?logo=github&labelColor=181717' });
+    $("img[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
@@ -284,7 +284,7 @@ $(document).ready(function () {
     $("div#TwitchChat").prev().addClass("col-sm pt-2 px-2");
     $("div#TwitchStatus").each(function () {
         $(this).children("div.card").not(":last").addClass("mb-2");
-        $(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=300' }, "alt": "Twitch Status" }).addClass("p-1");
+        $(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=300' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1");
     });
     $("div[id^='Twitch']").addClass("pt-2 px-2 collapse width");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
@@ -338,9 +338,10 @@ $(document).ready(function () {
         $(this).filter("#procenatIznos,#brojAkcija").attr("inputmode", "numeric");
     });
     $("input[type='url']").attr("inputmode", "url");
-    $("table.table").each(function(){
+    $("table.table").each(function () {
         $(this).addClass("table-sm table-hover table-dark text-center mb-1");
         $(this).find("td").filter(":eq(1),:lt(6):gt(3),:eq(7),:eq(10),:lt(15):gt(12),:eq(19),:eq(28),:eq(31),:lt(42):gt(39),:eq(46),:eq(53),:lt(58):gt(54),:eq(59),:eq(64),:eq(67),:eq(70),:eq(74),:eq(76),:lt(81):gt(78),:lt(96):gt(93),:lt(102):gt(99),:lt(111):gt(108),:lt(114):gt(111),:eq(122)").addClass("align-middle");
+        $(this).find("td").children("img[src*='logo']").attr("src", function (index, src) { return src + '&logoColor=white' });
     });
-    
+
 }); 
