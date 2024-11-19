@@ -338,5 +338,9 @@ $(document).ready(function () {
         $(this).filter("#procenatIznos,#brojAkcija").attr("inputmode", "numeric");
     });
     $("input[type='url']").attr("inputmode", "url");
-    $("table.table").addClass("table-sm table-hover table-dark text-center mb-1");
+    $("table.table").each(function(){
+        $(this).addClass("table-sm table-hover table-dark text-center mb-1");
+        $(this).find("td").filter(":eq(1),:lt(6):gt(3),:eq(7),:eq(10),:lt(15):gt(12),:eq(19),:eq(28),:eq(31),:lt(42):gt(39),:eq(46),:eq(53),:lt(58):gt(54),:eq(59),:eq(64),:eq(67),:eq(70),:eq(74),:eq(76),:lt(81):gt(78),:lt(96):gt(93),:lt(102):gt(99),:lt(111):gt(108),:lt(114):gt(111),:eq(122)").addClass("align-middle");
+    });
+    
 }); 
