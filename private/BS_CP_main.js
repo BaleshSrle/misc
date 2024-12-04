@@ -304,11 +304,15 @@ $(document).ready(function () {
         $("div.input-group").filter(":gt(5)").addClass("mb-0");
         $("div.input-group").filter(":lt(6):gt(3)").addClass("input-group-sm");
     });
-    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -6).addClass("list-group-item-dark");
-    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(0, -6).addClass("px-2 py-0");
-    $("ul.list-group").filter(".list-group-flush, .pt-1, .pb-1").children("li").slice(-6).addClass("px-2 py-1");
-    $("ul.list-group").filter(".list-group-flush").children("li").slice(0, -10).addClass("d-flex justify-content-between align-items-center");
-    $("ul.list-group").filter(".list-group-flush").children("li").slice(-10).addClass("d-flex flex-fill align-items-center justify-content-around");
+    $("ul.list-group").each(function () {
+        $("ul.list-group").slice(0, -2).addClass("list-group-flush");
+        $("ul.list-group").slice(-4, -2).addClass("list-group-horizontal flex-wrap");
+        $("ul.list-group").children("li.list-group-item").slice(0, -6).addClass("list-group-item-dark px-2 py-0 d-flex align-items-center");
+        $("ul.list-group").children("li.list-group-item").slice(0, 105).addClass("justify-content-between");
+        $("ul.list-group").children("li.list-group-item").slice(105, -6).addClass("flex-fill justify-content-around");
+        $("ul.list-group").children("li.list-group-item").slice(-6).addClass("px-2 py-1");
+        $("ul.list-group").children("li.list-group-item").filter(":eq(104),:lt(117):gt(113)").addClass("rounded-0");
+    });
     $("ul.nav").each(function () {
         $(this).parent().removeClass("py-2").addClass("pt-1");
         $(this).children().removeClass("px-2 py-1");
@@ -318,15 +322,21 @@ $(document).ready(function () {
         e.preventDefault()
         $(this).tab("show");
     }).addClass("py-1").attr({ "data-toggle": "tab", "role": "tab" });
-    $("li.list-group-item,a.list-group-item").filter(":eq(124), :eq(133), :eq(177), :eq(180)").addClass("rounded-0");
-    $("div.list-group.list-group-horizontal").filter(":gt(2)").addClass("p-1");
-    $("div.list-group").children("a").slice(6).addClass("list-group-item-action");
-    $("div.list-group").children("a").filter(":lt(11):gt(5),:eq(27)").addClass("list-group-item-primary");
-    $("div.list-group").children("a").filter(":lt(13):gt(10),:lt(30):gt(27)").addClass("list-group-item-secondary");
-    $("div.list-group").children("a").not(":lt(15):gt(5),:lt(31):gt(26)").addClass("list-group-item-dark");
-    $("div.list-group").children("div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
-    $("div.list-group").children("div").children("a").addClass("list-group-item-dark");
-    $("a").filter(".list-group-item:eq(1),.list-group-item:eq(4)").addClass("border-top-0");
+    $("div.list-group").each(function () {
+        $("div.list-group").filter(":lt(4):gt(1),:lt(11):gt(5)").addClass("list-group-horizontal");
+        $("div.list-group").filter(":eq(4),:eq(6),:lt(13):gt(10)").addClass("list-group-flush");
+        $("div.list-group").filter(":eq(6),:lt(13):gt(10)").addClass("overflow-auto");
+        $("div.list-group").filter(":eq(5),:eq(13)").addClass("p-2");
+        $("div.list-group").filter(":lt(11):gt(6)").addClass("p-1");
+        $("div.list-group").children("div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
+        $("div.list-group").find("a.list-group-item").filter(":lt(15):gt(6),:lt(58):gt(41),:gt(69)").addClass("list-group-item-action");
+        $("div.list-group").find("a.list-group-item").filter(":lt(11):gt(5),:eq(54)").addClass("list-group-item-primary");
+        $("div.list-group").find("a.list-group-item").filter(":lt(13):gt(10),:lt(57):gt(54)").addClass("list-group-item-secondary");
+        $("div.list-group").find("a.list-group-item").filter(":eq(57)").addClass("list-group-item-info");
+        $("div.list-group").find("a.list-group-item").filter(":lt(6),:lt(54):gt(14),:gt(57)").addClass("list-group-item-dark");
+        $("div.list-group").find("a.list-group-item").filter(":eq(0),:eq(4)").addClass("border-top-0");
+        $("div.list-group").find("a.list-group-item").filter(":eq(20),:eq(29),:eq(54),:eq(57),:eq(62),:eq(65)").addClass("rounded-0");
+    });
     $("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.dropdown-item:lt(17),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
     $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
