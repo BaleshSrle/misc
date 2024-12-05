@@ -184,7 +184,7 @@ $(document).ready(function () {
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img").filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
     $("img[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
-    $("img[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments'});
+    $("img[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
@@ -276,12 +276,14 @@ $(document).ready(function () {
     });*/
     //$("div.card").slice(0, 6).addClass("mx-1 my-2");
     $("div.card").not($("div.card[style^='background']")).addClass("bg-transparent border-secondary");
-    $("div.card-header").not(":eq(22),:eq(28)").addClass("py-2 text-white");
-    $("div.card-header").filter(":eq(21),:eq(28)").addClass("pt-1 text-white");
-    $("div.card-header").filter(":lt(6),:lt(23):gt(19),:lt(28):gt(23),:lt(34):gt(31)").addClass("border-bottom border-secondary");
-    $("div.card-header").filter(":lt(19):gt(14),:eq(23),:eq(28),:lt(32):gt(29)").addClass("border-bottom border-dark");
-    $("div.card-header").filter(":eq(14)").addClass("border-bottom border-white");
-    $("div.card-header").filter(":lt(34):gt(29)").addClass("text-center");
+    $("div.card-header").each(function () {
+        $("div.card-header").not(":eq(22),:eq(28)").addClass("py-2 text-white");
+        $("div.card-header").filter(":eq(21),:eq(28)").addClass("pt-1 text-white");
+        $("div.card-header").filter(":lt(6),:lt(23):gt(19),:lt(28):gt(23),:lt(34):gt(31)").addClass("border-bottom border-secondary");
+        $("div.card-header").filter(":lt(19):gt(14),:eq(23),:eq(28),:lt(32):gt(29)").addClass("border-bottom border-dark");
+        $("div.card-header:eq(14)").addClass("border-bottom border-white");
+        $("div.card-header:lt(34):gt(29)").addClass("text-center");
+    });
     $("div#TwitchChat").prev().addClass("col-sm pt-2 px-2");
     $("div#TwitchStatus").each(function () {
         $(this).children("div.card").not(":last").addClass("mb-2");
@@ -301,8 +303,8 @@ $(document).ready(function () {
     $("div.input-group").each(function () {
         $("div.input-group").slice(1, 3).addClass("mb-2 mr-sm-2");
         $("div.input-group").filter(":eq(0),:lt(6):gt(2)").addClass("mb-2");
-        $("div.input-group").filter(":gt(5)").addClass("mb-0");
-        $("div.input-group").filter(":lt(6):gt(3)").addClass("input-group-sm");
+        $("div.input-group:gt(5)").addClass("mb-0");
+        $("div.input-group:lt(6):gt(3)").addClass("input-group-sm");
     });
     $("ul.list-group").each(function () {
         $("ul.list-group").slice(0, -2).addClass("list-group-flush");
@@ -311,7 +313,7 @@ $(document).ready(function () {
         $("ul.list-group").children("li.list-group-item").slice(0, 105).addClass("justify-content-between");
         $("ul.list-group").children("li.list-group-item").slice(105, -6).addClass("flex-fill justify-content-around");
         $("ul.list-group").children("li.list-group-item").slice(-6).addClass("px-2 py-1");
-        $("ul.list-group").children("li.list-group-item").filter(":eq(104),:lt(117):gt(113)").addClass("rounded-0");
+        $("ul.list-group:lt(15):gt(12)").children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
     });
     $("ul.nav").each(function () {
         $(this).parent().removeClass("py-2").addClass("pt-1");
@@ -327,15 +329,15 @@ $(document).ready(function () {
         $("div.list-group").filter(":eq(4),:eq(6),:lt(13):gt(10)").addClass("list-group-flush");
         $("div.list-group").filter(":eq(6),:lt(13):gt(10)").addClass("overflow-auto");
         $("div.list-group").filter(":eq(5),:eq(13)").addClass("p-2");
-        $("div.list-group").filter(":lt(11):gt(6)").addClass("p-1");
+        $("div.list-group:lt(11):gt(6)").addClass("p-1");
         $("div.list-group").children("div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
         $("div.list-group").find("a.list-group-item").filter(":lt(15):gt(6),:lt(58):gt(41),:gt(69)").addClass("list-group-item-action");
         $("div.list-group").find("a.list-group-item").filter(":lt(11):gt(5),:eq(54)").addClass("list-group-item-primary");
         $("div.list-group").find("a.list-group-item").filter(":lt(13):gt(10),:lt(57):gt(54)").addClass("list-group-item-secondary");
-        $("div.list-group").find("a.list-group-item").filter(":eq(57)").addClass("list-group-item-info");
+        $("div.list-group").find("a.list-group-item:eq(57)").addClass("list-group-item-info");
         $("div.list-group").find("a.list-group-item").filter(":lt(6),:lt(54):gt(14),:gt(57)").addClass("list-group-item-dark");
         $("div.list-group").find("a.list-group-item").filter(":eq(0),:eq(4)").addClass("border-top-0");
-        $("div.list-group").find("a.list-group-item").filter(":eq(20),:eq(29),:eq(54),:eq(57),:eq(62),:eq(65)").addClass("rounded-0");
+        $("div.list-group:eq(6)").find("a.list-group-item").filter(":first,:last").addClass("rounded-0");
     });
     $("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.dropdown-item:lt(17),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
@@ -350,7 +352,8 @@ $(document).ready(function () {
     $("input[type='url']").attr("inputmode", "url");
     $("table.table").each(function () {
         $(this).addClass("table-sm table-hover table-dark text-center mb-1");
-        $(this).find("td").filter(":eq(1),:lt(6):gt(3),:eq(7),:eq(10),:lt(15):gt(12),:eq(19),:eq(28),:eq(31),:lt(42):gt(39),:eq(46),:eq(53),:lt(58):gt(54),:eq(59),:eq(64),:eq(67),:eq(70),:eq(74),:eq(76),:lt(81):gt(78),:lt(96):gt(93),:lt(102):gt(99),:lt(111):gt(108),:lt(114):gt(111),:eq(122)").addClass("align-middle");
+        $(this).find("td").has("br:eq(12)").addClass("align-middle");
+        $(this).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
         $(this).find("td").children("img[src*='logo']").attr("src", function (index, src) { return src + '&logoColor=white' });
         $(this).find("td").children("img[src*='logo']").not("[src*='logo=nodedotjs'],[src*='logo=vlcmediaplayer'],[src*='logo=epicgames'],[src*='logo=ubisoft'],[src*='logo=bitdefender']").attr("src", function (index, src) { return src + '&logoSize=auto' });
     });
