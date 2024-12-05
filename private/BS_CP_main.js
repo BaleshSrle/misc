@@ -184,6 +184,7 @@ $(document).ready(function () {
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img").filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
     $("img[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
+    $("img[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments'});
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
@@ -292,7 +293,6 @@ $(document).ready(function () {
     $("div.card-body").children("div.mojtvprogram").addClass("mx-2 my-3 px-1");
     $("h6.card-subtitle").addClass("mb-1 text-muted ubuntu-bold-italic");
     $("div.card-footer").addClass("border-top border-secondary text-muted text-right");
-    $("div.list-group.list-group-flush").slice(1).addClass("overflow-auto");
     $("div#aw-ad-container").remove();
     $("h2,h6:gt(1)").addClass("mb-0");
     $("p.card-text").filter(":eq(2),:eq(5),:eq(8),:eq(11)").addClass("mb-0")
