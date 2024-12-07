@@ -281,8 +281,8 @@ $(document).ready(function () {
         $("div.card-header").filter(":eq(21),:eq(28)").addClass("pt-1 text-white");
         $("div.card-header").filter(":lt(6),:lt(23):gt(19),:lt(28):gt(23),:lt(34):gt(31)").addClass("border-bottom border-secondary");
         $("div.card-header").filter(":lt(19):gt(14),:eq(23),:eq(28),:lt(32):gt(29)").addClass("border-bottom border-dark");
-        $("div.card-header:eq(14)").addClass("border-bottom border-white");
-        $("div.card-header:lt(34):gt(29)").addClass("text-center");
+        $("div.card-header").eq(14).addClass("border-bottom border-white");
+        $("div.card-header").slice(30).addClass("text-center");
     });
     $("div#TwitchChat").prev().addClass("col-sm pt-2 px-2");
     $("div#TwitchStatus").each(function () {
@@ -303,8 +303,8 @@ $(document).ready(function () {
     $("div.input-group").each(function () {
         $("div.input-group").slice(1, 3).addClass("mb-2 mr-sm-2");
         $("div.input-group").filter(":eq(0),:lt(6):gt(2)").addClass("mb-2");
-        $("div.input-group:gt(5)").addClass("mb-0");
-        $("div.input-group:lt(6):gt(3)").addClass("input-group-sm");
+        $("div.input-group").slice(6).addClass("mb-0");
+        $("div.input-group").slice(4, 6).addClass("input-group-sm");
     });
     $("ul.list-group").each(function () {
         $("ul.list-group").slice(0, -2).addClass("list-group-flush");
@@ -313,7 +313,7 @@ $(document).ready(function () {
         $("ul.list-group").children("li.list-group-item").slice(0, 105).addClass("justify-content-between");
         $("ul.list-group").children("li.list-group-item").slice(105, -6).addClass("flex-fill justify-content-around");
         $("ul.list-group").children("li.list-group-item").slice(-6).addClass("px-2 py-1");
-        $("ul.list-group:lt(15):gt(12)").children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
+        $("ul.list-group").slice(13, 15).children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
     });
     $("ul.nav").each(function () {
         $(this).parent().removeClass("py-2").addClass("pt-1");
@@ -329,15 +329,15 @@ $(document).ready(function () {
         $("div.list-group").filter(":eq(4),:eq(6),:lt(13):gt(10)").addClass("list-group-flush");
         $("div.list-group").filter(":eq(6),:lt(13):gt(10)").addClass("overflow-auto");
         $("div.list-group").filter(":eq(5),:eq(13)").addClass("p-2");
-        $("div.list-group:lt(11):gt(6)").addClass("p-1");
+        $("div.list-group").slice(7, 11).addClass("p-1");
         $("div.list-group").children("div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
         $("div.list-group").find("a.list-group-item").filter(":lt(15):gt(6),:lt(58):gt(41),:gt(69)").addClass("list-group-item-action");
         $("div.list-group").find("a.list-group-item").filter(":lt(11):gt(5),:eq(54)").addClass("list-group-item-primary");
         $("div.list-group").find("a.list-group-item").filter(":lt(13):gt(10),:lt(57):gt(54)").addClass("list-group-item-secondary");
-        $("div.list-group").find("a.list-group-item:eq(57)").addClass("list-group-item-info");
+        $("div.list-group").find("a.list-group-item").eq(57).addClass("list-group-item-info");
         $("div.list-group").find("a.list-group-item").filter(":lt(6),:lt(54):gt(14),:gt(57)").addClass("list-group-item-dark");
         $("div.list-group").find("a.list-group-item").filter(":eq(0),:eq(4)").addClass("border-top-0");
-        $("div.list-group:eq(6)").find("a.list-group-item").filter(":first,:last").addClass("rounded-0");
+        $("div.list-group").eq(6).find("a.list-group-item").filter(":first,:last").addClass("rounded-0");
     });
     $("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.dropdown-item:lt(17),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
