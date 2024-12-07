@@ -32,13 +32,20 @@ jQuery(function ($) {
         default:
             $("img#hosting").attr("src", "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/docaffe.jpg");
     }
-    $("header").addClass("mb-sm-0 py-sm-2 overflow-hidden");
+    $("header").each(function () {
+        $(this).addClass("mb-sm-0 py-sm-2 overflow-hidden");
+        $(this).children("a").addClass("text-decoration-none text-body ml-md-1");
+        $(this).find("p").addClass("small ml-md-1").text("Uvijek u službi korisnika i računara");
+    });
     $("ol.breadcrumb").each(function () {
         $(this).addClass("mb-1 py-1");
         $(this).children().last().addClass("active").attr("aria-current", "page");
     });
     $("nav.navbar").addClass("py-sm-1");
-    $("li.nav-item").find("i.bi").addClass("pr-sm-1");
+    $("li.nav-item").each(function () {
+        $(this).children("a.nav-link").filter(":eq(5),:eq(7),:eq(9)").attr("target", "_blank");
+        $(this).find("i.bi").addClass("pr-sm-1");
+    });
     $("i").filter(".bi-disc-fill, .bi-cloud-download").parents("li.nav-item").addClass("d-none d-md-block");
     $("img").each(function () {
         $(this).addClass("border-0").css("margin", "3px 0px");
@@ -46,7 +53,10 @@ jQuery(function ($) {
     });
     $("img").filter("[src*='style=for-the-badge'],[alt$='Ubuntu'],[alt='IP2Location'],[alt^='Joomla']:gt(0)").addClass("rounded-lg");
     $("img[src*='style=for-the-badge']:gt(0)").attr("src", function (index, src) { return src + '&logoSize=auto' });
-    $("div.container-fluid").addClass("overflow-hidden mx-auto");
+    $("div.container-fluid").each(function () {
+        $(this).addClass("overflow-hidden mx-auto");
+        $(this).find("a").not(".btn").attr("target", "_blank");
+    });
     $("div.col-sm-3.col-xl-2").each(function () {
         $(this).filter(":first").addClass("my-1 pr-md-2");
         $(this).filter(":last").addClass("my-1 pl-md-2");
@@ -94,6 +104,10 @@ jQuery(function ($) {
     $("footer").each(function () {
         $("footer").addClass("mb-0 py-1 text-center small");
         $("footer").children("p").not(":last").addClass("mb-1");
+        $("footer").children("p").eq(0).html("<a href='https://d.wps.com' title='Free Office Suite'>Free WPS Office Suite</a> Friendly Word processing, Spreadsheets and Presentation software.");
+        $("footer").children("p").eq(1).html("&copy;&nbsp;<span id='godina'></span>&nbsp;<a href='../'>.::Servis računara B@LESHEVICH::.</a> &amp; <a title='DobojCaffe' href='https://dobojcaffe.com/'>DobojCaffe</a><br>Ova stranica je kreirana pomoću<a href='https://getbootstrap.com/'><img src='https://img.shields.io/badge/logo-Bootstrap-7952b3?logo=bootstrap&label=&labelColor=555555&logoColor=white' alt='Bootstrap'></a>,<a href='https://www.jsdelivr.com/'><img src='https://img.shields.io/badge/logo-jsDelivr-e84d3d?logo=jsdelivr&label=&labelColor=555555&logoColor=white' alt='jsDelivr'></a>, <a href='https://cdnjs.com' class='text-decoration-none'><strong>cdnjs</strong></a> ,<img src='https://img.shields.io/badge/logo-HTML5-e34f26?logo=html5&label=&labelColor=555555&logoColor=white' alt='HTML5'>i<img src='https://img.shields.io/badge/logo-CSS3-1572b6?logo=css3&label=&labelColor=555555&logoColor=white' alt='CSS'>kodova i <a href='https://icons.getbootstrap.com' class='text-decoration-none'><strong>Bootstrap ikonica</strong></a>.");
+        $("footer").children("p").eq(3).addClass("mb-0").html("Ovaj sajt je zaštićen pomoću zaštitnog zida koji je kreiran pomoću sajta <a href='https://ip2location.com'>IP2Location</a>.");
+        $("footer").find("a").not(":eq(1)").attr("target", "_blank");
         $("footer").find("img").filter("[alt='Bootstrap'],[alt='jsDelivr'],[alt='HTML5'],img[alt='CSS']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
     });
 });
