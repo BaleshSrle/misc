@@ -287,6 +287,7 @@ $(document).ready(function () {
     $("div#TwitchChat").prev().addClass("col-sm pt-2 px-2");
     $("div#TwitchStatus").each(function () {
         $(this).children("div.card").not(":last").addClass("mb-2");
+        //$(this).find("li.list-group-item").addClass("justify-content-between");
         $(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=300' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1");
     });
     $("div[id^='Twitch']").addClass("pt-2 px-2 collapse width");
@@ -309,11 +310,11 @@ $(document).ready(function () {
     $("ul.list-group").each(function () {
         $("ul.list-group").slice(0, -2).addClass("list-group-flush");
         $("ul.list-group").slice(-4, -2).addClass("list-group-horizontal flex-wrap");
-        $("ul.list-group").children("li.list-group-item").slice(0, -6).addClass("list-group-item-dark px-2 py-0 d-flex align-items-center");
-        $("ul.list-group").children("li.list-group-item").slice(0, 105).addClass("justify-content-between");
-        $("ul.list-group").children("li.list-group-item").slice(105, -6).addClass("flex-fill justify-content-around");
-        $("ul.list-group").children("li.list-group-item").slice(-6).addClass("px-2 py-1");
-        $("ul.list-group").slice(13, 15).children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
+        $("ul.list-group").slice(0, -2).children("li.list-group-item").addClass("list-group-item-dark px-2 py-0 d-flex align-items-center");
+        $("ul.list-group").slice(0, -4).children("li.list-group-item").addClass("justify-content-between");
+        $("ul.list-group").slice(-2).children("li.list-group-item").addClass("px-2 py-1");
+        $("ul.list-group").slice(-4, -2).children("li.list-group-item").addClass("flex-fill justify-content-around");
+        $("ul.list-group").slice(-4, -2).children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
     });
     $("ul.nav").each(function () {
         $(this).parent().removeClass("py-2").addClass("pt-1");
@@ -325,11 +326,11 @@ $(document).ready(function () {
         $(this).tab("show");
     }).addClass("py-1").attr({ "data-toggle": "tab", "role": "tab" });
     $("div.list-group").each(function () {
-        $("div.list-group").filter(":lt(4):gt(1),:lt(11):gt(5)").addClass("list-group-horizontal");
-        $("div.list-group").filter(":eq(4),:eq(6),:lt(13):gt(10)").addClass("list-group-flush");
-        $("div.list-group").filter(":eq(6),:lt(13):gt(10)").addClass("overflow-auto");
+        $("div.list-group").has("a").filter(":lt(4):gt(1),:lt(11):gt(5)").addClass("list-group-horizontal");
+        $("div.list-group").has("a").filter(":eq(4),:eq(6),:gt(10)").addClass("list-group-flush");
+        $("div.list-group").has("a").filter(":eq(6),:gt(10)").addClass("overflow-auto");
         $("div.list-group").filter(":eq(5),:eq(13)").addClass("p-2");
-        $("div.list-group").slice(7, 11).addClass("p-1");
+        $("div.list-group").has("a").slice(7, 11).addClass("p-1");
         $("div.list-group").children("div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
         $("div.list-group").find("a.list-group-item").filter(":lt(15):gt(6),:lt(58):gt(41),:gt(69)").addClass("list-group-item-action");
         $("div.list-group").find("a.list-group-item").filter(":lt(11):gt(5),:eq(54)").addClass("list-group-item-primary");
