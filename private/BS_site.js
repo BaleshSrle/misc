@@ -39,7 +39,7 @@ jQuery(function ($) {
         case "/support.html":
         case "/web_design.html":
         case "/github_projects.html":
-            $("head").prepend('<title>.::Servis računara B@LESHEVICH:: - ::' + $("li.breadcrumb-item:last").porev.text() + ':: - ::' + $("li.breadcrumb-item:last").text() + '::.</title>');
+            $("head").prepend('<title>.::Servis računara B@LESHEVICH:: - ::' + $("li.breadcrumb-item:last").prev().text() + ':: - ::' + $("li.breadcrumb-item:last").text() + '::.</title>');
     }
     $("head").each(function () {
         $(this).prepend("<base href=" + location.origin + ">");
