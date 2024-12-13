@@ -66,7 +66,7 @@ jQuery(function ($) {
     });
     $("nav.navbar").addClass("py-sm-1");
     $("li.nav-item").each(function () {
-        $("li.nav-item").children("a.nav-link").filter(":eq(5),:eq(7),:eq(9)").attr("target", "_blank");
+        $("li.nav-item").children("a.nav-link").filter(":eq(4),:eq(6),:eq(8)").attr("target", "_blank");
         $("li.nav-item").find("i.bi").addClass("pr-sm-1");
     });
     $("i").filter(".bi-disc-fill, .bi-cloud-download").parents("li.nav-item").addClass("d-none d-md-block");
