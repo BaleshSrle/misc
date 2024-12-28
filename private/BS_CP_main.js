@@ -102,7 +102,7 @@ $(document).ready(function () {
             alert("Caps Lock je uključen");
         }
     });
-    $("button#loginBtn").on("click", function () {
+    $("#loginBtn").on("click", function () {
         switch ($("input#password").val()) {
             case "baleshevich88":
                 console.clear();
@@ -119,10 +119,11 @@ $(document).ready(function () {
                 $("a[data-target='#sluzbeni'],a#djevojkaDanaBtn.nav-link").addClass("disabled");
                 $("optgroup[label='Steamy Streamers']").attr("disabled", "disabled");
         }
-    }).addClass("btn btn-primary mt-1 g-recaptcha").attr({ "type": "button", "data-sitekey": "6LfGtPspAAAAANIjkM8CHWkePJivd8DREQyCgQRS", "data-callback": "onSubmit", "data-action": "submit" });
-    $("button#loginResetBtn").on("click", function () {
+    }).addClass("dropdown-item g-recaptcha").attr({ "role": "button", "data-sitekey": "6LfGtPspAAAAANIjkM8CHWkePJivd8DREQyCgQRS", "data-callback": "onSubmit", "data-action": "submit" }).removeAttr("target");
+    $("#loginResetBtn").on("click", function () {
+        document.querySelector("form#loginForm").reset();
         $("input#password").trigger("focus");
-    }).addClass("btn btn-danger mt-1").attr("type", "reset");
+    }).addClass("dropdown-item").attr("role", "button").removeAttr("target");
     /*$("#time,#weather,#livescore,#FIBAlivescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
         backdrop: 'static',
         keyboard: false,
