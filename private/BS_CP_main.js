@@ -181,7 +181,7 @@ $(document).ready(function () {
     $("select#url").on("click", function () {
         $("iframe#urlOutput").attr("src", $("#url").val());
     }).addClass("form-control bg-dark text-white");
-    $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[alt='BaleshSrle Logo'],[alt='SPC_logo']").height(32).width(32);
+    $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[alt='BaleshSrle Logo'],[alt='SPC_logo']").height(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img").filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
     $("img[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
