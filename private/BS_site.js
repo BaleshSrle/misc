@@ -20,7 +20,8 @@ jQuery(function ($) {
     }
     $("head").each(function () {
         $(this).prepend("<base href=" + location.origin + ">");
-        $(this).append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>", "<meta name='GENERATOR' content='Visual Studio Code 1.96.2'>", "<script src='https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js' async></script>");
+        $(this).append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>", "<meta name='GENERATOR' content='Visual Studio Code 1.96.2'>");
+        $(this).append("<script src='https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js' async></script>");
     });
     if ($("a.nav-link.dropdown-toggle").hasClass("active") == true) {
         $("head").prepend('<title>.::Servis računara B@LESHEVICH:: - ::' + $("li.breadcrumb-item:last").prev().text() + ':: - ::' + $("li.breadcrumb-item:last").text() + '::.</title>');
