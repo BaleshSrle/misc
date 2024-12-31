@@ -65,7 +65,7 @@ jQuery(function ($) {
         $(this).children().addClass("my-1 shadow-sm");
     });
     $("div").each(function () {
-        $(this).filter(".github-box.repo").addClass("shadow-sm");
+        $(this).filter(".github-box.repo, .wot-badge").addClass("shadow-sm");
         $(this).filter("#countdown").parents(".card").addClass("bg-danger font-weight-bold text-white");
         $(this).filter("#microsoft").parents(".card").addClass("d-none d-md-block").height(131.94);
         $(this).filter("#linux").parents(".card").addClass("d-none d-md-block");
@@ -113,7 +113,7 @@ jQuery(function ($) {
         $("footer").find("p").eq(3).addClass("mb-0").html("Ovaj sajt je zaštićen pomoću zaštitnog zida koji je kreiran pomoću sajta <a href='https://ip2location.com'>IP2Location</a>.");
         $("footer").find("a").not(":eq(1)").attr("target", "_blank");
         //$("footer").find("img").filter("[alt='Bootstrap'],[alt='jsDelivr'],[alt='HTML5'],img[alt='CSS']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
-        $("footer").find("img").css("margin-left","1px");
+        $("footer").find("img").css("margin-left", "1px");
         $("footer").children("div.wot").addClass("mx-md-2").html("<a id='wot-badge0' class='wot-badge mx-auto' href='https://www.mywot.com/scorecard/baleshevich.dobojcaffe.com?wot_badge=0_white' target='_blank'><div class='wot-logo'></div><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p><div class='wot-vertical'></div><p class='wot-report'>See Report</p></a>");
     });
 });
