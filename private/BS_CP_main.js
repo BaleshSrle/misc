@@ -75,7 +75,7 @@ $(document).ready(function () {
     $("head").each(function () {
         $(this).prepend("<meta http-equiv='refresh' content='1800'>");
         $(this).append("<link rel='dns-prefetch' href='https://api.twitch.tv/'>", "<link rel='dns-prefetch' href='https://passport.twitch.tv/'>", "<link rel='dns-prefetch' href='https://meta.wikimedia.org/'>", "<link rel='preconnect' href='https://www.auti.hr/djevojkadana/'>", "<link rel='preconnect' href='https://mojtv.hr/tv-navigator/'>", "<link rel='preconnect' href='https://api.twitch.tv/'>", "<link rel='preconnect' href='https://upload.wikimedia.org/'>", "<link rel='canonical' href='https://simpleicons.org/'>", "<link rel='canonical' href='https://cybermap.kaspersky.com/en/widget'>", "<link rel='canonical' href='https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305'>", "<link rel='canonical' href='https://www.livescore.bz/sr-rs/'>", "<link rel='canonical' href='https://naslovi.net/tehnologija/'>", "<link rel='canonical' href='https://store.steampowered.com/'>", "<link rel='canonical' href='https://www.twitch.tv/'>");
-        $(this).append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>", "<script src='https://www.google.com/recaptcha/api.js'></script>"/*, "<script src='https://oap.accuweather.com/launch.js' defer></script>", "<script src='https://www.livescore.bz/api.livescore.0.1.js' api='livescore' async></script>"*/);
+        $(this).append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>", $.getScript("https://widget.time.is/sr.js"), $.getScript("https://oap.accuweather.com/launch.js"), $.getScript("https://widget.iqair.com/script/widget_v3.0.js")/*, $.getScript("https://www.google.com/recaptcha/api.js"), "<script src='https://oap.accuweather.com/launch.js' defer></script>", "<script src='https://www.livescore.bz/api.livescore.0.1.js' api='livescore' async></script>"*/);
     });
     $("script#skin").text("var fm_inf_1 = 'Arial';");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
@@ -119,7 +119,7 @@ $(document).ready(function () {
                 $("a[data-target='#sluzbeni'],a#djevojkaDanaBtn.nav-link").addClass("disabled");
                 $("optgroup[label='Steamy Streamers']").attr("disabled", "disabled");
         }
-    }).addClass("dropdown-item g-recaptcha").attr({ "role": "button", "data-sitekey": "6LfGtPspAAAAANIjkM8CHWkePJivd8DREQyCgQRS", "data-callback": "onSubmit", "data-action": "submit" }).removeAttr("target");
+    }).addClass("dropdown-item").attr("role", "button").removeAttr("target")/*.addClass("dropdown-item g-recaptcha").attr({ "role": "button", "data-sitekey": "6LfGtPspAAAAANIjkM8CHWkePJivd8DREQyCgQRS", "data-callback": "onSubmit", "data-action": "submit" }).removeAttr("target")*/;
     $("#loginResetBtn").on("click", function () {
         document.querySelector("form#loginForm").reset();
         $("input#password").trigger("focus");
