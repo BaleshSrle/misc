@@ -233,6 +233,7 @@ $(document).ready(function () {
     $("div.toast-body").each(function () {
         $("div.toast-body").not(":eq(2)").addClass("p-2");
         $("div.toast-body").eq(2).addClass("py-2 px-3");
+        $("div.toast-body").eq(3).addClass("text-body");
         $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
     });
     $("div.modal").each(function () {
