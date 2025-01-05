@@ -242,8 +242,8 @@ $(document).ready(function () {
         $(this).filter("#calculator").children("div").addClass("modal-dialog modal-dialog-centered");
         $(this).filter("#tvguide,#kick,#FamilyNotes").children("div").addClass("modal-dialog modal-lg modal-dialog-centered");
         $(this).filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog modal-dialog-centered modal-dialog-scrollable");
-        $(this).filter("#weather,#livescore,#TechNewsNasloviNET,#steam_games,#programs").children("div").addClass("modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable");
-        $(this).filter("#FIBAlivescore,#imgRotate,#twitch").children("div").addClass("modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable");
+        $(this).filter("#weather,#livescore,#TechNewsNasloviNET,#steam_games").children("div").addClass("modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable");
+        $(this).filter("#FIBAlivescore,#imgRotate,#twitch,#programs").children("div").addClass("modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable");
         $(this).filter("#time").children("div").addClass("mx-auto");
         $(this).filter("#calculator").find("div.modal-content").addClass("bg-dark border-dark");
         $(this).find("div.modal-header").children("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" });
