@@ -360,7 +360,8 @@ $(document).ready(function () {
     $("table.table").each(function () {
         $(this).addClass("table-sm table-hover table-dark text-center mb-1");
         $(this).find("td").has("br:eq(12)").addClass("align-middle");
-        $(this).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
+        //$(this).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
+        $(this).find("td").has("br").siblings("td").addClass("align-middle");
         $(this).find("img[src*='logo']").attr("src", function (index, src) { return src + '&logoColor=white' });
         $(this).find("img[src*='logo']").not("[src*='logo=nodedotjs'],[src*='logo=vlcmediaplayer'],[src*='logo=epicgames'],[src*='logo=ubisoft'],[src*='logo=bitdefender']").attr("src", function (index, src) { return src + '&logoSize=auto' });
     });
