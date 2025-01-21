@@ -20,7 +20,7 @@ jQuery(function ($) {
     }
     $("head").each(function () {
         $(this).prepend("<base href=" + location.origin + ">");
-        $(this).prepend("<base href=file:///D:/company/>");
+        // $(this).prepend("<base href=file:///D:/company/>");
         $(this).append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>", "<meta name='GENERATOR' content='Visual Studio Code 1.96.2'>");
         $(this).append($.getScript('https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js'));
     });
