@@ -21,7 +21,7 @@ jQuery(function ($) {
     $("head").each(function () {
         $(this).prepend("<base href=" + location.origin + ">");
         // $(this).prepend("<base href=file:///D:/company/>");
-        $(this).append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>", "<meta name='GENERATOR' content='Visual Studio Code 1.96.2'>");
+        $(this).append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>", "<meta name='GENERATOR' content='Visual Studio Code 1.96.4'>");
         $(this).append($.getScript('https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js'));
     });
     if ($("a.nav-link.dropdown-toggle").hasClass("active") == true) {
@@ -32,19 +32,19 @@ jQuery(function ($) {
     switch (new Date().getMonth() + 1) {
         case 1:
         case 12:
-            $("img#hosting").on("error", function(){
+            $("img#hosting").on("error", function () {
                 return location.reload();
-            }).addClass("d-block mx-auto img-fluid").attr({"src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/dobojcaffe.png","alt":"Web hosting by DobojCaffe.com", "loading":"eager"});
+            }).addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/dobojcaffe.png", "alt": "Web hosting by DobojCaffe.com", "loading": "eager" });
             break;
         default:
-            $("img#hosting").on("error", function(){
+            $("img#hosting").on("error", function () {
                 return location.reload();
-            }).addClass("d-block mx-auto img-fluid").attr({"src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/docaffe.jpg", "alt":"Web hosting by DobojCaffe.com", "loading":"eager"});
+            }).addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/docaffe.jpg", "alt": "Web hosting by DobojCaffe.com", "loading": "eager" });
     }
     $("header").each(function () {
         $(this).addClass("mb-sm-0 py-sm-2 overflow-hidden");
         $(this).children("a").addClass("text-decoration-none text-body ml-md-1");
-        $(this).find("img").addClass("border-0").css("margin", "3px 0px");
+        $(this).find("img").addClass("border-0 img-fluid").css("margin", "3px 0px").attr({ "src": "images/baleshevichcompany2.png", "alt": "Servis računara 'BALEŠEVIĆ'" });
         $(this).find("p").addClass("small ml-md-1").text("Uvijek u službi korisnika i računara");
     });
     $("ol.breadcrumb").each(function () {
@@ -53,10 +53,19 @@ jQuery(function ($) {
     });
     $("nav.navbar").addClass("py-sm-1");
     $("li.nav-item").each(function () {
-        $("li.nav-item").children("a.nav-link").filter(":eq(4),:eq(6),:eq(8)").attr("target", "_blank");
-        $("li.nav-item").find("i.bi").addClass("pr-sm-1");
+        $("li.nav-item").eq(0).html("<a class='nav-link' href='index.html'><i class='bi bi-house pr-sm-1'></i>Početna</a>");
+        $("li.nav-item").eq(1).html("<a class='nav-link' href='it_news.html'><i class='bi bi-newspaper pr-sm-1'></i>Vijesti</a>");
+        $("li.nav-item").eq(2).addClass("d-none d-md-block").html("<a class='nav-link' href='drivers.html'><i class='bi bi-disc-fill pr-sm-1'></i>Drajveri</a>");
+        $("li.nav-item").eq(3).addClass("dropdown").html("<a class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='navbardrop'>Usluge</a><div class='dropdown-menu'><a class='dropdown-item' href='mini_service.html'><i class='bi bi-wrench pr-sm-1'></i>Mini servis</a><a class='dropdown-item' href='support.html'><i class='bi bi-headset pr-sm-1'></i>Podrška</a><a class='dropdown-item' href='web_design.html'><i class='bi bi-code-slash pr-sm-1'></i>Izrada web sajtova</a><a class='dropdown-item' href='github_projects.html'><i class='bi bi-github pr-sm-1'></i>GitHub projekti</a></div>");
+        $("li.nav-item").eq(3).children("a").on("click", function () {
+            $("div.dropdown-menu").addClass("mt-md-n1");
+        });
+        $("li.nav-item").eq(4).addClass("d-none d-md-block").html("<a class='nav-link' href='https://1drv.ms/f/s!Ap_NgLjjdst_hF1G61KtOFOu6d6O' target='_blank'><i class='bi bi-cloud-download pr-sm-1'></i>Preuzimanje</a>");
+        $("li.nav-item").eq(5).html("<a class='nav-link' href='blog.html'><i class='bi bi-wordpress pr-sm-1'></i>Blog</a>");
+        $("li.nav-item").eq(6).html("<a class='nav-link' href='https://photos.app.goo.gl/b4ypN3f8FY2OTc2r1' target='_blank'><i class='bi bi-images pr-sm-1'></i>Smiješne slike</a>");
+        $("li.nav-item").eq(7).html("<a class='nav-link' href='contact.html'><i class='bi bi-telephone-inbound-fill pr-sm-1'></i>Kontakt</a>");
+        $("li.nav-item").eq(8).html("<a class='nav-link' href='sitemap.xml'><i class='bi bi-diagram-3-fill pr-sm-1'></i>Mapa sajta</a>");
     });
-    $("i").filter(".bi-disc-fill, .bi-cloud-download").parents("li.nav-item").addClass("d-none d-md-block");
     $("img").filter("[src*='style=for-the-badge'],[alt$='Ubuntu'],[alt='IP2Location'],[alt^='Joomla']:gt(0)").addClass("rounded-lg");
     $("img[src*='style=for-the-badge']:gt(0)").attr("src", function (index, src) { return src + '&logoSize=auto' });
     $("div.container-fluid").each(function () {
@@ -77,7 +86,8 @@ jQuery(function ($) {
         $(this).filter("#linux").parents(".card").addClass("d-none d-md-block");
         $(this).filter("#linux, #internet").parents(".card").height(228);
         //$(this).filter("#microsoft,#linux,#internet").find("img").css("max-width", "180px").addClass("d-block mx-auto h-auto");
-        $(this).filter("#speedtest_banner").find("object").addClass("rounded-lg img-fluid mx-auto d-block").attr({"data": "https://img.shields.io/badge/Speedtest%20by%20Ookla-141526?style=for-the-badge&logo=speedtest&logoSize=auto&link=https%3A%2F%2Fspeedtest.net","name":"Provjerite brzinu svog Interneta"});
+        $(this).filter("#MinOfInteriorSrpskaCyber").children("div.card-body").html("<a href='https://mup.vladars.rs/lat/index.php?vijest=vtk' target='_blank'><img src='images/vtk.png' width='180' class='img-fluid mx-auto d-block' alt='MUP R. Srpske - Uprava krim. policije - Jedinica za opšti kriminalitet - Odjeljenje za visokotehnološki kriminalitet'></a>");
+        $(this).filter("#speedtest_banner").find("object").addClass("rounded-lg img-fluid mx-auto d-block").attr({ "data": "https://img.shields.io/badge/Speedtest%20by%20Ookla-141526?style=for-the-badge&logo=speedtest&logoSize=auto&link=https%3A%2F%2Fspeedtest.net", "name": "Provjerite brzinu svog Interneta" });
     });
     $("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");
     $("p.small").each(function () {
@@ -113,10 +123,10 @@ jQuery(function ($) {
             keyboard: false,
             touch: false
         });
-        $(this).find("div.carousel-item:eq(0)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download' target='_blank'><img src='images/MSE.png' class='border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px;' alt='Microsoft Security Essentials'></a>");
-        $(this).find("div.carousel-item:eq(1)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc' target='_blank'><img src='images/win_wallpaper.png' class='border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px;' alt='Windows Personalizovanje računara'></a>");
-        $(this).find("div.carousel-item:eq(2)").html("<object data='https://img.shields.io/badge/Download%20Bing%20Wallpaper-0f6cbd?style=for-the-badge&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.bing.com%2Fapps%2Fwallpaper%2Fdownload%3Fpc%3Dw242%26brand%3Dbing' class='rounded-lg border-0 d-block mx-auto img-fluid' style='margin: 3px 0px;' name='Bing Wallpaper'></object>");
-        $(this).find("div.carousel-item:eq(3)").html("<object data='https://img.shields.io/badge/Visual%20Studio%20Code-007acc?style=for-the-badge&link=https%3A%2F%2Fcode.visualstudio.com' class='rounded-lg border-0 d-block mx-auto img-fluid' style='margin: 3px 0px;' name='Visual Studio Code'></object>");
+        $(this).find("div.carousel-item:eq(0)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download' target='_blank'><img src='images/MSE.png' class='border-0 d-block mx-auto my-4 img-fluid' alt='Microsoft Security Essentials'></a>");
+        $(this).find("div.carousel-item:eq(1)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc' target='_blank'><img src='images/win_wallpaper.png' class='border-0 d-block mx-auto my-n3 img-fluid my-n3' alt='Windows Personalizovanje računara'></a>");
+        $(this).find("div.carousel-item:eq(2)").html("<object data='https://img.shields.io/badge/Download%20Bing%20Wallpaper-0f6cbd?style=for-the-badge&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.bing.com%2Fapps%2Fwallpaper%2Fdownload%3Fpc%3Dw242%26brand%3Dbing' style='margin: 32px 0px;' class='rounded-lg border-0 d-block mx-auto img-fluid' name='Bing Wallpaper'></object>");
+        $(this).find("div.carousel-item:eq(3)").html("<object data='https://img.shields.io/badge/Visual%20Studio%20Code-007acc?style=for-the-badge&link=https%3A%2F%2Fcode.visualstudio.com' class='rounded-lg border-0 d-block mx-auto img-fluid' style='margin: 32px 0px;' name='Visual Studio Code'></object>");
     });
     $("div#linux.carousel").each(function () {
         $(this).addClass("carousel-fade").carousel({
