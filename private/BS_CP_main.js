@@ -200,10 +200,6 @@ $(document).ready(function () {
         touch: false
     });
     $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
-    $("a.nav-link").each(function () {
-        $(this).find("i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
-        $(this).find("span").addClass("pl-1 d-md-none");
-    });
     $("mark.bg-secondary,a#time_is_link,label:gt(2)").addClass("text-white");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
     $("span").each(function () {
@@ -262,9 +258,9 @@ $(document).ready(function () {
         $(this).find("div.modal-footer").addClass("py-1");
         $(this).find("div.modal-footer").find("a").addClass("text-light");
         $(this).filter("#CarService").find("th:eq(2)").addClass("w-50");
-        $(this).filter("#CarService").find("time:eq(0)").text(new Date (2024, 5, 18, 8, 53).toLocaleString("sr-BA", {dateStyle:"full", timeStyle:"short"}));
-        $(this).filter("#CarService").find("time:eq(1)").text(new Date (2025, 0, 22, 15, 4).toLocaleString("sr-BA", {dateStyle:"full", timeStyle:"short"}));
-        $(this).filter("#CarService").find("time:eq(2)").text(new Date (2025, 0, 28, 14, 22).toLocaleString("sr-BA", {dateStyle:"full", timeStyle:"short"}));
+        $(this).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString("sr-BA", { dateStyle: "full", timeStyle: "short" }));
+        $(this).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString("sr-BA", { dateStyle: "full", timeStyle: "short" }));
+        $(this).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString("sr-BA", { dateStyle: "full", timeStyle: "short" }));
     });
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
@@ -349,6 +345,11 @@ $(document).ready(function () {
         $("div.list-group").find("a.list-group-item").filter(":lt(6),:lt(54):gt(14),:gt(57)").addClass("list-group-item-dark");
         $("div.list-group").find("a.list-group-item").filter(":eq(0),:eq(4)").addClass("border-top-0");
         $("div.list-group").eq(6).find("a.list-group-item").filter(":first,:last").addClass("rounded-0");
+    });
+    $("li.navbar-item").each(function () {
+        $("li.navbar-item").not("dropup").children("a").slice(0, -1).addClass("nav-link").attr({ "href": "#", "role": "button", "data-toggle": "modal", "aria-pressed": "true" });
+        $("li.navbar-item").find("i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
+        $("li.navbar-item").find("span").addClass("pl-1 d-md-none");
     });
     $("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.dropdown-item:lt(17),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
