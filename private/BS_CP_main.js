@@ -347,11 +347,12 @@ $(document).ready(function () {
         $("div.list-group").eq(6).find("a.list-group-item").filter(":first,:last").addClass("rounded-0");
     });
     $("li.navbar-item").each(function () {
-        $("li.navbar-item").not("dropup").children("a").slice(0, -1).addClass("nav-link").attr({ "href": "#", "role": "button", "data-toggle": "modal", "aria-pressed": "true" });
+        $("li.navbar-item").not(":eq(1)").children("a").slice(0, -1).addClass("nav-link").attr({ "href": "#", "role": "button", "data-toggle": "modal", "aria-pressed": "true" });
         $("li.navbar-item").find("i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
         $("li.navbar-item").find("span").addClass("pl-1 d-md-none");
     });
-    $("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.dropdown-item:lt(17),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
+    $("div.dropdown-menu:gt(0)").children("a").not("[data-toggle='collapse']").addClass("dropdown-item").attr({ "role": "button", "target": "_blank" });
+    $("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
     $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
