@@ -66,6 +66,10 @@ function playKickStreamer() {
 
 $(document).ready(function () {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
+    
+    var day = (new Date().getDate()).toString().padStart(2, "0");
+    var month = (new Date().getMonth() + 1).toString().padStart(2, "0");
+    var year = new Date().getFullYear();
 
     function onSubmit(token) {
         document.querySelector("form#loginForm").submit();
@@ -186,6 +190,7 @@ $(document).ready(function () {
     $("img").filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
     $("img[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
     $("img[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
+    $("img#AutoHrIMG").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg");
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
@@ -228,8 +233,8 @@ $(document).ready(function () {
     });
     $("div.toast-body").each(function () {
         $("div.toast-body").not(":eq(2)").addClass("p-2");
-        $("div.toast-body").eq(2).addClass("py-2 px-3");
-        $("div.toast-body").eq(3).addClass("text-body");
+        $("div.toast-body").eq(2).addClass("py-2 px-3").html("<div name='airvisual_widget' key='676fe009c270657a138a4ad2'></div>");
+        $("div.toast-body").eq(3).addClass("text-body").html("<script src='http://www.vicevi.rs/vicdana/vic.js'></script>");
         $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
     });
     $("div.modal").each(function () {
