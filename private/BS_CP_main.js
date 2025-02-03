@@ -190,7 +190,7 @@ $(document).ready(function () {
     $("img").filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
     $("img[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
     $("img[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
-    $("img#AutoHrIMG").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg");
+    $("div#DjevojkadanaAutiHRToast").children("div.toast-body").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
