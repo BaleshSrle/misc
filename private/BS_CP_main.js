@@ -234,7 +234,7 @@ $(document).ready(function () {
     $("div.toast-body").each(function () {
         $("div.toast-body").not(":eq(2)").addClass("p-2");
         $("div.toast-body").eq(2).addClass("py-2 px-3").html("<div name='airvisual_widget' key='676fe009c270657a138a4ad2'></div>");
-        $("div.toast-body").eq(3).addClass("text-body").html("<script src='https://www.vicevi.rs/vicdana/vic.js'></script>");
+        $("div.toast-body").eq(3).addClass("text-body");
         $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
     });
     $("div.modal").each(function () {
