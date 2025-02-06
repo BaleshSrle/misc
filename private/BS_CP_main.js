@@ -119,7 +119,7 @@ $(document).ready(function () {
                 $("div#loginModal").modal("hide");
                 $("div.toast").filter("#WebsiteStatusToast,#churchCalendarToast,#airQualityToast,#vicDanaToast").attr("data-autohide", "false").toast("show");
                 $("div#DjevojkadanaAutiHRToast.toast").toast("hide").hide();
-                $("div.carousel-item").last().hide();
+                $("a[title^='Boobpedia']").parent().hide();
                 $("a[data-target='#sluzbeni'],a#djevojkaDanaBtn.nav-link").addClass("disabled");
                 $("optgroup[label='Steamy Streamers']").attr("disabled", "disabled");
         }
@@ -194,16 +194,17 @@ $(document).ready(function () {
     $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
-    $("[src*='steampowered']").attr({ "height": "190", "width": "646" }).addClass("my-1");
+    $("[src*='steampowered']").attr({ "width": "646", "height": "190" }).addClass("my-1");
     //$("iframe[src*='blberza']").slice(0, 2).addClass("rounded-bottom");
     $("iframe[src*='blberza']").parent("div.card-body").slice(0, 2).addClass("bg-white rounded-bottom");
-    $("iframe[src*='blberza']").slice(2).height(110).width(200).addClass("overflow-hidden rounded-lg");
+    $("iframe[src*='blberza']").slice(2).width(200).height(110).addClass("overflow-hidden rounded-lg");
     $("div.carousel").addClass("carousel-fade").carousel({
         interval: 3000,
         keyboard: false,
         ride: 'carousel',
         touch: false
     });
+    $("div#IQAirCarousel").css({ "width": "314px", "height": "100px" });
     $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
     $("mark.bg-secondary,a#time_is_link,label:gt(2)").addClass("text-white");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
@@ -233,7 +234,7 @@ $(document).ready(function () {
     });
     $("div.toast-body").each(function () {
         $("div.toast-body").not(":eq(2)").addClass("p-2");
-        $("div.toast-body").eq(2).addClass("py-2 px-3").html("<div name='airvisual_widget' key='676fe009c270657a138a4ad2'></div>");
+        $("div.toast-body").eq(2).addClass("py-2 px-3");
         $("div.toast-body").eq(3).addClass("text-body");
         $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
     });
@@ -269,7 +270,7 @@ $(document).ready(function () {
     });
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
-    $("div").filter(".row:eq(1),.btn-group-vertical").addClass("mx-auto");
+    $("div").filter(".row:eq(1),.btn-group-vertical,[name^='airvisual']").addClass("mx-auto");
     $("div#weatherforecast").children("div").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": "false", "data-uid": "awtd1504180838200", "data-editlocation": "true" }).addClass("aw-widget-36hour");
     $("div#livescore").children("a").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo");
     $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
