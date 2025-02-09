@@ -210,8 +210,7 @@ $(document).ready(function () {
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
     $("span").each(function () {
         $(this).filter(".fi-au,.fi-ba,.fi-ca,.fi-eu,.fi-gb,.fi-nz,.fi-us").addClass("mr-1");
-        $(this).filter(".badge").addClass("badge-dark");
-        $(this).filter(".badge").children("i").addClass("bi bi-fire text-warning");
+        $(this).filter(".badge").addClass("badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning"));
     });
     $("i").each(function () {
         $(this).filter(".bi-laptop,.bi-laptop,.bi-phone,.bi-tablet,.bi-image,.bi-snapchat,.bi-telegram,.bi-facebook,.bi-messenger,.bi-instagram,.bi-threads,.bi-whatsapp").css("font-size", "xx-large");
