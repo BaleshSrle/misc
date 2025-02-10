@@ -262,9 +262,9 @@ $(document).ready(function () {
         $(this).find("div.modal-footer").addClass("py-1");
         $(this).find("div.modal-footer").find("a").addClass("text-light");
         $(this).filter("#CarService").find("th:eq(2)").addClass("w-50");
-        $(this).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString("sr-BA", { dateStyle: "full", timeStyle: "short" }));
-        $(this).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString("sr-BA", { dateStyle: "full", timeStyle: "short" }));
-        $(this).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString("sr-BA", { dateStyle: "full", timeStyle: "short" }));
+        $(this).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
+        $(this).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
+        $(this).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
     });
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
