@@ -71,10 +71,9 @@ $(document).ready(function () {
     var month = (new Date().getMonth() + 1).toString().padStart(2, "0");
     var year = new Date().getFullYear();
 
-    function onSubmit(token) {
+    /* function onSubmit(token) {
         document.querySelector("form#loginForm").submit();
-        //$("form#loginForm").submit();
-    }
+    }*/
 
     $("head").each(function () {
         $(this).prepend("<meta http-equiv='refresh' content='1800'>");
@@ -123,11 +122,11 @@ $(document).ready(function () {
                 $("a[data-target='#sluzbeni'],a#djevojkaDanaBtn.nav-link").addClass("disabled");
                 $("optgroup[label='Steamy Streamers']").attr("disabled", "disabled");
         }
-    }).addClass("dropdown-item").attr("role", "button").removeAttr("target")/*.addClass("dropdown-item g-recaptcha").attr({ "role": "button", "data-sitekey": "6LfGtPspAAAAANIjkM8CHWkePJivd8DREQyCgQRS", "data-callback": "onSubmit", "data-action": "submit" }).removeAttr("target")*/;
+    }).addClass("dropdown-item").attr("role", "button").removeAttr("target").text("Prijavljivanje").prepend($("<i></i>").addClass("bi bi-box-arrow-in-right pr-1"))/*.addClass("dropdown-item g-recaptcha").attr({ "role": "button", "data-sitekey": "6LfGtPspAAAAANIjkM8CHWkePJivd8DREQyCgQRS", "data-callback": "onSubmit", "data-action": "submit" }).removeAttr("target")*/;
     $("#loginResetBtn").on("click", function () {
         document.querySelector("form#loginForm").reset();
         $("input#password").trigger("focus");
-    }).addClass("dropdown-item").attr("role", "button").removeAttr("target");
+    }).addClass("dropdown-item").attr("role", "button").removeAttr("target").text("Reset").prepend($("<i></i>").addClass("bi bi-eraser-fill pr-1"));
     /*$("#time,#weather,#livescore,#FIBAlivescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni").modal({
         backdrop: 'static',
         keyboard: false,
@@ -144,13 +143,13 @@ $(document).ready(function () {
     });*/
     $("button#imgRotateApply").on("click", function () {
         $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg");
-    }).addClass("btn btn-primary mb-2 mr-sm-2").attr("type", "button");
+    }).addClass("btn btn-primary mb-2 mr-sm-2").attr("type", "button").text("Primjeni");
     $("button#loadRadioStation").on("click", function () {
         return window.open($("#RadioStation").val());
-    }).addClass("btn btn-info").attr("type", "button");
+    }).addClass("btn btn-info").attr("type", "button").append($("<i></i>").addClass("bi bi-broadcast"));
     $("button#loadTvStation").on("click", function () {
         return window.open($("#TvStation").val());
-    }).addClass("btn btn-info").attr("type", "button");
+    }).addClass("btn btn-info").attr("type", "button").append("<i></i>").addClass("bi bi-tv");
     $("select#TwitchUsername").on("click", function () {
         const TwitchUsername = $("select#TwitchUsername").val();
         $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + TwitchUsername + '&parent=' + location.host + '&muted=true' }, "allowfullscreen": "false" }).addClass("border-0 overflow-hidden rounded-lg");
@@ -171,14 +170,14 @@ $(document).ready(function () {
                 var rezUvecanje = +h + +procenat2;
                 $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje.toFixed(2) + " KM.");
         }
-    }).addClass("btn btn-primary btn-sm").attr("type", "button");
+    }).addClass("btn btn-primary btn-sm").attr("type", "button").text("Izračunaj").prepend($("<i></i>").addClass("bi bi-calculator pr-1"));
     $("button#calculateDividend").on("click", function () {
         var d = $("#cijenaJedneAkcije").val();
         var f = $("#brojAkcija").val();
         var g = d * f;
 
         $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
-    }).addClass("btn btn-primary btn-sm").attr("type", "button");
+    }).addClass("btn btn-primary btn-sm").attr("type", "button").text("Izračunaj").prepend($("<i></i>").addClass("bi bi-calculator pr-1"));
     $("select#KickUsername").on("click", function () {
         $("iframe#KickPlayer").attr("src", function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() + '?muted=true&allowfullscreen=false' }).addClass("border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark text-white");
