@@ -190,10 +190,9 @@ $(document).ready(function () {
     $("img[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
     $("img[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
     $("div#DjevojkadanaAutiHRToast").children("div.toast-body").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
-    $("iframe").addClass("d-block mx-auto border-0").attr("loading", "lazy");
+    $("iframe").not("[src*='naslovi']").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
-    $("[src*='steampowered']").attr({ "width": "646", "height": "190" }).addClass("my-1");
     //$("iframe[src*='blberza']").slice(0, 2).addClass("rounded-bottom");
     $("iframe[src*='blberza']").parent("div.card-body").slice(0, 2).addClass("bg-white rounded-bottom");
     $("iframe[src*='blberza']").slice(2).width(200).height(110).addClass("overflow-hidden rounded-lg");
@@ -254,7 +253,9 @@ $(document).ready(function () {
         $(this).find("div").filter(".modal-header,.modal-footer").addClass("border-secondary");
         $(this).find("hr").addClass("border-secondary");
         $(this).not("#loginModal").find("h5.modal-title").addClass("mt-1");
-        $(this).filter("#tvguide,#TechNewsNasloviNET,#programs").find("div.modal-body").addClass("p-0");
+        $(this).filter("#tvguide,#programs").find("div.modal-body").addClass("p-0");
+        $(this).filter("#TechNewsNasloviNET").find("div.modal-body").addClass("p-0").append($("<iframe></iframe>").attr({"src":"https://naslovi.net/widget/?type=tehnologija&bgcolor=343A40&textcolor=FFFFFF&sourcecolor=FFFFFF80&separatorcolor=6C757D&count=10&","height":"915","loading":"lazy"}).addClass("d-block mx-auto border-0 w-100"));
+        $(this).filter("#steam_games").find("iframe").attr({ "width": "646", "height": "190" }).addClass("my-1");
         $(this).filter("#sluzbeni,#steam_games,#CarService").find("div.modal-body").addClass("p-1");
         $(this).filter("#loginModal,#imgRotate,#twitch,#calculator,#FujitsuLifeBookS751,#kick,#FamilyNotes").find("div.modal-body").addClass("p-2");
         $(this).filter("#time").find("div.modal-body").addClass("py-2");
