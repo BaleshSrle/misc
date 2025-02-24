@@ -254,9 +254,9 @@ $(document).ready(function () {
         $(this).find("hr").addClass("border-secondary");
         $(this).not("#loginModal").find("h5.modal-title").addClass("mt-1");
         $(this).filter("#tvguide,#programs").find("div.modal-body").addClass("p-0");
-        $(this).filter("#TechNewsNasloviNET").find("div.modal-body").addClass("p-0").append($("<iframe></iframe>").attr({"src":"https://naslovi.net/widget/?type=tehnologija&bgcolor=343A40&textcolor=FFFFFF&sourcecolor=FFFFFF80&separatorcolor=6C757D&count=10&","height":"915","loading":"lazy"}).addClass("d-block mx-auto border-0 w-100"));
-        $(this).filter("#steam_games").find("iframe").attr({ "width": "646", "height": "190" }).addClass("my-1");
+        $(this).filter("#TechNewsNasloviNET").find("div.modal-body").addClass("p-0").append($("<iframe></iframe>").attr({ "src": "https://naslovi.net/widget/?type=tehnologija&bgcolor=343A40&textcolor=FFFFFF&sourcecolor=FFFFFF80&separatorcolor=6C757D&count=10&", "height": "915", "loading": "lazy" }).addClass("d-block mx-auto border-0 w-100"));
         $(this).filter("#sluzbeni,#steam_games,#CarService").find("div.modal-body").addClass("p-1");
+        $(this).filter("#steam_games").find("iframe").attr({ "width": "646", "height": "190" }).addClass("my-1");
         $(this).filter("#loginModal,#imgRotate,#twitch,#calculator,#FujitsuLifeBookS751,#kick,#FamilyNotes").find("div.modal-body").addClass("p-2");
         $(this).filter("#time").find("div.modal-body").addClass("py-2");
         $(this).filter("#mailSettings").find("div.modal-body").addClass("px-2 py-1");
@@ -370,8 +370,9 @@ $(document).ready(function () {
     $("input[type='url']").attr("inputmode", "url");
     $("table.table").each(function () {
         $(this).addClass("table-sm table-hover table-dark text-center mb-1");
-        $(this).find("td").has("br:eq(12)").addClass("align-middle");
+        //$(this).find("td").has("br:eq(12)").addClass("align-middle");
         //$(this).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
+        $(this).find("th").has("br").siblings("th").addClass("align-middle");
         $(this).find("td").has("br").siblings("td").addClass("align-middle");
         $(this).find("img[src*='logo']").attr("src", function (index, src) { return src + '&logoColor=white' });
         $(this).find("img[src*='logo']").not("[src*='logo=nodedotjs'],[src*='logo=vlcmediaplayer'],[src*='logo=epicgames'],[src*='logo=ubisoft'],[src*='logo=bitdefender']").attr("src", function (index, src) { return src + '&logoSize=auto' });
