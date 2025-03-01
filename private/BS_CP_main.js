@@ -202,7 +202,7 @@ $(document).ready(function () {
         ride: 'carousel',
         touch: false
     });
-    $("div#IQAirCarousel").css({ "width": "314px", "height": "100px" });
+    $("div#IQAirCarousel").css({ "width": "313px", "height": "100px" });
     $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
     $("mark.bg-secondary,a#time_is_link,label:gt(2)").addClass("text-white");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
@@ -231,7 +231,7 @@ $(document).ready(function () {
     });
     $("div.toast-body").each(function () {
         $("div.toast-body").not(":eq(2)").addClass("p-2");
-        $("div.toast-body").eq(2).addClass("py-2 px-3");
+        $("div.toast-body").eq(2).addClass("py-2 px-3").css("width", "345px");
         $("div.toast-body").eq(3).addClass("text-body");
         $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
     });
@@ -269,7 +269,7 @@ $(document).ready(function () {
     });
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
-    $("div").filter(".row:eq(1),.btn-group-vertical,[name^='airvisual']").addClass("mx-auto");
+    $("div").filter(".row:eq(1),.btn-group-vertical,.toast-body:eq(2),[name^='airvisual']").addClass("mx-auto");
     $("div#weatherforecast").children("div").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": "false", "data-uid": "awtd1504180838200", "data-editlocation": "true" }).addClass("aw-widget-36hour");
     $("div#livescore").children("a").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo");
     $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
