@@ -133,9 +133,12 @@ $(document).ready(function () {
         focus: false,
         show: false
     });*/
-    $("div.collapse").collapse({
-        parent: "#accordionControlPanel",
-        toggle: false
+    $("div.collapse").each(function () {
+        $(this).collapse({
+            parent: "#accordionControlPanel",
+            toggle: false
+        });
+        $(this).filter("#index,#links,#blse,#tvguide2").siblings("div.card-header").addClass("py-2 border-bottom border-secondary");
     });
     /* $("div#collapseTwitchStatus.collapse").collapse({
         parent: "#AccordionTwitchStatus",
@@ -154,7 +157,7 @@ $(document).ready(function () {
         const TwitchUsername = $("select#TwitchUsername").val();
         $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + TwitchUsername + '&parent=' + location.host + '&muted=true' }, "allowfullscreen": "false" }).addClass("border-0 overflow-hidden rounded-lg");
         $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + TwitchUsername + '/chat?parent=' + location.host }, "allowfullscreen": "false" }).addClass("w-100 h-100 border-0 overflow-hidden rounded-lg");
-    }).addClass("form-control bg-dark text-white");
+    }).addClass("form-control bg-dark");
     $("button#calculateNewValue").on("click", function () {
         var h = $("#novcaniIznos").val();
         var k = $("#procenatIznos").val();
@@ -180,7 +183,7 @@ $(document).ready(function () {
     }).addClass("btn btn-primary btn-sm").attr("type", "button").text("Izračunaj").prepend($("<i></i>").addClass("bi bi-calculator pr-1"));
     $("select#KickUsername").on("click", function () {
         $("iframe#KickPlayer").attr("src", function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() + '?muted=true&allowfullscreen=false' }).addClass("border-0 overflow-hidden rounded-lg");
-    }).addClass("form-control bg-dark text-white");
+    }).addClass("form-control bg-dark");
     $("select#url").on("click", function () {
         $("iframe#urlOutput").attr("src", $("#url").val());
     }).addClass("form-control bg-dark text-white");
@@ -215,8 +218,8 @@ $(document).ready(function () {
         $(this).filter(".bi-mailbox,.bi-headset,.bi-hourglass-split,.bi-globe,.bi-bug,.bi-kanban,.bi-stopwatch,.bi-briefcase,.bi-easel,.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
     });
     $("button.btn-link").each(function () {
-        $(this).addClass("text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false" });
-        $(this).parents("div.card-header").addClass("py-2 border-bottom border-secondary");
+        $(this).addClass("text-left text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false" });
+        //$(this).parents("div.card-header").addClass("py-2 border-bottom border-secondary");
     });
     $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     $("div.toast").each(function () {
@@ -287,17 +290,30 @@ $(document).ready(function () {
     });*/
     //$("div.card").slice(0, 6).addClass("mx-1 my-2");
     $("div.card").not($("div.card[style^='background']")).addClass("bg-transparent border-secondary");
-    $("div.card-header").each(function () {
+    /*$("div.card-header").each(function () {
         $("div.card-header").not(":eq(22),:eq(28)").addClass("py-2 text-white");
         $("div.card-header").filter(":eq(21),:eq(28)").addClass("pt-1 text-white");
         $("div.card-header").filter(":lt(6),:lt(23):gt(19),:lt(28):gt(23),:lt(34):gt(31)").addClass("border-bottom border-secondary");
         $("div.card-header").filter(":lt(19):gt(14),:eq(23),:eq(28),:lt(32):gt(29)").addClass("border-bottom border-dark");
         $("div.card-header").eq(14).addClass("border-bottom border-white");
         $("div.card-header").slice(30).addClass("text-center");
+    });*/
+    $("div#index").each(function () {
+        $(this).find("div.card-header:eq(0)").addClass("py-2 border-bottom border-white");
+        $(this).find("div.card-header:gt(0)").addClass("py-2 border-bottom border-dark");
     });
+    $("div#links").each(function () {
+        $(this).find("div.card-header").not(":eq(3)").addClass("py-2 border-bottom border-secondary");
+        $(this).find("div.card-header:eq(3)").addClass("py-2 border-bottom border-dark");
+    });
+    $("div#blse").find("div.card-header").addClass("py-2 border-bottom border-secondary text-center");
+    /*$("div#blse").each(function () {
+        $(this).find("div.card-header:eq(2)").addClass("pt-1 text-white border-bottom border-secondary");
+    });*/
     $("div#TwitchChat").prev().addClass("col-sm pt-2 px-2");
     $("div#TwitchStatus").each(function () {
         $(this).children("div.card").not(":last").addClass("mb-2");
+        $(this).find("div.card-header").addClass("py-2 border-bottom border-secondary");
         //$(this).find("li.list-group-item").addClass("justify-content-between");
         $(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=300' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1");
     });
@@ -311,6 +327,7 @@ $(document).ready(function () {
     $("h2,h6:gt(1)").addClass("mb-0");
     $("p.card-text").filter(":eq(2),:eq(5),:eq(8),:eq(11)").addClass("mb-0")
     $("h6").slice(20).addClass("text-wrap");
+    $("h6").children("i.bi").addClass("mr-1");
     $("hr").slice(0, -2).addClass("my-2");
     $("div.input-group").each(function () {
         $("div.input-group").slice(1, 3).addClass("mb-2 mr-sm-2");
