@@ -365,7 +365,6 @@
 @@||lushstories.com^$elemhide, image
 @@||sexcentrala.com^$elemhide, stylesheet, script
 @@||faponic.com^$elemhide
-!||faponic.com/img/assets/*.gif
 @@||babepedia.com^$image
 @@||fitnakedgirls.com^$elemhide
 @@||*.xxx^$elemhide
@@ -580,11 +579,9 @@ vodovodaddoboj.info
 jw.org
 news.com.au
 9now.com.au
-9news.com.au
 nine.com.au
 #@#.sharethis
 #@#.scl-icons
 #@##socialicons
 ###basePopping
 ##div[id|="custom_html"]
-!###aw-ad-container
