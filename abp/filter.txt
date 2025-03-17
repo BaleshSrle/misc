@@ -573,7 +573,6 @@
 @@||airbus*.*^$elemhide, stylesheet, image
 @@||lockheedmartin.com^$elemhide
 @@||boeing.com^$elemhide
-! saimse.com
 kodbakeff.com##body
 vodovodaddoboj.info##body
 jw.org##body
