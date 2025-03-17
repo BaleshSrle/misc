@@ -365,7 +365,7 @@
 @@||lushstories.com^$elemhide, image
 @@||sexcentrala.com^$elemhide, stylesheet, script
 @@||faponic.com^$elemhide
-! ||faponic.com/img/assets/*.gif
+!||faponic.com/img/assets/*.gif
 @@||babepedia.com^$image
 @@||fitnakedgirls.com^$elemhide
 @@||*.xxx^$elemhide
@@ -587,4 +587,4 @@ nine.com.au
 #@##socialicons
 ###basePopping
 ##div[id|="custom_html"]
-! ###aw-ad-container
+!###aw-ad-container
