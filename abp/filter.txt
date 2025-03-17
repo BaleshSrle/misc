@@ -573,13 +573,13 @@
 @@||airbus*.*^$elemhide, stylesheet, image
 @@||lockheedmartin.com^$elemhide
 @@||boeing.com^$elemhide
-saimse.com
-kodbakeff.com
-vodovodaddoboj.info
-jw.org
-news.com.au
-9now.com.au
-nine.com.au
+! saimse.com
+kodbakeff.com##body
+vodovodaddoboj.info##body
+jw.org##body
+news.com.au##body
+9now.com.au##body
+nine.com.au##body
 #@#.sharethis
 #@#.scl-icons
 #@##socialicons
