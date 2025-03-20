@@ -156,7 +156,7 @@ $(document).ready(function () {
     $("select#TwitchUsername").on("click", function () {
         const TwitchUsername = $("select#TwitchUsername").val();
         $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + TwitchUsername + '&parent=' + location.host + '&muted=true' }, "allowfullscreen": "false" }).addClass("border-0 overflow-hidden rounded-lg");
-        $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + TwitchUsername + '/chat?parent=' + location.host }, "allowfullscreen": "false" }).addClass("w-100 h-100 border-0 overflow-hidden rounded-lg");
+        $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + TwitchUsername + '/chat?parent=' + location.host }, "height": "457", "allowfullscreen": "false" }).addClass("w-100 border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark");
     $("button#calculateNewValue").on("click", function () {
         var h = $("#novcaniIznos").val();
@@ -310,14 +310,16 @@ $(document).ready(function () {
     /*$("div#blse").each(function () {
         $(this).find("div.card-header:eq(2)").addClass("pt-1 text-white border-bottom border-secondary");
     });*/
-    $("div#TwitchChat").prev().addClass("col-sm pt-2 px-2");
+    $("iframe#TwitchPlayer").parents("div.col-sm").addClass("pt-2 pl-0 pr-2")
+    $("div#TwitchChat").prev().addClass("col-sm collapse width pt-2 pl-2 pr-0");
     $("div#TwitchStatus").each(function () {
+        $(this).children("div.card-columns").addClass("mt-1");
         $(this).children("div.card").not(":last").addClass("mb-2");
         $(this).find("div.card-header").addClass("py-2 border-bottom border-secondary");
         //$(this).find("li.list-group-item").addClass("justify-content-between");
         $(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=300' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1");
     });
-    $("div[id^='Twitch']").addClass("pt-2 px-2 collapse width");
+    //$("div[id^='Twitch']").addClass("collapse width");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
     //$("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
     $("div.card-body").children("div.mojtvprogram").addClass("mx-2 my-3 px-1");
@@ -375,6 +377,7 @@ $(document).ready(function () {
     });
     $("div.dropdown-menu:gt(0)").children("a").not("[data-toggle='collapse']").addClass("dropdown-item").attr({ "role": "button", "target": "_blank" });
     $("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
+    $("a.card-link").addClass("text-light").attr("target", "_blank");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
     $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
