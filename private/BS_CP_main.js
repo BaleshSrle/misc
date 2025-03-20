@@ -156,7 +156,7 @@ $(document).ready(function () {
     $("select#TwitchUsername").on("click", function () {
         const TwitchUsername = $("select#TwitchUsername").val();
         $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + TwitchUsername + '&parent=' + location.host + '&muted=true' }, "allowfullscreen": "false" }).addClass("border-0 overflow-hidden rounded-lg");
-        $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + TwitchUsername + '/chat?parent=' + location.host }, "height": "457", "allowfullscreen": "false" }).addClass("w-100 border-0 overflow-hidden rounded-lg");
+        $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + TwitchUsername + '/chat?parent=' + location.host }, "height": "463.5", "allowfullscreen": "false" }).addClass("w-100 border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark");
     $("button#calculateNewValue").on("click", function () {
         var h = $("#novcaniIznos").val();
@@ -310,8 +310,12 @@ $(document).ready(function () {
     /*$("div#blse").each(function () {
         $(this).find("div.card-header:eq(2)").addClass("pt-1 text-white border-bottom border-secondary");
     });*/
-    $("iframe#TwitchPlayer").parents("div.col-sm").addClass("pt-2 pl-0 pr-2")
-    $("div#TwitchChat").prev().addClass("col-sm collapse width pt-2 pl-2 pr-0");
+    $("iframe#TwitchPlayer").parents("div.col-sm").addClass("mt-2 px-0")
+    //$("iframe#TwitchPlayer").parents("div.col-sm").addClass("pt-2 pl-0 pr-2")
+    $("div#TwitchChat").addClass("col-sm-3 collapse width mt-2 pl-1 pr-0");
+    $("button[data-target='#TwitchChat']").on("click", function () {
+        $("iframe#TwitchPlayer").parents("div.col-sm").toggleClass("pl-0 pr-1");
+    });
     $("div#TwitchStatus").each(function () {
         $(this).children("div.card-columns").addClass("mt-1");
         $(this).children("div.card").not(":last").addClass("mb-2");
@@ -332,9 +336,10 @@ $(document).ready(function () {
     $("h6").children("i.bi").addClass("mr-1");
     $("hr").slice(0, -2).addClass("my-2");
     $("div.input-group").each(function () {
-        $("div.input-group").slice(1, 3).addClass("mb-2 mr-sm-2");
-        $("div.input-group").filter(":eq(0),:lt(6):gt(2)").addClass("mb-2");
-        $("div.input-group").slice(6).addClass("mb-0");
+        $("div.input-group").filter(":lt(3), :lt(6):gt(3)").addClass("mb-2");
+        $("div.input-group").filter(":eq(3), :gt(5)").addClass("mb-0");
+        $("div.input-group").filter(":eq(0)").addClass("border rounded");
+        $("div.input-group").slice(1, 3).addClass("mr-sm-2");
         $("div.input-group").slice(4, 6).addClass("input-group-sm");
     });
     $("ul.list-group").each(function () {
