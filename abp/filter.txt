@@ -186,7 +186,7 @@
 @@||4shared.com^$elemhide, image
 @@||wps*.com^$elemhide, image
 @@||winamp.com^$elemhide
-@@||www.aimp.ru$image
+@@||aimp.ru^$image
 @@||airdroid.com^$elemhide, image
 @@||viber.com^$elemhide, image
 @@||telegram.org^$elemhide, image
