@@ -350,6 +350,7 @@ $(document).ready(function () {
         $("ul.list-group").slice(-2).children("li.list-group-item").addClass("px-2 py-1");
         $("ul.list-group").slice(-4, -2).children("li.list-group-item").addClass("flex-fill justify-content-around");
         $("ul.list-group").slice(-4, -2).children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
+        $("ul.list-group").filter("[title='USA'],[title='Canada'],[title='UK'],[title='EU']").height(300).addClass("overflow-auto");
     });
     $("ul.nav").each(function () {
         $(this).parent().removeClass("py-2").addClass("pt-1");
