@@ -158,29 +158,6 @@ $(document).ready(function () {
         $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + TwitchUsername + '&parent=' + location.host + '&muted=true' }, "allowfullscreen": "false" }).addClass("border-0 overflow-hidden rounded-lg");
         $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + TwitchUsername + '/chat?parent=' + location.host }, "height": "463.5", "allowfullscreen": "false" }).addClass("w-100 border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark");
-    $("button#calculateNewValue").on("click", function () {
-        var h = $("#novcaniIznos").val();
-        var k = $("#procenatIznos").val();
-        var procenat = k / 100;
-        var procenat2 = h * procenat;
-
-        switch ($("#vrstaObracunaNovca").val()) {
-            case "umanjenjeIznos":
-                var rezUmanjenje = h - procenat2;
-                $("#NoviNovcaniIznos").text("Novi novčani iznos umanjenje - " + rezUmanjenje.toFixed(2) + " KM.");
-                break;
-            case "uvecanjeIznos":
-                var rezUvecanje = +h + +procenat2;
-                $("#NoviNovcaniIznos").text("Novi novčani iznos uvećanje - " + rezUvecanje.toFixed(2) + " KM.");
-        }
-    }).addClass("btn btn-primary btn-sm").attr("type", "button").text("Izračunaj").prepend($("<i></i>").addClass("bi bi-calculator pr-1"));
-    $("button#calculateDividend").on("click", function () {
-        var d = $("#cijenaJedneAkcije").val();
-        var f = $("#brojAkcija").val();
-        var g = d * f;
-
-        $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
-    }).addClass("btn btn-primary btn-sm").attr("type", "button").text("Izračunaj").prepend($("<i></i>").addClass("bi bi-calculator pr-1"));
     $("select#KickUsername").on("click", function () {
         $("iframe#KickPlayer").attr("src", function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() + '?muted=true&allowfullscreen=false' }).addClass("border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark");
@@ -350,7 +327,7 @@ $(document).ready(function () {
         $("ul.list-group").slice(-2).children("li.list-group-item").addClass("px-2 py-1");
         $("ul.list-group").slice(-4, -2).children("li.list-group-item").addClass("flex-fill justify-content-around");
         $("ul.list-group").slice(-4, -2).children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
-        $("ul.list-group").filter("[title='USA'],[title='Canada'],[title='UK'],[title='EU']").height(300).addClass("overflow-auto");
+        $("ul.list-group").filter("[title='Games'],[title='USA'],[title='Canada'],[title='UK'],[title='EU']").height(300).addClass("overflow-auto");
     });
     $("ul.nav").each(function () {
         $(this).parent().removeClass("py-2").addClass("pt-1");
@@ -361,6 +338,31 @@ $(document).ready(function () {
         e.preventDefault()
         $(this).tab("show");
     }).addClass("py-1").attr({ "data-toggle": "tab", "role": "tab" });
+    $("div.tab-pane").each(function () {
+        $(this).filter("#NewAmountAfterPercetage").children("form").on("input", function () {
+            var h = $("#novcaniIznos").val();
+            var k = $("#procenatIznos").val();
+            var procenat = k / 100;
+            var procenat2 = h * procenat;
+
+            switch ($("#vrstaObracunaNovca").val()) {
+                case "umanjenjeIznos":
+                    var rezUmanjenje = h - procenat2;
+                    $("#NoviNovcaniIznos").text("Novi novčani iznos nakon umanjenja za "+k+"% iznosi " + rezUmanjenje.toFixed(2) + " KM.");
+                    break;
+                case "uvecanjeIznos":
+                    var rezUvecanje = +h + +procenat2;
+                    $("#NoviNovcaniIznos").text("Novi novčani iznos nakon uvećanja za "+k+"% iznosi " + rezUvecanje.toFixed(2) + " KM.");
+            }
+        });
+        $(this).filter("#DividendCalculator").children("form").on("input", function () {
+            var d = $("#cijenaJedneAkcije").val();
+            var f = $("#brojAkcija").val();
+            var g = d * f;
+
+            $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
+        });
+    });
     $("div.list-group").each(function () {
         $("div.list-group").has("a").filter(":lt(4):gt(1),:lt(11):gt(5)").addClass("list-group-horizontal");
         $("div.list-group").has("a").filter(":eq(4),:eq(6),:gt(10)").addClass("list-group-flush");
