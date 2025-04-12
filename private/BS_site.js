@@ -87,7 +87,7 @@ jQuery(function ($) {
         $(this).filter("#linux, #internet").parents(".card").height(228);
         //$(this).filter("#microsoft,#linux,#internet").find("img").css("max-width", "180px").addClass("d-block mx-auto h-auto");
         $(this).filter("#MinOfInteriorSrpskaCyber").children("div.card-body").html("<a href='https://mup.vladars.rs/lat/index.php?vijest=vtk' target='_blank'><img src='images/vtk.png' width='180' class='img-fluid mx-auto d-block' alt='MUP R. Srpske - Uprava krim. policije - Jedinica za opšti kriminalitet - Odjeljenje za visokotehnološki kriminalitet'></a>");
-        $(this).filter("#speedtest_banner").find("object").addClass("rounded-lg img-fluid mx-auto d-block").attr({ "data": "https://img.shields.io/badge/Speedtest%20by%20Ookla-141526?style=for-the-badge&logo=speedtest&logoSize=auto&link=https%3A%2F%2Fspeedtest.net", "name": "Provjerite brzinu svog Interneta" });
+        $(this).filter("#speedtest_banner").children("div.card-body").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Speedtest%20by%20Ookla-141526?style=for-the-badge&logo=speedtest&logoSize=auto&link=https%3A%2F%2Fspeedtest.net", "name": "Provjerite brzinu svog Interneta" }).addClass("rounded-lg img-fluid mx-auto d-block"));
     });
     $("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");
     $("p.small").each(function () {
@@ -102,9 +102,9 @@ jQuery(function ($) {
             keyboard: false,
             touch: false
         });
-        $(this).find("div.carousel-item:eq(0)").html("<object data='https://img.shields.io/badge/Get%20VLC%20media%20player-ff8800?style=for-the-badge&logo=vlcmediaplayer&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.videolan.org%2Fvlc%2Findex.sr.html' class='rounded-lg border-0 d-block mx-auto img-fluid' style='margin: 3px 0px;' name='Get VLC media player - It plays, it streams, it kills WiMPs!!'></object>");
-        $(this).find("div.carousel-item:eq(1)").html("<object data='https://img.shields.io/badge/Get%20Winamp-f93821?style=for-the-badge&logo=winamp&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwinamp.com%2Fplayer' class='rounded-lg border-0 d-block mx-auto img-fluid' style='margin: 3px 0px;' name='Download Winamp Player'></object>");
-        $(this).find("div.carousel-item:eq(2)").html("<object data='https://img.shields.io/badge/Download%20Spotify-1ed760?style=for-the-badge&logo=spotify&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.spotify.com%2Fba%2Fdownload%2Fwindows%2F' class='rounded-lg border-0 d-block mx-auto img-fluid' style='margin: 3px 0px;' name='Windows Download - Spotify'></object>");
+        $(this).find("div.carousel-item:eq(0)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20VLC%20media%20player-ff8800?style=for-the-badge&logo=vlcmediaplayer&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.videolan.org%2Fvlc%2Findex.sr.html", "name": "Get VLC media player - It plays, it streams, it kills WiMPs!!" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
+        $(this).find("div.carousel-item:eq(1)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20Winamp-f93821?style=for-the-badge&logo=winamp&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwinamp.com%2Fplayer", "name": "Download Winamp Player" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
+        $(this).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Spotify-1ed760?style=for-the-badge&logo=spotify&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.spotify.com%2Fba%2Fdownload%2Fwindows%2F", "name": "Windows Download - Spotify" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
     });
     $("div#WebBrowser.carousel").each(function () {
         $(this).addClass("carousel-fade").carousel({
@@ -112,10 +112,10 @@ jQuery(function ($) {
             keyboard: false,
             touch: false
         });
-        $(this).find("div.carousel-item:eq(0)").html("<object data='https://img.shields.io/badge/Get%20Vivaldi%20Browser-ef3939?style=for-the-badge&logo=vivaldi&logoColor=white&logoSize=auto&link=https%3A%2F%2Fvivaldi.com%2F' class='rounded-lg border-0 d-block mx-auto img-fluid' style='margin: 3px 0px;' name='Download Vivaldi Web Browser Today!'></object>");
-        $(this).find("div.carousel-item:eq(1)").html("<object data='https://img.shields.io/badge/Download%20Google%20Chrome-4285f4?style=for-the-badge&logo=googlechrome&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.google.com%2Fchrome%2F' class='rounded-lg border-0 d-block mx-auto img-fluid' style='margin: 3px 0px;' name='Download Google Chrome'></object>");
-        $(this).find("div.carousel-item:eq(2)").html("<object data='https://img.shields.io/badge/Download%20Firefox-ff7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.mozilla.org%2Fen-US%2Ffirefox%2Fnew%2F' class='rounded-lg border-0 d-block mx-auto img-fluid' style='margin: 3px 0px;' name='Download Firefox'></object>");
-        $(this).find("div.carousel-item:eq(3)").html("<object data='https://img.shields.io/badge/Download%20Opera%20Browser-ff1b2d?style=for-the-badge&logo=opera&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.opera.com%2Fdownload' class='rounded-lg border-0 d-block mx-auto img-fluid' style='margin: 3px 0px;' name='Download Opera Browser'></object>");
+        $(this).find("div.carousel-item:eq(0)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20Vivaldi%20Browser-ef3939?style=for-the-badge&logo=vivaldi&logoColor=white&logoSize=auto&link=https%3A%2F%2Fvivaldi.com%2F", "name": "Download Vivaldi Web Browser Today!" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
+        $(this).find("div.carousel-item:eq(1)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Google%20Chrome-4285f4?style=for-the-badge&logo=googlechrome&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.google.com%2Fchrome%2F", "name": "Download Google Chrome" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
+        $(this).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Firefox-ff7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.mozilla.org%2Fen-US%2Ffirefox%2Fnew%2F", "name": "Download Firefox" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
+        $(this).find("div.carousel-item:eq(3)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Opera%20Browser-ff1b2d?style=for-the-badge&logo=opera&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.opera.com%2Fdownload", "name": "Download Opera Browser" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
     });
     $("div#microsoft.carousel").each(function () {
         $(this).addClass("carousel-fade").carousel({
@@ -125,8 +125,8 @@ jQuery(function ($) {
         });
         $(this).find("div.carousel-item:eq(0)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download' target='_blank'><img src='images/MSE.png' class='border-0 d-block mx-auto my-4 img-fluid' alt='Microsoft Security Essentials'></a>");
         $(this).find("div.carousel-item:eq(1)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc' target='_blank'><img src='images/win_wallpaper.png' class='border-0 d-block mx-auto my-n3 img-fluid my-n3' alt='Windows Personalizovanje računara'></a>");
-        $(this).find("div.carousel-item:eq(2)").html("<object data='https://img.shields.io/badge/Download%20Bing%20Wallpaper-0f6cbd?style=for-the-badge&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.bing.com%2Fapps%2Fwallpaper%2Fdownload%3Fpc%3Dw242%26brand%3Dbing' style='margin: 32px 0px;' class='rounded-lg border-0 d-block mx-auto img-fluid' name='Bing Wallpaper'></object>");
-        $(this).find("div.carousel-item:eq(3)").html("<object data='https://img.shields.io/badge/Visual%20Studio%20Code-007acc?style=for-the-badge&link=https%3A%2F%2Fcode.visualstudio.com' class='rounded-lg border-0 d-block mx-auto img-fluid' style='margin: 32px 0px;' name='Visual Studio Code'></object>");
+        $(this).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Bing%20Wallpaper-0f6cbd?style=for-the-badge&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.bing.com%2Fapps%2Fwallpaper%2Fdownload%3Fpc%3Dw242%26brand%3Dbing", "name": "Bing Wallpaper" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "32px 0px"));
+        $(this).find("div.carousel-item:eq(3)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Visual%20Studio%20Code-007acc?style=for-the-badge&link=https%3A%2F%2Fcode.visualstudio.com", "name": "Visual Studio Code" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "32px 0px"));
     });
     $("div#linux.carousel").each(function () {
         $(this).addClass("carousel-fade").carousel({
