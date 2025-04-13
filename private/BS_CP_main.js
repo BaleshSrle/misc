@@ -327,6 +327,7 @@ $(document).ready(function () {
         $("ul.list-group").slice(-2).children("li.list-group-item").addClass("px-2 py-1");
         $("ul.list-group").slice(-4, -2).children("li.list-group-item").addClass("flex-fill justify-content-around");
         $("ul.list-group").slice(-4, -2).children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
+        $("ul.list-group").filter("[title='Sidemen']").siblings("ul:eq(1)").height(300).addClass("overflow-auto");
         $("ul.list-group").filter("[title='Games'],[title='USA'],[title='Canada'],[title='UK'],[title='EU']").height(300).addClass("overflow-auto");
     });
     $("ul.nav").each(function () {
@@ -348,11 +349,11 @@ $(document).ready(function () {
             switch ($("#vrstaObracunaNovca").val()) {
                 case "umanjenjeIznos":
                     var rezUmanjenje = h - procenat2;
-                    $("#NoviNovcaniIznos").text("Novi novčani iznos nakon umanjenja za "+k+"% iznosi " + rezUmanjenje.toFixed(2) + " KM.");
+                    $("#NoviNovcaniIznos").text("Novi novčani iznos nakon umanjenja za " + k + "% iznosi " + rezUmanjenje.toFixed(2) + " KM.");
                     break;
                 case "uvecanjeIznos":
                     var rezUvecanje = +h + +procenat2;
-                    $("#NoviNovcaniIznos").text("Novi novčani iznos nakon uvećanja za "+k+"% iznosi " + rezUvecanje.toFixed(2) + " KM.");
+                    $("#NoviNovcaniIznos").text("Novi novčani iznos nakon uvećanja za " + k + "% iznosi " + rezUvecanje.toFixed(2) + " KM.");
             }
         });
         $(this).filter("#DividendCalculator").children("form").on("input", function () {
