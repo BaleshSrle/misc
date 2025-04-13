@@ -123,8 +123,8 @@ jQuery(function ($) {
             keyboard: false,
             touch: false
         });
-        $(this).find("div.carousel-item:eq(0)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download' target='_blank' hreflang='sr-RS'><img src='images/MSE.png' class='border-0 d-block mx-auto my-4 img-fluid' alt='Microsoft Security Essentials'></a>");
-        $(this).find("div.carousel-item:eq(1)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc' target='_blank' hreflang='sr-RS'><img src='images/win_wallpaper.png' class='border-0 d-block mx-auto my-n3 img-fluid my-n3' alt='Windows Personalizovanje računara'></a>");
+        $(this).find("div.carousel-item:eq(0)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download' hreflang='sr-RS' target='_blank'><img src='images/MSE.png' class='border-0 d-block mx-auto my-4 img-fluid' alt='Microsoft Security Essentials'></a>");
+        $(this).find("div.carousel-item:eq(1)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc' hreflang='sr-RS' target='_blank'><img src='images/win_wallpaper.png' class='border-0 d-block mx-auto my-n3 img-fluid my-n3' alt='Windows Personalizovanje računara'></a>");
         $(this).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Bing%20Wallpaper-0f6cbd?style=for-the-badge&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.bing.com%2Fapps%2Fwallpaper%2Fdownload%3Fpc%3Dw242%26brand%3Dbing", "name": "Bing Wallpaper" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "32px 0px"));
         $(this).find("div.carousel-item:eq(3)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Visual%20Studio%20Code-007acc?style=for-the-badge&link=https%3A%2F%2Fcode.visualstudio.com", "name": "Visual Studio Code" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "32px 0px"));
     });
