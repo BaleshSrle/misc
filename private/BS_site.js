@@ -86,7 +86,7 @@ jQuery(function ($) {
         $(this).filter("#linux").parents(".card").addClass("d-none d-md-block");
         $(this).filter("#linux, #internet").parents(".card").height(228);
         //$(this).filter("#microsoft,#linux,#internet").find("img").css("max-width", "180px").addClass("d-block mx-auto h-auto");
-        $(this).filter("#MinOfInteriorSrpskaCyber").children("div.card-body").html("<a href='https://mup.vladars.rs/lat/index.php?vijest=vtk' target='_blank'><img src='images/vtk.png' width='180' class='img-fluid mx-auto d-block' alt='MUP R. Srpske - Uprava krim. policije - Jedinica za opšti kriminalitet - Odjeljenje za visokotehnološki kriminalitet'></a>");
+        $(this).filter("#MinOfInteriorSrpskaCyber").children("div.card-body").html("<a href='https://mup.vladars.rs/lat/index.php?vijest=vtk' hreflang='sr-BA' target='_blank'><img src='images/vtk.png' width='180' class='img-fluid mx-auto d-block' alt='MUP R. Srpske - Uprava krim. policije - Jedinica za opšti kriminalitet - Odjeljenje za visokotehnološki kriminalitet'></a>");
         $(this).filter("#speedtest_banner").children("div.card-body").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Speedtest%20by%20Ookla-141526?style=for-the-badge&logo=speedtest&logoSize=auto&link=https%3A%2F%2Fspeedtest.net", "name": "Provjerite brzinu svog Interneta" }).addClass("rounded-lg img-fluid mx-auto d-block"));
     });
     $("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");
@@ -123,8 +123,8 @@ jQuery(function ($) {
             keyboard: false,
             touch: false
         });
-        $(this).find("div.carousel-item:eq(0)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download' target='_blank'><img src='images/MSE.png' class='border-0 d-block mx-auto my-4 img-fluid' alt='Microsoft Security Essentials'></a>");
-        $(this).find("div.carousel-item:eq(1)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc' target='_blank'><img src='images/win_wallpaper.png' class='border-0 d-block mx-auto my-n3 img-fluid my-n3' alt='Windows Personalizovanje računara'></a>");
+        $(this).find("div.carousel-item:eq(0)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download' target='_blank' hreflang='sr-RS'><img src='images/MSE.png' class='border-0 d-block mx-auto my-4 img-fluid' alt='Microsoft Security Essentials'></a>");
+        $(this).find("div.carousel-item:eq(1)").html("<a href='https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc' target='_blank' hreflang='sr-RS'><img src='images/win_wallpaper.png' class='border-0 d-block mx-auto my-n3 img-fluid my-n3' alt='Windows Personalizovanje računara'></a>");
         $(this).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Bing%20Wallpaper-0f6cbd?style=for-the-badge&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.bing.com%2Fapps%2Fwallpaper%2Fdownload%3Fpc%3Dw242%26brand%3Dbing", "name": "Bing Wallpaper" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "32px 0px"));
         $(this).find("div.carousel-item:eq(3)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Visual%20Studio%20Code-007acc?style=for-the-badge&link=https%3A%2F%2Fcode.visualstudio.com", "name": "Visual Studio Code" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "32px 0px"));
     });
@@ -134,9 +134,9 @@ jQuery(function ($) {
             keyboard: false,
             touch: false
         });
-        $(this).find("div.carousel-item:eq(0)").html("<a href='http://ubunt.eu/zesty' target='_blank'><img src='https://assets.ubuntu.com/v1/61f4fb91-release-widgetv5.jpg' class='rounded-lg border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='Download latest version of Ubuntu'></a>");
+        $(this).find("div.carousel-item:eq(0)").html("<a href='http://ubunt.eu/zesty' hreflang='en' target='_blank'><img src='https://assets.ubuntu.com/v1/61f4fb91-release-widgetv5.jpg' class='rounded-lg border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='Download latest version of Ubuntu'></a>");
         $(this).find("div.carousel-item:eq(1)").html("<a href='https://lxle.net/' target='_blank'><img src='images/smalllxledark.png' class='border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='Revive that old PC!&lt;The LXLE Desktop'></a>");
-        $(this).find("div.carousel-item:eq(2)").html("<a href='https://www.debian-srbija.iz.rs/' target='_blank'><img src='images/serbian_debian.png' class='border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='Debian Srbija'></a>");
+        $(this).find("div.carousel-item:eq(2)").html("<a href='https://www.debian-srbija.iz.rs/' hreflang='sr-RS' target='_blank'><img src='images/serbian_debian.png' class='border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='Debian Srbija'></a>");
     });
     $("div#internet.carousel").each(function () {
         $(this).addClass("carousel-fade").carousel({
@@ -144,8 +144,8 @@ jQuery(function ($) {
             keyboard: false,
             touch: false
         });
-        $(this).find("div.carousel-item:eq(0)").html("<a href='https://internetdefenseleague.org' target='_blank'><img src='images/IDL_Shield_badge.png' class='border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='Internet Defense League'></a>");
-        $(this).find("div.carousel-item:eq(1)").html("<a href='https://www.worldipv6launch.org/' target='_blank'><img src='images/World_IPv6_launch.png' class='border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='World IPv6 Launch'></a>");
+        $(this).find("div.carousel-item:eq(0)").html("<a href='https://internetdefenseleague.org' hreflang='en' target='_blank'><img src='images/IDL_Shield_badge.png' class='border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='Internet Defense League'></a>");
+        $(this).find("div.carousel-item:eq(1)").html("<a href='https://www.worldipv6launch.org/' hreflang='en' target='_blank'><img src='images/World_IPv6_launch.png' class='border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='World IPv6 Launch'></a>");
         $(this).find("div.carousel-item:eq(2)").html("<a href='https://www.ip2location.com/free/widgets' target='_blank'><img src='https://tools.ip2location.com/200x200.png' class='rounded-lg border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='IP2Location'></a>");
     });
     $("div.github-widget").parent("div").addClass("col p-1");
@@ -155,6 +155,7 @@ jQuery(function ($) {
         $("div.btn-group.btn-group-lg").filter(":last").addClass("pl-xl-1 py-1 d-none d-md-block");
     });
     $(".bi-skype,.bi-telegram,.bi-envelope,.bi-cone-striped").addClass("h2 align-middle");
+	$("i.bi-telegram").parent("a").attr({"href": "https://baleshsrle.t.me", "hreflang": "en", "target": "_blank"});
     $(".btn-vlc").each(function () {
         $(this).css({ "background-color": "darkorange", "color": "white" });
         $(this).hover(function () { $(this).css({ "background-color": "#d87600", "color": "white" }); }, function () { $(this).css({ "background-color": "darkorange", "color": "white" }); });
@@ -165,12 +166,12 @@ jQuery(function ($) {
         $("footer").children("div").eq(1).addClass("flex-grow-1 small h6 my-sm-1 my-md-0");
         $("footer").find("p").not(":last").addClass("mb-1");
         $("footer").find("p").eq(0).html("<a href='https://d.wps.com' title='Free Office Suite'>Free WPS Office Suite</a> Friendly Word processing, Spreadsheets and Presentation software.");
-        $("footer").find("p").eq(1).html("&copy;&nbsp;" + new Date().getFullYear() + ".&nbsp;<a href='../'>.::Servis računara B@LESHEVICH::.</a> &amp; <a title='DobojCaffe' href='https://dobojcaffe.com/'>DobojCaffe</a><!--<br>Ova stranica je kreirana pomoću<a href='https://getbootstrap.com/'><img src='https://img.shields.io/badge/logo-Bootstrap-7952b3?logo=bootstrap&label=&labelColor=555555&logoColor=white' alt='Bootstrap'></a>,<a href='https://www.jsdelivr.com/'><img src='https://img.shields.io/badge/logo-jsDelivr-e84d3d?logo=jsdelivr&label=&labelColor=555555&logoColor=white' alt='jsDelivr'></a>, <a href='https://cdnjs.com' class='text-decoration-none'><strong>cdnjs</strong></a> ,<img src='https://img.shields.io/badge/logo-HTML5-e34f26?logo=html5&label=&labelColor=555555&logoColor=white' alt='HTML5'>i<img src='https://img.shields.io/badge/logo-CSS3-1572b6?logo=css3&label=&labelColor=555555&logoColor=white' alt='CSS'>kodova i <a href='https://icons.getbootstrap.com' class='text-decoration-none'><strong>Bootstrap ikonica</strong></a>-->.");
+        $("footer").find("p").eq(1).html("&copy;&nbsp;" + new Date().getFullYear() + ".&nbsp;<a href='../'>.::Servis računara B@LESHEVICH::.</a> &amp; <a title='DobojCaffe' href='https://dobojcaffe.com/' hreflang='sr-BA'>DobojCaffe</a><!--<br>Ova stranica je kreirana pomoću<a href='https://getbootstrap.com/'><img src='https://img.shields.io/badge/logo-Bootstrap-7952b3?logo=bootstrap&label=&labelColor=555555&logoColor=white' alt='Bootstrap'></a>,<a href='https://www.jsdelivr.com/'><img src='https://img.shields.io/badge/logo-jsDelivr-e84d3d?logo=jsdelivr&label=&labelColor=555555&logoColor=white' alt='jsDelivr'></a>, <a href='https://cdnjs.com' class='text-decoration-none'><strong>cdnjs</strong></a> ,<img src='https://img.shields.io/badge/logo-HTML5-e34f26?logo=html5&label=&labelColor=555555&logoColor=white' alt='HTML5'>i<img src='https://img.shields.io/badge/logo-CSS3-1572b6?logo=css3&label=&labelColor=555555&logoColor=white' alt='CSS'>kodova i <a href='https://icons.getbootstrap.com' class='text-decoration-none'><strong>Bootstrap ikonica</strong></a>-->.");
         $("footer").find("p").eq(3).addClass("mb-0").html("Ovaj sajt je zaštićen pomoću zaštitnog zida koji je kreiran pomoću sajta<object data='https://img.shields.io/badge/IP2Location-084e8f?logoSize=auto&link=https%3A%2F%2Fip2location.com' name='IP2Location' class='ml-1 align-middle'></object>.");
         $("footer").find("a").not(":eq(1)").attr("target", "_blank");
         //$("footer").find("img").filter("[alt='Bootstrap'],[alt='jsDelivr'],[alt='HTML5'],img[alt='CSS']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
         //$("footer").find("img").css("margin-left", "1px");
         $("footer").find("img").addClass("ml-1");
-        $("footer").children("div.wot").addClass("mx-md-2").html("<a id='wot-badge0' class='wot-badge mx-auto' href='https://www.mywot.com/scorecard/baleshevich.dobojcaffe.com?wot_badge=0_white' target='_blank'><div class='wot-logo'></div><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p><div class='wot-vertical'></div><p class='wot-report'>See Report</p></a>");
+        $("footer").children("div.wot").addClass("mx-md-2").html("<a id='wot-badge0' class='wot-badge mx-auto' href='https://www.mywot.com/scorecard/baleshevich.dobojcaffe.com?wot_badge=0_white' target='_blank' hreflang='en'><div class='wot-logo'></div><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p><div class='wot-vertical'></div><p class='wot-report'>See Report</p></a>");
     });
 });
