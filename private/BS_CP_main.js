@@ -389,6 +389,8 @@ $(document).ready(function () {
     $("a.card-link").addClass("text-light").attr("target", "_blank");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
     $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
+    $("a[href*='sr']").not(":lt(15):gt(8), :eq(30)").attr("hreflang", "sr");
+    $("a[href*='hr']").not(".btn,.list-group-item").attr("hreflang", "hr");
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
     $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
     $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
