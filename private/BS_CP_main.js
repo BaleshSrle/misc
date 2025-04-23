@@ -391,6 +391,7 @@ $(document).ready(function () {
     $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
     $("a[href*='sr']").not(":lt(15):gt(8), :eq(30)").attr("hreflang", "sr");
     $("a[href*='hr']").not(".btn,.list-group-item").attr("hreflang", "hr");
+    $("form#oldform").attr({ "action": $("select#dictionary-selector").val(), "method": "get", "name": "oldform", "target": "_blank" }).addClass("d-inline-block").css("margin", "46px 0 0 10px");
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
     $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
     $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
