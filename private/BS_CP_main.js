@@ -169,6 +169,8 @@ $(document).ready(function () {
     $("img").filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
     $("img[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
     $("img[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
+    $("div#churchCalendarToast > div.toast-body").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height(290)/*.height(360)*/);
+    //$("div#churchCalendarToast > div.toast-body").append($("<iframe></iframe").attr("src", "https://pravoslavnikalendar.rs/kal/pra220.php").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" }));
     $("div#DjevojkadanaAutiHRToast > div.toast-body").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
     $("iframe").not("[src*='naslovi']").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
@@ -213,7 +215,6 @@ $(document).ready(function () {
         $("div.toast-body").not(":eq(2)").addClass("p-2");
         $("div.toast-body").eq(2).addClass("py-2 px-3").css("width", "345px");
         $("div.toast-body").eq(3).addClass("text-body");
-        $("div.toast-body > iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
     });
     $("div.modal").each(function () {
         $(this).children("div").attr("role", "document");
@@ -250,7 +251,7 @@ $(document).ready(function () {
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
     $("div").filter(".row:eq(1),.btn-group-vertical,.toast-body:eq(2),[name^='airvisual']").addClass("mx-auto");
-    $("div#weatherforecast").append($("<a></a>").attr({"href": "https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr"}).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": "false", "data-uid": "awtd1504180838200", "data-editlocation": "true" }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": "https://oap.accuweather.com/launch.js", "defer": "defer" }));
+    $("div#weatherforecast").append($("<a></a>").attr({ "href": "https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr-BA" }).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": "false", "data-uid": "awtd1504180838200", "data-editlocation": "true" }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": "https://oap.accuweather.com/launch.js", "defer": "defer" }));
     $("div#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": "https://www.livescore.bz/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo"));
     $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").each(function () {
@@ -389,7 +390,7 @@ $(document).ready(function () {
     $("a.card-link").addClass("text-light").attr("target", "_blank");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
     $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
-    $("a[href*='sr']").not(":lt(15):gt(8), :eq(30)").attr("hreflang", "sr");
+    $("a[href*='sr']").not(":lt(15):gt(8), :eq(30), :eq(33)").attr("hreflang", "sr");
     $("a[href*='hr']").not(".btn,.list-group-item").attr("hreflang", "hr");
     $("form#oldform").attr({ "action": $("select#dictionary-selector").val(), "method": "get", "name": "oldform", "target": "_blank" }).addClass("d-inline-block").css("margin", "46px 0 0 10px");
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
