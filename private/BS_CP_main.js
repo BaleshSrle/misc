@@ -169,7 +169,7 @@ $(document).ready(function () {
     $("img").filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
     $("img[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
     $("img[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
-    $("div#DjevojkadanaAutiHRToast").children("div.toast-body").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
+    $("div#DjevojkadanaAutiHRToast > div.toast-body").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
     $("iframe").not("[src*='naslovi']").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
@@ -205,15 +205,15 @@ $(document).ready(function () {
     });
     $("div.toast-header").each(function () {
         $("div.toast-header").addClass("py-0");
-        $("div.toast-header").children("img").not(":eq(2)").addClass("mr-1");
-        $("div.toast-header").children("img").eq(2).addClass("mr-auto");
-        $("div.toast-header").children("button.close").addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Zatvori" });
+        $("div.toast-header > img").not(":eq(2)").addClass("mr-1");
+        $("div.toast-header > img:eq(2)").addClass("mr-auto");
+        $("div.toast-header > button.close").addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Zatvori" });
     });
     $("div.toast-body").each(function () {
         $("div.toast-body").not(":eq(2)").addClass("p-2");
         $("div.toast-body").eq(2).addClass("py-2 px-3").css("width", "345px");
         $("div.toast-body").eq(3).addClass("text-body");
-        $("div.toast-body").children("iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
+        $("div.toast-body > iframe").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" });
     });
     $("div.modal").each(function () {
         $(this).children("div").attr("role", "document");
@@ -250,8 +250,8 @@ $(document).ready(function () {
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
     $("div").filter(".row:eq(1),.btn-group-vertical,.toast-body:eq(2),[name^='airvisual']").addClass("mx-auto");
-    $("div#weatherforecast").children("div").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": "false", "data-uid": "awtd1504180838200", "data-editlocation": "true" }).addClass("aw-widget-36hour");
-    $("div#livescore").children("a").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo");
+    $("div#weatherforecast").append($("<a></a>").attr({"href": "https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr"}).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": "false", "data-uid": "awtd1504180838200", "data-editlocation": "true" }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": "https://oap.accuweather.com/launch.js", "defer": "defer" }));
+    $("div#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": "https://www.livescore.bz/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo"));
     $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").each(function () {
         $(this).addClass("my-1");
@@ -283,7 +283,7 @@ $(document).ready(function () {
         $(this).find("div.card-header").not(":eq(3)").addClass("py-2 border-bottom border-secondary");
         $(this).find("div.card-header:eq(3)").addClass("py-2 border-bottom border-dark");
     });
-    $("div#blse").find("div.card-header").addClass("py-2 border-bottom border-secondary text-center");
+    $("div#blse div.card-header").addClass("py-2 border-bottom border-secondary text-center");
     /*$("div#blse").each(function () {
         $(this).find("div.card-header:eq(2)").addClass("pt-1 text-white border-bottom border-secondary");
     });*/
@@ -303,14 +303,14 @@ $(document).ready(function () {
     //$("div[id^='Twitch']").addClass("collapse width");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
     //$("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
-    $("div.card-body").children("div.mojtvprogram").addClass("mx-2 my-3 px-1");
+    $("div.card-body > div.mojtvprogram").addClass("mx-2 my-3 px-1");
     $("h6.card-subtitle").addClass("mb-1 text-muted ubuntu-bold-italic");
     $("div.card-footer").addClass("border-top border-secondary text-muted text-right");
     $("div#aw-ad-container").remove();
     $("h2,h6:gt(1)").addClass("mb-0");
     $("p.card-text").filter(":eq(2),:eq(5),:eq(8),:eq(11)").addClass("mb-0")
     $("h6").slice(20).addClass("text-wrap");
-    $("h6").children("i.bi").addClass("mr-1");
+    $("h6 > i.bi").addClass("mr-1");
     $("hr").slice(0, -2).addClass("my-2");
     $("div.input-group").each(function () {
         $("div.input-group").filter(":lt(3), :lt(6):gt(3)").addClass("mb-2");
@@ -322,10 +322,10 @@ $(document).ready(function () {
     $("ul.list-group").each(function () {
         $("ul.list-group").slice(0, -2).addClass("list-group-flush");
         $("ul.list-group").slice(-4, -2).addClass("list-group-horizontal flex-wrap");
-        $("ul.list-group").slice(0, -2).children("li.list-group-item").addClass("list-group-item-dark px-2 py-0 d-flex align-items-center");
-        $("ul.list-group").slice(0, -4).children("li.list-group-item").addClass("justify-content-between");
-        $("ul.list-group").slice(-2).children("li.list-group-item").addClass("px-2 py-1");
-        $("ul.list-group").slice(-4, -2).children("li.list-group-item").addClass("flex-fill justify-content-around");
+        $("ul.list-group > li.list-group-item").slice(0, -6).addClass("list-group-item-dark px-2 py-0 d-flex align-items-center");
+        $("ul.list-group > li.list-group-item").slice(0, -20).addClass("justify-content-between");
+        $("ul.list-group > li.list-group-item").slice(-6).addClass("px-2 py-1");
+        $("ul.list-group > li.list-group-item").slice(-20, -6).addClass("flex-fill justify-content-around");
         $("ul.list-group").slice(-4, -2).children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
         $("ul.list-group").filter("[title='Sidemen']").siblings("ul:eq(1)").height(300).addClass("overflow-auto");
         $("ul.list-group").filter("[title='Games'],[title='USA'],[title='Canada'],[title='UK'],[title='EU']").height(300).addClass("overflow-auto");
@@ -335,7 +335,7 @@ $(document).ready(function () {
         $(this).children().removeClass("px-2 py-1");
         $(this).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-y": "hidden", "overflow-x": "auto" }).attr("role", "tablist");
     });
-    $("ul[id$='List']").find("a").on("click", function (e) {
+    $("ul[id$='List'] a").on("click", function (e) {
         e.preventDefault()
         $(this).tab("show");
     }).addClass("py-1").attr({ "data-toggle": "tab", "role": "tab" });
@@ -370,21 +370,21 @@ $(document).ready(function () {
         $("div.list-group").has("a").filter(":eq(6),:gt(10)").addClass("overflow-auto");
         $("div.list-group").filter(":eq(5),:eq(13)").addClass("p-2");
         $("div.list-group").has("a").slice(7, 11).addClass("p-1");
-        $("div.list-group").children("div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
-        $("div.list-group").find("a.list-group-item").filter(":lt(15):gt(6),:lt(58):gt(41),:gt(69)").addClass("list-group-item-action");
-        $("div.list-group").find("a.list-group-item").filter(":lt(11):gt(5),:eq(54)").addClass("list-group-item-primary");
-        $("div.list-group").find("a.list-group-item").filter(":lt(13):gt(10),:lt(57):gt(54)").addClass("list-group-item-secondary");
-        $("div.list-group").find("a.list-group-item").eq(57).addClass("list-group-item-info");
-        $("div.list-group").find("a.list-group-item").filter(":lt(6),:lt(54):gt(14),:gt(57)").addClass("list-group-item-dark");
-        $("div.list-group").find("a.list-group-item").filter(":eq(0),:eq(4)").addClass("border-top-0");
-        $("div.list-group").eq(6).find("a.list-group-item").filter(":first,:last").addClass("rounded-0");
+        $("div.list-group > div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
+        $("div.list-group a.list-group-item").filter(":lt(15):gt(6),:lt(58):gt(41),:gt(69)").addClass("list-group-item-action");
+        $("div.list-group a.list-group-item").filter(":lt(11):gt(5),:eq(54)").addClass("list-group-item-primary");
+        $("div.list-group a.list-group-item").filter(":lt(13):gt(10),:lt(57):gt(54)").addClass("list-group-item-secondary");
+        $("div.list-group a.list-group-item").eq(57).addClass("list-group-item-info");
+        $("div.list-group a.list-group-item").filter(":lt(6),:lt(54):gt(14),:gt(57)").addClass("list-group-item-dark");
+        $("div.list-group a.list-group-item").filter(":eq(0),:eq(4)").addClass("border-top-0");
+        $("div.list-group:eq(6) a.list-group-item").filter(":first,:last").addClass("rounded-0");
     });
     $("li.navbar-item").each(function () {
         $("li.navbar-item").not(":eq(1)").children("a").slice(0, -1).addClass("nav-link").attr({ "href": "#", "role": "button", "data-toggle": "modal", "aria-pressed": "true" });
-        $("li.navbar-item").find("i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
-        $("li.navbar-item").find("span").addClass("pl-1 d-md-none");
+        $("li.navbar-item i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
+        $("li.navbar-item span").addClass("pl-1 d-md-none");
     });
-    $("div.dropdown-menu:gt(0)").children("a").not("[data-toggle='collapse']").addClass("dropdown-item").attr({ "role": "button", "target": "_blank" });
+    $("div.dropdown-menu:gt(0) > a").not("[data-toggle='collapse']").addClass("dropdown-item").attr({ "role": "button", "target": "_blank" });
     $("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
     $("a.card-link").addClass("text-light").attr("target", "_blank");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
