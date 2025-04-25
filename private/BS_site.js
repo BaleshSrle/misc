@@ -51,20 +51,23 @@ jQuery(function ($) {
         $(this).addClass("mb-1 py-1");
         $(this).children().last().addClass("active").attr("aria-current", "page");
     });
-    $("nav.navbar").addClass("py-sm-1");
+    $("nav.navbar").each(function () {
+        $(this).addClass("navbar-expand-sm navbar-dark bg-primary py-sm-1");
+        $(this).children("button").addClass("navbar-toggler").attr({ "type": "button", "data-toggle": "collapse", "data-target": "#collapsibleNavbar" });
+    });
     $("li.nav-item").each(function () {
-        $("li.nav-item:eq(0)").html("<a class='nav-link' href='index.html'><i class='bi bi-house pr-sm-1'></i>Početna</a>");
-        $("li.nav-item:eq(1)").html("<a class='nav-link' href='it_news.html'><i class='bi bi-newspaper pr-sm-1'></i>Vijesti</a>");
-        $("li.nav-item:eq(2)").addClass("d-none d-md-block").html("<a class='nav-link' href='drivers.html'><i class='bi bi-disc-fill pr-sm-1'></i>Drajveri</a>");
-        $("li.nav-item:eq(3)").addClass("dropdown").html("<a class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='navbardrop'>Usluge</a><div class='dropdown-menu'><a class='dropdown-item' href='mini_service.html'><i class='bi bi-wrench pr-sm-1'></i>Mini servis</a><a class='dropdown-item' href='support.html'><i class='bi bi-headset pr-sm-1'></i>Podrška</a><a class='dropdown-item' href='web_design.html'><i class='bi bi-code-slash pr-sm-1'></i>Izrada web sajtova</a><a class='dropdown-item' href='github_projects.html'><i class='bi bi-github pr-sm-1'></i>GitHub projekti</a></div>");
+        $("li.nav-item:eq(0)").html("<a class='nav-link' href='index.html'><i class='bi bi-house pr-1'></i>Početna</a>");
+        $("li.nav-item:eq(1)").html("<a class='nav-link' href='it_news.html'><i class='bi bi-newspaper pr-1'></i>Vijesti</a>");
+        $("li.nav-item:eq(2)").addClass("d-none d-md-block").html("<a class='nav-link' href='drivers.html'><i class='bi bi-disc-fill pr-1'></i>Drajveri</a>");
+        $("li.nav-item:eq(3)").addClass("dropdown").html("<a class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='navbardrop'>Usluge</a><div class='dropdown-menu'><a class='dropdown-item' href='mini_service.html'><i class='bi bi-wrench pr-1'></i>Mini servis</a><a class='dropdown-item' href='support.html'><i class='bi bi-headset pr-1'></i>Podrška</a><a class='dropdown-item' href='web_design.html'><i class='bi bi-code-slash pr-1'></i>Izrada web sajtova</a><a class='dropdown-item' href='github_projects.html'><i class='bi bi-github pr-1'></i>GitHub projekti</a></div>");
         $("li.nav-item:eq(3) > a").on("click", function () {
             $("div.dropdown-menu").addClass("mt-md-n1");
         });
         $("li.nav-item:eq(4)").addClass("d-none d-md-block").html("<a class='nav-link' href='https://1drv.ms/f/s!Ap_NgLjjdst_hF1G61KtOFOu6d6O' target='_blank'><i class='bi bi-cloud-download pr-sm-1'></i>Preuzimanje</a>");
-        $("li.nav-item:eq(5)").html("<a class='nav-link' href='blog.html'><i class='bi bi-wordpress pr-sm-1'></i>Blog</a>");
-        $("li.nav-item:eq(6)").html("<a class='nav-link' href='https://photos.app.goo.gl/b4ypN3f8FY2OTc2r1' target='_blank'><i class='bi bi-images pr-sm-1'></i>Smiješne slike</a>");
-        $("li.nav-item:eq(7)").html("<a class='nav-link' href='contact.html'><i class='bi bi-telephone-inbound-fill pr-sm-1'></i>Kontakt</a>");
-        $("li.nav-item:eq(8)").html("<a class='nav-link' href='sitemap.xml'><i class='bi bi-diagram-3-fill pr-sm-1'></i>Mapa sajta</a>");
+        $("li.nav-item:eq(5)").html("<a class='nav-link' href='blog.html'><i class='bi bi-wordpress pr-1'></i>Blog</a>");
+        $("li.nav-item:eq(6)").html("<a class='nav-link' href='https://photos.app.goo.gl/b4ypN3f8FY2OTc2r1' target='_blank'><i class='bi bi-images pr-1'></i>Smiješne slike</a>");
+        $("li.nav-item:eq(7)").html("<a class='nav-link' href='contact.html'><i class='bi bi-telephone-inbound-fill pr-1'></i>Kontakt</a>");
+        $("li.nav-item:eq(8)").html("<a class='nav-link' href='sitemap.xml'><i class='bi bi-diagram-3-fill pr-1'></i>Mapa sajta</a>");
     });
     $("img").filter("[src*='style=for-the-badge'],[alt$='Ubuntu'],[alt='IP2Location'],[alt^='Joomla']:gt(0)").addClass("rounded-lg");
     $("img[src*='style=for-the-badge']:gt(0)").attr("src", function (index, src) { return src + '&logoSize=auto' });
@@ -149,11 +152,11 @@ jQuery(function ($) {
         $(this).find("div.carousel-item:eq(2)").html("<a href='https://www.ip2location.com/free/widgets' target='_blank'><img src='https://tools.ip2location.com/200x200.png' class='rounded-lg border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='IP2Location'></a>");
     });
     //$("div.github-widget div").addClass("col p-1");
-    $("div.btn-toolbar").addClass("d-flex justify-content-center flex-row flex-fill");
+    $("div.btn-toolbar").attr({ "role": "toolbar", "aria-label": "ToolbarButtonGroup" }).addClass("d-flex justify-content-center flex-row flex-fill");
     $("div.btn-group.btn-group-lg").each(function () {
-        $("div.btn-group.btn-group-lg").filter(":first").addClass("pr-xl-1 py-1");
-        $("div.btn-group.btn-group-lg").filter(":last").addClass("pl-xl-1 py-1 d-none d-md-block");
-    });
+        $("div.btn-group.btn-group-lg:first").addClass("pr-xl-1 py-1").attr("aria-label", "Komunikacija");
+        $("div.btn-group.btn-group-lg:last").addClass("pl-xl-1 py-1 d-none d-md-block").attr("aria-label", "Ostalo");
+    }).attr("role", "group");
     $(".bi-skype,.bi-telegram,.bi-envelope,.bi-cone-striped").addClass("h2 align-middle");
     $("i.bi-telegram").parent("a").attr({ "href": "https://baleshsrle.t.me", "hreflang": "en", "target": "_blank" });
     $(".btn-vlc").each(function () {
