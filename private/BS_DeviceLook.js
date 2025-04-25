@@ -4,14 +4,14 @@ $(document).ready(function () {
     $("select#url").on("click", function () {
         $("iframe#urlOutput").attr("src", $("#url").val());
     });
-    $("div.laptop").css({ "-webkit-transform-origin": "0 0", "transform-origin": "0 0", "-webkit-transform": "scale(.6) translate(-50%)", "transform": "scale(.6) translate(-50%)", "left": "50%", "position": "absolute", "width": "1366px", "height": "800px", "border-width": "24px 24px 80px", "border-radius": "6px" });
-    $("div.laptop").children().css({ "width": "1366px", "height": "800px", "overflow": "hidden", "border": "0 none" });
-    $("div.smartphone").css({ "width": "360px", "height": "640px" });
-    $("div.smartphone").children().css({ "width": "360px", "height": "640px" });
-    $("div.tablet").css({ "width": "768px", "height": "1024px" });
-    $("div.tablet").children().css({ "width": "768px", "height": "1024px", "margin": "-1px" });
+    $("div.laptop").css({ "-webkit-transform-origin": "0 0", "transform-origin": "0 0", "-webkit-transform": "scale(.6) translate(-50%)", "transform": "scale(.6) translate(-50%)", "left": "50%", "position": "absolute", "border-width": "24px 24px 80px", "border-radius": "6px" }).width(1366).height(800);
+    $("div.laptop").children().css({ "overflow": "hidden", "border": "0 none" }).width(1366).height(800);
+    $("div.smartphone").width(360).height(640);
+    $("div.smartphone").children().width(360).height(640);
+    $("div.tablet").width(768).height(1024);
+    $("div.tablet").children().css("margin", "-1px").width(768).height(1024);
     $("div").filter(".laptop,.smartphone,.tablet").css({ "border-style": "solid", "border-color": "black" });
     $("div").filter(".laptop,.smartphone,.tablet").children().css("background", "white");
     $("div").filter(".smartphone,div.tablet").css({ "position": "relative", "margin": "auto", "border-width": "60px 16px", "border-radius": "36px" });
-    $("iframe").css({ "width": "100%", "height": "100%", "border": "0 none" });
+    $("iframe").css("border", "0 none").width("100%").height("100%");
 });

@@ -53,18 +53,18 @@ jQuery(function ($) {
     });
     $("nav.navbar").addClass("py-sm-1");
     $("li.nav-item").each(function () {
-        $("li.nav-item").eq(0).html("<a class='nav-link' href='index.html'><i class='bi bi-house pr-sm-1'></i>Početna</a>");
-        $("li.nav-item").eq(1).html("<a class='nav-link' href='it_news.html'><i class='bi bi-newspaper pr-sm-1'></i>Vijesti</a>");
-        $("li.nav-item").eq(2).addClass("d-none d-md-block").html("<a class='nav-link' href='drivers.html'><i class='bi bi-disc-fill pr-sm-1'></i>Drajveri</a>");
-        $("li.nav-item").eq(3).addClass("dropdown").html("<a class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='navbardrop'>Usluge</a><div class='dropdown-menu'><a class='dropdown-item' href='mini_service.html'><i class='bi bi-wrench pr-sm-1'></i>Mini servis</a><a class='dropdown-item' href='support.html'><i class='bi bi-headset pr-sm-1'></i>Podrška</a><a class='dropdown-item' href='web_design.html'><i class='bi bi-code-slash pr-sm-1'></i>Izrada web sajtova</a><a class='dropdown-item' href='github_projects.html'><i class='bi bi-github pr-sm-1'></i>GitHub projekti</a></div>");
-        $("li.nav-item").eq(3).children("a").on("click", function () {
+        $("li.nav-item:eq(0)").html("<a class='nav-link' href='index.html'><i class='bi bi-house pr-sm-1'></i>Početna</a>");
+        $("li.nav-item:eq(1)").html("<a class='nav-link' href='it_news.html'><i class='bi bi-newspaper pr-sm-1'></i>Vijesti</a>");
+        $("li.nav-item:eq(2)").addClass("d-none d-md-block").html("<a class='nav-link' href='drivers.html'><i class='bi bi-disc-fill pr-sm-1'></i>Drajveri</a>");
+        $("li.nav-item:eq(3)").addClass("dropdown").html("<a class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='navbardrop'>Usluge</a><div class='dropdown-menu'><a class='dropdown-item' href='mini_service.html'><i class='bi bi-wrench pr-sm-1'></i>Mini servis</a><a class='dropdown-item' href='support.html'><i class='bi bi-headset pr-sm-1'></i>Podrška</a><a class='dropdown-item' href='web_design.html'><i class='bi bi-code-slash pr-sm-1'></i>Izrada web sajtova</a><a class='dropdown-item' href='github_projects.html'><i class='bi bi-github pr-sm-1'></i>GitHub projekti</a></div>");
+        $("li.nav-item:eq(3) > a").on("click", function () {
             $("div.dropdown-menu").addClass("mt-md-n1");
         });
-        $("li.nav-item").eq(4).addClass("d-none d-md-block").html("<a class='nav-link' href='https://1drv.ms/f/s!Ap_NgLjjdst_hF1G61KtOFOu6d6O' target='_blank'><i class='bi bi-cloud-download pr-sm-1'></i>Preuzimanje</a>");
-        $("li.nav-item").eq(5).html("<a class='nav-link' href='blog.html'><i class='bi bi-wordpress pr-sm-1'></i>Blog</a>");
-        $("li.nav-item").eq(6).html("<a class='nav-link' href='https://photos.app.goo.gl/b4ypN3f8FY2OTc2r1' target='_blank'><i class='bi bi-images pr-sm-1'></i>Smiješne slike</a>");
-        $("li.nav-item").eq(7).html("<a class='nav-link' href='contact.html'><i class='bi bi-telephone-inbound-fill pr-sm-1'></i>Kontakt</a>");
-        $("li.nav-item").eq(8).html("<a class='nav-link' href='sitemap.xml'><i class='bi bi-diagram-3-fill pr-sm-1'></i>Mapa sajta</a>");
+        $("li.nav-item:eq(4)").addClass("d-none d-md-block").html("<a class='nav-link' href='https://1drv.ms/f/s!Ap_NgLjjdst_hF1G61KtOFOu6d6O' target='_blank'><i class='bi bi-cloud-download pr-sm-1'></i>Preuzimanje</a>");
+        $("li.nav-item:eq(5)").html("<a class='nav-link' href='blog.html'><i class='bi bi-wordpress pr-sm-1'></i>Blog</a>");
+        $("li.nav-item:eq(6)").html("<a class='nav-link' href='https://photos.app.goo.gl/b4ypN3f8FY2OTc2r1' target='_blank'><i class='bi bi-images pr-sm-1'></i>Smiješne slike</a>");
+        $("li.nav-item:eq(7)").html("<a class='nav-link' href='contact.html'><i class='bi bi-telephone-inbound-fill pr-sm-1'></i>Kontakt</a>");
+        $("li.nav-item:eq(8)").html("<a class='nav-link' href='sitemap.xml'><i class='bi bi-diagram-3-fill pr-sm-1'></i>Mapa sajta</a>");
     });
     $("img").filter("[src*='style=for-the-badge'],[alt$='Ubuntu'],[alt='IP2Location'],[alt^='Joomla']:gt(0)").addClass("rounded-lg");
     $("img[src*='style=for-the-badge']:gt(0)").attr("src", function (index, src) { return src + '&logoSize=auto' });
@@ -148,30 +148,30 @@ jQuery(function ($) {
         $(this).find("div.carousel-item:eq(1)").html("<a href='https://www.worldipv6launch.org/' hreflang='en' target='_blank'><img src='images/World_IPv6_launch.png' class='border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='World IPv6 Launch'></a>");
         $(this).find("div.carousel-item:eq(2)").html("<a href='https://www.ip2location.com/free/widgets' target='_blank'><img src='https://tools.ip2location.com/200x200.png' class='rounded-lg border-0 d-block mx-auto h-auto' style='margin: 3px 0px; max-width: 180px' alt='IP2Location'></a>");
     });
-    $("div.github-widget").parent("div").addClass("col p-1");
+    //$("div.github-widget div").addClass("col p-1");
     $("div.btn-toolbar").addClass("d-flex justify-content-center flex-row flex-fill");
     $("div.btn-group.btn-group-lg").each(function () {
         $("div.btn-group.btn-group-lg").filter(":first").addClass("pr-xl-1 py-1");
         $("div.btn-group.btn-group-lg").filter(":last").addClass("pl-xl-1 py-1 d-none d-md-block");
     });
     $(".bi-skype,.bi-telegram,.bi-envelope,.bi-cone-striped").addClass("h2 align-middle");
-	$("i.bi-telegram").parent("a").attr({"href": "https://baleshsrle.t.me", "hreflang": "en", "target": "_blank"});
+    $("i.bi-telegram").parent("a").attr({ "href": "https://baleshsrle.t.me", "hreflang": "en", "target": "_blank" });
     $(".btn-vlc").each(function () {
         $(this).css({ "background-color": "darkorange", "color": "white" });
         $(this).hover(function () { $(this).css({ "background-color": "#d87600", "color": "white" }); }, function () { $(this).css({ "background-color": "darkorange", "color": "white" }); });
     });
     $("footer").each(function () {
         $("footer").addClass("d-sm-flex flex-sm-row align-items-center mb-0 py-1 text-center");
-        $("footer").children("div").eq(0).addClass("d-flex flex-wrap flex-sm-column mx-md-2").html("<div class='mx-auto'><img src='https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3' alt='Bootstrap'></div><div class='mx-auto'><img src='https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad' alt='jQuery'></div><div class='mx-auto'><img src='https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600' alt='jsDelivr CDN'></div>");
-        $("footer").children("div").eq(1).addClass("flex-grow-1 small h6 my-sm-1 my-md-0");
-        $("footer").find("p").not(":last").addClass("mb-1");
-        $("footer").find("p").eq(0).html("<a href='https://d.wps.com' title='Free Office Suite'>Free WPS Office Suite</a> Friendly Word processing, Spreadsheets and Presentation software.");
-        $("footer").find("p").eq(1).html("&copy;&nbsp;" + new Date().getFullYear() + ".&nbsp;<a href='../'>.::Servis računara B@LESHEVICH::.</a> &amp; <a title='DobojCaffe' href='https://dobojcaffe.com/' hreflang='sr-BA'>DobojCaffe</a><!--<br>Ova stranica je kreirana pomoću<a href='https://getbootstrap.com/'><img src='https://img.shields.io/badge/logo-Bootstrap-7952b3?logo=bootstrap&label=&labelColor=555555&logoColor=white' alt='Bootstrap'></a>,<a href='https://www.jsdelivr.com/'><img src='https://img.shields.io/badge/logo-jsDelivr-e84d3d?logo=jsdelivr&label=&labelColor=555555&logoColor=white' alt='jsDelivr'></a>, <a href='https://cdnjs.com' class='text-decoration-none'><strong>cdnjs</strong></a> ,<img src='https://img.shields.io/badge/logo-HTML5-e34f26?logo=html5&label=&labelColor=555555&logoColor=white' alt='HTML5'>i<img src='https://img.shields.io/badge/logo-CSS3-1572b6?logo=css3&label=&labelColor=555555&logoColor=white' alt='CSS'>kodova i <a href='https://icons.getbootstrap.com' class='text-decoration-none'><strong>Bootstrap ikonica</strong></a>-->.");
-        $("footer").find("p").eq(3).addClass("mb-0").html("Ovaj sajt je zaštićen pomoću zaštitnog zida koji je kreiran pomoću sajta<object data='https://img.shields.io/badge/IP2Location-084e8f?logoSize=auto&link=https%3A%2F%2Fip2location.com' name='IP2Location' class='ml-1 align-middle'></object>.");
-        $("footer").find("a").not(":eq(1)").attr("target", "_blank");
-        //$("footer").find("img").filter("[alt='Bootstrap'],[alt='jsDelivr'],[alt='HTML5'],img[alt='CSS']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
-        //$("footer").find("img").css("margin-left", "1px");
-        $("footer").find("img").addClass("ml-1");
-        $("footer").children("div.wot").addClass("mx-md-2").html("<a id='wot-badge0' class='wot-badge mx-auto' href='https://www.mywot.com/scorecard/baleshevich.dobojcaffe.com?wot_badge=0_white' target='_blank' hreflang='en'><div class='wot-logo'></div><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p><div class='wot-vertical'></div><p class='wot-report'>See Report</p></a>");
+        $("footer > div:eq(0)").addClass("d-flex flex-wrap flex-sm-column mx-md-2").html("<div class='mx-auto'><img src='https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3' alt='Bootstrap'></div><div class='mx-auto'><img src='https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad' alt='jQuery'></div><div class='mx-auto'><img src='https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600' alt='jsDelivr CDN'></div>");
+        $("footer > div:eq(1)").addClass("flex-grow-1 small h6 my-sm-1 my-md-0");
+        $("footer p").not(":last").addClass("mb-1");
+        $("footer p:eq(0)").html("<a href='https://d.wps.com' title='Free Office Suite'>Free WPS Office Suite</a> Friendly Word processing, Spreadsheets and Presentation software.");
+        $("footer p:eq(1)").html("&copy;&nbsp;" + new Date().getFullYear() + ".&nbsp;<a href='../'>.::Servis računara B@LESHEVICH::.</a> &amp; <a title='DobojCaffe' href='https://dobojcaffe.com/' hreflang='sr-BA'>DobojCaffe</a><!--<br>Ova stranica je kreirana pomoću<a href='https://getbootstrap.com/'><img src='https://img.shields.io/badge/logo-Bootstrap-7952b3?logo=bootstrap&label=&labelColor=555555&logoColor=white' alt='Bootstrap'></a>,<a href='https://www.jsdelivr.com/'><img src='https://img.shields.io/badge/logo-jsDelivr-e84d3d?logo=jsdelivr&label=&labelColor=555555&logoColor=white' alt='jsDelivr'></a>, <a href='https://cdnjs.com' class='text-decoration-none'><strong>cdnjs</strong></a> ,<img src='https://img.shields.io/badge/logo-HTML5-e34f26?logo=html5&label=&labelColor=555555&logoColor=white' alt='HTML5'>i<img src='https://img.shields.io/badge/logo-CSS3-1572b6?logo=css3&label=&labelColor=555555&logoColor=white' alt='CSS'>kodova i <a href='https://icons.getbootstrap.com' class='text-decoration-none'><strong>Bootstrap ikonica</strong></a>-->.");
+        $("footer p:eq(3)").addClass("mb-0").html("Ovaj sajt je zaštićen pomoću zaštitnog zida koji je kreiran pomoću sajta<object data='https://img.shields.io/badge/IP2Location-084e8f?logoSize=auto&link=https%3A%2F%2Fip2location.com' name='IP2Location' class='ml-1 align-middle'></object>.");
+        $("footer a").not(":eq(1)").attr("target", "_blank");
+        //$("footer img").filter("[alt='Bootstrap'],[alt='jsDelivr'],[alt='HTML5'],img[alt='CSS']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
+        //$("footer img").css("margin-left", "1px");
+        $("footer img").addClass("ml-1");
+        $("footer > div.wot").addClass("mx-md-2").html("<a id='wot-badge0' class='wot-badge mx-auto' href='https://www.mywot.com/scorecard/baleshevich.dobojcaffe.com?wot_badge=0_white' target='_blank' hreflang='en'><div class='wot-logo'></div><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p><div class='wot-vertical'></div><p class='wot-report'>See Report</p></a>");
     });
 });
