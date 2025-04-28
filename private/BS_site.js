@@ -96,6 +96,7 @@ jQuery(function ($) {
         $(this).carousel({
             interval: 3000,
             keyboard: false,
+            ride: "carousel",
             touch: false
         });
         $(this).find("div.carousel-item:eq(0)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20VLC%20media%20player-ff8800?style=for-the-badge&logo=vlcmediaplayer&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.videolan.org%2Fvlc%2Findex.sr.html", "name": "Get VLC media player - It plays, it streams, it kills WiMPs!!" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
@@ -106,6 +107,7 @@ jQuery(function ($) {
         $(this).carousel({
             interval: 3000,
             keyboard: false,
+            ride: "carousel",
             touch: false
         });
         $(this).find("div.carousel-item:eq(0)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20Vivaldi%20Browser-ef3939?style=for-the-badge&logo=vivaldi&logoColor=white&logoSize=auto&link=https%3A%2F%2Fvivaldi.com%2F", "name": "Download Vivaldi Web Browser Today!" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
@@ -117,6 +119,7 @@ jQuery(function ($) {
         $(this).carousel({
             interval: 3000,
             keyboard: false,
+            ride: "carousel",
             touch: false
         });
         $(this).find("div.carousel-item:eq(0)").append($("<a></a>").attr({ "href": "https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download", "hreflang": "sr-RS", "target": "_blank" }).append($("<img>").attr({ "src": "images/MSE.png", "alt": "Microsoft Security Essentials" }).addClass("border-0 d-block mx-auto my-4 img-fluid")));
@@ -128,6 +131,7 @@ jQuery(function ($) {
         $(this).carousel({
             interval: 2900,
             keyboard: false,
+            ride: "carousel",
             touch: false
         });
         $(this).find("div.carousel-item:eq(0)").append($("<a></a>").attr({ "href": "http://ubunt.eu/zesty", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "https://assets.ubuntu.com/v1/61f4fb91-release-widgetv5.jpg", "alt": "Download latest version of Ubuntu" }).addClass("rounded-lg border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
@@ -138,6 +142,7 @@ jQuery(function ($) {
         $(this).carousel({
             interval: 2800,
             keyboard: false,
+            ride: "carousel",
             touch: false
         });
         $(this).find("div.carousel-item:eq(0)").append($("<a></a>").attr({ "href": "https://internetdefenseleague.org", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "images/IDL_Shield_badge.png", "alt": "Internet Defense League" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
