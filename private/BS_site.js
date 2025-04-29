@@ -32,10 +32,10 @@ jQuery(function ($) {
     switch (new Date().getMonth() + 1) {
         case 1:
         case 12:
-            $("div.card#hosting_banner > div.card-body").children("a").append($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/dobojcaffe.png", "alt": "Web hosting by DobojCaffe.com", "loading": "eager" }).on("error", function () { return location.reload(); }));
+            $("div.card#hosting_banner > div.card-body").children("a").append($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/dobojcaffe.png", "alt": "Web hosting by DobojCaffe.com", "loading": "eager" }).on("error", function () { this.src = this.src; }));
             break;
         default:
-            $("div.card#hosting_banner > div.card-body").children("a").append($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/docaffe.jpg", "alt": "Web hosting by DobojCaffe.com", "loading": "eager" }).on("error", function () { return location.reload(); }));
+            $("div.card#hosting_banner > div.card-body").children("a").append($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/docaffe.jpg", "alt": "Web hosting by DobojCaffe.com", "loading": "eager" }).on("error", function () { this.src = this.src; }));
     }
     $("header").each(function () {
         $(this).children("a").addClass("text-decoration-none text-body ml-md-1").prepend($("<img>").addClass("border-0 img-fluid").css("margin", "3px 0px").attr({ "src": "images/baleshevichcompany2.png", "alt": "Servis računara 'BALEŠEVIĆ'" }));
