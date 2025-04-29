@@ -82,7 +82,6 @@ $(document).ready(function () {
     });
     $("script#skin").text("var fm_inf_1 = 'Arial';");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
-    $("div.modal").attr({ "tabindex": "-1", "role": "dialog" });
 
     /*$("#loginModal").show(1).addClass("bg-secondary").modal({
         backdrop: 'static',
@@ -206,6 +205,7 @@ $(document).ready(function () {
     $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     $("div.toast").each(function () {
         $(this).parent("div").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px", "width": "350px" });
+
     }).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
     $("div.toast-header").each(function () {
         $("div.toast-header > img").not(":eq(2)").addClass("mr-1");
@@ -248,7 +248,7 @@ $(document).ready(function () {
         $(this).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
         $(this).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
         $(this).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
-    });
+    }).attr({ "tabindex": "-1", "role": "dialog" });
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
     $("div").filter(".row:eq(1),.btn-group-vertical,.toast-body:eq(2),[name^='airvisual']").addClass("mx-auto");
