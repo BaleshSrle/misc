@@ -166,10 +166,12 @@ $(document).ready(function () {
     }).addClass("form-control bg-dark text-white");
     $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[src*='wpscdn'],[alt='BaleshSrle Logo'],[alt='SPC_logo'],[alt='iqAir_logo']").height(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
-    $("img").filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
-    $("img[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
-    $("img[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
-    $("img[src*='shields']").on("error", function () { this.src = this.src; });
+    $("img").each(function () {
+        $(this).filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
+        $(this).filter("[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
+        $(this).filter("[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
+        $(this).filter("[src*='shields']").on("error", function () { this.src = this.src; });
+    });
     $("div#churchCalendarToast > div.toast-body").addClass("p-0").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height(332)/*.height(360)*/);
     //$("div#churchCalendarToast > div.toast-body").addClass("p-2").append($("<iframe></iframe").attr("src", "https://pravoslavnikalendar.rs/kal/pra220.php").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" }));
     $("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
@@ -204,14 +206,12 @@ $(document).ready(function () {
     $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     $("div.toast").each(function () {
         $(this).parent("div").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px", "width": "350px" });
-        $(this).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
-    });
+    }).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
     $("div.toast-header").each(function () {
-        $("div.toast-header").addClass("py-0");
         $("div.toast-header > img").not(":eq(2)").addClass("mr-1");
         $("div.toast-header > img:eq(2)").addClass("mr-auto");
         $("div.toast-header > button.close").addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Zatvori" });
-    });
+    }).addClass("py-0");
     $("div.toast-body").each(function () {
         $("div.toast-body").filter(":eq(0), :eq(3)").addClass("p-2");
         $("div.toast-body").eq(2).addClass("py-2 px-3").css("width", "345px");
@@ -256,9 +256,8 @@ $(document).ready(function () {
     $("div#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": "https://www.livescore.bz/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo"));
     $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
     $("div.btn-group-vertical").each(function () {
-        $(this).addClass("my-1");
         $(this).eq(3).addClass("mw-100");
-    });
+    }).addClass("my-1");
     $("div.card-deck").each(function () {
         $(this).children("div.card:even").addClass("mr-xl-1");
         $(this).children("div.card:even").eq(2).addClass("d-none d-md-block");
@@ -335,8 +334,7 @@ $(document).ready(function () {
     $("ul.nav").each(function () {
         $(this).parent().removeClass("py-2").addClass("pt-1");
         $(this).children().removeClass("px-2 py-1");
-        $(this).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-y": "hidden", "overflow-x": "auto" }).attr("role", "tablist");
-    });
+    }).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-y": "hidden", "overflow-x": "auto" }).attr("role", "tablist");
     $("ul[id$='List'] a").on("click", function (e) {
         e.preventDefault()
         $(this).tab("show");
