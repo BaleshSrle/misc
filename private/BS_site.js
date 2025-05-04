@@ -14,14 +14,14 @@ jQuery(function ($) {
         case "/contact.html":
         case "/404.html":
             $("head").each(function () {
-                $(this).prepend("<meta name='mobile-web-app-capable' content='yes'>", "<meta name='apple-mobile-web-app-capable' content='yes'>", "<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>", "<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>", "<meta name='google-site-verification' content='cFg281al1tonGR827hLOMjiF1v-OjzuWS7nYOHCgxgA'>", "<meta name='wot-verification' content='13f1e38cf44480f6feee'>", "<meta name='norton-safeweb-site-verification' content='pofkh9sr3qjpu47evek-cna-t1f48yawpkz7mj20baj2eu2y22swvcipivgni0sv9eosd7402ko30s2bq7ip7mr8pg7co-2locptqg-e3kniin48fy1ium1kjxn76tr-'>", "<meta name='avgthreatlabs-verification' content='32fe796e7c8dd69cd046f4e24ef2f6a1a579b717'>");
-                $(this).append("<link href='humans.txt' rel='author'>");
+                $(this).prepend($("<meta>").attr({ "name": "mobile-web-app-capable", "content": "yes" }), $("<meta>").attr({ "name": "apple-mobile-web-app-capable", "content": "yes" }), $("<meta>").attr({ "name": "msvalidate.01", "content": "6605C60582C09EBF05D19C7AA9FF5496" }), $("<meta>").attr({ "name": "msvalidate.01", "content": "78FE17549C9303A86665F2ECA50117F0" }), $("<meta>").attr({ "name": "google-site-verification", "content": "cFg281al1tonGR827hLOMjiF1v-OjzuWS7nYOHCgxgA" }), $("<meta>").attr({ "name": "wot-verification", "content": "13f1e38cf44480f6feee" }), $("<meta>").attr({ "name": "norton-safeweb-site-verification", "content": "pofkh9sr3qjpu47evek-cna-t1f48yawpkz7mj20baj2eu2y22swvcipivgni0sv9eosd7402ko30s2bq7ip7mr8pg7co-2locptqg-e3kniin48fy1ium1kjxn76tr-" }), $("<meta>").attr({ "name": "avgthreatlabs-verification", "content": "32fe796e7c8dd69cd046f4e24ef2f6a1a579b717" }));
+                $(this).append($("<link>").attr({ "rel": "author", "href": "humans.txt" }));
             });
     }
     $("head").each(function () {
-        $(this).prepend("<base href=" + location.origin + ">");
+        $(this).prepend($("<base>").attr("href", location.origin));
         // $(this).prepend("<base href=file:///D:/company/>");
-        $(this).append("<meta name='copyright' content='DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() + "'>", "<meta name='GENERATOR' content='Visual Studio Code 1.96.4'>");
+        $(this).append($("<meta>").attr({ "name": "copyright", "content": "DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() }), $("<meta>").attr({ "name": "GENERATOR", "content": "Visual Studio Code 1.99.3" }));
         $(this).append($.getScript('https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js'));
     });
     if ($("a.nav-link.dropdown-toggle").hasClass("active") == true) {
@@ -156,7 +156,7 @@ jQuery(function ($) {
         $("div.btn-group.btn-group-lg:last").addClass("pl-xl-1 py-1 d-none d-md-block").attr("aria-label", "Ostalo");
     }).attr("role", "group");
     $(".bi-skype,.bi-telegram,.bi-envelope,.bi-cone-striped").addClass("h2 align-middle");
-    $("i.bi-skype").parent("a").attr("href", "skype:srdjan.baleshevich?chat"/*{"href":"skype:srdjan.baleshevich?chat","aria-disabled":"true"}*/)/*.addClass("disabled")*/;
+    $("i.bi-skype").parent("a").attr(/*"href", "skype:srdjan.baleshevich?chat"*/{ "href": "skype:srdjan.baleshevich?chat", "aria-disabled": "true" }).addClass("disabled");
     $("i.bi-telegram").parent("a").attr({ "href": "https://baleshsrle.t.me", "hreflang": "en", "target": "_blank" });
     $(".btn-vlc").each(function () {
         $(this).hover(function () { $(this).css({ "background-color": "#d87600", "color": "white" }); }, function () { $(this).css({ "background-color": "darkorange", "color": "white" }); });
