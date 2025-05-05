@@ -574,6 +574,8 @@
 @@||lockheedmartin.com^$elemhide
 @@||boeing.com^$elemhide
 kodbakeff.com##body
+pink.rs##body
+redportal.pink.rs#@#body
 vodovodaddoboj.info##body
 jw.org##body
 news.com.au##body
@@ -584,3 +586,6 @@ nine.com.au##body
 #@##socialicons
 ###basePopping
 ##div[id|="custom_html"]
+##div[class="kurir-tv"]
+##div[class="container-live"]
+##div[class="happystream"]
