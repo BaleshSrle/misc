@@ -24,10 +24,10 @@ jQuery(function ($) {
         $(this).append($("<meta>").attr({ "name": "copyright", "content": "DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() }), $("<meta>").attr({ "name": "GENERATOR", "content": "Visual Studio Code 1.99.3" }));
         $(this).append($.getScript('https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js'));
     });
-    if ($("a.nav-link.dropdown-toggle").hasClass("active") == true) {
-        $("head").prepend('<title>.::Servis računara B@LESHEVICH:: - ::' + $("li.breadcrumb-item:last").prev().text() + ':: - ::' + $("li.breadcrumb-item:last").text() + '::.</title>');
+    if ($("li.nav-item.dropdown.active")) {
+        $("head").prepend($("<title></title>").text(".::Servis računara B@LESHEVICH:: - ::" + $("li.breadcrumb-item:eq(1)").text() + ":: - ::" + $("li.breadcrumb-item:last").text() + "::."));
     } else {
-        $("head").prepend('<title>.::Servis računara B@LESHEVICH:: - ::' + $("li.breadcrumb-item:last").text() + '::.</title>');
+        $("head").prepend($("<title></title>").text(".::Servis računara B@LESHEVICH:: - ::" + $("li.breadcrumb-item:last").text() + "::."));
     }
     switch (new Date().getMonth() + 1) {
         case 1:

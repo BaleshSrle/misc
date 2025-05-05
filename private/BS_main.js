@@ -6,7 +6,7 @@ $(document).ready(function () {
     document.normalize();
     if (location.pathname != "/index.html") {
         $("html").attr("lang", "sr-BA");
-        $("head").prepend($("meta").attr({ "name": "robots", "content": "index, nofollow" }), $("meta").attr({ "http-equiv": "X-UA-Compatible", "content": "IE=edge" }));
+        $("head").prepend($("<meta>").attr({ "name": "robots", "content": "index, nofollow" }), $("<meta>").attr({ "http-equiv": "X-UA-Compatible", "content": "IE=edge" }));
     }
     if (location.pathname == "/private/kontrolna_tabla.html"/* || location.pathname == "/F:/puovi/Documents/private/kontrolna_tabla.html"*/) {
         $.getScript("https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_CP_main.min.js");

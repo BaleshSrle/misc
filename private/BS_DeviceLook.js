@@ -12,6 +12,6 @@ $(document).ready(function () {
     $("div.tablet").children().css("margin", "-1px").width(768).height(1024);
     $("div").filter(".laptop,.smartphone,.tablet").css({ "border-style": "solid", "border-color": "black" });
     $("div").filter(".laptop,.smartphone,.tablet").children().css("background", "white");
-    $("div").filter(".smartphone,div.tablet").css({ "position": "relative", "margin": "auto", "border-width": "60px 16px", "border-radius": "36px" });
+    $("div").filter(".smartphone,.tablet").css({ "position": "relative", "margin": "auto", "border-width": "60px 16px", "border-radius": "36px" });
     $("iframe").css("border", "0 none").width("100%").height("100%");
 });
