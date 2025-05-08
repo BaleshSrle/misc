@@ -371,12 +371,12 @@ $(document).ready(function () {
         $("div.list-group").filter(":eq(5),:eq(13)").addClass("p-2");
         $("div.list-group").has("a").slice(7, 11).addClass("p-1");
         $("div.list-group > div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
-        $("div.list-group a.list-group-item").filter(":lt(15):gt(6),:lt(58):gt(41),:gt(69)").addClass("list-group-item-action");
-        $("div.list-group a.list-group-item").filter(":lt(11):gt(5),:eq(54)").addClass("list-group-item-primary");
-        $("div.list-group a.list-group-item").filter(":lt(13):gt(10),:lt(57):gt(54)").addClass("list-group-item-secondary");
-        $("div.list-group a.list-group-item").eq(57).addClass("list-group-item-info");
-        $("div.list-group a.list-group-item").filter(":lt(6),:lt(54):gt(14),:gt(57)").addClass("list-group-item-dark");
-        $("div.list-group a.list-group-item").filter(":eq(0),:eq(4)").addClass("border-top-0");
+        $("div.list-group a.list-group-item").not("[href^='https'],[href^='device_look']").filter(":lt(8):gt(1),:gt(11)").addClass("list-group-item-action");
+        $("div.list-group a.list-group-item").not("[href^='https']").eq(7).addClass("list-group-item-primary");
+        $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(10):gt(7)").addClass("list-group-item-secondary");
+        $("div.list-group a.list-group-item").not("[href^='https']").eq(10).addClass("list-group-item-info");
+        $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(7),:gt(10)").addClass("list-group-item-dark");
+        $("div.list-group a.list-group-item").not("[href^='https']").eq(0).addClass("border-top-0");
         $("div.list-group:eq(6) a.list-group-item").filter(":first,:last").addClass("rounded-0");
     });
     $("li.navbar-item").each(function () {
@@ -384,9 +384,25 @@ $(document).ready(function () {
         $("li.navbar-item i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
         $("li.navbar-item span").addClass("pl-1 d-md-none");
     });
-    $("div.dropdown-menu:gt(0) > a").not("[data-toggle='collapse']").addClass("dropdown-item").attr({ "role": "button", "target": "_blank" });
-    $("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
-    $("a.card-link").addClass("text-light").attr("target", "_blank");
+    $("div.dropdown-menu:gt(0) > a").not("[data-toggle='collapse']").addClass("dropdown-item").attr("role", "button");
+    //$("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
+    $("a[href^='https']").each(function () {
+        $(this).filter("#time_is_link, .card-link").addClass("text-light");
+        $(this).filter(".btn:lt(7):gt(4),.btn:eq(10),.btn:gt(11)").addClass("btn-primary");
+        $(this).filter(".btn:lt(5),.btn:eq(11)").addClass("btn-secondary");
+        $(this).filter(".btn").eq(9).addClass("btn-success");
+        $(this).filter(".btn").eq(7).addClass("btn-light");
+        $(this).filter(".btn").eq(8).addClass("btn-dark");
+        $(this).filter(".btn").slice(10, 12).addClass("m-1");
+        $(this).filter(".list-group-item").eq(2).addClass("border-top-0");
+        $(this).filter(".list-group-item:lt(13):gt(4), .list-group-item:lt(47):gt(39), .list-group-item:gt(57)").addClass("list-group-item-action");
+        $(this).filter(".list-group-item:lt(9):gt(3)").addClass("list-group-item-primary");
+        $(this).filter(".list-group-item:lt(11):gt(8)").addClass("list-group-item-secondary");
+        $(this).filter(".list-group-item:lt(4), .list-group-item:gt(12)").addClass("list-group-item-dark");
+    }).attr("target", "_blank");
+    $("a[href^='device_look']").addClass("list-group-item-action").attr({ "role": "button", "target": "_blank" });
+    $("a[href$='Carousel.html']").addClass("dropdown-item").attr("target", "_blank");
+    //$("a.card-link").addClass("text-light");
     $("a[href='#google'],div#google").css("background-color", "#4285f4");
     $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
     $("a[href*='sr']").not(":lt(15):gt(8), :eq(30), :eq(33)").attr("hreflang", "sr");
