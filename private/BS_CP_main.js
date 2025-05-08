@@ -397,7 +397,7 @@ $(document).ready(function () {
         $("a[href^='https'].list-group-item").eq(2).addClass("border-top-0");
         $("a[href^='https'].list-group-item").filter(":lt(13):gt(4),:lt(47):gt(39),:gt(57)").addClass("list-group-item-action");
         $("a[href^='https'].list-group-item").slice(4, 9).addClass("list-group-item-primary");
-        $("a[href^='https'].list-group-item")..slice(9, 11).addClass("list-group-item-secondary");
+        $("a[href^='https'].list-group-item").slice(9, 11).addClass("list-group-item-secondary");
         $("a[href^='https'].list-group-item").filter(":lt(4),:gt(12)").addClass("list-group-item-dark");
     }).attr("target", "_blank");
     $("a[href^='device_look']").addClass("list-group-item-action").attr({ "role": "button", "target": "_blank" });
