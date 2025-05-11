@@ -167,6 +167,7 @@ $(document).ready(function () {
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img").each(function () {
         $(this).filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
+        $(this).filter("[src*='uptimerobot']").attr("src", function (index, src) { return src + '&cacheSeconds=3600' });
         $(this).filter("[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
         $(this).filter("[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
         $(this).filter("[src*='shields']").on("error", function () { this.src = this.src; });
@@ -321,13 +322,14 @@ $(document).ready(function () {
         $("div.input-group").slice(4, 6).addClass("input-group-sm");
     });
     $("ul.list-group").each(function () {
-        $("ul.list-group").slice(0, -2).addClass("list-group-flush");
-        $("ul.list-group").slice(-4, -2).addClass("list-group-horizontal flex-wrap");
-        $("ul.list-group > li.list-group-item").slice(0, -6).addClass("list-group-item-dark px-2 py-0 d-flex align-items-center");
-        $("ul.list-group > li.list-group-item").slice(0, -20).addClass("justify-content-between");
-        $("ul.list-group > li.list-group-item").slice(-6).addClass("px-2 py-1");
-        $("ul.list-group > li.list-group-item").slice(-20, -6).addClass("flex-fill justify-content-around");
-        $("ul.list-group").slice(-4, -2).children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
+        $("ul.list-group").slice(0, -3).addClass("list-group-flush");
+        $("ul.list-group").slice(0, -3).children("li.list-group-item").addClass("list-group-item-dark px-2 py-0");
+        $("ul.list-group").slice(0, -5).children("li.list-group-item").addClass("d-flex align-items-center justify-content-between");
+        $("ul.list-group").slice(-5, -3).addClass("list-group-horizontal d-flex justify-content-around flex-wrap");
+        $("ul.list-group").slice(-5, -3).children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
+        $("ul.list-group").slice(-5, -3).children("li.list-group-item").addClass("flex-fill");
+        $("ul.list-group").slice(-5, -3).find("img, object").addClass("d-block mx-auto");
+        $("ul.list-group").slice(-3).children("li.list-group-item").addClass("px-2 py-1");
         $("ul.list-group").filter("[title='Sidemen']").siblings("ul:eq(1)").height(300).addClass("overflow-auto");
         $("ul.list-group").filter("[title='Games'],[title='USA'],[title='Canada'],[title='UK'],[title='EU']").height(300).addClass("overflow-auto");
     });
@@ -372,11 +374,16 @@ $(document).ready(function () {
         $("div.list-group").has("a").slice(7, 11).addClass("p-1");
         $("div.list-group > div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
         $("div.list-group a.list-group-item").not("[href^='https'],[href^='device_look']").filter(":lt(8):gt(1),:gt(11)").addClass("list-group-item-action");
+        $("div.list-group a[href^='https'].list-group-item").filter(":lt(13):gt(4),:lt(47):gt(39),:gt(57)").addClass("list-group-item-action");
         $("div.list-group a.list-group-item").not("[href^='https']").eq(7).addClass("list-group-item-primary");
+        $("div.list-group a[href^='https'].list-group-item").slice(4, 9).addClass("list-group-item-primary");
         $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(10):gt(7)").addClass("list-group-item-secondary");
+        $("div.list-group a[href^='https'].list-group-item").slice(9, 11).addClass("list-group-item-secondary");
         $("div.list-group a.list-group-item").not("[href^='https']").eq(10).addClass("list-group-item-info");
         $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(7),:gt(10)").addClass("list-group-item-dark");
+        $("div.list-group a[href^='https'].list-group-item").filter(":lt(4),:gt(12)").addClass("list-group-item-dark");
         $("div.list-group a.list-group-item").not("[href^='https']").eq(0).addClass("border-top-0");
+        $("div.list-group a[href^='https'].list-group-item").eq(2).addClass("border-top-0");
         $("div.list-group:eq(6) a.list-group-item").filter(":first,:last").addClass("rounded-0");
     });
     $("li.navbar-item").each(function () {
@@ -394,11 +401,6 @@ $(document).ready(function () {
         $("a[href^='https'].btn").eq(7).addClass("btn-light");
         $("a[href^='https'].btn").eq(8).addClass("btn-dark");
         $("a[href^='https'].btn").slice(10, 12).addClass("m-1");
-        $("a[href^='https'].list-group-item").eq(2).addClass("border-top-0");
-        $("a[href^='https'].list-group-item").filter(":lt(13):gt(4),:lt(47):gt(39),:gt(57)").addClass("list-group-item-action");
-        $("a[href^='https'].list-group-item").slice(4, 9).addClass("list-group-item-primary");
-        $("a[href^='https'].list-group-item").slice(9, 11).addClass("list-group-item-secondary");
-        $("a[href^='https'].list-group-item").filter(":lt(4),:gt(12)").addClass("list-group-item-dark");
     }).attr("target", "_blank");
     $("a[href^='device_look']").addClass("list-group-item-action").attr({ "role": "button", "target": "_blank" });
     $("a[href$='Carousel.html']").addClass("dropdown-item").attr("target", "_blank");
