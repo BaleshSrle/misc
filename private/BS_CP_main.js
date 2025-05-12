@@ -191,10 +191,7 @@ $(document).ready(function () {
     $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
     $("mark.bg-secondary,a#time_is_link,label:gt(2)").addClass("text-white");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
-    $("span").each(function () {
-        $(this).filter(".fi-au,.fi-ba,.fi-ca,.fi-eu,.fi-gb,.fi-nz,.fi-us").addClass("mr-1");
-        $(this).filter(".badge").addClass("badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning"));
-    });
+    $("span").filter(".fi-au,.fi-ba,.fi-ca,.fi-eu,.fi-gb,.fi-nz,.fi-us").addClass("mr-1");
     $("i").each(function () {
         $(this).filter(".bi-laptop,.bi-laptop,.bi-phone,.bi-tablet,.bi-image,.bi-snapchat,.bi-telegram,.bi-facebook,.bi-messenger,.bi-instagram,.bi-threads,.bi-whatsapp").css("font-size", "xx-large");
         $(this).filter(".bi-mailbox,.bi-headset,.bi-hourglass-split,.bi-globe,.bi-bug,.bi-kanban,.bi-stopwatch,.bi-briefcase,.bi-easel,.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
@@ -215,6 +212,7 @@ $(document).ready(function () {
     }).addClass("py-0");
     $("div.toast-body").each(function () {
         $("div.toast-body").filter(":eq(0), :eq(3)").addClass("p-2");
+        $("div.toast-body").find("li.list-group-item").addClass("px-2 py-1");
         $("div.toast-body").eq(2).addClass("py-2 px-3").css("width", "345px");
         $("div.toast-body").eq(3).addClass("text-body");
     });
@@ -300,7 +298,8 @@ $(document).ready(function () {
         $(this).children("div.card").not(":last").addClass("mb-2");
         $(this).find("div.card-header").addClass("py-2 border-bottom border-secondary");
         //$(this).find("li.list-group-item").addClass("justify-content-between");
-        $(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=300' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1");
+        $(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=300' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+        $(this).find("img").filter("[src*='develique'],[src*='maryycherryy'],[src*='2bratty'],[src*='littlebunny_x'],[src*='bunnymontv'],[src*='chess'],[src*='dinabelenkaya'],[src*='worldoftanks'],[src*='xboxon'],[src*='qospades'],[src*='ferrariesports'],[src*='janifest'],[src*='aurorastarr'],[src*='xodee'],[src*='peyzki'],[src*='luvstruck'],[src*='pinkwasabitv'],[src*='kaliroses'],[src*='allieraa'],[src*='emmalayne']:eq(0),[src*='emjayplayss'],[src*='buccatax'],[src*='lauralux'],[src*='ohKayBunny'],[src*='xoAeriel'],[src*='Hannesschan'],[src*='TrishaHershberger'],[src*='juliaburch'],[src*='thewildlatina'],[src*='xtasiaego'],[src*='XTASIATV'],[src*='elina'],[src*='xcandylashes'],[src*='kristinemaia'],[src*='kristinemaia'],[src*='mellooow_'],[src*='gemmastw'],[src*='linny'],[src*='nicolepeachy'],[src*='lucyya'],[src*='xxlauoanxx']").after($("<span></span>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
     });
     //$("div[id^='Twitch']").addClass("collapse width");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
@@ -323,13 +322,11 @@ $(document).ready(function () {
     });
     $("ul.list-group").each(function () {
         $("ul.list-group").slice(0, -3).addClass("list-group-flush");
-        $("ul.list-group").slice(0, -3).children("li.list-group-item").addClass("list-group-item-dark px-2 py-0");
-        $("ul.list-group").slice(0, -5).children("li.list-group-item").addClass("d-flex align-items-center justify-content-between");
+        //$("ul.list-group").slice(0, -5).children("li.list-group-item").addClass("d-flex align-items-center justify-content-between");
         $("ul.list-group").slice(-5, -3).addClass("list-group-horizontal d-flex justify-content-around flex-wrap");
+        $("ul.list-group").slice(-5, -3).children("li.list-group-item").addClass("list-group-item-dark px-2 py-0 flex-fill");
         $("ul.list-group").slice(-5, -3).children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
-        $("ul.list-group").slice(-5, -3).children("li.list-group-item").addClass("flex-fill");
         $("ul.list-group").slice(-5, -3).find("img, object").addClass("d-block mx-auto");
-        $("ul.list-group").slice(-3).children("li.list-group-item").addClass("px-2 py-1");
         $("ul.list-group").filter("[title='Sidemen']").siblings("ul:eq(1)").height(300).addClass("overflow-auto");
         $("ul.list-group").filter("[title='Games'],[title='USA'],[title='Canada'],[title='UK'],[title='EU']").height(300).addClass("overflow-auto");
     });
