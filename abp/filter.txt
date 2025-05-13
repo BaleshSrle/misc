@@ -588,7 +588,7 @@ federalna.ba##.main
 jw.org##body
 news.com.au##section
 9news.com.au##.content
-9now.com.au##div[class~="layout__container"]
+9now.com.au##div[class*="layout__container"]
 nine.com.au###app
 #@#.sharethis
 #@#.scl-icons
@@ -600,4 +600,5 @@ nine.com.au###app
 ##.live-widget
 ##.container-live
 ##.happystream
+##.uc-stream
 ##div[class*="live-stream-player"]
