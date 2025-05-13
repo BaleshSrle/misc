@@ -576,7 +576,7 @@
 kodbakeff.com##body
 pink.rs##body
 redportal.pink.rs#@#body
-vodovodaddoboj.info##body
+vodovodaddoboj.info##div[class="site-content"]
 policijabdbih.gov.ba##body
 sipa.gov.ba##body
 mod.gov.ba##body
@@ -586,9 +586,10 @@ face.ba##body
 euronews.ba##main
 federalna.ba##div[class="main"]
 jw.org##body
-news.com.au##body
-9now.com.au##body
-nine.com.au##body
+news.com.au##section
+9news.com.au##div[class="content"]
+9now.com.au##div[class~="layout__container"]
+nine.com.au##div[id="app"]
 #@#.sharethis
 #@#.scl-icons
 #@##socialicons
