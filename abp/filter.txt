@@ -574,21 +574,16 @@
 @@||lockheedmartin.com^$elemhide
 @@||boeing.com^$elemhide
 kodbakeff.com##body
-pink.rs##body
-redportal.pink.rs#@#body
+pink.rs,~redportal.pink.rs##body
 vodovodaddoboj.info##.site-content
-policijabdbih.gov.ba##body
-sipa.gov.ba##body
-mod.gov.ba##body
-mvp.gov.ba##body
-mkt.gov.ba##body
-face.ba##body
-euronews.ba##main
+policijabdbih.gov.ba,sipa.gov.ba,mod.gov.ba,mvp.gov.ba,mkt.gov.ba,face.ba##body
+ohr.int###content
+euronews.ba,9now.com.au##main
 federalna.ba##.main
+euforbih.org,news.com.au##section
 jw.org##body
-news.com.au##section
 9news.com.au##.content
-9now.com.au##div[class*="layout__container"]
+!9now.com.au##div[class*="layout__container"]
 nine.com.au###app
 #@#.sharethis
 #@#.scl-icons
@@ -601,4 +596,6 @@ nine.com.au###app
 ##.container-live
 ##.happystream
 ##.uc-stream
-##div[class*="live-stream-player"]
+!##div[class*="live-stream-player"] aj
+##.aj-video-player
+##.youtube-live-stream-player
