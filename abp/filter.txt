@@ -589,7 +589,7 @@ nine.com.au###app
 #@#.scl-icons
 #@##socialicons
 ###basePopping
-##div[id|="custom_html"]
+!##div[id|="custom_html"]
 !##.kurir-tv
 ##.live-stream-video
 ##.live-widget
