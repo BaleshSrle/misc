@@ -577,10 +577,10 @@ kodbakeff.com##body
 pink.rs,~redportal.pink.rs##body
 vodovodaddoboj.info##.site-content
 policijabdbih.gov.ba,sipa.gov.ba,mod.gov.ba,mvp.gov.ba,mkt.gov.ba,face.ba##body
-ohr.int###content
-euronews.ba,9now.com.au##main
+ohr.int,voanwes.com,glasamerike.net###content
+euronews.ba,9now.com.au,bbc.co.uk,bbc.com,theguardian.com,nbc.com,cbs.com##main
 federalna.ba##.main
-euforbih.org,news.com.au##section
+euforbih.org,news.com.au,cnn.com##section
 jw.org##body
 9news.com.au##.content
 !9now.com.au##div[class*="layout__container"]
