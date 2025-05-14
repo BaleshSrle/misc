@@ -576,7 +576,7 @@
 kodbakeff.com##body
 pink.rs,~redportal.pink.rs##body
 vodovodaddoboj.info##.site-content
-policijabdbih.gov.ba,sipa.gov.ba,mod.gov.ba,mvp.gov.ba,mkt.gov.ba,face.ba##body
+policijabdbih.gov.ba,sipa.gov.ba,mod.gov.ba,mvp.gov.ba,mkt.gov.ba,face.ba,msnbc.com,nbcnews.com##body
 ohr.int,voanwes.com,glasamerike.net###content
 euronews.ba,9now.com.au,bbc.co.uk,bbc.com,theguardian.com,nbc.com,cbs.com,nytimes.com##main
 federalna.ba##.main
