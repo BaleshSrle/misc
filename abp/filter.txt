@@ -578,13 +578,14 @@ pink.rs,~redportal.pink.rs##body
 vodovodaddoboj.info##.site-content
 policijabdbih.gov.ba,sipa.gov.ba,mod.gov.ba,mvp.gov.ba,mkt.gov.ba,face.ba##body
 ohr.int,voanwes.com,glasamerike.net###content
-euronews.ba,9now.com.au,bbc.co.uk,bbc.com,theguardian.com,nbc.com,cbs.com##main
+euronews.ba,9now.com.au,bbc.co.uk,bbc.com,theguardian.com,nbc.com,cbs.com,nytimes.com##main
 federalna.ba##.main
 euforbih.org,news.com.au,cnn.com##section
 jw.org##body
-9news.com.au##.content
+9news.com.au,abc.com##.content
 !9now.com.au##div[class*="layout__container"]
 nine.com.au###app
+abcnews.go.com##.section-container
 #@#.sharethis
 #@#.scl-icons
 #@##socialicons
