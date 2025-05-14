@@ -212,7 +212,7 @@ $(document).ready(function () {
     }).addClass("py-0");
     $("div.toast-body").each(function () {
         $("div.toast-body").filter(":eq(0), :eq(3)").addClass("p-2");
-        $("div.toast-body").find("li.list-group-item").addClass("px-2 py-1");
+        $("div.toast-body").find("img").filter("[alt='Website'],[alt^='UptimeRobot']").wrap($("<li></li>").addClass("list-group-item px-2 py-1"));
         $("div.toast-body").eq(2).addClass("py-2 px-3").css("width", "345px");
         $("div.toast-body").eq(3).addClass("text-body");
     });
