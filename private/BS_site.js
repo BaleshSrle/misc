@@ -65,11 +65,11 @@ jQuery(function ($) {
     });
     $("img").filter("[src*='style=for-the-badge'],[alt$='Ubuntu'],[alt='IP2Location'],[alt^='Joomla']:gt(0)").addClass("rounded-lg");
     $("img[src*='style=for-the-badge']:gt(0)").attr("src", function (index, src) { return src + '&logoSize=auto' });
-    $("div.container-fluid").each(function () {
+    $("main").each(function () {
         $(this).find("img").addClass("border-0").css("margin", "3px 0px");
         $(this).find("img").parents("div.card-body").addClass("px-2");
         $(this).find("a").not(".btn").attr("target", "_blank");
-    }).addClass("overflow-hidden mx-auto");
+    }).addClass("container-fluid overflow-hidden mx-auto");
     $("div.col-sm-3.col-xl-2").each(function () {
         $(this).filter(":first").addClass("my-1 pr-md-2");
         $(this).filter(":last").addClass("my-1 pl-md-2");
@@ -86,7 +86,8 @@ jQuery(function ($) {
         $(this).filter("#MinOfInteriorSrpskaCyber").children("div.card-body").wrapInner($("<a></a>").attr({ "href": "https://mup.vladars.rs/lat/index.php?vijest=vtk", "hreflang": "sr-BA", "target": "_blank" }).append($("<img>").attr({ "src": "images/vtk.png", "alt": "MUP R. Srpske - Uprava krim. policije - Jedinica za opšti kriminalitet - Odjeljenje za visokotehnološki kriminalitet" }).addClass("d-block mx-auto img-fluid").css("width", "180")));
         $(this).filter("#speedtest_banner").children("div.card-body").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Speedtest%20by%20Ookla-141526?style=for-the-badge&logo=speedtest&logoSize=auto&link=https%3A%2F%2Fspeedtest.net", "name": "Provjerite brzinu svog Interneta" }).addClass("rounded-lg d-block mx-auto img-fluid"));
     });
-    $("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");
+    //$("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");
+    $("article").addClass("col-sm-6 col-xl-8 my-2 px-md-2");
     $("p.small").each(function () {
         $(this).find("img").filter("[alt='Visual Studio Code'],[alt='HTML5'],[alt='CSS']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
         $(this).find("object[name='Font Awesome']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
