@@ -32,7 +32,7 @@ jQuery(function ($) {
     switch (new Date().getMonth() + 1) {
         case 1:
         case 12:
-            $("div.card#hosting_banner > div.card-body").children("a").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/dobojcaffe.png", "alt": "Web hosting by DobojCaffe.com", "loading": "eager" }).on("error", function () { this.src = this.src; }));
+            $("div.card#hosting_banner > div.card-body").children("a").attr("target", "_blank").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/dobojcaffe.png", "alt": "Web hosting by DobojCaffe.com", "loading": "eager" }).on("error", function () { this.src = this.src; }));
             break;
         default:
             $("div.card#hosting_banner > div.card-body").children("a").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/docaffe.jpg", "alt": "Web hosting by DobojCaffe.com", "loading": "eager" }).on("error", function () { this.src = this.src; }));
@@ -68,7 +68,7 @@ jQuery(function ($) {
     $("main").each(function () {
         $(this).find("img").addClass("border-0").css("margin", "3px 0px");
         $(this).find("img").parents("div.card-body").addClass("px-2");
-        $(this).find("a").not(".btn").attr("target", "_blank");
+        //$(this).find("a").not(".btn").attr("target", "_blank");
     }).addClass("container-fluid overflow-hidden mx-auto");
     $("div.col-sm-3.col-xl-2").each(function () {
         $(this).filter(":first").addClass("my-1 pr-md-2");
@@ -87,11 +87,14 @@ jQuery(function ($) {
         $(this).filter("#speedtest_banner").children("div.card-body").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Speedtest%20by%20Ookla-141526?style=for-the-badge&logo=speedtest&logoSize=auto&link=https%3A%2F%2Fspeedtest.net", "name": "Provjerite brzinu svog Interneta" }).addClass("rounded-lg d-block mx-auto img-fluid"));
     });
     //$("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");
-    $("article").addClass("col-sm-6 col-xl-8 my-2 px-md-2");
+    $("article").each(function () {
+        $(this).find("a[href^='https']").attr("target", "_blank");
+    }).addClass("col-sm-6 col-xl-8 my-2 px-md-2");
     $("p.small").each(function () {
         $(this).find("img").filter("[alt='Visual Studio Code'],[alt='HTML5'],[alt='CSS']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
         $(this).find("object[name='Font Awesome']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
         $(this).find("object").filter("[name='Joomla'],[name='Bootstrap'],[name='WordPress'],[name='jQuery']").addClass("my-0 ml-1 mr-0 align-text-top").removeAttr("style");
+        $(this).children("i.bi-skype").addClass("text-muted");
     });
     $("object[name='CCleaner']").addClass("my-0 ml-1 mr-0 align-text-top").removeAttr("style");
     $("div#MediaPlayer.carousel").each(function () {
