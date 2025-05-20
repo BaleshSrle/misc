@@ -21,7 +21,7 @@ jQuery(function ($) {
     $("head").each(function () {
         $(this).prepend($("<base>").attr("href", location.origin));
         // $(this).prepend("<base href=file:///D:/company/>");
-        $(this).append($("<meta>").attr({ "name": "copyright", "content": "DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() }), $("<meta>").attr({ "name": "GENERATOR", "content": "Visual Studio Code 1.100.0" }));
+        $(this).append($("<meta>").attr({ "name": "copyright", "content": "DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() }), $("<meta>").attr({ "name": "GENERATOR", "content": "Visual Studio Code 1.100.2" }));
         $(this).append($.getScript('https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js'));
     });
     if ($("li.nav-item.dropdown.active")) {
