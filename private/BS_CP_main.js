@@ -233,6 +233,7 @@ $(document).ready(function () {
         $(this).filter("#calculator").find("div.modal-header").addClass("px-1 pb-0");
         $(this).find("div").filter(".modal-header,.modal-footer").addClass("border-secondary");
         $(this).find("hr").addClass("border-secondary");
+        $(this).filter("#loginModal").find("div.modal-header").addClass("py-1").append($("<h5></h5>").addClass("modal-title").text("Prijava na sistem"),$("<i></i>").addClass("bi bi-circle-fill text-danger ml-auto py-1"),$("<i></i>").addClass("bi bi-circle-fill text-primary py-1"),$("<i></i>").addClass("bi bi-circle-fill text-white py-1"));
         $(this).not("#loginModal").find("h5.modal-title").addClass("mt-1");
         $(this).filter("#tvguide,#programs").find("div.modal-body").addClass("p-0");
         $(this).filter("#TechNewsNasloviNET").find("div.modal-body").addClass("p-0").append($("<iframe></iframe>").attr({ "src": "https://naslovi.net/widget/?type=tehnologija&bgcolor=343A40&textcolor=FFFFFF&sourcecolor=FFFFFF80&separatorcolor=6C757D&count=10&", "height": "915", "loading": "lazy" }).addClass("d-block mx-auto border-0 w-100"));
