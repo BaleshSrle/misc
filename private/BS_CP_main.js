@@ -240,6 +240,7 @@ $(document).ready(function () {
         $(this).filter("#steam_games").find("iframe").attr({ "width": "646", "height": "190" }).addClass("my-1");
         $(this).filter("#loginModal,#imgRotate,#twitch,#calculator,#FujitsuLifeBookS751,#kick,#FamilyNotes").find("div.modal-body").addClass("p-2");
         $(this).filter("#time").find("div.modal-body").addClass("py-2");
+        $(this).filter("#imgRotate").find("div.col-md-7").wrapInner($("<img>").attr("id", "imgResult"));
         $(this).filter("#mailSettings").find("div.modal-body").addClass("px-2 py-1");
         $(this).find("div.modal-footer").addClass("py-1");
         $(this).find("div.modal-footer").find("a").addClass("text-light");
