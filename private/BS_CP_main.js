@@ -208,8 +208,7 @@ $(document).ready(function () {
     $("div.toast-header").each(function () {
         $("div.toast-header > img").not(":eq(2)").addClass("mr-1");
         $("div.toast-header > img:eq(2)").addClass("mr-auto");
-        $("div.toast-header > button.close").addClass("ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Zatvori" });
-    }).addClass("py-0");
+    }).addClass("py-0").append($("<button></button>").addClass("close ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Zatvori" }).html("<span aria-hidden='true'>&times;</span>"));
     $("div.toast-body").each(function () {
         $("div.toast-body").filter(":eq(0), :eq(3)").addClass("p-2");
         $("div.toast-body").find("li.list-group-item").addClass("px-2 py-1");
@@ -226,14 +225,14 @@ $(document).ready(function () {
         $(this).filter("#FIBAlivescore,#imgRotate,#twitch,#programs,#CarService").children("div").addClass("modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable");
         $(this).filter("#time").children("div").addClass("mx-auto");
         $(this).filter("#calculator").find("div.modal-content").addClass("bg-dark border-dark");
-        $(this).find("div.modal-header").children("button.close").addClass("btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" });
+        $(this).filter("#time,#mailSettings,#imgRotate,#tvguide,#TechNewsNasloviNET,#sluzbeni,#twitch,#programs").find("div.modal-header").append($("<button></button>").addClass("close btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" }).html("<span aria-hidden='true'>&times;</span>"));
         $(this).filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
         $(this).filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
         $(this).filter("#TechNewsNasloviNET,#twitch").find(".modal-header").addClass("p-0");
         $(this).filter("#calculator").find("div.modal-header").addClass("px-1 pb-0");
         $(this).find("div").filter(".modal-header,.modal-footer").addClass("border-secondary");
         $(this).find("hr").addClass("border-secondary");
-        $(this).filter("#loginModal").find("div.modal-header").addClass("py-1").append($("<h5></h5>").addClass("modal-title").text("Prijava na sistem"),$("<i></i>").addClass("bi bi-circle-fill text-danger ml-auto py-1"),$("<i></i>").addClass("bi bi-circle-fill text-primary py-1"),$("<i></i>").addClass("bi bi-circle-fill text-white py-1"));
+        $(this).filter("#loginModal").find("div.modal-header").addClass("py-1").append($("<h5></h5>").addClass("modal-title").text("Prijava na sistem"), $("<i></i>").addClass("bi bi-circle-fill text-danger ml-auto py-1"), $("<i></i>").addClass("bi bi-circle-fill text-primary py-1"), $("<i></i>").addClass("bi bi-circle-fill text-white py-1"));
         $(this).not("#loginModal").find("h5.modal-title").addClass("mt-1");
         $(this).filter("#tvguide,#programs").find("div.modal-body").addClass("p-0");
         $(this).filter("#TechNewsNasloviNET").find("div.modal-body").addClass("p-0").append($("<iframe></iframe>").attr({ "src": "https://naslovi.net/widget/?type=tehnologija&bgcolor=343A40&textcolor=FFFFFF&sourcecolor=FFFFFF80&separatorcolor=6C757D&count=10&", "height": "915", "loading": "lazy" }).addClass("d-block mx-auto border-0 w-100"));
