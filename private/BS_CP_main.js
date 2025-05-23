@@ -248,6 +248,7 @@ $(document).ready(function () {
         $(this).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
         $(this).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
         $(this).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
+        $(this).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
     }).attr({ "tabindex": "-1", "role": "dialog" });
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
