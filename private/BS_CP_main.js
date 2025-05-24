@@ -70,6 +70,7 @@ $(document).ready(function () {
     var day = (new Date().getDate()).toString().padStart(2, "0");
     var month = (new Date().getMonth() + 1).toString().padStart(2, "0");
     var year = new Date().getFullYear();
+    const localeOptions = { locale: "sr-Latn-BA", options: { dateStyle: "full", timeStyle: "short" } };
 
     /* function onSubmit(token) {
         document.querySelector("form#loginForm").submit();
@@ -245,10 +246,12 @@ $(document).ready(function () {
         $(this).find("div.modal-footer").addClass("py-1");
         $(this).find("div.modal-footer").find("a").addClass("text-light");
         $(this).filter("#CarService").find("th:eq(2)").addClass("w-50");
-        $(this).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
-        $(this).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
-        $(this).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
-        $(this).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString("sr-Latn-BA", { dateStyle: "full", timeStyle: "short" }));
+        $(this).filter("#CarService").find("td").filter(":lt(2),:lt(8):gt(5),:lt(14):gt(11)").addClass("align-middle");
+        $(this).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString(localeOptions.locale, localeOptions.options));
+        $(this).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString(localeOptions.locale, localeOptions.options));
+        $(this).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString(localeOptions.locale, localeOptions.options));
+        $(this).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString(localeOptions.locale, localeOptions.options));
+        $(this).filter("#CarService").find("time:eq(4)").text(new Date(2025, 4, 24, 14, 0).toLocaleString(localeOptions.locale, localeOptions.options));
     }).attr({ "tabindex": "-1", "role": "dialog" });
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
