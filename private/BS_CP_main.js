@@ -155,8 +155,8 @@ $(document).ready(function () {
     }).addClass("btn btn-info").attr("type", "button").append("<i></i>").addClass("bi bi-tv");
     $("select#TwitchUsername").on("click", function () {
         const TwitchUsername = $("select#TwitchUsername").val();
-        $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + TwitchUsername + '&parent=' + location.host + '&muted=true' }, "allowfullscreen": "false" }).addClass("border-0 overflow-hidden rounded-lg");
-        $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + TwitchUsername + '/chat?parent=' + location.host }, "height": "463.5", "allowfullscreen": "false" }).addClass("w-100 border-0 overflow-hidden rounded-lg");
+        $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + TwitchUsername + '&parent=' + location.host + '&muted=true' }, "allowfullscreen": false }).addClass("border-0 overflow-hidden rounded-lg");
+        $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + TwitchUsername + '/chat?parent=' + location.host }, "height": "463.5", "allowfullscreen": false }).addClass("w-100 border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark");
     $("select#KickUsername").on("click", function () {
         $("iframe#KickPlayer").attr("src", function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() + '?muted=true&allowfullscreen=false' }).addClass("border-0 overflow-hidden rounded-lg");
