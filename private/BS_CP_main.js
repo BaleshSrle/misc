@@ -217,6 +217,7 @@ $(document).ready(function () {
         $("div.toast-body").eq(3).addClass("text-body");
     });
     $("div.modal").each(function () {
+        $(this).attr("aria-labelledby", $(this).attr("id")+"Label");
         $(this).children("div").attr("role", "document");
         $(this).filter("#mailSettings,#sluzbeni").children("div").addClass("modal-dialog modal-sm modal-dialog-centered");
         $(this).filter("#calculator").children("div").addClass("modal-dialog modal-dialog-centered");
@@ -252,7 +253,7 @@ $(document).ready(function () {
         $(this).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString(localeOptions.locale, localeOptions.options));
         $(this).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString(localeOptions.locale, localeOptions.options));
         $(this).filter("#CarService").find("time:eq(4)").text(new Date(2025, 4, 24, 14, 0).toLocaleString(localeOptions.locale, localeOptions.options));
-    }).attr({ "tabindex": "-1", "role": "dialog", "aria-labelledby": $("div.modal").attr("id")+"Label" });
+    }).attr({ "tabindex": "-1", "role": "dialog"});
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
     $("div").filter(".row:eq(1),.btn-group-vertical,.toast-body:eq(2),[name^='airvisual']").addClass("mx-auto");
@@ -390,6 +391,9 @@ $(document).ready(function () {
         $("li.navbar-item").not(":eq(1)").children("a").slice(0, -1).addClass("nav-link").attr({ "href": "#", "role": "button", "data-toggle": "modal", "aria-pressed": "true" });
         $("li.navbar-item i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
         $("li.navbar-item span").addClass("pl-1 d-md-none");
+    });
+    $("li.nav-item").each(function(){
+        $(this).children("a.nav-link").attr("aria-controls", $(this).children("a.nav-link").attr("href").substring(1));
     });
     $("div.dropdown-menu:gt(0) > a").not("[data-toggle='collapse']").addClass("dropdown-item").attr("role", "button");
     //$("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
