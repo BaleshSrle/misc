@@ -145,7 +145,7 @@ $(document).ready(function () {
         toggle: false
     });*/
     $("button#imgRotateApply").on("click", function () {
-        $("img#imgResult").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg");
+        $("div.col-md-7").wrapInner($("<img>").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg"));
     }).addClass("btn btn-primary mb-2 mr-sm-2").attr("type", "button").text("Primjeni");
     $("button#loadRadioStation").on("click", function () {
         return window.open($("#RadioStation").val());
@@ -202,10 +202,7 @@ $(document).ready(function () {
         //$(this).parents("div.card-header").addClass("py-2 border-bottom border-secondary");
     });
     $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
-    $("div.toast").each(function () {
-        $(this).parent("div").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px", "width": "350px" });
-
-    }).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
+    $("div.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2").wrapAll($("<div></div>").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px", "width": "350px" }));
     $("div.toast-header").each(function () {
         $("div.toast-header > img").not(":eq(2)").addClass("mr-1");
         $("div.toast-header > img:eq(2)").addClass("mr-auto");
@@ -217,7 +214,7 @@ $(document).ready(function () {
         $("div.toast-body").eq(3).addClass("text-body");
     });
     $("div.modal").each(function () {
-        $(this).attr("aria-labelledby", $(this).attr("id")+"Label");
+        $(this).attr("aria-labelledby", $(this).attr("id") + "Label");
         $(this).children("div").attr("role", "document");
         $(this).filter("#mailSettings,#sluzbeni").children("div").addClass("modal-dialog modal-sm modal-dialog-centered");
         $(this).filter("#calculator").children("div").addClass("modal-dialog modal-dialog-centered");
@@ -242,7 +239,7 @@ $(document).ready(function () {
         $(this).filter("#steam_games").find("iframe").attr({ "width": "646", "height": "190" }).addClass("my-1");
         $(this).filter("#loginModal,#imgRotate,#twitch,#calculator,#FujitsuLifeBookS751,#kick,#FamilyNotes").find("div.modal-body").addClass("p-2");
         $(this).filter("#time").find("div.modal-body").addClass("py-2");
-        $(this).filter("#imgRotate").find("div.col-md-7").wrapInner($("<img>").attr("id", "imgResult"));
+        // $(this).filter("#imgRotate").find("div.col-md-7").wrapInner($("<img>").attr("id", "imgResult"));
         $(this).filter("#mailSettings").find("div.modal-body").addClass("px-2 py-1");
         $(this).find("div.modal-footer").addClass("py-1");
         $(this).find("div.modal-footer").find("a").addClass("text-light");
@@ -253,7 +250,7 @@ $(document).ready(function () {
         $(this).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString(localeOptions.locale, localeOptions.options));
         $(this).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString(localeOptions.locale, localeOptions.options));
         $(this).filter("#CarService").find("time:eq(4)").text(new Date(2025, 4, 24, 14, 0).toLocaleString(localeOptions.locale, localeOptions.options));
-    }).attr({ "tabindex": "-1", "role": "dialog"});
+    }).attr({ "tabindex": "-1", "role": "dialog" });
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
     $("div").filter(".row:eq(1),.btn-group-vertical,.toast-body:eq(2),[name^='airvisual']").addClass("mx-auto");
@@ -338,7 +335,9 @@ $(document).ready(function () {
         $(this).parent().removeClass("py-2").addClass("pt-1");
         $(this).children().removeClass("px-2 py-1");
     }).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-y": "hidden", "overflow-x": "auto" }).attr("role", "tablist");
-    $("ul[id$='List'] a").on("click", function (e) {
+    $("ul[id$='List'] a").each(function () {
+        $(this).attr("aria-controls", $(this).attr("href").substring(1));
+    }).on("click", function (e) {
         e.preventDefault()
         $(this).tab("show");
     }).addClass("py-1").attr({ "data-toggle": "tab", "role": "tab" });
@@ -392,9 +391,6 @@ $(document).ready(function () {
         $("li.navbar-item i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
         $("li.navbar-item span").addClass("pl-1 d-md-none");
     });
-    $("li.nav-item").each(function(){
-        $(this).children("a.nav-link").attr("aria-controls", $(this).children("a.nav-link").attr("href").substring(1));
-    });
     $("div.dropdown-menu:gt(0) > a").not("[data-toggle='collapse']").addClass("dropdown-item").attr("role", "button");
     //$("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
     $("a[href^='https']").each(function () {
@@ -424,6 +420,7 @@ $(document).ready(function () {
     $("input[type='url']").attr("inputmode", "url");
     $("table.table").each(function () {
         $(this).addClass("table-sm table-hover table-dark text-center mb-1");
+        $(this).wrap($("<div></div>").addClass("table-responsive"));
         //$(this).find("td").has("br:eq(12)").addClass("align-middle");
         //$(this).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
         $(this).find("th").has("br").siblings("th").addClass("align-middle");
