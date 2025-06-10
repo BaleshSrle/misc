@@ -390,7 +390,7 @@ $(document).ready(function () {
         $("div.list-group:eq(6) a.list-group-item").filter(":first,:last").addClass("rounded-0");
     });
     $("li.navbar-item").each(function () {
-        $("li.navbar-item").not(":eq(1)").children("a").slice(0, -1).addClass("nav-link").attr({ "href": "#", "role": "button", "data-toggle": "modal", "aria-pressed": "true" });
+        $("li.navbar-item").not(":eq(1)").children("a").slice(0, -1).addClass("nav-link").attr({ "href": "#", "role": "button", "data-toggle": "modal", "aria-pressed": true });
         $("li.navbar-item i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
         $("li.navbar-item span").addClass("pl-1 d-md-none");
     });
