@@ -202,6 +202,9 @@ $(document).ready(function () {
         //$(this).parents("div.card-header").addClass("py-2 border-bottom border-secondary");
     });
     $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
+    $("button[data-toggle='collapse']").each(function () {
+        $(this).attr("data-controls", $(this).attr("data-target").replace("#", ""));
+    });
     $("div.toast").attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2").wrapAll($("<div></div>").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px", "width": "350px" }));
     $("div.toast-header").each(function () {
         $("div.toast-header > img").not(":eq(2)").addClass("mr-1");
@@ -336,7 +339,7 @@ $(document).ready(function () {
         $(this).children().removeClass("px-2 py-1");
     }).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-y": "hidden", "overflow-x": "auto" }).attr("role", "tablist");
     $("ul[id$='List'] a").each(function () {
-        $(this).attr("aria-controls", $(this).attr("href").substring(1));
+        $(this).attr("aria-controls", $(this).attr("href").replace("#", ""));
     }).on("click", function (e) {
         e.preventDefault()
         $(this).tab("show");
@@ -409,6 +412,9 @@ $(document).ready(function () {
     $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
     $("a[href*='sr']").not(":lt(15):gt(8), :eq(30), :eq(33)").attr("hreflang", "sr");
     $("a[href*='hr']").not(".btn,.list-group-item").attr("hreflang", "hr");
+    $("a[data-toggle='collapse']").each(function () {
+        $(this).attr({ "aria-controls": $(this).attr("href").replace("#",""), "aria-expanded": false });
+    });
     $("form#oldform").attr({ "action": $("select#dictionary-selector").val(), "method": "get", "name": "oldform", "target": "_blank" }).addClass("d-inline-block").css("margin", "46px 0 0 10px");
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
     $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
