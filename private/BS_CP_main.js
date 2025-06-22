@@ -205,7 +205,6 @@ $(document).ready(function () {
     });
     $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     $("div.toast").each(function (i) {
-    $("div.toast").each(function (i) {
         $("div.toast").eq(i).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
     }).wrapAll($("<div></div>").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px" }).width(350));
     $("div.toast-header").each(function (i) {
@@ -451,5 +450,4 @@ $(document).ready(function () {
         $(this).find("img[src*='logo']").attr("src", function (index, src) { return src + '&logoColor=white' });
         $(this).find("img[src*='logo']").not("[src*='logo=nodedotjs'],[src*='logo=vlcmediaplayer'],[src*='logo=epicgames'],[src*='logo=ubisoft'],[src*='logo=bitdefender']").attr("src", function (index, src) { return src + '&logoSize=auto' });
     });
-
 }); 
