@@ -205,6 +205,7 @@ $(document).ready(function () {
     });
     $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
     $("div.toast").each(function (i) {
+    $("div.toast").each(function (i) {
         $("div.toast").eq(i).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
     }).wrapAll($("<div></div>").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px" }).width(350));
     $("div.toast-header").each(function (i) {
@@ -314,7 +315,7 @@ $(document).ready(function () {
         $(this).find("ul.list-group").filter("[title='Games'],[title='USA'],[title='Canada'],[title='UK'],[title='EU']").height(300).addClass("overflow-auto");
         //$(this).find("li.list-group-item").addClass("justify-content-between");
         $(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff&cacheSeconds=300' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
-        $(this).find("img").filter("[src*='develique'],[src*='maryycherryy'],[src*='2bratty'],[src*='littlebunny_x'],[src*='bunnymontv'],[src*='chess'],[src*='dinabelenkaya'],[src*='pubg_battlegrounds'],[src*='worldoftanks'],[src*='xboxon'],[src*='qospades'],[src*='ferrariesports'],[src*='janifest'],[src*='aurorastarr'],[src*='xodee'],[src*='peyzki'],[src*='luvstruck'],[src*='pinkwasabitv'],[src*='kaliroses'],[src*='allieraa'],[src*='emmalayne']:eq(0),[src*='emjayplayss'],[src*='buccatax'],[src*='lauralux'],[src*='ohKayBunny'],[src*='xoAeriel'],[src*='Hannesschan'],[src*='TrishaHershberger'],[src*='juliaburch'],[src*='thewildlatina'],[src*='xtasiaego'],[src*='XTASIATV'],[src*='elina'],[src*='xcandylashes'],[src*='kristinemaia'],[src*='kristinemaia'],[src*='mellooow_'],[src*='gemmastw'],[src*='linny'],[src*='nicolepeachy'],[src*='lucyya'],[src*='xxlauoanxx']").after($("<span></span>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
+        $(this).find("img").filter("[src*='develique'],[src*='maryycherryy'],[src*='2bratty'],[src*='littlebunny_x'],[src*='bunnymontv'],[src*='chess'],[src*='dinabelenkaya'],[src*='pubg_battlegrounds'],[src*='worldoftanks'],[src*='xboxon'],[src*='qospades'],[src*='ferrariesports'],[src*='janifest'],[src*='aurorastarr'],[src*='xodee'],[src*='peyzki'],[src*='luvstruck'],[src*='pinkwasabitv'],[src*='kaliroses'],[src*='allieraa'],[src*='emmalayne']:eq(0),[src*='emjayplayss'],[src*='buccatax'],[src*='lauralux'],[src*='ohKayBunny'],[src*='xoAeriel'],[src*='Hannesschan'],[src*='TrishaHershberger'],[src*='juliaburch'],[src*='thewildlatina'],[src*='xtasiaego'],[src*='XTASIATV'],[src*='elina'],[src*='xcandylashes'],[src*='kristinemaia'],[src*='kristinemaia'],[src*='mellooow_'],[src*='gemmastw'],[src*='linny'],[src*='nicolepeachy'],[src*='lucyya'],[src*='xxlauoanxx'],[src*='mistiesage']").after($("<span></span>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
     });
     //$("div[id^='Twitch']").addClass("collapse width");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
