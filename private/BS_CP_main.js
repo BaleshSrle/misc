@@ -166,7 +166,7 @@ $(document).ready(function () {
     $("select#url").on("click", function () {
         $("iframe#urlOutput").attr("src", $("#url").val());
     }).addClass("form-control bg-dark text-white");
-    $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[src*='wpscdn'],[alt='BaleshSrle Logo'],[alt='SPC_logo'],[alt='iqAir_logo']").height(32);
+    $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[src*='wpscdn'],[alt='SPC_logo'],[alt='iqAir_logo']").height(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img").each(function () {
         $(this).filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
@@ -175,6 +175,7 @@ $(document).ready(function () {
         $(this).filter("[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
         $(this).filter("[src*='shields']").on("error", function () { this.src = this.src; });
     });
+    $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo" }).height(32));
     $("div#churchCalendarToast > div.toast-body").addClass("p-0").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height(346)/*.height(360)*/);
     //$("div#churchCalendarToast > div.toast-body").addClass("p-2").append($("<iframe></iframe").attr("src", "https://pravoslavnikalendar.rs/kal/pra220.php").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" }));
     $("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
