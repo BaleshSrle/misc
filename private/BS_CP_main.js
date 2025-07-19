@@ -176,7 +176,7 @@ $(document).ready(function () {
         $(this).filter("[src*='shields']").on("error", function () { this.src = this.src; });
     });
     $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo" }).height(32));
-    $("div#churchCalendarToast > div.toast-body").addClass("p-0").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height(346)/*.height(360)*/);
+    $("div#churchCalendarToast > div.toast-body").addClass("p-0").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height(360));
     //$("div#churchCalendarToast > div.toast-body").addClass("p-2").append($("<iframe></iframe").attr("src", "https://pravoslavnikalendar.rs/kal/pra220.php").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" }));
     $("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
     $("iframe").not("[src*='naslovi']").addClass("d-block mx-auto border-0").attr("loading", "lazy");
