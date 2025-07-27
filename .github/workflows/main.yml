@@ -10,7 +10,7 @@ jobs:
       - uses: gacts/purge-jsdelivr-cache@v1.1.2
         with:
           # URLs for the cache purging (string|list)
-          url: 
+          url: |
             https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_main.min.js
             https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_site.min.js
             https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_CP_main.min.js
