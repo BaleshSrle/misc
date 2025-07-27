@@ -23,11 +23,14 @@ jQuery(function ($) {
         // $(this).prepend("<base href=file:///D:/company/>");
         $(this).append($("<meta>").attr({ "name": "copyright", "content": "DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() }), $("<meta>").attr({ "name": "GENERATOR", "content": "Visual Studio Code 1.100.2" }));
         $(this).append($.getScript('https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js'));
+
     });
-    if ($("li.nav-item.dropdown.active")) {
-        $("head").prepend($("<title></title>").text(".::Servis računara B@LESHEVICH:: - ::" + $("li.breadcrumb-item:eq(1)").text() + ":: - ::" + $("li.breadcrumb-item:last").text() + "::."));
+    if ($("li.nav-item.dropdown").hasClass("active")) {
+        //$("head").prepend($("<title></title>").text(".::Servis računara B@LESHEVICH:: - ::" + $("li.breadcrumb-item:eq(1)").text() + ":: - ::" + $("li.breadcrumb-item:last").text() + "::."));
+        document.title = ".::Servis računara B@LESHEVICH:: - ::" + $("li.breadcrumb-item:eq(1)").text() + ":: - ::" + $("li.breadcrumb-item:last").text() + "::.";
     } else {
-        $("head").prepend($("<title></title>").text(".::Servis računara B@LESHEVICH:: - ::" + $("li.breadcrumb-item:last").text() + "::."));
+        //$("head").prepend($("<title></title>").text(".::Servis računara B@LESHEVICH:: - ::" + $("li.breadcrumb-item:last").text() + "::."));
+        document.title = ".::Servis računara B@LESHEVICH:: - ::" + $("li.breadcrumb-item:last").text() + "::.";
     }
     switch (new Date().getMonth() + 1) {
         case 1:
@@ -138,10 +141,11 @@ jQuery(function ($) {
             keyboard: false,
             ride: "carousel",
             touch: false
-        }).addClass("slide carousel-fade").wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
+        }).addClass("slide carousel-fade").wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
         $(this).find("div.carousel-item:eq(0)").wrapInner($("<a></a>").attr({ "href": "http://ubunt.eu/zesty", "hreflang": "en", "target": "_blank" }).wrapInner($("<img>").attr({ "src": "https://assets.ubuntu.com/v1/61f4fb91-release-widgetv5.jpg", "alt": "Download latest version of Ubuntu" }).addClass("rounded-lg border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
-        $(this).find("div.carousel-item:eq(1)").wrapInner($("<a></a>").attr({ "href": "https://lxle.net/", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "images/smalllxledark.png", "alt": "Revive that old PC!&lt;The LXLE Desktop" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
-        $(this).find("div.carousel-item:eq(2)").wrapInner($("<a></a>").attr({ "href": "https://www.debian-srbija.iz.rs/", "hreflang": "sr-RS", "target": "_blank" }).append($("<img>").attr({ "src": "images/serbian_debian.png", "alt": "Debian Srbija" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
+        $(this).find("div.carousel-item:eq(1)").wrapInner($("<a></a>").attr({ "href": "https://www.linuxliteos.com/download.php", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "https://www.linuxliteos.com/assets/img/logos/linux_lite_dark_logo_sample_sample.png", "alt": "Download Linux Lite Free Linux Operating System" }).addClass("rounded-lg border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
+        $(this).find("div.carousel-item:eq(2)").wrapInner($("<a></a>").attr({ "href": "https://lxle.net/", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "images/smalllxledark.png", "alt": "Revive that old PC!&lt;The LXLE Desktop" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
+        $(this).find("div.carousel-item:eq(3)").wrapInner($("<a></a>").attr({ "href": "https://www.debian-srbija.iz.rs/", "hreflang": "sr-RS", "target": "_blank" }).append($("<img>").attr({ "src": "images/serbian_debian.png", "alt": "Debian Srbija" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
     });
     $("div#internet.carousel").each(function () {
         $(this).carousel({
@@ -167,7 +171,7 @@ jQuery(function ($) {
         $(this).hover(function () { $(this).css({ "background-color": "#d87600", "color": "white" }); }, function () { $(this).css({ "background-color": "darkorange", "color": "white" }); });
     }).attr({ "href": "radio.pls", "download": "BS_RadioPlaylist" }).css({ "background-color": "darkorange", "color": "white" });
     $("footer").each(function () {
-        $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-auto").css("max-width", "292px").append($("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3", "alt": "Bootstrap" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad", "alt": "jQuery" })), $("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fbaleshevich.dobojcaffe.com%2F&label=W3C%20Validation", "alt": "W3C Validation - HTML" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", "alt": "jsDelivr CDN" })));
+        $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-auto").css("max-width", "292px").append($("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3", "alt": "Bootstrap" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad", "alt": "jQuery" })), $("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2F" + location.host + "%2F&label=W3C%20Validation", "alt": "W3C Validation - HTML" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", "alt": "jsDelivr CDN" })));
         //$("footer > div:eq(0)").addClass("d-flex flex-wrap flex-sm-column mx-md-2").html("<div class='mx-auto'><img src='https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3' alt='Bootstrap'></div><div class='mx-auto'><img src='https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad' alt='jQuery'></div><div class='mx-auto'><img src='https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600' alt='jsDelivr CDN'></div>");
         $("footer > div:eq(1)").addClass("flex-grow-1 small h6 my-sm-1 my-md-0");
         $("footer p").not(":last").addClass("mb-1");
@@ -178,6 +182,6 @@ jQuery(function ($) {
         //$("footer img").filter("[alt='Bootstrap'],[alt='jsDelivr'],[alt='HTML5'],img[alt='CSS']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
         //$("footer img").css("margin-left", "1px");
         //$("footer img").addClass("ml-1");
-        $("footer > div.wot").addClass("mx-md-2").wrapInner($("<a></a>").attr({ "id": "wot-badge0", "href": "https://www.mywot.com/scorecard/baleshevich.dobojcaffe.com?wot_badge=0_white", "hreflang": "en", "target": "_blank" }).addClass("wot-badge mx-auto").append($("<div></div>").addClass("wot-logo"), $("<div></div>").addClass("wot-shield"), $("<p></p>").addClass("wot-secured").text("Verified Website"), $("<div></div>").addClass("wot-vertical"), $("<p></p>").addClass("wot-report").text("See Report")));
+        $("footer > div.wot").addClass("mx-md-2").wrapInner($("<a></a>").attr({ "id": "wot-badge0", "href": "https://www.mywot.com/scorecard/" + location.host + "?wot_badge=0_white", "hreflang": "en", "target": "_blank" }).addClass("wot-badge mx-auto").append($("<div></div>").addClass("wot-logo"), $("<div></div>").addClass("wot-shield"), $("<p></p>").addClass("wot-secured").text("Verified Website"), $("<div></div>").addClass("wot-vertical"), $("<p></p>").addClass("wot-report").text("See Report")));
     }).addClass("d-sm-flex flex-sm-row align-items-center mb-0 py-1 text-center");
 });
