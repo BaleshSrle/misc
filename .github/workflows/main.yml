@@ -1,0 +1,10 @@
+jobs:
+  purge-jsdelivr-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: gacts/purge-jsdelivr-cache@v1
+        with:
+          url: |
+           https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_main.min.js
+           https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_site.min.js
+           https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_CP_main.min.js
