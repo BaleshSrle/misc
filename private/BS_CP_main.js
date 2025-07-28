@@ -166,7 +166,7 @@ $(document).ready(function () {
     $("select#url").on("click", function () {
         $("iframe#urlOutput").attr("src", $("#url").val());
     }).addClass("form-control bg-dark text-white");
-    $("[src*='simpleicons'],[src*='wikimedia']:gt(2),[src*='wpscdn'],[alt='SPC_logo'],[alt='iqAir_logo']").height(32);
+    $("[src*='simpleicons'],[src*='wikimedia'],[src*='wpscdn'],[alt='SPC_logo'],[alt='iqAir_logo']").height(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img").each(function () {
         $(this).filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
@@ -191,6 +191,17 @@ $(document).ready(function () {
         ride: 'carousel',
         touch: false
     });
+    $("div.carousel:eq(0) img").each(function(){
+        $(this).filter("[alt^='IP2Location'], [alt*='Vivaldi'], [alt$='Kit'], [alt*='W3Schools'], [alt^='AIMP'], [alt^='Boobpedia']").addClass("img-fluid my-4 my-md-3 rounded-lg");
+        $(this).filter("[alt^='Simple'], [alt^='Simple']").addClass("img-fluid my-4 my-md-3");
+        $(this).filter("[alt^='Joomla']").addClass("img-fluid my-4 my-md-2 rounded-lg");
+        $(this).filter("[alt^='Discord']").addClass("img-fluid my-3 my-md-0");
+        $(this).filter("[alt*='TeamViewer']").addClass("img-fluid my-3");
+        $(this).filter("[alt*='Community']").addClass("img-fluid my-1 my-md-0");
+        $(this).filter("[alt='LibreOffice']").addClass("img-fluid");
+        $(this).filter("[alt*='VLC'], [alt='Postman'], [alt$='OpenOffice'], [alt='Xubuntu'], [alt^='Poslovi']").css("max-height", "90px");
+        $(this).filter("[alt^='NetLingo']").addClass("rounded-lg").css("max-height", "90px");
+    }).addClass("border-0 d-block mx-auto").attr("loading", "lazy");
     $("div#IQAirCarousel").css({ "width": "313px", "height": "100px" });
     $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
     $("mark.bg-secondary,a#time_is_link,label:gt(2)").addClass("text-white");
