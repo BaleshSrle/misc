@@ -80,6 +80,7 @@ $(document).ready(function () {
         $(this).prepend($("<meta>").attr({ "http-equiv": "refresh", "content": "1800" }));
         $(this).append($("<link>").attr({ "rel": "dns-prefetch", "href": "https://api.twitch.tv/" }), $("<link>").attr({ "rel": "dns-prefetch", "href": "https://passport.twitch.tv/" }), $("<link>").attr({ "rel": "dns-prefetch", "href": "https://meta.wikimedia.org/" }), $("<link>").attr({ "rel": "preconnect", "href": "https://www.auti.hr/djevojkadana/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": "https://mojtv.hr/tv-navigator/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": "https://api.twitch.tv/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": "https://upload.wikimedia.org/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "canonical", "href": "https://simpleicons.org/" }), $("<link>").attr({ "rel": "canonical", "href": "https://cybermap.kaspersky.com/en/widget" }), $("<link>").attr({ "rel": "canonical", "href": "https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305" }), $("<link>").attr({ "rel": "canonical", "href": "https://www.livescore.bz/sr-rs/" }), $("<link>").attr({ "rel": "canonical", "href": "https://naslovi.net/tehnologija/" }), $("<link>").attr({ "rel": "canonical", "href": "https://store.steampowered.com/" }), $("<link>").attr({ "rel": "canonical", "href": "https://www.twitch.tv/" }));
         $(this).append($("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css", "crossorigin": "anonymous" }), /*$.getScript("https://oap.accuweather.com/launch.js"), */$.getScript("https://widget.iqair.com/script/widget_v3.0.js")/*, $.getScript("https://www.google.com/recaptcha/api.js")*/);
+        $(this).append($("<style></style>").text("#dictionarySelector160:hover {  background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/lang-hover.png?version=2.3.71) !no-repeat; }\n#search-btn160:hover { background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/search-hover.png?version=2.3.71) !important; }\n#search-btn160:active { background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/search-active.png?version=2.3.71) !important;}"));
     });
     $("script#skin").text("var fm_inf_1 = 'Arial';");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
@@ -192,14 +193,14 @@ $(document).ready(function () {
         touch: false
     });
     $("div.carousel:eq(0) img").each(function(){
-        $(this).filter("[alt^='IP2Location'], [alt*='Vivaldi'], [alt$='Kit'], [alt*='W3Schools'], [alt^='AIMP'], [alt^='Boobpedia']").addClass("img-fluid my-4 my-md-3 rounded-lg");
-        $(this).filter("[alt^='Simple'], [alt^='Simple']").addClass("img-fluid my-4 my-md-3");
+        $(this).filter("[alt^='IP2Location'],[alt*='Vivaldi'],[alt$='Kit'],[alt*='W3Schools'],[alt^='AIMP'],[alt^='Boobpedia']").addClass("img-fluid my-4 my-md-3 rounded-lg");
+        $(this).filter("[alt^='Simple'],[alt^='Simple']").addClass("img-fluid my-4 my-md-3");
         $(this).filter("[alt^='Joomla']").addClass("img-fluid my-4 my-md-2 rounded-lg");
-        $(this).filter("[alt^='Discord']").addClass("img-fluid my-3 my-md-0");
+        $(this).filter("[alt='Discord'],[alt='Bitdefender']").addClass("img-fluid my-3 my-md-0");
         $(this).filter("[alt*='TeamViewer']").addClass("img-fluid my-3");
         $(this).filter("[alt*='Community']").addClass("img-fluid my-1 my-md-0");
         $(this).filter("[alt='LibreOffice']").addClass("img-fluid");
-        $(this).filter("[alt*='VLC'], [alt='Postman'], [alt$='OpenOffice'], [alt='Xubuntu'], [alt^='Poslovi']").css("max-height", "90px");
+        $(this).filter("[alt*='VLC'], [alt='Postman'],[alt$='OpenOffice'],[alt='Xubuntu'],[alt^='Poslovi']").css("max-height", "90px");
         $(this).filter("[alt^='NetLingo']").addClass("rounded-lg").css("max-height", "90px");
     }).addClass("border-0 d-block mx-auto").attr("loading", "lazy");
     $("div#IQAirCarousel").css({ "width": "313px", "height": "100px" });
