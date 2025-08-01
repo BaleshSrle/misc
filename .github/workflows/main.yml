@@ -1,6 +1,9 @@
 name: Purge jsDelivr cache
 
-on: push
+#on: push
+on:
+  schedule:
+    - cron: '0 23 * * *' # Every day at midnight UTC
 jobs:
   purge-jsdelivr-cache:
     runs-on: ubuntu-latest
