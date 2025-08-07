@@ -176,16 +176,55 @@ $(document).ready(function () {
         $(this).filter("[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
         $(this).filter("[src*='shields']").on("error", function () { this.src = this.src; });
     });
+    $("img.flatpakBadge").each(function () {
+        const flatpakPackage = $(this).data("flatpak-package");
+        const flatpakLabel = $(this).data("flatpak-label");
+        const flatpakLogo = $(this).data("flatpak-logo") || "flatpak";
+        const flatpakLogocolor = $(this).data("flatpak-logocolor") || null;
+        const flatpakLogosize = $(this).data("flatpak-logosize") || null;
+        const flatpakColor = $(this).data("flatpak-color") || "blue";
+        $(this).attr({
+            "src": "https://img.shields.io/flathub/v/" + flatpakPackage + "?logo=" + flatpakLogo + "&logoColor=" + flatpakLogocolor + "&logoSize=" + flatpakLogosize + "&label=" + flatpakLabel + "%20%40%20Flathub&labelColor=4a90d9&color=" + flatpakColor, "loading": "lazy"
+        }).addClass("img-fluid");
+    });
+    $("img.snapBadge").each(function () {
+        const snapPackage = $(this).data("snap-package");
+        const snapChannel = $(this).data("snap-channel");
+        const snapLabel = $(this).data("snap-label");
+        const snapLogo = $(this).data("snap-logo") || "snapcraft";
+        const snapLogoColor = $(this).data("snap-logocolor") || null;
+        const snapLogoSize = $(this).data("snap-logosize") || null;
+        const snapColor = $(this).data("snap-color") || "blue";
+        $(this).attr({
+            "src": "https://img.shields.io/snapcraft/v/" + snapPackage + "/" + snapChannel + "?logo=" + snapLogo + "&logoColor=" + snapLogoColor + "&logoSize=" + snapLogoSize + "&label=" + snapLabel + "%20%40%20Snapcraft&labelColor=e95420&color=" + snapColor, "loading": "lazy"
+        }).addClass("img-fluid");
+    });
+    $("img.wingetBadge").each(function () {
+        const wingetPackage = $(this).data("winget-package");
+        const wingetLabel = $(this).data("winget-label");
+        const wingetLogo = $(this).data("winget-logo") || null;
+        const wingetLogocolor = $(this).data("winget-logocolor") || null;
+        const wingetLogosize = $(this).data("winget-logosize") || null;
+        const wingetColor = $(this).data("winget-color") || "blue";
+        $(this).attr({
+            "src": "https://img.shields.io/winget/v/" + wingetPackage + "?logo=" + wingetLogo + "&logoColor=" + wingetLogocolor + "&logoSize=" + wingetLogosize + "&label=" + wingetLabel + "%20%40%20winget&color=" + wingetColor, "loading": "lazy"
+        }).addClass("img-fluid");
+    });
     $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo" }).height(32));
     $("div#churchCalendarToast > div.toast-body").addClass("p-0").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height(360));
     //$("div#churchCalendarToast > div.toast-body").addClass("p-2").append($("<iframe></iframe").attr("src", "https://pravoslavnikalendar.rs/kal/pra220.php").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" }));
     $("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
-    $("iframe").not("[src*='naslovi']").addClass("d-block mx-auto border-0").attr("loading", "lazy");
+    $("iframe").not("[src*='naslovi'],.steamWidget").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
     //$("iframe[src*='blberza']").slice(0, 2).addClass("rounded-bottom");
     $("iframe[src*='blberza']").parent("div.card-body").slice(0, 2).addClass("bg-white rounded-bottom");
     //$("iframe[src*='blberza']").slice(2).width(200).height(110).addClass("overflow-hidden rounded-lg");
+    $("iframe.steamWidget").each(function () {
+        const steamGameID = $(this).data("steam-gameid");
+        const steamTitle = $(this).data("steam-title") || null;
+        $(this).addClass("d-block mx-auto border-0 my-1").attr({ "src": "https://store.steampowered.com/widget/" + steamGameID + "/", "title": steamTitle, "loading": "lazy" }).width(646).height(190);
+    });
     $("div.carousel").addClass("carousel-fade").carousel({
         interval: 3000,
         keyboard: false,
@@ -258,7 +297,7 @@ $(document).ready(function () {
         $(this).filter("#tvguide,#programs").find("div.modal-body").addClass("p-0");
         $(this).filter("#TechNewsNasloviNET").find("div.modal-body").addClass("p-0").append($("<iframe></iframe>").attr({ "src": "https://naslovi.net/widget/?type=tehnologija&bgcolor=343A40&textcolor=FFFFFF&sourcecolor=FFFFFF80&separatorcolor=6C757D&count=10&", "height": "915", "loading": "lazy" }).addClass("d-block mx-auto border-0 w-100"));
         $(this).filter("#sluzbeni,#steam_games,#CarService").find("div.modal-body").addClass("p-1");
-        $(this).filter("#steam_games").find("iframe").attr({ "width": "646", "height": "190" }).addClass("my-1");
+        //$(this).filter("#steam_games").find("iframe").attr({ "width": "646", "height": "190" }).addClass("my-1");
         $(this).filter("#loginModal,#imgRotate,#twitch,#calculator,#FujitsuLifeBookS751,#kick,#FamilyNotes").find("div.modal-body").addClass("p-2");
         $(this).filter("#time").find("div.modal-body").addClass("py-2");
         // $(this).filter("#imgRotate").find("div.col-md-7").wrapInner($("<img>").attr("id", "imgResult"));
@@ -272,6 +311,7 @@ $(document).ready(function () {
         $(this).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString(localeOptions.locale, localeOptions.options));
         $(this).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString(localeOptions.locale, localeOptions.options));
         $(this).filter("#CarService").find("time:eq(4)").text(new Date(2025, 4, 24, 14, 0).toLocaleString(localeOptions.locale, localeOptions.options));
+        $(this).filter("#CarService").find("time:eq(5)").text(new Date(2025, 7, 6, 12, 4).toLocaleString(localeOptions.locale, localeOptions.options));
     }).attr({ "tabindex": "-1", "role": "dialog" });
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
@@ -327,8 +367,13 @@ $(document).ready(function () {
         $(this).find("ul.list-group").filter("[title='Sidemen']").siblings("ul:eq(1)").height(200).addClass("overflow-auto");
         $(this).find("ul.list-group").filter("[title^='Game'],[title='WWE'],[title='USA'],[title='Canada'],[title='UK'],[title='EU'],[title='Russia'],[title='Australia']").height(200).addClass("overflow-auto");
         //$(this).find("li.list-group-item").addClass("justify-content-between");
-        $(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&labelColor=9146ff' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
-        $(this).find("img").filter("[src*='develique'],[src*='maryycherryy'],[src*='2bratty'],[src*='littlebunny_x'],[src*='bunnymontv'],[src*='chess'],[src*='dinabelenkaya'],[src*='pubg_battlegrounds'],[src*='worldoftanks'],[src*='xboxon'],[src*='qospades'],[src*='ferrariesports'],[src*='janifest'],[src*='aurorastarr'],[src*='xodee'],[src*='morgpie'],[src*='peyzki'],[src*='luvstruck'],[src*='pinkwasabitv'],[src*='kaliroses'],[src*='allieraa'],[src*='emmalayne']:eq(0),[src*='emjayplayss'],[src*='buccatax'],[src*='lauralux'],[src*='ohKayBunny'],[src*='xoAeriel'],[src*='Hannesschan'],[src*='TrishaHershberger'],[src*='pulpfictionally'],[src*='taylor_jevaux'],[src*='juliaburch'],[src*='thewildlatina'],[src*='xtasiaego'],[src*='XTASIATV'],[src*='elina'],[src*='xcandylashes'],[src*='kristinemaia'],[src*='mellooow_'],[src*='gemmastw'],[src*='linny'],[src*='nicolepeachy'],[src*='lucyya'],[src*='xxlauoanxx'],[src*='di1araas'],[src*='mistiesage']").not("[src*='selina_imai']").after($("<span></span>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
+        //$(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&logoSize=auto&labelColor=9146ff&cacheSeconds=60' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+    });
+    $("img.TwitchBadge").each(function () {
+        const twitchUsername = $(this).data("twitch-username");
+        const twitchLabel = $(this).data("twitch-label");
+        $(this).attr({ "src": "https://img.shields.io/twitch/status/" + twitchUsername + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + twitchLabel + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + twitchLabel, "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+        $(this).filter("[alt$='Develique'],[alt$='MaryyCherryy'],[alt$='2bratty'],[alt$='littlebunny_x'],[alt$='Bunnymontv'],[alt$='Chess'],[alt$='DinaBelenkaya'],[alt$='PUBG_BATTLEGROUNDS'],[alt$='WorldofTanks'],[alt$='XboxOn'],[alt$='QoSpades'],[alt*='FerrariEsports'],[alt$='janifest'],[alt$='AuroraStarr'],[alt$='xoDee'],[alt$='Morgpie'],[alt$='peyzki'],[alt$='luvstruck'],[alt$='pinkwasabitv'],[alt$='KaliRoses'],[alt$='allieraa'],[alt$='EmmaLayne'],[alt$='EmjayPlayss'],[alt$='BuccataX'],[alt$='lauralux'],[alt$='ohKayBunny'],[alt$='xoAeriel'],[alt$='Hannesschan'],[alt$='TrishaHershberger'],[alt$='PulpFictionally'],[alt$='Taylor_Jevaux'],[alt$='juliaburch'],[alt$='thewildlatina'],[alt$='XTASIAEGO'],[alt$='XtasiaTV'],[alt$='Elina'],[alt$='xCandyLashes'],[alt$='kristinemaia'],[alt$='Mellooow_'],[alt$='GemmasTW'],[alt$='Linny'],[alt$='NicolePeachy'],[alt$='lucyya'],[alt$='xXLauoaNXx'],[alt$='di1araas'],[alt$='MistieSage']")/*.not("[src*='selina_imai']")*/.after($("<span></span>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
     });
     //$("div[id^='Twitch']").addClass("collapse width");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
@@ -461,8 +506,8 @@ $(document).ready(function () {
         //$(this).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
         $(this).find("th").has("br").siblings("th").addClass("align-middle");
         $(this).find("td").has("br").siblings("td").addClass("align-middle");
-        $(this).find("img[src*='logo']").attr("src", function (index, src) { return src + '&logoColor=white' });
-        $(this).find("img[src*='logo']").not("[src*='logo=nodedotjs'],[src*='logo=vlcmediaplayer'],[src*='logo=epicgames'],[src*='logo=ubisoft'],[src*='logo=bitdefender']").attr("src", function (index, src) { return src + '&logoSize=auto' });
+        //$(this).find("img[src*='logo']").attr("src", function (index, src) { return src + '&logoColor=white' });
+        //$(this).find("img[src*='logo']").not("[src*='logo=nodedotjs'],[src*='logo=vlcmediaplayer'],[src*='logo=epicgames'],[src*='logo=ubisoft'],[src*='logo=bitdefender']").attr("src", function (index, src) { return src + '&logoSize=auto' });
     });
     //document.cookie = "lang=sr; max-age=604800";
 });  
