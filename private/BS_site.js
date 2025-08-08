@@ -86,7 +86,7 @@ jQuery(function ($) {
         $(this).filter("#linux, #internet").parents(".card").height(228);
         //$(this).filter("#microsoft,#linux,#internet").find("img").css("max-width", "180px").addClass("d-block mx-auto h-auto");
         //$(this).filter("#MediaPlayer,#WebBrowser,#microsoft,#linux,#internet").find("carousel-item:first-child").addClass("active");
-        $(this).filter("#MinOfInteriorSrpskaCyber").children("div.card-body").wrapInner($("<a></a>").attr({ "href": "https://mup.vladars.rs/lat/index.php?vijest=vtk", "hreflang": "sr-BA", "target": "_blank" }).append($("<img>").attr({ "src": "images/vtk.png", "alt": "MUP R. Srpske - Uprava krim. policije - Jedinica za opšti kriminalitet - Odjeljenje za visokotehnološki kriminalitet" }).addClass("d-block mx-auto img-fluid").css("width", "180")));
+        $(this).filter("#MinOfInteriorSrpskaCyber").children("div.card-body").wrapInner($("<a></a>").attr({ "href": "https://mup.vladars.rs/vtk-lat/", "hreflang": "sr-BA", "target": "_blank" }).append($("<img>").attr({ "src": "images/vtk.png", "alt": "MUP R. Srpske - Uprava krim. policije - Jedinica za opšti kriminalitet - Odjeljenje za visokotehnološki kriminalitet" }).addClass("d-block mx-auto img-fluid").css("width", "180")));
         $(this).filter("#speedtest_banner").children("div.card-body").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Speedtest%20by%20Ookla-141526?style=for-the-badge&logo=speedtest&logoSize=auto&link=https%3A%2F%2Fspeedtest.net", "name": "Provjerite brzinu svog Interneta" }).addClass("rounded-lg d-block mx-auto img-fluid"));
     });
     //$("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");

@@ -176,6 +176,22 @@ $(document).ready(function () {
         $(this).filter("[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
         $(this).filter("[src*='shields']").on("error", function () { this.src = this.src; });
     });
+    $("img.ChromeExtensionBadge").each(function () {
+        const ChromeExtensionId = $(this).data("chromeextension-id");
+        const ChromeExtensionLabel = $(this).data("chromeextension-label");
+        const ChromeExtensionColor = $(this).data("chromeextension-color") || "blue";
+        $(this).attr({
+            "src": "https://img.shields.io/chrome-web-store/v/" + ChromeExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ChromeExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ChromeExtensionColor, "loading": "lazy"
+        }).addClass("img-fluid");
+    });
+    $("img.MozillaExtensionBadge").each(function () {
+        const MozillaExtensionId = $(this).data("mozillaextension-id");
+        const MozillaExtensionLabel = $(this).data("mozillaextension-label");
+        const MozillaExtensionColor = $(this).data("mozillaextension-color") || "blue";
+        $(this).attr({
+            "src": "https://img.shields.io/amo/v/" + MozillaExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + MozillaExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + MozillaExtensionColor, "loading": "lazy"
+        }).addClass("img-fluid");
+    });
     $("img.flatpakBadge").each(function () {
         const flatpakPackage = $(this).data("flatpak-package");
         const flatpakLabel = $(this).data("flatpak-label");
