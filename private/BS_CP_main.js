@@ -184,14 +184,6 @@ $(document).ready(function () {
             "src": "https://img.shields.io/chrome-web-store/v/" + ChromeExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ChromeExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ChromeExtensionColor, "loading": "lazy"
         }).addClass("img-fluid");
     });
-    $("img.MozillaExtensionBadge").each(function () {
-        const MozillaExtensionId = $(this).data("mozillaextension-id");
-        const MozillaExtensionLabel = $(this).data("mozillaextension-label");
-        const MozillaExtensionColor = $(this).data("mozillaextension-color") || "blue";
-        $(this).attr({
-            "src": "https://img.shields.io/amo/v/" + MozillaExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + MozillaExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + MozillaExtensionColor, "loading": "lazy"
-        }).addClass("img-fluid");
-    });
     $("img.flatpakBadge").each(function () {
         const flatpakPackage = $(this).data("flatpak-package");
         const flatpakLabel = $(this).data("flatpak-label");
@@ -201,6 +193,36 @@ $(document).ready(function () {
         const flatpakColor = $(this).data("flatpak-color") || "blue";
         $(this).attr({
             "src": "https://img.shields.io/flathub/v/" + flatpakPackage + "?logo=" + flatpakLogo + "&logoColor=" + flatpakLogocolor + "&logoSize=" + flatpakLogosize + "&label=" + flatpakLabel + "%20%40%20Flathub&labelColor=4a90d9&color=" + flatpakColor, "loading": "lazy"
+        }).addClass("img-fluid");
+    });
+    $("img.githubBadge").each(function () {
+        const ghType = $(this).data("github-type");
+        const ghPackage = $(this).data("github-package");
+        const ghFilter = $(this).data("github-filter") || "*";
+        const ghLogo = $(this).data("github-logo") || "github";
+        const ghLogoColor = $(this).data("github-logo-color") || "";
+        const ghLogoSize = $(this).data("github-logo-size") || "";
+        const ghLabel = $(this).data("github-label");
+        const ghColor = $(this).data("github-color") || "blue";
+        $(this).attr({
+            "src": "https://img.shields.io/github/v/" + ghType + "/" + ghPackage + "?filter=" + ghFilter + "&logo=" + ghLogo + "&logoColor=" + ghLogoColor + "&logoSize=" + ghLogoSize + "&label=" + ghLabel + "%20%40%20GitHub&labelColor=181717&color=" + ghColor, "loading": "lazy"
+        }).addClass("img-fluid");
+    });
+    $("img.LinuxDistroBadge").each(function () {
+        const DistroName = $(this).data("distro-name");
+        const DistroEdition = $(this).data("distro-edition");
+        const DistroColor = $(this).data("distro-color") || "blue";
+        const DistroLogo = $(this).data("distro-logo");
+        $(this).attr({
+            "src": "https://img.shields.io/badge/" + DistroName + "-" + DistroEdition + "%2064--bit-" + DistroColor + "?logo=" + DistroLogo + "&logoColor=white&logoSize=auto", "loading": "lazy"
+        }).addClass("img-fluid");
+    });
+    $("img.MozillaExtensionBadge").each(function () {
+        const MozillaExtensionId = $(this).data("mozillaextension-id");
+        const MozillaExtensionLabel = $(this).data("mozillaextension-label");
+        const MozillaExtensionColor = $(this).data("mozillaextension-color") || "blue";
+        $(this).attr({
+            "src": "https://img.shields.io/amo/v/" + MozillaExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + MozillaExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + MozillaExtensionColor, "loading": "lazy"
         }).addClass("img-fluid");
     });
     $("img.snapBadge").each(function () {
