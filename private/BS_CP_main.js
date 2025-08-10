@@ -167,46 +167,47 @@ $(document).ready(function () {
     $("select#url").on("click", function () {
         $("iframe#urlOutput").attr("src", $("#url").val());
     }).addClass("form-control bg-dark text-white");
-    $("[src*='simpleicons'],[src*='wikimedia'],[src*='wpscdn'],[alt='SPC_logo'],[alt='iqAir_logo']").height(32);
+    $("[src*='wikimedia'],[src*='wpscdn'],[alt='SPC_logo'],[alt='iqAir_logo']").height(32);
+    //$("[src*='simpleicons']").height(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img").each(function () {
         $(this).filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
-        $(this).filter("[src*='uptimerobot']").attr("src", function (index, src) { return src + '&cacheSeconds=3600' });
+        //$(this).filter("[src*='uptimerobot']").attr("src", function (index, src) { return src + '&cacheSeconds=3600' });
         $(this).filter("[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
         $(this).filter("[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
         $(this).filter("[src*='shields']").on("error", function () { this.src = this.src; });
     });
     $("img.ChromeExtensionBadge").each(function () {
-        const ChromeExtensionId = $(this).data("chromeextension-id");
-        const ChromeExtensionLabel = $(this).data("chromeextension-label");
-        const ChromeExtensionColor = $(this).data("chromeextension-color") || "blue";
+        const ExtensionId = $(this).data("extension-id");
+        const ExtensionLabel = $(this).data("extension-label");
+        const ExtensionColor = $(this).data("extension-color") || "blue";
         $(this).attr({
-            "src": "https://img.shields.io/chrome-web-store/v/" + ChromeExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ChromeExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ChromeExtensionColor, "loading": "lazy"
-        }).addClass("img-fluid");
+            "src": "https://img.shields.io/chrome-web-store/v/" + ExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy"
+        });
     });
     $("img.flatpakBadge").each(function () {
-        const flatpakPackage = $(this).data("flatpak-package");
-        const flatpakLabel = $(this).data("flatpak-label");
-        const flatpakLogo = $(this).data("flatpak-logo") || "flatpak";
-        const flatpakLogocolor = $(this).data("flatpak-logocolor") || null;
-        const flatpakLogosize = $(this).data("flatpak-logosize") || null;
-        const flatpakColor = $(this).data("flatpak-color") || "blue";
+        const Package = $(this).data("package");
+        const Label = $(this).data("label");
+        const Logo = $(this).data("logo") || "flatpak";
+        const LogoColor = $(this).data("logocolor") || null;
+        const LogoSize = $(this).data("logosize") || null;
+        const Color = $(this).data("color") || "blue";
         $(this).attr({
-            "src": "https://img.shields.io/flathub/v/" + flatpakPackage + "?logo=" + flatpakLogo + "&logoColor=" + flatpakLogocolor + "&logoSize=" + flatpakLogosize + "&label=" + flatpakLabel + "%20%40%20Flathub&labelColor=4a90d9&color=" + flatpakColor, "loading": "lazy"
-        }).addClass("img-fluid");
+            "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "loading": "lazy"
+        });
     });
     $("img.githubBadge").each(function () {
-        const ghType = $(this).data("github-type");
-        const ghPackage = $(this).data("github-package");
-        const ghFilter = $(this).data("github-filter") || "*";
-        const ghLogo = $(this).data("github-logo") || "github";
-        const ghLogoColor = $(this).data("github-logo-color") || "";
-        const ghLogoSize = $(this).data("github-logo-size") || "";
-        const ghLabel = $(this).data("github-label");
-        const ghColor = $(this).data("github-color") || "blue";
+        const Type = $(this).data("type");
+        const Package = $(this).data("package");
+        const Filter = $(this).data("filter") || "*";
+        const Logo = $(this).data("logo") || "github";
+        const LogoColor = $(this).data("color") || "";
+        const LogoSize = $(this).data("logosize") || "";
+        const Label = $(this).data("label");
+        const Color = $(this).data("color") || "blue";
         $(this).attr({
-            "src": "https://img.shields.io/github/v/" + ghType + "/" + ghPackage + "?filter=" + ghFilter + "&logo=" + ghLogo + "&logoColor=" + ghLogoColor + "&logoSize=" + ghLogoSize + "&label=" + ghLabel + "%20%40%20GitHub&labelColor=181717&color=" + ghColor, "loading": "lazy"
-        }).addClass("img-fluid");
+            "src": "https://img.shields.io/github/v/" + Type + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=181717&color=" + Color, "loading": "lazy"
+        });
     });
     $("img.LinuxDistroBadge").each(function () {
         const DistroName = $(this).data("distro-name");
@@ -215,38 +216,68 @@ $(document).ready(function () {
         const DistroLogo = $(this).data("distro-logo");
         $(this).attr({
             "src": "https://img.shields.io/badge/" + DistroName + "-" + DistroEdition + "%2064--bit-" + DistroColor + "?logo=" + DistroLogo + "&logoColor=white&logoSize=auto", "loading": "lazy"
-        }).addClass("img-fluid");
+        });
     });
     $("img.MozillaExtensionBadge").each(function () {
-        const MozillaExtensionId = $(this).data("mozillaextension-id");
-        const MozillaExtensionLabel = $(this).data("mozillaextension-label");
-        const MozillaExtensionColor = $(this).data("mozillaextension-color") || "blue";
+        const ExtensionId = $(this).data("extension-id");
+        const ExtensionLabel = $(this).data("extension-label");
+        const ExtensionColor = $(this).data("extension-color") || "blue";
         $(this).attr({
-            "src": "https://img.shields.io/amo/v/" + MozillaExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + MozillaExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + MozillaExtensionColor, "loading": "lazy"
-        }).addClass("img-fluid");
+            "src": "https://img.shields.io/amo/v/" + ExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + ExtensionColor, "loading": "lazy"
+        });
+    });
+    $("img.simpleiconsCDN").each(function () {
+        const IconName = $(this).data("iconname");
+        //const siIconColor = $(this).data("color") || "";
+        const IconAlt = $(this).data("alt");
+        $(this).attr({
+            "src": "https://cdn.simpleicons.org/" + IconName, "height": "32", "alt": IconAlt, "loading": "lazy"
+        });
     });
     $("img.snapBadge").each(function () {
-        const snapPackage = $(this).data("snap-package");
-        const snapChannel = $(this).data("snap-channel");
-        const snapLabel = $(this).data("snap-label");
-        const snapLogo = $(this).data("snap-logo") || "snapcraft";
-        const snapLogoColor = $(this).data("snap-logocolor") || null;
-        const snapLogoSize = $(this).data("snap-logosize") || null;
-        const snapColor = $(this).data("snap-color") || "blue";
+        const Package = $(this).data("package");
+        const Channel = $(this).data("channel");
+        const Label = $(this).data("label");
+        const Logo = $(this).data("logo") || "snapcraft";
+        const LogoColor = $(this).data("logocolor") || "";
+        const LogoSize = $(this).data("logosize") || "";
+        const Color = $(this).data("color") || "blue";
         $(this).attr({
-            "src": "https://img.shields.io/snapcraft/v/" + snapPackage + "/" + snapChannel + "?logo=" + snapLogo + "&logoColor=" + snapLogoColor + "&logoSize=" + snapLogoSize + "&label=" + snapLabel + "%20%40%20Snapcraft&labelColor=e95420&color=" + snapColor, "loading": "lazy"
-        }).addClass("img-fluid");
+            "src": "https://img.shields.io/snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "loading": "lazy"
+        });
+    });
+    $("img.UptimeRobotBadge").each(function () {
+        const Key = $(this).data("key");
+        const Logo = $(this).data("logo");
+        const LogoColor = $(this).data("logocolor") || "";
+        const LogoSize = $(this).data("logosize") || "";
+        const LabelTxtPrefix = $(this).data("labeltxtprefix") || "";
+        const LabelColor = $(this).data("labelcolor") || "";
+        $(this).attr({
+            "src": "https://img.shields.io/uptimerobot/status/" + Key + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000", "alt": "UptimeRobot status", "loading": "lazy"
+        });
+    });
+    $("img.websiteBadge").each(function () {
+        const URL = $(this).data("url");
+        const Label = $(this).data("label") || "Website";
+        const Logo = $(this).data("logo") || "";
+        const LogoColor = $(this).data("logocolor") || "";
+        const LogoSize = $(this).data("logosize") || "";
+        const Color = $(this).data("color") || "";
+        $(this).attr({
+            "src": "https://img.shields.io/website?url=https%3A%2F%2F" + URL + "%2F&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + Color + "&cacheSeconds=1800", "alt": "Website", "loading": "lazy"
+        });
     });
     $("img.wingetBadge").each(function () {
-        const wingetPackage = $(this).data("winget-package");
-        const wingetLabel = $(this).data("winget-label");
-        const wingetLogo = $(this).data("winget-logo") || null;
-        const wingetLogocolor = $(this).data("winget-logocolor") || null;
-        const wingetLogosize = $(this).data("winget-logosize") || null;
-        const wingetColor = $(this).data("winget-color") || "blue";
+        const Package = $(this).data("package");
+        const Label = $(this).data("label");
+        const Logo = $(this).data("logo") || "";
+        const LogoColor = $(this).data("logocolor") || "";
+        const LogoSize = $(this).data("logosize") || "";
+        const Color = $(this).data("color") || "blue";
         $(this).attr({
-            "src": "https://img.shields.io/winget/v/" + wingetPackage + "?logo=" + wingetLogo + "&logoColor=" + wingetLogocolor + "&logoSize=" + wingetLogosize + "&label=" + wingetLabel + "%20%40%20winget&color=" + wingetColor, "loading": "lazy"
-        }).addClass("img-fluid");
+            "src": "https://img.shields.io/winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy"
+        });
     });
     $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo" }).height(32));
     $("div#churchCalendarToast > div.toast-body").addClass("p-0").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height(360));
