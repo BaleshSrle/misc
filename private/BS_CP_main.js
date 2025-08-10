@@ -201,7 +201,7 @@ $(document).ready(function () {
         const Package = $(this).data("package");
         const Filter = $(this).data("filter") || "*";
         const Logo = $(this).data("logo") || "github";
-        const LogoColor = $(this).data("color") || "";
+        const LogoColor = $(this).data("logocolor") || "";
         const LogoSize = $(this).data("logosize") || "";
         const Label = $(this).data("label");
         const Color = $(this).data("color") || "blue";
