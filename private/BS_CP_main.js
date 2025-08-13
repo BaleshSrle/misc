@@ -179,7 +179,7 @@ $(document).ready(function () {
     });
     $("img.ChromeExtensionBadge").each(function () {
         const ExtensionId = $(this).data("extension-id");
-        const ExtensionLabel = $(this).data("extension-label");
+        const ExtensionLabel = encodeURIComponent($(this).data("extension-label"));
         const ExtensionColor = $(this).data("extension-color") || "blue";
         $(this).attr({
             "src": "https://img.shields.io/chrome-web-store/v/" + ExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy"
@@ -187,7 +187,7 @@ $(document).ready(function () {
     });
     $("img.flatpakBadge").each(function () {
         const Package = $(this).data("package");
-        const Label = $(this).data("label");
+        const Label = encodeURIComponent($(this).data("label"));
         const Logo = $(this).data("logo") || "flatpak";
         const LogoColor = $(this).data("logocolor") || null;
         const LogoSize = $(this).data("logosize") || null;
@@ -203,15 +203,15 @@ $(document).ready(function () {
         const Logo = $(this).data("logo") || "github";
         const LogoColor = $(this).data("logocolor") || "";
         const LogoSize = $(this).data("logosize") || "";
-        const Label = $(this).data("label");
+        const Label = encodeURIComponent($(this).data("label"));
         const Color = $(this).data("color") || "blue";
         $(this).attr({
             "src": "https://img.shields.io/github/v/" + Type + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=181717&color=" + Color, "loading": "lazy"
         });
     });
     $("img.LinuxDistroBadge").each(function () {
-        const DistroName = $(this).data("distro-name");
-        const DistroEdition = $(this).data("distro-edition");
+        const DistroName = encodeURIComponent($(this).data("distro-name"));
+        const DistroEdition = encodeURIComponent($(this).data("distro-edition"));
         const DistroColor = $(this).data("distro-color") || "blue";
         const DistroLogo = $(this).data("distro-logo");
         $(this).attr({
@@ -220,364 +220,371 @@ $(document).ready(function () {
     });
     $("img.MozillaExtensionBadge").each(function () {
         const ExtensionId = $(this).data("extension-id");
-        const ExtensionLabel = $(this).data("extension-label");
-        const ExtensionColor = $(this).data("extension-color") || "blue";
-        $(this).attr({
-            "src": "https://img.shields.io/amo/v/" + ExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + ExtensionColor, "loading": "lazy"
-        });
+    const ExtensionLabel = encodeURIComponent($(this).data("extension-label"));
+    const ExtensionColor = $(this).data("extension-color") || "blue";
+    $(this).attr({
+        "src": "https://img.shields.io/amo/v/" + ExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + ExtensionColor, "loading": "lazy"
     });
-    $("img.simpleiconsCDN").each(function () {
-        const IconName = $(this).data("iconname");
-        //const siIconColor = $(this).data("color") || "";
-        const IconAlt = $(this).data("alt");
-        $(this).attr({
-            "src": "https://cdn.simpleicons.org/" + IconName, "height": "32", "alt": IconAlt, "loading": "lazy"
-        });
+});
+$("img.simpleiconsCDN").each(function () {
+    const IconName = $(this).data("iconname");
+    //const siIconColor = $(this).data("color") || "";
+    const IconAlt = $(this).data("alt");
+    $(this).attr({
+        "src": "https://cdn.simpleicons.org/" + IconName, "height": "32", "alt": IconAlt, "loading": "lazy"
     });
-    $("img.snapBadge").each(function () {
-        const Package = $(this).data("package");
-        const Channel = $(this).data("channel");
-        const Label = $(this).data("label");
-        const Logo = $(this).data("logo") || "snapcraft";
-        const LogoColor = $(this).data("logocolor") || "";
-        const LogoSize = $(this).data("logosize") || "";
-        const Color = $(this).data("color") || "blue";
-        $(this).attr({
-            "src": "https://img.shields.io/snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "loading": "lazy"
-        });
+});
+$("img.snapBadge").each(function () {
+    const Package = $(this).data("package");
+    const Channel = $(this).data("channel");
+    const Label = encodeURIComponent($(this).data("label"));
+    const Logo = $(this).data("logo") || "snapcraft";
+    const LogoColor = $(this).data("logocolor") || "";
+    const LogoSize = $(this).data("logosize") || "";
+    const Color = $(this).data("color") || "blue";
+    $(this).attr({
+        "src": "https://img.shields.io/snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "loading": "lazy"
     });
-    $("img.UptimeRobotBadge").each(function () {
-        const Key = $(this).data("key");
-        const Logo = $(this).data("logo");
-        const LogoColor = $(this).data("logocolor") || "";
-        const LogoSize = $(this).data("logosize") || "";
-        const LabelTxtPrefix = $(this).data("labeltxtprefix") || "";
-        const LabelColor = $(this).data("labelcolor") || "";
-        $(this).attr({
-            "src": "https://img.shields.io/uptimerobot/status/" + Key + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000", "alt": "UptimeRobot status", "loading": "lazy"
-        });
+});
+$("img.UptimeRobotBadge").each(function () {
+    const Key = $(this).data("key");
+    const Logo = $(this).data("logo");
+    const LogoColor = $(this).data("logocolor") || "";
+    const LogoSize = $(this).data("logosize") || "";
+    const LabelTxtPrefix = encodeURIComponent($(this).data("labeltxtprefix") || "");
+    const LabelColor = $(this).data("labelcolor") || "";
+    $(this).attr({
+        "src": "https://img.shields.io/uptimerobot/status/" + Key + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000", "alt": "UptimeRobot status", "loading": "lazy"
     });
-    $("img.websiteBadge").each(function () {
-        const URL = $(this).data("url");
-        const Label = $(this).data("label") || "Website";
-        const Logo = $(this).data("logo") || "";
-        const LogoColor = $(this).data("logocolor") || "";
-        const LogoSize = $(this).data("logosize") || "";
-        const Color = $(this).data("color") || "";
-        $(this).attr({
-            "src": "https://img.shields.io/website?url=https%3A%2F%2F" + URL + "%2F&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + Color + "&cacheSeconds=1800", "alt": "Website", "loading": "lazy"
-        });
+});
+$("img.VSMarketplaceBadge").each(function () {
+    const ExtensionId = $(this).data("extension-id");
+    const ExtensionLabel = encodeURIComponent($(this).data("extension-label"));
+    $(this).attr({
+        "src": "https://img.shields.io/visual-studio-marketplace/v/" + ExtensionId + "?label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc", "loading": "lazy"
     });
-    $("img.wingetBadge").each(function () {
-        const Package = $(this).data("package");
-        const Label = $(this).data("label");
-        const Logo = $(this).data("logo") || "";
-        const LogoColor = $(this).data("logocolor") || "";
-        const LogoSize = $(this).data("logosize") || "";
-        const Color = $(this).data("color") || "blue";
-        $(this).attr({
-            "src": "https://img.shields.io/winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy"
-        });
+});
+$("img.websiteBadge").each(function () {
+    const URL = $(this).data("url");
+    const Label = encodeURIComponent($(this).data("label") || "Website");
+    const Logo = $(this).data("logo") || "";
+    const LogoColor = $(this).data("logocolor") || "";
+    const LogoSize = $(this).data("logosize") || "";
+    const Color = $(this).data("color") || "";
+    $(this).attr({
+        "src": "https://img.shields.io/website?url=https%3A%2F%2F" + URL + "%2F&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + Color + "&cacheSeconds=1800", "alt": "Website", "loading": "lazy"
     });
-    $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo" }).height(32));
-    $("div#churchCalendarToast > div.toast-body").addClass("p-0").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height(360));
-    //$("div#churchCalendarToast > div.toast-body").addClass("p-2").append($("<iframe></iframe").attr("src", "https://pravoslavnikalendar.rs/kal/pra220.php").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" }));
-    $("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
-    $("iframe").not("[src*='naslovi'],.steamWidget").addClass("d-block mx-auto border-0").attr("loading", "lazy");
-    $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
-    $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
-    //$("iframe[src*='blberza']").slice(0, 2).addClass("rounded-bottom");
-    $("iframe[src*='blberza']").parent("div.card-body").slice(0, 2).addClass("bg-white rounded-bottom");
-    //$("iframe[src*='blberza']").slice(2).width(200).height(110).addClass("overflow-hidden rounded-lg");
-    $("iframe.steamWidget").each(function () {
-        const steamGameID = $(this).data("steam-gameid");
-        const steamTitle = $(this).data("steam-title") || null;
-        $(this).addClass("d-block mx-auto border-0 my-1").attr({ "src": "https://store.steampowered.com/widget/" + steamGameID + "/", "title": steamTitle, "loading": "lazy" }).width(646).height(190);
+});
+$("img.wingetBadge").each(function () {
+    const Package = $(this).data("package");
+    const Label = encodeURIComponent($(this).data("label"));
+    const Logo = $(this).data("logo") || "";
+    const LogoColor = $(this).data("logocolor") || "";
+    const LogoSize = $(this).data("logosize") || "";
+    const Color = $(this).data("color") || "blue";
+    $(this).attr({
+        "src": "https://img.shields.io/winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy"
     });
-    $("div.carousel").addClass("carousel-fade").carousel({
-        interval: 3000,
-        keyboard: false,
-        ride: 'carousel',
-        touch: false
-    });
-    $("div.carousel:eq(0) img").each(function () {
-        $(this).filter("[alt^='IP2Location'],[alt*='Vivaldi'],[alt$='Kit'],[alt*='W3Schools'],[alt^='AIMP'],[alt^='Boobpedia']").addClass("img-fluid my-4 my-md-3 rounded-lg");
-        $(this).filter("[alt^='Simple'],[alt^='Simple']").addClass("img-fluid my-4 my-md-3");
-        $(this).filter("[alt^='Joomla']").addClass("img-fluid my-4 my-md-2 rounded-lg");
-        $(this).filter("[alt='Discord'],[alt='Bitdefender']").addClass("img-fluid my-3 my-md-0");
-        $(this).filter("[alt*='TeamViewer']").addClass("img-fluid my-3");
-        $(this).filter("[alt*='Community']").addClass("img-fluid my-1 my-md-0");
-        $(this).filter("[alt='LibreOffice']").addClass("img-fluid");
-        $(this).filter("[alt*='VLC'], [alt='Postman'],[alt$='OpenOffice'],[alt='Xubuntu'],[alt^='Poslovi']").css("max-height", "90px");
-        $(this).filter("[alt^='NetLingo']").addClass("rounded-lg").css("max-height", "90px");
-    }).addClass("border-0 d-block mx-auto").attr("loading", "lazy");
-    $("div#IQAirCarousel").css({ "width": "313px", "height": "100px" });
-    $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
-    $("mark.bg-secondary,a#time_is_link,label:gt(2)").addClass("text-white");
-    $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
-    $("span").filter(".fi-au,.fi-ba,.fi-ca,.fi-eu,.fi-gb,.fi-nz,.fi-us").addClass("mr-1");
-    $("span.fi-us").parents("div.card-header").siblings("ul").height(200).addClass("overflow-auto");
-    $("i").each(function () {
-        $(this).filter(".bi-laptop,.bi-laptop,.bi-phone,.bi-tablet,.bi-image,.bi-snapchat,.bi-telegram,.bi-facebook,.bi-messenger,.bi-instagram,.bi-threads,.bi-whatsapp").css("font-size", "xx-large");
-        $(this).filter(".bi-mailbox,.bi-headset,.bi-hourglass-split,.bi-globe,.bi-bug,.bi-kanban,.bi-stopwatch,.bi-briefcase,.bi-easel,.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
-    });
-    $("button.btn-link").each(function () {
-        $(this).addClass("text-left text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false", "aria-controls": $(this).attr("data-target").replace("#", "") });
-        //$(this).parents("div.card-header").addClass("py-2 border-bottom border-secondary");
-    });
-    $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
-    $("div.toast").each(function (i) {
-        $("div.toast").eq(i).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
-    }).wrapAll($("<div></div>").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px" }).width(350));
-    $("div.toast-header").each(function (i) {
-        $("div.toast-header").eq(i).addClass("py-0");
-        $("div.toast-header").eq(i).children("strong").addClass("mr-auto");
-        $("div.toast-header").eq(i).append($("<button></button>").addClass("close ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Close" }).html("<span aria-hidden='true'>&times;</span>"));
-    });
-    $("div.toast-header").each(function () {
-        $("div.toast-header > img").not(":eq(2)").addClass("mr-1");
-        $("div.toast-header > img:eq(2)").addClass("mr-auto");
-    })/*.addClass("py-0").append($("<button></button>").addClass("close ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Zatvori" }).html("<span aria-hidden='true'>&times;</span>"))*/;
-    $("div.toast-body").each(function () {
-        $("div.toast-body").filter(":eq(0), :eq(3)").addClass("p-2");
-        $("div.toast-body").find("li.list-group-item").addClass("px-2 py-1");
-        $("div.toast-body").eq(2).addClass("py-2 px-3").css("width", "345px");
-        $("div.toast-body").eq(3).addClass("text-body");
-    });
-    $("div.modal").each(function () {
-        $(this).attr("aria-labelledby", $(this).attr("id") + "Label");
-        $(this).children("div").addClass("modal-dialog").attr("role", "document");
-        $(this).filter("#mailSettings,#sluzbeni").children("div").addClass("modal-sm modal-dialog-centered");
-        $(this).filter("#calculator").children("div").addClass("modal-dialog-centered");
-        $(this).filter("#tvguide,#kick,#FamilyNotes").children("div").addClass("modal-lg modal-dialog-centered");
-        $(this).filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog-centered modal-dialog-scrollable");
-        $(this).filter("#weather,#livescore,#TechNewsNasloviNET,#steam_games").children("div").addClass("modal-lg modal-dialog-centered modal-dialog-scrollable");
-        $(this).filter("#FIBAlivescore,#imgRotate,#twitch,#programs,#CarService").children("div").addClass("modal-xl modal-dialog-centered modal-dialog-scrollable");
-        $(this).filter("#time").children("div").addClass("mx-auto");
-        $(this).filter("#calculator").find("div.modal-content").addClass("bg-dark border-dark");
-        $(this).filter("#time,#mailSettings,#imgRotate,#tvguide,#TechNewsNasloviNET,#sluzbeni,#twitch,#programs").find("div.modal-header").append($("<button></button>").addClass("close btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" }).html("<span aria-hidden='true'>&times;</span>"));
-        $(this).filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
-        $(this).filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
-        $(this).filter("#TechNewsNasloviNET,#twitch").find(".modal-header").addClass("p-0");
-        $(this).filter("#calculator").find("div.modal-header").addClass("px-1 pb-0");
-        $(this).find("div").filter(".modal-header,.modal-footer").addClass("border-secondary");
-        $(this).find("hr").addClass("border-secondary");
-        $(this).filter("#loginModal").find("div.modal-header").addClass("py-1").append($("<h5></h5>").addClass("modal-title").text("Prijava na sistem"), $("<i></i>").addClass("bi bi-circle-fill text-danger ml-auto py-1"), $("<i></i>").addClass("bi bi-circle-fill text-primary py-1"), $("<i></i>").addClass("bi bi-circle-fill text-white py-1"));
-        $(this).not("#loginModal").find("h5.modal-title").addClass("mt-1");
-        $(this).filter("#tvguide,#programs").find("div.modal-body").addClass("p-0");
-        $(this).filter("#TechNewsNasloviNET").find("div.modal-body").addClass("p-0").append($("<iframe></iframe>").attr({ "src": "https://naslovi.net/widget/?type=tehnologija&bgcolor=343A40&textcolor=FFFFFF&sourcecolor=FFFFFF80&separatorcolor=6C757D&count=10&", "height": "915", "loading": "lazy" }).addClass("d-block mx-auto border-0 w-100"));
-        $(this).filter("#sluzbeni,#steam_games,#CarService").find("div.modal-body").addClass("p-1");
-        //$(this).filter("#steam_games").find("iframe").attr({ "width": "646", "height": "190" }).addClass("my-1");
-        $(this).filter("#loginModal,#imgRotate,#twitch,#calculator,#FujitsuLifeBookS751,#kick,#FamilyNotes").find("div.modal-body").addClass("p-2");
-        $(this).filter("#time").find("div.modal-body").addClass("py-2");
-        // $(this).filter("#imgRotate").find("div.col-md-7").wrapInner($("<img>").attr("id", "imgResult"));
-        $(this).filter("#mailSettings").find("div.modal-body").addClass("px-2 py-1");
-        $(this).find("div.modal-footer").addClass("py-1");
-        $(this).find("div.modal-footer").find("a").addClass("text-light");
-        $(this).filter("#CarService").find("th:eq(2)").addClass("w-50");
-        $(this).filter("#CarService").find("td").filter(":lt(2),:lt(8):gt(5),:lt(14):gt(11)").addClass("align-middle");
-        $(this).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString(localeOptions.locale, localeOptions.options));
-        $(this).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString(localeOptions.locale, localeOptions.options));
-        $(this).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString(localeOptions.locale, localeOptions.options));
-        $(this).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString(localeOptions.locale, localeOptions.options));
-        $(this).filter("#CarService").find("time:eq(4)").text(new Date(2025, 4, 24, 14, 0).toLocaleString(localeOptions.locale, localeOptions.options));
-        $(this).filter("#CarService").find("time:eq(5)").text(new Date(2025, 7, 6, 12, 4).toLocaleString(localeOptions.locale, localeOptions.options));
-    }).attr({ "tabindex": "-1", "role": "dialog" });
-    $("div.col-sm-8,output").addClass("pt-2");
-    $("div.col-sm-8").addClass("px-2");
-    $("div").filter(".row:eq(1),.btn-group-vertical,.toast-body:eq(2),[name^='airvisual']").addClass("mx-auto");
-    /* $("div#weatherforecast").append($("<a></a>").attr({ "href": "https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr-BA" }).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": false, "data-uid": "awtd1504180838200", "data-editlocation": true }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": "https://oap.accuweather.com/launch.js", "defer": "defer" }));*/
-    /* $("div#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": "https://www.livescore.bz/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo")); */
-    $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
-    $("div.btn-group-vertical").each(function () {
-        $(this).eq(3).addClass("mw-100");
-    }).addClass("my-1");
-    $("div.card-deck").each(function () {
-        $(this).children("div.card:even").addClass("mr-xl-1");
-        $(this).children("div.card:even").eq(2).addClass("d-none d-md-block");
-        $(this).children("div.card:odd").addClass("ml-xl-1");
-    });
-    /*$("div.card").each(function(){
-        $(this).not($("[style^='background')")).addClass("bg-transparent border secondary");
-    });*/
-    //$("div.card").slice(0, 6).addClass("mx-1 my-2");
-    $("div.card").not($("div.card[style^='background']")).addClass("bg-transparent border-secondary");
-    /*$("div.card-header").each(function () {
-        $("div.card-header").not(":eq(22),:eq(28)").addClass("py-2 text-white");
-        $("div.card-header").filter(":eq(21),:eq(28)").addClass("pt-1 text-white");
-        $("div.card-header").filter(":lt(6),:lt(23):gt(19),:lt(28):gt(23),:lt(34):gt(31)").addClass("border-bottom border-secondary");
-        $("div.card-header").filter(":lt(19):gt(14),:eq(23),:eq(28),:lt(32):gt(29)").addClass("border-bottom border-dark");
-        $("div.card-header").eq(14).addClass("border-bottom border-white");
-        $("div.card-header").slice(30).addClass("text-center");
-    });*/
-    $("div#index").each(function () {
-        $(this).find("div.card-header:eq(0)").addClass("py-2 border-bottom border-white");
-        $(this).find("div.card-header:gt(0)").addClass("py-2 border-bottom border-dark");
-    });
-    $("div#links").each(function () {
-        $(this).find("div.card-header").not(":eq(3)").addClass("py-2 border-bottom border-secondary");
-        $(this).find("div.card-header:eq(3)").addClass("py-2 border-bottom border-dark");
-    });
-    $("div#blse div.card-header").addClass("py-2 border-bottom border-secondary text-center");
-    /*$("div#blse").each(function () {
-        $(this).find("div.card-header:eq(2)").addClass("pt-1 text-white border-bottom border-secondary");
-    });*/
-    //$("iframe#TwitchPlayer").parents("div.col-sm").addClass("mt-2 px-0")
-    //$("iframe#TwitchPlayer").parents("div.col-sm").addClass("pt-2 pl-0 pr-2")
-    //$("div#TwitchChat").addClass("col-sm-3 collapse width mt-2 pl-1 pr-0");
-    /* $("button[data-target='#TwitchChat']").on("click", function () {
-        $("iframe#TwitchPlayer").parents("div.col-sm").toggleClass("pl-0 pr-1");
-    }); */
-    $("div#TwitchStatus").each(function () {
-        $(this).children("div.card-columns").addClass("mt-1");
-        $(this).children("div.card").not(":last").addClass("mb-2");
-        $(this).find("div.card-header").addClass("py-2 border-bottom border-secondary");
-        $(this).find("ul.list-group").addClass("list-group-flush");
-        $(this).find("ul.list-group").filter("[title^='TOS']").siblings("ul").height(200).addClass("overflow-auto");
-        $(this).find("ul.list-group").filter("[title='Sidemen']").siblings("ul:eq(1)").height(200).addClass("overflow-auto");
-        $(this).find("ul.list-group").filter("[title^='Game'],[title='WWE'],[title='USA'],[title='Canada'],[title='UK'],[title='EU'],[title='Russia'],[title='Australia']").height(200).addClass("overflow-auto");
-        //$(this).find("li.list-group-item").addClass("justify-content-between");
-        //$(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&logoSize=auto&labelColor=9146ff&cacheSeconds=60' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
-    });
-    $("img.TwitchBadge").each(function () {
-        const Username = $(this).data("username");
-        const Label = $(this).data("label");
-        $(this).attr({ "src": "https://img.shields.io/twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
-        $(this).filter("[alt$='Develique'],[alt$='MaryyCherryy'],[alt$='2bratty'],[alt$='littlebunny_x'],[alt$='Bunnymontv'],[alt$='Chess'],[alt$='DinaBelenkaya'],[alt$='PUBG_BATTLEGROUNDS'],[alt$='WorldofTanks'],[alt$='XboxOn'],[alt$='QoSpades'],[alt*='FerrariEsports'],[alt$='janifest'],[alt$='AuroraStarr'],[alt$='xoDee'],[alt$='Morgpie'],[alt$='peyzki'],[alt$='luvstruck'],[alt$='pinkwasabitv'],[alt$='KaliRoses'],[alt$='allieraa'],[alt$='EmmaLayne'],[alt$='EmjayPlayss'],[alt$='BuccataX'],[alt$='lauralux'],[alt$='ohKayBunny'],[alt$='xoAeriel'],[alt$='Hannesschan'],[alt$='TrishaHershberger'],[alt$='PulpFictionally'],[alt$='Taylor_Jevaux'],[alt$='juliaburch'],[alt$='thewildlatina'],[alt$='XTASIAEGO'],[alt$='XtasiaTV'],[alt$='Elina'],[alt$='xCandyLashes'],[alt$='kristinemaia'],[alt$='Mellooow_'],[alt$='GemmasTW'],[alt$='Linny'],[alt$='NicolePeachy'],[alt$='lucyya'],[alt$='xXLauoaNXx'],[alt$='di1araas'],[alt$='MistieSage']")/*.not("[src*='selina_imai']")*/.after($("<span></span>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
-    });
-    //$("div[id^='Twitch']").addClass("collapse width");
-    $("div.card-columns").parent("div.card-body").addClass("p-3");
-    //$("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
-    $("div.card-body > div.mojtvprogram").addClass("mx-2 my-3 px-1");
-    $("h6.card-subtitle").addClass("mb-1 text-muted ubuntu-bold-italic");
-    $("div.card-footer").addClass("border-top border-secondary text-muted text-right");
-    $("div#aw-ad-container").remove();
-    $("h2,h6:gt(1)").addClass("mb-0");
-    $("p.card-text").filter(":eq(2),:eq(5),:eq(8),:eq(11)").addClass("mb-0")
-    $("h6").slice(20).addClass("text-wrap");
-    $("h6 > i.bi").addClass("mr-1");
-    $("hr").slice(0, -2).addClass("my-2");
-    $("div.input-group").each(function () {
-        $("div.input-group").filter(":lt(3), :lt(6):gt(3)").addClass("mb-2");
-        $("div.input-group").filter(":eq(3), :gt(5)").addClass("mb-0");
-        $("div.input-group").filter(":eq(0)").addClass("border rounded");
-        $("div.input-group").slice(1, 3).addClass("mr-sm-2");
-        $("div.input-group").slice(4, 6).addClass("input-group-sm");
-    });
-    $("ul.list-group.maintenance").each(function () {
-        $(this).children("li.list-group-item").addClass("list-group-item-dark px-2 py-0 flex-fill");
-        $(this).children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
-        $(this).find("img, object").addClass("d-block mx-auto");
-    }).addClass("list-group-flush list-group-horizontal d-flex justify-content-around flex-wrap");
-    $("ul.nav").each(function () {
-        $(this).parent().removeClass("py-2").addClass("pt-1");
-        $(this).children().removeClass("px-2 py-1");
-    }).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-y": "hidden", "overflow-x": "auto" }).attr("role", "tablist");
-    $("ul[id$='List'] a").each(function () {
-        $(this).attr("aria-controls", $(this).attr("href").replace("#", ""));
-    }).on("click", function (e) {
-        e.preventDefault()
-        $(this).tab("show");
-    }).addClass("py-1").attr({ "data-toggle": "tab", "role": "tab" });
-    $("div.tab-content").each(function (i) {
-        $("div.tab-content").eq(i).attr("id", $("ul.nav.nav-tabs").eq(i).attr("id") + "Content");
-    });
-    $("div.tab-pane").each(function (i) {
-        $("div.tab-pane").eq(i).attr({ "role": "tabpanel", "aria-labelledby": $("div.tab-pane").eq(i).attr("id") + "-tab" });
-    });
-    $("div.tab-pane").each(function () {
-        $(this).filter("#NewAmountAfterPercetage").children("form").on("input", function () {
-            var h = $("#novcaniIznos").val();
-            var k = $("#procenatIznos").val();
-            var procenat = k / 100;
-            var procenat2 = h * procenat;
+});
+$("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo" }).height(32));
+$("div#churchCalendarToast > div.toast-body").addClass("p-0").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height(360));
+//$("div#churchCalendarToast > div.toast-body").addClass("p-2").append($("<iframe></iframe").attr("src", "https://pravoslavnikalendar.rs/kal/pra220.php").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" }));
+$("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
+$("iframe").not("[src*='naslovi'],.steamWidget").addClass("d-block mx-auto border-0").attr("loading", "lazy");
+$("iframe:last,img#AutoHrIMG").attr("loading", "eager");
+$("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
+//$("iframe[src*='blberza']").slice(0, 2).addClass("rounded-bottom");
+$("iframe[src*='blberza']").parent("div.card-body").slice(0, 2).addClass("bg-white rounded-bottom");
+//$("iframe[src*='blberza']").slice(2).width(200).height(110).addClass("overflow-hidden rounded-lg");
+$("iframe.steamWidget").each(function () {
+    const steamGameID = $(this).data("steam-gameid");
+    const steamTitle = $(this).data("steam-title") || null;
+    $(this).addClass("d-block mx-auto border-0 my-1").attr({ "src": "https://store.steampowered.com/widget/" + steamGameID + "/", "title": steamTitle, "loading": "lazy" }).width(646).height(190);
+});
+$("div.carousel").addClass("carousel-fade").carousel({
+    interval: 3000,
+    keyboard: false,
+    ride: 'carousel',
+    touch: false
+});
+$("div.carousel:eq(0) img").each(function () {
+    $(this).filter("[alt^='IP2Location'],[alt*='Vivaldi'],[alt$='Kit'],[alt*='W3Schools'],[alt^='AIMP'],[alt^='Boobpedia']").addClass("img-fluid my-4 my-md-3 rounded-lg");
+    $(this).filter("[alt^='Simple'],[alt^='Simple']").addClass("img-fluid my-4 my-md-3");
+    $(this).filter("[alt^='Joomla']").addClass("img-fluid my-4 my-md-2 rounded-lg");
+    $(this).filter("[alt='Discord'],[alt='Bitdefender']").addClass("img-fluid my-3 my-md-0");
+    $(this).filter("[alt*='TeamViewer']").addClass("img-fluid my-3");
+    $(this).filter("[alt*='Community']").addClass("img-fluid my-1 my-md-0");
+    $(this).filter("[alt='LibreOffice']").addClass("img-fluid");
+    $(this).filter("[alt*='VLC'], [alt='Postman'],[alt$='OpenOffice'],[alt='Xubuntu'],[alt^='Poslovi']").css("max-height", "90px");
+    $(this).filter("[alt^='NetLingo']").addClass("rounded-lg").css("max-height", "90px");
+}).addClass("border-0 d-block mx-auto").attr("loading", "lazy");
+$("div#IQAirCarousel").css({ "width": "313px", "height": "100px" });
+$("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
+$("mark.bg-secondary,a#time_is_link,label:gt(2)").addClass("text-white");
+$("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
+$("span").filter(".fi-au,.fi-ba,.fi-ca,.fi-eu,.fi-gb,.fi-nz,.fi-us").addClass("mr-1");
+$("span.fi-us").parents("div.card-header").siblings("ul").height(200).addClass("overflow-auto");
+$("i").each(function () {
+    $(this).filter(".bi-laptop,.bi-laptop,.bi-phone,.bi-tablet,.bi-image,.bi-snapchat,.bi-telegram,.bi-facebook,.bi-messenger,.bi-instagram,.bi-threads,.bi-whatsapp").css("font-size", "xx-large");
+    $(this).filter(".bi-mailbox,.bi-headset,.bi-hourglass-split,.bi-globe,.bi-bug,.bi-kanban,.bi-stopwatch,.bi-briefcase,.bi-easel,.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
+});
+$("button.btn-link").each(function () {
+    $(this).addClass("text-left text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false", "aria-controls": $(this).attr("data-target").replace("#", "") });
+    //$(this).parents("div.card-header").addClass("py-2 border-bottom border-secondary");
+});
+$("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
+$("div.toast").each(function (i) {
+    $("div.toast").eq(i).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
+}).wrapAll($("<div></div>").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px" }).width(350));
+$("div.toast-header").each(function (i) {
+    $("div.toast-header").eq(i).addClass("py-0");
+    $("div.toast-header").eq(i).children("strong").addClass("mr-auto");
+    $("div.toast-header").eq(i).append($("<button></button>").addClass("close ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Close" }).html("<span aria-hidden='true'>&times;</span>"));
+});
+$("div.toast-header").each(function () {
+    $("div.toast-header > img").not(":eq(2)").addClass("mr-1");
+    $("div.toast-header > img:eq(2)").addClass("mr-auto");
+})/*.addClass("py-0").append($("<button></button>").addClass("close ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Zatvori" }).html("<span aria-hidden='true'>&times;</span>"))*/;
+$("div.toast-body").each(function () {
+    $("div.toast-body").filter(":eq(0), :eq(3)").addClass("p-2");
+    $("div.toast-body").find("li.list-group-item").addClass("px-2 py-1");
+    $("div.toast-body").eq(2).addClass("py-2 px-3").css("width", "345px");
+    $("div.toast-body").eq(3).addClass("text-body");
+});
+$("div.modal").each(function () {
+    $(this).attr("aria-labelledby", $(this).attr("id") + "Label");
+    $(this).children("div").addClass("modal-dialog").attr("role", "document");
+    $(this).filter("#mailSettings,#sluzbeni").children("div").addClass("modal-sm modal-dialog-centered");
+    $(this).filter("#calculator").children("div").addClass("modal-dialog-centered");
+    $(this).filter("#tvguide,#kick,#FamilyNotes").children("div").addClass("modal-lg modal-dialog-centered");
+    $(this).filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog-centered modal-dialog-scrollable");
+    $(this).filter("#weather,#livescore,#TechNewsNasloviNET,#steam_games").children("div").addClass("modal-lg modal-dialog-centered modal-dialog-scrollable");
+    $(this).filter("#FIBAlivescore,#imgRotate,#twitch,#programs,#CarService").children("div").addClass("modal-xl modal-dialog-centered modal-dialog-scrollable");
+    $(this).filter("#time").children("div").addClass("mx-auto");
+    $(this).filter("#calculator").find("div.modal-content").addClass("bg-dark border-dark");
+    $(this).filter("#time,#mailSettings,#imgRotate,#tvguide,#TechNewsNasloviNET,#sluzbeni,#twitch,#programs").find("div.modal-header").append($("<button></button>").addClass("close btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" }).html("<span aria-hidden='true'>&times;</span>"));
+    $(this).filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
+    $(this).filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
+    $(this).filter("#TechNewsNasloviNET,#twitch").find(".modal-header").addClass("p-0");
+    $(this).filter("#calculator").find("div.modal-header").addClass("px-1 pb-0");
+    $(this).find("div").filter(".modal-header,.modal-footer").addClass("border-secondary");
+    $(this).find("hr").addClass("border-secondary");
+    $(this).filter("#loginModal").find("div.modal-header").addClass("py-1").append($("<h5></h5>").addClass("modal-title").text("Prijava na sistem"), $("<i></i>").addClass("bi bi-circle-fill text-danger ml-auto py-1"), $("<i></i>").addClass("bi bi-circle-fill text-primary py-1"), $("<i></i>").addClass("bi bi-circle-fill text-white py-1"));
+    $(this).not("#loginModal").find("h5.modal-title").addClass("mt-1");
+    $(this).filter("#tvguide,#programs").find("div.modal-body").addClass("p-0");
+    $(this).filter("#TechNewsNasloviNET").find("div.modal-body").addClass("p-0").append($("<iframe></iframe>").attr({ "src": "https://naslovi.net/widget/?type=tehnologija&bgcolor=343A40&textcolor=FFFFFF&sourcecolor=FFFFFF80&separatorcolor=6C757D&count=10&", "height": "915", "loading": "lazy" }).addClass("d-block mx-auto border-0 w-100"));
+    $(this).filter("#sluzbeni,#steam_games,#CarService").find("div.modal-body").addClass("p-1");
+    //$(this).filter("#steam_games").find("iframe").attr({ "width": "646", "height": "190" }).addClass("my-1");
+    $(this).filter("#loginModal,#imgRotate,#twitch,#calculator,#FujitsuLifeBookS751,#kick,#FamilyNotes").find("div.modal-body").addClass("p-2");
+    $(this).filter("#time").find("div.modal-body").addClass("py-2");
+    // $(this).filter("#imgRotate").find("div.col-md-7").wrapInner($("<img>").attr("id", "imgResult"));
+    $(this).filter("#mailSettings").find("div.modal-body").addClass("px-2 py-1");
+    $(this).find("div.modal-footer").addClass("py-1");
+    $(this).find("div.modal-footer").find("a").addClass("text-light");
+    $(this).filter("#CarService").find("th:eq(2)").addClass("w-50");
+    $(this).filter("#CarService").find("td").filter(":lt(2),:lt(8):gt(5),:lt(14):gt(11)").addClass("align-middle");
+    $(this).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString(localeOptions.locale, localeOptions.options));
+    $(this).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString(localeOptions.locale, localeOptions.options));
+    $(this).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString(localeOptions.locale, localeOptions.options));
+    $(this).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString(localeOptions.locale, localeOptions.options));
+    $(this).filter("#CarService").find("time:eq(4)").text(new Date(2025, 4, 24, 14, 0).toLocaleString(localeOptions.locale, localeOptions.options));
+    $(this).filter("#CarService").find("time:eq(5)").text(new Date(2025, 7, 6, 12, 4).toLocaleString(localeOptions.locale, localeOptions.options));
+}).attr({ "tabindex": "-1", "role": "dialog" });
+$("div.col-sm-8,output").addClass("pt-2");
+$("div.col-sm-8").addClass("px-2");
+$("div").filter(".row:eq(1),.btn-group-vertical,.toast-body:eq(2),[name^='airvisual']").addClass("mx-auto");
+/* $("div#weatherforecast").append($("<a></a>").attr({ "href": "https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr-BA" }).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": false, "data-uid": "awtd1504180838200", "data-editlocation": true }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": "https://oap.accuweather.com/launch.js", "defer": "defer" }));*/
+/* $("div#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": "https://www.livescore.bz/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo")); */
+$("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
+$("div.btn-group-vertical").each(function () {
+    $(this).eq(3).addClass("mw-100");
+}).addClass("my-1");
+$("div.card-deck").each(function () {
+    $(this).children("div.card:even").addClass("mr-xl-1");
+    $(this).children("div.card:even").eq(2).addClass("d-none d-md-block");
+    $(this).children("div.card:odd").addClass("ml-xl-1");
+});
+/*$("div.card").each(function(){
+    $(this).not($("[style^='background')")).addClass("bg-transparent border secondary");
+});*/
+//$("div.card").slice(0, 6).addClass("mx-1 my-2");
+$("div.card").not($("div.card[style^='background']")).addClass("bg-transparent border-secondary");
+/*$("div.card-header").each(function () {
+    $("div.card-header").not(":eq(22),:eq(28)").addClass("py-2 text-white");
+    $("div.card-header").filter(":eq(21),:eq(28)").addClass("pt-1 text-white");
+    $("div.card-header").filter(":lt(6),:lt(23):gt(19),:lt(28):gt(23),:lt(34):gt(31)").addClass("border-bottom border-secondary");
+    $("div.card-header").filter(":lt(19):gt(14),:eq(23),:eq(28),:lt(32):gt(29)").addClass("border-bottom border-dark");
+    $("div.card-header").eq(14).addClass("border-bottom border-white");
+    $("div.card-header").slice(30).addClass("text-center");
+});*/
+$("div#index").each(function () {
+    $(this).find("div.card-header:eq(0)").addClass("py-2 border-bottom border-white");
+    $(this).find("div.card-header:gt(0)").addClass("py-2 border-bottom border-dark");
+});
+$("div#links").each(function () {
+    $(this).find("div.card-header").not(":eq(3)").addClass("py-2 border-bottom border-secondary");
+    $(this).find("div.card-header:eq(3)").addClass("py-2 border-bottom border-dark");
+});
+$("div#blse div.card-header").addClass("py-2 border-bottom border-secondary text-center");
+/*$("div#blse").each(function () {
+    $(this).find("div.card-header:eq(2)").addClass("pt-1 text-white border-bottom border-secondary");
+});*/
+//$("iframe#TwitchPlayer").parents("div.col-sm").addClass("mt-2 px-0")
+//$("iframe#TwitchPlayer").parents("div.col-sm").addClass("pt-2 pl-0 pr-2")
+//$("div#TwitchChat").addClass("col-sm-3 collapse width mt-2 pl-1 pr-0");
+/* $("button[data-target='#TwitchChat']").on("click", function () {
+    $("iframe#TwitchPlayer").parents("div.col-sm").toggleClass("pl-0 pr-1");
+}); */
+$("div#TwitchStatus").each(function () {
+    $(this).children("div.card-columns").addClass("mt-1");
+    $(this).children("div.card").not(":last").addClass("mb-2");
+    $(this).find("div.card-header").addClass("py-2 border-bottom border-secondary");
+    $(this).find("ul.list-group").addClass("list-group-flush");
+    $(this).find("ul.list-group").filter("[title^='TOS']").siblings("ul").height(200).addClass("overflow-auto");
+    $(this).find("ul.list-group").filter("[title='Sidemen']").siblings("ul:eq(1)").height(200).addClass("overflow-auto");
+    $(this).find("ul.list-group").filter("[title^='Game'],[title='WWE'],[title='USA'],[title='Canada'],[title='UK'],[title='EU'],[title='Russia'],[title='Australia']").height(200).addClass("overflow-auto");
+    //$(this).find("li.list-group-item").addClass("justify-content-between");
+    //$(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&logoSize=auto&labelColor=9146ff&cacheSeconds=60' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+});
+$("img.TwitchBadge").each(function () {
+    const Username = $(this).data("username");
+    const Label = encodeURIComponent($(this).data("label"));
+    $(this).attr({ "src": "https://img.shields.io/twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+    $(this).filter("[alt$='Develique'],[alt$='MaryyCherryy'],[alt$='2bratty'],[alt$='littlebunny_x'],[alt$='Bunnymontv'],[alt$='Chess'],[alt$='DinaBelenkaya'],[alt$='PUBG_BATTLEGROUNDS'],[alt$='WorldofTanks'],[alt$='XboxOn'],[alt$='QoSpades'],[alt*='FerrariEsports'],[alt$='janifest'],[alt$='AuroraStarr'],[alt$='xoDee'],[alt$='Morgpie'],[alt$='peyzki'],[alt$='luvstruck'],[alt$='pinkwasabitv'],[alt$='KaliRoses'],[alt$='allieraa'],[alt$='EmmaLayne'],[alt$='EmjayPlayss'],[alt$='BuccataX'],[alt$='lauralux'],[alt$='ohKayBunny'],[alt$='xoAeriel'],[alt$='Hannesschan'],[alt$='TrishaHershberger'],[alt$='PulpFictionally'],[alt$='Taylor_Jevaux'],[alt$='juliaburch'],[alt$='thewildlatina'],[alt$='XTASIAEGO'],[alt$='XtasiaTV'],[alt$='Elina'],[alt$='xCandyLashes'],[alt$='kristinemaia'],[alt$='Mellooow_'],[alt$='GemmasTW'],[alt$='Linny'],[alt$='NicolePeachy'],[alt$='lucyya'],[alt$='xXLauoaNXx'],[alt$='di1araas'],[alt$='MistieSage']")/*.not("[src*='selina_imai']")*/.after($("<span></span>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
+});
+//$("div[id^='Twitch']").addClass("collapse width");
+$("div.card-columns").parent("div.card-body").addClass("p-3");
+//$("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
+$("div.card-body > div.mojtvprogram").addClass("mx-2 my-3 px-1");
+$("h6.card-subtitle").addClass("mb-1 text-muted ubuntu-bold-italic");
+$("div.card-footer").addClass("border-top border-secondary text-muted text-right");
+$("div#aw-ad-container").remove();
+$("h2,h6:gt(1)").addClass("mb-0");
+$("p.card-text").filter(":eq(2),:eq(5),:eq(8),:eq(11)").addClass("mb-0")
+$("h6").slice(20).addClass("text-wrap");
+$("h6 > i.bi").addClass("mr-1");
+$("hr").slice(0, -2).addClass("my-2");
+$("div.input-group").each(function () {
+    $("div.input-group").filter(":lt(3), :lt(6):gt(3)").addClass("mb-2");
+    $("div.input-group").filter(":eq(3), :gt(5)").addClass("mb-0");
+    $("div.input-group").filter(":eq(0)").addClass("border rounded");
+    $("div.input-group").slice(1, 3).addClass("mr-sm-2");
+    $("div.input-group").slice(4, 6).addClass("input-group-sm");
+});
+$("ul.list-group.maintenance").each(function () {
+    $(this).children("li.list-group-item").addClass("list-group-item-dark px-2 py-0 flex-fill");
+    $(this).children("li.list-group-item").filter(":first-of-type,:last-of-type").addClass("rounded-0");
+    $(this).find("img, object").addClass("d-block mx-auto");
+}).addClass("list-group-flush list-group-horizontal d-flex justify-content-around flex-wrap");
+$("ul.nav").each(function () {
+    $(this).parent().removeClass("py-2").addClass("pt-1");
+    $(this).children().removeClass("px-2 py-1");
+}).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-y": "hidden", "overflow-x": "auto" }).attr("role", "tablist");
+$("ul[id$='List'] a").each(function () {
+    $(this).attr("aria-controls", $(this).attr("href").replace("#", ""));
+}).on("click", function (e) {
+    e.preventDefault()
+    $(this).tab("show");
+}).addClass("py-1").attr({ "data-toggle": "tab", "role": "tab" });
+$("div.tab-content").each(function (i) {
+    $("div.tab-content").eq(i).attr("id", $("ul.nav.nav-tabs").eq(i).attr("id") + "Content");
+});
+$("div.tab-pane").each(function (i) {
+    $("div.tab-pane").eq(i).attr({ "role": "tabpanel", "aria-labelledby": $("div.tab-pane").eq(i).attr("id") + "-tab" });
+});
+$("div.tab-pane").each(function () {
+    $(this).filter("#NewAmountAfterPercetage").children("form").on("input", function () {
+        var h = $("#novcaniIznos").val();
+        var k = $("#procenatIznos").val();
+        var procenat = k / 100;
+        var procenat2 = h * procenat;
 
-            switch ($("#vrstaObracunaNovca").val()) {
-                case "umanjenjeIznos":
-                    var rezUmanjenje = h - procenat2;
-                    $("#NoviNovcaniIznos").text("Novi novčani iznos nakon umanjenja za " + k + "% iznosi " + rezUmanjenje.toFixed(2) + " KM.");
-                    break;
-                case "uvecanjeIznos":
-                    var rezUvecanje = +h + +procenat2;
-                    $("#NoviNovcaniIznos").text("Novi novčani iznos nakon uvećanja za " + k + "% iznosi " + rezUvecanje.toFixed(2) + " KM.");
-            }
-        });
-        $(this).filter("#DividendCalculator").children("form").on("input", function () {
-            var d = $("#cijenaJedneAkcije").val();
-            var f = $("#brojAkcija").val();
-            var g = d * f;
+        switch ($("#vrstaObracunaNovca").val()) {
+            case "umanjenjeIznos":
+                var rezUmanjenje = h - procenat2;
+                $("#NoviNovcaniIznos").text("Novi novčani iznos nakon umanjenja za " + k + "% iznosi " + rezUmanjenje.toFixed(2) + " KM.");
+                break;
+            case "uvecanjeIznos":
+                var rezUvecanje = +h + +procenat2;
+                $("#NoviNovcaniIznos").text("Novi novčani iznos nakon uvećanja za " + k + "% iznosi " + rezUvecanje.toFixed(2) + " KM.");
+        }
+    });
+    $(this).filter("#DividendCalculator").children("form").on("input", function () {
+        var d = $("#cijenaJedneAkcije").val();
+        var f = $("#brojAkcija").val();
+        var g = d * f;
 
-            $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
-        });
-        $(this).filter("#weatherforecast").append($("<a></a>").attr({ "href": "https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr-BA" }).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": false, "data-uid": "awtd1504180838200", "data-editlocation": true }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": "https://oap.accuweather.com/launch.js", "defer": "defer" }));
-        $(this).filter("#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": "https://www.livescore.bz/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo"));
-        $(this).filter("#PriceChart").append($("<iframe></iframe>").attr({ "src": "https://www.blberza.com/Export/Issuer/IssuerChart.aspx?Code=TLKM-R-A", "loading": "eager" }).width(200).height(110).addClass("d-block mx-auto border-0 overflow-hidden rounded-lg"));
-        $(this).filter("#PriceChartLastMonth").append($("<iframe></iframe>").attr({ "src": "https://www.blberza.com/Export/Issuer/IssuerChartLastMonth.aspx?Code=TLKM-R-A", "loading": "lazy" }).width(200).height(110).addClass("d-block mx-auto border-0 overflow-hidden rounded-lg"));
+        $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
     });
-    $("div.list-group").each(function () {
-        $("div.list-group").has("a").filter(":lt(4):gt(1),:lt(11):gt(5)").addClass("list-group-horizontal");
-        $("div.list-group").has("a").filter(":eq(4),:eq(6),:gt(10)").addClass("list-group-flush");
-        $("div.list-group").has("a").filter(":eq(6),:gt(10)").addClass("overflow-auto");
-        $("div.list-group").filter(":eq(5),:eq(13)").addClass("p-2");
-        $("div.list-group").has("a").slice(7, 11).addClass("p-1");
-        $("div.list-group > div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
-        $("div.list-group a.list-group-item").not("[href^='https'],[href^='device_look']").filter(":lt(8):gt(1),:gt(11)").addClass("list-group-item-action");
-        $("div.list-group a[href^='https'].list-group-item").filter(":lt(13):gt(4),:lt(47):gt(39),:gt(57)").addClass("list-group-item-action");
-        $("div.list-group a.list-group-item").not("[href^='https']").eq(7).addClass("list-group-item-primary");
-        $("div.list-group a[href^='https'].list-group-item").slice(4, 9).addClass("list-group-item-primary");
-        $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(10):gt(7)").addClass("list-group-item-secondary");
-        $("div.list-group a[href^='https'].list-group-item").slice(9, 11).addClass("list-group-item-secondary");
-        $("div.list-group a.list-group-item").not("[href^='https']").eq(10).addClass("list-group-item-info");
-        $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(7),:gt(10)").addClass("list-group-item-dark");
-        $("div.list-group a[href^='https'].list-group-item").filter(":lt(4),:gt(12)").addClass("list-group-item-dark");
-        $("div.list-group a.list-group-item").not("[href^='https']").eq(0).addClass("border-top-0");
-        $("div.list-group a[href^='https'].list-group-item").eq(2).addClass("border-top-0");
-        $("div.list-group:eq(6) a.list-group-item").filter(":first,:last").addClass("rounded-0");
-    });
-    $("li.navbar-item").each(function () {
-        $("li.navbar-item").not(":eq(1)").children("a").slice(0, -1).addClass("nav-link").attr({ "href": "#", "role": "button", "data-toggle": "modal", "aria-pressed": true });
-        $("li.navbar-item i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
-        $("li.navbar-item span").addClass("pl-1 d-md-none");
-    });
-    $("div.dropdown-menu:gt(0) > a").not("[data-toggle='collapse']").addClass("dropdown-item").attr("role", "button");
-    //$("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
-    $("a[href^='https']").each(function () {
-        $("a[href^='https']").filter("#time_is_link, .card-link").addClass("text-light");
-        $("a[href^='https'].btn").filter(":lt(7):gt(4),:eq(10),:gt(11)").addClass("btn-primary");
-        $("a[href^='https'].btn").filter(":lt(5),:eq(11)").addClass("btn-secondary");
-        $("a[href^='https'].btn").eq(9).addClass("btn-success");
-        $("a[href^='https'].btn").eq(7).addClass("btn-light");
-        $("a[href^='https'].btn").eq(8).addClass("btn-dark");
-        $("a[href^='https'].btn").slice(10, 12).addClass("m-1");
-    }).attr("target", "_blank");
-    $("a[href^='device_look']").addClass("list-group-item-action").attr({ "role": "button", "target": "_blank" });
-    $("a[href$='Carousel.html']").addClass("dropdown-item").attr("target", "_blank");
-    //$("a.card-link").addClass("text-light");
-    $("a[href='#google'],div#google").css("background-color", "#4285f4");
-    $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
-    $("a[href*='sr']").not(":lt(15):gt(8), :eq(30), :eq(33)").attr("hreflang", "sr");
-    $("a[href*='hr']").not(".btn,.list-group-item").attr("hreflang", "hr");
-    $("a[data-toggle='collapse']").each(function () {
-        $(this).attr({ "aria-controls": $(this).attr("href").replace("#", ""), "aria-expanded": false });
-    });
-    $("form#oldform").attr({ "action": $("select#dictionary-selector").val(), "method": "get", "name": "oldform", "target": "_blank" }).addClass("d-inline-block").css("margin", "46px 0 0 10px");
-    $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
-    $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
-    $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
-    $("input[type='number']").each(function () {
-        $(this).filter("#novcaniIznos,#cijenaJedneAkcije").attr("inputmode", "decimal");
-        $(this).filter("#procenatIznos,#brojAkcija").attr("inputmode", "numeric");
-    });
-    $("input[type='url']").attr("inputmode", "url");
-    $("table.table").each(function () {
-        $(this).addClass("table-sm table-hover table-dark text-center mb-1");
-        $(this).wrap($("<div></div>").addClass("table-responsive"));
-        //$(this).find("td").has("br:eq(12)").addClass("align-middle");
-        //$(this).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
-        $(this).find("th").has("br").siblings("th").addClass("align-middle");
-        $(this).find("td").has("br").siblings("td").addClass("align-middle");
-        //$(this).find("img[src*='logo']").attr("src", function (index, src) { return src + '&logoColor=white' });
-        //$(this).find("img[src*='logo']").not("[src*='logo=nodedotjs'],[src*='logo=vlcmediaplayer'],[src*='logo=epicgames'],[src*='logo=ubisoft'],[src*='logo=bitdefender']").attr("src", function (index, src) { return src + '&logoSize=auto' });
-    });
+    $(this).filter("#weatherforecast").append($("<a></a>").attr({ "href": "https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr-BA" }).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": false, "data-uid": "awtd1504180838200", "data-editlocation": true }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": "https://oap.accuweather.com/launch.js", "defer": "defer" }));
+    $(this).filter("#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": "https://www.livescore.bz/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo"));
+    $(this).filter("#PriceChart").append($("<iframe></iframe>").attr({ "src": "https://www.blberza.com/Export/Issuer/IssuerChart.aspx?Code=TLKM-R-A", "loading": "eager" }).width(200).height(110).addClass("d-block mx-auto border-0 overflow-hidden rounded-lg"));
+    $(this).filter("#PriceChartLastMonth").append($("<iframe></iframe>").attr({ "src": "https://www.blberza.com/Export/Issuer/IssuerChartLastMonth.aspx?Code=TLKM-R-A", "loading": "lazy" }).width(200).height(110).addClass("d-block mx-auto border-0 overflow-hidden rounded-lg"));
+});
+$("div.list-group").each(function () {
+    $("div.list-group").has("a").filter(":lt(4):gt(1),:lt(11):gt(5)").addClass("list-group-horizontal");
+    $("div.list-group").has("a").filter(":eq(4),:eq(6),:gt(10)").addClass("list-group-flush");
+    $("div.list-group").has("a").filter(":eq(6),:gt(10)").addClass("overflow-auto");
+    $("div.list-group").filter(":eq(5),:eq(13)").addClass("p-2");
+    $("div.list-group").has("a").slice(7, 11).addClass("p-1");
+    $("div.list-group > div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
+    $("div.list-group a.list-group-item").not("[href^='https'],[href^='device_look']").filter(":lt(8):gt(1),:gt(11)").addClass("list-group-item-action");
+    $("div.list-group a[href^='https'].list-group-item").filter(":lt(13):gt(4),:lt(47):gt(39),:gt(57)").addClass("list-group-item-action");
+    $("div.list-group a.list-group-item").not("[href^='https']").eq(7).addClass("list-group-item-primary");
+    $("div.list-group a[href^='https'].list-group-item").slice(4, 9).addClass("list-group-item-primary");
+    $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(10):gt(7)").addClass("list-group-item-secondary");
+    $("div.list-group a[href^='https'].list-group-item").slice(9, 11).addClass("list-group-item-secondary");
+    $("div.list-group a.list-group-item").not("[href^='https']").eq(10).addClass("list-group-item-info");
+    $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(7),:gt(10)").addClass("list-group-item-dark");
+    $("div.list-group a[href^='https'].list-group-item").filter(":lt(4),:gt(12)").addClass("list-group-item-dark");
+    $("div.list-group a.list-group-item").not("[href^='https']").eq(0).addClass("border-top-0");
+    $("div.list-group a[href^='https'].list-group-item").eq(2).addClass("border-top-0");
+    $("div.list-group:eq(6) a.list-group-item").filter(":first,:last").addClass("rounded-0");
+});
+$("li.navbar-item").each(function () {
+    $("li.navbar-item").not(":eq(1)").children("a").slice(0, -1).addClass("nav-link").attr({ "href": "#", "role": "button", "data-toggle": "modal", "aria-pressed": true });
+    $("li.navbar-item i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
+    $("li.navbar-item span").addClass("pl-1 d-md-none");
+});
+$("div.dropdown-menu:gt(0) > a").not("[data-toggle='collapse']").addClass("dropdown-item").attr("role", "button");
+//$("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
+$("a[href^='https']").each(function () {
+    $("a[href^='https']").filter("#time_is_link, .card-link").addClass("text-light");
+    $("a[href^='https'].btn").filter(":lt(7):gt(4),:eq(10),:gt(11)").addClass("btn-primary");
+    $("a[href^='https'].btn").filter(":lt(5),:eq(11)").addClass("btn-secondary");
+    $("a[href^='https'].btn").eq(9).addClass("btn-success");
+    $("a[href^='https'].btn").eq(7).addClass("btn-light");
+    $("a[href^='https'].btn").eq(8).addClass("btn-dark");
+    $("a[href^='https'].btn").slice(10, 12).addClass("m-1");
+}).attr("target", "_blank");
+$("a[href^='device_look']").addClass("list-group-item-action").attr({ "role": "button", "target": "_blank" });
+$("a[href$='Carousel.html']").addClass("dropdown-item").attr("target", "_blank");
+//$("a.card-link").addClass("text-light");
+$("a[href='#google'],div#google").css("background-color", "#4285f4");
+$("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
+$("a[href*='sr']").not(":lt(15):gt(8), :eq(30), :eq(33)").attr("hreflang", "sr");
+$("a[href*='hr']").not(".btn,.list-group-item").attr("hreflang", "hr");
+$("a[data-toggle='collapse']").each(function () {
+    $(this).attr({ "aria-controls": $(this).attr("href").replace("#", ""), "aria-expanded": false });
+});
+$("form#oldform").attr({ "action": $("select#dictionary-selector").val(), "method": "get", "name": "oldform", "target": "_blank" }).addClass("d-inline-block").css("margin", "46px 0 0 10px");
+$("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
+$("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
+$("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
+$("input[type='number']").each(function () {
+    $(this).filter("#novcaniIznos,#cijenaJedneAkcije").attr("inputmode", "decimal");
+    $(this).filter("#procenatIznos,#brojAkcija").attr("inputmode", "numeric");
+});
+$("input[type='url']").attr("inputmode", "url");
+$("table.table").each(function () {
+    $(this).addClass("table-sm table-hover table-dark text-center mb-1");
+    $(this).wrap($("<div></div>").addClass("table-responsive"));
+    //$(this).find("td").has("br:eq(12)").addClass("align-middle");
+    //$(this).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
+    $(this).find("th").has("br").siblings("th").addClass("align-middle");
+    $(this).find("td").has("br").siblings("td").addClass("align-middle");
+    //$(this).find("img[src*='logo']").attr("src", function (index, src) { return src + '&logoColor=white' });
+    //$(this).find("img[src*='logo']").not("[src*='logo=nodedotjs'],[src*='logo=vlcmediaplayer'],[src*='logo=epicgames'],[src*='logo=ubisoft'],[src*='logo=bitdefender']").attr("src", function (index, src) { return src + '&logoSize=auto' });
+});
     //document.cookie = "lang=sr; max-age=604800";
 });  
