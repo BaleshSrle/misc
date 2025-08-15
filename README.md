@@ -1,4 +1,5 @@
 [![Open in Visual Studio Code](https://img.shields.io/badge/Open_in_Visual_Studio_Code-007acc)](https://open.vscode.dev/BaleshSrle/misc)
+[![Purge jsDelivr cache](https://github.com/BaleshSrle/misc/actions/workflows/main.yml/badge.svg)](https://github.com/BaleshSrle/misc/actions/workflows/main.yml)
 # misc
 Miscellaneous projects on which I'm working on.
 
