@@ -171,9 +171,9 @@ $(document).ready(function () {
     //$("[src*='simpleicons']").height(32);
     //$("img.devojkaCarouselIMG").addClass("mx-auto d-block w-auto rounded-lg").attr("loading", "lazy");
     $("img").each(function () {
-        $(this).filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
+        //$(this).filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
         //$(this).filter("[src*='uptimerobot']").attr("src", function (index, src) { return src + '&cacheSeconds=3600' });
-        $(this).filter("[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
+        //$(this).filter("[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
         $(this).filter("[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
         $(this).filter("[src*='shields']").on("error", function () { this.src = this.src; });
     });
@@ -196,7 +196,7 @@ $(document).ready(function () {
             "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "loading": "lazy"
         });
     });
-    $("img.githubBadge").each(function () {
+    /* $("img.githubBadge").each(function () {
         const Type = $(this).data("type");
         const Package = $(this).data("package");
         const Filter = $(this).data("filter") || "*";
@@ -208,7 +208,7 @@ $(document).ready(function () {
         $(this).attr({
             "src": "https://img.shields.io/github/v/" + Type + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=181717&color=" + Color, "loading": "lazy"
         });
-    });
+    }); */
     $("img.LinuxDistroBadge").each(function () {
         const DistroName = encodeURIComponent($(this).data("distro-name"));
         const DistroEdition = encodeURIComponent($(this).data("distro-edition"));
@@ -264,7 +264,7 @@ $(document).ready(function () {
             "src": "https://img.shields.io/visual-studio-marketplace/v/" + ExtensionId + "?label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc", "loading": "lazy"
         });
     });
-    $("img.websiteBadge").each(function () {
+    /* $("img.websiteBadge").each(function () {
         const URL = encodeURIComponent($(this).data("url"));
         const Label = encodeURIComponent($(this).data("label") || "Website");
         const Logo = $(this).data("logo") || "";
@@ -274,7 +274,7 @@ $(document).ready(function () {
         $(this).attr({
             "src": "https://img.shields.io/website?url=" + URL + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + Color + "&cacheSeconds=1800", "alt": "Website", "loading": "lazy"
         });
-    });
+    }); */
     $("img.wingetBadge").each(function () {
         const Package = $(this).data("package");
         const Label = encodeURIComponent($(this).data("label"));
@@ -289,7 +289,7 @@ $(document).ready(function () {
     $("object.w3cValidationBadge").each(function () {
         const Parser = $(this).data("parser");
         const URL = encodeURIComponent($(this).data("url"));
-        const LabelTxtSuffix = $(this).data("labeltxtsuffix");
+        const LabelTxtSuffix = $(this).data("labeltxtsuffix") || "";
         $(this).attr({ "data": "https://img.shields.io/w3c-validation/" + Parser + "?targetUrl=" + URL + "&label=W3C%20Validation%20-%20" + LabelTxtSuffix + "&cacheSeconds=1800&link=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3D" + URL, "name": "W3C Validation - " + LabelTxtSuffix }).addClass("d-block mx-auto");
     });
     $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo" }).height(32));
