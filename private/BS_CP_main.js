@@ -196,28 +196,6 @@ $(document).ready(function () {
             "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "loading": "lazy"
         });
     });
-    /* $("img.githubBadge").each(function () {
-        const Type = $(this).data("type");
-        const Package = $(this).data("package");
-        const Filter = $(this).data("filter") || "*";
-        const Logo = $(this).data("logo") || "github";
-        const LogoColor = $(this).data("logocolor") || "";
-        const LogoSize = $(this).data("logosize") || "";
-        const Label = encodeURIComponent($(this).data("label"));
-        const Color = $(this).data("color") || "blue";
-        $(this).attr({
-            "src": "https://img.shields.io/github/v/" + Type + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=181717&color=" + Color, "loading": "lazy"
-        });
-    }); */
-    $("img.LinuxDistroBadge").each(function () {
-        const DistroName = encodeURIComponent($(this).data("distro-name"));
-        const DistroEdition = encodeURIComponent($(this).data("distro-edition"));
-        const DistroColor = $(this).data("distro-color") || "blue";
-        const DistroLogo = $(this).data("distro-logo");
-        $(this).attr({
-            "src": "https://img.shields.io/badge/" + DistroName + "-" + DistroEdition + "%2064--bit-" + DistroColor + "?logo=" + DistroLogo + "&logoColor=white&logoSize=auto", "loading": "lazy"
-        });
-    });
     $("img.MozillaExtensionBadge").each(function () {
         const ExtensionId = $(this).data("extension-id");
         const ExtensionLabel = encodeURIComponent($(this).data("extension-label"));
@@ -264,17 +242,6 @@ $(document).ready(function () {
             "src": "https://img.shields.io/visual-studio-marketplace/v/" + ExtensionId + "?label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc", "loading": "lazy"
         });
     });
-    /* $("img.websiteBadge").each(function () {
-        const URL = encodeURIComponent($(this).data("url"));
-        const Label = encodeURIComponent($(this).data("label") || "Website");
-        const Logo = $(this).data("logo") || "";
-        const LogoColor = $(this).data("logocolor") || "";
-        const LogoSize = $(this).data("logosize") || "";
-        const Color = $(this).data("color") || "";
-        $(this).attr({
-            "src": "https://img.shields.io/website?url=" + URL + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + Color + "&cacheSeconds=1800", "alt": "Website", "loading": "lazy"
-        });
-    }); */
     $("img.wingetBadge").each(function () {
         const Package = $(this).data("package");
         const Label = encodeURIComponent($(this).data("label"));
@@ -285,12 +252,6 @@ $(document).ready(function () {
         $(this).attr({
             "src": "https://img.shields.io/winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy"
         });
-    });
-    $("object.w3cValidationBadge").each(function () {
-        const Parser = $(this).data("parser");
-        const URL = encodeURIComponent($(this).data("url"));
-        const LabelTxtSuffix = $(this).data("labeltxtsuffix") || "";
-        $(this).attr({ "data": "https://img.shields.io/w3c-validation/" + Parser + "?targetUrl=" + URL + "&label=W3C%20Validation%20-%20" + LabelTxtSuffix + "&cacheSeconds=1800&link=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3D" + URL, "name": "W3C Validation - " + LabelTxtSuffix }).addClass("d-block mx-auto");
     });
     $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo" }).height(32));
     $("div#churchCalendarToast > div.toast-body").addClass("p-0").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height(360));

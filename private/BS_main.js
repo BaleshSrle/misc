@@ -44,6 +44,53 @@ $(document).ready(function () {
             "src": "https://img.shields.io/github/v/" + Type + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color, "loading": "lazy"
         });
     });
+    $("img.githubLinkBadge").each(function () {
+        const Type = $(this).data("type");
+        const Package = $(this).data("package");
+        const Filter = $(this).data("filter") || "*";
+        const Logo = $(this).data("logo");
+        const LogoColor = $(this).data("logocolor") || "";
+        const LogoSize = $(this).data("logosize") || "";
+        const Label = encodeURIComponent($(this).data("label"));
+        const LabelColor = $(this).data("labelcolor") || "";
+        const Color = $(this).data("color") || "blue";
+        const URL = $(this).data("url");
+        $(this).attr({
+            "src": "https://img.shields.io/github/v/" + Type + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + LabelColor + "&color=" + Color, "loading": "lazy"
+        }).wrap($("<a></a>").attr({ "href": URL, "target": "_blank" }));
+    });
+    $("img.StaticBadge").each(function () {
+        const Label1Text = encodeURIComponent($(this).data("label1") || "");
+        const Label1Color = $(this).data("color1") || "";
+        const Label2Text = encodeURIComponent($(this).data("label2") || "");
+        const Label2Color = $(this).data("color2") || "";
+        const BadgeStyle = $(this).data("badgestyle") || "";
+        const Logo = $(this).data("logo") || "";
+        const LogoColor = $(this).data("logocolor") || "";
+        const LogoSize = $(this).data("logosize") || "";
+        const URL = $(this).data("url");
+        const URLLang = $(this).data("urllang") || "";
+        const Name = $(this).data("name") || "";
+        $(this).attr({ "src": "https://img.shields.io/badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label2Text + "&labelColor=" + Label2Color, "alt": Name, "loading": "lazy" }).wrap($("<a></a>").attr({ "href": URL, "target": "_blank", "hreflang": URLLang }));
+    });
+    $("img.StaticBadge2").each(function () {
+        const Label1Text = encodeURIComponent($(this).data("label1") || "");
+        const Label1Color = $(this).data("color1") || "";
+        const Label2Text = encodeURIComponent($(this).data("label2") || "");
+        const Label2Color = $(this).data("color2") || "";
+        const BadgeStyle = $(this).data("badgestyle") || "";
+        const Logo = $(this).data("logo") || "";
+        const LogoColor = $(this).data("logocolor") || "";
+        const LogoSize = $(this).data("logosize") || "";
+        const Name = $(this).data("name") || "";
+        $(this).attr({ "src": "https://img.shields.io/badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label2Text + "&labelColor=" + Label2Color, "alt": Name, "loading": "lazy" });
+    });
+    $("img.w3cValidationBadge").each(function () {
+        const Parser = $(this).data("parser");
+        const URL = encodeURIComponent($(this).data("url"));
+        const LabelTxtSuffix = $(this).data("labeltxtsuffix") || "";
+        $(this).attr({ "src": "https://img.shields.io/w3c-validation/" + Parser + "?targetUrl=" + URL + "&label=W3C%20Validation%20-%20" + LabelTxtSuffix + "&cacheSeconds=1800", "name": "W3C Validation - " + LabelTxtSuffix, "loading": "lazy" }).wrap($("<a></a>").attr({ "href": "https://validator.w3.org/nu/?doc=" + decodeURIComponent(URL), "target": "_blank", "hreflang": "en" }));
+    });
     $("img.websiteBadge").each(function () {
         const URL = encodeURIComponent($(this).data("url"));
         const Label = encodeURIComponent($(this).data("label") || "Website");
@@ -55,24 +102,5 @@ $(document).ready(function () {
             "src": "https://img.shields.io/website?url=" + URL + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + Color + "&cacheSeconds=1800", "alt": "Website", "loading": "lazy"
         });
     });
-    $("object.StaticBadge").each(function () {
-        const Label1Text = encodeURIComponent($(this).data("label1") || "");
-        const Label1Color = $(this).data("color1") || "";
-        const Label2Text = encodeURIComponent($(this).data("label2") || "");
-        const Label2Color = $(this).data("color2") || "";
-        const BadgeStyle = $(this).data("badgestyle") || "";
-        const Logo = $(this).data("logo") || "";
-        const LogoColor = $(this).data("logocolor") || "";
-        const LogoSize = $(this).data("logosize") || "";
-        const URL = encodeURIComponent($(this).data("url"));
-        const Name = $(this).data("name") || "";
-        $(this).attr({ "data": "https://img.shields.io/badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label2Text + "&labelColor=" + Label2Color + "&link=" + URL, "name": Name });
-    });
-    /*$("object.w3cValidationBadge").each(function () {
-        const Parser = $(this).data("parser");
-        const URL = encodeURIComponent($(this).data("url"));
-        const LabelTxtSuffix = $(this).data("labeltxtsuffix") || "";
-        $(this).attr({ "data": "https://img.shields.io/w3c-validation/" + Parser + "?targetUrl=" + URL + "&label=W3C%20Validation%20-%20" + LabelTxtSuffix + "&cacheSeconds=1800&link=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3D" + URL, "name": "W3C Validation - " + LabelTxtSuffix }).addClass("d-block mx-auto");
-    });*/
     document.normalize();
 });
