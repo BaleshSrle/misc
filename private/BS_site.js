@@ -98,7 +98,7 @@ jQuery(function ($) {
         $(this).find("img.StaticBadge").filter("[alt='Joomla'],[alt='Bootstrap'],[alt='WordPress'],[alt='jQuery'],[alt$='šablon']").addClass("my-0 ml-1 align-text-top").removeAttr("style");
         $(this).children("i.bi-skype").addClass("text-muted");
     });
-    $("object[name='CCleaner'],img[alt='CCleaner']").addClass("my-0 ml-1 mr-0 align-text-top").removeAttr("style");
+    $("object[name='CCleaner'],img[alt='CCleaner']").addClass("my-0 ml-1 align-text-top").removeAttr("style");
     $("div#MediaPlayer.carousel").each(function () {
         $(this).carousel({
             interval: 3000,
