@@ -67,7 +67,7 @@ jQuery(function ($) {
         $("li.nav-item:eq(8)").html("<a class='nav-link' href='sitemap.xml'><i class='bi bi-diagram-3-fill pr-1'></i>Mapa sajta</a>");
     });
     $("img").filter("[src*='style=for-the-badge'],[alt$='Ubuntu'],[alt='IP2Location'],[alt^='Joomla']:gt(0)").addClass("rounded-lg");
-    $("img[src*='style=for-the-badge']:gt(0)").attr("src", function (index, src) { return src + '&logoSize=auto' });
+    //$("img[src*='style=for-the-badge']:gt(0)").attr("src", function (index, src) { return src + '&logoSize=auto' });
     $("main").each(function () {
         $(this).find("img").addClass("border-0").css("margin", "3px 0px");
         $(this).find("img").parents("div.card-body").addClass("px-2");
