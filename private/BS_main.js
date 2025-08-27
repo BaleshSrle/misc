@@ -57,11 +57,9 @@ $(document).ready(function () {
         //const LabelColor = $(this).data("labelcolor") || "";
         const Color = $(this).data("color") || "blue";
         $(this).attr({
-            "src": "https://img.shields.io/github/v/" + Release1 + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=181717&color=" + Color, "alt": "Shields.io Badge for GitHub Package " + Package, "loading": "lazy"
+            "src": "https://img.shields.io/github/v/" + Release1 + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=181717&color=" + Color, "alt": "Badge for GitHub Package " + Package, "loading": "lazy"
         }).on("error", function () {
-            $(this).attr({
-                "src": "https://badgen.net/github/" + Release2 + "/" + Package + Stable + "?icon=" + Logo + "&label=" + Label + "%20%40%20GitHub&labelColor=181717&color=" + Color, "alt": "Badgen Badge for GitHub Package " + Package, "loading": "lazy"
-            });
+            $(this).attr("src", "https://badgen.net/github/" + Release2 + "/" + Package + Stable + "?icon=" + Logo + "&label=" + Label + "%20%40%20GitHub&labelColor=181717&color=" + Color);
         });
     });
     $("img.githubLinkBadge").each(function () {
@@ -78,11 +76,9 @@ $(document).ready(function () {
         const Color = $(this).data("color") || "blue";
         const URL = $(this).data("url");
         $(this).attr({
-            "src": "https://img.shields.io/github/v/" + Release1 + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + LabelColor + "&color=" + Color, "alt": "Shields.io Link Badge for GitHub Package " + Package, "loading": "lazy"
+            "src": "https://img.shields.io/github/v/" + Release1 + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + LabelColor + "&color=" + Color, "alt": "Link Badge for GitHub Package " + Package, "loading": "lazy"
         }).on("error", function () {
-            $(this).attr({
-                "src": "https://badgen.net/github/" + Release2 + "/" + Package + Stable + "?icon=" + Logo + "&label=" + Label + "%20%40%20GitHub&labelColor=181717&color=" + Color, "alt": "Badgen Link Badge for GitHub Package " + Package, "loading": "lazy"
-            });
+            $(this).attr("src", "https://badgen.net/github/" + Release2 + "/" + Package + Stable + "?icon=" + Logo + "&label=" + Label + "%20%40%20GitHub&labelColor=181717&color=" + Color);
         }).wrap($("<a></a>").attr({ "href": URL, "target": "_blank" }));
     });
     $("img.StaticBadge").each(function () {
