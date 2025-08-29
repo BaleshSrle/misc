@@ -198,6 +198,23 @@ $(document).ready(function () {
             "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + $(this).data("label"), "loading": "lazy"
         });
     });
+    $("img.ghCommitActivity").each(function () {
+        const Period = $(this).data("period");
+        const PeriodLabel = $(this).data("periodlabel");
+        const Package = $(this).data("package");
+        $(this).attr({ "src": "https://img.shields.io/github/commit-activity/" + Period + "/" + Package + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Commit Activity " + PeriodLabel, "loading": "lazy" }).addClass("d-block mx-auto");
+        if (Period == "t") {
+            $(this).on("error", function () {
+                $(this).attr("src", "https://badgen.net/github/commits/" + Package + "?icon=github&labelColor=181717");
+            });
+        }
+    });
+    $("img.ghLastCommit").each(function () {
+        const Package = $(this).data("package");
+        $(this).attr({ "src": "https://img.shields.io/github/last-commit/" + Package + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Last Commit", "loading": "lazy" }).addClass("d-block mx-auto").on("error", function () {
+            $(this).attr("src", "https://badgen.net/github/last-commit/" + Package + "?icon=github&labelColor=181717");
+        });
+    });
     $("img.LinuxDistroBadge").each(function () {
         const Name = encodeURIComponent($(this).data("name"));
         const Edition = encodeURIComponent($(this).data("edition"));
