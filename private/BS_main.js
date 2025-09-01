@@ -15,9 +15,10 @@ $(document).ready(function () {
         $(this).append($("<style></style").text("n.ubuntu-regular { font-family: 'Ubuntu', sans-serif; font-weight: 400; font-style: normal; }\n.ubuntu-regular-italic { font-family: 'Ubuntu', sans-serif; font-weight: 400; font-style: italic; }\n.ubuntu-bold { font-family: 'Ubuntu', sans-serif; font-weight: 700; font-style: normal; }\n.ubuntu-bold-italic { font-family: 'Ubuntu', sans-serif; font-weight: 700; font-style: italic; }"));
         $(this).append($("<link>").attr({ "rel": "icon", "href": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png" }));
     });
-    $("[href$='bootstrap.min.css'],[src$='jquery.min.js'],[href$='bootstrap.bundle.min.js']").on("error", function () {
+    /* $("[href$='bootstrap.min.css'],[src$='jquery.min.js'],[href$='bootstrap.bundle.min.js']").on("error", function () {
         location.reload();
-    });
+    }); */
+    $("script[src*='bootstrap@4']").attr("crossorigin", "anonymous").on("error", function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"; })
     $("[href$='.min.css'],[src$='.min.js']").attr("crossorigin", "anonymous");
     //$("body").css("font-family", "Ubuntu");
     $("body").addClass("ubuntu-regular");
