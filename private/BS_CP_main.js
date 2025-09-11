@@ -198,6 +198,24 @@ $(document).ready(function () {
             "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + $(this).data("label"), "loading": "lazy"
         });
     });
+    $("img.ghActionsWorkflow").each(function () {
+        const Package = $(this).data("package");
+        const Workflow = $(this).data("workflow");
+        const WorkflowLabel = $(this).data("workflowlabel");
+        const Branch = $(this).data("branch") || "main";
+        const Event = $(this).data("event") || "";
+        $(this).attr({
+            "src": "https://img.shields.io/github/actions/workflow/status/" + Package + "/" + Workflow + ".yml?branch=" + Branch + "&event=" + Event + "&logo=githubactions&logoColor=white&logoSize=auto&label=GitHub%20Actions%20Workflow&labelColor=2088ff", "alt": "GitHub Actions Workflow - " + WorkflowLabel, "loading": "lazy"
+        }).addClass("d-block mx-auto");
+    });
+    $("img.ghChecks").each(function () {
+        const Package = $(this).data("package");
+        const Branch = $(this).data("branch") || "main";
+        const JobName = $(this).data("jobname") || "";
+        $(this).attr({ "src": "https://img.shields.io/github/check-runs/" + Package + "/" + Branch + "?nameFilter=" + JobName + "&logo=github&logoColor=white&logoSize=auto&label=Checks%20" + JobName + "&labelColor=181717", "alt": "GitHub branch check runs", "loading": "lazy" }).addClass("d-block mx-auto").on("error", function () {
+            $(this).attr("src", "https://badgen.net/github/checks/" + Package + "/" + Branch + "/" + JobName + "?icon=github&label=Checks%20" + JobName + "&labelColor=181717");
+        });
+    });
     $("img.ghCommitActivity").each(function () {
         const Period = $(this).data("period");
         const PeriodLabel = $(this).data("periodlabel");
@@ -214,6 +232,20 @@ $(document).ready(function () {
         $(this).attr({ "src": "https://img.shields.io/github/last-commit/" + Package + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Last Commit", "loading": "lazy" }).addClass("d-block mx-auto").on("error", function () {
             $(this).attr("src", "https://badgen.net/github/last-commit/" + Package + "?icon=github&labelColor=181717");
         });
+    });
+    $("img.ghPRDetail").each(function () {
+        const Package = $(this).data("package");
+        const Number = $(this).data("number");
+        $(this).attr({
+            "src": "https://img.shields.io/github/pulls/detail/state/" + Package + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Detail%20for%20%23" + Number + "&labelColor=181717", "alt": "GitHub PR Detail #" + Number, "loading": "lazy"
+        }).addClass("d-block mx-auto");
+    });
+    $("img.ghPRStatus").each(function () {
+        const Package = $(this).data("package");
+        const Number = $(this).data("number");
+        $(this).attr({
+            "src": "https://img.shields.io/github/status/s/pulls/" + Package + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Status%20%23" + Number + "&labelColor=181717", "alt": "GitHub PR Status #" + Number, "loading": "lazy"
+        }).addClass("d-block mx-auto");
     });
     $("img.LinuxDistroBadge").each(function () {
         const Name = encodeURIComponent($(this).data("name"));
