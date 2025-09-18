@@ -27,16 +27,6 @@ $(document).ready(function () {
     }).attr("type", "button");
     $("#godina").text(new Date().getFullYear() + '.');
     $("#lastmod").html("Ova stranica je poslednji put ažurirana " + new Date(document.lastModified).toLocaleDateString("sr-BA"));
-    /* $("img.BadgenStaticBadgeLink").each(function () {
-        const Label = encodeURIComponent($(this).data("label"));
-        const Status = encodeURIComponent($(this).data("status"));
-        const Color = $(this).data("color");
-        const Icon = $(this).data("icon") || "";
-        const LabelColor = $(this).data("labelcolor") || "";
-        const url = $(this).data("url");
-        const urlLang = $(this).data("urllang");
-        $(this).attr({ "src": "https://badgen.net/static/" + Label + "/" + Status + "/" + Color + "?icon=" + Icon + "&labelColor=" + LabelColor, "loading": "lazy" }).wrap($("<a></a>").attr({ "href": url, "hreflang": urlLang, "target": "_blank" }));
-    }); */
     $("img.BadgenStaticBadge").each(function () {
         const Label = encodeURIComponent($(this).data("label"));
         const Status = encodeURIComponent($(this).data("status"));

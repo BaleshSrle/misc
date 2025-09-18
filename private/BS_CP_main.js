@@ -177,28 +177,56 @@ $(document).ready(function () {
         $(this).filter("[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
         //$(this).filter("[src*='shields']").on("error", function () { this.src = this.src; });
     });
-    $("img.ChromeExtensionBadge").each(function () {
-        const ExtensionId = $(this).data("extension-id");
-        const ExtensionLabel = encodeURIComponent($(this).data("extension-label"));
-        const ExtensionColor = $(this).data("extension-color") || "blue";
-        $(this).attr({
-            "src": "https://img.shields.io/chrome-web-store/v/" + ExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy"
-        }).on("error", function () {
-            $(this).attr({
-                "src": "https://badgen.net/chrome-web-store/v/" + ExtensionId + "?icon=chrome&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy"
-            });
-        }).wrap($("<a></a>").attr({ "href": "https://chromewebstore.google.com/detail/" + ExtensionId, "hreflang": "en", "target": "_blank" }));
-    });
-    $("img.flatpakBadge").each(function () {
+    $("img.AppBadge").each(function () {
+        const PackageManager = $(this).data("packagemanager");
         const Package = $(this).data("package");
+        const Channel = $(this).data("channel");
         const Label = encodeURIComponent($(this).data("label"));
-        const Logo = $(this).data("logo") || "flatpak";
+        const Logo = $(this).data("logo") || "";
         const LogoColor = $(this).data("logocolor") || "";
         const LogoSize = $(this).data("logosize") || "";
         const Color = $(this).data("color") || "blue";
-        $(this).attr({
-            "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + $(this).data("label"), "loading": "lazy"
-        }).wrap($("<a></a>").attr({ "href": "https://flathub.org/hr/apps/" + Package, "hreflang": "hr", "target": "_blank" }));
+        if (PackageManager === "Flatpak") {
+            $(this).attr({
+                "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + $(this).data("label"), "loading": "lazy"
+            }).wrap($("<a></a>").attr({ "href": "https://flathub.org/hr/apps/" + Package, "hreflang": "hr", "target": "_blank" }));
+        } else if (PackageManager === "Snapcraft") {
+            $(this).attr({
+                "src": "https://img.shields.io/snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "alt": "Snapcraft Badge for " + $(this).data("label"), "loading": "lazy"
+            }).on("error", function () {
+                $(this).attr("src", "https://badgen.infra.medigy.com/snapcraft/v/" + Package + "/amd64?label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color)
+            }).wrap($("<a></a>").attr({ "href": "https://snapcraft.io/" + Package, "hreflang": "en", "target": "_blank" }));
+        } else {
+            $(this).attr({
+                "src": "https://img.shields.io/winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy"
+            }).on("error", function () {
+                $(this).attr({ "src": "https://badgen.net/winget/v/" + Package + "?color=" + Color + "&icon=" + Logo + "&label=" + Label + "%20%40%20winget", "loading": "lazy" });
+            });
+        }
+    });
+    $("img.ExtensionBadge").each(function () {
+        const Browser = $(this).data("browser");
+        const ExtensionId = $(this).data("extension-id");
+        const ExtensionLabel = encodeURIComponent($(this).data("extension-label"));
+        const ExtensionColor = $(this).data("extension-color") || "blue";
+        if (Browser === "Chromium") {
+            $(this).attr({
+                "src": "https://img.shields.io/chrome-web-store/v/" + ExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy"
+            }).on("error", function () {
+                $(this).attr({
+                    "src": "https://badgen.net/chrome-web-store/v/" + ExtensionId + "?icon=chrome&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy"
+                });
+            }).wrap($("<a></a>").attr({ "href": "https://chromewebstore.google.com/detail/" + ExtensionId, "target": "_blank" }));
+        }
+        if (Browser === "Firefox") {
+            $(this).attr({
+                "src": "https://img.shields.io/amo/v/" + ExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + ExtensionColor, "loading": "lazy"
+            }).on("error", function () {
+                $(this).attr({
+                    "src": "https://badgen.net/amo/v/" + ExtensionId + "?color=" + ExtensionColor + "&icon=firefox&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139", "loading": "lazy"
+                });
+            }).wrap($("<a></a>").attr({ "href": "https://addons.mozilla.org/hr/firefox/addon/" + ExtensionId, "hreflang": "hr", "target": "_blank" }));
+        }
     });
     $("img.ghActionsWorkflow").each(function () {
         const Package = $(this).data("package");
@@ -260,18 +288,6 @@ $(document).ready(function () {
             $(this).attr("src", "https://badgen.net/static/" + Name + "/" + Edition + "%2064-bit/" + Color);
         });
     });
-    $("img.MozillaExtensionBadge").each(function () {
-        const ExtensionId = $(this).data("extension-id");
-        const ExtensionLabel = encodeURIComponent($(this).data("extension-label"));
-        const ExtensionColor = $(this).data("extension-color") || "blue";
-        $(this).attr({
-            "src": "https://img.shields.io/amo/v/" + ExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + ExtensionColor, "loading": "lazy"
-        }).on("error", function () {
-            $(this).attr({
-                "src": "https://badgen.net/amo/v/" + ExtensionId + "?color=" + ExtensionColor + "&icon=firefox&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139", "loading": "lazy"
-            });
-        }).wrap($("<a></a>").attr({ "href": "https://addons.mozilla.org/hr/firefox/addon/" + ExtensionId, "hreflang": "hr", "target": "_blank" }));
-    });
     $("img.simpleiconsCDN").each(function () {
         const IconName = $(this).data("iconname");
         //const siIconColor = $(this).data("color") || "";
@@ -279,20 +295,6 @@ $(document).ready(function () {
         $(this).attr({
             "src": "https://cdn.simpleicons.org/" + IconName, "height": "32", "alt": IconAlt, "loading": "lazy"
         });
-    });
-    $("img.snapBadge").each(function () {
-        const Package = $(this).data("package");
-        const Channel = $(this).data("channel");
-        const Label = encodeURIComponent($(this).data("label"));
-        const Logo = $(this).data("logo") || "snapcraft";
-        const LogoColor = $(this).data("logocolor") || "";
-        const LogoSize = $(this).data("logosize") || "";
-        const Color = $(this).data("color") || "blue";
-        $(this).attr({
-            "src": "https://img.shields.io/snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "alt": "Snapcraft Badge for " + $(this).data("label"), "loading": "lazy"
-        }).on("error", function () {
-            $(this).attr("src", "https://badgen.infra.medigy.com/snapcraft/v/" + Package + "/amd64?label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color)
-        }).wrap($("<a></a>").attr({ "href": "https://snapcraft.io/" + Package, "hreflang": "en", "target": "_blank" }));
     });
     $("img.UptimeRobotBadge").each(function () {
         const Key = $(this).data("key");
@@ -315,19 +317,6 @@ $(document).ready(function () {
         }).on("error", function () {
             $(this).attr("src", "https://badgen.net/vs-marketplace/v/" + ExtensionId + "?icon=visualstudio&label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc");
         }).wrap($("<a></a>").attr({ "href": "https://marketplace.visualstudio.com/items?itemName=" + ExtensionId, "hreflang": "en", "target": "_blank" }));
-    });
-    $("img.wingetBadge").each(function () {
-        const Package = $(this).data("package");
-        const Label = encodeURIComponent($(this).data("label"));
-        const Logo = $(this).data("logo") || "";
-        const LogoColor = $(this).data("logocolor") || "";
-        const LogoSize = $(this).data("logosize") || "";
-        const Color = $(this).data("color") || "blue";
-        $(this).attr({
-            "src": "https://img.shields.io/winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy"
-        }).on("error", function () {
-            $(this).attr("src", "https://badgen.net/winget/v/" + Package + "?color=" + Color + "&icon=" + Logo + "&label=" + Label + "%20%40%20winget");
-        });
     });
     $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo" }).height(32));
     $("div#churchCalendarToast > div.toast-body").addClass("p-0").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height(360));
