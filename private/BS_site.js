@@ -23,7 +23,6 @@ jQuery(function ($) {
         // $(this).prepend("<base href=file:///D:/company/>");
         $(this).append($("<meta>").attr({ "name": "copyright", "content": "DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() }), $("<meta>").attr({ "name": "GENERATOR", "content": "Visual Studio Code 1.100.2" }));
         $(this).append($.getScript('https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js'));
-
     });
     if ($("li.nav-item.dropdown").hasClass("active")) {
         //$("head").prepend($("<title></title>").text(".::Servis računara B@LESHEVICH:: - ::" + $("li.breadcrumb-item:eq(1)").text() + ":: - ::" + $("li.breadcrumb-item:last").text() + "::."));
@@ -94,41 +93,32 @@ jQuery(function ($) {
         $(this).find("a[href^='https']").attr("target", "_blank");
     }).addClass("col-sm-6 col-xl-8 my-2 px-md-2");
     $("p.small").each(function () {
-        $(this).find("img").filter("[alt='Visual Studio Code'],[alt='HTML5'],[alt='CSS3'],[alt='Font Awesome']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
-        $(this).find("img.StaticBadge").filter("[alt='Joomla'],[alt='Bootstrap'],[alt='WordPress'],[alt='jQuery'],[alt$='šablon']").addClass("my-0 ml-1 align-text-top").removeAttr("style");
+        $(this).find("img").filter("[alt$='Visual Studio Code'],[alt$='HTML5'],[alt$='CSS3'],[alt$='Font Awesome']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
+        $(this).find("img.StaticBadge").filter("[alt$='Joomla'],[alt$='Bootstrap'],[alt$='WordPress'],[alt$='jQuery'],[alt$='šablon']").addClass("my-0 ml-1 align-text-top").removeAttr("style");
         $(this).children("i.bi-skype").addClass("text-muted");
     });
-    $("object[name='CCleaner'],img[alt='CCleaner']").addClass("my-0 ml-1 align-text-top").removeAttr("style");
+    $("object[name='CCleaner'],img[alt$='CCleaner']").addClass("my-0 ml-1 align-text-top").removeAttr("style");
+    $("div.carousel").filter("MediaPlayer, #WebBrowser, #microsoft").carousel({
+        interval: 3000,
+        keyboard: false,
+        ride: "carousel",
+        touch: false
+    }).addClass("slide carousel-fade");
     $("div#MediaPlayer.carousel").each(function () {
-        $(this).carousel({
-            interval: 3000,
-            keyboard: false,
-            ride: "carousel",
-            touch: false
-        }).addClass("slide carousel-fade").wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
+        $(this).wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
         $(this).find("div.carousel-item:eq(0)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20VLC%20media%20player-ff8800?style=for-the-badge&logo=vlcmediaplayer&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.videolan.org%2Fvlc%2Findex.sr.html", "name": "Get VLC media player - It plays, it streams, it kills WiMPs!!" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
         $(this).find("div.carousel-item:eq(1)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20Winamp-f93821?style=for-the-badge&logo=winamp&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwinamp.com%2Fplayer", "name": "Download Winamp Player" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
         $(this).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Spotify-1ed760?style=for-the-badge&logo=spotify&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.spotify.com%2Frs-sr%2Fdownload%2Fwindows%2F", "name": "Windows Download - Spotify" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
     });
     $("div#WebBrowser.carousel").each(function () {
-        $(this).carousel({
-            interval: 3000,
-            keyboard: false,
-            ride: "carousel",
-            touch: false
-        }).addClass("slide carousel-fade").wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
+        $(this).wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
         $(this).find("div.carousel-item:eq(0)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20Vivaldi%20Browser-ef3939?style=for-the-badge&logo=vivaldi&logoColor=white&logoSize=auto&link=https%3A%2F%2Fvivaldi.com%2Fsr%2F", "name": "Download Vivaldi Web Browser Today!" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
         $(this).find("div.carousel-item:eq(1)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Google%20Chrome-4285f4?style=for-the-badge&logo=googlechrome&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.google.com%2Fchrome%2F", "name": "Download Google Chrome" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
         $(this).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Firefox-ff7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.firefox.com%2Fsr%2F", "name": "Download Firefox" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
         $(this).find("div.carousel-item:eq(3)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Opera%20Browser-ff1b2d?style=for-the-badge&logo=opera&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.opera.com%2Fdownload", "name": "Download Opera Browser" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
     });
     $("div#microsoft.carousel").each(function () {
-        $(this).carousel({
-            interval: 3000,
-            keyboard: false,
-            ride: "carousel",
-            touch: false
-        }).addClass("slide carousel-fade").wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
+        $(this).wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
         $(this).find("div.carousel-item:eq(0)").wrapInner($("<a></a>").attr({ "href": "https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download", "hreflang": "sr-RS", "target": "_blank" }).append($("<img>").attr({ "src": "images/MSE.png", "alt": "Microsoft Security Essentials" }).addClass("border-0 d-block mx-auto my-4 img-fluid")));
         $(this).find("div.carousel-item:eq(1)").wrapInner($("<a></a>").attr({ "href": "https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc", "hreflang": "sr-RS", "target": "_blank" }).append($("<img>").attr({ "src": "images/win_wallpaper.png", "alt": "Windows Personalizovanje računara" }).addClass("border-0 d-block mx-auto my-n3 my-n3 img-fluid")));
         $(this).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Bing%20Wallpaper-0f6cbd?style=for-the-badge&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.bing.com%2Fapps%2Fwallpaper%2Fdownload", "name": "Bing Wallpaper" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "32px 0px"));
@@ -173,7 +163,7 @@ jQuery(function ($) {
         $(this).hover(function () { $(this).css({ "background-color": "#d87600", "color": "white" }); }, function () { $(this).css({ "background-color": "darkorange", "color": "white" }); });
     }).attr({ "href": "radio.pls", "download": "BS_RadioPlaylist" }).css({ "background-color": "darkorange", "color": "white" });
     $("footer").each(function () {
-        $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-auto").css("max-width", "292px").append($("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3", "alt": "Bootstrap" }).on("error",function () { this.src = "https://badgen.net/jsdelivr/v/npm/bootstrap@4?color=7952b3&label=Bootstrap" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad", "alt": "jQuery" }).on("error", function() { this.src = "https://badgen.net/jsdelivr/v/npm/jquery@3?color=0769ad&label=jQuery"})), $("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2F" + location.host + "%2F&label=W3C%20Validation", "alt": "W3C Validation - HTML" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", "alt": "jsDelivr CDN" })));
+        $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-auto").css("max-width", "292px").append($("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3", "alt": "Bootstrap" }).on("error", function () { this.src = "https://badgen.net/jsdelivr/v/npm/bootstrap@4?color=7952b3&label=Bootstrap" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad", "alt": "jQuery" }).on("error", function () { this.src = "https://badgen.net/jsdelivr/v/npm/jquery@3?color=0769ad&label=jQuery" })), $("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2F" + location.host + "%2F&label=W3C%20Validation", "alt": "W3C Validation - HTML" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", "alt": "jsDelivr CDN" })));
         //$("footer > div:eq(0)").addClass("d-flex flex-wrap flex-sm-column mx-md-2").html("<div class='mx-auto'><img src='https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3' alt='Bootstrap'></div><div class='mx-auto'><img src='https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad' alt='jQuery'></div><div class='mx-auto'><img src='https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600' alt='jsDelivr CDN'></div>");
         $("footer > div:eq(1)").addClass("flex-grow-1 small h6 my-sm-1 my-md-0");
         $("footer p").not(":last").addClass("mb-1");
