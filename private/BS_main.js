@@ -36,7 +36,7 @@ $(document).ready(function () {
         const URL = $(this).data("url");
         const URLLang = $(this).data("urllang");
         $(this).attr({ "src": "https://badgen.net/static/" + Label + "/" + Status + "/" + Color + "?icon=" + Icon + "&labelColor=" + LabelColor, "loading": "lazy" });
-        (URL) ? $(this).wrap($("<a></a>").attr({ "href": URL, "hreflang": URLLang, "target": "_blank" })) : $(this).unwrap();
+        (URL) ? $(this).wrap($("<a></a>").attr({ "href": URL, "hreflang": URLLang, "target": "_blank", "rel": "external" })) : $(this).unwrap();
     });
     $("img.githubBadge").each(function () {
         const Type = Boolean($(this).data("type")) === true ? "release" : "tag";
@@ -55,7 +55,7 @@ $(document).ready(function () {
             "src": "https://img.shields.io/github/v/" + Type + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color, "alt": "Badge for GitHub Package " + Package, "loading": "lazy"
         }).on("error", function () {
             $(this).attr("src", "https://badgen.net/github/" + TypeBackup + "/" + Package + Stable + "?icon=" + Logo + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color);
-        }).wrap($("<a></a>").attr({ "href": "https://github.com/" + Package + "/" + Type + "s" + Latest, "hreflang": "en", "target": "_blank" }));
+        }).wrap($("<a></a>").attr({ "href": "https://github.com/" + Package + "/" + Type + "s" + Latest, "hreflang": "en", "target": "_blank", "rel": "external" }));
     });
     $("img.StaticBadge").each(function () {
         const Label1Text = encodeURIComponent($(this).data("label1") || "");
@@ -70,13 +70,13 @@ $(document).ready(function () {
         const URLLang = $(this).data("urllang") || "";
         const Name = $(this).data("name") || "";
         $(this).attr({ "src": "https://img.shields.io/badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label2Text + "&labelColor=" + Label2Color, "alt": "Shields.io Static Badge " + Name, "loading": "lazy" });
-        (URL) ? $(this).wrap($("<a></a>").attr({ "href": URL, "hreflang": URLLang, "target": "_blank" })) : $("this").unwrap();
+        (URL) ? $(this).wrap($("<a></a>").attr({ "href": URL, "hreflang": URLLang, "target": "_blank", "rel":"external" })) : $("this").unwrap();
     });
     $("img.w3cValidationBadge").each(function () {
         const Parser = $(this).data("parser");
         const URL = encodeURIComponent($(this).data("url"));
         const LabelTxtSuffix = $(this).data("labeltxtsuffix") || "";
-        $(this).attr({ "src": "https://img.shields.io/w3c-validation/" + Parser + "?targetUrl=" + URL + "&label=W3C%20Validation%20-%20" + LabelTxtSuffix + "&cacheSeconds=1800", "alt": "Shields.io W3C Validation Badge - " + LabelTxtSuffix, "loading": "lazy" }).wrap($("<a></a>").attr({ "href": "https://validator.w3.org/nu/?doc=" + decodeURIComponent(URL), "target": "_blank", "hreflang": "en" }));
+        $(this).attr({ "src": "https://img.shields.io/w3c-validation/" + Parser + "?targetUrl=" + URL + "&label=W3C%20Validation%20-%20" + LabelTxtSuffix + "&cacheSeconds=1800", "alt": "Shields.io W3C Validation Badge - " + LabelTxtSuffix, "loading": "lazy" }).wrap($("<a></a>").attr({ "href": "https://validator.w3.org/nu/?doc=" + decodeURIComponent(URL), "target": "_blank", "hreflang": "en", "rel": "external" }));
     });
     $("img.websiteBadge").each(function () {
         const URL = encodeURIComponent($(this).data("url"));
