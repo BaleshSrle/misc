@@ -187,6 +187,11 @@ $(document).ready(function () {
         const LogoSize = $(this).data("logosize") || "";
         const Color = $(this).data("color") || "blue";
         switch (PackageManager) {
+            case "Fedora":
+                $(this).attr({
+                    "src": "https://img.shields.io/fedora/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Fedora%20Packages&labelColor=51a2da&color="+Color, "alt": "Shields.io Fedora Package for " + decodeURIComponent(Label), "loading": "lazy"
+                });
+                break;
             case "Flatpak":
                 $(this).attr({
                     "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + $(this).data("label"), "loading": "lazy"
