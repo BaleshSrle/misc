@@ -187,19 +187,24 @@ $(document).ready(function () {
         const LogoSize = $(this).data("logosize") || "";
         const Color = $(this).data("color") || "blue";
         switch (PackageManager) {
+            case "Debian":
+                $(this).attr({
+                    "src": "https://img.shields.io/debian/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Debian%20Packages&labelColor=a81d33&color=" + Color, "alt": "Shields.io Debian Package for " + decodeURIComponent(Label), "loading": "lazy"
+                }).wrap($("<a></a>").attr({ "href": "https://packages.debian.org/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
+                break;
             case "Fedora":
                 $(this).attr({
-                    "src": "https://img.shields.io/fedora/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Fedora%20Packages&labelColor=51a2da&color="+Color, "alt": "Shields.io Fedora Package for " + decodeURIComponent(Label), "loading": "lazy"
-                });
+                    "src": "https://img.shields.io/fedora/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Fedora%20Packages&labelColor=51a2da&color=" + Color, "alt": "Shields.io Fedora Package for " + decodeURIComponent(Label), "loading": "lazy"
+                }).wrap($("<a></a>").attr({ "href": "https://packages.fedoraproject.org/search?query=" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Flatpak":
                 $(this).attr({
-                    "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + $(this).data("label"), "loading": "lazy"
+                    "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + decodeURIComponent(Label), "loading": "lazy"
                 }).wrap($("<a></a>").attr({ "href": "https://flathub.org/hr/apps/" + Package, "hreflang": "hr", "target": "_blank", "rel": "external" }));
                 break;
             case "Snapcraft":
                 $(this).attr({
-                    "src": "https://img.shields.io/snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "alt": "Snapcraft Badge for " + $(this).data("label"), "loading": "lazy"
+                    "src": "https://img.shields.io/snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "alt": "Snapcraft Badge for " + decodeURIComponent(Label), "loading": "lazy"
                 }).on("error", function () {
                     $(this).attr("src", "https://badgen.infra.medigy.com/snapcraft/v/" + Package + "/amd64?label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color)
                 }).wrap($("<a></a>").attr({ "href": "https://snapcraft.io/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
@@ -395,16 +400,16 @@ $(document).ready(function () {
         $(this).children("div").addClass("modal-dialog").attr("role", "document");
         $(this).filter("#mailSettings,#sluzbeni").children("div").addClass("modal-sm modal-dialog-centered");
         $(this).filter("#calculator").children("div").addClass("modal-dialog-centered");
-        $(this).filter("#tvguide,#kick,#FamilyNotes").children("div").addClass("modal-lg modal-dialog-centered");
+        $(this).filter("#tvguide,#FamilyNotes").children("div").addClass("modal-lg modal-dialog-centered");
         $(this).filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog-centered modal-dialog-scrollable");
         $(this).filter("#weather,#livescore,#TechNewsNasloviNET,#steam_games").children("div").addClass("modal-lg modal-dialog-centered modal-dialog-scrollable");
-        $(this).filter("#FIBAlivescore,#imgRotate,#twitch,#programs,#CarService").children("div").addClass("modal-xl modal-dialog-centered modal-dialog-scrollable");
+        $(this).filter("#FIBAlivescore,#imgRotate,#twitch,#kick,#programs,#CarService").children("div").addClass("modal-xl modal-dialog-centered modal-dialog-scrollable");
         $(this).filter("#time").children("div").addClass("mx-auto");
         $(this).filter("#calculator").find("div.modal-content").addClass("bg-dark border-dark");
-        $(this).filter("#time,#mailSettings,#imgRotate,#tvguide,#TechNewsNasloviNET,#sluzbeni,#twitch,#programs").find("div.modal-header").append($("<button></button>").addClass("close btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" }).html("<span aria-hidden='true'>&times;</span>"));
-        $(this).filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal").find("div.modal-header").addClass("d-lg-none");
+        $(this).filter("#time,#mailSettings,#imgRotate,#tvguide,#TechNewsNasloviNET,#sluzbeni,#twitch,#programs,#kick").find("div.modal-header").append($("<button></button>").addClass("close btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" }).html("<span aria-hidden='true'>&times;</span>"));
+        $(this).filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal,#kick").find("div.modal-header").addClass("d-lg-none");
         $(this).filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
-        $(this).filter("#TechNewsNasloviNET,#twitch").find(".modal-header").addClass("p-0");
+        $(this).filter("#TechNewsNasloviNET,#twitch,#kick").find(".modal-header").addClass("p-0");
         $(this).filter("#calculator").find("div.modal-header").addClass("px-1 pb-0");
         $(this).find("div").filter(".modal-header,.modal-footer").addClass("border-secondary");
         $(this).find("hr").addClass("border-secondary");
@@ -474,22 +479,32 @@ $(document).ready(function () {
     /* $("button[data-target='#TwitchChat']").on("click", function () {
         $("iframe#TwitchPlayer").parents("div.col-sm").toggleClass("pl-0 pr-1");
     }); */
-    $("div#TwitchStatus").each(function () {
+    $("div#TwitchStatus, div#KickStatus").each(function () {
         $(this).children("div.card-columns").addClass("mt-1");
         $(this).children("div.card").not(":last").addClass("mb-2");
         $(this).find("div.card-header").addClass("py-2 border-bottom border-secondary");
         $(this).find("ul.list-group").addClass("list-group-flush");
-        $(this).find("ul.list-group").filter("[title^='TOS']").siblings("ul").height(200).addClass("overflow-auto");
-        $(this).find("ul.list-group").filter("[title='Sidemen']").siblings("ul:eq(1)").height(200).addClass("overflow-auto");
-        $(this).find("ul.list-group").filter("[title^='Game'],[title='WWE'],[title='USA'],[title='Canada'],[title='UK'],[title='EU'],[title='Russia'],[title='Australia']").height(200).addClass("overflow-auto");
         //$(this).find("li.list-group-item").addClass("justify-content-between");
         //$(this).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&logoSize=auto&labelColor=9146ff&cacheSeconds=60' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
     });
-    $("img.TwitchBadge").each(function () {
+    $("img.StreamBadge").each(function () {
+        const Platform = $(this).data("platform");
         const Username = $(this).data("username");
         const Label = encodeURIComponent($(this).data("label"));
-        $(this).attr({ "src": "https://img.shields.io/twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
-        $(this).filter("[alt$='Develique'],[alt$='MaryyCherryy'],[alt$='2bratty'],[alt$='littlebunny_x'],[alt$='Bunnymontv'],[alt$='Chess'],[alt$='DinaBelenkaya'],[alt$='PUBG_BATTLEGROUNDS'],[alt$='WorldofTanks'],[alt$='XboxOn'],[alt$='QoSpades'],[alt*='FerrariEsports'],[alt$='janifest'],[alt$='AuroraStarr'],[alt$='xoDee'],[alt$='Morgpie'],[alt$='peyzki'],[alt$='luvstruck'],[alt$='pinkwasabitv'],[alt$='KaliRoses'],[alt$='allieraa'],[alt$='EmmaLayne'],[alt$='EmjayPlayss'],[alt$='BuccataX'],[alt$='lauralux'],[alt$='ohKayBunny'],[alt$='xoAeriel'],[alt$='Hannesschan'],[alt$='TrishaHershberger'],[alt$='PulpFictionally'],[alt$='Taylor_Jevaux'],[alt$='juliaburch'],[alt$='thewildlatina'],[alt$='XTASIAEGO'],[alt$='XtasiaTV'],[alt$='Elina'],[alt$='xCandyLashes'],[alt$='kristinemaia'],[alt$='Mellooow_'],[alt$='GemmasTW'],[alt$='Linny'],[alt$='NicolePeachy'],[alt$='lucyya'],[alt$='xXLauoaNXx'],[alt$='di1araas'],[alt$='MistieSage']")/*.not("[src*='selina_imai']")*/.after($("<span></span>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
+        switch (Platform) {
+            case "Twitch":
+                $(this).attr({ "src": "https://img.shields.io/twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+                $(this).filter("[alt$='Develique'],[alt$='MaryyCherryy'],[alt$='2bratty'],[alt$='littlebunny_x'],[alt$='Bunnymontv'],[alt$='Chess'],[alt$='DinaBelenkaya'],[alt$='PUBG_BATTLEGROUNDS'],[alt$='WorldofTanks'],[alt$='XboxOn'],[alt$='QoSpades'],[alt*='FerrariEsports'],[alt$='janifest'],[alt$='AuroraStarr'],[alt$='xoDee'],[alt$='Morgpie'],[alt$='peyzki'],[alt$='luvstruck'],[alt$='pinkwasabitv'],[alt$='KaliRoses'],[alt$='allieraa'],[alt$='EmmaLayne'],[alt$='EmjayPlayss'],[alt$='BuccataX'],[alt$='lauralux'],[alt$='ohKayBunny'],[alt$='xoAeriel'],[alt$='Hannesschan'],[alt$='TrishaHershberger'],[alt$='PulpFictionally'],[alt$='Taylor_Jevaux'],[alt$='juliaburch'],[alt$='thewildlatina'],[alt$='XTASIAEGO'],[alt$='XtasiaTV'],[alt$='Elina'],[alt$='xCandyLashes'],[alt$='kristinemaia'],[alt$='Mellooow_'],[alt$='GemmasTW'],[alt$='Linny'],[alt$='NicolePeachy'],[alt$='lucyya'],[alt$='xXLauoaNXx'],[alt$='di1araas'],[alt$='MistieSage']")/*.not("[src*='selina_imai']")*/.after($("<span></span>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
+                break;
+            default:
+                $(this).attr({ "src": "https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fkick.com%2Fapi%2Fv1%2Fchannels%2F" + Username + "&query=%24.livestream.is_live&logo=kick&logoColor=white&logoSize=auto&label=Live%20Stream%20" + Label + "&labelColor=53fc19&color=red&cacheSeconds=60", "alt": "Kick Status for " + Label, "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+        }
+    }).parents("ul").each(function (i) {
+        if ($("ul").eq(i).children("li").length > 8) {
+            $("ul").eq(i).addClass("overflow-auto").height(200);
+        } else{
+            $("ul").eq(i).removeClass("overflow-auto").height("100%");
+        }
     });
     //$("div[id^='Twitch']").addClass("collapse width");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
