@@ -209,6 +209,11 @@ $(document).ready(function () {
                     $(this).attr("src", "https://badgen.infra.medigy.com/snapcraft/v/" + Package + "/amd64?label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color)
                 }).wrap($("<a></a>").attr({ "href": "https://snapcraft.io/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
+            case "Ubuntu":
+                $(this).attr({
+                    "src": "https://img.shields.io/ubuntu/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Ubuntu%20Packages&labelColor=e95420&color=" + Color, "alt": "Shields.io Ubuntu Package for " + decodeURIComponent(Label), "loading": "lazy"
+                }).wrap($("<a></a>").attr({ "href": "https://packages.ubuntu.com/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
+                break;
             default:
                 $(this).attr({
                     "src": "https://img.shields.io/winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy"
@@ -494,7 +499,7 @@ $(document).ready(function () {
         switch (Platform) {
             case "Twitch":
                 $(this).attr({ "src": "https://img.shields.io/twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
-                $(this).filter("[alt$='Develique'],[alt$='MaryyCherryy'],[alt$='2bratty'],[alt$='littlebunny_x'],[alt$='Bunnymontv'],[alt$='Chess'],[alt$='DinaBelenkaya'],[alt$='PUBG_BATTLEGROUNDS'],[alt$='WorldofTanks'],[alt$='XboxOn'],[alt$='QoSpades'],[alt*='FerrariEsports'],[alt$='janifest'],[alt$='AuroraStarr'],[alt$='xoDee'],[alt$='Morgpie'],[alt$='peyzki'],[alt$='luvstruck'],[alt$='pinkwasabitv'],[alt$='KaliRoses'],[alt$='allieraa'],[alt$='EmmaLayne'],[alt$='EmjayPlayss'],[alt$='BuccataX'],[alt$='lauralux'],[alt$='ohKayBunny'],[alt$='xoAeriel'],[alt$='Hannesschan'],[alt$='TrishaHershberger'],[alt$='PulpFictionally'],[alt$='Taylor_Jevaux'],[alt$='juliaburch'],[alt$='thewildlatina'],[alt$='XTASIAEGO'],[alt$='XtasiaTV'],[alt$='Elina'],[alt$='xCandyLashes'],[alt$='kristinemaia'],[alt$='Mellooow_'],[alt$='GemmasTW'],[alt$='Linny'],[alt$='NicolePeachy'],[alt$='lucyya'],[alt$='xXLauoaNXx'],[alt$='di1araas'],[alt$='MistieSage']")/*.not("[src*='selina_imai']")*/.after($("<span></span>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
+                $(this).filter("[alt$='Develique'],[alt$='MaryyCherryy'],[alt$='2bratty'],[alt$='littlebunny_x'],[alt$='Bunnymontv'],[alt$='Chess'],[alt$='DinaBelenkaya'],[alt$='PUBG_BATTLEGROUNDS'],[alt$='WorldofTanks'],[alt$='XboxOn'],[alt$='QoSpades'],[alt*='FerrariEsports'],[alt$='janifest'],[alt$='AuroraStarr'],[alt$='xoDee'],[alt$='Morgpie'],[alt$='peyzki'],[alt$='luvstruck'],[alt$='pinkwasabitv'],[alt$='KaliRoses'],[alt$='allieraa'],[alt$='EmmaLayne'],[alt$='EmjayPlayss'],[alt$='BuccataX'],[alt$='lauralux'],[alt$='ohKayBunny'],[alt$='xoAeriel'],[alt$='Hannesschan'],[alt$='TrishaHershberger'],[alt$='PulpFictionally'],[alt$='Taylor_Jevaux'],[alt$='juliaburch'],[alt$='thewildlatina'],[alt$='XTASIAEGO'],[alt$='XtasiaTV'],[alt$='Elina'],[alt$='xCandyLashes'],[alt$='kristinemaia'],[alt$='Mellooow_'],[alt$='GemmasTW'],[alt$='Linny'],[alt$='NicolePeachy'],[alt$='lucyya'],[alt$='xXLauoaNXx'],[alt$='di1araas'],[alt$='Ksenia_Noche'],[alt$='MistieSage']")/*.not("[src*='selina_imai']")*/.after($("<span></span>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
                 break;
             default:
                 $(this).attr({ "src": "https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fkick.com%2Fapi%2Fv1%2Fchannels%2F" + Username + "&query=%24.livestream.is_live&logo=kick&logoColor=white&logoSize=auto&label=Live%20Stream%20" + Label + "&labelColor=53fc19&color=red&cacheSeconds=60", "alt": "Kick Status for " + Label, "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
@@ -502,7 +507,7 @@ $(document).ready(function () {
     }).parents("ul").each(function (i) {
         if ($("ul").eq(i).children("li").length > 8) {
             $("ul").eq(i).addClass("overflow-auto").height(200);
-        } else{
+        } else {
             $("ul").eq(i).removeClass("overflow-auto").height("100%");
         }
     });
