@@ -52,7 +52,7 @@ $(document).ready(function () {
         const LabelColor = $(this).data("labelcolor") || "181717";
         const Color = $(this).data("color") || "blue";
         $(this).attr({
-            "src": "https://img.shields.io/github/v/" + Type + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color, "alt": "Badge for GitHub Package " + Package, "loading": "lazy"
+            "src": "https://img.shields.io/github/v/" + Type + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color, "alt": "Badge for GitHub Package " + Package, "loading": "lazy", "crossorigin": "anonymous"
         }).on("error", function () {
             $(this).attr("src", "https://badgen.net/github/" + TypeBackup + "/" + Package + Stable + "?icon=" + Logo + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color);
         }).wrap($("<a></a>").attr({ "href": "https://github.com/" + Package + "/" + Type + "s" + Latest, "hreflang": "en", "target": "_blank", "rel": "external" }));
@@ -69,14 +69,14 @@ $(document).ready(function () {
         const URL = $(this).data("url");
         const URLLang = $(this).data("urllang") || "";
         const Name = $(this).data("name") || "";
-        $(this).attr({ "src": "https://img.shields.io/badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label2Text + "&labelColor=" + Label2Color, "alt": "Shields.io Static Badge " + Name, "loading": "lazy" });
-        (URL) ? $(this).wrap($("<a></a>").attr({ "href": URL, "hreflang": URLLang, "target": "_blank", "rel":"external" })) : $("this").unwrap();
+        $(this).attr({ "src": "https://img.shields.io/badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label2Text + "&labelColor=" + Label2Color, "alt": "Shields.io Static Badge " + Name, "loading": "lazy", "crossorigin": "anonymous" });
+        (URL) ? $(this).wrap($("<a></a>").attr({ "href": URL, "hreflang": URLLang, "target": "_blank", "rel": "external" })) : $("this").unwrap();
     });
     $("img.w3cValidationBadge").each(function () {
         const Parser = $(this).data("parser");
         const URL = encodeURIComponent($(this).data("url"));
         const LabelTxtSuffix = $(this).data("labeltxtsuffix") || "";
-        $(this).attr({ "src": "https://img.shields.io/w3c-validation/" + Parser + "?targetUrl=" + URL + "&label=W3C%20Validation%20-%20" + LabelTxtSuffix + "&cacheSeconds=1800", "alt": "Shields.io W3C Validation Badge - " + LabelTxtSuffix, "loading": "lazy" }).wrap($("<a></a>").attr({ "href": "https://validator.w3.org/nu/?doc=" + decodeURIComponent(URL), "target": "_blank", "hreflang": "en", "rel": "external" }));
+        $(this).attr({ "src": "https://img.shields.io/w3c-validation/" + Parser + "?targetUrl=" + URL + "&label=W3C%20Validation%20-%20" + LabelTxtSuffix + "&cacheSeconds=1800", "alt": "Shields.io W3C Validation Badge - " + LabelTxtSuffix, "loading": "lazy", "crossorigin": "anonymous" }).wrap($("<a></a>").attr({ "href": "https://validator.w3.org/nu/?doc=" + decodeURIComponent(URL), "target": "_blank", "hreflang": "en", "rel": "external" }));
     });
     $("img.websiteBadge").each(function () {
         const URL = encodeURIComponent($(this).data("url"));
@@ -86,7 +86,7 @@ $(document).ready(function () {
         const LogoSize = $(this).data("logosize") || "";
         const Color = $(this).data("color") || "";
         $(this).attr({
-            "src": "https://img.shields.io/website?url=" + URL + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + Color + "&cacheSeconds=1800", "alt": "Shields.io Website Badge", "loading": "lazy"
+            "src": "https://img.shields.io/website?url=" + URL + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + Color + "&cacheSeconds=1800", "alt": "Shields.io Website Badge", "loading": "lazy", "crossorigin": "anonymous"
         });
     });
     document.normalize();

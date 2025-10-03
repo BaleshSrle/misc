@@ -174,7 +174,7 @@ $(document).ready(function () {
         //$(this).filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
         //$(this).filter("[src*='uptimerobot']").attr("src", function (index, src) { return src + '&cacheSeconds=3600' });
         //$(this).filter("[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
-        $(this).filter("[alt$='deployments']").attr("src", function (index, src) { return src + '&label=Deployments' });
+        $(this).filter("[alt$='deployments']").attr({ "src": function (index, src) { return src + '&label=Deployments' }, "loading": "lazy", "crossorigin": "anonymous" });
         //$(this).filter("[src*='shields']").on("error", function () { this.src = this.src; });
     });
     $("img.AppBadge").each(function () {
@@ -189,37 +189,37 @@ $(document).ready(function () {
         switch (PackageManager) {
             case "Debian":
                 $(this).attr({
-                    "src": "https://img.shields.io/debian/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Debian%20Packages&labelColor=a81d33&color=" + Color, "alt": "Shields.io Debian Package for " + decodeURIComponent(Label), "loading": "lazy"
+                    "src": "https://img.shields.io/debian/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Debian%20Packages&labelColor=a81d33&color=" + Color, "alt": "Shields.io Debian Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://packages.debian.org/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Fedora":
                 $(this).attr({
-                    "src": "https://img.shields.io/fedora/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Fedora%20Packages&labelColor=51a2da&color=" + Color, "alt": "Shields.io Fedora Package for " + decodeURIComponent(Label), "loading": "lazy"
+                    "src": "https://img.shields.io/fedora/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Fedora%20Packages&labelColor=51a2da&color=" + Color, "alt": "Shields.io Fedora Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://packages.fedoraproject.org/search?query=" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Flatpak":
                 $(this).attr({
-                    "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + decodeURIComponent(Label), "loading": "lazy"
+                    "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://flathub.org/hr/apps/" + Package, "hreflang": "hr", "target": "_blank", "rel": "external" }));
                 break;
             case "Snapcraft":
                 $(this).attr({
-                    "src": "https://img.shields.io/snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "alt": "Snapcraft Badge for " + decodeURIComponent(Label), "loading": "lazy"
+                    "src": "https://img.shields.io/snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "alt": "Snapcraft Badge for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
                     $(this).attr("src", "https://badgen.infra.medigy.com/snapcraft/v/" + Package + "/amd64?label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color)
                 }).wrap($("<a></a>").attr({ "href": "https://snapcraft.io/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Ubuntu":
                 $(this).attr({
-                    "src": "https://img.shields.io/ubuntu/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Ubuntu%20Packages&labelColor=e95420&color=" + Color, "alt": "Shields.io Ubuntu Package for " + decodeURIComponent(Label), "loading": "lazy"
+                    "src": "https://img.shields.io/ubuntu/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Ubuntu%20Packages&labelColor=e95420&color=" + Color, "alt": "Shields.io Ubuntu Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://packages.ubuntu.com/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             default:
                 $(this).attr({
-                    "src": "https://img.shields.io/winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy"
+                    "src": "https://img.shields.io/winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
-                    $(this).attr({ "src": "https://badgen.net/winget/v/" + Package + "?color=" + Color + "&icon=" + Logo + "&label=" + Label + "%20%40%20winget", "loading": "lazy" });
-                });
+                    $(this).attr("src", "https://badgen.net/winget/v/" + Package + "?color=" + Color + "&icon=" + Logo + "&label=" + Label + "%20%40%20winget");
+                }).wrap($("<a></a>").attr({ "href": "https://winget.run/pkg/" + Package.replace(".", "/").replace(".sr", ""), "hreflang": "en", "target": "_blank", "rel": "external" }));
         }
     });
     $("img.ExtensionBadge").each(function () {
@@ -230,25 +230,21 @@ $(document).ready(function () {
         switch (Browser) {
             case "Chromium":
                 $(this).attr({
-                    "src": "https://img.shields.io/chrome-web-store/v/" + ExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy"
+                    "src": "https://img.shields.io/chrome-web-store/v/" + ExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
-                    $(this).attr({
-                        "src": "https://badgen.net/chrome-web-store/v/" + ExtensionId + "?icon=chrome&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy"
-                    });
+                    $(this).attr("src", "https://badgen.net/chrome-web-store/v/" + ExtensionId + "?icon=chrome&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor);
                 }).wrap($("<a></a>").attr({ "href": "https://chromewebstore.google.com/detail/" + ExtensionId, "target": "_blank", "rel": "external" }));
                 break;
             case "Firefox":
                 $(this).attr({
-                    "src": "https://img.shields.io/amo/v/" + ExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + ExtensionColor, "loading": "lazy"
+                    "src": "https://img.shields.io/amo/v/" + ExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + ExtensionColor, "loading": "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
-                    $(this).attr({
-                        "src": "https://badgen.net/amo/v/" + ExtensionId + "?color=" + ExtensionColor + "&icon=firefox&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139", "loading": "lazy"
-                    });
+                    $(this).attr("src", "https://badgen.net/amo/v/" + ExtensionId + "?color=" + ExtensionColor + "&icon=firefox&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139");
                 }).wrap($("<a></a>").attr({ "href": "https://addons.mozilla.org/hr/firefox/addon/" + ExtensionId, "hreflang": "hr", "target": "_blank", "rel": "external" }));
                 break;
             default:
                 $(this).attr({
-                    "src": "https://img.shields.io/visual-studio-marketplace/v/" + ExtensionId + "?label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc", "loading": "lazy"
+                    "src": "https://img.shields.io/visual-studio-marketplace/v/" + ExtensionId + "?label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc", "loading": "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
                     $(this).attr("src", "https://badgen.net/vs-marketplace/v/" + ExtensionId + "?icon=visualstudio&label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc");
                 }).wrap($("<a></a>").attr({ "href": "https://marketplace.visualstudio.com/items?itemName=" + ExtensionId, "hreflang": "en", "target": "_blank", "rel": "external" }));
@@ -261,14 +257,14 @@ $(document).ready(function () {
         const Branch = $(this).data("branch") || "main";
         const Event = $(this).data("event") || "";
         $(this).attr({
-            "src": "https://img.shields.io/github/actions/workflow/status/" + Package + "/" + Workflow + ".yml?branch=" + Branch + "&event=" + Event + "&logo=githubactions&logoColor=white&logoSize=auto&label=GitHub%20Actions%20Workflow&labelColor=2088ff", "alt": "GitHub Actions Workflow - " + WorkflowLabel, "loading": "lazy"
+            "src": "https://img.shields.io/github/actions/workflow/status/" + Package + "/" + Workflow + ".yml?branch=" + Branch + "&event=" + Event + "&logo=githubactions&logoColor=white&logoSize=auto&label=GitHub%20Actions%20Workflow&labelColor=2088ff", "alt": "GitHub Actions Workflow - " + WorkflowLabel, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
     });
     $("img.ghChecks").each(function () {
         const Package = $(this).data("package");
         const Branch = $(this).data("branch") || "main";
         const JobName = $(this).data("jobname") || "";
-        $(this).attr({ "src": "https://img.shields.io/github/check-runs/" + Package + "/" + Branch + "?nameFilter=" + JobName + "&logo=github&logoColor=white&logoSize=auto&label=Checks%20" + JobName + "&labelColor=181717", "alt": "GitHub branch check runs", "loading": "lazy" }).addClass("d-block mx-auto").on("error", function () {
+        $(this).attr({ "src": "https://img.shields.io/github/check-runs/" + Package + "/" + Branch + "?nameFilter=" + JobName + "&logo=github&logoColor=white&logoSize=auto&label=Checks%20" + JobName + "&labelColor=181717", "alt": "GitHub branch check runs", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
             $(this).attr("src", "https://badgen.net/github/checks/" + Package + "/" + Branch + "/" + JobName + "?icon=github&label=Checks%20" + JobName + "&labelColor=181717");
         });
     });
@@ -293,14 +289,14 @@ $(document).ready(function () {
         const Package = $(this).data("package");
         const Number = $(this).data("number");
         $(this).attr({
-            "src": "https://img.shields.io/github/pulls/detail/state/" + Package + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Detail%20for%20%23" + Number + "&labelColor=181717", "alt": "GitHub PR Detail #" + Number, "loading": "lazy"
+            "src": "https://img.shields.io/github/pulls/detail/state/" + Package + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Detail%20for%20%23" + Number + "&labelColor=181717", "alt": "GitHub PR Detail #" + Number, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
     });
     $("img.ghPRStatus").each(function () {
         const Package = $(this).data("package");
         const Number = $(this).data("number");
         $(this).attr({
-            "src": "https://img.shields.io/github/status/s/pulls/" + Package + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Status%20%23" + Number + "&labelColor=181717", "alt": "GitHub PR Status #" + Number, "loading": "lazy"
+            "src": "https://img.shields.io/github/status/s/pulls/" + Package + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Status%20%23" + Number + "&labelColor=181717", "alt": "GitHub PR Status #" + Number, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
     });
     $("img.LinuxDistroBadge").each(function () {
@@ -309,7 +305,7 @@ $(document).ready(function () {
         const Color = $(this).data("color") || "fcc624";
         const Logo = $(this).data("logo") || "linux";
         $(this).attr({
-            "src": "https://img.shields.io/badge/" + Name + "-" + Edition + "%2064--bit-" + Color + "?logo=" + Logo + "&logoColor=white&logoSize=auto", "loading": "lazy"
+            "src": "https://img.shields.io/badge/" + Name + "-" + Edition + "%2064--bit-" + Color + "?logo=" + Logo + "&logoColor=white&logoSize=auto", "loading": "lazy", "crossorigin": "anonymous"
         }).on("error", function () {
             $(this).attr("src", "https://badgen.net/static/" + Name + "/" + Edition + "%2064-bit/" + Color);
         });
@@ -319,7 +315,7 @@ $(document).ready(function () {
         //const siIconColor = $(this).data("color") || "";
         const IconAlt = $(this).data("alt");
         $(this).attr({
-            "src": "https://cdn.simpleicons.org/" + IconName, "height": "32", "alt": IconAlt, "loading": "lazy"
+            "src": "https://cdn.simpleicons.org/" + IconName, "height": "32", "alt": IconAlt, "loading": "lazy", "crossorigin": "anonymous"
         });
     });
     $("img.UptimeRobotBadge").each(function () {
@@ -330,15 +326,15 @@ $(document).ready(function () {
         const LabelTxtPrefix = encodeURIComponent($(this).data("labeltxtprefix") || "");
         const LabelColor = $(this).data("labelcolor") || "";
         $(this).attr({
-            "src": "https://img.shields.io/uptimerobot/status/" + Key + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000", "alt": "UptimeRobot status", "loading": "lazy"
+            "src": "https://img.shields.io/uptimerobot/status/" + Key + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000", "alt": "UptimeRobot status", "loading": "lazy", "crossorigin": "anonymous"
         }).on("error", function () {
             $(this).attr("src", "https://badgen.infra.medigy.com/uptime-robot/status/" + Key + "?label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000")
         });
     });
-    $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo" }).height(32));
+    $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo", "crossorigin": "anonymous" }).height(32));
     $("div#churchCalendarToast > div.toast-body").addClass("p-0").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height(360));
     //$("div#churchCalendarToast > div.toast-body").addClass("p-2").append($("<iframe></iframe").attr("src", "https://pravoslavnikalendar.rs/kal/pra220.php").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" }));
-    $("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
+    $("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr({ "src": "https://www.auti.hr/djevojkadana/img/" + year + "-" + month + "/" + day + ".jpg", "crossorigin": "anonymous" }).addClass("mx-auto d-block img-fluid rounded-lg"));
     $("iframe").not("[src*='naslovi'],.steamWidget").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("iframe:last,img#AutoHrIMG").attr("loading", "eager");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
@@ -366,7 +362,7 @@ $(document).ready(function () {
         $(this).filter("[alt='LibreOffice']").addClass("img-fluid");
         $(this).filter("[alt*='VLC'], [alt='Postman'],[alt$='OpenOffice'],[alt='Xubuntu'],[alt^='Poslovi']").css("max-height", "90px");
         $(this).filter("[alt^='NetLingo']").addClass("rounded-lg").css("max-height", "90px");
-    }).addClass("border-0 d-block mx-auto").attr("loading", "lazy");
+    }).addClass("border-0 d-block mx-auto").attr({ "loading": "lazy", "crossorigin": "anonymous" });
     $("div#IQAirCarousel").css({ "width": "313px", "height": "100px" });
     $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
     $("mark.bg-secondary,a#time_is_link,label:gt(2)").addClass("text-white");
@@ -498,11 +494,11 @@ $(document).ready(function () {
         const Label = encodeURIComponent($(this).data("label"));
         switch (Platform) {
             case "Twitch":
-                $(this).attr({ "src": "https://img.shields.io/twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+                $(this).attr({ "src": "https://img.shields.io/twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
                 $(this).filter("[alt$='Develique'],[alt$='MaryyCherryy'],[alt$='2bratty'],[alt$='littlebunny_x'],[alt$='Bunnymontv'],[alt$='Chess'],[alt$='DinaBelenkaya'],[alt$='PUBG_BATTLEGROUNDS'],[alt$='WorldofTanks'],[alt$='XboxOn'],[alt$='QoSpades'],[alt*='FerrariEsports'],[alt$='janifest'],[alt$='AuroraStarr'],[alt$='xoDee'],[alt$='Morgpie'],[alt$='peyzki'],[alt$='luvstruck'],[alt$='pinkwasabitv'],[alt$='KaliRoses'],[alt$='allieraa'],[alt$='EmmaLayne'],[alt$='EmjayPlayss'],[alt$='BuccataX'],[alt$='lauralux'],[alt$='ohKayBunny'],[alt$='xoAeriel'],[alt$='Hannesschan'],[alt$='TrishaHershberger'],[alt$='PulpFictionally'],[alt$='Taylor_Jevaux'],[alt$='juliaburch'],[alt$='thewildlatina'],[alt$='XTASIAEGO'],[alt$='XtasiaTV'],[alt$='Elina'],[alt$='xCandyLashes'],[alt$='kristinemaia'],[alt$='Mellooow_'],[alt$='GemmasTW'],[alt$='Linny'],[alt$='NicolePeachy'],[alt$='lucyya'],[alt$='xXLauoaNXx'],[alt$='di1araas'],[alt$='Ksenia_Noche'],[alt$='MistieSage']")/*.not("[src*='selina_imai']")*/.after($("<span></span>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
                 break;
             default:
-                $(this).attr({ "src": "https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fkick.com%2Fapi%2Fv1%2Fchannels%2F" + Username + "&query=%24.livestream.is_live&logo=kick&logoColor=white&logoSize=auto&label=Live%20Stream%20" + Label + "&labelColor=53fc19&color=red&cacheSeconds=60", "alt": "Kick Status for " + Label, "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+                $(this).attr({ "src": "https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fkick.com%2Fapi%2Fv1%2Fchannels%2F" + Username + "&query=%24.livestream.is_live&logo=kick&logoColor=white&logoSize=auto&label=Live%20Stream%20" + Label + "&labelColor=53fc19&color=red&cacheSeconds=60", "alt": "Kick Status for " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
         }
     }).parents("ul").each(function (i) {
         if ($("ul").eq(i).children("li").length > 8) {
@@ -640,10 +636,23 @@ $(document).ready(function () {
         $(this).wrap($("<div></div>").addClass("table-responsive"));
         //$(this).find("td").has("br:eq(12)").addClass("align-middle");
         //$(this).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
-        $(this).find("th").has("br").siblings("th").addClass("align-middle");
-        $(this).find("td").has("br").siblings("td").addClass("align-middle");
+        //$(this).find("th").has("br").siblings("th").addClass("align-middle");
+        //$(this).find("td").has("br").siblings("td").addClass("align-middle");
         //$(this).find("img[src*='logo']").attr("src", function (index, src) { return src + '&logoColor=white' });
         //$(this).find("img[src*='logo']").not("[src*='logo=nodedotjs'],[src*='logo=vlcmediaplayer'],[src*='logo=epicgames'],[src*='logo=ubisoft'],[src*='logo=bitdefender']").attr("src", function (index, src) { return src + '&logoSize=auto' });
+    });
+    $("th").each(function (i) {
+        if ($("th").eq(i).children("img").length > 1) {
+            $("th").eq(i).children("img").not(":last").after("<br>");
+            $("th").eq(i).has("br").siblings("th").addClass("align-middle");
+        }
+    });
+    $("td").each(function (i) {
+        if ($("td").eq(i).find("img").length > 1) {
+            //$("td").eq(i).find("img").parent("a").not(":last").after("<br>");
+            $("td").eq(i).find("img").parent("a").not(":last").after("<br>");
+            $("td").eq(i).has("br").siblings("td").not(":empty").addClass("align-middle");
+        }
     });
     //document.cookie = "lang=sr; max-age=604800";
 });  
