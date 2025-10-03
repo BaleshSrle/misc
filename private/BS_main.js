@@ -35,7 +35,7 @@ $(document).ready(function () {
         const LabelColor = $(this).data("labelcolor") || "";
         const URL = $(this).data("url");
         const URLLang = $(this).data("urllang");
-        $(this).attr({ "src": "https://badgen.net/static/" + Label + "/" + Status + "/" + Color + "?icon=" + Icon + "&labelColor=" + LabelColor, "loading": "lazy" });
+        $(this).attr({ "src": "https://badgen.net/static/" + Label + "/" + Status + "/" + Color + "?icon=" + Icon + "&labelColor=" + LabelColor, "loading": "lazy", "crossorigin": "anonymous" });
         (URL) ? $(this).wrap($("<a></a>").attr({ "href": URL, "hreflang": URLLang, "target": "_blank", "rel": "external" })) : $(this).unwrap();
     });
     $("img.githubBadge").each(function () {
