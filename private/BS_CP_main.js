@@ -101,8 +101,8 @@ $(document).ready(function () {
         focus: true,
         show: true
     });
-    $("body,input#password").keydown(function (event) {
-        if (event.which == 20) {
+    $("body,:password").on("keydown", function (event) {
+        if (event.which === 20) {
             alert("Caps Lock je uključen");
         }
     });
