@@ -51,12 +51,12 @@ jQuery(($) => {
         $(this).addClass("navbar-expand-sm navbar-dark bg-primary py-sm-1");
         $(this).children("button").addClass("navbar-toggler").attr({ "type": "button", "data-toggle": "collapse", "data-target": "#collapsibleNavbar" });
     });
-    $("li.nav-item").each(function () {
+    $("li.nav-item").each(() => {
         $("li.nav-item:eq(0)").html("<a class='nav-link' href='index.html'><i class='bi bi-house pr-1'></i>Početna</a>");
         $("li.nav-item:eq(1)").html("<a class='nav-link' href='it_news.html'><i class='bi bi-newspaper pr-1'></i>Vijesti</a>");
         $("li.nav-item:eq(2)").addClass("d-none d-md-block").html("<a class='nav-link' href='drivers.html'><i class='bi bi-disc-fill pr-1'></i>Drajveri</a>");
         $("li.nav-item:eq(3)").addClass("dropdown").html("<a class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='navbardrop'>Usluge</a><div class='dropdown-menu'><a class='dropdown-item' href='mini_service.html'><i class='bi bi-wrench pr-1'></i>Mini servis</a><a class='dropdown-item' href='support.html'><i class='bi bi-headset pr-1'></i>Podrška</a><a class='dropdown-item' href='web_design.html'><i class='bi bi-code-slash pr-1'></i>Izrada web sajtova</a><a class='dropdown-item' href='github_projects.html'><i class='bi bi-github pr-1'></i>GitHub projekti</a></div>");
-        $("li.nav-item:eq(3) > a").on("click", function () {
+        $("li.nav-item:eq(3) > a").on("click", (event) => {
             $("div.dropdown-menu").addClass("mt-md-n1");
         });
         $("li.nav-item:eq(4)").addClass("d-none d-md-block").html("<a class='nav-link' href='https://1drv.ms/f/s!Ap_NgLjjdst_hF1G61KtOFOu6d6O' target='_blank'><i class='bi bi-cloud-download pr-sm-1'></i>Preuzimanje</a>");
@@ -162,7 +162,7 @@ jQuery(($) => {
     $(".btn-vlc").each(function () {
         $(this).hover(function () { $(this).css({ "background-color": "#d87600", "color": "white" }); }, function () { $(this).css({ "background-color": "darkorange", "color": "white" }); });
     }).attr({ "href": "radio.pls", "download": "BS_RadioPlaylist" }).css({ "background-color": "darkorange", "color": "white" });
-    $("footer").each(function () {
+    $("footer").each(() => {
         $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-auto").css("max-width", "292px").append($("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3", "alt": "Bootstrap" }).on("error", function () { this.src = "https://badgen.net/jsdelivr/v/npm/bootstrap@4?color=7952b3&label=Bootstrap" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad", "alt": "jQuery" }).on("error", function () { this.src = "https://badgen.net/jsdelivr/v/npm/jquery@3?color=0769ad&label=jQuery" })), $("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2F" + location.host + "%2F&label=W3C%20Validation", "alt": "W3C Validation - HTML" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", "alt": "jsDelivr CDN" })));
         //$("footer > div:eq(0)").addClass("d-flex flex-wrap flex-sm-column mx-md-2").html("<div class='mx-auto'><img src='https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3' alt='Bootstrap'></div><div class='mx-auto'><img src='https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad' alt='jQuery'></div><div class='mx-auto'><img src='https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600' alt='jsDelivr CDN'></div>");
         $("footer > div:eq(1)").addClass("flex-grow-1 small h6 my-sm-1 my-md-0");

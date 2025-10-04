@@ -101,12 +101,12 @@ $(document).ready(function () {
         focus: true,
         show: true
     });
-    $("body,:password").on("keydown", function (event) {
+    $("body,:password").on("keydown", (event) => {
         if (event.which === 20) {
             alert("Caps Lock je uključen");
         }
     });
-    $("#loginBtn").on("click", function () {
+    $("#loginBtn").on("click", (event) => {
         switch ($("input#password").val()) {
             case "baleshevich88":
                 console.clear();
@@ -124,7 +124,7 @@ $(document).ready(function () {
                 $("optgroup[label='Steamy Streamers']").attr("disabled", "disabled");
         }
     }).addClass("dropdown-item").attr("role", "button").removeAttr("target").text("Prijavljivanje").prepend($("<i></i>").addClass("bi bi-box-arrow-in-right pr-1"))/*.addClass("dropdown-item g-recaptcha").attr({ "role": "button", "data-sitekey": "6LfGtPspAAAAANIjkM8CHWkePJivd8DREQyCgQRS", "data-callback": "onSubmit", "data-action": "submit" }).removeAttr("target")*/;
-    $("#loginResetBtn").on("click", function () {
+    $("#loginResetBtn").on("click", (event) => {
         document.querySelector("form#loginForm").reset();
         $("input#password").trigger("focus");
     }).addClass("dropdown-item").attr("role", "button").removeAttr("target").text("Reset").prepend($("<i></i>").addClass("bi bi-eraser-fill pr-1"));
@@ -147,24 +147,20 @@ $(document).ready(function () {
         parent: "#AccordionTwitchStatus",
         toggle: false
     });*/
-    $("button#imgRotateApply").on("click", function () {
+    $("button#imgRotateApply").on("click", (event) => {
         $("div.col-md-7").wrapInner($("<img>").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg"));
     }).addClass("btn btn-primary mb-2 mr-sm-2").attr("type", "button").text("Primjeni");
-    $("button#loadRadioStation").on("click", function () {
-        return window.open($("#RadioStation").val());
-    }).addClass("btn btn-info").attr("type", "button").append($("<i></i>").addClass("bi bi-broadcast"));
-    $("button#loadTvStation").on("click", function () {
-        return window.open($("#TvStation").val());
-    }).addClass("btn btn-info").attr("type", "button").append("<i></i>").addClass("bi bi-tv");
+    $("button#loadRadioStation").on("click", (event) => window.open($("#RadioStation").val())).addClass("btn btn-info").attr("type", "button").append($("<i></i>").addClass("bi bi-broadcast"));
+    $("button#loadTvStation").on("click", (event) => window.open($("#TvStation").val())).addClass("btn btn-info").attr("type", "button").append("<i></i>").addClass("bi bi-tv");
     /* $("select#TwitchUsername").on("click", function () {
         const TwitchUsername = $("select#TwitchUsername").val();
         $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + TwitchUsername + '&parent=' + location.host + '&muted=true' }, "allowfullscreen": false }).addClass("border-0 overflow-hidden rounded-lg");
         $("iframe#chat_embed").attr({ "src": function (index, src) { return 'https://www.twitch.tv/embed/' + TwitchUsername + '/chat?parent=' + location.host }, "height": "463.5", "allowfullscreen": false }).addClass("w-100 border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark"); */
-    $("select#KickUsername").on("click", function () {
-        $("iframe#KickPlayer").attr("src", function (index, src) { return 'https://player.kick.com/' + $("select#KickUsername").val() + '?muted=true&allowfullscreen=false' }).addClass("embed-responsive-item border-0 overflow-hidden rounded-lg");
+    $("select#KickUsername").on("click", (event) => {
+        $("iframe#KickPlayer").attr("src", (index, src) => 'https://player.kick.com/' + $("select#KickUsername").val() + '?muted=true&allowfullscreen=false').addClass("embed-responsive-item border-0 overflow-hidden rounded-lg");
     }).addClass("form-control bg-dark");
-    $("select#url").on("click", function () {
+    $("select#url").on("click", (event) => {
         $("iframe#urlOutput").attr("src", $("#url").val());
     }).addClass("form-control bg-dark text-white");
     $("[src*='wikimedia'],[src*='wpscdn'],[alt='SPC_logo'],[alt='iqAir_logo']").height(32);
@@ -174,7 +170,7 @@ $(document).ready(function () {
         //$(this).filter("[src*='website'],[src*='w3c']").attr("src", function (index, src) { return src + '&cacheSeconds=1800' });
         //$(this).filter("[src*='uptimerobot']").attr("src", function (index, src) { return src + '&cacheSeconds=3600' });
         //$(this).filter("[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
-        $(this).filter("[alt$='deployments']").attr({ "src": function (index, src) { return src + '&label=Deployments' }, "loading": "lazy", "crossorigin": "anonymous" });
+        $(this).filter("[alt$='deployments']").attr({ "src": (index, src) => src + '&label=Deployments', "loading": "lazy", "crossorigin": "anonymous" });
         //$(this).filter("[src*='shields']").on("error", function () { this.src = this.src; });
     });
     $("img.AppBadge").each(function () {
@@ -378,19 +374,19 @@ $(document).ready(function () {
         //$(this).parents("div.card-header").addClass("py-2 border-bottom border-secondary");
     });
     $("button.btn").filter(".btn-info,.btn-secondary:last").css({ "padding-top": "5px", "padding-bottom": "5px" });
-    $("div.toast").each(function (i) {
+    $("div.toast").each((i) => {
         $("div.toast").eq(i).attr({ "role": "status", "aria-live": "polite", "aria-atomic": "true" }).addClass("mb-2");
     }).wrapAll($("<div></div>").addClass("position-fixed").css({ "z-index": "5", "right": "0", "bottom": "56px" }).width(350));
-    $("div.toast-header").each(function (i) {
+    $("div.toast-header").each((i) => {
         $("div.toast-header").eq(i).addClass("py-0");
         $("div.toast-header").eq(i).children("strong").addClass("mr-auto");
         $("div.toast-header").eq(i).append($("<button></button>").addClass("close ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Close" }).html("<span aria-hidden='true'>&times;</span>"));
     });
-    $("div.toast-header").each(function () {
+    $("div.toast-header").each(() => {
         $("div.toast-header > img").not(":eq(2)").addClass("mr-1");
         $("div.toast-header > img:eq(2)").addClass("mr-auto");
     })/*.addClass("py-0").append($("<button></button>").addClass("close ml-2 mb-1").attr({ "type": "button", "data-dismiss": "toast", "aria-label": "Zatvori" }).html("<span aria-hidden='true'>&times;</span>"))*/;
-    $("div.toast-body").each(function () {
+    $("div.toast-body").each(() => {
         $("div.toast-body").filter(":eq(0), :eq(3)").addClass("p-2");
         $("div.toast-body").find("li.list-group-item").addClass("px-2 py-1");
         $("div.toast-body").eq(2).addClass("py-2 px-3").css("width", "345px");
@@ -519,7 +515,7 @@ $(document).ready(function () {
     $("h6").slice(20).addClass("text-wrap");
     $("h6 > i.bi").addClass("mr-1");
     $("hr").slice(0, -2).addClass("my-2");
-    $("div.input-group").each(function () {
+    $("div.input-group").each(() => {
         $("div.input-group").filter(":lt(3), :lt(6):gt(3)").addClass("mb-2");
         $("div.input-group").filter(":eq(3), :gt(5)").addClass("mb-0");
         $("div.input-group").filter(":eq(0)").addClass("border rounded");
@@ -576,7 +572,7 @@ $(document).ready(function () {
         $(this).filter("#PriceChart").append($("<iframe></iframe>").attr({ "src": "https://www.blberza.com/Export/Issuer/IssuerChart.aspx?Code=TLKM-R-A", "loading": "eager" }).width(200).height(110).addClass("d-block mx-auto border-0 overflow-hidden rounded-lg"));
         $(this).filter("#PriceChartLastMonth").append($("<iframe></iframe>").attr({ "src": "https://www.blberza.com/Export/Issuer/IssuerChartLastMonth.aspx?Code=TLKM-R-A", "loading": "lazy" }).width(200).height(110).addClass("d-block mx-auto border-0 overflow-hidden rounded-lg"));
     });
-    $("div.list-group").each(function () {
+    $("div.list-group").each(() => {
         $("div.list-group").has("a").filter(":lt(4):gt(1),:lt(11):gt(5)").addClass("list-group-horizontal");
         $("div.list-group").has("a").filter(":eq(4),:eq(6),:gt(10)").addClass("list-group-flush");
         $("div.list-group").has("a").filter(":eq(6),:gt(10)").addClass("overflow-auto");
@@ -596,14 +592,14 @@ $(document).ready(function () {
         $("div.list-group a[href^='https'].list-group-item").eq(2).addClass("border-top-0");
         $("div.list-group:eq(6) a.list-group-item").filter(":first,:last").addClass("rounded-0");
     });
-    $("li.navbar-item").each(function () {
+    $("li.navbar-item").each(() => {
         $("li.navbar-item").not(":eq(1)").children("a").slice(0, -1).addClass("nav-link").attr({ "href": "#", "role": "button", "data-toggle": "modal", "aria-pressed": true });
         $("li.navbar-item i").attr("role", "img").css("font-size", "x-large").addClass("d-inline-block align-middle");
         $("li.navbar-item span").addClass("pl-1 d-md-none");
     });
     $("div.dropdown-menu:gt(0) > a").not("[data-toggle='collapse']").addClass("dropdown-item").attr("role", "button");
     //$("a").filter("#time_is_link,.list-group-item,.navbar-brand:eq(1),.btn").not("[data-toggle='collapse'],[data-toggle='modal'],.nav-link").attr("target", "_blank");
-    $("a[href^='https']").each(function () {
+    $("a[href^='https']").each(() => {
         $("a[href^='https']").filter("#time_is_link, .card-link").addClass("text-light");
         $("a[href^='https'].btn").filter(":lt(7):gt(4),:eq(10),:gt(11)").addClass("btn-primary");
         $("a[href^='https'].btn").filter(":lt(5),:eq(11)").addClass("btn-secondary");
@@ -641,13 +637,13 @@ $(document).ready(function () {
         //$(this).find("img[src*='logo']").attr("src", function (index, src) { return src + '&logoColor=white' });
         //$(this).find("img[src*='logo']").not("[src*='logo=nodedotjs'],[src*='logo=vlcmediaplayer'],[src*='logo=epicgames'],[src*='logo=ubisoft'],[src*='logo=bitdefender']").attr("src", function (index, src) { return src + '&logoSize=auto' });
     });
-    $("th").each(function (i) {
+    $("th").each((i) => {
         if ($("th").eq(i).children("img").length > 1) {
             $("th").eq(i).children("img").not(":last").after("<br>");
             $("th").eq(i).has("br").siblings("th").addClass("align-middle");
         }
     });
-    $("td").each(function (i) {
+    $("td").each((i) => {
         if ($("td").eq(i).find("img").length > 1) {
             //$("td").eq(i).find("img").parent("a").not(":last").after("<br>");
             $("td").eq(i).find("img").parent("a").not(":last").after("<br>");

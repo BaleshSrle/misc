@@ -22,7 +22,7 @@ $(document).ready(function () {
     $("[href$='.min.css'],[src$='.min.js']").attr("crossorigin", "anonymous");
     //$("body").css("font-family", "Ubuntu");
     $("body").addClass("ubuntu-regular");
-    $("button#backBtn").on("click", function () {
+    $("button#backBtn").on("click", (event) => {
         history.back();
     }).attr("type", "button");
     $("#godina").text(new Date().getFullYear() + '.');

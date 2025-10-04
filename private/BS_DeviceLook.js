@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(() => {
     $("body").css("background", "#f1f1f1");
     $("script:first").attr({ "crossorigin": "anonymous", "referrerpolicy": "no-referrer" });
     $("form").attr("method", "post").css({ "text-align": "center", "padding": "16px 0px" });
