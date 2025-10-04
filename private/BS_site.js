@@ -2,7 +2,7 @@
 
 console.info("Skripta za web sajt je pokrenuta.");
 
-jQuery(function ($) {
+jQuery(($) => {
     switch (location.pathname) {
         case "/it_news.html":
         case "/drivers.html":
@@ -34,10 +34,10 @@ jQuery(function ($) {
     switch (new Date().getMonth() + 1) {
         case 1:
         case 12:
-            $("div.card#hosting_banner > div.card-body").children("a").attr("target", "_blank").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/dobojcaffe.png", "alt": "Web hosting by DobojCaffe.com", "loading": "eager" }).on("error", function () { this.src = this.src; }));
+            $("div.card#hosting_banner > div.card-body").children("a").attr("target", "_blank").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/dobojcaffe.png", "alt": "Web hosting by DobojCaffe.com", "loading": "eager", "crossorigin": "anonymous" }).on("error", function () { this.src = "https://raw.githubusercontent.com/BaleshSrle/misc/refs/heads/main/banner/img/dobojcaffe.png"; }));
             break;
         default:
-            $("div.card#hosting_banner > div.card-body").children("a").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/docaffe.jpg", "alt": "Web hosting by DobojCaffe.com", "loading": "eager" }).on("error", function () { this.src = this.src; }));
+            $("div.card#hosting_banner > div.card-body").children("a").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/docaffe.jpg", "alt": "Web hosting by DobojCaffe.com", "loading": "eager", "crossorigin": "anonymous" }).on("error", function () { this.src = "https://raw.githubusercontent.com/BaleshSrle/misc/refs/heads/main/banner/img/docaffe.jpg"; }));
     }
     $("header").each(function () {
         $(this).children("a").addClass("text-decoration-none text-body ml-md-1").prepend($("<img>").addClass("border-0 img-fluid").css("margin", "3px 0px").attr({ "src": "images/baleshevichcompany2.png", "alt": "Servis računara 'BALEŠEVIĆ'" }));
