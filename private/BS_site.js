@@ -18,11 +18,11 @@ jQuery(($) => {
                 $(this).append($("<link>").attr({ "rel": "author", "href": "humans.txt" }));
             });
     }
-    $("head").each(function () {
-        $(this).prepend($("<base>").attr("href", location.origin));
+    $("head").each((i, e) => {
+        $(e).prepend($("<base>").attr("href", location.origin));
         // $(this).prepend("<base href=file:///D:/company/>");
-        $(this).append($("<meta>").attr({ "name": "copyright", "content": "DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() }), $("<meta>").attr({ "name": "GENERATOR", "content": "Visual Studio Code 1.100.2" }));
-        $(this).append($.getScript('https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js'));
+        $(e).append($("<meta>").attr({ "name": "copyright", "content": "DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() }), $("<meta>").attr({ "name": "GENERATOR", "content": "Visual Studio Code 1.100.2" }));
+        $(e).append($.getScript('https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js'));
     });
     if ($("li.nav-item.dropdown").hasClass("active")) {
         //$("head").prepend($("<title></title>").text(".::Servis računara B@LESHEVICH:: - ::" + $("li.breadcrumb-item:eq(1)").text() + ":: - ::" + $("li.breadcrumb-item:last").text() + "::."));
@@ -34,22 +34,22 @@ jQuery(($) => {
     switch (new Date().getMonth() + 1) {
         case 1:
         case 12:
-            $("div.card#hosting_banner > div.card-body").children("a").attr("target", "_blank").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/dobojcaffe.png", "alt": "Web hosting by DobojCaffe.com", "loading": "eager", "crossorigin": "anonymous" }).on("error", function () { this.src = "https://raw.githubusercontent.com/BaleshSrle/misc/refs/heads/main/banner/img/dobojcaffe.png"; }));
+            $("div.card#hosting_banner > div.card-body").children("a").attr("target", "_blank").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/dobojcaffe.png", "alt": "Web hosting by DobojCaffe.com", "loading": "eager", "crossorigin": "anonymous" }).on("error", (e) => { e.target.src = "https://raw.githubusercontent.com/BaleshSrle/misc/refs/heads/main/banner/img/dobojcaffe.png"; }));
             break;
         default:
-            $("div.card#hosting_banner > div.card-body").children("a").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/docaffe.jpg", "alt": "Web hosting by DobojCaffe.com", "loading": "eager", "crossorigin": "anonymous" }).on("error", function () { this.src = "https://raw.githubusercontent.com/BaleshSrle/misc/refs/heads/main/banner/img/docaffe.jpg"; }));
+            $("div.card#hosting_banner > div.card-body").children("a").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/docaffe.jpg", "alt": "Web hosting by DobojCaffe.com", "loading": "eager", "crossorigin": "anonymous" }).on("error", (e) => { e.target.src = "https://raw.githubusercontent.com/BaleshSrle/misc/refs/heads/main/banner/img/docaffe.jpg"; }));
     }
-    $("header").each(function () {
-        $(this).children("a").addClass("text-decoration-none text-body ml-md-1").prepend($("<img>").addClass("border-0 img-fluid").css("margin", "3px 0px").attr({ "src": "images/baleshevichcompany2.png", "alt": "Servis računara 'BALEŠEVIĆ'" }));
-        $(this).find("p").addClass("small ml-md-1").text("Uvijek u službi korisnika i računara");
+    $("header").each((i, e) => {
+        $(e).children("a").addClass("text-decoration-none text-body ml-md-1").prepend($("<img>").addClass("border-0 img-fluid").css("margin", "3px 0px").attr({ "src": "images/baleshevichcompany2.png", "alt": "Servis računara 'BALEŠEVIĆ'" }));
+        $(e).find("p").addClass("small ml-md-1").text("Uvijek u službi korisnika i računara");
     }).addClass("mb-sm-0 py-sm-2 overflow-hidden");
-    $("ol.breadcrumb").each(function () {
-        $(this).addClass("mb-1 py-1");
-        $(this).children().last().addClass("active").attr("aria-current", "page");
+    $("ol.breadcrumb").each((i, e) => {
+        $(e).addClass("mb-1 py-1");
+        $(e).children().last().addClass("active").attr("aria-current", "page");
     });
-    $("nav.navbar").each(function () {
-        $(this).addClass("navbar-expand-sm navbar-dark bg-primary py-sm-1");
-        $(this).children("button").addClass("navbar-toggler").attr({ "type": "button", "data-toggle": "collapse", "data-target": "#collapsibleNavbar" });
+    $("nav.navbar").each((i, e) => {
+        $(e).addClass("navbar-expand-sm navbar-dark bg-primary py-sm-1");
+        $(e).children("button").addClass("navbar-toggler").attr({ "type": "button", "data-toggle": "collapse", "data-target": "#collapsibleNavbar" });
     });
     $("li.nav-item").each(() => {
         $("li.nav-item:eq(0)").html("<a class='nav-link' href='index.html'><i class='bi bi-house pr-1'></i>Početna</a>");
@@ -67,35 +67,36 @@ jQuery(($) => {
     });
     $("img").filter("[src*='style=for-the-badge'],[alt$='Ubuntu'],[alt='IP2Location'],[alt^='Joomla']:gt(0)").addClass("rounded-lg");
     //$("img[src*='style=for-the-badge']:gt(0)").attr("src", function (index, src) { return src + '&logoSize=auto' });
-    $("main").each(function () {
+    /* $("main").each(function () {
         $(this).find("img").addClass("border-0").css("margin", "3px 0px");
         $(this).find("img").parents("div.card-body").addClass("px-2");
         //$(this).find("a").not(".btn").attr("target", "_blank");
-    }).addClass("container-fluid overflow-hidden mx-auto");
-    $("div.col-sm-3.col-xl-2").each(function () {
-        $(this).filter(":first").addClass("my-1 pr-md-2");
-        $(this).filter(":last").addClass("my-1 pl-md-2");
-        $(this).children().addClass("my-1 shadow-sm");
+    }).addClass("container-fluid overflow-hidden mx-auto");*/
+    $("main").addClass("container-fluid overflow-hidden mx-auto").find("img").addClass("border-0").css("margin", "3px 0px").parents("div.card-body").addClass("px-2");
+    $("div.col-sm-3.col-xl-2").each((i, e) => {
+        $(e).filter(":first").addClass("my-1 pr-md-2");
+        $(e).filter(":last").addClass("my-1 pl-md-2");
+        $(e).children().addClass("my-1 shadow-sm");
     });
-    $("div").each(function () {
-        $(this).filter(".github-box.repo, .wot-badge").addClass("shadow-sm");
-        $(this).filter("#countdown").parents(".card").addClass("bg-danger font-weight-bold text-white");
-        $(this).filter("#microsoft").parents(".card").addClass("d-none d-md-block").height(131.94);
-        $(this).filter("#linux").parents(".card").addClass("d-none d-md-block");
-        $(this).filter("#linux, #internet").parents(".card").height(228);
-        //$(this).filter("#microsoft,#linux,#internet").find("img").css("max-width", "180px").addClass("d-block mx-auto h-auto");
-        //$(this).filter("#MediaPlayer,#WebBrowser,#microsoft,#linux,#internet").find("carousel-item:first-child").addClass("active");
-        $(this).filter("#MinOfInteriorSrpskaCyber").children("div.card-body").wrapInner($("<a></a>").attr({ "href": "https://mup.vladars.rs/vtk-lat/", "hreflang": "sr-BA", "target": "_blank" }).append($("<img>").attr({ "src": "images/vtk.png", "alt": "MUP R. Srpske - Uprava krim. policije - Jedinica za opšti kriminalitet - Odjeljenje za visokotehnološki kriminalitet" }).addClass("d-block mx-auto img-fluid").css("width", "180")));
-        $(this).filter("#speedtest_banner").children("div.card-body").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Speedtest%20by%20Ookla-141526?style=for-the-badge&logo=speedtest&logoSize=auto&link=https%3A%2F%2Fspeedtest.net", "name": "Provjerite brzinu svog Interneta" }).addClass("rounded-lg d-block mx-auto img-fluid"));
+    $("div").each((i, e) => {
+        $(e).filter(".github-box.repo, .wot-badge").addClass("shadow-sm");
+        $(e).filter("#countdown").parents(".card").addClass("bg-danger font-weight-bold text-white");
+        $(e).filter("#microsoft").parents(".card").addClass("d-none d-md-block").height(131.94);
+        $(e).filter("#linux").parents(".card").addClass("d-none d-md-block");
+        $(e).filter("#linux, #internet").parents(".card").height(228);
+        //$(e).filter("#microsoft,#linux,#internet").find("img").css("max-width", "180px").addClass("d-block mx-auto h-auto");
+        //$(e).filter("#MediaPlayer,#WebBrowser,#microsoft,#linux,#internet").find("carousel-item:first-child").addClass("active");
+        $(e).filter("#MinOfInteriorSrpskaCyber").children("div.card-body").wrapInner($("<a></a>").attr({ "href": "https://mup.vladars.rs/vtk-lat/", "hreflang": "sr-BA", "target": "_blank" }).append($("<img>").attr({ "src": "images/vtk.png", "alt": "MUP R. Srpske - Uprava krim. policije - Jedinica za opšti kriminalitet - Odjeljenje za visokotehnološki kriminalitet" }).addClass("d-block mx-auto img-fluid").css("width", "180")));
+        $(e).filter("#speedtest_banner").children("div.card-body").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Speedtest%20by%20Ookla-141526?style=for-the-badge&logo=speedtest&logoSize=auto&link=https%3A%2F%2Fspeedtest.net", "name": "Provjerite brzinu svog Interneta" }).addClass("rounded-lg d-block mx-auto img-fluid"));
     });
     //$("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");
-    $("article").each(function () {
-        $(this).find("a[href^='https']").attr("target", "_blank");
+    $("article").each((i, e) => {
+        $(e).find("a[href^='https']").attr("target", "_blank");
     }).addClass("col-sm-6 col-xl-8 my-2 px-md-2");
-    $("p.small").each(function () {
-        $(this).find("img").filter("[alt$='Visual Studio Code'],[alt$='HTML5'],[alt$='CSS3'],[alt$='Font Awesome']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
-        $(this).find("img.StaticBadge").filter("[alt$='Joomla'],[alt$='Bootstrap'],[alt$='WordPress'],[alt$='jQuery'],[alt$='šablon']").addClass("my-0 ml-1 align-text-top").removeAttr("style");
-        $(this).children("i.bi-skype").addClass("text-muted");
+    $("p.small").each((i, e) => {
+        $(e).find("img").filter("[alt$='Visual Studio Code'],[alt$='HTML5'],[alt$='CSS3'],[alt$='Font Awesome']").addClass("my-0 mx-1 align-text-top").removeAttr("style");
+        $(e).find("img.StaticBadge").filter("[alt$='Joomla'],[alt$='Bootstrap'],[alt$='WordPress'],[alt$='jQuery'],[alt$='šablon']").addClass("my-0 ml-1 align-text-top").removeAttr("style");
+        $(e).children("i.bi-skype").addClass("text-muted");
     });
     $("object[name='CCleaner'],img[alt$='CCleaner']").addClass("my-0 ml-1 align-text-top").removeAttr("style");
     $("div.carousel").filter("MediaPlayer, #WebBrowser, #microsoft").carousel({
@@ -104,66 +105,66 @@ jQuery(($) => {
         ride: "carousel",
         touch: false
     }).addClass("slide carousel-fade");
-    $("div#MediaPlayer.carousel").each(function () {
-        $(this).wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
-        $(this).find("div.carousel-item:eq(0)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20VLC%20media%20player-ff8800?style=for-the-badge&logo=vlcmediaplayer&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.videolan.org%2Fvlc%2Findex.sr.html", "name": "Get VLC media player - It plays, it streams, it kills WiMPs!!" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
-        $(this).find("div.carousel-item:eq(1)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20Winamp-f93821?style=for-the-badge&logo=winamp&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwinamp.com%2Fplayer", "name": "Download Winamp Player" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
-        $(this).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Spotify-1ed760?style=for-the-badge&logo=spotify&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.spotify.com%2Frs-sr%2Fdownload%2Fwindows%2F", "name": "Windows Download - Spotify" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
+    $("div#MediaPlayer.carousel").each((i, e) => {
+        $(e).wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
+        $(e).find("div.carousel-item:eq(0)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20VLC%20media%20player-ff8800?style=for-the-badge&logo=vlcmediaplayer&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.videolan.org%2Fvlc%2Findex.sr.html", "name": "Get VLC media player - It plays, it streams, it kills WiMPs!!" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
+        $(e).find("div.carousel-item:eq(1)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20Winamp-f93821?style=for-the-badge&logo=winamp&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwinamp.com%2Fplayer", "name": "Download Winamp Player" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
+        $(e).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Spotify-1ed760?style=for-the-badge&logo=spotify&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.spotify.com%2Frs-sr%2Fdownload%2Fwindows%2F", "name": "Windows Download - Spotify" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
     });
-    $("div#WebBrowser.carousel").each(function () {
-        $(this).wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
-        $(this).find("div.carousel-item:eq(0)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20Vivaldi%20Browser-ef3939?style=for-the-badge&logo=vivaldi&logoColor=white&logoSize=auto&link=https%3A%2F%2Fvivaldi.com%2Fsr%2F", "name": "Download Vivaldi Web Browser Today!" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
-        $(this).find("div.carousel-item:eq(1)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Google%20Chrome-4285f4?style=for-the-badge&logo=googlechrome&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.google.com%2Fchrome%2F", "name": "Download Google Chrome" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
-        $(this).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Firefox-ff7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.firefox.com%2Fsr%2F", "name": "Download Firefox" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
-        $(this).find("div.carousel-item:eq(3)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Opera%20Browser-ff1b2d?style=for-the-badge&logo=opera&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.opera.com%2Fdownload", "name": "Download Opera Browser" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
+    $("div#WebBrowser.carousel").each((i, e) => {
+        $(e).wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
+        $(e).find("div.carousel-item:eq(0)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Get%20Vivaldi%20Browser-ef3939?style=for-the-badge&logo=vivaldi&logoColor=white&logoSize=auto&link=https%3A%2F%2Fvivaldi.com%2Fsr%2F", "name": "Download Vivaldi Web Browser Today!" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
+        $(e).find("div.carousel-item:eq(1)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Google%20Chrome-4285f4?style=for-the-badge&logo=googlechrome&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.google.com%2Fchrome%2F", "name": "Download Google Chrome" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
+        $(e).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Firefox-ff7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.firefox.com%2Fsr%2F", "name": "Download Firefox" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
+        $(e).find("div.carousel-item:eq(3)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Opera%20Browser-ff1b2d?style=for-the-badge&logo=opera&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.opera.com%2Fdownload", "name": "Download Opera Browser" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "3px 0px"));
     });
-    $("div#microsoft.carousel").each(function () {
-        $(this).wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
-        $(this).find("div.carousel-item:eq(0)").wrapInner($("<a></a>").attr({ "href": "https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download", "hreflang": "sr-RS", "target": "_blank" }).append($("<img>").attr({ "src": "images/MSE.png", "alt": "Microsoft Security Essentials" }).addClass("border-0 d-block mx-auto my-4 img-fluid")));
-        $(this).find("div.carousel-item:eq(1)").wrapInner($("<a></a>").attr({ "href": "https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc", "hreflang": "sr-RS", "target": "_blank" }).append($("<img>").attr({ "src": "images/win_wallpaper.png", "alt": "Windows Personalizovanje računara" }).addClass("border-0 d-block mx-auto my-n3 my-n3 img-fluid")));
-        $(this).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Bing%20Wallpaper-0f6cbd?style=for-the-badge&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.bing.com%2Fapps%2Fwallpaper%2Fdownload", "name": "Bing Wallpaper" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "32px 0px"));
-        $(this).find("div.carousel-item:eq(3)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Visual%20Studio%20Code-007acc?style=for-the-badge&link=https%3A%2F%2Fcode.visualstudio.com%2F", "name": "Visual Studio Code" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "32px 0px"));
+    $("div#microsoft.carousel").each((i, e) => {
+        $(e).wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
+        $(e).find("div.carousel-item:eq(0)").wrapInner($("<a></a>").attr({ "href": "https://support.microsoft.com/sr-latn-rs/help/14210/security-essentials-download", "hreflang": "sr-RS", "target": "_blank" }).append($("<img>").attr({ "src": "images/MSE.png", "alt": "Microsoft Security Essentials" }).addClass("border-0 d-block mx-auto my-4 img-fluid")));
+        $(e).find("div.carousel-item:eq(1)").wrapInner($("<a></a>").attr({ "href": "https://support.microsoft.com/sr-latn-rs/help/14165/windows-personalize-your-pc", "hreflang": "sr-RS", "target": "_blank" }).append($("<img>").attr({ "src": "images/win_wallpaper.png", "alt": "Windows Personalizovanje računara" }).addClass("border-0 d-block mx-auto my-n3 my-n3 img-fluid")));
+        $(e).find("div.carousel-item:eq(2)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Download%20Bing%20Wallpaper-0f6cbd?style=for-the-badge&logoColor=white&logoSize=auto&link=https%3A%2F%2Fwww.bing.com%2Fapps%2Fwallpaper%2Fdownload", "name": "Bing Wallpaper" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "32px 0px"));
+        $(e).find("div.carousel-item:eq(3)").append($("<object></object>").attr({ "data": "https://img.shields.io/badge/Visual%20Studio%20Code-007acc?style=for-the-badge&link=https%3A%2F%2Fcode.visualstudio.com%2F", "name": "Visual Studio Code" }).addClass("rounded-lg border-0 d-block mx-auto img-fluid").css("margin", "32px 0px"));
     });
-    $("div#linux.carousel").each(function () {
-        $(this).carousel({
+    $("div#linux.carousel").each((i, e) => {
+        $(e).carousel({
             interval: 2900,
             keyboard: false,
             ride: "carousel",
             touch: false
         }).addClass("slide carousel-fade").wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
-        $(this).find("div.carousel-item:eq(0)").wrapInner($("<a></a>").attr({ "href": "http://ubunt.eu/zesty", "hreflang": "en", "target": "_blank" }).wrapInner($("<img>").attr({ "src": "https://assets.ubuntu.com/v1/61f4fb91-release-widgetv5.jpg", "alt": "Download latest version of Ubuntu" }).addClass("rounded-lg border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
-        $(this).find("div.carousel-item:eq(1)").wrapInner($("<a></a>").attr({ "href": "https://www.linuxliteos.com/download.php", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "images/linux_lite_feather_logo.png", "alt": "Download Linux Lite Free Linux Operating System" }).addClass("rounded-lg border-0 d-block mx-auto w-auto").css({ "margin": "3px 0px", "max-height": "180px" })));
-        $(this).find("div.carousel-item:eq(2)").wrapInner($("<a></a>").attr({ "href": "https://mxlinux.org/download-links/", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "https://mxlinux.org/wp-content/uploads/2019/01/MX-Menu-icon-pyramids.svg", "alt": "MX Linux - Download Links" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "10px 0px", "max-width": "180px" })));
-        $(this).find("div.carousel-item:eq(3)").wrapInner($("<a></a>").attr({ "href": "https://www.opensuse.org/", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "https://raw.githubusercontent.com/openSUSE/artwork/master/logos/official/logo-color.svg", "alt": "openSUSE - Linux OS. The makers' choice for sysadmins, developers and desktop users.", "crossorigin": "anonymous" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "35px 0px", "max-width": "180px" })));
-        $(this).find("div.carousel-item:eq(4)").wrapInner($("<a></a>").attr({ "href": "https://www.debian.org/distrib/", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "https://www.debian.org/logos/openlogo-nd-100.png", "alt": "Download Debian" }).addClass("rounded-lg border-0 d-block mx-auto h-auto").css({ "margin": "30px 0px", "max-width": "180px" })));
-        //$(this).find("div.carousel-item:eq(2)").wrapInner($("<a></a>").attr({ "href": "https://lxle.net/", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "images/smalllxledark.png", "alt": "Revive that old PC!&lt;The LXLE Desktop" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
-        $(this).find("div.carousel-item:eq(5)").wrapInner($("<a></a>").attr({ "href": "https://www.debian-srbija.iz.rs/", "hreflang": "sr-RS", "target": "_blank" }).append($("<img>").attr({ "src": "images/serbian_debian.png", "alt": "Debian Srbija" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
+        $(e).find("div.carousel-item:eq(0)").wrapInner($("<a></a>").attr({ "href": "http://ubunt.eu/zesty", "hreflang": "en", "target": "_blank" }).wrapInner($("<img>").attr({ "src": "https://assets.ubuntu.com/v1/61f4fb91-release-widgetv5.jpg", "alt": "Download latest version of Ubuntu" }).addClass("rounded-lg border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
+        $(e).find("div.carousel-item:eq(1)").wrapInner($("<a></a>").attr({ "href": "https://www.linuxliteos.com/download.php", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "images/linux_lite_feather_logo.png", "alt": "Download Linux Lite Free Linux Operating System" }).addClass("rounded-lg border-0 d-block mx-auto w-auto").css({ "margin": "3px 0px", "max-height": "180px" })));
+        $(e).find("div.carousel-item:eq(2)").wrapInner($("<a></a>").attr({ "href": "https://mxlinux.org/download-links/", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "https://mxlinux.org/wp-content/uploads/2019/01/MX-Menu-icon-pyramids.svg", "alt": "MX Linux - Download Links" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "10px 0px", "max-width": "180px" })));
+        $(e).find("div.carousel-item:eq(3)").wrapInner($("<a></a>").attr({ "href": "https://www.opensuse.org/", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "https://raw.githubusercontent.com/openSUSE/artwork/master/logos/official/logo-color.svg", "alt": "openSUSE - Linux OS. The makers' choice for sysadmins, developers and desktop users.", "crossorigin": "anonymous" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "35px 0px", "max-width": "180px" })));
+        $(e).find("div.carousel-item:eq(4)").wrapInner($("<a></a>").attr({ "href": "https://www.debian.org/distrib/", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "https://www.debian.org/logos/openlogo-nd-100.png", "alt": "Download Debian" }).addClass("rounded-lg border-0 d-block mx-auto h-auto").css({ "margin": "30px 0px", "max-width": "180px" })));
+        //$(e).find("div.carousel-item:eq(2)").wrapInner($("<a></a>").attr({ "href": "https://lxle.net/", "hreflang": "en", "target": "_blank" }).append($("<img>").attr({ "src": "images/smalllxledark.png", "alt": "Revive that old PC!&lt;The LXLE Desktop" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
+        $(e).find("div.carousel-item:eq(5)").wrapInner($("<a></a>").attr({ "href": "https://www.debian-srbija.iz.rs/", "hreflang": "sr-RS", "target": "_blank" }).append($("<img>").attr({ "src": "images/serbian_debian.png", "alt": "Debian Srbija" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
     });
-    $("div#internet.carousel").each(function () {
-        $(this).carousel({
+    $("div#internet.carousel").each((i, e) => {
+        $(e).carousel({
             interval: 2800,
             keyboard: false,
             ride: "carousel",
             touch: false
         }).addClass("slide carousel-fade").wrapInner($("<div></div>").addClass("carousel-inner").append($("<div></div>").addClass("carousel-item active"), $("<div></div>").addClass("carousel-item"), $("<div></div>").addClass("carousel-item")));
-        $(this).find("div.carousel-item:eq(0)").wrapInner($("<a></a>").attr({ "href": "https://internetdefenseleague.org", "hreflang": "en", "target": "_blank" }).wrapInner($("<img>").attr({ "src": "images/IDL_Shield_badge.png", "alt": "Internet Defense League" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
-        $(this).find("div.carousel-item:eq(1)").wrapInner($("<a></a>").attr({ "href": "https://www.worldipv6launch.org/", "hreflang": "en", "target": "_blank" }).wrapInner($("<img>").attr({ "src": "images/World_IPv6_launch.png", "alt": "World IPv6 Launch" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
-        $(this).find("div.carousel-item:eq(2)").wrapInner($("<a></a>").attr({ "href": "https://www.ip2location.com/free/widgets", "hreflang": "en", "target": "_blank" }).wrapInner($("<img>").attr({ "src": "https://tools.ip2location.com/200x200.png", "alt": "IP2Location" }).addClass("rounded-lg border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
+        $(e).find("div.carousel-item:eq(0)").wrapInner($("<a></a>").attr({ "href": "https://internetdefenseleague.org", "hreflang": "en", "target": "_blank" }).wrapInner($("<img>").attr({ "src": "images/IDL_Shield_badge.png", "alt": "Internet Defense League" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
+        $(e).find("div.carousel-item:eq(1)").wrapInner($("<a></a>").attr({ "href": "https://www.worldipv6launch.org/", "hreflang": "en", "target": "_blank" }).wrapInner($("<img>").attr({ "src": "images/World_IPv6_launch.png", "alt": "World IPv6 Launch" }).addClass("border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
+        $(e).find("div.carousel-item:eq(2)").wrapInner($("<a></a>").attr({ "href": "https://www.ip2location.com/free/widgets", "hreflang": "en", "target": "_blank" }).wrapInner($("<img>").attr({ "src": "https://tools.ip2location.com/200x200.png", "alt": "IP2Location" }).addClass("rounded-lg border-0 d-block mx-auto h-auto").css({ "margin": "3px 0px", "max-width": "180px" })));
     });
     //$("div.github-widget div").addClass("col p-1");
     $("div.btn-toolbar").attr({ "role": "toolbar", "aria-label": "ToolbarButtonGroup" }).addClass("d-flex justify-content-center flex-row flex-fill");
-    $("div.btn-group.btn-group-lg").each(function () {
+    $("div.btn-group.btn-group-lg").each(() => {
         $("div.btn-group.btn-group-lg:first").addClass("pr-xl-1 py-1").attr("aria-label", "Komunikacija");
         $("div.btn-group.btn-group-lg:last").addClass("pl-xl-1 py-1 d-none d-md-block").attr("aria-label", "Ostalo");
     }).attr("role", "group");
     $(".bi-skype,.bi-telegram,.bi-envelope,.bi-cone-striped").addClass("h2 align-middle");
     $("i.bi-skype").parent("a").attr(/*"href", "skype:srdjan.baleshevich?chat"*/{ "href": "skype:srdjan.baleshevich?chat", "aria-disabled": "true" }).addClass("disabled");
     $("i.bi-telegram").parent("a").attr({ "href": "https://baleshsrle.t.me", "hreflang": "en", "target": "_blank" });
-    $(".btn-vlc").each(function () {
-        $(this).hover(function () { $(this).css({ "background-color": "#d87600", "color": "white" }); }, function () { $(this).css({ "background-color": "darkorange", "color": "white" }); });
+    $(".btn-vlc").each((i, e) => {
+        $(e).hover((e) => $(e).css({ "background-color": "#d87600", "color": "white" }), () => $(e).css({ "background-color": "darkorange", "color": "white" }));
     }).attr({ "href": "radio.pls", "download": "BS_RadioPlaylist" }).css({ "background-color": "darkorange", "color": "white" });
     $("footer").each(() => {
-        $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-auto").css("max-width", "292px").append($("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3", "alt": "Bootstrap" }).on("error", function () { this.src = "https://badgen.net/jsdelivr/v/npm/bootstrap@4?color=7952b3&label=Bootstrap" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad", "alt": "jQuery" }).on("error", function () { this.src = "https://badgen.net/jsdelivr/v/npm/jquery@3?color=0769ad&label=jQuery" })), $("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2F" + location.host + "%2F&label=W3C%20Validation", "alt": "W3C Validation - HTML" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", "alt": "jsDelivr CDN" })));
+        $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-auto").css("max-width", "292px").append($("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3", "alt": "Bootstrap" }).on("error", (e) => { e.target.src = "https://badgen.net/jsdelivr/v/npm/bootstrap@4?color=7952b3&label=Bootstrap" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad", "alt": "jQuery" }).on("error", (e) => { e.target.src = "https://badgen.net/jsdelivr/v/npm/jquery@3?color=0769ad&label=jQuery" })), $("<div></div>").addClass("mr-1").wrapInner($("<img>").attr({ "src": "https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2F" + location.host + "%2F&label=W3C%20Validation", "alt": "W3C Validation - HTML" })), $("<div></div>").wrapInner($("<img>").attr({ "src": "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", "alt": "jsDelivr CDN" })));
         //$("footer > div:eq(0)").addClass("d-flex flex-wrap flex-sm-column mx-md-2").html("<div class='mx-auto'><img src='https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3' alt='Bootstrap'></div><div class='mx-auto'><img src='https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad' alt='jQuery'></div><div class='mx-auto'><img src='https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600' alt='jsDelivr CDN'></div>");
         $("footer > div:eq(1)").addClass("flex-grow-1 small h6 my-sm-1 my-md-0");
         $("footer p").not(":last").addClass("mb-1");
