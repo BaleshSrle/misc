@@ -2,7 +2,7 @@ $(document).ready(() => {
     $("body").css("background", "#f1f1f1");
     $("script:first").attr({ "crossorigin": "anonymous", "referrerpolicy": "no-referrer" });
     $("form").attr("method", "post").css({ "text-align": "center", "padding": "16px 0px" });
-    $("select#url").on("click", function () {
+    $("select#url").on("click", () => {
         $("iframe#urlOutput").attr("src", $("#url").val());
     });
     $("div.laptop").css({ "-webkit-transform-origin": "0 0", "transform-origin": "0 0", "-webkit-transform": "scale(.6) translate(-50%)", "transform": "scale(.6) translate(-50%)", "left": "50%", "position": "absolute", "border-width": "24px 24px 80px", "border-radius": "6px" }).width(1366).height(800);
