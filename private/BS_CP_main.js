@@ -338,9 +338,14 @@ $(document).ready(() => {
     $("iframe[src*='blberza']").parent("div.card-body").slice(0, 2).addClass("bg-white rounded-bottom");
     //$("iframe[src*='blberza']").slice(2).width(200).height(110).addClass("overflow-hidden rounded-lg");
     $("iframe.steamWidget").each((i, e) => {
-        const steamGameID = $(e).data("steam-gameid");
-        const steamTitle = $(e).data("steam-title") || null;
-        $(e).addClass("d-block mx-auto border-0 my-1").attr({ "src": "https://store.steampowered.com/widget/" + steamGameID + "/", "title": steamTitle, "loading": "lazy" }).width(646).height(190).wrap($("<div></div>").addClass("col-auto"));
+        const GameID = $(e).data("gameid");
+        const Title = $(e).data("title") || null;
+        $(e).addClass("d-block mx-auto border-0 my-1").attr({ "src": "https://store.steampowered.com/widget/" + GameID + "/", "title": Title, "loading": "lazy" }).width(646).height(190).wrap($("<div></div>").addClass("col-auto"));
+    });
+    $("div.col-auto").each((i, e) => {
+        if (i % 2 === 0) {
+            $(e).next("div.col-auto").addBack().wrapAll($("<div></div>").addClass("row"));
+        }
     });
     $("div.carousel").addClass("carousel-fade").carousel({
         interval: 3000,
