@@ -171,7 +171,7 @@ $(document).ready(() => {
         //$(e).filter("[src*='uptimerobot']").attr("src", function (index, src) { return src + '&cacheSeconds=3600' });
         //$(e).filter("[alt^='GitHub']").attr({ "src": function (index, src) { return src + '?logo=github&labelColor=181717' }, "loading": "lazy" });
         $(e).filter("[alt$='deployments']").attr({ "src": (index, src) => src + '&label=Deployments', "loading": "lazy", "crossorigin": "anonymous" });
-        //$(e).filter("[src*='shields']").on("error", (e) => { e.target.src = e.target.src; });
+        //$(e).filter("[src*='shields']").on("error", function() { this.src = this.src; });
     });
     $("img.AppBadge").each((i, e) => {
         const PackageManager = $(e).data("packagemanager");
@@ -201,8 +201,8 @@ $(document).ready(() => {
             case "Snapcraft":
                 $(e).attr({
                     "src": "https://img.shields.io/snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "alt": "Snapcraft Badge for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
-                }).on("error", (e) => {
-                    $(e.target).attr("src", "https://badgen.infra.medigy.com/snapcraft/v/" + Package + "/amd64?label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color)
+                }).on("error", function () {
+                    $(this).attr("src", "https://badgen.infra.medigy.com/snapcraft/v/" + Package + "/amd64?label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color)
                 }).wrap($("<a></a>").attr({ "href": "https://snapcraft.io/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Ubuntu":
@@ -213,8 +213,8 @@ $(document).ready(() => {
             default:
                 $(e).attr({
                     "src": "https://img.shields.io/winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy", "crossorigin": "anonymous"
-                }).on("error", (e) => {
-                    $(e.target).attr("src", "https://badgen.net/winget/v/" + Package + "?color=" + Color + "&icon=" + Logo + "&label=" + Label + "%20%40%20winget");
+                }).on("error", function () {
+                    $(this).attr("src", "https://badgen.net/winget/v/" + Package + "?color=" + Color + "&icon=" + Logo + "&label=" + Label + "%20%40%20winget");
                 }).wrap($("<a></a>").attr({ "href": "https://winget.run/pkg/" + Package.replace(".", "/").replace(".sr", ""), "hreflang": "en", "target": "_blank", "rel": "external" }));
         }
     });
@@ -227,22 +227,22 @@ $(document).ready(() => {
             case "Chromium":
                 $(e).attr({
                     "src": "https://img.shields.io/chrome-web-store/v/" + ExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy", "crossorigin": "anonymous"
-                }).on("error", (e) => {
-                    $(e.target).attr("src", "https://badgen.net/chrome-web-store/v/" + ExtensionId + "?icon=chrome&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor);
+                }).on("error", function () {
+                    $(this).attr("src", "https://badgen.net/chrome-web-store/v/" + ExtensionId + "?icon=chrome&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor);
                 }).wrap($("<a></a>").attr({ "href": "https://chromewebstore.google.com/detail/" + ExtensionId, "target": "_blank", "rel": "external" }));
                 break;
             case "Firefox":
                 $(e).attr({
                     "src": "https://img.shields.io/amo/v/" + ExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + ExtensionColor, "loading": "lazy", "crossorigin": "anonymous"
-                }).on("error", (e) => {
-                    $(e.target).attr("src", "https://badgen.net/amo/v/" + ExtensionId + "?color=" + ExtensionColor + "&icon=firefox&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139");
+                }).on("error", function () {
+                    $(this).attr("src", "https://badgen.net/amo/v/" + ExtensionId + "?color=" + ExtensionColor + "&icon=firefox&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139");
                 }).wrap($("<a></a>").attr({ "href": "https://addons.mozilla.org/hr/firefox/addon/" + ExtensionId, "hreflang": "hr", "target": "_blank", "rel": "external" }));
                 break;
             default:
                 $(e).attr({
                     "src": "https://img.shields.io/visual-studio-marketplace/v/" + ExtensionId + "?label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc", "loading": "lazy", "crossorigin": "anonymous"
-                }).on("error", (e) => {
-                    $(e.target).attr("src", "https://badgen.net/vs-marketplace/v/" + ExtensionId + "?icon=visualstudio&label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc");
+                }).on("error", function () {
+                    $(this).attr("src", "https://badgen.net/vs-marketplace/v/" + ExtensionId + "?icon=visualstudio&label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc");
                 }).wrap($("<a></a>").attr({ "href": "https://marketplace.visualstudio.com/items?itemName=" + ExtensionId, "hreflang": "en", "target": "_blank", "rel": "external" }));
         }
     });
@@ -260,8 +260,8 @@ $(document).ready(() => {
         const Package = $(e).data("package");
         const Branch = $(e).data("branch") || "main";
         const JobName = $(e).data("jobname") || "";
-        $(e).attr({ "src": "https://img.shields.io/github/check-runs/" + Package + "/" + Branch + "?nameFilter=" + JobName + "&logo=github&logoColor=white&logoSize=auto&label=Checks%20" + JobName + "&labelColor=181717", "alt": "GitHub branch check runs", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", (e) => {
-            $(e.target).attr("src", "https://badgen.net/github/checks/" + Package + "/" + Branch + "/" + JobName + "?icon=github&label=Checks%20" + JobName + "&labelColor=181717");
+        $(e).attr({ "src": "https://img.shields.io/github/check-runs/" + Package + "/" + Branch + "?nameFilter=" + JobName + "&logo=github&logoColor=white&logoSize=auto&label=Checks%20" + JobName + "&labelColor=181717", "alt": "GitHub branch check runs", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
+            $(this).attr("src", "https://badgen.net/github/checks/" + Package + "/" + Branch + "/" + JobName + "?icon=github&label=Checks%20" + JobName + "&labelColor=181717");
         });
     });
     $("img.ghCommitActivity").each((i, e) => {
@@ -270,15 +270,15 @@ $(document).ready(() => {
         const Package = $(e).data("package");
         $(e).attr({ "src": "https://img.shields.io/github/commit-activity/" + Period + "/" + Package + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Commit Activity " + PeriodLabel, "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto");
         if (Period == "t") {
-            $(e).on("error", (e) => {
-                $(e.target).attr("src", "https://badgen.net/github/commits/" + Package + "?icon=github&labelColor=181717");
+            $(e).on("error", function () {
+                $(this).attr("src", "https://badgen.net/github/commits/" + Package + "?icon=github&labelColor=181717");
             });
         }
     });
     $("img.ghLastCommit").each((i, e) => {
         const Package = $(e).data("package");
-        $(e).attr({ "src": "https://img.shields.io/github/last-commit/" + Package + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Last Commit", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", (e) => {
-            $(e.target).attr("src", "https://badgen.net/github/last-commit/" + Package + "?icon=github&labelColor=181717");
+        $(e).attr({ "src": "https://img.shields.io/github/last-commit/" + Package + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Last Commit", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
+            $(this).attr("src", "https://badgen.net/github/last-commit/" + Package + "?icon=github&labelColor=181717");
         });
     });
     $("img.ghPRDetail").each((i, e) => {
@@ -302,8 +302,8 @@ $(document).ready(() => {
         const Logo = $(e).data("logo") || "linux";
         $(e).attr({
             "src": "https://img.shields.io/badge/" + Name + "-" + Edition + "%2064--bit-" + Color + "?logo=" + Logo + "&logoColor=white&logoSize=auto", "loading": "lazy", "crossorigin": "anonymous"
-        }).on("error", (e) => {
-            $(e.target).attr("src", "https://badgen.net/static/" + Name + "/" + Edition + "%2064-bit/" + Color);
+        }).on("error", function () {
+            $(this).attr("src", "https://badgen.net/static/" + Name + "/" + Edition + "%2064-bit/" + Color);
         });
     });
     $("img.simpleiconsCDN").each((i, e) => {
@@ -323,8 +323,8 @@ $(document).ready(() => {
         const LabelColor = $(e).data("labelcolor") || "";
         $(e).attr({
             "src": "https://img.shields.io/uptimerobot/status/" + Key + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000", "alt": "UptimeRobot status", "loading": "lazy", "crossorigin": "anonymous"
-        }).on("error", (e) => {
-            $(te.target).attr("src", "https://badgen.infra.medigy.com/uptime-robot/status/" + Key + "?label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000")
+        }).on("error", function (e) {
+            $(this).attr("src", "https://badgen.infra.medigy.com/uptime-robot/status/" + Key + "?label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000")
         });
     });
     $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo", "crossorigin": "anonymous" }).height(32));
