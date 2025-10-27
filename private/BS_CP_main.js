@@ -139,8 +139,8 @@ $(document).ready(() => {
             parent: "accordionControlPanel",
             toggle: false
         });*/
-        $(this).filter("#index,#links,#blse,#tvguide2").attr("data-parent", "#" + $("div.accordion").attr("id"));
-        $(this).filter("#index,#links,#blse,#tvguide2").siblings("div.card-header").addClass("py-2 border-bottom border-secondary");
+        $(this).filter("#index,#links,#blse,#tvguide2").attr("data-parent", "#" + $("div.accordion").attr("id")).siblings("div.card-header").addClass("py-2 border-bottom border-secondary");
+        //$(this).filter("#index,#links,#blse,#tvguide2").siblings("div.card-header").addClass("py-2 border-bottom border-secondary");
         $(this).filter(".navbar-collapse").attr("id", $("button.navbar-toggler").attr("data-target").replace("#", ""));
     });
     /* $("div#collapseTwitchStatus.collapse").collapse({
@@ -420,8 +420,9 @@ $(document).ready(() => {
         $(e).filter("#TechNewsNasloviNET").find("div.modal-body").addClass("p-0").append($("<iframe></iframe>").attr({ "src": "https://naslovi.net/widget/?type=tehnologija&bgcolor=343A40&textcolor=FFFFFF&sourcecolor=FFFFFF80&separatorcolor=6C757D&count=10&", "height": "915", "loading": "lazy" }).addClass("d-block mx-auto border-0 w-100"));
         $(e).filter("#sluzbeni,#steam_games,#CarService").find("div.modal-body").addClass("p-1");
         // $(e).filter("#steam_games").find("iframe").attr({ "width": "646", "height": "190" }).addClass("my-1");
-        $(e).filter("#loginModal,#imgRotate,#twitch,#calculator,#FujitsuLifeBookS751,#kick,#FamilyNotes").find("div.modal-body").addClass("p-2");
-        $(e).filter("#time").find("div.modal-body").addClass("py-2");
+        $(e).filter("#loginModal,#time,#imgRotate,#twitch,#calculator,#FujitsuLifeBookS751,#kick,#FamilyNotes").find("div.modal-body").addClass("p-2");
+        //$(e).filter("#time").find("div.modal-body").addClass("py-2");
+        $(e).filter("#time").find("div.card-body").addClass("p-2");
         // $(e).filter("#imgRotate").find("div.col-md-7").wrapInner($("<img>").attr("id", "imgResult"));
         $(e).filter("#mailSettings").find("div.modal-body").addClass("px-2 py-1");
         $(e).find("div.modal-footer").addClass("py-1");
@@ -488,13 +489,14 @@ $(document).ready(() => {
         // $(e).find("li.list-group-item").addClass("justify-content-between");
         // $(e).find("img").attr({ "src": function (index, src) { return src + '&style=plastic&logo=twitch&logoColor=white&logoSize=auto&labelColor=9146ff&cacheSeconds=60' }, "alt": "Twitch Status", "loading": "lazy" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
     });
+    $("div#KickStatus").addClass("container container.sm").css("column-count", "2");
     $("img.StreamBadge").each((i, e) => {
         const Platform = $(e).data("platform");
         const Username = $(e).data("username");
         const Label = encodeURIComponent($(e).data("label"));
         switch (Platform) {
             case "Twitch":
-                const streamerNames = ["Bebahan", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Decus8", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "LexieMariex", "angryginge13", "dannyaarons", "Bunnymontv", "Lindsfry", "CHI_Kacee", "HailHeidi", "Eveuh", "Chess", "BotezLive", "DinaBelenkaya", "BasedCode", "CodeItLive", "Fortnite", "Halo", "MarvelRivals", "PUBG_BATTLEGROUNDS", "Rainbow6", "Warcraft", "WorldofTanks", "WorldofWarships", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "Alinity", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss", "BuccataX", "lauralux", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "StrawberryTabby", "MyAustinWhite", "Hannesschan", "TrishaHershberger", "PulpFictionally", "Taylor_Jevaux", "juliaburch", "RachelKay", "AshleyNocera", "Faith", "saweetheart", "SkyeBlanchette", "thewildlatina", "danielaazuaje_", "LaurenAlexis_x", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "kristinemaia", "Mellooow_", "GemmasTW", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "KDRkitten", "lucyya", "xXLauoaNXx", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "perfilraro", "jasminaurora", "mira", "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "MistieSage"];
+                const streamerNames = ["Bebahan", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Danzie_Dee", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "LexieMariex", "angryginge13", "dannyaarons", "Bunnymontv", "Lindsfry", "CHI_Kacee", "HailHeidi", "Eveuh", "Chess", "BotezLive", "DinaBelenkaya", "BasedCode", "CodeItLive", "DCUniverseOnline", "Fortnite", "Halo", "MarvelRivals", "PUBG_BATTLEGROUNDS", "Rainbow6", "Warcraft", "WorldofTanks", "WorldofWarships", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "Alinity", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss", "BuccataX", "lauralux", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "StrawberryTabby", "MyAustinWhite", "Hannesschan", "TrishaHershberger", "PulpFictionally", "Taylor_Jevaux", "juliaburch", "RachelKay", "AshleyNocera", "Faith", "Ms_Tricky", "saweetheart", "SkyeBlanchette", "MerceGallardo", "thewildlatina", "danielaazuaje_", "LaurenAlexis_x", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "kristinemaia", "Mellooow_", "GemmasTW", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "KDRkitten", "lucyya", "xXLauoaNXx", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "noe9977", "perfilraro", "princesita1331", "jasminaurora", "mira", "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "MistieSage"];
                 const selector = streamerNames.map(name => `[alt$='${name}']`).join(",");
                 $(e).attr({ "src": "https://img.shields.io/twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
                 $(e).filter(selector).after($("<snap></snap>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
