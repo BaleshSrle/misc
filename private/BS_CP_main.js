@@ -177,6 +177,7 @@ $(document).ready(() => {
         const PackageManager = $(e).data("packagemanager");
         const Package = $(e).data("package");
         const Channel = $(e).data("channel");
+        const Branch = $(e).data("branch");
         const Label = encodeURIComponent($(e).data("label"));
         const Logo = $(e).data("logo") || "";
         const LogoColor = $(e).data("logocolor") || "";
@@ -185,12 +186,12 @@ $(document).ready(() => {
         switch (PackageManager) {
             case "Debian":
                 $(e).attr({
-                    "src": "https://img.shields.io/debian/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Debian%20Packages&labelColor=a81d33&color=" + Color, "alt": "Shields.io Debian Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                    "src": "https://img.shields.io/debian/v/" + Package + "/stable?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Debian%20Packages&labelColor=a81d33&color=" + Color, "alt": "Shields.io Debian Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://packages.debian.org/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Fedora":
                 $(e).attr({
-                    "src": "https://img.shields.io/fedora/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Fedora%20Packages&labelColor=51a2da&color=" + Color, "alt": "Shields.io Fedora Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                    "src": "https://img.shields.io/fedora/v/" + Package + "/f42?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Fedora%20Packages&labelColor=51a2da&color=" + Color, "alt": "Shields.io Fedora Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://packages.fedoraproject.org/search?query=" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Flatpak":
@@ -207,7 +208,7 @@ $(document).ready(() => {
                 break;
             case "Ubuntu":
                 $(e).attr({
-                    "src": "https://img.shields.io/ubuntu/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Ubuntu%20Packages&labelColor=e95420&color=" + Color, "alt": "Shields.io Ubuntu Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                    "src": "https://img.shields.io/ubuntu/v/" + Package + "/noble?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Ubuntu%20Packages&labelColor=e95420&color=" + Color, "alt": "Shields.io Ubuntu Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://packages.ubuntu.com/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             default:
@@ -496,7 +497,7 @@ $(document).ready(() => {
         const Label = encodeURIComponent($(e).data("label"));
         switch (Platform) {
             case "Twitch":
-                const streamerNames = ["Bebahan", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Danzie_Dee", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "LexieMariex", "angryginge13", "dannyaarons", "Bunnymontv", "Lindsfry", "CHI_Kacee", "HailHeidi", "Eveuh", "Chess", "BotezLive", "DinaBelenkaya", "AnnaCramling", "BasedCode", "CodeItLive", "LinusTech", "Brawlhalla", "Call of Duty", "DCUniverseOnline", "Fortnite", "Halo", "MarvelRivals", "PlayOverwatch", "PUBG_BATTLEGROUNDS", "Rainbow6", "Warcraft", "WorldofTanks", "WorldofWarships", "ParadoxInteractive", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "Alinity", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss", "BuccataX", "lauralux", "nufo", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "StrawberryTabby", "MyAustinWhite", "Hannesschan", "TrishaHershberger", "PulpFictionally", "Taylor_Jevaux", "juliaburch", "RachelKay", "AshleyNocera", "Faith", "Ms_Tricky", "saweetheart", "SkyeBlanchette", "MerceGallardo", "thewildlatina", "danielaazuaje_", "LaurenAlexis_x", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "kristinemaia", "Mellooow_", "GemmasTW", "thevalentinanappi", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "KDRkitten", "lucyya", "xXLauoaNXx", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "Mayichi", "noe9977", "perfilraro", "princesita1331", "jasminaurora", "mira", "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "MistieSage", "meowbuffy", "NataliaMav"];
+                const streamerNames = ["Bebahan", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Danzie_Dee", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "LexieMariex", "angryginge13", "dannyaarons", "Pernillamouritzen_", "BunnymonTV", "Lindsfry", "CHI_Kacee", "HailHeidi", "Eveuh", "Chess", "BotezLive", "DinaBelenkaya", "AnnaCramling", "BasedCode", "CodeItLive", "LinusTech", "Brawlhalla", "Call of Duty", "DCUniverseOnline", "Fortnite", "Halo", "MarvelRivals", "PlayOverwatch", "PUBG_BATTLEGROUNDS", "Rainbow6", "Warcraft", "WorldofTanks", "WorldofWarships", "ParadoxInteractive", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "Alinity", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss", "BuccataX", "lauralux", "nufo", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "CoCoNova", "StrawberryTabby", "MyAustinWhite", "Hannesschan", "TrishaHershberger", "PulpFictionally", "Taylor_Jevaux", "juliaburch", "RachelKay", "AshleyNocera", "Faith", "Ms_Tricky", "saweetheart", "SkyeBlanchette", "MerceGallardo", "thewildlatina", "danielaazuaje_", "LaurenAlexis_x", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "kristinemaia", "Mellooow_", "GemmasTW", "thevalentinanappi", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "KDRkitten", "lucyya", "xXLauoaNXx", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "Mayichi", "noe9977", "perfilraro", "princesita1331", "jasminaurora", "mira", "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "MistieSage", "meowbuffy", "NataliaMav"];
                 const selector = streamerNames.map(name => `[alt$='${name}']`).join(",");
                 $(e).attr({ "src": "https://img.shields.io/twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
                 $(e).filter(selector).after($("<snap></snap>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
@@ -636,7 +637,7 @@ $(document).ready(() => {
     });
     $("input[type='url']").attr("inputmode", "url");
     $("table.table").each((i, e) => {
-        $(e).addClass("table-sm table-hover table-dark text-center mb-1");
+        $(e).addClass("table-sm table-hover table-dark text-center mb-1").children("caption").css("caption-side", "top").addClass("py-2");
         $(e).wrap($("<div></div>").addClass("table-responsive"));
         // $(e).find("td").has("br:eq(12)").addClass("align-middle");
         // $(e).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
