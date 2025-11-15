@@ -296,6 +296,20 @@ $(document).ready(() => {
             "src": "https://img.shields.io/github/status/s/pulls/" + Package + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Status%20%23" + Number + "&labelColor=181717", "alt": "GitHub PR Status #" + Number, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
     });
+    $("img.giteaBadge").each((i, e) => {
+        const Package = $(e).data("package");
+        const URL = encodeURIComponent($(e).data("url"));
+        //const Prerelease = Boolean($(e).data("prerelease"));
+        const Sort = $(e).data("sort");
+        const DisplayName = $(e).data("dispname");
+        const DateOrder = $(e).data("dateorder");
+        const Logo = $(e).data("logo") || "gitea";
+        const LogoColor = $(e).data("logocolor") || "white";
+        const LogoSize = $(e).data("logosize") || "";
+        const Label = encodeURIComponent($(e).data("label"));
+        const Color = $(e).data("color") || "blue";
+        $(e).attr({ "src": "https://img.shields.io/gitea/v/release/" + Package + "?gitea_url=" + URL + "&sort=" + Sort + "&display_name=" + DisplayName + "&date_order_by=" + DateOrder + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=609926&color=" + Color, "alt": "Badge for Gitea Package " + Package, "loading": "lazy", "crossorigin": "anonymous" });
+    });
     $("img.LinuxDistroBadge").each((i, e) => {
         const Name = encodeURIComponent($(e).data("name"));
         const Edition = encodeURIComponent($(e).data("edition"));

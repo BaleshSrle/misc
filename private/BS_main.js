@@ -27,7 +27,7 @@ $(document).ready(() => {
     }).attr("type", "button");
     $("#godina").text(new Date().getFullYear() + '.');
     $("#lastmod").html("Ova stranica je poslednji put ažurirana " + new Date(document.lastModified).toLocaleDateString("sr-BA"));
-    $("img.BadgenStaticBadge").each((i, e) => {
+    /*$("img.BadgenStaticBadge").each((i, e) => {
         const Label = encodeURIComponent($(e).data("label"));
         const Status = encodeURIComponent($(e).data("status"));
         const Color = $(e).data("color") || "blue";
@@ -37,7 +37,7 @@ $(document).ready(() => {
         const URLLang = $(e).data("urllang");
         $(e).attr({ "src": "https://badgen.net/static/" + Label + "/" + Status + "/" + Color + "?icon=" + Icon + "&labelColor=" + LabelColor, "loading": "lazy", "crossorigin": "anonymous" });
         (URL) ? $(e).wrap($("<a></a>").attr({ "href": URL, "hreflang": URLLang, "target": "_blank", "rel": "external" })) : $(e).unwrap("a");
-    });
+    });*/
     $("img.githubBadge").each((i, e) => {
         const Type = Boolean($(e).data("type")) === true ? "release" : "tag";
         const TypeBackup = Boolean($(e).data("typebackup")) === true ? "release" : "tag";
@@ -68,8 +68,10 @@ $(document).ready(() => {
         const LogoSize = $(e).data("logosize") || "";
         const URL = $(e).data("url");
         const URLLang = $(e).data("urllang") || "";
-        const Name = $(e).data("name") || "";
-        $(e).attr({ "src": "https://img.shields.io/badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label2Text + "&labelColor=" + Label2Color, "alt": "Shields.io Static Badge " + Name, "loading": "lazy", "crossorigin": "anonymous" });
+        //const Name = $(e).data("name") || "";
+        $(e).attr({ "src": "https://img.shields.io/badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label2Text + "&labelColor=" + Label2Color, "alt": "Shields.io Static Badge"/* + Name*/, "loading": "lazy", "crossorigin": "anonymous" }).on("error", function () {
+            $(e.target).attr({ "src": "https://badgen.net/static/" + Label2Text + "/" + Label1Text + "/" + Label1Color + "?icon=" + Logo + "&labelColor=" + Label2Color, "alt": "Badgen.net Static Badge" });
+        });
         (URL) ? $(e).wrap($("<a></a>").attr({ "href": URL, "hreflang": URLLang, "target": "_blank", "rel": "external" })) : $(e).unwrap("a");
     });
     $("img.w3cValidationBadge").each((i, e) => {
