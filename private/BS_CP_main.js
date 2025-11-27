@@ -603,11 +603,11 @@ $(document).ready(() => {
         $("div.list-group").has("a").slice(7, 11).addClass("p-1");
         $("div.list-group > div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
         $("div.list-group a.list-group-item").not("[href^='https'],[href^='device_look']").filter(":lt(8):gt(1),:gt(11)").addClass("list-group-item-action");
-        $("div.list-group a[href^='https'].list-group-item").filter(":lt(13):gt(4),:lt(47):gt(39),:gt(57)").addClass("list-group-item-action");
+        $("div.list-group a[href^='https'].list-group-item").filter(":lt(47):gt(39),:gt(57)").addClass("list-group-item-action");
         $("div.list-group a.list-group-item").not("[href^='https']").eq(7).addClass("list-group-item-primary");
-        $("div.list-group a[href^='https'].list-group-item").slice(4, 9).addClass("list-group-item-primary");
+        //$("div.list-group a[href^='https'].list-group-item").slice(4, 9).addClass("list-group-item-primary");
         $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(10):gt(7)").addClass("list-group-item-secondary");
-        $("div.list-group a[href^='https'].list-group-item").slice(9, 11).addClass("list-group-item-secondary");
+        //$("div.list-group a[href^='https'].list-group-item").slice(9, 11).addClass("list-group-item-secondary");
         $("div.list-group a.list-group-item").not("[href^='https']").eq(10).addClass("list-group-item-info");
         $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(7),:gt(10)").addClass("list-group-item-dark");
         $("div.list-group a[href^='https'].list-group-item").filter(":lt(4),:gt(12)").addClass("list-group-item-dark");
@@ -641,6 +641,13 @@ $(document).ready(() => {
     $("a[data-toggle='collapse']").each((i, e) => {
         $(e).attr({ "aria-controls": $(e).attr("href").replace("#", ""), "aria-expanded": false });
     });
+    $("a.FujitsuLifeBookS751Driver").each((_, e) => {
+        const SoftwareID = $(e).data("softwareid");
+        const SoftwareName = $(e).data("softwarename");
+        $(e).attr({ "href": "https://support.ts.fujitsu.com/IndexDownload.asp?SoftwareGuid=" + SoftwareID, "hreflang": "en", "target": "_blank", "rel": "external" }).text(SoftwareName).addClass("list-group-item list-group-item-action");
+        //$("a.FujitsuLifeBookS751Driver").filter(":lt(5)").;
+        //$("a.FujitsuLifeBookS751Driver").filter(":lt(7):gt(4)").addClass("list-group-item-secondary");
+    }).slice(0, 5).addClass("list-group-item-primary").add($("a.FujitsuLifeBookS751Driver").slice(5, 7)).filter(":not(.list-group-item-primary)").addClass("list-group-item-secondary");
     $("form#oldform").attr({ "action": $("select#dictionary-selector").val(), "method": "get", "name": "oldform", "target": "_blank" }).addClass("d-inline-block").css("margin", "46px 0 0 10px");
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
     $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
