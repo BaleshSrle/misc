@@ -645,8 +645,6 @@ $(document).ready(() => {
         const SoftwareID = $(e).data("softwareid");
         const SoftwareName = $(e).data("softwarename");
         $(e).attr({ "href": "https://support.ts.fujitsu.com/IndexDownload.asp?SoftwareGuid=" + SoftwareID, "hreflang": "en", "target": "_blank", "rel": "external" }).text(SoftwareName).addClass("list-group-item list-group-item-action");
-        //$("a.FujitsuLifeBookS751Driver").filter(":lt(5)").;
-        //$("a.FujitsuLifeBookS751Driver").filter(":lt(7):gt(4)").addClass("list-group-item-secondary");
     }).slice(0, 5).addClass("list-group-item-primary").add($("a.FujitsuLifeBookS751Driver").slice(5, 7)).filter(":not(.list-group-item-primary)").addClass("list-group-item-secondary");
     $("form#oldform").attr({ "action": $("select#dictionary-selector").val(), "method": "get", "name": "oldform", "target": "_blank" }).addClass("d-inline-block").css("margin", "46px 0 0 10px");
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
