@@ -59,9 +59,9 @@ $(document).ready(() => {
     });
     $("img.StaticBadge").each((i, e) => {
         const Label1Text = encodeURIComponent($(e).data("label1") || "");
-        const Label1Color = $(e).data("color1") || "";
+        const Label1Color = $(e).data("color1") || "blue";
         const Label2Text = encodeURIComponent($(e).data("label2") || "");
-        const Label2Color = $(e).data("color2") || "";
+        const Label2Color = $(e).data("color2") || "555555";
         const BadgeStyle = $(e).data("badgestyle") || "";
         const Logo = $(e).data("logo") || "";
         const LogoColor = $(e).data("logocolor") || "";
