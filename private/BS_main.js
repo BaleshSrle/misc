@@ -22,6 +22,9 @@ $(document).ready(() => {
     $("[href$='.min.css'],[src$='.min.js']").attr("crossorigin", "anonymous");
     //$("body").css("font-family", "Ubuntu");
     $("body").addClass("ubuntu-regular");
+    $("span.ScreenResolution").text(screen.width + "px x " + screen.height + "px");
+    $("span.dpr").text(window.devicePixelRatio);
+    $("span.UserAgent").text(navigator.userAgent);
     $("button#backBtn").on("click", (event) => {
         history.back();
     }).attr("type", "button");

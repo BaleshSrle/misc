@@ -323,10 +323,12 @@ $(document).ready(() => {
     });
     $("img.simpleiconsCDN").each((i, e) => {
         const IconName = $(e).data("name");
-        $(e).attr({
-            "src": "https://cdn.simpleicons.org/" + IconName + "?viewbox=auto", "height": "32", "loading": "lazy", "crossorigin": "anonymous"
-        });
-    });
+        const IconVer = $(e).data("version");
+        const siteCDN = Boolean($(e).data("sitecdn"));
+
+        (siteCDN === true) ? e.src = "https://cdn.simpleicons.org/" + IconName + "?viewbox=auto" : e.src = "https://cdn.jsdelivr.net/npm/simple-icons@" + IconVer + "/icons/" + IconName + ".svg";
+
+    }).attr({ "height": "32", "loading": "lazy", "crossorigin": "anonymous" });
     $("img.UptimeRobotBadge").each((i, e) => {
         const Key = $(e).data("key");
         const Logo = $(e).data("logo");
@@ -384,7 +386,7 @@ $(document).ready(() => {
     $("span").filter(".fi-au,.fi-ba,.fi-ca,.fi-de,.fi-eu,.fi-fr,.fi-gb,.fi-it,.fi-nz,.fi-ro,.fi-se,.fi-us").addClass("mr-1");
     $("span.fi-us").parents("div.card-header").siblings("ul").height(200).addClass("overflow-auto");
     $("i").each((i, e) => {
-        $(e).filter(".bi-laptop,.bi-laptop,.bi-phone,.bi-tablet,.bi-image,.bi-snapchat,.bi-telegram,.bi-facebook,.bi-messenger,.bi-instagram,.bi-threads,.bi-whatsapp").css("font-size", "xx-large");
+        $(e).filter(".bi-laptop,.bi-laptop,.bi-phone,.bi-tablet,.bi-image,.bi-info-circle,.bi-snapchat,.bi-telegram,.bi-facebook,.bi-messenger,.bi-instagram,.bi-threads,.bi-whatsapp").css("font-size", "xx-large");
         $(e).filter(".bi-mailbox,.bi-headset,.bi-hourglass-split,.bi-globe,.bi-bug,.bi-kanban,.bi-stopwatch,.bi-briefcase,.bi-easel,.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
     });
     $("button.btn-link").each((i, e) => {
@@ -413,7 +415,7 @@ $(document).ready(() => {
     $("div.modal").each((i, e) => {
         $(e).attr("aria-labelledby", $(e).attr("id") + "Label");
         $(e).children("div").addClass("modal-dialog").attr("role", "document");
-        $(e).filter("#mailSettings,#sluzbeni").children("div").addClass("modal-sm modal-dialog-centered");
+        $(e).filter("#mailSettings,#sluzbeni,#DeviceInfo").children("div").addClass("modal-sm modal-dialog-centered");
         $(e).filter("#calculator").children("div").addClass("modal-dialog-centered");
         $(e).filter("#tvguide,#FamilyNotes").children("div").addClass("modal-lg modal-dialog-centered");
         $(e).filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog-centered modal-dialog-scrollable");
@@ -422,9 +424,9 @@ $(document).ready(() => {
         $(e).filter("#time").children("div").addClass("mx-auto");
         $(e).filter("#steam_games").children("div").addClass("modal-dialog-centered modal-dialog-scrollable");
         $(e).filter("#calculator").find("div.modal-content").addClass("bg-dark border-dark");
-        $(e).filter("#time,#mailSettings,#imgRotate,#tvguide,#TechNewsNasloviNET,#sluzbeni,#twitch,#programs,#kick").find("div.modal-header").append($("<button></button>").addClass("close btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" }).html("<span aria-hidden='true'>&times;</span>"));
+        $(e).filter("#time,#mailSettings,#imgRotate,#DeviceInfo,#tvguide,#TechNewsNasloviNET,#sluzbeni,#twitch,#programs,#kick").find("div.modal-header").append($("<button></button>").addClass("close btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" }).html("<span aria-hidden='true'>&times;</span>"));
         $(e).filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal,#kick").find("div.modal-header").addClass("d-lg-none");
-        $(e).filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
+        $(e).filter("#time,#weather,#FIBAlivescore,#livescore,#mailSettings,#imgRotate,#DeviceInfo,#tvguide,#sluzbeni,#Obracun2Modal").find("div.modal-header").addClass("py-0 pr-0");
         $(e).filter("#TechNewsNasloviNET,#twitch,#kick").find(".modal-header").addClass("p-0");
         $(e).filter("#calculator").find("div.modal-header").addClass("px-1 pb-0");
         $(e).find("div").filter(".modal-header,.modal-footer").addClass("border-secondary");
@@ -454,6 +456,13 @@ $(document).ready(() => {
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
     $("div").filter(".row:first,.btn-group-vertical,.toast-body:eq(2),[name^='airvisual']").addClass("mx-auto");
+    $("div.row > div.col").each((i, e) => {
+        if (i % 2 === 0) {
+            $(e).addClass("pr-md-1");
+        } else {
+            $(e).addClass("pl-md-1");
+        }
+    });
     /* $("div#weatherforecast").append($("<a></a>").attr({ "href": "https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr-BA" }).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": false, "data-uid": "awtd1504180838200", "data-editlocation": true }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": "https://oap.accuweather.com/launch.js", "defer": "defer" }));*/
     /* $("div#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": "https://www.livescore.bz/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo")); */
     $("p.text-white-50.small:last,li.navbar-item:eq(3),li.navbar-item:eq(8)").addClass("d-none d-md-block");
@@ -601,16 +610,17 @@ $(document).ready(() => {
         $("div.list-group").has("a").filter(":eq(6),:gt(10)").addClass("overflow-auto");
         $("div.list-group").filter(":eq(5),:eq(13)").addClass("p-2");
         $("div.list-group").has("a").slice(7, 11).addClass("p-1");
-        $("div.list-group > div").slice(2).addClass("d-flex justify-content-center flex-wrap mx-auto");
-        $("div.list-group a.list-group-item").not("[href^='https'],[href^='device_look']").filter(":lt(8):gt(1),:gt(11)").addClass("list-group-item-action");
+        $("div.list-group > div").slice(2, -3).addClass("d-flex justify-content-center flex-wrap mx-auto");
+        $("div.list-group > div").slice(-3).addClass("d-flex justify-content-center flex-nowrap mx-auto");
+        $("div.list-group a.list-group-item").not("[href^='https'],[href^='device_look']").filter(":lt(9):gt(1),:gt(11)").addClass("list-group-item-action");
         $("div.list-group a[href^='https'].list-group-item").filter(":lt(47):gt(39),:gt(57)").addClass("list-group-item-action");
         $("div.list-group a.list-group-item").not("[href^='https']").eq(7).addClass("list-group-item-primary");
         //$("div.list-group a[href^='https'].list-group-item").slice(4, 9).addClass("list-group-item-primary");
         $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(10):gt(7)").addClass("list-group-item-secondary");
         //$("div.list-group a[href^='https'].list-group-item").slice(9, 11).addClass("list-group-item-secondary");
-        $("div.list-group a.list-group-item").not("[href^='https']").eq(10).addClass("list-group-item-info");
-        $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(7),:gt(10)").addClass("list-group-item-dark");
-        $("div.list-group a[href^='https'].list-group-item").filter(":lt(4),:gt(12)").addClass("list-group-item-dark");
+        $("div.list-group a.list-group-item").not("[href^='https']").eq(11).addClass("list-group-item-info");
+        $("div.list-group a.list-group-item").not("[href^='https']").filter(":lt(7), :eq(10), :gt(11)").addClass("list-group-item-dark");
+        $("div.list-group a[href^='https'].list-group-item").addClass("list-group-item-dark");
         $("div.list-group a.list-group-item").not("[href^='https']").eq(0).addClass("border-top-0");
         $("div.list-group a[href^='https'].list-group-item").eq(2).addClass("border-top-0");
         $("div.list-group:eq(6) a.list-group-item").filter(":first,:last").addClass("rounded-0");
