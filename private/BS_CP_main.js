@@ -66,6 +66,11 @@ function playKickStreamer() {
 
 $(document).ready(() => {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
+ 
+    const ghImg = $("img[class^='gh']");
+    const ghPackage = ghImg.data("package");
+    const ghBranch = ghImg.data("branch") || "main";
+    const ghNumber = ghImg.data("number");
 
     var day = (new Date().getDate()).toString().padStart(2, "0");
     var month = (new Date().getMonth() + 1).toString().padStart(2, "0");
@@ -177,7 +182,7 @@ $(document).ready(() => {
         const PackageManager = $(e).data("packagemanager");
         const Package = $(e).data("package");
         const Channel = $(e).data("channel");
-        const Branch = $(e).data("branch");
+        //const Branch = $(e).data("branch");
         const Label = encodeURIComponent($(e).data("label"));
         const Logo = $(e).data("logo") || "";
         const LogoColor = $(e).data("logocolor") || "";
@@ -248,57 +253,46 @@ $(document).ready(() => {
         }
     });
     $("img.ghActionsWorkflow").each((i, e) => {
-        const Package = $(e).data("package");
         const Workflow = $(e).data("workflow");
         const WorkflowLabel = $(e).data("workflowlabel");
-        const Branch = $(e).data("branch") || "main";
         const Event = $(e).data("event") || "";
         $(e).attr({
-            "src": "https://img.shields.io/github/actions/workflow/status/" + Package + "/" + Workflow + ".yml?branch=" + Branch + "&event=" + Event + "&logo=githubactions&logoColor=white&logoSize=auto&label=GitHub%20Actions%20Workflow&labelColor=2088ff", "alt": "GitHub Actions Workflow - " + WorkflowLabel, "loading": "lazy", "crossorigin": "anonymous"
+            "src": "https://img.shields.io/github/actions/workflow/status/" + ghPackage + "/" + Workflow + ".yml?branch=" + ghBranch + "&event=" + Event + "&logo=githubactions&logoColor=white&logoSize=auto&label=GitHub%20Actions%20Workflow&labelColor=2088ff", "alt": "GitHub Actions Workflow - " + WorkflowLabel, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
     });
     $("img.ghChecks").each((i, e) => {
-        const Package = $(e).data("package");
-        const Branch = $(e).data("branch") || "main";
         const JobName = $(e).data("jobname") || "";
-        $(e).attr({ "src": "https://img.shields.io/github/check-runs/" + Package + "/" + Branch + "?nameFilter=" + JobName + "&logo=github&logoColor=white&logoSize=auto&label=Checks%20" + JobName + "&labelColor=181717", "alt": "GitHub branch check runs", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
-            $(this).attr("src", "https://badgen.net/github/checks/" + Package + "/" + Branch + "/" + JobName + "?icon=github&label=Checks%20" + JobName + "&labelColor=181717");
+        $(e).attr({ "src": "https://img.shields.io/github/check-runs/" + ghPackage + "/" + ghBranch + "?nameFilter=" + JobName + "&logo=github&logoColor=white&logoSize=auto&label=Checks%20" + JobName + "&labelColor=181717", "alt": "GitHub branch check runs", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
+            $(this).attr("src", "https://badgen.net/github/checks/" + ghPackage + "/" + ghBranch + "/" + JobName + "?icon=github&label=Checks%20" + JobName + "&labelColor=181717");
         });
     });
     $("img.ghCommitActivity").each((i, e) => {
         const Period = $(e).data("period");
         const PeriodLabel = $(e).data("periodlabel");
-        const Package = $(e).data("package");
-        $(e).attr({ "src": "https://img.shields.io/github/commit-activity/" + Period + "/" + Package + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Commit Activity " + PeriodLabel, "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto");
+        $(e).attr({ "src": "https://img.shields.io/github/commit-activity/" + Period + "/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Commit Activity " + PeriodLabel, "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto");
         if (Period == "t") {
             $(e).on("error", function () {
-                $(this).attr("src", "https://badgen.net/github/commits/" + Package + "?icon=github&labelColor=181717");
+                $(this).attr("src", "https://badgen.net/github/commits/" + ghPackage + "?icon=github&labelColor=181717");
             });
         }
     });
     $("img.ghIssues").each((i, e) => {
-        const Package = $(e).data("package");
         const state = Boolean($(e).data("issueopen"));
-        (state === true) ? $(e).attr({"src": "https://img.shields.io/github/issues/"+Package+"?logo=github&logoColor=white&logoSize=auto&label=Issues%20Open&labelColor=181717", "alt": "GitHub Issues Open", "loading": "lazy", "crossorigin": "anonymous"}).addClass("d-block mx-auto").on("error", function() { $(this).attr("src", "https://badgen.net/github/open-issues/"+Package+"?icon=github&label=Issues%20Open&labelColor=181717"); }).wrap($("<a></a>").attr({"src":"https://github.com/"+Package+"/issues","hreflang": "en", "target": "_blank", "rel": "external"})) : $(e).attr({"href": "https://img.shields.io/github/issues-closed/"+Package+"?logo=github&logoColor=white&logoSize=auto&label=Issues%20Closed&labelColor=181717", "alt": "GitHub Issues Closed", "loading": "lazy", "crossorigin": "anonymous"}).addClass("d-block mx-auto").on("error", function() { $(this).attr("src", "https://badgen.net/github/closed-issues/"+Package+"?icon=github&label=Issues%20Closed&labelColor=181717")}).wrap($("<a></a>").attr({"href":"https://github.com/"+Package+"/issues?q=is%3Aissue%20state%3Aclosed","hreflang": "en", "target": "_blank", "rel": "external"}));
+        (state === true) ? $(e).attr({"src": "https://img.shields.io/github/issues/"+ghPackage+"?logo=github&logoColor=white&logoSize=auto&label=Issues%20Open&labelColor=181717", "alt": "GitHub Issues Open", "loading": "lazy", "crossorigin": "anonymous"}).addClass("d-block mx-auto").on("error", function() { $(this).attr("src", "https://badgen.net/github/open-issues/"+ghPackage+"?icon=github&label=Issues%20Open&labelColor=181717"); }).wrap($("<a></a>").attr({"src":"https://github.com/"+Package+"/issues","hreflang": "en", "target": "_blank", "rel": "external"})) : $(e).attr({"href": "https://img.shields.io/github/issues-closed/"+ghPackage+"?logo=github&logoColor=white&logoSize=auto&label=Issues%20Closed&labelColor=181717", "alt": "GitHub Issues Closed", "loading": "lazy", "crossorigin": "anonymous"}).addClass("d-block mx-auto").on("error", function() { $(this).attr("src", "https://badgen.net/github/closed-issues/"+ghPackage+"?icon=github&label=Issues%20Closed&labelColor=181717")}).wrap($("<a></a>").attr({"href":"https://github.com/"+ghPackage+"/issues?q=is%3Aissue%20state%3Aclosed","hreflang": "en", "target": "_blank", "rel": "external"}));
     });
     $("img.ghLastCommit").each((i, e) => {
-        const Package = $(e).data("package");
-        $(e).attr({ "src": "https://img.shields.io/github/last-commit/" + Package + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Last Commit", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
-            $(this).attr("src", "https://badgen.net/github/last-commit/" + Package + "?icon=github&labelColor=181717");
+        $(e).attr({ "src": "https://img.shields.io/github/last-commit/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Last Commit", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
+            $(this).attr("src", "https://badgen.net/github/last-commit/" + ghPackage + "?icon=github&labelColor=181717");
         });
     });
     $("img.ghPRDetail").each((i, e) => {
-        const Package = $(e).data("package");
-        const Number = $(e).data("number");
         $(e).attr({
-            "src": "https://img.shields.io/github/pulls/detail/state/" + Package + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Detail%20for%20%23" + Number + "&labelColor=181717", "alt": "GitHub PR Detail #" + Number, "loading": "lazy", "crossorigin": "anonymous"
+            "src": "https://img.shields.io/github/pulls/detail/state/" + ghPackage + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Detail%20for%20%23" + ghNumber + "&labelColor=181717", "alt": "GitHub PR Detail #" + ghNumber, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
     });
     $("img.ghPRStatus").each((i, e) => {
-        const Package = $(e).data("package");
-        const Number = $(e).data("number");
         $(e).attr({
-            "src": "https://img.shields.io/github/status/s/pulls/" + Package + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Status%20%23" + Number + "&labelColor=181717", "alt": "GitHub PR Status #" + Number, "loading": "lazy", "crossorigin": "anonymous"
+            "src": "https://img.shields.io/github/status/s/pulls/" + ghPackage + "/" + ghNumber + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Status%20%23" + ghNumber + "&labelColor=181717", "alt": "GitHub PR Status #" + ghNumber, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
     });
     $("img.giteaBadge").each((i, e) => {
@@ -525,7 +519,7 @@ $(document).ready(() => {
         const Label = encodeURIComponent($(e).data("label"));
         switch (Platform) {
             case "Twitch":
-                const streamerNames = ["Bebahan", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "AngelMelly", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Danzie_Dee", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "geenelly", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "BadmanOnline", "LexieMariex", "Syndicate", "angryginge13", "dannyaarons", "arthurtv", "Pernillamouritzen_", "BunnymonTV", "Lindsfry", "CHI_Kacee", "HailHeidi", "Eveuh", "Chess", "BotezLive", "DinaBelenkaya", "AnnaCramling", "BasedCode", "CodeItLive", "LinusTech", "Brawlhalla", "Call of Duty", "DCUniverseOnline", "Fortnite", "Halo", "MarvelRivals", "PlayOverwatch", "PUBG_BATTLEGROUNDS", "Rainbow6", "Warcraft", "Warframe", "WorldofTanks", "WorldofWarships", "ParadoxInteractive", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "Alinity", "alinitytv247", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "sashagrey", "PennyPaxParty", "AdrianaChechik_", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss", "BuccataX", "lauralux", "nufo", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "CoCoNova", "StrawberryTabby", "MyAustinWhite", "Mishamai", "Hannesschan", "tristinmays_", "TrishaHershberger", "PulpFictionally", "Taylor_Jevaux", "JuliaBurch", "RachelKay", "AshleyNocera", "Faith", "Ms_Tricky", "saweetheart", "SkyeBlanchette", "AriGameplays", "MerceGallardo", "thewildlatina", "VitaCelestine_", "DanielaAzuaje_", "LaurenAlexis_x", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "sophoulla", "kristinemaia", "Mellooow_", "GemmasTW", "thevalentinanappi", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "KDRkitten", "lucyya", "xXLauoaNXx", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "Mayichi", "noe9977", "perfilraro", "princesita1331", "SofiG", "samantra", "jasminaurora", "mira", "mira_irl", "miratv247", "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "MistieSage", "meowbuffy", "NataliaMav"];
+                const streamerNames = ["Bebahan", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "AngelMelly", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Danzie_Dee", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "geenelly", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "BadmanOnline", "LexieMariex", "Syndicate", "angryginge13", "dannyaarons", "arthurtv", "Pernillamouritzen_", "BunnymonTV", "Lindsfry", "CHI_Kacee", "HailHeidi", "ItsCharlieVest", "Eveuh", "Chess", "BotezLive", "DinaBelenkaya", "AnnaCramling", "BasedCode", "CodeItLive", "LinusTech", "Brawlhalla", "Call of Duty", "DCUniverseOnline", "Fortnite", "Halo", "MarvelRivals", "PlayOverwatch", "PUBG_BATTLEGROUNDS", "Rainbow6", "Warcraft", "Warframe", "WorldofTanks", "WorldofWarships", "ParadoxInteractive", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "Alinity", "alinitytv247", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "sashagrey", "PennyPaxParty", "AdrianaChechik_", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss"/*, "BuccataX"*/, "ChickenWing_Candy", "lauralux", "nufo", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "CoCoNova", "StrawberryTabby", "MyAustinWhite", "Mishamai", "Hannesschan", "tristinmays_", "TrishaHershberger", "PulpFictionally", "Taylor_Jevaux", "JuliaBurch", "RachelKay", "AshleyNocera", "Faith", "Ms_Tricky", "saweetheart", "SkyeBlanchette", "AriGameplays", "MerceGallardo", "thewildlatina", "VitaCelestine_", "DanielaAzuaje_", "LaurenAlexis_x", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "sophoulla", "kristinemaia", "Mellooow_", "GemmasTW", "thevalentinanappi", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "KDRkitten", "lucyya", "xXLauoaNXx", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "Mayichi", "noe9977", "perfilraro", "princesita1331", "SofiG", "samantra", "jasminaurora", "mira", "mira_irl", "miratv247", "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "MistieSage", "meowbuffy", "NataliaMav"];
                 const selector = streamerNames.map(name => `[alt$='${name}']`).join(",");
                 $(e).attr({ "src": "https://img.shields.io/twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
                 $(e).filter(selector).after($("<snap></snap>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));

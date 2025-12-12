@@ -57,7 +57,7 @@ $(document).ready(() => {
         $(e).attr({
             "src": "https://img.shields.io/github/v/" + Type + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color, "alt": "Badge for GitHub Package " + Package, "loading": "lazy", "crossorigin": "anonymous"
         }).on("error", function () {
-            $(e.target).attr("src", "https://badgen.net/github/" + TypeBackup + "/" + Package + Stable + "?icon=" + Logo + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color);
+            $(this).attr("src", "https://badgen.net/github/" + TypeBackup + "/" + Package + Stable + "?icon=" + Logo + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color);
         }).wrap($("<a></a>").attr({ "href": "https://github.com/" + Package + "/" + Type + "s" + Latest, "hreflang": "en", "target": "_blank", "rel": "external" }));
     });
     $("img.StaticBadge").each((i, e) => {
@@ -72,8 +72,8 @@ $(document).ready(() => {
         const URL = $(e).data("url");
         const URLLang = $(e).data("urllang") || "";
         //const Name = $(e).data("name") || "";
-        $(e).attr({ "src": "https://img.shields.io/badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label2Text + "&labelColor=" + Label2Color, "alt": "Shields.io Static Badge"/* + Name*/, "loading": "lazy", "crossorigin": "anonymous" }).on("error", function () {
-            $(e.target).attr({ "src": "https://badgen.net/static/" + Label2Text + "/" + Label1Text + "/" + Label1Color + "?icon=" + Logo + "&labelColor=" + Label2Color, "alt": "Badgen.net Static Badge" });
+        (Label2Text === "") ? $(e).attr({ "src": "https://img.shields.io/badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize, "alt": "Shields.io Static Badge"/* + Name*/, "loading": "lazy", "crossorigin": "anonymous" }) : $(e).attr({ "src": "https://img.shields.io/badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label2Text + "&labelColor=" + Label2Color, "alt": "Shields.io Static Badge"/* + Name*/, "loading": "lazy", "crossorigin": "anonymous" }).on("error", function () {
+            $(this).attr({ "src": "https://badgen.net/static/" + Label2Text + "/" + Label1Text + "/" + Label1Color + "?icon=" + Logo + "&labelColor=" + Label2Color, "alt": "Badgen.net Static Badge" });
         });
         (URL) ? $(e).wrap($("<a></a>").attr({ "href": URL, "hreflang": URLLang, "target": "_blank", "rel": "external" })) : $(e).unwrap("a");
     });
