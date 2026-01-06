@@ -66,7 +66,7 @@ function playKickStreamer() {
 
 $(document).ready(() => {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
- 
+
     const ghImg = $("img[class^='gh']");
     const ghPackage = ghImg.data("package");
     const ghBranch = ghImg.data("branch") || "main";
@@ -278,7 +278,7 @@ $(document).ready(() => {
     });
     $("img.ghIssues").each((i, e) => {
         const state = Boolean($(e).data("issueopen"));
-        (state === true) ? $(e).attr({"src": "https://img.shields.io/github/issues/"+ghPackage+"?logo=github&logoColor=white&logoSize=auto&label=Issues%20Open&labelColor=181717", "alt": "GitHub Issues Open", "loading": "lazy", "crossorigin": "anonymous"}).addClass("d-block mx-auto").on("error", function() { $(this).attr("src", "https://badgen.net/github/open-issues/"+ghPackage+"?icon=github&label=Issues%20Open&labelColor=181717"); }).wrap($("<a></a>").attr({"src":"https://github.com/"+ghPackage+"/issues","hreflang": "en", "target": "_blank", "rel": "external"})) : $(e).attr({"href": "https://img.shields.io/github/issues-closed/"+ghPackage+"?logo=github&logoColor=white&logoSize=auto&label=Issues%20Closed&labelColor=181717", "alt": "GitHub Issues Closed", "loading": "lazy", "crossorigin": "anonymous"}).addClass("d-block mx-auto").on("error", function() { $(this).attr("src", "https://badgen.net/github/closed-issues/"+ghPackage+"?icon=github&label=Issues%20Closed&labelColor=181717")}).wrap($("<a></a>").attr({"href":"https://github.com/"+ghPackage+"/issues?q=is%3Aissue%20state%3Aclosed","hreflang": "en", "target": "_blank", "rel": "external"}));
+        (state === true) ? $(e).attr({ "src": "https://img.shields.io/github/issues/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&label=Issues%20Open&labelColor=181717", "alt": "GitHub Issues Open", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () { $(this).attr("src", "https://badgen.net/github/open-issues/" + ghPackage + "?icon=github&label=Issues%20Open&labelColor=181717"); }).wrap($("<a></a>").attr({ "src": "https://github.com/" + ghPackage + "/issues", "hreflang": "en", "target": "_blank", "rel": "external" })) : $(e).attr({ "href": "https://img.shields.io/github/issues-closed/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&label=Issues%20Closed&labelColor=181717", "alt": "GitHub Issues Closed", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () { $(this).attr("src", "https://badgen.net/github/closed-issues/" + ghPackage + "?icon=github&label=Issues%20Closed&labelColor=181717") }).wrap($("<a></a>").attr({ "href": "https://github.com/" + ghPackage + "/issues?q=is%3Aissue%20state%3Aclosed", "hreflang": "en", "target": "_blank", "rel": "external" }));
     });
     $("img.ghLastCommit").each((i, e) => {
         $(e).attr({ "src": "https://img.shields.io/github/last-commit/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Last Commit", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
@@ -419,9 +419,9 @@ $(document).ready(() => {
         $(e).filter("#tvguide,#FamilyNotes").children("div").addClass("modal-lg modal-dialog-centered");
         $(e).filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog-centered modal-dialog-scrollable");
         $(e).filter("#weather,#livescore,#TechNewsNasloviNET").children("div").addClass("modal-lg modal-dialog-centered modal-dialog-scrollable");
-        $(e).filter("#FIBAlivescore,#imgRotate,#twitch,#kick,#programs,#CarService").children("div").addClass("modal-xl modal-dialog-centered modal-dialog-scrollable");
+        $(e).filter("#FIBAlivescore,#imgRotate,#twitch,#kick,#CarService").children("div").addClass("modal-xl modal-dialog-centered modal-dialog-scrollable");
         $(e).filter("#time").children("div").addClass("mx-auto");
-        $(e).filter("#steam_games").children("div").addClass("modal-dialog-centered modal-dialog-scrollable");
+        $(e).filter("#steam_games, #programs").children("div").addClass("modal-dialog-centered modal-dialog-scrollable");
         $(e).filter("#calculator").find("div.modal-content").addClass("bg-dark border-dark");
         $(e).filter("#time,#mailSettings,#imgRotate,#DeviceInfo,#tvguide,#TechNewsNasloviNET,#sluzbeni,#twitch,#programs,#kick").find("div.modal-header").append($("<button></button>").addClass("close btn btn-danger my-0 ml-auto mr-0 py-2 text-white").attr({ "type": "button", "data-dismiss": "modal", "aria-label": "Zatvori" }).html("<span aria-hidden='true'>&times;</span>"));
         $(e).filter("#TechNewsNasloviNET,#steam_games,#twitch,#programs,#Obracun1Modal,#kick").find("div.modal-header").addClass("d-lg-none");
@@ -456,11 +456,7 @@ $(document).ready(() => {
     $("div.col-sm-8").addClass("px-2");
     $("div").filter(".row:first,.btn-group-vertical,.toast-body:eq(2),[name^='airvisual']").addClass("mx-auto");
     $("div.row > div.col").each((i, e) => {
-        if (i % 2 === 0) {
-            $(e).addClass("pr-md-1");
-        } else {
-            $(e).addClass("pl-md-1");
-        }
+        (i % 2 === 0) ? $(e).addClass("pr-md-1") : $(e).addClass("pl-md-1");
     });
     /* $("div#weatherforecast").append($("<a></a>").attr({ "href": "https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr-BA" }).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": false, "data-uid": "awtd1504180838200", "data-editlocation": true }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": "https://oap.accuweather.com/launch.js", "defer": "defer" }));*/
     /* $("div#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": "https://www.livescore.bz/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo")); */
@@ -519,7 +515,7 @@ $(document).ready(() => {
         const Label = encodeURIComponent($(e).data("label"));
         switch (Platform) {
             case "Twitch":
-                const streamerNames = ["Bebahan", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "AngelMelly", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Danzie_Dee", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "geenelly", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "BadmanOnline", "LexieMariex", "Syndicate", "angryginge13", "dannyaarons", "arthurtv", "Pernillamouritzen_", "BunnymonTV", "Lindsfry", "CHI_Kacee", "HailHeidi", "ItsCharlieVest", "Eveuh", "Chess", "BotezLive", "DinaBelenkaya", "AnnaCramling", "BasedCode", "CodeItLive", "LinusTech", "Brawlhalla", "Call of Duty", "DCUniverseOnline", "Fortnite", "Halo", "MarvelRivals", "PlayOverwatch", "PUBG_BATTLEGROUNDS", "Rainbow6", "Warcraft", "Warframe", "WorldofTanks", "WorldofWarships", "ParadoxInteractive", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "Alinity", "alinitytv247", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "sashagrey", "PennyPaxParty", "AdrianaChechik_", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss"/*, "BuccataX"*/, "ChickenWing_Candy", "lauralux", "nufo", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "CoCoNova", "StrawberryTabby", "MyAustinWhite", "Mishamai", "Hannesschan", "tristinmays_", "TrishaHershberger", "PulpFictionally", "Taylor_Jevaux", "JuliaBurch", "RachelKay", "AshleyNocera", "Faith", "Ms_Tricky", "saweetheart", "SkyeBlanchette", "AriGameplays", "MerceGallardo", "thewildlatina", "VitaCelestine_", "DanielaAzuaje_", "LaurenAlexis_x", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "sophoulla", "kristinemaia", "Mellooow_", "GemmasTW", "thevalentinanappi", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "KDRkitten", "lucyya", "xXLauoaNXx", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "Mayichi", "noe9977", "perfilraro", "princesita1331", "SofiG", "samantra", "jasminaurora", "mira", "mira_irl", "miratv247", "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "MistieSage", "meowbuffy", "NataliaMav"];
+                const streamerNames = ["Bebahan", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "AngelMelly", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Danzie_Dee", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Matt500x", "brodie", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "geenelly", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "BadmanOnline", "LexieMariex", "Syndicate", "angryginge13", "dannyaarons", "arthurtv", "Pernillamouritzen_", "BunnymonTV", "Lindsfry", "CHI_Kacee", "HailHeidi", "ItsCharlieVest", "Eveuh", "Chess", "BotezLive", "DinaBelenkaya", "AnnaCramling", "BasedCode", "CodeItLive", "LinusTech", "Brawlhalla", "Call of Duty", "DCUniverseOnline", "Fortnite", "Halo", "MarvelRivals", "PlayOverwatch", "PUBG_BATTLEGROUNDS", "Rainbow6", "Warcraft", "Warframe", "WorldofTanks", "WorldofWarships", "ParadoxInteractive", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "Alinity", "alinitytv247", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "sashagrey", "PennyPaxParty", "AdrianaChechik_", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss"/*, "BuccataX"*/, "ChickenWing_Candy", "lauralux", "itsmiabrookes", "nufo", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "LilyLouOfficial", "CoCoNova", "StrawberryTabby", "MyAustinWhite", "Mishamai", "Hannesschan", "tristinmays_", "TrishaHershberger", "PulpFictionally", "Taylor_Jevaux", "JuliaBurch", "RachelKay", "AshleyNocera", "Bambib00", "Faith", "Ms_Tricky", "saweetheart", "SkyeBlanchette", "AriGameplays", "MerceGallardo", "thewildlatina", "VitaCelestine_", "DanielaAzuaje_", "LaurenAlexis_x", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "sophoulla", "kristinemaia", "Mellooow_", "GemmasTW", "thevalentinanappi", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "KDRkitten", "lucyya", "xXLauoaNXx", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "Mayichi", "noe9977", "perfilraro", "princesita1331", "SofiG", "samantra", "jasminaurora", "mira", "mira_irl", "miratv247", "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "MistieSage", "meowbuffy", "NataliaMav"];
                 const selector = streamerNames.map(name => `[alt$='${name}']`).join(",");
                 $(e).attr({ "src": "https://img.shields.io/twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
                 $(e).filter(selector).after($("<snap></snap>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
@@ -528,11 +524,7 @@ $(document).ready(() => {
                 $(e).attr({ "src": "https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fkick.com%2Fapi%2Fv1%2Fchannels%2F" + Username + "&query=%24.livestream.is_live&logo=kick&logoColor=white&logoSize=auto&label=Live%20Stream%20" + Label + "&labelColor=53fc19&color=red&cacheSeconds=60", "alt": "Kick Status for " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
         }
     }).parents("ul").each((i) => {
-        if ($("ul").eq(i).children("li").length > 8) {
-            $("ul").eq(i).addClass("overflow-auto").height(200);
-        } else {
-            $("ul").eq(i).removeClass("overflow-auto").height("100%");
-        }
+        ($("ul:eq(" + i + ")").children("li").length > 7) ? $("ul:eq(" + i + ")").addClass("overflow-auto").height(200) : $("ul:eq(" + i + ")").removeClass("overflow-auto");
     });
     //$("div[id^='Twitch']").addClass("collapse width");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
@@ -665,7 +657,7 @@ $(document).ready(() => {
     });
     $("input[type='url']").attr("inputmode", "url");
     $("table.table").each((i, e) => {
-        $(e).addClass("table-sm table-hover table-dark text-center mb-1").children("caption").css("caption-side", "top").addClass("py-2");
+        $(e).addClass("table-sm table-hover table-dark text-center mb-0").children("caption").css("caption-side", "top").addClass("py-2");
         $(e).wrap($("<div></div>").addClass("table-responsive"));
         // $(e).find("td").has("br:eq(12)").addClass("align-middle");
         // $(e).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
