@@ -31,14 +31,8 @@ jQuery(($) => {
         //$("head").prepend($("<title></title>").text(".::Servis računara B@LESHEVICH:: - ::" + $("li.breadcrumb-item:last").text() + "::."));
         document.title = ".::Servis računara B@LESHEVICH:: - ::" + $("li.breadcrumb-item:last").text() + "::.";
     }
-    switch (new Date().getMonth() + 1) {
-        case 1:
-        case 12:
-            $("div.card#hosting_banner > div.card-body").children("a").attr("target", "_blank").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/dobojcaffe.png", "alt": "Web hosting by DobojCaffe.com", "loading": "eager", "crossorigin": "anonymous" }).on("error", function () { this.src = "https://raw.githubusercontent.com/BaleshSrle/misc/refs/heads/main/banner/img/dobojcaffe.png"; }));
-            break;
-        default:
-            $("div.card#hosting_banner > div.card-body").children("a").wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/docaffe.jpg", "alt": "Web hosting by DobojCaffe.com", "loading": "eager", "crossorigin": "anonymous" }).on("error", function () { e.target.src = "https://raw.githubusercontent.com/BaleshSrle/misc/refs/heads/main/banner/img/docaffe.jpg"; }));
-    }
+    (moment().isBetween("2026-01-16", "2026-12-02")) ? $("div.card#hosting_banner img").attr("src", "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/docaffe.jpg").on("error", function () { this.src = "https://raw.githubusercontent.com/BaleshSrle/misc/refs/heads/main/banner/img/docaffe.jpg"; }) : $("div.card#hosting_banner img").attr("src", "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/banner/img/dobojcaffe.png").on("error", function () { this.src = "https://raw.githubusercontent.com/BaleshSrle/misc/refs/heads/main/banner/img/dobojcaffe.png"; });
+    $("div.card#hosting_banner > div.card-body").children("a").attr({ "hreflang": "sr-YU", "target": "_blank", "rel": "alternate" }).wrapInner($("<img>").addClass("d-block mx-auto img-fluid").attr({ "alt": "Web hosting by DobojCaffe.com", "loading": "eager", "crossorigin": "anonymous" }));
     $("header").each((i, e) => {
         $(e).children("a").addClass("text-decoration-none text-body ml-md-1").prepend($("<img>").addClass("border-0 img-fluid").css("margin", "3px 0px").attr({ "src": "images/baleshevichcompany2.png", "alt": "Servis računara 'BALEŠEVIĆ'" }));
         $(e).find("p").addClass("small ml-md-1").text("Uvijek u službi korisnika i računara");

@@ -18,7 +18,8 @@ $(document).ready(() => {
     /* $("[href$='bootstrap.min.css'],[src$='jquery.min.js'],[href$='bootstrap.bundle.min.js']").on("error", function () {
         location.reload();
     }); */
-    $("script[src*='bootstrap@4']").attr("crossorigin", "anonymous").on("error", function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"; })
+    $("script[src*='bootstrap@4']").on("error", function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"; });
+    $("script[src*='moment@2']").on("error", function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"; });
     $("[href$='.min.css'],[src$='.min.js']").attr("crossorigin", "anonymous");
     //$("body").css("font-family", "Ubuntu");
     $("body").addClass("ubuntu-regular");
