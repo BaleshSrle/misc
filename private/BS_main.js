@@ -43,10 +43,11 @@ $(document).ready(() => {
         (URL) ? $(e).wrap($("<a></a>").attr({ "href": URL, "hreflang": URLLang, "target": "_blank", "rel": "external" })) : $(e).unwrap("a");
     });*/
     $("img.githubBadge").each((i, e) => {
-        const Type = Boolean($(e).data("type")) === true ? "release" : "tag";
-        const TypeBackup = Boolean($(e).data("typebackup")) === true ? "release" : "tag";
-        const Latest = (Type === "release") ? "/latest" : "";
-        const Stable = (TypeBackup === "release") ? "/stable" : "";
+        //const Type = Boolean($(e).data("type")) === true ? "release" : "tag";
+        //const TypeBackup = Boolean($(e).data("typebackup")) === true ? "release" : "tag";
+        const Type = $(e).data("type").split(",").map(item => item.trim());
+        const Latest = (Type[0] === "release") ? "/latest" : "";
+        const Stable = (Type[1] === "release") ? "/stable" : "";
         const Package = $(e).data("package");
         const Filter = $(e).data("filter") || "*";
         const Logo = $(e).data("logo") || "github";
@@ -56,10 +57,10 @@ $(document).ready(() => {
         const LabelColor = $(e).data("labelcolor") || "181717";
         const Color = $(e).data("color") || "blue";
         $(e).attr({
-            "src": "https://img.shields.io/github/v/" + Type + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color, "alt": "Badge for GitHub Package " + Package, "loading": "lazy", "crossorigin": "anonymous"
+            "src": "https://img.shields.io/github/v/" + Type[0] + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color, "alt": "Badge for GitHub Package " + Package, "loading": "lazy", "crossorigin": "anonymous"
         }).on("error", function () {
-            $(this).attr("src", "https://badgen.net/github/" + TypeBackup + "/" + Package + Stable + "?icon=" + Logo + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color);
-        }).wrap($("<a></a>").attr({ "href": "https://github.com/" + Package + "/" + Type + "s" + Latest, "hreflang": "en", "target": "_blank", "rel": "external" }));
+            $(this).attr("src", "https://badgen.net/github/" + Type[1] + "/" + Package + Stable + "?icon=" + Logo + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color);
+        }).wrap($("<a></a>").attr({ "href": "https://github.com/" + Package + "/" + Type[0] + "s" + Latest, "hreflang": "en", "target": "_blank", "rel": "external" }));
     });
     $("img.StaticBadge").each((i, e) => {
         const Label1Text = encodeURIComponent($(e).data("label1") || "");
