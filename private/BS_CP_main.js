@@ -536,7 +536,7 @@ $(document).ready(() => {
                 $(e).filter(selector).after($("<snap></snap>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
                 break;
             default:
-                $(e).attr({ "src": "https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fkick.com%2Fapi%2Fv1%2Fchannels%2F" + Username + "&query=%24.livestream.is_live&logo=kick&logoColor=white&logoSize=auto&label=Live%20Stream%20" + Label + "&labelColor=53fc19&color=red&cacheSeconds=60", "alt": "Kick Status for " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+                $(e).attr({ "src": "https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fkick.com%2Fapi%2Fv1%2Fchannels%2F" + Username + "&query=%24.livestream.is_live&prefix=Live%3A%20&logo=kick&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=53fc19&color=red&cacheSeconds=60", "alt": "Kick Status for " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
         }
     }).parents("ul").each((i) => {
         ($("ul:eq(" + i + ")").children("li").length > 7) ? $("ul:eq(" + i + ")").addClass("overflow-auto").height(200) : $("ul:eq(" + i + ")").removeClass("overflow-auto");
