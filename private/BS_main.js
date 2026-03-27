@@ -6,11 +6,8 @@ $(document).ready(() => {
     const UrlCDN = ["https://cdn.jsdelivr.net/", "https://cdnjs.cloudflare.com/"];
     const GoogleFontsUrl = ["https://fonts.googleapis.com", "https://fonts.gstatic.com"];
     const BadgesUrl = ["https://img.shields.io/", "https://badgen.net/"];
-    if (location.pathname != "/index.html") {
-        $("html").attr("lang", "sr-BA");
-        $("head").prepend($("<meta>").attr({ "name": "robots", "content": "index, nofollow" }), $("<meta>").attr({ "http-equiv": "X-UA-Compatible", "content": "IE=edge" }));
-    }
-    (location.pathname == "/private/kontrolna_tabla.html") ? $.getScript(UrlCDN[0]+"gh/BaleshSrle/misc/private/BS_CP_main.min.js") : $.getScript(UrlCDN[0]+"gh/BaleshSrle/misc/private/BS_site.min.js");
+    (location.pathname != "/index.html") ? ($("html").attr("lang", "sr-BA"), $("head").prepend($("<meta>").attr({ "name": "robots", "content": "index, nofollow" }), $("<meta>").attr({ "http-equiv": "X-UA-Compatible", "content": "IE=edge" }))) : null;
+    (location.pathname == "/private/kontrolna_tabla.html") ? $.getScript(UrlCDN[0] + "gh/BaleshSrle/misc/private/BS_CP_main.min.js") : $.getScript(UrlCDN[0] + "gh/BaleshSrle/misc/private/BS_site.min.js");
     $("head").each((i, e) => {
         $(e).prepend(/*$("<meta>").attr("charset", "UTF-8"), */$("<meta>").attr({ "name": "MSThemeCompatible", "content": "yes" }), $("<meta>").attr({ "http-equiv": "cleartype", "content": "on" }), $("<meta>").attr({ "http-equiv": "x-dns-prefetch-control", "content": "on" }), $("<meta>").attr({ "http-equiv": "Cache-control", "content": "no-cache" }), $("<meta>").attr({ "http-equiv": "Pragma", "content": "no-cache" }), $("<meta>").attr({ "http-equiv": "Expires", "content": "-1" }));
         $(e).prepend($("<meta>").attr({ "name": "author", "content": "Baleševi&#263; Sr&#273;an, srdjan.b%40teol.net" }), $("<meta>").attr({ "name": "designer", "content": "Servis računara &quot;BALEŠEVIĆ&quot;" }), $("<meta>").attr({ "name": "reply-to", "content": "baleshevichcompany%40dobojcaffe.com" }), $("<meta>").attr({ "name": "language", "content": "sr" }), $("<meta>").attr({ "name": "host", "content": "www.dobojcaffe.com" }), $("<meta>").attr({ "name": "geo.region", "content": "BA-SRP" }), $("<meta>").attr({ "name": "geo.placename", "content": "Добој" }), $("<meta>").attr({ "name": "twitter:creator", "content": "@BaleshSrle" }), $("<meta>").attr({ "name": "twitter:site", "content": "@BaleshSrle" }));
@@ -22,7 +19,7 @@ $(document).ready(() => {
         location.reload();
     }); */
     $("script[src*='bootstrap@4']").on("error", function () { this.src = UrlCDN[1] + "ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"; });
-    $("script[src*='jquery@3']").after($("<script></script>").attr( "src", UrlCDN[0] + "npm/jquery-migrate@4/dist/jquery-migrate.min.js"));
+    $("script[src*='jquery@3']").after($("<script></script>").attr("src", UrlCDN[0] + "npm/jquery-migrate@4/dist/jquery-migrate.min.js"));
     $("script[src*='moment@2']").on("error", function () { this.src = UrlCDN[1] + "ajax/libs/moment.js/2.30.1/moment.min.js"; });
     $("[href$='.min.css'],[src$='.min.js']").attr("crossorigin", "anonymous");
     //$("body").css("font-family", "Ubuntu");
@@ -50,7 +47,7 @@ $(document).ready(() => {
         //const Type = Boolean($(e).data("type")) === true ? "release" : "tag";
         //const TypeBackup = Boolean($(e).data("typebackup")) === true ? "release" : "tag";
         const $img = $(e);
-        const { Type, Latest, Stable, Package, Filter, Logo, LogoColor, LogoSize, Label, LabelColor, Color } = { Type: $img.data("type").split(",").map(item => item.trim()), Latest: (Type[0]=== "release")?"/latest":"", Stable:(Type[1]=== "release")?"/stable":"", Package: $img.data("package"), Filter: $img.data("filter") || "*", Logo: $img.data("logo") || "github", LogoColor: $img.data("logocolor") || "", LogoSize: $img.data("logosize") || "", Label: encodeURIComponent($img.data("label")), LabelColor: $img.data("labelcolor") || "181717", Color: $img.data("color") || "blue" };
+        const { Type, Latest, Stable, Package, Filter, Logo, LogoColor, LogoSize, Label, LabelColor, Color } = { Type: $img.data("type").split(",").map(item => item.trim()), Latest: (Type[0] === "release") ? "/latest" : "", Stable: (Type[1] === "release") ? "/stable" : "", Package: $img.data("package"), Filter: $img.data("filter") || "*", Logo: $img.data("logo") || "github", LogoColor: $img.data("logocolor") || "", LogoSize: $img.data("logosize") || "", Label: encodeURIComponent($img.data("label")), LabelColor: $img.data("labelcolor") || "181717", Color: $img.data("color") || "blue" };
         $img.attr({
             "src": BadgesUrl[0] + "github/v/" + Type[0] + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color, "alt": "Badge for GitHub Package " + Package, "loading": "lazy", "crossorigin": "anonymous"
         }).on("error", function () {

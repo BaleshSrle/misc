@@ -110,9 +110,10 @@ $(document).ready(() => {
         show: true
     });
     $("body,:password").on("keydown", (event) => {
-        if (event.which === 20) {
+        /*if (event.which === 20) {
             alert("Caps Lock je uključen");
-        }
+        }*/
+        (event.originalEvent.getModifierState("CapsLock")) ? alert("Caps Lock je isključen") : alert("Caps lock je uključen");
     });
     $("#loginBtn").on("click", (event) => {
         switch ($("input#password").val()) {
@@ -271,11 +272,7 @@ $(document).ready(() => {
     $("img.ghCommitActivity").each((i, e) => {
         const { Period, PeriodLabel } = { Period: ghImg.data("period"), PeriodLabel: ghImg.data("periodlabel") };
         $(e).attr({ "src": BadgesUrl[0] + "github/commit-activity/" + Period + "/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Commit Activity " + PeriodLabel, "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto");
-        if (Period == "t") {
-            $(e).on("error", function () {
-                $(this).attr("src", BadgesUrl[1] + "github/commits/" + ghPackage + "?icon=github&labelColor=181717");
-            });
-        }
+        (Period == "t") ? $(e).on("error", function () { $(this).attr("src", BadgesUrl[1] + "github/commits/" + ghPackage + "?icon=github&labelColor=181717"); }) : null;
     });
     $("img.ghIssues").each((i, e) => {
         const state = Boolean(ghImg.data("issueopen"));
