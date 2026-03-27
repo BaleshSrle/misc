@@ -109,12 +109,15 @@ $(document).ready(() => {
         focus: true,
         show: true
     });
-    $("body,:password").on("keydown", (event) => {
-        /*if (event.which === 20) {
+    /* window.addEventListener("keypress", (event) => {
+        **if (event.which === 20) {
             alert("Caps Lock je uključen");
-        }*/
-        (event.originalEvent.getModifierState("CapsLock")) ? alert("Caps Lock je isključen") : alert("Caps lock je uključen");
-    });
+        }**
+        *** var capsLockOn = event.getModifierState && event.getModifierState("CapsLock");
+        if (event.getModifierState("CapsLock")) {
+            alert("Caps Lock je uključen");
+        }
+    }); */
     $("#loginBtn").on("click", (event) => {
         switch ($("input#password").val()) {
             case "baleshevich88":
@@ -334,7 +337,7 @@ $(document).ready(() => {
     //$("iframe[src*='blberza']").slice(2).width(200).height(110).addClass("overflow-hidden rounded-lg");
     $("iframe.steamWidget").each((i, e) => {
         const $frame = $(e);
-        const {GameID, Title} = {GameID: $frame.data("gameid"), Title: $frame.data("title") || null};
+        const { GameID, Title } = { GameID: $frame.data("gameid"), Title: $frame.data("title") || null };
         $frame.addClass("d-block mx-auto border-0 my-1").attr({ "src": SteamUrl + "widget/" + GameID + "/", "title": Title, "loading": "lazy" }).width(646).height(190).wrap($("<div></div>").addClass("col-auto"));
     });
     /*$("div.col-auto").each((i, e) => {

@@ -47,7 +47,8 @@ $(document).ready(() => {
         //const Type = Boolean($(e).data("type")) === true ? "release" : "tag";
         //const TypeBackup = Boolean($(e).data("typebackup")) === true ? "release" : "tag";
         const $img = $(e);
-        const { Type, Latest, Stable, Package, Filter, Logo, LogoColor, LogoSize, Label, LabelColor, Color } = { Type: $img.data("type").split(",").map(item => item.trim()), Latest: (Type[0] === "release") ? "/latest" : "", Stable: (Type[1] === "release") ? "/stable" : "", Package: $img.data("package"), Filter: $img.data("filter") || "*", Logo: $img.data("logo") || "github", LogoColor: $img.data("logocolor") || "", LogoSize: $img.data("logosize") || "", Label: encodeURIComponent($img.data("label")), LabelColor: $img.data("labelcolor") || "181717", Color: $img.data("color") || "blue" };
+        const Type = $img.data("type").split(",").map(item => item.trim());
+        const { Latest, Stable, Package, Filter, Logo, LogoColor, LogoSize, Label, LabelColor, Color } = { Latest: (Type[0] === "release") ? "/latest" : "", Stable: (Type[1] === "release") ? "/stable" : "", Package: $img.data("package"), Filter: $img.data("filter") || "*", Logo: $img.data("logo") || "github", LogoColor: $img.data("logocolor") || "", LogoSize: $img.data("logosize") || "", Label: encodeURIComponent($img.data("label")), LabelColor: $img.data("labelcolor") || "181717", Color: $img.data("color") || "blue" };
         $img.attr({
             "src": BadgesUrl[0] + "github/v/" + Type[0] + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color, "alt": "Badge for GitHub Package " + Package, "loading": "lazy", "crossorigin": "anonymous"
         }).on("error", function () {
