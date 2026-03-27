@@ -69,21 +69,26 @@ $(document).ready(() => {
 
     const divInputGroup = $("div.input-group");
     const ghImg = $("img[class^='gh']");
-    const ghPackage = ghImg.data("package");
-    const ghBranch = ghImg.data("branch") || "main";
-    const ghNumber = ghImg.data("number");
-
+    const { ghPackage, ghBranch, ghNumber } = { ghPackage: ghImg.data("package"), ghBranch: ghImg.data("branch") || "main", ghNumber: ghImg.data("number") };
     const localeOptions = { locale: "sr-Latn-BA", options: { dateStyle: "full", timeStyle: "short" } };
-
+    const TwitchUrl = ["https://api.twitch.tv/", "https://passport.twitch.tv/", "https://www.twitch.tv/"];
+    const AccuweatherUrl = ["https://www.accuweather.com", "https://oap.accuweather.com"];
+    const LivescoreUrl = "https://www.livescore.bz";
+    const WikimediaUrl = ["https://meta.wikimedia.org/", "https://upload.wikimedia.org/"];
+    const SimpleiconsUrl = ["https://simpleicons.org/", "https://cdn.simpleicons.org/"];
+    const GitHubUrl = "https://github.com/";
+    const UrlCDN = ["https://cdn.jsdelivr.net/", "https://cdnjs.cloudflare.com/"];
+    const BadgesUrl = ["https://img.shields.io/", "https://badgen.net/"];
+    const SteamUrl = "https://store.steampowered.com/";
+    const OxfordDictionaryVersion = "2.3.76";
     /* function onSubmit(token) {
         document.querySelector("form#loginForm").submit();
     }*/
-
     $("head").each((i, e) => {
         $(e).prepend($("<meta>").attr({ "http-equiv": "refresh", "content": "1800" }));
-        $(e).append($("<link>").attr({ "rel": "dns-prefetch", "href": "https://api.twitch.tv/" }), $("<link>").attr({ "rel": "dns-prefetch", "href": "https://passport.twitch.tv/" }), $("<link>").attr({ "rel": "dns-prefetch", "href": "https://meta.wikimedia.org/" }), $("<link>").attr({ "rel": "preconnect", "href": "https://www.auti.hr/djevojkadana/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": "https://mojtv.hr/tv-navigator/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": "https://api.twitch.tv/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": "https://upload.wikimedia.org/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "canonical", "href": "https://simpleicons.org/" }), $("<link>").attr({ "rel": "canonical", "href": "https://cybermap.kaspersky.com/en/widget" }), $("<link>").attr({ "rel": "canonical", "href": "https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305" }), $("<link>").attr({ "rel": "canonical", "href": "https://www.livescore.bz/sr-rs/" }), $("<link>").attr({ "rel": "canonical", "href": "https://naslovi.net/tehnologija/" }), $("<link>").attr({ "rel": "canonical", "href": "https://store.steampowered.com/" }), $("<link>").attr({ "rel": "canonical", "href": "https://www.twitch.tv/" }));
-        $(e).append($("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css", "crossorigin": "anonymous" }), /*$.getScript("https://oap.accuweather.com/launch.js"), */$.getScript("https://widget.iqair.com/script/widget_v3.0.js")/*, $.getScript("https://www.google.com/recaptcha/api.js")*/);
-        $(e).append($("<style></style>").text("#dictionarySelector160:hover {  background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/lang-hover.png?version=2.3.71) !no-repeat; }\n#search-btn160:hover { background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/search-hover.png?version=2.3.71) !important; }\n#search-btn160:active { background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/search-active.png?version=2.3.71) !important;}"));
+        $(e).append($("<link>").attr({ "rel": "dns-prefetch", "href": TwitchUrl[0] }), $("<link>").attr({ "rel": "dns-prefetch", "href": TwitchUrl[1] }), $("<link>").attr({ "rel": "dns-prefetch", "href": WikimediaUrl[0] }), $("<link>").attr({ "rel": "preconnect", "href": "https://www.auti.hr/djevojkadana/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": "https://mojtv.hr/tv-navigator/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": TwitchUrl[1], "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": WikimediaUrl[1], "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "canonical", "href": SimpleiconsUrl[0] }), $("<link>").attr({ "rel": "canonical", "href": "https://cybermap.kaspersky.com/en/widget" }), $("<link>").attr({ "rel": "canonical", "href": AccuweatherUrl[0] + "/sr/ba/doboj/35305/current-weather/35305" }), $("<link>").attr({ "rel": "canonical", "href": LivescoreUrl + "/sr-rs/" }), $("<link>").attr({ "rel": "canonical", "href": "https://naslovi.net/tehnologija/" }), $("<link>").attr({ "rel": "canonical", "href": SteamUrl }), $("<link>").attr({ "rel": "canonical", "href": TwitchUrl[2] }));
+        $(e).append($("<link>").attr({ "rel": "stylesheet", "href": UrlCDN[0] + "npm/flag-icons/css/flag-icons.min.css", "crossorigin": "anonymous" }).on("error", function () { this.href = UrlCDN[1] + "ajax/libs/flag-icons/7.5.0/css/flag-icons.min.css" }), /*$.getScript("https://oap.accuweather.com/launch.js"), */$.getScript("https://widget.iqair.com/script/widget_v3.0.js")/*, $.getScript("https://www.google.com/recaptcha/api.js")*/);
+        $(e).append($("<style></style>").text("#dictionarySelector160:hover {  background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/lang-hover.png?version=" + OxfordDictionaryVersion + ") !no-repeat; }\n#search-btn160:hover { background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/search-hover.png?version=" + OxfordDictionaryVersion + ") !important; }\n#search-btn160:active { background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/search-active.png?version=" + OxfordDictionaryVersion + ") !important;}"));
     });
     $("script#skin").text("var fm_inf_1 = 'Arial';");
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
@@ -154,7 +159,7 @@ $(document).ready(() => {
         $("div.col-md-7").wrapInner($("<img>").attr({ "src": $("#imgUrl").val(), "loading": "lazy" }).height(355).css("transform", "rotate(" + $("#imgAngle").val() + "deg)").addClass("mx-auto d-block w-auto rounded-lg"));
     }).addClass("btn btn-primary mb-2 mr-sm-2").attr("type", "button").text("Primjeni");
     $("button#loadRadioStation").on("click", (event) => window.open($("#RadioStation").val())).addClass("btn btn-info").attr("type", "button").append($("<i></i>").addClass("bi bi-broadcast"));
-    $("button#loadTvStation").on("click", (event) => window.open($("#TvStation").val())).addClass("btn btn-info").attr("type", "button").append("<i></i>").addClass("bi bi-tv");
+    $("button#loadTvStation").on("click", (event) => window.open($("#TvStation").val())).addClass("btn btn-info").attr("type", "button").append($("<i></i>").addClass("bi bi-tv"));
     /* $("select#TwitchUsername").on("click", function () {
         const TwitchUsername = $("select#TwitchUsername").val();
         $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + TwitchUsername + '&parent=' + location.host + '&muted=true' }, "allowfullscreen": false }).addClass("border-0 overflow-hidden rounded-lg");
@@ -177,183 +182,150 @@ $(document).ready(() => {
         //$(e).filter("[src*='shields']").on("error", function() { this.src = this.src; });
     });
     $("img.AppBadge").each((i, e) => {
-        const PackageManager = $(e).data("packagemanager");
-        const Package = $(e).data("package");
-        const Channel = $(e).data("channel");
-        //const Branch = $(e).data("branch");
-        const Label = encodeURIComponent($(e).data("label"));
-        const Logo = $(e).data("logo") || "";
-        const LogoColor = $(e).data("logocolor") || "";
-        const LogoSize = $(e).data("logosize") || "";
-        const Color = $(e).data("color") || "blue";
+        const $img = $(e);
+        const { PackageManager, Package, Channel, Label, Logo, LogoColor, LogoSize, Color } = { PackageManager: $img.data("packagemanager"), Package: $img.data("package"), Channel: $img.data("channel"), Label: encodeURIComponent($img.data("label")), Logo: $img.data("logo") || "", LogoColor: $img.data("logocolor") || "", LogoSize: $img.data("logosize") || "", Color: $img.data("color") || "blue" };
+        //const Branch = $img.data("branch");
         switch (PackageManager) {
             case "Debian":
-                $(e).attr({
-                    "src": "https://img.shields.io/debian/v/" + Package + "/stable?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Debian%20Packages&labelColor=a81d33&color=" + Color, "alt": "Shields.io Debian Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                $img.attr({
+                    "src": BadgesUrl[0] + "debian/v/" + Package + "/stable?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Debian%20Packages&labelColor=a81d33&color=" + Color, "alt": "Shields.io Debian Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://packages.debian.org/trixie/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Fedora":
-                $(e).attr({
-                    "src": "https://img.shields.io/fedora/v/" + Package + "/f43?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Fedora%20Packages&labelColor=51a2da&color=" + Color, "alt": "Shields.io Fedora Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                $img.attr({
+                    "src": BadgesUrl[0] + "fedora/v/" + Package + "/f43?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Fedora%20Packages&labelColor=51a2da&color=" + Color, "alt": "Shields.io Fedora Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://packages.fedoraproject.org/search?query=" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Flatpak":
-                $(e).attr({
-                    "src": "https://img.shields.io/flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                $img.attr({
+                    "src": BadgesUrl[0] + "flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://flathub.org/hr/apps/" + Package, "hreflang": "hr", "target": "_blank", "rel": "external" }));
                 break;
             case "Snapcraft":
-                $(e).attr({
-                    "src": "https://img.shields.io/snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "alt": "Snapcraft Badge for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                $img.attr({
+                    "src": BadgesUrl[0] + "snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "alt": "Snapcraft Badge for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
-                    $(this).attr("src", "https://badgen.infra.medigy.com/snapcraft/v/" + Package + "/amd64?label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color)
+                    $(this).attr("src", BadgesUrl[1] + "snapcraft/v/" + Package + "/amd64?label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color)
                 }).wrap($("<a></a>").attr({ "href": "https://snapcraft.io/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Ubuntu":
-                $(e).attr({
-                    "src": "https://img.shields.io/ubuntu/v/" + Package + "/noble?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Ubuntu%20Packages&labelColor=e95420&color=" + Color, "alt": "Shields.io Ubuntu Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                $img.attr({
+                    "src": BadgesUrl[0] + "ubuntu/v/" + Package + "/noble?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Ubuntu%20Packages&labelColor=e95420&color=" + Color, "alt": "Shields.io Ubuntu Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://packages.ubuntu.com/noble/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             default:
-                $(e).attr({
-                    "src": "https://img.shields.io/winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy", "crossorigin": "anonymous"
+                $img.attr({
+                    "src": BadgesUrl[0] + "winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
-                    $(this).attr("src", "https://badgen.net/winget/v/" + Package + "?color=" + Color + "&icon=" + Logo + "&label=" + Label + "%20%40%20winget");
+                    $(this).attr("src", BadgesUrl[1] + "winget/v/" + Package + "?color=" + Color + "&icon=" + Logo + "&label=" + Label + "%20%40%20winget");
                 }).wrap($("<a></a>").attr({ "href": "https://winget.run/pkg/" + Package.replace(".", "/").replace(".sr", ""), "hreflang": "en", "target": "_blank", "rel": "external" }));
         }
     });
     $("img.ExtensionBadge").each((i, e) => {
-        const Browser = $(e).data("browser");
-        const ExtensionId = $(e).data("extension-id");
-        const ExtensionLabel = encodeURIComponent($(e).data("extension-label"));
-        const ExtensionColor = $(e).data("extension-color") || "blue";
+        const $img = $(e);
+        const { Browser, ExtensionId, ExtensionLabel, ExtensionColor } = { Browser: $img.data("browser"), ExtensionId: $img.data("extension-id"), ExtensionLabel: encodeURIComponent($img.data("extension-label")), ExtensionColor: $img.data("extension-color") || "blue" };
         switch (Browser) {
             case "Chromium":
-                $(e).attr({
-                    "src": "https://img.shields.io/chrome-web-store/v/" + ExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy", "crossorigin": "anonymous"
+                $img.attr({
+                    "src": BadgesUrl[0] + "chrome-web-store/v/" + ExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
-                    $(this).attr("src", "https://badgen.net/chrome-web-store/v/" + ExtensionId + "?icon=chrome&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor);
+                    $(this).attr("src", BadgesUrl[1] + "chrome-web-store/v/" + ExtensionId + "?icon=chrome&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor);
                 }).wrap($("<a></a>").attr({ "href": "https://chromewebstore.google.com/detail/" + ExtensionId, "target": "_blank", "rel": "external" }));
                 break;
             case "Firefox":
-                $(e).attr({
-                    "src": "https://img.shields.io/amo/v/" + ExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + ExtensionColor, "loading": "lazy", "crossorigin": "anonymous"
+                $img.attr({
+                    "src": BadgesUrl[0] + "amo/v/" + ExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + ExtensionColor, "loading": "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
-                    $(this).attr("src", "https://badgen.net/amo/v/" + ExtensionId + "?color=" + ExtensionColor + "&icon=firefox&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139");
+                    $(this).attr("src", BadgesUrl[1] + "amo/v/" + ExtensionId + "?color=" + ExtensionColor + "&icon=firefox&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139");
                 }).wrap($("<a></a>").attr({ "href": "https://addons.mozilla.org/hr/firefox/addon/" + ExtensionId, "hreflang": "hr", "target": "_blank", "rel": "external" }));
                 break;
             default:
-                $(e).attr({
-                    "src": "https://img.shields.io/visual-studio-marketplace/v/" + ExtensionId + "?label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc", "loading": "lazy", "crossorigin": "anonymous"
+                $img.attr({
+                    "src": BadgesUrl[0] + "visual-studio-marketplace/v/" + ExtensionId + "?label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc", "loading": "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
-                    $(this).attr("src", "https://badgen.net/vs-marketplace/v/" + ExtensionId + "?icon=visualstudio&label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc");
+                    $(this).attr("src", BadgesUrl[1] + "visual-studio-marketplace/v/" + ExtensionId + "?icon=visualstudio&label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc");
                 }).wrap($("<a></a>").attr({ "href": "https://marketplace.visualstudio.com/items?itemName=" + ExtensionId, "hreflang": "en", "target": "_blank", "rel": "external" }));
         }
     });
     $("img.EOLBadge").each((i, e) => {
-        const Product = $(e).data("product");
-        const Release = $(e).data("release");
-        const Query = encodeURIComponent($(e).data("query"));
-        const Prefix = encodeURIComponent($(e).data("prefix") || "");
-        //const Suffix = encodeURIComponent($(e).data("suffix") || "");
-        const Logo = $(e).data("logo") || "";
-        const Label = encodeURIComponent($(e).data("label") || "");
-        const LabelColor = $(e).data("labelcolor") || "";
-        $(e).attr({
-            "src": "https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fendoflife.date%2Fapi%2Fv1%2Fproducts%2F" + Product + "%2Freleases%2F" + Release + "&query=" + Query + "&prefix=" + Prefix + "&logo=" + Logo + "&label=" + Label + "&labelColor=" + LabelColor, "loading": "lazy", "crossorigin": "anonymous"
+        const $img = $(e);
+        const { Product, Release, Query, Prefix, Logo, Label, LabelColor } = { Product: $img.data("product"), Release: $img.data("release"), Query: encodeURIComponent($img.data("query")), Prefix: encodeURIComponent($img.data("prefix") || ""), Logo: $img.data("logo") || "", Label: encodeURIComponent($img.data("label") || ""), LabelColor: $img.data("labelcolor") || "" };
+        //const Suffix = encodeURIComponent($img.data("suffix") || "");
+        $img.attr({
+            "src": BadgesUrl[0] + "badge/dynamic/json?url=https%3A%2F%2Fendoflife.date%2Fapi%2Fv1%2Fproducts%2F" + Product + "%2Freleases%2F" + Release + "&query=" + Query + "&prefix=" + Prefix + "&logo=" + Logo + "&label=" + Label + "&labelColor=" + LabelColor, "loading": "lazy", "crossorigin": "anonymous"
         });
-        (Logo != "") ? $(e).attr("src", (index, src) => { return src + "&logoColor=white&logoSize=auto"}): null;
+        (Logo != "") ? $img.attr("src", (index, src) => { return src + "&logoColor=white&logoSize=auto" }) : null;
     });
     $("img.ghActionsWorkflow").each((i, e) => {
-        const Workflow = $(e).data("workflow");
-        const WorkflowLabel = $(e).data("workflowlabel");
-        const Event = $(e).data("event") || "";
+        const { Workflow, WorkflowLabel, Event } = { Workflow: ghImg.data("workflow"), WorkflowLabel: ghImg.data("workflowlabel"), Event: ghImg.data("event") || "" };
         $(e).attr({
-            "src": "https://img.shields.io/github/actions/workflow/status/" + ghPackage + "/" + Workflow + ".yml?branch=" + ghBranch + "&event=" + Event + "&logo=githubactions&logoColor=white&logoSize=auto&label=GitHub%20Actions%20Workflow&labelColor=2088ff", "alt": "GitHub Actions Workflow - " + WorkflowLabel, "loading": "lazy", "crossorigin": "anonymous"
+            "src": BadgesUrl[0] + "github/actions/workflow/status/" + ghPackage + "/" + Workflow + ".yml?branch=" + ghBranch + "&event=" + Event + "&logo=githubactions&logoColor=white&logoSize=auto&label=GitHub%20Actions%20Workflow&labelColor=2088ff", "alt": "GitHub Actions Workflow - " + WorkflowLabel, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
     });
     $("img.ghChecks").each((i, e) => {
-        const JobName = $(e).data("jobname") || "";
-        $(e).attr({ "src": "https://img.shields.io/github/check-runs/" + ghPackage + "/" + ghBranch + "?nameFilter=" + JobName + "&logo=github&logoColor=white&logoSize=auto&label=Checks%20" + JobName + "&labelColor=181717", "alt": "GitHub branch check runs", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
-            $(this).attr("src", "https://badgen.net/github/checks/" + ghPackage + "/" + ghBranch + "/" + JobName + "?icon=github&label=Checks%20" + JobName + "&labelColor=181717");
+        const JobName = ghImg.data("jobname") || "";
+        $(e).attr({ "src": BadgesUrl[0] + "github/check-runs/" + ghPackage + "/" + ghBranch + "?nameFilter=" + JobName + "&logo=github&logoColor=white&logoSize=auto&label=Checks%20" + JobName + "&labelColor=181717", "alt": "GitHub branch check runs", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
+            $(this).attr("src", BadgesUrl[1] + "github/checks/" + ghPackage + "/" + ghBranch + "/" + JobName + "?icon=github&label=Checks%20" + JobName + "&labelColor=181717");
         });
     });
     $("img.ghCommitActivity").each((i, e) => {
-        const Period = $(e).data("period");
-        const PeriodLabel = $(e).data("periodlabel");
-        $(e).attr({ "src": "https://img.shields.io/github/commit-activity/" + Period + "/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Commit Activity " + PeriodLabel, "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto");
+        const { Period, PeriodLabel } = { Period: ghImg.data("period"), PeriodLabel: ghImg.data("periodlabel") };
+        $(e).attr({ "src": BadgesUrl[0] + "github/commit-activity/" + Period + "/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Commit Activity " + PeriodLabel, "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto");
         if (Period == "t") {
             $(e).on("error", function () {
-                $(this).attr("src", "https://badgen.net/github/commits/" + ghPackage + "?icon=github&labelColor=181717");
+                $(this).attr("src", BadgesUrl[1] + "github/commits/" + ghPackage + "?icon=github&labelColor=181717");
             });
         }
     });
     $("img.ghIssues").each((i, e) => {
-        const state = Boolean($(e).data("issueopen"));
-        (state === true) ? $(e).attr({ "src": "https://img.shields.io/github/issues/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&label=Issues%20Open&labelColor=181717", "alt": "GitHub Issues Open", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () { $(this).attr("src", "https://badgen.net/github/open-issues/" + ghPackage + "?icon=github&label=Issues%20Open&labelColor=181717"); }).wrap($("<a></a>").attr({ "src": "https://github.com/" + ghPackage + "/issues", "hreflang": "en", "target": "_blank", "rel": "external" })) : $(e).attr({ "href": "https://img.shields.io/github/issues-closed/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&label=Issues%20Closed&labelColor=181717", "alt": "GitHub Issues Closed", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () { $(this).attr("src", "https://badgen.net/github/closed-issues/" + ghPackage + "?icon=github&label=Issues%20Closed&labelColor=181717") }).wrap($("<a></a>").attr({ "href": "https://github.com/" + ghPackage + "/issues?q=is%3Aissue%20state%3Aclosed", "hreflang": "en", "target": "_blank", "rel": "external" }));
+        const state = Boolean(ghImg.data("issueopen"));
+        (state === true) ? $(e).attr({ "src": BadgesUrl[0] + "github/issues/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&label=Issues%20Open&labelColor=181717", "alt": "GitHub Issues Open", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () { $(this).attr("src", BadgesUrl[1] + "github/open-issues/" + ghPackage + "?icon=github&label=Issues%20Open&labelColor=181717"); }).wrap($("<a></a>").attr({ "src": GitHubUrl + ghPackage + "/issues", "hreflang": "en", "target": "_blank", "rel": "external" })) : $(e).attr({ "href": BadgesUrl[0] + "github/issues-closed/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&label=Issues%20Closed&labelColor=181717", "alt": "GitHub Issues Closed", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () { $(this).attr("src", BadgesUrl[1] + "github/closed-issues/" + ghPackage + "?icon=github&label=Issues%20Closed&labelColor=181717") }).wrap($("<a></a>").attr({ "href": GitHubUrl + ghPackage + "/issues?q=is%3Aissue%20state%3Aclosed", "hreflang": "en", "target": "_blank", "rel": "external" }));
     });
     $("img.ghLastCommit").each((i, e) => {
-        $(e).attr({ "src": "https://img.shields.io/github/last-commit/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Last Commit", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
-            $(this).attr("src", "https://badgen.net/github/last-commit/" + ghPackage + "?icon=github&labelColor=181717");
+        $(e).attr({ "src": BadgesUrl[0] + "github/last-commit/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Last Commit", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
+            $(this).attr("src", BadgesUrl[1] + "github/last-commit/" + ghPackage + "?icon=github&labelColor=181717");
         });
     });
     $("img.ghPRDetail").each((i, e) => {
         $(e).attr({
-            "src": "https://img.shields.io/github/pulls/detail/state/" + ghPackage + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Detail%20for%20%23" + ghNumber + "&labelColor=181717", "alt": "GitHub PR Detail #" + ghNumber, "loading": "lazy", "crossorigin": "anonymous"
+            "src": BadgesUrl[0] + "github/pulls/detail/state/" + ghPackage + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Detail%20for%20%23" + ghNumber + "&labelColor=181717", "alt": "GitHub PR Detail #" + ghNumber, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
     });
     $("img.ghPRStatus").each((i, e) => {
         $(e).attr({
-            "src": "https://img.shields.io/github/status/s/pulls/" + ghPackage + "/" + ghNumber + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Status%20%23" + ghNumber + "&labelColor=181717", "alt": "GitHub PR Status #" + ghNumber, "loading": "lazy", "crossorigin": "anonymous"
+            "src": BadgesUrl[0] + "github/status/s/pulls/" + ghPackage + "/" + ghNumber + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Status%20%23" + ghNumber + "&labelColor=181717", "alt": "GitHub PR Status #" + ghNumber, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
     });
     $("img.giteaBadge").each((i, e) => {
-        const Package = $(e).data("package");
-        const URL = encodeURIComponent($(e).data("url"));
+        const $img = $(e);
+        const { Package, URL, Sort, DisplayName, DateOrder, Logo, LogoColor, LogoSize, Label, Color } = { Package: $img.data("package"), URL: encodeURIComponent($img.data("url")), Sort: $img.data("sort"), DisplayName: $img.data("dispname"), DateOrder: $img.data("dateorder"), Logo: $img.data("logo") || "gitea", LogoColor: $img.data("logocolor") || "white", LogoSize: $img.data("logosize") || "", Label: encodeURIComponent($img.data("label")), Color: $img.data("color") || "blue" };
         //const Prerelease = Boolean($(e).data("prerelease"));
-        const Sort = $(e).data("sort");
-        const DisplayName = $(e).data("dispname");
-        const DateOrder = $(e).data("dateorder");
-        const Logo = $(e).data("logo") || "gitea";
-        const LogoColor = $(e).data("logocolor") || "white";
-        const LogoSize = $(e).data("logosize") || "";
-        const Label = encodeURIComponent($(e).data("label"));
-        const Color = $(e).data("color") || "blue";
-        $(e).attr({ "src": "https://img.shields.io/gitea/v/release/" + Package + "?gitea_url=" + URL + "&sort=" + Sort + "&display_name=" + DisplayName + "&date_order_by=" + DateOrder + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=609926&color=" + Color, "alt": "Badge for Gitea Package " + Package, "loading": "lazy", "crossorigin": "anonymous" });
+        $img.attr({ "src": BadgesUrl[0] + "gitea/v/release/" + Package + "?gitea_url=" + URL + "&sort=" + Sort + "&display_name=" + DisplayName + "&date_order_by=" + DateOrder + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=609926&color=" + Color, "alt": "Badge for Gitea Package " + Package, "loading": "lazy", "crossorigin": "anonymous" });
     });
     $("img.LinuxDistroBadge").each((i, e) => {
-        const Name = encodeURIComponent($(e).data("name"));
-        const Edition = encodeURIComponent($(e).data("edition"));
-        const Color = $(e).data("color") || "fcc624";
-        const Logo = $(e).data("logo") || "linux";
-        $(e).attr({
-            "src": "https://img.shields.io/badge/" + Name + "-" + Edition + "%2064--bit-" + Color + "?logo=" + Logo + "&logoColor=white&logoSize=auto", "loading": "lazy", "crossorigin": "anonymous"
+        const $img = $(e);
+        const { Name, Edition, Color, Logo } = { Name: encodeURIComponent($img.data("name")), Edition: encodeURIComponent($img.data("edition")), Color: $img.data("color") || "fcc624", Logo: $img.data("logo") || "linux" };
+        $img.attr({
+            "src": BadgesUrl[0] + "badge/" + Name + "-" + Edition + "%2064--bit-" + Color + "?logo=" + Logo + "&logoColor=white&logoSize=auto", "loading": "lazy", "crossorigin": "anonymous"
         }).on("error", function () {
-            $(this).attr("src", "https://badgen.net/static/" + Name + "/" + Edition + "%2064-bit/" + Color);
+            $(this).attr("src", BadgesUrl[1] + "static/" + Name + "/" + Edition + "%2064-bit/" + Color);
         });
     });
     $("img.simpleiconsCDN").each((i, e) => {
-        const IconName = $(e).data("name");
-        const IconVer = $(e).data("version");
-        const siteCDN = Boolean($(e).data("sitecdn"));
-
-        (siteCDN === true) ? e.src = "https://cdn.simpleicons.org/" + IconName + "?viewbox=auto" : e.src = "https://cdn.jsdelivr.net/npm/simple-icons@" + IconVer + "/icons/" + IconName + ".svg";
-
+        const $img = $(e);
+        const { IconName, IconVer, siteCDN } = { IconName: $img.data("name"), IconVer: $img.data("version"), siteCDN: Boolean($img.data("sitecdn")) };
+        (siteCDN === true) ? e.src = SimpleiconsUrl[1] + IconName + "?viewbox=auto" : e.src = UrlCDN[0] + "npm/simple-icons@" + IconVer + "/icons/" + IconName + ".svg";
     }).attr({ "height": "32", "loading": "lazy", "crossorigin": "anonymous" });
     $("img.UptimeRobotBadge").each((i, e) => {
-        const Key = $(e).data("key");
-        const Logo = $(e).data("logo");
-        const LogoColor = $(e).data("logocolor") || "";
-        const LogoSize = $(e).data("logosize") || "";
-        const LabelTxtPrefix = encodeURIComponent($(e).data("labeltxtprefix") || "");
-        const LabelColor = $(e).data("labelcolor") || "";
-        $(e).attr({
-            "src": "https://img.shields.io/uptimerobot/status/" + Key + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000", "alt": "UptimeRobot status", "loading": "lazy", "crossorigin": "anonymous"
+        const $img = $(e);
+        const { Key, Logo, LogoColor, LogoSize, LabelTxtPrefix, LabelColor } = { Key: $img.data("key"), Logo: $img.data("logo"), LogoColor: $img.data("logocolor") || "", LogoSize: $img.data("logosize") || "", LabelTxtPrefix: encodeURIComponent($img.data("labeltxtprefix") || ""), LabelColor: $img.data("labelcolor") || "" };
+        $img.attr({
+            "src": BadgesUrl[0] + "uptimerobot/status/" + Key + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000", "alt": "UptimeRobot status", "loading": "lazy", "crossorigin": "anonymous"
         }).on("error", function (e) {
-            $(this).attr("src", "https://badgen.infra.medigy.com/uptime-robot/status/" + Key + "?label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000")
+            $(this).attr("src", BadgesUrl[1] + "uptime-robot/status/" + Key + "?label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000")
         });
     });
-    $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": "https://cdn.jsdelivr.net/gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo", "crossorigin": "anonymous" }).height(32));
+    $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": UrlCDN[0] + "gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo", "crossorigin": "anonymous" }).height(32));
     $("div#churchCalendarToast > div.toast-body").addClass("p-0").append($("<iframe></iframe").attr("src", "https://www.crkvenikalendar.com/banner/0002.php").addClass("my-0 mx-auto overflow-hidden border-0").width(200).height("18.75vw")/*.height(360)*/);
     //$("div#churchCalendarToast > div.toast-body").addClass("p-2").append($("<iframe></iframe").attr("src", "https://pravoslavnikalendar.rs/kal/pra220.php").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" }));
     $("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr("src", "https://www.auti.hr/djevojkadana/img/" + moment().format("YYYY-MM/DD") + ".jpg").addClass("mx-auto d-block img-fluid rounded-lg"));
@@ -364,9 +336,9 @@ $(document).ready(() => {
     $("iframe[src*='blberza']").parent("div.card-body").slice(0, 2).addClass("bg-white rounded-bottom");
     //$("iframe[src*='blberza']").slice(2).width(200).height(110).addClass("overflow-hidden rounded-lg");
     $("iframe.steamWidget").each((i, e) => {
-        const GameID = $(e).data("gameid");
-        const Title = $(e).data("title") || null;
-        $(e).addClass("d-block mx-auto border-0 my-1").attr({ "src": "https://store.steampowered.com/widget/" + GameID + "/", "title": Title, "loading": "lazy" }).width(646).height(190).wrap($("<div></div>").addClass("col-auto"));
+        const $frame = $(e);
+        const {GameID, Title} = {GameID: $frame.data("gameid"), Title: $frame.data("title") || null};
+        $frame.addClass("d-block mx-auto border-0 my-1").attr({ "src": SteamUrl + "widget/" + GameID + "/", "title": Title, "loading": "lazy" }).width(646).height(190).wrap($("<div></div>").addClass("col-auto"));
     });
     /*$("div.col-auto").each((i, e) => {
         if (i % 2 === 0) {
@@ -466,6 +438,7 @@ $(document).ready(() => {
         $(e).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString(localeOptions.locale, localeOptions.options));
         $(e).filter("#CarService").find("time:eq(4)").text(new Date(2025, 4, 24, 14, 0).toLocaleString(localeOptions.locale, localeOptions.options));
         $(e).filter("#CarService").find("time:eq(5)").text(new Date(2025, 7, 6, 12, 4).toLocaleString(localeOptions.locale, localeOptions.options));
+        $(e).filter("#CarService").find("time:eq(6)").text(new Date(2026, 2, 3, 12, 15).toLocaleString(localeOptions.locale, localeOptions.options));
     }).attr({ "tabindex": "-1", "role": "dialog" });
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
@@ -525,18 +498,17 @@ $(document).ready(() => {
     });
     $("div#KickStatus > div.card-columns").addClass("container").css("column-count", "2");
     $("img.StreamBadge").each((i, e) => {
-        const Platform = $(e).data("platform");
-        const Username = $(e).data("username");
-        const Label = encodeURIComponent($(e).data("label"));
+        const $img = $(e);
+        const { Platform, Username, Label } = { Platform: $img.data("platform"), Username: $img.data("username"), Label: encodeURIComponent($img.data("label")) };
         switch (Platform) {
             case "Twitch":
-                const streamerNames = ["Bebahan", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "AngelMelly", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Danzie_Dee", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Matt500x", "brodie", "KIKI", "itsmissblondie", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "geenelly", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "BadmanOnline", "LexieMariex", "Syndicate", "angryginge13", "dannyaarons", "arthurtv", "elzthewitch", "Pernillamouritzen_", "BunnymonTV", "Lindsfry", "CHI_Kacee", "HailHeidi", "ItsCharlieVest", "Eveuh", "juliakins", "Chess", "BotezLive", "DinaBelenkaya", "AnnaCramling", "BasedCode", "CodeItLive", "LinusTech", "ScammerPayback", "playapexs", "Brawlhalla", "Call of Duty", "DCUniverseOnline", "Fortnite", "Halo", "MarvelRivals", "PlayOverwatch", "PUBG_BATTLEGROUNDS", "Rainbow6", "Warcraft", "Warframe", "WorldofTanks", "WorldofWarships", "ParadoxInteractive", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "Alinity", "alinitytv247", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "sashagrey", "PennyPaxParty", "AdrianaChechik_", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss"/*, "BuccataX"*/, "ChickenWing_Candy", "lauralux", "itsmiabrookes", "nufo", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "LilyLouOfficial", "CoCoNova", "StrawberryTabby", "MyAustinWhite", "Mishamai", "Hannesschan", "tristinmays_", "TrishaHershberger", "PulpFictionally", "Taylor_Jevaux", "JuliaBurch", "RachelKay", "AshleyNocera", "Bambib00", "athnessa", "Faith", "Ms_Tricky", "saweetheart", "SkyeBlanchette", "AriGameplays", "MerceGallardo", "thewildlatina", "VitaCelestine_", "DanielaAzuaje_", "LaurenAlexis_x", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "sophoulla", "kristinemaia", "Mellooow_", "GemmasTW", "thevalentinanappi", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "KDRkitten", "lucyya", "xXLauoaNXx", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "Mayichi", "noe9977", "perfilraro", "princesita1331", "SofiG", "samantra", "jasminaurora", "mira", "mira_irl", "miratv247", "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "MistieSage", "meowbuffy", "NataliaMav", "cobymj"];
+                const streamerNames = ["Bebahan", "Joshshep18", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "AngelMelly", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Danzie_Dee", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Matt500x", "brodie", "KIKI", "itsmissblondie", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "geenelly", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "BadmanOnline", "LexieMariex", "IainStirling", "Syndicate", "angryginge13", "dannyaarons", "arthurtv", "elzthewitch", "LucarioLN", "Pernillamouritzen_", "BunnymonTV", "Lindsfry", "CHI_Kacee", "HailHeidi", "ItsCharlieVest", "Eveuh", "juliakins", "Chess", "BotezLive", "DinaBelenkaya", "AnnaCramling", "BasedCode", "CodeItLive", "LinusTech", "ScammerPayback", "playapex", "Brawlhalla", "Call of Duty", "DCUniverseOnline", "Fortnite", "Halo", "MarvelRivals", "PlayOverwatch", "PUBG_BATTLEGROUNDS", "Rainbow6", "Trackmania", "Warcraft", "Warframe", "WorldofTanks", "WorldofWarships", "ParadoxInteractive", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "JennaLynnMeowri", "Alinity", "alinitytv247", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "sashagrey", "PennyPaxParty", "AdrianaChechik_", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss"/*, "BuccataX"*/, "ChickenWing_Candy", "lauralux", "itsmiabrookes", "NuFo", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "LilyLouOfficial", "CoCoNova", "StrawberryTabby", "MyAustinWhite", "Mishamai", "Hannesschan", "tristinmays_", "TrishaHershberger", "PulpFictionally", "taylorhws", "Taylor_Jevaux", "JuliaBurch", "whiptrax", "RachelKay", "AshleyNocera", "Bambib00", "athnessa", "iwasintheshower", "Faith", "Ms_Tricky", "saweetheart", "AnisaJomha", "SkyeBlanchette", "AriGameplays", "MerceGallardo", "thewildlatina", "VitaCelestine_", "DanielaAzuaje_", "LaurenAlexis_x", "blinkxasmr", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "QUINCY", "sophoulla", "kristinemaia", "Mellooow_", "GemmasTW", "ViaArthur", "thevalentinanappi", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "LolaaBrink", "KDRkitten", "lucyya", "xXLauoaNXx", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "Mayichi", "noe9977", "perfilraro", "princesita1331", "SofiG", "samantra", "JasminAurora", "Louisa_Khovanski", "mira", "mira_irl", "mirasjuicery"/*"miratv247"*/, "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "MistieSage", "meowbuffy", "NataliaMav", "cobymj"];
                 const selector = streamerNames.map(name => `[alt$='${name}']`).join(",");
-                $(e).attr({ "src": "https://img.shields.io/twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
-                $(e).filter(selector).after($("<snap></snap>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
+                $img.attr({ "src": BadgesUrl[0] + "twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+                $img.filter(selector).after($("<snap></snap>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
                 break;
             default:
-                $(e).attr({ "src": "https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fkick.com%2Fapi%2Fv1%2Fchannels%2F" + Username + "&query=%24.livestream.is_live&prefix=Live%3A%20&logo=kick&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=53fc19&color=red&cacheSeconds=60", "alt": "Kick Status for " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+                $img.attr({ "src": BadgesUrl[0] + "badge/dynamic/json?url=https%3A%2F%2Fkick.com%2Fapi%2Fv1%2Fchannels%2F" + Username + "&query=%24.livestream.is_live&prefix=Live%3A%20&logo=kick&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=53fc19&color=red&cacheSeconds=60", "alt": "Kick Status for " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
         }
     }).parents("ul").each((i) => {
         ($("ul:eq(" + i + ")").children("li").length > 7) ? $("ul:eq(" + i + ")").addClass("overflow-auto").height(200) : $("ul:eq(" + i + ")").removeClass("overflow-auto");
@@ -604,8 +576,8 @@ $(document).ready(() => {
 
             $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
         });
-        $(e).filter("#weatherforecast").append($("<a></a>").attr({ "href": "https://www.accuweather.com/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr-BA" }).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": false, "data-uid": "awtd1504180838200", "data-editlocation": true }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": "https://oap.accuweather.com/launch.js", "defer": "defer" }));
-        $(e).filter("#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": "https://www.livescore.bz/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": "https://www.livescore.bz/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo"));
+        $(e).filter("#weatherforecast").append($("<a></a>").attr({ "href": AccuweatherUrl[0] + "/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr-BA" }).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": false, "data-uid": "awtd1504180838200", "data-editlocation": true }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": AccuweatherUrl[1] + "/launch.js", "defer": "defer" }));
+        $(e).filter("#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": LivescoreUrl + "/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": LivescoreUrl + "/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo"));
         $(e).filter("#PriceChart").append($("<iframe></iframe>").attr({ "src": "https://www.blberza.com/Export/Issuer/IssuerChart.aspx?Code=TLKM-R-A", "loading": "eager" }).width(200).height(110).addClass("d-block mx-auto border-0 overflow-hidden rounded-lg"));
         $(e).filter("#PriceChartLastMonth").append($("<iframe></iframe>").attr({ "src": "https://www.blberza.com/Export/Issuer/IssuerChartLastMonth.aspx?Code=TLKM-R-A", "loading": "lazy" }).width(200).height(110).addClass("d-block mx-auto border-0 overflow-hidden rounded-lg"));
     });
@@ -657,8 +629,7 @@ $(document).ready(() => {
         $(e).attr({ "aria-controls": $(e).attr("href").replace("#", ""), "aria-expanded": false });
     });
     $("a.FujitsuLifeBookS751Driver").each((_, e) => {
-        const SoftwareID = $(e).data("softwareid");
-        const SoftwareName = $(e).data("softwarename");
+        const { SoftwareID, SoftwareName } = { SoftwareID: $(e).data("softwareid"), SoftwareName: $(e).data("softwarename") };
         $(e).attr({ "href": "https://support.ts.fujitsu.com/IndexDownload.asp?SoftwareGuid=" + SoftwareID, "hreflang": "en", "target": "_blank", "rel": "external" }).text(SoftwareName).addClass("list-group-item list-group-item-action");
     }).slice(0, 5).addClass("list-group-item-primary").add($("a.FujitsuLifeBookS751Driver").slice(5, 7)).filter(":not(.list-group-item-primary)").addClass("list-group-item-secondary");
     $("form#oldform").attr({ "action": $("select#dictionary-selector").val(), "method": "get", "name": "oldform", "target": "_blank" }).addClass("d-inline-block").css("margin", "46px 0 0 10px");
@@ -671,8 +642,7 @@ $(document).ready(() => {
     });
     $("input[type='url']").attr("inputmode", "url");
     $("table.table").each((i, e) => {
-        $(e).addClass("table-sm table-hover table-dark text-center mb-0").children("caption").css("caption-side", "top").addClass("py-2");
-        $(e).wrap($("<div></div>").addClass("table-responsive"));
+        $(e).addClass("table-sm table-hover table-dark text-center mb-0").children("caption").css("caption-side", "top").addClass("py-2").end().wrap($("<div></div>").addClass("table-responsive"));
         // $(e).find("td").has("br:eq(12)").addClass("align-middle");
         // $(e).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
         // $(e).find("th").has("br").siblings("th").addClass("align-middle");
@@ -686,6 +656,9 @@ $(document).ready(() => {
             $("th").eq(i).has("br").siblings("th").addClass("align-middle");
         }
     }); */
+    $("th").each((i) => {
+        ($("th").eq(i).find("img").length > 1) ? $("th").eq(i).has("br").siblings("th").addClass("align-middle") : null;
+    });
     $("td").each((i) => {
         ($("td").eq(i).find("img").length > 1) ? (/*$("td").eq(i).find("img").parent("a").not(":last").after("<br>"), */$("td").eq(i).find("img").parent("a").not(":last").after("<br>"), $("td").eq(i).has("br").siblings("td").not(":empty").addClass("align-middle")) : null;
     });
