@@ -261,24 +261,26 @@ $(document).ready(() => {
         (Logo != "") ? $img.attr("src", (index, src) => { return src + "&logoColor=white&logoSize=auto" }) : null;
     });
     $("img.ghActionsWorkflow").each((i, e) => {
-        const { Workflow, WorkflowLabel, Event } = { Workflow: ghImg.data("workflow"), WorkflowLabel: ghImg.data("workflowlabel"), Event: ghImg.data("event") || "" };
+        const $ghAW = $(e);
+        const { Workflow, WorkflowLabel, Event } = { Workflow: $ghAW.data("workflow"), WorkflowLabel: $ghAW.data("workflowlabel"), Event: $ghAW.data("event") || "" };
         $(e).attr({
             "src": BadgesUrl[0] + "github/actions/workflow/status/" + ghPackage + "/" + Workflow + ".yml?branch=" + ghBranch + "&event=" + Event + "&logo=githubactions&logoColor=white&logoSize=auto&label=GitHub%20Actions%20Workflow&labelColor=2088ff", "alt": "GitHub Actions Workflow - " + WorkflowLabel, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
     });
     $("img.ghChecks").each((i, e) => {
-        const JobName = ghImg.data("jobname") || "";
+        const JobName = $(e).data("jobname") || "";
         $(e).attr({ "src": BadgesUrl[0] + "github/check-runs/" + ghPackage + "/" + ghBranch + "?nameFilter=" + JobName + "&logo=github&logoColor=white&logoSize=auto&label=Checks%20" + JobName + "&labelColor=181717", "alt": "GitHub branch check runs", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
             $(this).attr("src", BadgesUrl[1] + "github/checks/" + ghPackage + "/" + ghBranch + "/" + JobName + "?icon=github&label=Checks%20" + JobName + "&labelColor=181717");
         });
     });
     $("img.ghCommitActivity").each((i, e) => {
-        const { Period, PeriodLabel } = { Period: ghImg.data("period"), PeriodLabel: ghImg.data("periodlabel") };
+        const $ghCA = $(e);
+        const { Period, PeriodLabel } = { Period: $ghCA.data("period"), PeriodLabel: $ghCA.data("periodlabel") };
         $(e).attr({ "src": BadgesUrl[0] + "github/commit-activity/" + Period + "/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Commit Activity " + PeriodLabel, "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto");
         (Period == "t") ? $(e).on("error", function () { $(this).attr("src", BadgesUrl[1] + "github/commits/" + ghPackage + "?icon=github&labelColor=181717"); }) : null;
     });
     $("img.ghIssues").each((i, e) => {
-        const state = Boolean(ghImg.data("issueopen"));
+        const state = Boolean($(e).data("issueopen"));
         (state === true) ? $(e).attr({ "src": BadgesUrl[0] + "github/issues/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&label=Issues%20Open&labelColor=181717", "alt": "GitHub Issues Open", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () { $(this).attr("src", BadgesUrl[1] + "github/open-issues/" + ghPackage + "?icon=github&label=Issues%20Open&labelColor=181717"); }).wrap($("<a></a>").attr({ "src": GitHubUrl + ghPackage + "/issues", "hreflang": "en", "target": "_blank", "rel": "external" })) : $(e).attr({ "href": BadgesUrl[0] + "github/issues-closed/" + ghPackage + "?logo=github&logoColor=white&logoSize=auto&label=Issues%20Closed&labelColor=181717", "alt": "GitHub Issues Closed", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () { $(this).attr("src", BadgesUrl[1] + "github/closed-issues/" + ghPackage + "?icon=github&label=Issues%20Closed&labelColor=181717") }).wrap($("<a></a>").attr({ "href": GitHubUrl + ghPackage + "/issues?q=is%3Aissue%20state%3Aclosed", "hreflang": "en", "target": "_blank", "rel": "external" }));
     });
     $("img.ghLastCommit").each((i, e) => {
@@ -336,18 +338,17 @@ $(document).ready(() => {
     $("iframe[src*='blberza']").parent("div.card-body").slice(0, 2).addClass("bg-white rounded-bottom");
     //$("iframe[src*='blberza']").slice(2).width(200).height(110).addClass("overflow-hidden rounded-lg");
     $("iframe.steamWidget").each((i, e) => {
-        const $frame = $(e);
-        const { GameID, Title } = { GameID: $frame.data("gameid"), Title: $frame.data("title") || null };
-        $frame.addClass("d-block mx-auto border-0 my-1").attr({ "src": SteamUrl + "widget/" + GameID + "/", "title": Title, "loading": "lazy" }).width(646).height(190).wrap($("<div></div>").addClass("col-auto"));
-    });
+        const GameID = $(e).data("gameid");
+        $(e).addClass("border-0 my-1").attr({ "src": SteamUrl + "widget/" + GameID + "/", "loading": "lazy" }).width(646).height(190);
+    }).wrapAll($("<div></div>").addClass("d-flex flex-wrap justify-content-around"));
     /*$("div.col-auto").each((i, e) => {
         if (i % 2 === 0) {
             $(e).next("div.col-auto").addBack().wrapAll($("<div></div>").addClass("row"));
         }
     });*/
-    $("div.col-auto:even").each((i, e) => {
+    /*$("div.col-auto:even").each((i, e) => {
         $(e).next("div.col-auto").addBack().wrapAll($("<div></div>").addClass("row"));
-    });
+    });*/
     $("div.carousel").addClass("carousel-fade").carousel({
         interval: 3000,
         keyboard: false,
@@ -502,7 +503,7 @@ $(document).ready(() => {
         const { Platform, Username, Label } = { Platform: $img.data("platform"), Username: $img.data("username"), Label: encodeURIComponent($img.data("label")) };
         switch (Platform) {
             case "Twitch":
-                const streamerNames = ["Bebahan", "Joshshep18", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "AngelMelly", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Danzie_Dee", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Matt500x", "brodie", "KIKI", "itsmissblondie", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "geenelly", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "BadmanOnline", "LexieMariex", "IainStirling", "Syndicate", "angryginge13", "dannyaarons", "arthurtv", "elzthewitch", "LucarioLN", "Pernillamouritzen_", "BunnymonTV", "Lindsfry", "CHI_Kacee", "HailHeidi", "ItsCharlieVest", "Eveuh", "juliakins", "Chess", "BotezLive", "DinaBelenkaya", "AnnaCramling", "BasedCode", "CodeItLive", "LinusTech", "ScammerPayback", "playapex", "Brawlhalla", "Call of Duty", "DCUniverseOnline", "Fortnite", "Halo", "MarvelRivals", "PlayOverwatch", "PUBG_BATTLEGROUNDS", "Rainbow6", "Trackmania", "Warcraft", "Warframe", "WorldofTanks", "WorldofWarships", "ParadoxInteractive", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "JennaLynnMeowri", "Alinity", "alinitytv247", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "sashagrey", "PennyPaxParty", "AdrianaChechik_", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss"/*, "BuccataX"*/, "ChickenWing_Candy", "lauralux", "itsmiabrookes", "NuFo", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "LilyLouOfficial", "CoCoNova", "StrawberryTabby", "MyAustinWhite", "Mishamai", "Hannesschan", "tristinmays_", "TrishaHershberger", "PulpFictionally", "taylorhws", "Taylor_Jevaux", "JuliaBurch", "whiptrax", "RachelKay", "AshleyNocera", "Bambib00", "athnessa", "iwasintheshower", "Faith", "Ms_Tricky", "saweetheart", "AnisaJomha", "SkyeBlanchette", "AriGameplays", "MerceGallardo", "thewildlatina", "VitaCelestine_", "DanielaAzuaje_", "LaurenAlexis_x", "blinkxasmr", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "QUINCY", "sophoulla", "kristinemaia", "Mellooow_", "GemmasTW", "ViaArthur", "thevalentinanappi", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "LolaaBrink", "KDRkitten", "lucyya", "xXLauoaNXx", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "Mayichi", "noe9977", "perfilraro", "princesita1331", "SofiG", "samantra", "JasminAurora", "Louisa_Khovanski", "mira", "mira_irl", "mirasjuicery"/*"miratv247"*/, "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "MistieSage", "meowbuffy", "NataliaMav", "cobymj"];
+                const streamerNames = ["Bebahan", "Joshshep18", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "AngelMelly", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Danzie_Dee", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Matt500x", "brodie", "KIKI", "itsmissblondie", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "geenelly", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "BadmanOnline", "LexieMariex", "IainStirling", "Syndicate", "angryginge13", "dannyaarons", "arthurtv", "elzthewitch", "LucarioLN", "Pernillamouritzen_", "BunnymonTV", "Lindsfry", "CHI_Kacee", "HailHeidi", "ItsCharlieVest", "Eveuh", "juliakins", "Chess", "BotezLive", "DinaBelenkaya", "AnnaCramling", "BasedCode", "CodeItLive", "LinusTech", "ScammerPayback", "playapex", "Brawlhalla", "Call of Duty", "DCUniverseOnline", "Fortnite", "Halo", "MarvelRivals", "PlayOverwatch", "PUBG_BATTLEGROUNDS", "Rainbow6", "Trackmania", "Warcraft", "Warframe", "WorldofTanks", "WorldofWarships", "ParadoxInteractive", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "JennaLynnMeowri", "Alinity", "alinitytv247", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "sashagrey", "PennyPaxParty", "AdrianaChechik_", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss"/*, "BuccataX"*/, "ChickenWing_Candy", "lauralux", "itsmiabrookes", "NuFo", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "LilyLouOfficial", "CoCoNova", "StrawberryTabby", "MyAustinWhite", "Mishamai", "Hannesschan", "tristinmays_", "TrishaHershberger", "PulpFictionally", "TaraBabcock", "taylorhws", "Taylor_Jevaux", "JuliaBurch", "whiptrax", "RachelKay", "AshleyNocera", "Bambib00", "athnessa", "iwasintheshower", "Faith", "Ms_Tricky", "saweetheart", "AnisaJomha", "SkyeBlanchette", "AriGameplays", "MerceGallardo", "thewildlatina", "VitaCelestine_", "DanielaAzuaje_", "LaurenAlexis_x", "blinkxasmr", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "QUINCY", "sophoulla", "kristinemaia", "Mellooow_", "GemmasTW", "ViaArthur", "thevalentinanappi", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "LolaaBrink", "KDRkitten", "lucyya"/*, "xXLauoaNXx"*/, "NeylaaRose", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "Mayichi", "noe9977", "perfilraro", "princesita1331", "SofiG", "samantra", "JasminAurora", "Louisa_Khovanski", "mira", "mira_irl", "mirasjuicery"/*"miratv247"*/, "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "MistieSage", "meowbuffy", "NataliaMav", "cobymj"];
                 const selector = streamerNames.map(name => `[alt$='${name}']`).join(",");
                 $img.attr({ "src": BadgesUrl[0] + "twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
                 $img.filter(selector).after($("<snap></snap>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
