@@ -66,7 +66,9 @@ function playKickStreamer() {
 
 $(document).ready(() => {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
-
+    import { UrlCDN, BadgesUrl } from "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_main.min.js";
+    // import UrlCDN from 'https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_main.min.js';
+    // import BadgesUrl from 'https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_main.min.js';
     const divInputGroup = $("div.input-group");
     const ghImg = $("img[class^='gh']");
     const { ghPackage, ghBranch, ghNumber } = { ghPackage: ghImg.data("package"), ghBranch: ghImg.data("branch") || "main", ghNumber: ghImg.data("number") };
@@ -77,8 +79,8 @@ $(document).ready(() => {
     const WikimediaUrl = ["https://meta.wikimedia.org/", "https://upload.wikimedia.org/"];
     const SimpleiconsUrl = ["https://simpleicons.org/", "https://cdn.simpleicons.org/"];
     const GitHubUrl = "https://github.com/";
-    const UrlCDN = ["https://cdn.jsdelivr.net/", "https://cdnjs.cloudflare.com/"];
-    const BadgesUrl = ["https://img.shields.io/", "https://badgen.net/"];
+    //const UrlCDN = ["https://cdn.jsdelivr.net/", "https://cdnjs.cloudflare.com/"];
+    //const BadgesUrl = ["https://img.shields.io/", "https://badgen.net/"];
     const SteamUrl = "https://store.steampowered.com/";
     const OxfordDictionaryVersion = "2.3.76";
     /* function onSubmit(token) {
@@ -91,7 +93,8 @@ $(document).ready(() => {
         $(e).append($("<style></style>").text("#dictionarySelector160:hover {  background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/lang-hover.png?version=" + OxfordDictionaryVersion + ") !no-repeat; }\n#search-btn160:hover { background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/search-hover.png?version=" + OxfordDictionaryVersion + ") !important; }\n#search-btn160:active { background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/search-active.png?version=" + OxfordDictionaryVersion + ") !important;}"));
     });
     $("script#skin").text("var fm_inf_1 = 'Arial';");
-    $("script[src*='vicevi']").parent("div.toast-body").addClass("p-2 text-body");
+    $("script[src*='vicevi']").parent("div").addClass("p-2 text-body");
+    $("script[src*='mojtv']").slice(1).siblings("div").addClass("mx-2 my-3 px-1")
     $("div.accordion").delay("slow").fadeIn().addClass("mt-3");
 
     /*$("#loginModal").show(1).addClass("bg-secondary").modal({
@@ -330,7 +333,7 @@ $(document).ready(() => {
     });
     $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": UrlCDN[0] + "gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo", "crossorigin": "anonymous" }).height(32));
     $("iframe[src*='naslovi']").attr("loading", "lazy").height(915).addClass("d-block mx-auto border-0 w-100").parent("div.modal-body").addClass("p-0");
-    $("iframe[src*='crkvenikalendar']").attr("loading", "eager").addClass("my-0 mx-auto overflow-hidden border-0").width(200)/*.height(360)*/.height("36.1vh").parent("div.toast-body").addClass("p-0");
+    $("iframe[src*='crkvenikalendar']").attr("loading", "eager").addClass("my-0 mx-auto overflow-hidden border-0").width(200)/*.height(360)*/.height("36.1vh").parent("div").addClass("p-0");
     $("iframe[src*='pravoslavnikalendar']").attr("loading", "eager").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" }).parent("div.toast-body").addClass("p-2");
     $("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr({ "src": "https://www.auti.hr/djevojkadana/img/" + moment().format("YYYY-MM/DD") + ".jpg", "loading": "eager" }).addClass("mx-auto d-block img-fluid rounded-lg"));
     $("iframe").not("[src*='naslovi'],.steamWidget").addClass("d-block mx-auto border-0").attr("loading", "lazy");
@@ -517,7 +520,6 @@ $(document).ready(() => {
     //$("div[id^='Twitch']").addClass("collapse width");
     $("div.card-columns").parent("div.card-body").addClass("p-3");
     //$("div.card-columns").find("div.card-body").slice(12, 14).addClass("bg-white");
-    $("div.card-body > div.mojtvprogram").addClass("mx-2 my-3 px-1");
     $("h6.card-subtitle").addClass("mb-1 text-muted ubuntu-bold-italic");
     $("div.card-footer").addClass("border-top border-secondary text-muted text-right");
     $("div#aw-ad-container").remove();
@@ -631,7 +633,8 @@ $(document).ready(() => {
         const { SoftwareID, SoftwareName } = { SoftwareID: $(e).data("softwareid"), SoftwareName: $(e).data("softwarename") };
         $(e).attr({ "href": "https://support.ts.fujitsu.com/IndexDownload.asp?SoftwareGuid=" + SoftwareID, "hreflang": "en", "target": "_blank", "rel": "external" }).text(SoftwareName).addClass("list-group-item list-group-item-action");
     }).slice(0, 5).addClass("list-group-item-primary").add($("a.FujitsuLifeBookS751Driver").slice(5, 7)).filter(":not(.list-group-item-primary)").addClass("list-group-item-secondary");
-    $("form#oldform").attr({ "action": $("select#dictionary-selector").val(), "method": "get", "name": "oldform", "target": "_blank" }).addClass("d-inline-block").css("margin", "46px 0 0 10px");
+    $("form[action*='cambridge']").attr({ "method": "get", "target": "_blank" }).addClass("mx-auto px-3 py-1").children("table").addClass("mx-auto py-2").css({ "font-family": "Arial,Helvetica,sans-serif", "font-size": "10px", "background": "#1d2a57", "border-collapse": "collapse", "border-spacing": "0", "background-image": "linear-gradient(to right, #0f193d,#2c2f62,#1a2753)", "margin-top": "7px", "margin-bottom": "7px" }).width(150);
+    $("form#oldform").attr({ "action": $("select#dictionary-selector").val(), "method": "get", "name": "oldform", "target": "_blank" }).addClass("d-inline-block").css("margin", "46px 0 0 10px").parent("div").addClass("d-block mx-auto").css({ "border-color": "#000", "border-width": "1px", "background": "url('https://www.oxfordlearnersdictionaries.com/external/images/widget_old/widget160.png?version=" + OxfordDictionaryVersion + "')no-repeat" }).width(160).height(80).end().children("div#dictionarySelector160").addClass("float-left p-0").css({ "overflow-x": "hidden", "margin-top": "1px" }).width(23).height(24).siblings("div").addClass("float-left").height(25);
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
     $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
     $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
