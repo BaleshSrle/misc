@@ -4,8 +4,7 @@ console.info("Skripta za web sajt je pokrenuta.");
 
 jQuery(($) => {
     const urlCDN = ["https://cdn.jsdelivr.net/", "https://cdn.simpleicons.org/"];
-    // const BadgesUrl = ["https://img.shields.io/", "https://badgen.net/"];
-    import { BadgesUrl } from "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_main.min.js";
+    const BadgesUrl = ["https://img.shields.io/", "https://badgen.net/"];
     const GitHubUrl = "https://raw.githubusercontent.com/";
     $.getScript("https://keepandroidopen.org/banner.js?size=mini&id=KAOalert&hidebutton=off");
     switch (location.pathname) {

@@ -66,9 +66,6 @@ function playKickStreamer() {
 
 $(document).ready(() => {
     console.info("Skripta za kontolnu tablu je pokrenuta.");
-    import { UrlCDN, BadgesUrl } from "https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_main.min.js";
-    // import UrlCDN from 'https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_main.min.js';
-    // import BadgesUrl from 'https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_main.min.js';
     const divInputGroup = $("div.input-group");
     const ghImg = $("img[class^='gh']");
     const { ghPackage, ghBranch, ghNumber } = { ghPackage: ghImg.data("package"), ghBranch: ghImg.data("branch") || "main", ghNumber: ghImg.data("number") };
@@ -79,8 +76,8 @@ $(document).ready(() => {
     const WikimediaUrl = ["https://meta.wikimedia.org/", "https://upload.wikimedia.org/"];
     const SimpleiconsUrl = ["https://simpleicons.org/", "https://cdn.simpleicons.org/"];
     const GitHubUrl = "https://github.com/";
-    //const UrlCDN = ["https://cdn.jsdelivr.net/", "https://cdnjs.cloudflare.com/"];
-    //const BadgesUrl = ["https://img.shields.io/", "https://badgen.net/"];
+    const UrlCDN = ["https://cdn.jsdelivr.net/", "https://cdnjs.cloudflare.com/"];
+    const BadgesUrl = ["https://img.shields.io/", "https://badgen.net/"];
     const SteamUrl = "https://store.steampowered.com/";
     const OxfordDictionaryVersion = "2.3.76";
     /* function onSubmit(token) {
