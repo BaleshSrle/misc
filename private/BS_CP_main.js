@@ -78,16 +78,17 @@ $(document).ready(() => {
     const GitHubUrl = "https://github.com/";
     const UrlCDN = ["https://cdn.jsdelivr.net/", "https://cdnjs.cloudflare.com/"];
     const BadgesUrl = ["https://img.shields.io/", "https://badgen.net/"];
+    const AutiHrUrl = "https://www.auti.hr/djevojkadana/";
     const SteamUrl = "https://store.steampowered.com/";
-    const OxfordDictionaryVersion = "2.3.76";
+    const OxfordDictionary = { url: "https://www.oxfordlearnersdictionaries.com/external/images/widget_old", version: "2.3.76" };
     /* function onSubmit(token) {
         document.querySelector("form#loginForm").submit();
     }*/
     $("head").each((i, e) => {
         $(e).prepend($("<meta>").attr({ "http-equiv": "refresh", "content": "1800" }));
-        $(e).append($("<link>").attr({ "rel": "dns-prefetch", "href": TwitchUrl[0] }), $("<link>").attr({ "rel": "dns-prefetch", "href": TwitchUrl[1] }), $("<link>").attr({ "rel": "dns-prefetch", "href": WikimediaUrl[0] }), $("<link>").attr({ "rel": "preconnect", "href": "https://www.auti.hr/djevojkadana/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": "https://mojtv.hr/tv-navigator/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": TwitchUrl[1], "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": WikimediaUrl[1], "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "canonical", "href": SimpleiconsUrl[0] }), $("<link>").attr({ "rel": "canonical", "href": "https://cybermap.kaspersky.com/en/widget" }), $("<link>").attr({ "rel": "canonical", "href": AccuweatherUrl[0] + "/sr/ba/doboj/35305/current-weather/35305" }), $("<link>").attr({ "rel": "canonical", "href": LivescoreUrl + "/sr-rs/" }), $("<link>").attr({ "rel": "canonical", "href": "https://naslovi.net/tehnologija/" }), $("<link>").attr({ "rel": "canonical", "href": SteamUrl }), $("<link>").attr({ "rel": "canonical", "href": TwitchUrl[2] }));
+        $(e).append($("<link>").attr({ "rel": "dns-prefetch", "href": TwitchUrl[0] }), $("<link>").attr({ "rel": "dns-prefetch", "href": TwitchUrl[1] }), $("<link>").attr({ "rel": "dns-prefetch", "href": WikimediaUrl[0] }), $("<link>").attr({ "rel": "preconnect", "href": AutiHrUrl, "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": "https://mojtv.hr/tv-navigator/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": TwitchUrl[1], "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "preconnect", "href": WikimediaUrl[1], "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "canonical", "href": SimpleiconsUrl[0] }), $("<link>").attr({ "rel": "canonical", "href": "https://cybermap.kaspersky.com/en/widget" }), $("<link>").attr({ "rel": "canonical", "href": AccuweatherUrl[0] + "/sr/ba/doboj/35305/current-weather/35305" }), $("<link>").attr({ "rel": "canonical", "href": LivescoreUrl + "/sr-rs/" }), $("<link>").attr({ "rel": "canonical", "href": "https://naslovi.net/tehnologija/" }), $("<link>").attr({ "rel": "canonical", "href": SteamUrl }), $("<link>").attr({ "rel": "canonical", "href": TwitchUrl[2] }));
         $(e).append($("<link>").attr({ "rel": "stylesheet", "href": UrlCDN[0] + "npm/flag-icons/css/flag-icons.min.css", "crossorigin": "anonymous" }).on("error", function () { this.href = UrlCDN[1] + "ajax/libs/flag-icons/7.5.0/css/flag-icons.min.css" }), /*$.getScript("https://oap.accuweather.com/launch.js"), */$.getScript("https://widget.iqair.com/script/widget_v3.0.js")/*, $.getScript("https://www.google.com/recaptcha/api.js")*/);
-        $(e).append($("<style></style>").text("#dictionarySelector160:hover {  background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/lang-hover.png?version=" + OxfordDictionaryVersion + ") !no-repeat; }\n#search-btn160:hover { background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/search-hover.png?version=" + OxfordDictionaryVersion + ") !important; }\n#search-btn160:active { background: url(https://www.oxfordlearnersdictionaries.com/external/images/widget_old/search-active.png?version=" + OxfordDictionaryVersion + ") !important;}"));
+        $(e).append($("<style></style>").text("#dictionarySelector160:hover {  background: url(" + OxfordDictionary.url + "/lang-hover.png?version=" + OxfordDictionary.version + ") !no-repeat; }\n#search-btn160:hover { background: url(" + OxfordDictionary.url + "/search-hover.png?version=" + OxfordDictionary.version + ") !important; }\n#search-btn160:active { background: url(" + OxfordDictionary.url + "/search-active.png?version=" + OxfordDictionary.version + ") !important;}"));
     });
     $("script#skin").text("var fm_inf_1 = 'Arial';");
     $("script[src*='vicevi']").parent("div").addClass("p-2 text-body");
@@ -246,10 +247,10 @@ $(document).ready(() => {
                 break;
             default:
                 $img.attr({
-                    "src": BadgesUrl[0] + "visual-studio-marketplace/v/" + ExtensionId + "?label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc", "loading": "lazy", "crossorigin": "anonymous"
-                }).on("error", function () {
-                    $(this).attr("src", BadgesUrl[1] + "visual-studio-marketplace/v/" + ExtensionId + "?icon=visualstudio&label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc");
-                }).wrap($("<a></a>").attr({ "href": "https://marketplace.visualstudio.com/items?itemName=" + ExtensionId, "hreflang": "en", "target": "_blank", "rel": "external" }));
+                    "src": BadgesUrl[1] + "visual-studio-marketplace/v/" + ExtensionId + "?icon=visualstudio&label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc", "loading": "lazy", "crossorigin": "anonymous"
+                })/*.on("error", function () {
+                    $(this).attr("src", BadgesUrl[0] + "visual-studio-marketplace/v/" + ExtensionId + "?label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc");
+                })*/.wrap($("<a></a>").attr({ "href": "https://marketplace.visualstudio.com/items?itemName=" + ExtensionId, "hreflang": "en", "target": "_blank", "rel": "external" }));
         }
     });
     $("img.EOLBadge").each((i, e) => {
@@ -289,7 +290,17 @@ $(document).ready(() => {
             $(this).attr("src", BadgesUrl[1] + "github/last-commit/" + ghPackage + "?icon=github&labelColor=181717");
         });
     });
-    $("img.ghPRDetail").each((i, e) => {
+    $("img.ghPR").each((i, e) => {
+        const $img = $(e);
+        const { Status, Package, Number } = { Status: Boolean($img.data("status")), Package: $img.data("package"), Number: $img.data("number") };
+        $img.attr({ "loading": "lazy", "crossorigin": "anonymous" });
+        (Status == true) ? $img.attr({
+            "src": BadgesUrl[0] + "github/status/s/pulls/" + Package + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Status%20%23" + Number + "&labelColor=181717", "alt": "GitHub PR Status #" + Number
+        }) : $img.attr({
+            "src": BadgesUrl[0] + "github/pulls/detail/state/" + Package + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Detail%20for%20%23" + Number + "&labelColor=181717", "alt": "GitHub PR Detail #" + Number
+        });
+    });
+    /* $("img.ghPRDetail").each((i, e) => {
         $(e).attr({
             "src": BadgesUrl[0] + "github/pulls/detail/state/" + ghPackage + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Detail%20for%20%23" + ghNumber + "&labelColor=181717", "alt": "GitHub PR Detail #" + ghNumber, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
@@ -298,7 +309,7 @@ $(document).ready(() => {
         $(e).attr({
             "src": BadgesUrl[0] + "github/status/s/pulls/" + ghPackage + "/" + ghNumber + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Status%20%23" + ghNumber + "&labelColor=181717", "alt": "GitHub PR Status #" + ghNumber, "loading": "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
-    });
+    }); */
     $("img.giteaBadge").each((i, e) => {
         const $img = $(e);
         const { Package, URL, Sort, DisplayName, DateOrder, Logo, LogoColor, LogoSize, Label, Color } = { Package: $img.data("package"), URL: encodeURIComponent($img.data("url")), Sort: $img.data("sort"), DisplayName: $img.data("dispname"), DateOrder: $img.data("dateorder"), Logo: $img.data("logo") || "gitea", LogoColor: $img.data("logocolor") || "white", LogoSize: $img.data("logosize") || "", Label: encodeURIComponent($img.data("label")), Color: $img.data("color") || "blue" };
@@ -332,7 +343,7 @@ $(document).ready(() => {
     $("iframe[src*='naslovi']").attr("loading", "lazy").height(915).addClass("d-block mx-auto border-0 w-100").parent("div.modal-body").addClass("p-0");
     $("iframe[src*='crkvenikalendar']").attr("loading", "eager").addClass("my-0 mx-auto overflow-hidden border-0").width(200)/*.height(360)*/.height("36.1vh").parent("div").addClass("p-0");
     $("iframe[src*='pravoslavnikalendar']").attr("loading", "eager").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" }).parent("div.toast-body").addClass("p-2");
-    $("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr({ "src": "https://www.auti.hr/djevojkadana/img/" + moment().format("YYYY-MM/DD") + ".jpg", "loading": "eager" }).addClass("mx-auto d-block img-fluid rounded-lg"));
+    $("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr({ "src": AutiHrUrl + "img/" + moment().format("YYYY-MM/DD") + ".jpg", "loading": "eager" }).addClass("mx-auto d-block img-fluid rounded-lg"));
     $("iframe").not("[src*='naslovi'],.steamWidget").addClass("d-block mx-auto border-0").attr("loading", "lazy");
     $("[src*='fibacarousel']").attr({ "src": function (index, src) { return src + '&amp;lng=en' }, "height": "263" }).addClass("w-100 overflow-hidden");
     //$("iframe[src*='blberza']").slice(0, 2).addClass("rounded-bottom");
@@ -631,7 +642,7 @@ $(document).ready(() => {
         $(e).attr({ "href": "https://support.ts.fujitsu.com/IndexDownload.asp?SoftwareGuid=" + SoftwareID, "hreflang": "en", "target": "_blank", "rel": "external" }).text(SoftwareName).addClass("list-group-item list-group-item-action");
     }).slice(0, 5).addClass("list-group-item-primary").add($("a.FujitsuLifeBookS751Driver").slice(5, 7)).filter(":not(.list-group-item-primary)").addClass("list-group-item-secondary");
     $("form[action*='cambridge']").attr({ "method": "get", "target": "_blank" }).addClass("mx-auto px-3 py-1").children("table").addClass("mx-auto py-2").css({ "font-family": "Arial,Helvetica,sans-serif", "font-size": "10px", "background": "#1d2a57", "border-collapse": "collapse", "border-spacing": "0", "background-image": "linear-gradient(to right, #0f193d,#2c2f62,#1a2753)", "margin-top": "7px", "margin-bottom": "7px" }).width(150);
-    $("form#oldform").attr({ "action": $("select#dictionary-selector").val(), "method": "get", "name": "oldform", "target": "_blank" }).addClass("d-inline-block").css("margin", "46px 0 0 10px").parent("div").addClass("d-block mx-auto").css({ "border-color": "#000", "border-width": "1px", "background": "url('https://www.oxfordlearnersdictionaries.com/external/images/widget_old/widget160.png?version=" + OxfordDictionaryVersion + "')no-repeat" }).width(160).height(80).end().children("div#dictionarySelector160").addClass("float-left p-0").css({ "overflow-x": "hidden", "margin-top": "1px" }).width(23).height(24).siblings("div").addClass("float-left").height(25);
+    $("form#oldform").attr({ "action": $("select#dictionary-selector").val(), "method": "get", "name": "oldform", "target": "_blank" }).addClass("d-inline-block").css("margin", "46px 0 0 10px").parent("div").addClass("d-block mx-auto").css({ "border-color": "#000", "border-width": "1px", "background": "url('" + OxfordDictionary.url + "/widget160.png?version=" + OxfordDictionary.version + "')no-repeat" }).width(160).height(80).end().children("div#dictionarySelector160").addClass("float-left p-0").css({ "overflow-x": "hidden", "margin-top": "1px" }).width(23).height(24).siblings("div").addClass("float-left").height(25);
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
     $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
     $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
