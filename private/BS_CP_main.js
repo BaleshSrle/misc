@@ -341,7 +341,7 @@ $(document).ready(() => {
     });
     $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": UrlCDN[0] + "gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo", "crossorigin": "anonymous" }).height(32));
     $("iframe[src*='naslovi']").attr("loading", "lazy").height(915).addClass("d-block mx-auto border-0 w-100").parent("div.modal-body").addClass("p-0");
-    $("iframe[src*='crkvenikalendar']").attr("loading", "eager").addClass("my-0 mx-auto overflow-hidden border-0").width(200)/*.height(360)*/.height("36.1vh").parent("div").addClass("p-0");
+    $("iframe[src*='crkvenikalendar']").attr("loading", "eager").addClass("my-0 mx-auto overflow-hidden border-0").width(200)/*.height(360).height("36.1vh")*/.parent("div").addClass("p-0");
     $("iframe[src*='pravoslavnikalendar']").attr("loading", "eager").addClass("m-0 overflow-hidden border-0 w-100").css({ "min-height": "54px", "max-height": "102px" }).parent("div.toast-body").addClass("p-2");
     $("div#DjevojkadanaAutiHRToast > div.toast-body").addClass("p-2").append($("<img>").attr({ "src": AutiHrUrl + "img/" + moment().format("YYYY-MM/DD") + ".jpg", "loading": "eager" }).addClass("mx-auto d-block img-fluid rounded-lg"));
     $("iframe").not("[src*='naslovi'],.steamWidget").addClass("d-block mx-auto border-0").attr("loading", "lazy");
