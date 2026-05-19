@@ -14,3 +14,9 @@ Miscellaneous projects on which I'm working on.
 ## Banner
 This project is displaying winter holiday banner or common banner on a web-site, depending on current date.
 This project is created using ![Bootstrap Badge](https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&color=7952b3) & ![jQuery Badge](https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&color=0769ad) via ![jsDelivr](https://img.shields.io/badge/jsDelivr-e84d3d?logo=jsdelivr&logoColor=white&labelColor=555555) CDN (with [cdnjs](https://cdnjs.com) as failsafe) & incorporates ![Moment.js Badge](https://img.shields.io/github/v/tag/moment/moment?filter=2.*&label=Moment.js&color=61b2a7).
+
+---
+
+## BashScripts
+These ![GNU Bash Badge](https://img.shields.io/badge/Bash-4eaa25?logo=gnubash&logoColor=white) scipts are created to help / assist the user while they are using the ![Linux Mint Badge](https://img.shields.io/badge/Linux%20Mint-Xfce%2022.3%2064--bit-86be43?logo=linuxmint&logoColor=white&logoSize=auto).
+Also, you could modify some of these scripts and apply them on other distros that are based on ![Debian Badge](https://img.shields.io/badge/Debian-a81d33?logo=debian) or ![Ubuntu Badge](https://img.shields.io/badge/Ubuntu-e95420?logo=ubuntu&logoColor=white&logoSize=auto) .
