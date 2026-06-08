@@ -69,7 +69,7 @@ $(document).ready(() => {
     const divInputGroup = $("div.input-group");
     const localeOptions = { locale: "sr-Latn-BA", options: { dateStyle: "full", timeStyle: "short" } };
     const Url_CP = { Twitch: ["https://api.twitch.tv/", "https://passport.twitch.tv/", "https://www.twitch.tv/"], Accuweather: ["https://www.accuweather.com", "https://oap.accuweather.com"], Livescore: "https://www.livescore.bz", Wikimedia: ["https://meta.wikimedia.org/", "https://upload.wikimedia.org/"], Simpleicons: ["https://simpleicons.org/", "https://cdn.simpleicons.org/"], jsDelivr: ["https://www.jsdelivr.com/", "https://data.jsdelivr.com/"], AutiHrDjevojka: "https://www.auti.hr/djevojkadana/", Steam: "https://store.steampowered.com/" };
-    const OxfordDictionary = { url: "https://www.oxfordlearnersdictionaries.com/external/images/widget_old", version: "2.3.76" };
+    const OxfordDictionary = { url: "https://www.oxfordlearnersdictionaries.com/external/images/widget_old", version: "2.3.77" };
     /* function onSubmit(token) {
         document.querySelector("form#loginForm").submit();
     }*/
@@ -143,7 +143,8 @@ $(document).ready(() => {
         });*/
         $(this).filter("#index,#links,#blse,#tvguide2").attr("data-parent", "#" + $("div.accordion").attr("id")).siblings("div.card-header").addClass("py-2 border-bottom border-secondary");
         //$(this).filter("#index,#links,#blse,#tvguide2").siblings("div.card-header").addClass("py-2 border-bottom border-secondary");
-        $(this).filter(".navbar-collapse").attr("id", $("button.navbar-toggler").attr("data-target").replace("#", ""));
+        // $(this).filter(".navbar-collapse").attr("id", $("button.navbar-toggler").attr("data-target").replace("#", ""));
+        $(this).filter(".navbar-collapse").attr("id", "navbarCollapse");
     });
     /* $("div#collapseTwitchStatus.collapse").collapse({
         parent: "#AccordionTwitchStatus",
@@ -154,6 +155,7 @@ $(document).ready(() => {
     }).addClass("btn btn-primary mb-2 mr-sm-2").attr("type", "button").text("Primjeni");
     $("button#loadRadioStation").on("click", (event) => window.open($("#RadioStation").val())).addClass("btn btn-info").attr("type", "button").append($("<i></i>").addClass("bi bi-broadcast"));
     $("button#loadTvStation").on("click", (event) => window.open($("#TvStation").val())).addClass("btn btn-info").attr("type", "button").append($("<i></i>").addClass("bi bi-tv"));
+    $("button.navbar-toggler").attr({ "type": "button", "data-toggle": "collapse", "data-target": "#" + $("div.navbar-collapse").attr("id"), "aria-expanded": false, "aria-label": "Toggle navigation" }).wrapInner($("<span></span>").addClass("navbar-toggler-icon"));
     /* $("select#TwitchUsername").on("click", function () {
         const TwitchUsername = $("select#TwitchUsername").val();
         $("iframe#TwitchPlayer").attr({ "src": function (index, src) { return 'https://player.twitch.tv/?channel=' + TwitchUsername + '&parent=' + location.host + '&muted=true' }, "allowfullscreen": false }).addClass("border-0 overflow-hidden rounded-lg");
@@ -297,6 +299,11 @@ $(document).ready(() => {
         const { Package, URL, Sort, DisplayName, DateOrder, Logo, LogoColor, LogoSize, Label, Color } = { Package: $img.data("package"), URL: encodeURIComponent($img.data("url")), Sort: $img.data("sort"), DisplayName: $img.data("dispname"), DateOrder: $img.data("dateorder"), Logo: $img.data("logo") || "gitea", LogoColor: $img.data("logocolor") || "white", LogoSize: $img.data("logosize") || "", Label: encodeURIComponent($img.data("label")), Color: $img.data("color") || "blue" };
         //const Prerelease = Boolean($(e).data("prerelease"));
         $img.attr({ "src": Url.Badges[0] + "gitea/v/release/" + Package + "?gitea_url=" + URL + "&sort=" + Sort + "&display_name=" + DisplayName + "&date_order_by=" + DateOrder + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=609926&color=" + Color, "alt": "Badge for Gitea Package " + Package, "loading": "lazy", "crossorigin": "anonymous" });
+    });
+    $("img.glTag").each((i, e) => {
+        const $img = $(e);
+        const { Package, URL, Logo, LogoColor, LogoSize, Label, Color } = { Package: encodeURIComponent($img.data("package")), URL: encodeURIComponent($img.data("url")), Logo: $img.data("logo") || "gitlab", LogoColor: $img.data("logocolor") || "white", LogoSize: $img.data("logosize") || "", Label: encodeURIComponent($img.data("label")), Color: $img.data("color") || "blue" };
+        $img.attr({ "src": Url.Badges[0] + "gitlab/v/tag/" + Package + "?gitlab_url=" + URL + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20on%20GitLab&labelColor=fc6d26&color=" + Color, "alt": "GitLab Badge for " + $img.data("package"), "loading": "lazy", "crossorigin": "anonymous" }).wrap($("<a></a>").attr({ "href": $img.data("url") + $img.data("package"), "target": "_blank", "rel": "external" }));
     });
     $("img.jsDelivr").each((i, e) => {
         const Package = $(e).data("package");

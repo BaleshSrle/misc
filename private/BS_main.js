@@ -1,8 +1,8 @@
 "use strict";
 
 console.info("Glavna skripta je pokrenuta.");
-
-const Url = { CDN: ["https://cdn.jsdelivr.net/", "https://cdnjs.cloudflare.com/"], Badges: ["https://img.shields.io/", "https://badgen.net/"], GitHub: "https://github.com/" };
+const Url = {};
+Object.assign(Url, { CDN: ["https://cdn.jsdelivr.net/", "https://cdnjs.cloudflare.com/"], Badges: ["https://img.shields.io/", "https://badgen.net/"], GitHub: "https://github.com/" });
 
 $(document).ready(() => {
     const GoogleFontsUrl = ["https://fonts.googleapis.com", "https://fonts.gstatic.com"];
