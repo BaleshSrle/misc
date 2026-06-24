@@ -372,7 +372,8 @@ $(document).ready(() => {
         $(e).filter("[alt='LibreOffice']").addClass("img-fluid");
         $(e).filter("[alt*='VLC'], [alt='Postman'],[alt$='OpenOffice'],[alt='Xubuntu'],[alt^='Poslovi']").css("max-height", "90px");
         $(e).filter("[alt^='NetLingo']").addClass("rounded-lg").css("max-height", "90px");
-    }).addClass("border-0 d-block mx-auto").attr("loading", (i === 0) ? "eager" : "lazy");
+        $(e).attr("loading", (i === 0) ? "eager" : "lazy");
+    }).addClass("border-0 d-block mx-auto");
     $("div#IQAirCarousel").css({ "width": "313px", "height": "100px" });
     $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
     $("mark.bg-secondary,a#time_is_link,label:gt(2)").addClass("text-white");
