@@ -184,34 +184,34 @@ $(document).ready(() => {
         switch (PackageManager) {
             case "Debian":
                 $img.attr({
-                    "src": Url.Badges[0] + "debian/v/" + Package + "/stable?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Debian%20Packages&labelColor=a81d33&color=" + Color, "alt": "Shields.io Debian Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                    "src": Url.Badges[0] + "debian/v/" + Package + "/stable?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Debian%20Packages&labelColor=a81d33&color=" + Color, "alt": "Shields.io Debian Package for " + decodeURIComponent(Label), "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://packages.debian.org/trixie/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Fedora":
                 $img.attr({
-                    "src": Url.Badges[0] + "fedora/v/" + Package + "/f43?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Fedora%20Packages&labelColor=51a2da&color=" + Color, "alt": "Shields.io Fedora Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                    "src": Url.Badges[0] + "fedora/v/" + Package + "/f43?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Fedora%20Packages&labelColor=51a2da&color=" + Color, "alt": "Shields.io Fedora Package for " + decodeURIComponent(Label), "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://packages.fedoraproject.org/search?query=" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Flatpak":
                 $img.attr({
-                    "src": Url.Badges[0] + "flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                    "src": Url.Badges[0] + "flathub/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Flathub&labelColor=4a90d9&color=" + Color, "alt": "Shields.io Flatpack Badge for " + decodeURIComponent(Label), "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://flathub.org/hr/apps/" + Package, "hreflang": "hr", "target": "_blank", "rel": "external" }));
                 break;
             case "Snapcraft":
                 $img.attr({
-                    "src": Url.Badges[0] + "snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "alt": "Snapcraft Badge for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                    "src": Url.Badges[0] + "snapcraft/v/" + Package + "/" + Channel + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color, "alt": "Snapcraft Badge for " + decodeURIComponent(Label), "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
                     $(this).attr("src", Url.Badges[1] + "snapcraft/v/" + Package + "/amd64?label=" + Label + "%20%40%20Snapcraft&labelColor=e95420&color=" + Color)
                 }).wrap($("<a></a>").attr({ "href": "https://snapcraft.io/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             case "Ubuntu":
                 $img.attr({
-                    "src": Url.Badges[0] + "ubuntu/v/" + Package + "/noble?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Ubuntu%20Packages&labelColor=e95420&color=" + Color, "alt": "Shields.io Ubuntu Package for " + decodeURIComponent(Label), "loading": "lazy", "crossorigin": "anonymous"
+                    "src": Url.Badges[0] + "ubuntu/v/" + Package + "/noble?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20Ubuntu%20Packages&labelColor=e95420&color=" + Color, "alt": "Shields.io Ubuntu Package for " + decodeURIComponent(Label), "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
                 }).wrap($("<a></a>").attr({ "href": "https://packages.ubuntu.com/noble/" + Package, "hreflang": "en", "target": "_blank", "rel": "external" }));
                 break;
             default:
                 $img.attr({
-                    "src": Url.Badges[0] + "winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": "lazy", "crossorigin": "anonymous"
+                    "src": Url.Badges[0] + "winget/v/" + Package + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20winget&color=" + Color, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
                     $(this).attr("src", Url.Badges[1] + "winget/v/" + Package + "?color=" + Color + "&icon=" + Logo + "&label=" + Label + "%20%40%20winget");
                 }).wrap($("<a></a>").attr({ "href": "https://winget.run/pkg/" + Package.replace(".", "/").replace(".sr", ""), "hreflang": "en", "target": "_blank", "rel": "external" }));
@@ -223,21 +223,21 @@ $(document).ready(() => {
         switch (Browser) {
             case "Chromium":
                 $img.attr({
-                    "src": Url.Badges[0] + "chrome-web-store/v/" + ExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": "lazy", "crossorigin": "anonymous"
+                    "src": Url.Badges[0] + "chrome-web-store/v/" + ExtensionId + "?logo=chromewebstore&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
                     $(this).attr("src", Url.Badges[1] + "chrome-web-store/v/" + ExtensionId + "?icon=chrome&label=" + ExtensionLabel + "%20%40%20Chrome%20Web%20Store&labelColor=4285f4&color=" + ExtensionColor);
                 }).wrap($("<a></a>").attr({ "href": "https://chromewebstore.google.com/detail/" + ExtensionId, "target": "_blank", "rel": "external" }));
                 break;
             case "Firefox":
                 $img.attr({
-                    "src": Url.Badges[0] + "amo/v/" + ExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + ExtensionColor, "loading": "lazy", "crossorigin": "anonymous"
+                    "src": Url.Badges[0] + "amo/v/" + ExtensionId + "?logo=firefox&logoColor=white&logoSize=auto&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139&color=" + ExtensionColor, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
                 }).on("error", function () {
                     $(this).attr("src", Url.Badges[1] + "amo/v/" + ExtensionId + "?color=" + ExtensionColor + "&icon=firefox&label=" + ExtensionLabel + "%20%40%20Mozilla%20Add-ons&labelColor=ff7139");
                 }).wrap($("<a></a>").attr({ "href": "https://addons.mozilla.org/hr/firefox/addon/" + ExtensionId, "hreflang": "hr", "target": "_blank", "rel": "external" }));
                 break;
             default:
                 $img.attr({
-                    "src": Url.Badges[1] + "visual-studio-marketplace/v/" + ExtensionId + "?icon=visualstudio&label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc", "loading": "lazy", "crossorigin": "anonymous"
+                    "src": Url.Badges[1] + "visual-studio-marketplace/v/" + ExtensionId + "?icon=visualstudio&label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc", "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
                 })/*.on("error", function () {
                     $(this).attr("src", Url.Badges[0] + "visual-studio-marketplace/v/" + ExtensionId + "?label=" + ExtensionLabel + "%20for%20VS%20Code&labelColor=007acc");
                 })*/.wrap($("<a></a>").attr({ "href": "https://marketplace.visualstudio.com/items?itemName=" + ExtensionId, "hreflang": "en", "target": "_blank", "rel": "external" }));
@@ -248,7 +248,7 @@ $(document).ready(() => {
         const { Product, Release, Query, Prefix, Logo, Label, LabelColor } = { Product: $img.data("product"), Release: $img.data("release"), Query: encodeURIComponent($img.data("query")), Prefix: encodeURIComponent($img.data("prefix") || ""), Logo: $img.data("logo") || "", Label: encodeURIComponent($img.data("label") || ""), LabelColor: $img.data("labelcolor") || "" };
         //const Suffix = encodeURIComponent($img.data("suffix") || "");
         $img.attr({
-            "src": Url.Badges[0] + "badge/dynamic/json?url=https%3A%2F%2Fendoflife.date%2Fapi%2Fv1%2Fproducts%2F" + Product + "%2Freleases%2F" + Release + "&query=" + Query + "&prefix=" + Prefix + "&logo=" + Logo + "&label=" + Label + "&labelColor=" + LabelColor, "loading": "lazy", "crossorigin": "anonymous"
+            "src": Url.Badges[0] + "badge/dynamic/json?url=https%3A%2F%2Fendoflife.date%2Fapi%2Fv1%2Fproducts%2F" + Product + "%2Freleases%2F" + Release + "&query=" + Query + "&prefix=" + Prefix + "&logo=" + Logo + "&label=" + Label + "&labelColor=" + LabelColor, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
         });
         (Logo != "") ? $img.attr("src", (index, src) => { return src + "&logoColor=white&logoSize=auto" }) : null;
     });
@@ -256,13 +256,13 @@ $(document).ready(() => {
         const $img = $(e);
         const { Package, Workflow, WorkflowLabel, Branch, Event } = { Package: $img.data("package"), Workflow: $img.data("workflow"), WorkflowLabel: $img.data("workflowlabel"), Branch: $img.data("branch") || "main", Event: $img.data("event") || "" };
         $img.attr({
-            "src": Url.Badges[0] + "github/actions/workflow/status/" + Package + "/" + Workflow + ".yml?branch=" + Branch + "&event=" + Event + "&logo=githubactions&logoColor=white&logoSize=auto&label=GitHub%20Actions%20Workflow&labelColor=2088ff", "alt": "GitHub Actions Workflow - " + WorkflowLabel, "loading": "lazy", "crossorigin": "anonymous"
+            "src": Url.Badges[0] + "github/actions/workflow/status/" + Package + "/" + Workflow + ".yml?branch=" + Branch + "&event=" + Event + "&logo=githubactions&logoColor=white&logoSize=auto&label=GitHub%20Actions%20Workflow&labelColor=2088ff", "alt": "GitHub Actions Workflow - " + WorkflowLabel, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
         }).addClass("d-block mx-auto");
     });
     $("img.ghChecks").each((i, e) => {
         const $img = $(e);
         const { Package, Branch, JobName } = { Package: $img.data("package"), Branch: $img.data("branch") || "main", JobName: $img.data("jobname") || "" };
-        $img.attr({ "src": Url.Badges[0] + "github/check-runs/" + Package + "/" + Branch + "?nameFilter=" + JobName + "&logo=github&logoColor=white&logoSize=auto&label=Checks%20" + JobName + "&labelColor=181717", "alt": "GitHub branch check runs", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
+        $img.attr({ "src": Url.Badges[0] + "github/check-runs/" + Package + "/" + Branch + "?nameFilter=" + JobName + "&logo=github&logoColor=white&logoSize=auto&label=Checks%20" + JobName + "&labelColor=181717", "alt": "GitHub branch check runs", "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
             $(this).attr("src", Url.Badges[1] + "github/checks/" + Package + "/" + Branch + "/" + JobName + "?icon=github&label=Checks%20" + JobName + "&labelColor=181717");
         });
     });
@@ -280,14 +280,14 @@ $(document).ready(() => {
     });
     $("img.ghLastCommit").each((i, e) => {
         const Package = $(e).data("package");
-        $(e).attr({ "src": Url.Badges[0] + "github/last-commit/" + Package + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Last Commit", "loading": "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
+        $(e).attr({ "src": Url.Badges[0] + "github/last-commit/" + Package + "?logo=github&logoColor=white&logoSize=auto&labelColor=181717", "alt": "GitHub Last Commit", "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" }).addClass("d-block mx-auto").on("error", function () {
             $(this).attr("src", Url.Badges[1] + "github/last-commit/" + Package + "?icon=github&labelColor=181717");
         });
     });
     $("img.ghPR").each((i, e) => {
         const $img = $(e);
         const { Status, Package, Number } = { Status: Boolean($img.data("status")), Package: $img.data("package"), Number: $img.data("number") };
-        $img.attr({ "loading": "lazy", "crossorigin": "anonymous" }).wrap($("<a></a>").attr({ "href": Url.GitHub + Package + "/pull/" + Number, "hreflang": "en", "target": "_blank", "rel": "external" }));
+        $img.attr({ "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" }).wrap($("<a></a>").attr({ "href": Url.GitHub + Package + "/pull/" + Number, "hreflang": "en", "target": "_blank", "rel": "external" }));
         (Status === true) ? $img.attr({
             "src": Url.Badges[0] + "github/status/s/pulls/" + Package + "/" + Number + "?logo=github&logoColor=white&logoSize=auto&label=Pull%20Request%20Status%20%23" + Number + "&labelColor=181717", "alt": "GitHub PR Status #" + Number
         }) : $img.attr({
@@ -298,16 +298,16 @@ $(document).ready(() => {
         const $img = $(e);
         const { Package, URL, Sort, DisplayName, DateOrder, Logo, LogoColor, LogoSize, Label, Color } = { Package: $img.data("package"), URL: encodeURIComponent($img.data("url")), Sort: $img.data("sort"), DisplayName: $img.data("dispname"), DateOrder: $img.data("dateorder"), Logo: $img.data("logo") || "gitea", LogoColor: $img.data("logocolor") || "white", LogoSize: $img.data("logosize") || "", Label: encodeURIComponent($img.data("label")), Color: $img.data("color") || "blue" };
         //const Prerelease = Boolean($(e).data("prerelease"));
-        $img.attr({ "src": Url.Badges[0] + "gitea/v/release/" + Package + "?gitea_url=" + URL + "&sort=" + Sort + "&display_name=" + DisplayName + "&date_order_by=" + DateOrder + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=609926&color=" + Color, "alt": "Badge for Gitea Package " + Package, "loading": "lazy", "crossorigin": "anonymous" });
+        $img.attr({ "src": Url.Badges[0] + "gitea/v/release/" + Package + "?gitea_url=" + URL + "&sort=" + Sort + "&display_name=" + DisplayName + "&date_order_by=" + DateOrder + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=609926&color=" + Color, "alt": "Badge for Gitea Package " + Package, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" });
     });
     $("img.glTag").each((i, e) => {
         const $img = $(e);
         const { Package, URL, Logo, LogoColor, LogoSize, Label, Color } = { Package: encodeURIComponent($img.data("package")), URL: encodeURIComponent($img.data("url")), Logo: $img.data("logo") || "gitlab", LogoColor: $img.data("logocolor") || "white", LogoSize: $img.data("logosize") || "", Label: encodeURIComponent($img.data("label")), Color: $img.data("color") || "blue" };
-        $img.attr({ "src": Url.Badges[0] + "gitlab/v/tag/" + Package + "?gitlab_url=" + URL + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20on%20GitLab&labelColor=fc6d26&color=" + Color, "alt": "GitLab Badge for " + $img.data("package"), "loading": "lazy", "crossorigin": "anonymous" }).wrap($("<a></a>").attr({ "href": $img.data("url") + $img.data("package"), "target": "_blank", "rel": "external" }));
+        $img.attr({ "src": Url.Badges[0] + "gitlab/v/tag/" + Package + "?gitlab_url=" + URL + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20on%20GitLab&labelColor=fc6d26&color=" + Color, "alt": "GitLab Badge for " + $img.data("package"), "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" }).wrap($("<a></a>").attr({ "href": $img.data("url") + $img.data("package"), "target": "_blank", "rel": "external" }));
     });
     $("img.jsDelivr").each((i, e) => {
         const Package = $(e).data("package");
-        $(e).attr({ "src": Url_CP.jsDelivr[1] + "v1/package/gh/" + Package + "/badge", "alt": "jsDelivr Badge for " + Package, "loading": "lazy" }).addClass("d-block mx-auto img-fluid rounded-lg").on("error", function (e) {
+        $(e).attr({ "src": Url_CP.jsDelivr[1] + "v1/package/gh/" + Package + "/badge", "alt": "jsDelivr Badge for " + Package, "loading": (i === 0) ? "eager" : "lazy" }).addClass("d-block mx-auto img-fluid rounded-lg").on("error", function (e) {
             $(e).attr("src", Url.Badges[1] + "jsdelivr/hits/gh/" + Package + "?color=e84d3d&icon=jsdelivr")
         }).wrap($("<a></a>").attr({ "href": Url_CP.jsDelivr[0] + "package/gh/" + Package, "target": "_blank", "rel": "noopener noreferrer" }).addClass("navbar-brand"));
     });
@@ -315,7 +315,7 @@ $(document).ready(() => {
         const $img = $(e);
         const { Name, Edition, Color, Logo } = { Name: encodeURIComponent($img.data("name")), Edition: encodeURIComponent($img.data("edition")), Color: $img.data("color") || "fcc624", Logo: $img.data("logo") || "linux" };
         $img.attr({
-            "src": Url.Badges[0] + "badge/" + Name + "-" + Edition + "%2064--bit-" + Color + "?logo=" + Logo + "&logoColor=white&logoSize=auto", "loading": "lazy", "crossorigin": "anonymous"
+            "src": Url.Badges[0] + "badge/" + Name + "-" + Edition + "%2064--bit-" + Color + "?logo=" + Logo + "&logoColor=white&logoSize=auto", "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
         }).on("error", function () {
             $(this).attr("src", Url.Badges[1] + "static/" + Name + "/" + Edition + "%2064-bit/" + Color);
         });
@@ -329,7 +329,7 @@ $(document).ready(() => {
         const $img = $(e);
         const { Key, Logo, LogoColor, LogoSize, LabelTxtPrefix, LabelColor } = { Key: $img.data("key"), Logo: $img.data("logo"), LogoColor: $img.data("logocolor") || "", LogoSize: $img.data("logosize") || "", LabelTxtPrefix: encodeURIComponent($img.data("labeltxtprefix") || ""), LabelColor: $img.data("labelcolor") || "" };
         $img.attr({
-            "src": Url.Badges[0] + "uptimerobot/status/" + Key + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000", "alt": "UptimeRobot status", "loading": "lazy", "crossorigin": "anonymous"
+            "src": Url.Badges[0] + "uptimerobot/status/" + Key + "?logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000", "alt": "UptimeRobot status", "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
         }).on("error", function (e) {
             $(this).attr("src", Url.Badges[1] + "uptime-robot/status/" + Key + "?label=" + LabelTxtPrefix + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000")
         });
@@ -346,7 +346,7 @@ $(document).ready(() => {
     $("iframe[src*='IssuerChart']").width(200).height(110).addClass("d-block mx-auto border-0 overflow-hidden rounded-lg").attr("loading", (i) => i === 0 ? "eager" : "lazy");
     $("iframe.steamWidget").each((i, e) => {
         const GameID = $(e).data("gameid");
-        $(e).addClass("border-0 my-1").attr({ "src": Url_CP.Steam + "widget/" + GameID + "/", "loading": "lazy" }).width(646).height(190);
+        $(e).addClass("border-0 my-1").attr({ "src": Url_CP.Steam + "widget/" + GameID + "/", "loading": (i === 0) ? "eager" : "lazy" }).width(646).height(190);
     }).wrapAll($("<div></div>").addClass("d-flex flex-wrap justify-content-around"));
     /*$("div.col-auto").each((i, e) => {
         if (i % 2 === 0) {
@@ -372,7 +372,7 @@ $(document).ready(() => {
         $(e).filter("[alt='LibreOffice']").addClass("img-fluid");
         $(e).filter("[alt*='VLC'], [alt='Postman'],[alt$='OpenOffice'],[alt='Xubuntu'],[alt^='Poslovi']").css("max-height", "90px");
         $(e).filter("[alt^='NetLingo']").addClass("rounded-lg").css("max-height", "90px");
-    }).addClass("border-0 d-block mx-auto").attr("loading", "lazy");
+    }).addClass("border-0 d-block mx-auto").attr("loading", (i === 0) ? "eager" : "lazy");
     $("div#IQAirCarousel").css({ "width": "313px", "height": "100px" });
     $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
     $("mark.bg-secondary,a#time_is_link,label:gt(2)").addClass("text-white");
@@ -511,11 +511,11 @@ $(document).ready(() => {
             case "Twitch":
                 const streamerNames = ["Bebahan", "Joshshep18", "Shappys", "TBJZL", "Nalopia", "Berticuss", "Develique", "Loserfruit", "Aliythia", "Fasffy", "AngelMelly", "MaryyCherryy", "2bratty", "aziaa", "Crayator", "krysttl", "Danzie_Dee", "Kaztelle", "JFrostXS", "GYmedia", "dollysox", "Matt500x", "brodie", "KIKI", "itsmissblondie", "Behzinga", "miniminter", "freyzplayz", "TaliaMar", "geenelly", "Sweet_Anita", "littlebunny_x", "PerriKaryal", "VizuaLizah", "BadmanOnline", "LexieMariex", "IainStirling", "Syndicate", "angryginge13", "dannyaarons", "arthurtv", "elzthewitch", "LucarioLN", "Pernillamouritzen_", "BunnymonTV", "Lindsfry", "CHI_Kacee", "HailHeidi", "ItsCharlieVest", "Eveuh", "juliakins", "Chess", "BotezLive", "DinaBelenkaya", "AnnaCramling", "BasedCode", "CodeItLive", "LinusTech", "ScammerPayback", "playapex", "Brawlhalla", "Call of Duty", "DCUniverseOnline", "Fortnite", "Halo", "MarvelRivals", "PlayOverwatch", "PUBG_BATTLEGROUNDS", "Rainbow6", "Trackmania", "Warcraft", "Warframe", "WorldofTanks", "WorldofWarships", "ParadoxInteractive", "PixelbyPixelStudios", "XboxOn", "QoSpades", "FerrariEsports", "FailArmy", "TheNicoleT", "JennaLynnMeowri", "Alinity", "alinitytv247", "JadetheJaguar", "firedancer", "janifest", "AuroraStarr", "xoDee", "Morgpie", "AMOURANTH", "peyzki", "sincerelyjuju", "luvstruck", "pinkwasabitv", "kaitviolet", "sashagrey", "PennyPaxParty", "AdrianaChechik_", "KaliRoses", "TheKylerQuinn", "allieraa", "BeNiceNatasha", "EmmaLayne", "EmmaLayneToo", "EmjayPlayss"/*, "BuccataX"*/, "ChickenWing_Candy", "lauralux", "itsmiabrookes", "NuFo", "ohKayBunny", "xoAeriel", "DevonJenelle", "kattpaccino", "LilyLouOfficial", "CoCoNova", "StrawberryTabby", "MyAustinWhite", "Mishamai", "Hannesschan", "tristinmays_", "TrishaHershberger", "PulpFictionally", "TaraBabcock", "taylorhws", "Taylor_Jevaux", "JuliaBurch", "whiptrax", "RachelKay", "AshleyNocera", "Bambib00", "athnessa", "iwasintheshower", "JenFoxxx", "itsBreckie", "parisxpower", "carmmiee", "Faith", "Ms_Tricky", "saweetheart", "AnisaJomha", "SkyeBlanchette", "evilmaman", "Kaceytron", "AriGameplays", "MerceGallardo", "thewildlatina", "VitaCelestine_", "TriviTV", "DanielaAzuaje_", "LaurenAlexis_x", "blinkxasmr", "XTASIAEGO", "XtasiaTV", "CharlParkesx", "Elina", "xCandyLashes", "QUINCY", "sophoulla", "kristinemaia", "Mellooow_", "GemmasTW", "ViaArthur", "thevalentinanappi", "LUXGRL", "Lylkae", "Kaellyn", "Linny", "LinnyNova", "NicolePeachy", "LolaaBrink", "KDRkitten", "lucyya"/*, "xXLauoaNXx"*/, "NeylaaRose", "Aryssa614", "xeniahelenaa", "di1araas", "llunaclark", "MarieMoone", "Mayichi", "noe9977", "perfilraro", "princesita1331", "SaraKroft", "SofiG", "samantra", "JasminAurora", "Gonsabellla", "Louisa_Khovanski", "mira", "mira_irl", "mirasjuicery"/*"miratv247"*/, "OLESYALIBERMAN"/*, "Sharishaxd"*/, "Ksenia_Noche", "saira", "MistieSage", "meowbuffy", "NataliaMav", "cobymj"];
                 const selector = streamerNames.map(name => `[alt$='${name}']`).join(",");
-                $img.attr({ "src": Url.Badges[0] + "twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+                $img.attr({ "src": Url.Badges[0] + "twitch/status/" + Username + "?style=plastic&logo=twitch&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=9146ff&cacheSeconds=60", "alt": "Twitch Status - " + Label, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
                 $img.filter(selector).after($("<snap></snap>").addClass("badge badge-dark").append($("<i></i>").addClass("bi bi-fire text-warning")));
                 break;
             default:
-                $img.attr({ "src": Url.Badges[0] + "badge/dynamic/json?url=https%3A%2F%2Fkick.com%2Fapi%2Fv1%2Fchannels%2F" + Username + "&query=%24.livestream.is_live&prefix=Live%3A%20&logo=kick&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=53fc19&color=red&cacheSeconds=60", "alt": "Kick Status for " + Label, "loading": "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
+                $img.attr({ "src": Url.Badges[0] + "badge/dynamic/json?url=https%3A%2F%2Fkick.com%2Fapi%2Fv1%2Fchannels%2F" + Username + "&query=%24.livestream.is_live&prefix=Live%3A%20&logo=kick&logoColor=white&logoSize=auto&label=" + Label + "&labelColor=53fc19&color=red&cacheSeconds=60", "alt": "Kick Status for " + Label, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" }).addClass("p-1").wrap($("<li></li>").addClass("list-group-item list-group-item-dark px-2 py-0 d-flex align-items-center justify-content-between"));
         }
     }).parents("ul").each((i) => {
         ($("ul:eq(" + i + ")").children("li").length > 7) ? $("ul:eq(" + i + ")").addClass("overflow-auto").height(200) : $("ul:eq(" + i + ")").removeClass("overflow-auto");

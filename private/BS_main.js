@@ -50,7 +50,7 @@ $(document).ready(() => {
         const Type = $img.data("type").split(",").map(item => item.trim());
         const { Latest, Stable, Package, Filter, Logo, LogoColor, LogoSize, Label, LabelColor, Color } = { Latest: (Type[0] === "release") ? "/latest" : "", Stable: (Type[1] === "release") ? "/stable" : "", Package: $img.data("package"), Filter: $img.data("filter") || "*", Logo: $img.data("logo") || "github", LogoColor: $img.data("logocolor") || "", LogoSize: $img.data("logosize") || "", Label: encodeURIComponent($img.data("label")), LabelColor: $img.data("labelcolor") || "181717", Color: $img.data("color") || "blue" };
         $img.attr({
-            "src": Url.Badges[0] + "github/v/" + Type[0] + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color, "alt": "Badge for GitHub Package " + Package, "loading": "lazy", "crossorigin": "anonymous"
+            "src": Url.Badges[0] + "github/v/" + Type[0] + "/" + Package + "?filter=" + Filter + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color, "alt": "Badge for GitHub Package " + Package, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
         }).on("error", function () {
             $(this).attr("src", Url.Badges[1] + "github/" + Type[1] + "/" + Package + Stable + "?icon=" + Logo + "&label=" + Label + "%20%40%20GitHub&labelColor=" + LabelColor + "&color=" + Color);
         }).wrap($("<a></a>").attr({ "href": Url.GitHub + Package + "/" + Type[0] + "s" + Latest, "hreflang": "en", "target": "_blank", "rel": "external" }));
@@ -59,7 +59,7 @@ $(document).ready(() => {
         const $img = $(e);
         const { Label1Text, Label1Color, Label2Text, Label2Color, BadgeStyle, Logo, LogoColor, LogoSize, URL, URLLang } = { Label1Text: encodeURIComponent($img.data("label1") || ""), Label1Color: $img.data("color1") || "blue", Label2Text: encodeURIComponent($img.data("label2") || ""), Label2Color: $img.data("color2") || "555555", BadgeStyle: $img.data("badgestyle") || "", Logo: $img.data("logo") || "", LogoColor: $img.data("logocolor") || "", LogoSize: $img.data("logosize") || "", URL: $img.data("url"), URLLang: $img.data("urllang") || "" };
         //const Name = $(e).data("name") || "";
-        (Label2Text === "") ? $img.attr({ "src": Url.Badges[0] + "badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize, "alt": "Shields.io Static Badge"/* + Name*/, "loading": "lazy", "crossorigin": "anonymous" }) : $img.attr({ "src": Url.Badges[0] + "badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label2Text + "&labelColor=" + Label2Color, "alt": "Shields.io Static Badge"/* + Name*/, "loading": "lazy", "crossorigin": "anonymous" }).on("error", function () {
+        (Label2Text === "") ? $img.attr({ "src": Url.Badges[0] + "badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize, "alt": "Shields.io Static Badge"/* + Name*/, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" }) : $img.attr({ "src": Url.Badges[0] + "badge/" + Label1Text + "-" + Label1Color + "?style=" + BadgeStyle + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label2Text + "&labelColor=" + Label2Color, "alt": "Shields.io Static Badge"/* + Name*/, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" }).on("error", function () {
             $(this).attr({ "src": Url.Badges[1] + "static/" + Label2Text + "/" + Label1Text + "/" + Label1Color + "?icon=" + Logo + "&labelColor=" + Label2Color, "alt": "Badgen.net Static Badge" });
         });
         (URL) ? $img.wrap($("<a></a>").attr({ "href": URL, "hreflang": URLLang, "target": "_blank", "rel": "external" })) : $img.unwrap("a");
@@ -67,13 +67,13 @@ $(document).ready(() => {
     $("img.w3cValidationBadge").each((i, e) => {
         const $img = $(e);
         const { Parser, URL, LabelTxtSuffix } = { Parser: $img.data("parser"), URL: encodeURIComponent($img.data("url")), LabelTxtSuffix: $img.data("labeltxtsuffix") || "" };
-        $img.attr({ "src": Url.Badges[0] + "w3c-validation/" + Parser + "?targetUrl=" + URL + "&label=W3C%20Validation%20-%20" + LabelTxtSuffix + "&cacheSeconds=1800", "alt": "Shields.io W3C Validation Badge - " + LabelTxtSuffix, "loading": "lazy", "crossorigin": "anonymous" }).wrap($("<a></a>").attr({ "href": "https://validator.w3.org/nu/?doc=" + decodeURIComponent(URL), "target": "_blank", "hreflang": "en", "rel": "external" }));
+        $img.attr({ "src": Url.Badges[0] + "w3c-validation/" + Parser + "?targetUrl=" + URL + "&label=W3C%20Validation%20-%20" + LabelTxtSuffix + "&cacheSeconds=1800", "alt": "Shields.io W3C Validation Badge - " + LabelTxtSuffix, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" }).wrap($("<a></a>").attr({ "href": "https://validator.w3.org/nu/?doc=" + decodeURIComponent(URL), "target": "_blank", "hreflang": "en", "rel": "external" }));
     });
     $("img.websiteBadge").each((i, e) => {
         const $img = $(e);
         const { URL, Label, Logo, LogoColor, LogoSize, Color } = { URL: encodeURIComponent($img.data("url")), Label: encodeURIComponent($img.data("label") || "Website"), Logo: $img.data("logo") || "", LogoColor: $img.data("logocolor") || "", LogoSize: $img.data("logosize") || "", Color: $img.data("color") || "" };
         $img.attr({
-            "src": Url.Badges[0] + "website?url=" + URL + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + Color + "&cacheSeconds=1800", "alt": "Shields.io Website Badge", "loading": "lazy", "crossorigin": "anonymous"
+            "src": Url.Badges[0] + "website?url=" + URL + "&logo=" + Logo + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=" + Color + "&cacheSeconds=1800", "alt": "Shields.io Website Badge", "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous"
         });
     });
     document.normalize();
