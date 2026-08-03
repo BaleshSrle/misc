@@ -541,7 +541,8 @@ $(document).ready(() => {
             $("#iznosDividende").text("Očekivana vrijednost dividende iznosi " + g.toFixed(2) + " KM.");
         });
         $(e).filter("#weatherforecast").append($("<a></a>").attr({ "href": Url_CP.Accuweather[0] + "/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr-BA" }).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": false, "data-uid": "awtd1504180838200", "data-editlocation": true }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": Url_CP.Accuweather[1] + "/launch.js", "defer": "defer" }));
-        $(e).filter("#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": Url_CP.Livescore + "/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": Url_CP.Livescore + "/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo"));
+        // $(e).filter("#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": Url_CP.Livescore + "/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": Url_CP.Livescore + "/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo"));
+        $(e).filter("#livescore").append($("<iframe></iframe>").attr({ "src": "https://rezultati.com/", "loading": "lazy"}).addClass("w-100 border-0 overflow-hidden").css("min-height", "86.7vh"));
     });
     $("div.list-group").each(() => {
         $("div.list-group").has("a").filter(":lt(4):gt(1),:lt(11):gt(5)").addClass("list-group-horizontal");
