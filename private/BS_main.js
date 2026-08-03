@@ -19,7 +19,7 @@ $(document).ready(() => {
         location.reload();
     }); */
     $("script[src*='bootstrap@4']").one("error", function () { this.src = Url.CDN[1] + "ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"; });
-    $("<script>").attr("src", Url.CDN[0] + "npm/jquery-migrate@4/dist/jquery-migrate.min.js").one("error", function () { this.src = Url.CDN[1] + "ajax/libs/jquery-migrate/4.0.2/jquery-migrate.min.js" }).insertAfter("script[src*='jquery@3']");
+    // $("<script>").attr("src", Url.CDN[0] + "npm/jquery-migrate@3/dist/jquery-migrate.min.js").one("error", function () { this.src = Url.CDN[1] + "ajax/libs/jquery-migrate/3.6.0/jquery-migrate.min.js" }).insertAfter("script[src*='jquery@3']");
     /*$("script[src*='jquery@3']").after($("<script></script>").on("error", function () {$(this).remove(); $("<script></script>").attr("src", Url.CDN[1] + "ajax/libs/jquery-migrate/4.0.2/jquery-migrate.min.js").insertAfter("script[src*='jquery@3']"); }).attr("src", Url.CDN[0] + "npm/jquery-migrate@4/dist/jquery-migrate.min.js"));*/
     $("script[src*='moment@2']").one("error", function () { this.src = Url.CDN[1] + "ajax/libs/moment.js/2.30.1/moment.min.js"; });
     $("[href$='.min.css'],[src$='.min.js']").attr("crossorigin", "anonymous");
