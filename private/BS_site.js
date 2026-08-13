@@ -24,7 +24,7 @@ jQuery(($) => {
     $("head").each((i, e) => {
         $(e).prepend($("<base>").attr("href", location.origin));
         // $(this).prepend("<base href=file:///D:/company/>");
-        $(e).append($("<meta>").attr({ "name": "copyright", "content": "DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() }), $("<meta>").attr({ "name": "GENERATOR", "content": "Visual Studio Code 1.130.0" }));
+        $(e).append($("<meta>").attr({ "name": "copyright", "content": "DobojCaffe.com & Servis računara &quot;BALEŠEVIĆ&quot; &copy;" + new Date().getFullYear() }), $("<meta>").attr({ "name": "GENERATOR", "content": "Visual Studio Code 1.133.0" }));
         $(e).append($.getScript(Url.WOT[0] + 'website_owners_badges/websiteOwnersBadge.js'));
     });
     $("script[src*='jquery-coundown@2']").one("error", function () { this.src = Url.CDN[1] + "ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"; });

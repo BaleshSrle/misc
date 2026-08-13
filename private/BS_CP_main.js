@@ -396,14 +396,15 @@ $(document).ready(() => {
         $(e).find("div.modal-footer").addClass("py-1");
         $(e).find("div.modal-footer").find("a").addClass("text-light");
         $(e).filter("#CarService").find("th:eq(2)").addClass("w-50");
-        $(e).filter("#CarService").find("td").filter(":lt(2),:lt(8):gt(5),:lt(14):gt(11)").addClass("align-middle");
-        $(e).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString(localeOptions.locale, localeOptions.options));
+        // $(e).filter("#CarService").find("td")/*.filter(":lt(2),:lt(8):gt(5),:lt(14):gt(11)")*/.(":eq(1),:eq(7),:eq(13),:eq(16),:eq(22)").addClass("align-middle");
+        $(e).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
         $(e).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString(localeOptions.locale, localeOptions.options));
-        $(e).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString(localeOptions.locale, localeOptions.options));
+        $(e).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
         $(e).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString(localeOptions.locale, localeOptions.options));
-        $(e).filter("#CarService").find("time:eq(4)").text(new Date(2025, 4, 24, 14, 0).toLocaleString(localeOptions.locale, localeOptions.options));
-        $(e).filter("#CarService").find("time:eq(5)").text(new Date(2025, 7, 6, 12, 4).toLocaleString(localeOptions.locale, localeOptions.options));
+        $(e).filter("#CarService").find("time:eq(4)").text(new Date(2025, 4, 24, 14, 0).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
+        $(e).filter("#CarService").find("time:eq(5)").text(new Date(2025, 7, 6, 12, 4).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
         $(e).filter("#CarService").find("time:eq(6)").text(new Date(2026, 2, 3, 12, 15).toLocaleString(localeOptions.locale, localeOptions.options));
+        $(e).filter("#CarService").find("time:eq(7)").text(new Date(2027, 7, 4, 12, 20).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
     }).attr({ "tabindex": "-1", "role": "dialog" });
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
@@ -542,7 +543,7 @@ $(document).ready(() => {
         });
         $(e).filter("#weatherforecast").append($("<a></a>").attr({ "href": Url_CP.Accuweather[0] + "/sr/ba/doboj/35305/current-weather/35305", "hreflang": "sr-BA" }).addClass("aw-widget-legal"), $("<div></div>").attr({ "id": "awtd1504180838200", "data-locationkey": "35305", "data-unit": "c", "data-language": "sr", "data-useip": false, "data-uid": "awtd1504180838200", "data-editlocation": true }).addClass("aw-widget-36hour"), $("<script></script>").attr({ "src": Url_CP.Accuweather[1] + "/launch.js", "defer": "defer" }));
         // $(e).filter("#livescore").append($("<script></script>").attr({ "type": "text/javascript", "src": Url_CP.Livescore + "/api.livescore.0.1.js", "api": "livescore", "async": "async" }), $("<a></a>").attr({ "href": Url_CP.Livescore + "/rs", "target": "_blank", "sport": "football(soccer)", "data-1": "today", "lang": "rs" }).text("Rezultati uživo"));
-        $(e).filter("#livescore").append($("<iframe></iframe>").attr({ "src": "https://rezultati.com/", "loading": "lazy"}).addClass("w-100 border-0 overflow-hidden").css("min-height", "86.7vh"));
+        $(e).filter("#livescore").append($("<iframe></iframe>").attr({ "src": "https://rezultati.com/", "loading": "lazy" }).addClass("w-100 border-0 overflow-hidden").css("min-height", "86.7vh"));
     });
     $("div.list-group").each(() => {
         $("div.list-group").has("a").filter(":lt(4):gt(1),:lt(11):gt(5)").addClass("list-group-horizontal");
