@@ -398,9 +398,9 @@ $(document).ready(() => {
         $(e).filter("#CarService").find("th:eq(2)").addClass("w-50");
         // $(e).filter("#CarService").find("td")/*.filter(":lt(2),:lt(8):gt(5),:lt(14):gt(11)")*/.(":eq(1),:eq(7),:eq(13),:eq(16),:eq(22)").addClass("align-middle");
         $(e).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
-        $(e).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString(localeOptions.locale, localeOptions.options));
+        $(e).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString(localeOptions.locale, localeOptions.options)).parents("tr").attr({"data-toggle": "tooltip", "data-placement": "top", "title": "Garancija 2 godine na akumulator"});
         $(e).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
-        $(e).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString(localeOptions.locale, localeOptions.options));
+        $(e).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString(localeOptions.locale, localeOptions.options)).parents("tr").attr({"data-toggle": "tooltip", "data-placement":"top", "title":"Nikada više odvesti auto kod Malog Deje i Mlađe na servis kočnica"});
         $(e).filter("#CarService").find("time:eq(4)").text(new Date(2025, 4, 24, 14, 0).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
         $(e).filter("#CarService").find("time:eq(5)").text(new Date(2025, 7, 6, 12, 4).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
         $(e).filter("#CarService").find("time:eq(6)").text(new Date(2026, 2, 3, 12, 15).toLocaleString(localeOptions.locale, localeOptions.options));
