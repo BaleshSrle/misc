@@ -404,7 +404,7 @@ $(document).ready(() => {
         $(e).filter("#CarService").find("time:eq(4)").text(new Date(2025, 4, 24, 14, 0).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
         $(e).filter("#CarService").find("time:eq(5)").text(new Date(2025, 7, 6, 12, 4).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
         $(e).filter("#CarService").find("time:eq(6)").text(new Date(2026, 2, 3, 12, 15).toLocaleString(localeOptions.locale, localeOptions.options));
-        $(e).filter("#CarService").find("time:eq(7)").text(new Date(2027, 7, 4, 12, 20).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
+        $(e).filter("#CarService").find("time:eq(7)").text(new Date(2026, 7, 4, 12, 20).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
     }).attr({ "tabindex": "-1", "role": "dialog" });
     $("div.col-sm-8,output").addClass("pt-2");
     $("div.col-sm-8").addClass("px-2");
