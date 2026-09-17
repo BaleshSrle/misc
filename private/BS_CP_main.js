@@ -69,7 +69,7 @@ $(document).ready(() => {
     const divInputGroup = $("div.input-group");
     const localeOptions = { locale: "sr-Latn-BA", options: { dateStyle: "full", timeStyle: "short" } };
     const Url_CP = { Twitch: ["https://api.twitch.tv/", "https://passport.twitch.tv/", "https://www.twitch.tv/"], Accuweather: ["https://www.accuweather.com", "https://oap.accuweather.com"], Livescore: "https://www.livescore.bz", Wikimedia: ["https://meta.wikimedia.org/", "https://upload.wikimedia.org/"], Simpleicons: ["https://simpleicons.org/", "https://cdn.simpleicons.org/"], jsDelivr: ["https://www.jsdelivr.com/", "https://data.jsdelivr.com/"], AutiHrDjevojka: "https://www.auti.hr/djevojkadana/", Steam: "https://store.steampowered.com/" };
-    const OxfordDictionary = { url: "https://www.oxfordlearnersdictionaries.com/external/images/widget_old", version: "2.3.77" };
+    const OxfordDictionary = { url: "https://www.oxfordlearnersdictionaries.com/external/images/widget_old", version: "2.3.78" };
     /* function onSubmit(token) {
         document.querySelector("form#loginForm").submit();
     }*/
@@ -119,7 +119,7 @@ $(document).ready(() => {
             case "demo":
                 console.clear();
                 $("div#loginModal").modal("hide");
-                $("div.toast").filter("#WebsiteStatusToast,#churchCalendarToast,#airQualityToast,#vicDanaToast").attr("data-autohide", false).toast("show");
+                $("div.toast").filter("#WebsiteStatusToast,#churchCalendarToast,#airQualityToast,#SIMCardDateToast,#vicDanaToast").attr("data-autohide", false).toast("show");
                 $("div#DjevojkadanaAutiHRToast.toast").toast("hide").hide();
                 $("a[title^='Boobpedia']").parent().hide();
                 $("a[data-target='#sluzbeni'],a#djevojkaDanaBtn.nav-link").addClass("disabled");
@@ -338,8 +338,15 @@ $(document).ready(() => {
     $("span").filter(".fi-au,.fi-ba,.fi-ca,.fi-de,.fi-eu,.fi-fr,.fi-gb,.fi-it,.fi-nz,.fi-ro,.fi-se,.fi-us").addClass("mr-1");
     $("span.fi-us").parents("div.card-header").siblings("ul").height(200).addClass("overflow-auto");
     $("i").each((i, e) => {
-        $(e).filter(".bi-laptop,.bi-laptop,.bi-phone,.bi-tablet,.bi-image,.bi-info-circle,.bi-snapchat,.bi-telegram,.bi-facebook,.bi-messenger,.bi-instagram,.bi-threads,.bi-whatsapp").css("font-size", "xx-large");
+        $(e).filter(".bi-laptop,.bi-laptop,.bi-tablet,.bi-image,.bi-info-circle,.bi-snapchat,.bi-telegram,.bi-facebook,.bi-messenger,.bi-instagram,.bi-threads,.bi-whatsapp").css("font-size", "xx-large");
+        //$(e).filter(".bi-sim-fill").eq((i === 0)).css("font-size", "x-large");
         $(e).filter(".bi-mailbox,.bi-headset,.bi-hourglass-split,.bi-globe,.bi-bug,.bi-kanban,.bi-stopwatch,.bi-briefcase,.bi-easel,.bi-shield").css("font-size", "larger").addClass("pr-1 align-middle");
+    });
+    $("i.bi-sim-fill").each((i, e) => {
+        (i === 0) ? $(e).css("font-size", "x-large") : $(e).css("font-size", "medium");
+    });
+    $("i.bi-phone").each((i, e) => {
+        (i === 0) ? $(e).css("font-size", "xx-large") : $(e).addClass("align-middle").css("font-size", "x-large");
     });
     $("button.btn-link").each((i, e) => {
         $(e).addClass("text-left text-white").attr({ "type": "bottom", "data-toggle": "collapse", "aria-expanded": "false", "aria-controls": $(e).attr("data-target").replace("#", "") });
@@ -362,12 +369,12 @@ $(document).ready(() => {
         $("div.toast-body").filter(":eq(0)").addClass("p-2");
         $("div.toast-body").find("li.list-group-item").addClass("px-2 py-1");
         $("div.toast-body").eq(2).addClass("py-2 px-3").css("width", "345px");
-        //$("div.toast-body").eq(3).addClass("text-body");
+        $("div.toast-body").eq(3).addClass("p-1");
     });
     $("div.modal").each((i, e) => {
         $(e).attr("aria-labelledby", $(e).attr("id") + "Label");
         $(e).children("div").addClass("modal-dialog").attr("role", "document");
-        $(e).filter("#mailSettings,#sluzbeni,#DeviceInfo").children("div").addClass("modal-sm modal-dialog-centered");
+        $(e).filter("#mailSettings,#sluzbeni,#DeviceInfo,#SIMCardDate").children("div").addClass("modal-sm modal-dialog-centered");
         $(e).filter("#calculator").children("div").addClass("modal-dialog-centered");
         $(e).filter("#tvguide,#FamilyNotes").children("div").addClass("modal-lg modal-dialog-centered");
         $(e).filter("#time,[id^='Obracun'],#FujitsuLifeBookS751").children("div").addClass("modal-dialog-centered modal-dialog-scrollable");
@@ -398,9 +405,9 @@ $(document).ready(() => {
         $(e).filter("#CarService").find("th:eq(2)").addClass("w-50");
         // $(e).filter("#CarService").find("td")/*.filter(":lt(2),:lt(8):gt(5),:lt(14):gt(11)")*/.(":eq(1),:eq(7),:eq(13),:eq(16),:eq(22)").addClass("align-middle");
         $(e).filter("#CarService").find("time:eq(0)").text(new Date(2024, 5, 18, 8, 53).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
-        $(e).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString(localeOptions.locale, localeOptions.options)).parents("tr").attr({"data-toggle": "tooltip", "data-placement": "top", "title": "Garancija 2 godine na akumulator"});
+        $(e).filter("#CarService").find("time:eq(1)").text(new Date(2025, 0, 22, 15, 4).toLocaleString(localeOptions.locale, localeOptions.options)).parents("tr").attr({ "data-toggle": "tooltip", "data-placement": "top", "title": "Garancija 2 godine na akumulator" });
         $(e).filter("#CarService").find("time:eq(2)").text(new Date(2025, 0, 28, 14, 22).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
-        $(e).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString(localeOptions.locale, localeOptions.options)).parents("tr").attr({"data-toggle": "tooltip", "data-placement":"top", "title":"Nikada više odvesti auto kod Malog Deje i Mlađe na servis kočnica"});
+        $(e).filter("#CarService").find("time:eq(3)").text(new Date(2025, 4, 23, 14, 16).toLocaleString(localeOptions.locale, localeOptions.options)).parents("tr").attr({ "data-toggle": "tooltip", "data-placement": "top", "title": "Nikada više odvesti auto kod Malog Deje i Mlađe na servis kočnica" });
         $(e).filter("#CarService").find("time:eq(4)").text(new Date(2025, 4, 24, 14, 0).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
         $(e).filter("#CarService").find("time:eq(5)").text(new Date(2025, 7, 6, 12, 4).toLocaleString(localeOptions.locale, localeOptions.options)).parent("td").addClass("align-middle").next().addClass("align-middle");
         $(e).filter("#CarService").find("time:eq(6)").text(new Date(2026, 2, 3, 12, 15).toLocaleString(localeOptions.locale, localeOptions.options));
@@ -607,7 +614,8 @@ $(document).ready(() => {
     });
     $("input[type='url']").attr("inputmode", "url");
     $("table.table").each((i, e) => {
-        $(e).addClass("table-sm table-hover table-dark text-center mb-0").children("caption").css("caption-side", "top").addClass("py-2").end().wrap($("<div></div>").addClass("table-responsive"));
+        $(e).addClass("table-sm table-hover text-center mb-0").children("caption").css("caption-side", "top").addClass("py-2").end().wrap($("<div></div>").addClass("table-responsive"));
+        (i === 2) ? $(e).addClass("table-striped") : $(e).addClass("table-dark");
         // $(e).find("td").has("br:eq(12)").addClass("align-middle");
         // $(e).find("td").has("br").siblings("td").not(":eq(1),:eq(5),:eq(7),:eq(11),:eq(13),:eq(15),:lt(21):gt(18),:eq(24),:eq(27),:eq(29),:lt(33):gt(30),:eq(35),:eq(46)").addClass("align-middle");
         // $(e).find("th").has("br").siblings("th").addClass("align-middle");
