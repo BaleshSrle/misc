@@ -18,5 +18,6 @@ jobs:
             https://cdn.jsdelivr.net/gh/BaleshSrle/misc@main/private/BS_main.min.js
             https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_site.min.js
             https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/BS_CP_main.min.js
+            https://cdn.jsdelivr.net/gh/BaleshSrle/misc/private/twimg.js
           # Retry attempts (on the request failing) (uint)
           # attempts: # optional, default is 3
