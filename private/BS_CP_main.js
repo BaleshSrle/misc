@@ -268,7 +268,7 @@ $(document).ready(() => {
         const Logo = ($img.data("logo") ? String($img.data("logo")) : "").split(",").map(item => item.trim());
         const { Package, URL, Sort, DisplayName, DateOrder, LogoIco, LogoColor, LogoSize, Label, Color } = { Package: $img.data("package"), URL: encodeURIComponent($img.data("url")), Sort: $img.data("sort"), DisplayName: $img.data("dispname"), DateOrder: $img.data("dateorder"), LogoIco: Logo[0] || "gitea", LogoColor: Logo[1] || "white", LogoSize: Logo[2] || "", Label: encodeURIComponent($img.data("label")), Color: $img.data("color") || "blue" };
         //const Prerelease = Boolean($(e).data("prerelease"));
-        $img.attr({ "src": Url.Badges[0] + "gitea/v/release/" + Package + "?gitea_url=" + URLs + "&sort=" + Sort + "&display_name=" + DisplayName + "&date_order_by=" + DateOrder + "&logo=" + LogoIco + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=609926&color=" + Color, "alt": "Badge for Gitea Package " + Package, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" });
+        $img.attr({ "src": Url.Badges[0] + "gitea/v/release/" + Package + "?gitea_url=" + URL + "&sort=" + Sort + "&display_name=" + DisplayName + "&date_order_by=" + DateOrder + "&logo=" + LogoIco + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + Label + "&labelColor=609926&color=" + Color, "alt": "Badge for Gitea Package " + Package, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" });
     });
     $("img.glTag").each((i, e) => {
         const $img = $(e);
@@ -295,7 +295,7 @@ $(document).ready(() => {
         const $img = $(e);
         const Logo = ($img.data("logo") ? String($img.data("logo")) : "").split(",").map(item => item.trim());
         const Label = ($img.data("label") ? String($img.data("label")) : "").split(",").map(item => item.trim());
-        const { Key, LogoIco, LogoColor, LogoSize, LabelTxt, LabelColor } = { Key: $img.data("key"), LogoIco: Logo[0], LogoColor: Logo[1] || "", LogoSize: Logo[2] || "", LabelTxt: encodeURIComponent( Label[0] || ""), LabelColor: Label[1] || "" };
+        const { Key, LogoIco, LogoColor, LogoSize, LabelTxt, LabelColor } = { Key: $img.data("key"), LogoIco: Logo[0], LogoColor: Logo[1] || "", LogoSize: Logo[2] || "", LabelTxt: encodeURIComponent(Label[0] || ""), LabelColor: Label[1] || "" };
         $img.attr({ "src": Url.Badges[0] + "uptimerobot/status/" + Key + "?logo=" + LogoIco + "&logoColor=" + LogoColor + "&logoSize=" + LogoSize + "&label=" + LabelTxt + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000", "alt": "UptimeRobot status", "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" }).one("error", function () { this.src = Url.Badges[1] + "uptime-robot/status/" + Key + "?label=" + LabelTxt + "UptimeRobot%20status&labelColor=" + LabelColor + "&cacheSeconds=36000"; });
     });
     $("div.toast-header:eq(0),a.navbar-brand:eq(0)").prepend($("<img>").attr({ "src": Url.CDN[0] + "gh/BaleshSrle/baleshsrle.github.io/logo.png", "alt": "BaleshSrle Logo", "crossorigin": "anonymous" }).height(32));
