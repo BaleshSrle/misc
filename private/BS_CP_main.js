@@ -621,6 +621,16 @@ $(document).ready(() => {
         $(e).filter("#procenatIznos,#brojAkcija").attr("inputmode", "numeric");
     });
     $("input[type='url']").attr("inputmode", "url");
+    $("option.tv").each((e) => {
+        const Channel = $(e).data("channel").split(",").map(item => item.trim());
+        switch ($(e).data("service")) {
+            case "FB":
+                $(e).attr("value", "https://www.facebook.com/watch/" + Channel[0]).text(Channel[1]);
+                break;
+            case "YT":
+                $(e).attr("value", "https://www.youtube.com/" + Channel[0] + "/live").text(Channel[1]);
+        }
+    });
     $("table.table").each((i, e) => {
         $(e).addClass("table-sm table-hover text-center mb-0").children("caption").css("caption-side", "top").addClass("py-2").end().wrap($("<div></div>").addClass("table-responsive"));
         (i === 2) ? $(e).addClass("table-striped") : $(e).addClass("table-dark");
