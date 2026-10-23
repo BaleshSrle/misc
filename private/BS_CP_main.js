@@ -604,7 +604,7 @@ $(document).ready(() => {
     $("a[href='#microsoft'],div#microsoft").css("background-color", "#5e5e5e");
     $("a[href*='sr']").not(":lt(15):gt(8), :eq(30), :eq(33)").attr("hreflang", "sr");
     $("a[href*='hr']").not(".btn,.list-group-item").attr("hreflang", "hr");
-    $("a[data-toggle='collapse']").each((i, e) => {
+    $("a[data-toggle='collapse']").each((_, e) => {
         $(e).attr({ "aria-controls": $(e).attr("href").replace("#", ""), "aria-expanded": false });
     });
     $("a.FujitsuLifeBookS751Driver").each((_, e) => {
@@ -616,12 +616,12 @@ $(document).ready(() => {
     $("input:lt(6),select:not([id$='Username'],[id='dictionary-selector'])").addClass("form-control");
     $("input[type='number']:lt(2),select:eq(2)").filter(".form-control").addClass("form-control-sm");
     $("body,select[id$='Username'],div.modal-content:not(:eq(10))").addClass("bg-dark text-white");
-    $("input[type='number']").each((i, e) => {
+    $("input[type='number']").each((_, e) => {
         $(e).filter("#novcaniIznos,#cijenaJedneAkcije").attr("inputmode", "decimal");
         $(e).filter("#procenatIznos,#brojAkcija").attr("inputmode", "numeric");
     });
     $("input[type='url']").attr("inputmode", "url");
-    $("option.tv").each((e) => {
+    $("option.tv").each((_, e) => {
         const Channel = $(e).data("channel").split(",").map(item => item.trim());
         switch ($(e).data("service")) {
             case "FB":
