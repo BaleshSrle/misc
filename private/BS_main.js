@@ -4,7 +4,7 @@ console.info("Glavna skripta je pokrenuta.");
 const Url = {};
 const Version = {};
 Object.assign(Url, { CDN: ["https://cdn.jsdelivr.net/", "https://cdnjs.cloudflare.com/"], Badges: ["https://img.shields.io/", "https://badgen.net/"], GitHub: "https://github.com/" });
-Object.assign(Version, { Bootstrap: "4.6.2", jQuery: "3.7.1", BootstrapIcon: "1.13.1", MomentJS: "2.30.1", jQueryCountdown: "2.2.0" });
+Object.assign(Version, { Bootstrap: "4.6.2", jQuery: "3.7.1", BootstrapIcon: "1.13.2", MomentJS: "2.31.0", jQueryCountdown: "2.2.0" });
 
 $(document).ready(() => {
     const GoogleFontsUrl = ["https://fonts.googleapis.com", "https://fonts.gstatic.com"];
