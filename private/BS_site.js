@@ -75,7 +75,7 @@ jQuery(($) => {
         $(e).filter("#linux, #internet").addClass("my-3")/*.parents(".card").height(228)*/;
         //$(e).filter("#microsoft,#linux,#internet").find("img").css("max-width", "180px").addClass("d-block mx-auto h-auto");
         //$(e).filter("#MediaPlayer,#WebBrowser,#microsoft,#linux,#internet").find("carousel-item:first-child").addClass("active");
-        $(e).filter("#MinOfInteriorSrpskaCyber").children("div.card-body").wrapInner($("<a></a>").attr({ "href": Url.MUPRSpske+"vtk-lat/", "hreflang": "sr-BA", "target": "_blank" }).append($("<img>").attr({ "src": /*"images/vtk.png"*/Url.MUPRSpske+"cir/template/img/services/cyber.png", "alt": "MUP R. Srpske - Uprava krim. policije - Jedinica za visokotehnološki kriminalitet" }).addClass("d-block mx-auto img-fluid")/*.css("width", "180")*/));
+        $(e).filter("#MinOfInteriorSrpskaCyber").children("div.card-body").wrapInner($("<a></a>").attr({ "href": Url.MUPRSpske + "vtk-lat/", "hreflang": "sr-BA", "target": "_blank" }).append($("<img>").attr({ "src": /*"images/vtk.png"*/Url.MUPRSpske + "cir/template/img/services/cyber.png", "alt": "MUP R. Srpske - Uprava krim. policije - Jedinica za visokotehnološki kriminalitet" }).addClass("d-block mx-auto img-fluid")/*.css("width", "180")*/));
         $(e).filter("#speedtest_banner").children("div.card-body").append($("<object></object>").attr({ "data": Url.Badges[0] + "badge/Speedtest%20by%20Ookla-141526?style=for-the-badge&logo=speedtest&logoSize=auto&link=https%3A%2F%2Fspeedtest.net", "name": "Provjerite brzinu svog Interneta" }).addClass("rounded-lg d-block mx-auto img-fluid"));
     });
     //$("div.col-sm-6.col-xl-8").addClass("my-2 px-md-2");
