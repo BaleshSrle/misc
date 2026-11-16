@@ -344,7 +344,7 @@ $(document).ready(() => {
     $("nav.navbar").delay("slow").fadeIn().css({ "background-color": "#adb5bd", "padding": "2px 16px" });
     $("mark.bg-secondary,a#time_is_link,label:gt(2)").addClass("text-white");
     $("a#time_is_link,span[id$='z609'],span[id$='z600'],span[id$='z60a'],span[id$='z726'],span[id$='z716'],span[id$='z18a'],span[id$='z123'],span[id$='z12b']").css("font-size", "16px");
-    $("span").filter(".fi-au,.fi-ba,.fi-ca,.fi-de,.fi-eu,.fi-fr,.fi-gb,.fi-it,.fi-nz,.fi-ro,.fi-se,.fi-us").addClass("mr-1");
+    $("span").filter(".fi-au,.fi-ba,.fi-ca,.fi-de,.fi-eu,.fi-fr,.fi-es,.fi-gb,.fi-it,.fi-nz,.fi-ro,.fi-se,.fi-us").addClass("mr-1");
     $("span.fi-us").parents("div.card-header").siblings("ul").height(200).addClass("overflow-auto");
     $("i").each((i, e) => {
         $(e).filter(".bi-laptop,.bi-laptop,.bi-tablet,.bi-image,.bi-info-circle,.bi-snapchat,.bi-telegram,.bi-facebook,.bi-messenger,.bi-instagram,.bi-threads,.bi-whatsapp").css("font-size", "xx-large");
